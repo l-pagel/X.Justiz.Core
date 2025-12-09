@@ -1,4 +1,4 @@
-﻿# X.Justiz-Lite Version 0.1.0
+﻿# X.Justiz-LegalTech Version 0.1.0
 Ein Projekt zur Erweiterung des X.Justiz-Formats basierend auf XJustiz-Export (3.5.1)
 
 ## Setup / Herangehensweise
