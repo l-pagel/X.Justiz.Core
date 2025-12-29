@@ -9,6 +9,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
+    env:
+      CSPROJ_PATH: src/dotnet/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,13 +40,13 @@ jobs:
           sed -i "s#<Version>.*</Version>#<Version>$VERSION</Version>#g" "$CSProj"
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore $CSPROJ_PATH
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build $CSPROJ_PATH --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack "$CSProj" --configuration Release --no-build -o ./artifacts
+        run: dotnet pack $CSPROJ_PATH "$CSProj" --configuration Release --no-build -o ./artifacts
 
       - name: Push to NuGet
         run: >
