@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" targetNamespace="http://www.xjustiz.de" version="2.4.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_4.xsd" />
+  <xs:element name="nachricht.gds.aktenzeichenmitteilung.justiz_zu_justiz.0005001">
+    <xs:annotation>
+      <xs:documentation>Dieses Element ist das Wurzelelement einer Nachricht mittels derer ein Gericht einem anderen Gericht oder einer Staatsanwaltschaft das Anlegen eines neuen Verfahrens als Reaktion auf eine Einleitungsnachricht bestätigt.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.GDS.Aktenzeichenmitteilung.Justiz_zu_Justiz" />
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:unique name="eindeutigkeit_instanznummer_aktenzeichenmitteilung_justiz_zu_justiz">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:instanzdaten" />
+      <xs:field xpath="tns:instanznummer" />
+    </xs:unique>
+  </xs:element>
+  <xs:element name="nachricht.gds.uebermittlung_schriftgutobjekte.0005005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.SGO" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.SGO" />
+        <xs:element name="akte" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Akte" />
+        <xs:element name="teilakte" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Teilakte" />
+        <xs:element name="dokument" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Dokument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdo="http://www.xdomea.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0005_nachrichten_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_1010_cl_vorsorgeregister_2_1.xsd" />
+  <xs:import schemaLocation="xdomea_typen_1_0.xsd" namespace="http://www.xdomea.de" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.ZVR.Adresse">
+    <xs:sequence>
+      <xs:element name="strasse" type="xoev-lc:String.Latin" />
+      <xs:element name="hausnummer" type="xoev-lc:String.Latin" />
+      <xs:element name="adresszusatz" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="plz" type="xoev-lc:String.Latin" />
+      <xs:element name="ort" type="xoev-lc:String.Latin" />
+      <xs:element name="land" type="tns:Code.GDS.Staaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.Bevollmaechtigter">
+    <xs:sequence>
+      <xs:element name="anrede" type="tns:Code.GDS.Anrede.Partei" />
+      <xs:element name="titel" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angabe des akademischen Titels (z.B. Prof., Dr., Prof. Dr.)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nachname" type="xoev-lc:String.Latin" />
+      <xs:element name="vorname" type="xoev-lc:String.Latin" />
+      <xs:element name="geburtsdatum" minOccurs="0" type="xs:date" />
+      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="adresse" type="tns:Type.ZVR.Adresse" />
+      <xs:element name="telefonnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="sonstiges" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.Vielmelder">
+    <xs:sequence>
+      <xs:element name="nachname" type="xoev-lc:String.Latin" />
+      <xs:element name="vorname" type="xoev-lc:String.Latin" />
+      <xs:element name="adresse_aktuell" type="tns:Type.ZVR.Adresse">
+        <xs:annotation>
+          <xs:documentation>aktuelle Adresse des Vielmelders</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="adresse_Vollmacht" type="tns:Type.ZVR.Adresse">
+        <xs:annotation>
+          <xs:documentation>Adresse des Vielmelders zum Zeitpunkt der Erfassung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.Vollmachtdaten">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.ZVR.VollmachtdatenBasis">
+        <xs:sequence>
+          <xs:element name="eintragungsart" type="tns:Code.ZVR.Eintragungsart" />
+          <xs:element name="kennzeichen_Vollmacht">
+            <xs:annotation>
+              <xs:documentation>Vollmacht zur Erledigung von...</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="vermoegensangelegenheiten" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Vermögensangelegenheiten</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="gesundheitsvorsorge" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Angelegenheit zur Gesundheitsvorsorge</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="erklaerung_BGB_1904" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Maßnahmen nach § 1904 Abs. 1 Satz 1 BGB ausdrücklich umfasst</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="aufenthaltsbestimmung" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Angelegenheiten der Aufenthaltsbestimmung</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="erklaerung_BGB_1906" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Maßnahmen nach § 1906 Abs. 1, 3 und 4 BGB ausdrücklich umfasst</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="persoenliche_Angelegenheiten" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>sonstige persönliche Angelegenheiten</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="betreuungsverfuegung" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>für den Fall, dass das Gericht einen Betreuer bestellt (Betreuungsverfügung)</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="patientenverfuegung" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>hinsichtlich Art und Umfang medizinischer Versorgung (Patientenverfügung)</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="weitere_Angaben" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>z. B. Aufbewahrungsort der Vorsorgeurkunde - keine personenbezogenen Daten</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.VollmachtdatenBasis">
+    <xs:sequence>
+      <xs:element name="registernummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>ZVR-Registernummer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="datum_Eintragung" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datum der letzten Eintragung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="datum_Vollmacht" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datum der Vorsorgevollmacht</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="urkundenrollennummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angabe nur bei notarieller Registrierung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="aktenzeichen" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angabe nur bei nicht-notarieller Registrierung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.Vollmachtgeber">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.ZVR.VollmachtgeberBasis">
+        <xs:sequence>
+          <xs:element name="anrede" type="tns:Code.GDS.Anrede.Partei" />
+          <xs:element name="titel" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Angabe des akademischen Titels (z.B. Prof., Dr., Prof. Dr.)</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="adresse" type="tns:Type.ZVR.Adresse" />
+          <xs:element name="telefonnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+          <xs:element name="email" minOccurs="0" type="xoev-lc:String.Latin" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.ZVR.VollmachtgeberBasis">
+    <xs:sequence>
+      <xs:element name="nachname" type="xoev-lc:String.Latin" />
+      <xs:element name="vorname" type="xoev-lc:String.Latin" />
+      <xs:element name="geburtsdatum" type="xs:date" />
+      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="geburtsort" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.zvr.erstelleAbfrageProtokoll.input.1000004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_BNotK" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="abfragen_von" type="xs:date" />
+              <xs:element name="abfragen_bis" type="xs:date" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvr.erstelleAbfrageProtokoll.output.1000005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Justiz" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="protokolldaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="erstellungszeitpunkt_Protokoll" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="username_Abfragender" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Nur wenn der Username im SAML Token von IT.NRW vorhanden sein wird</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name_Betreuungsgericht" type="xoev-lc:String.Latin" />
+                    <xs:element name="suchfelder">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="abfragen_von" type="xs:date" />
+                          <xs:element name="abfragen_bis" type="xs:date" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="registereintrag" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="vollmachtdaten" type="tns:Type.ZVR.VollmachtdatenBasis" />
+                    <xs:element name="vollmachtgeber">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xoev-lc:String.Latin" />
+                          <xs:element name="vorname" type="xoev-lc:String.Latin" />
+                          <xs:element name="adresse" type="tns:Type.ZVR.Adresse" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="bevollmaechtigter">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xoev-lc:String.Latin" />
+                          <xs:element name="vorname" type="xoev-lc:String.Latin" />
+                          <xs:element name="adresse" type="tns:Type.ZVR.Adresse" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="vielmelder" minOccurs="0" type="tns:Type.ZVR.Vielmelder" />
+                  </xs:sequence>
+                  <xs:attribute name="in_Detail_geladen" type="xs:boolean" use="required">
+                    <xs:annotation>
+                      <xs:documentation>gibt an, ob Meldung nur in Trefferliste angezeigt oder Meldung im Detail geöffnet wurde</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvr.ladeRegistrierung.input.1000006">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_BNotK" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="registernummer" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvr.ladeRegistrierung.output.1000007">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Justiz" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="registerverlauf">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registereintrag" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vollmachtdaten" type="tns:Type.ZVR.Vollmachtdaten" />
+                          <xs:element name="vollmachtgeber" type="tns:Type.ZVR.Vollmachtgeber" />
+                          <xs:element name="bevollmaechtigter" minOccurs="0" maxOccurs="12" type="tns:Type.ZVR.Bevollmaechtigter" />
+                          <xs:element name="vielmelder" minOccurs="0" type="tns:Type.ZVR.Vielmelder" />
+                        </xs:sequence>
+                        <xs:attribute name="aktueller_Eintrag" type="xs:boolean" use="optional" fixed="true">
+                          <xs:annotation>
+                            <xs:documentation>gibt an, ob der Eintrag der aktuellste im Registverlauf ist</xs:documentation>
+                          </xs:annotation>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvr.sucheRegistrierung.input.1000008">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_BNotK" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="suche">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:sequence>
+                      <xs:element name="nachname" minOccurs="0" type="xoev-lc:String.Latin" />
+                      <xs:element name="nachname_fehlertolerant" minOccurs="0" fixed="true" type="xs:boolean" />
+                      <xs:element name="vorname" minOccurs="0" type="xoev-lc:String.Latin" />
+                      <xs:element name="vorname_fehlertolerant" minOccurs="0" fixed="true" type="xs:boolean" />
+                      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin" />
+                      <xs:element name="geburtsname_fehlertolerant" minOccurs="0" fixed="true" type="xs:boolean" />
+                      <xs:element name="geburtsdatum" minOccurs="0" type="xoev-lc:String.Latin" />
+                      <xs:element name="geburtsdatum_fehlertolerant" minOccurs="0" fixed="true" type="xs:boolean" />
+                    </xs:sequence>
+                  </xs:sequence>
+                  <xs:attribute name="menge" type="xs:long" use="optional" default="50" />
+                  <xs:attribute name="versatz" type="xs:long" use="optional" default="0" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvr.sucheRegistrierung.output.1000009">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Justiz" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="suchergebnis">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registereintrag" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vollmachtdaten" type="tns:Type.ZVR.VollmachtdatenBasis" />
+                          <xs:element name="vollmachtgeber" type="tns:Type.ZVR.VollmachtgeberBasis" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="menge" type="xs:long" use="required" />
+                  <xs:attribute name="menge_insgesamt" type="xs:long" use="required" />
+                  <xs:attribute name="versatz" type="xs:long" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

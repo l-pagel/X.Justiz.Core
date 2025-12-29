@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.GDS.Rechtsform">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>GDS.Rechtsform</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste enthält eine Auflistung von
+Rechtsformen, die im elektronischen Rechtsverkehr vorkommen können.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="AG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG (England)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft nach englischem Recht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG (Schottland)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft nach schottischem Recht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG aG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft auf Gegenseitigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG CH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft nach Schweizer Recht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG iG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft in Gründung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG+Co KG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft &amp; Co. KG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG+Co KG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft &amp; Co. KG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG+Co OGH iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft &amp; Co. OHG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AG+Co OHG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktiengesellschaft &amp; Co. OHG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AO">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>AO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="APS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>APS</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>A S</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AöR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anstalt des öffentlichen Rechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="B">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bund</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BrGem">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bruchteilsgemeinschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Besloten Vennootschap</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Corporation">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Corporation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="e.V.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragener Verein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="e.V. iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragener Verein in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="eG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragene Genossenschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="eG iG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragene Genossenschaft in Gründung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="eG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragene Genossenschaft in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="eK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragener Kaufmann oder eingetragene Kauffrau</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EWIV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Europäische Wirtschaftliche Interessenvereinigung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GbR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesellschaft bürgerlichen Rechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gem">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gemeinde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GemVerb">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gemeindeverband</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gesamthandsgemeinschaft">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamthandsgemeinschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gew">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gewerkschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="gGmbH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gemeinnützige GmbH</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesellschaft mit beschränkter Haftung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH iG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH in Gründung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH+Co KG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH &amp; Co. KG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH+Co KG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH &amp; Co. KG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH+Co OHG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH &amp; Co. OHG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GmbH+Co OHG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GmbH &amp; Co. OHG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GVV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamtvollstreckungsverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Inc">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Incorporated</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Inn">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Innung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Insolvenzverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="JPpR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Juristische Person des privaten Rechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kommanditgesellschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kommanditgesellschaft in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KGaA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kommanditgesellschaft auf Aktien</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ki">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kirchengemeinde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KiSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kirchliche Stiftung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Kr">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kreis oder Landkreis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Konkursverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KöR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Körperschaft des öffentlichen Rechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="L">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Land</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LLP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Limited Liability Partnership</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ltd">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Limited</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landschaftsverband</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NaKV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachlasskonkursverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NaP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachlasspfleger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NaV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachlassverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Naamloze Vennootschap</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OHG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Offene Handelsgesellschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OHG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Offene Handelsgesellschaft in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OY">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>OY</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Part">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Partei</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Part iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Partnerschaft in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PartG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Partnerschaftsgesellschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PartGmbB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Partnerschaftsgesellschaft mit beschränkter Berufshaftung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Pfl">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pfleger für Sammelvermögen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Re">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Reederei</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="S.E.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Societas Europaea</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="S.L.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sociedad de responsabilidad limitada</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Société Anonyme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SA FR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>AG nach französischem Recht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SARL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Société à responsabilité limitée</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Seq">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sequester</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SNC">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>SNC</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SoGem">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Gemeinschaft ohne eigene Rechtspersönlichkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SPA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>SPA</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SpzOO">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sp.Z.O.O</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SRL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Société à responsabilité limitée</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St+Co KG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung &amp; Co. KG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St+Co KG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung &amp; Co. KG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St+Co OHG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung &amp; Co. OHG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St+Co OHG iL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung &amp; Co. OHG in Liquidation</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Stadt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stadt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StbR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiftung des bürgerlichen Rechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Treuhänder gem. § 313 Inso</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Testamentsvollstrecker</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TY">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>TY</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UG (haftungsbeschränkt)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unternehmergesellschaft (haftungsbeschränkt)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="V">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VEB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Volkseigener Betrieb</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VglV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vergleichsverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VIV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufiger Insolvenzverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VVaG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Versicherungsverein auf Gegenseitigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WEG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wohnungseigentümergemeinschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zwangsverwalter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:gds.rechtsform">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.1">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

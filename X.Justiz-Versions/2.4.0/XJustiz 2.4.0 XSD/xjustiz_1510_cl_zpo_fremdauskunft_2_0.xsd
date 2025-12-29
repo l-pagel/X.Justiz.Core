@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.ZPO.Anfragetyp">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>ZPO.Anfragetyp</listName>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der verschiedenen Anfragetypen.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Person_phonetisch</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Person_normal</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Person_exakt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugakte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:zpo.anfragetyp">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.ZPO.Ereignis">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>ZPO.Ereignis</listName>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der verschiedenen Ereignisse im Fachverfahren ZPO-Fremdauskunft.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anfrage Anschrift</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anfrage Arbeitgeber</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anfrage Fahrzeugdaten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prüffall aufgetreten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fehler aufgetreten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auskunft Anschrift</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auskunft Arbeitgeber</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Personenliste</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugliste</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugakte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechnung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:zpo.ereignis">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.ZPO.Fehlercode">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>ZPO.Fehlercode</listName>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der verschiedenen Fehlercodes.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="01">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strukturfehler (Parserfehler)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="02">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>falscher Nachrichtentyp</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="03">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>fehlende Berechtigung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="04">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Den in Ihrer Anfrage angegebenen Daten konnte keine Person eindeutig zugeordnet werden.
+
+Keine Treffer; Ihre Angaben haben zu keinem Treffer geführt bzw. die Person ist nicht im Bestand der DSRV. Ggf. ist die Anfrage mit optimierten Angaben erneut zu senden, z.B. unter Ergänzung des Geburtsnamens zu den Pflichtfeldern (Name, Vorname, Geburtsdatum) oder Angabe nur der Pflichtfelder.
+
+Diese Meldung ist kostenfrei.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="05">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>zu viele Treffer (&gt;100)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="06">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Der Familienname muss gemeldet werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="07">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Der Vorname muss gemeldet werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="08">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Das Geburtsdatum enthält kein gültiges Datum</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="09">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Das Geburtsdatum ist nicht vorhanden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="10">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Die Postleitzahl muss gemeldet werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="11">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Die Strasse muss gemeldet werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="12">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Der Ort muss gemeldet werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="13">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Versicherungsnummer ist nicht plausibel</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="14">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Voraussetzungen nach § 74a Absatz 2 SGB X sind nicht erfüllt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="15">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>mehr als 100 Fahrzeuge gefunden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="16">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>mehr als 20 Personen gefunden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="17">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Die gesuchte Person ist verstorben. Diese Mitteilung ist kostenfrei.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="18">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ihr Auskunftersuchen kann im automatisierten Verfahren nicht beantwortet werden, da eine aktuelle Anschrift in den Beständen der DSRV nicht gespeichert ist. Diese Auskunft ist kostenfrei.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="99">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>sonstiger Fehler</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:zpo.fehlercode">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.ZPO.Rollenbezeichnung">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>ZPO.Rollenbezeichnung</listName>
+      </xs:appinfo>
+      <xs:documentation>Codeliste der verschiedenen Rollenbezeichungen im Facverfahren ZPO-Fremdauskunft.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arbeitgeber</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Trefferliste</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>RV-Träger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gerichtsvollzieher/-in</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:zpo.rollenbezeichnung">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

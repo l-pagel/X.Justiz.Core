@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.2.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_5.xsd" />
+  <xs:include schemaLocation="xjustiz_1410_cl_zwangsversteigerung_2_1.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.ZVG.Grunddaten">
+    <xs:sequence>
+      <xs:element name="verfahrensdaten">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="instanzdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sachgebiet" minOccurs="0" type="tns:Code.GDS.Sachgebiet" />
+                  <xs:element name="instanzbehoerde">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="aktenzeichen" type="tns:Type.GDS.Aktenzeichen" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="termin" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Termin der Versteigerung</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="terminsdaten">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="terminsort">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="gerichtsort">
+                                <xs:complexType>
+                                  <xs:sequence>
+                                    <xs:element name="gebaeude" minOccurs="0" type="xoev-lc:String.Latin" />
+                                    <xs:element name="anschrift" minOccurs="0" type="tns:Type.GDS.Anschrift" />
+                                    <xs:element name="stockwerk" minOccurs="0" type="xoev-lc:String.Latin" />
+                                    <xs:element name="raum" type="xoev-lc:String.Latin" />
+                                  </xs:sequence>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="terminszeit">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="terminsdatum" type="xs:date" />
+                              <xs:element name="terminsuhrzeit" type="xs:time" />
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.5.1">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:element name="nachricht.zvg.zwangsversteigerungstermin.1400001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf" />
+        <xs:element name="grunddaten" type="tns:Type.ZVG.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grundbuch" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="grundbuch_von" type="xoev-lc:String.Latin" />
+                    <xs:element name="gbaGericht" type="tns:Code.GDS.Gerichte" />
+                    <xs:element name="zusatz" type="xoev-lc:String.Latin" />
+                    <xs:element name="band" type="xoev-lc:String.Latin" />
+                    <xs:element name="blatt" type="xoev-lc:String.Latin" />
+                    <xs:element name="eigentuemer" type="xoev-lc:String.Latin" />
+                    <xs:element name="lfdNr" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="grundstueck">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="grundstueckeText" type="xoev-lc:String.Latin" />
+                    <xs:element name="lageHausNr" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="lageOrt" type="xoev-lc:String.Latin" />
+                    <xs:element name="lageOrtsteil" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="lagePLZ" type="xoev-lc:String.Latin" />
+                    <xs:element name="lageStrasse" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="anspruch">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="anspruchKurz" type="xoev-lc:String.Latin" />
+                    <xs:element name="anspruchLang" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="dingl_pers" type="tns:Code.ZVG.Anspruchsart" />
+                    <xs:element name="verfahrensziel" type="tns:Code.ZVG.Verfahrensart" />
+                    <xs:element name="nurAnmeldung" type="xs:boolean" />
+                    <xs:element name="anspruchDetails" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="kosten" type="tns:Type.GDS.Geldbetrag" />
+                          <xs:element name="kostenZinsen" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="von" type="xs:date" />
+                                <xs:element name="bis" type="xs:date" />
+                                <xs:element name="kapital" type="tns:Type.GDS.Geldbetrag" />
+                                <xs:element name="prozent" type="xoev-lc:String.Latin" />
+                                <xs:element name="ueberBasiszins" type="xs:boolean" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="zinsen" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="von" type="xs:date" />
+                                <xs:element name="bis" type="xs:date" />
+                                <xs:element name="kapital" type="tns:Type.GDS.Geldbetrag" />
+                                <xs:element name="prozent" type="xoev-lc:String.Latin" />
+                                <xs:element name="ueberBasiszins" type="xs:boolean" />
+                                <xs:element name="typ" type="xoev-lc:String.Latin" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="nebenleistung" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="kapital" type="tns:Type.GDS.Geldbetrag" />
+                                <xs:element name="prozent" type="xoev-lc:String.Latin" />
+                                <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="hauptforderung">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="kapital" type="tns:Type.GDS.Geldbetrag" />
+                                <xs:element name="typ" type="xoev-lc:String.Latin" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="bemerkung" minOccurs="0" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvg.zwangsversteigerungsInfo.1400002">
+    <xs:annotation>
+      <xs:documentation>Nachricht nach § 41 ZVG: Das Gericht informiert alle am Verfahren beteiligten Personen (Gläubiger, Berechtigte, Schuldner u.a.) kurz vor dem Versteigerungstermin, wer und weswegen das Zwangsversteigerungsverfahren betreibt.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Extern" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.5.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichtenart" type="tns:Code.ZVG.Nachrichtenart">
+                <xs:annotation>
+                  <xs:documentation>Bei dieser Nachricht muss zwingend der Code '01' übertragen werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="versteigerungstermin">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="termin" type="xs:dateTime" />
+                    <xs:element name="ersteBeschlagnahme" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Datum der ersten Beschlagnahme</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="vollstreckungsansprueche" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="glaeubiger" type="tns:Type.GDS.NatuerlichePerson" />
+                    <xs:element name="recht" type="xoev-lc:String.Latin" />
+                    <xs:element name="anspruch" type="xoev-lc:String.Latin" />
+                    <xs:element name="beschlagnahme" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Tag der Beschlagnahme dieses Gläubigers</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvg.gericht_extern.1400003">
+    <xs:annotation>
+      <xs:documentation>Auftrag an einen Sachverständigen oder einen Zwangsverwalter</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Extern" />
+        <xs:element name="grunddaten" type="tns:Type.ZVG.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichtenart" type="tns:Code.ZVG.Nachrichtenart" />
+              <xs:element name="beigefuegteDokumente" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zvg.zwangsverwalter_gericht.1400004">
+    <xs:annotation>
+      <xs:documentation>Nachricht des Zwangsverwalters an das Gericht, z.B. Bericht oder Antrag.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Extern_zu_Justiz" />
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichtenart" maxOccurs="unbounded" type="tns:Code.ZVG.Nachrichtenart" />
+              <xs:element name="beigefuegteDokumente" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+              <xs:element name="detailsVerguetungsantrag" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="betrifft" type="xoev-lc:String.Latin" />
+                    <xs:element name="von" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Beginn des Abrechnungszeitraums</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="bis" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Ende des Abrechnungszeitraums</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="monate" type="xs:positiveInteger">
+                      <xs:annotation>
+                        <xs:documentation>Anzahl der angefangenen Monate</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="nachMiete">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="miete" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>eingezogene Miete im Jahr</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="prozent" type="xs:positiveInteger">
+                            <xs:annotation>
+                              <xs:documentation>5 bis 15 Prozent</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="abzugVorschuss" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>abzuziehender Vorschuss</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>errechneter Betrag</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="nachSollMiete">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="miete" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>eingezogene Miete im Jahr</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="prozent" type="xs:positiveInteger">
+                            <xs:annotation>
+                              <xs:documentation>5 bis 15 Prozent</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>errechneter Betrag</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="bausumme">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="bausumme" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>verwaltete Bausumme</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>errechneter Betrag</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="stundenverguetung">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="anzahlStunden" type="xs:decimal" />
+                          <xs:element name="stundensatz" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>35,00 bis 95,00 EUR</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="auswahl" type="xs:boolean">
+                            <xs:annotation>
+                              <xs:documentation>Auswahl nach § 19 II ZwVwV</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>errechneter Betrag</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="zwSumme" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="mindestverguetung">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:choice>
+                            <xs:element name="keineMindestverguetung" type="xs:boolean" />
+                            <xs:element name="mitBesitz" type="xs:boolean" />
+                            <xs:element name="keinBesitz" type="xs:boolean" />
+                          </xs:choice>
+                          <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                            <xs:annotation>
+                              <xs:documentation>Mindestvergütung</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="verguetungsantrag" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="auslagen">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:choice>
+                            <xs:element name="einzelabrechnung" type="tns:Type.GDS.Geldbetrag" />
+                            <xs:element name="pauschale" type="tns:Type.GDS.Geldbetrag" />
+                          </xs:choice>
+                          <xs:element name="besondereAuslagen">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="grund" type="xoev-lc:String.Latin" />
+                                <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="summeNetto" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="steuer" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="summe" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="vorschuss" type="tns:Type.GDS.Geldbetrag" />
+                    <xs:element name="rest" type="tns:Type.GDS.Geldbetrag" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

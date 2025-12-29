@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdomea="http://www.xdomea.de/V2.2.0" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_2.xsd" />
+  <xs:include schemaLocation="xjustiz_2110_cl_ehug_2_1.xsd" />
+  <xs:import schemaLocation="xdomea-Baukasten.xsd" namespace="http://www.xdomea.de/V2.2.0" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.EHUG.Fachdaten">
+    <xs:sequence>
+      <xs:element name="ergaenzungen_Gesellschaft">
+        <xs:annotation>
+          <xs:documentation>Zur eindeutigen Bestimmung des Gegners des OG-Verfahrens</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ref.Rollennummer" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier ist ein Bezug zur Gesellschaft herzustellen wegen der das Verfahren durchgeführt wird.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="registerart" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="registernummer" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="registergericht" minOccurs="0" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="insolvenz" type="tns:Code.EHUG.InfO_BfJ" />
+            <xs:element name="liquidation" type="tns:Code.EHUG.InfO_BfJ" />
+            <xs:element name="loeschung" type="tns:Code.EHUG.InfO_BfJ" />
+            <xs:element name="geschaeftsjahr" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Daten aus der Meldung BAnz, wenn identisch mit dem Inhalt des Ordnungsgeldbeschlusses</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="abw_Geschaeftsjahr_von" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Daten aus dem angefochteten OG-Beschluss, nur bei Abweichung vom Kalenderjahr</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="abw_Geschaeftsjahr_bis" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Daten aus dem angefochteten OG-Beschluss, nur bei Abweichung vom Kalenderjahr</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="verfahrensgang_BfJ">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="beschwerde_vom" type="xs:date" />
+            <xs:element name="eingang_am" type="xs:date" />
+            <xs:element name="beschluss_vom" type="xs:date" />
+            <xs:element name="zustellung_am" type="xs:date" />
+            <xs:element name="festgesetztes_Ordnungsgeld" type="tns:Type.GDS.Geldbetrag" />
+            <xs:element name="datum.Offenlegung_vollstaendig" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Wenn kein Datum übergeben wird, ist Offenlegung noch nicht vollständig.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="berichtsteil" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:annotation>
+                      <xs:documentation>Datenherkunft ist in der EBanzNachricht ersichtlich.</xs:documentation>
+                    </xs:annotation>
+                    <xs:element name="erstmeldung" type="xoev-lc:String.Latin" />
+                    <xs:element name="korrekturmeldung">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="korrekturgrund" type="tns:Code.EHUG.eBanz_Meldung_BfJ" />
+                          <xs:element name="korrekturgrund_Freitext" minOccurs="0" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:element name="bilanzsumme" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>2012</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="umsatzerloese" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>2012</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="mitarbeiterzahl" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>2012</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="ordnungsgeld" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="datum.Androhungsverfuegung" type="xs:date" />
+                  <xs:element name="hoehe_angedr_OG" type="tns:Type.GDS.Geldbetrag" />
+                  <xs:element name="datum.ZU_Androhung" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Tatsächliches Datum aus der Urkunde, nicht Eingang bei BfJ (Liefermöglichkeit unklar, daher kein Pflichtfeld)</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="uhrzeit.ZU_Androhung" minOccurs="0" type="xs:time">
+                    <xs:annotation>
+                      <xs:documentation>Tatsächliche Uhrzeit aus der Urkunde</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="art_ZU_Androhung" minOccurs="0" type="tns:Code.EHUG.Post_ZU" />
+                  <xs:element name="eingang_Einspruch" type="xs:boolean" />
+                  <xs:element name="datum.Einspruch" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>wenn Eingang_Einspruch = ja</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum.Einspruch_Eingang" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>wenn Eingang_Einspruch = ja</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ablauf_Nachfrist" minOccurs="0" type="xs:date" />
+                  <xs:element name="datum.OG-Beschluss" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Bislang Feld 34 des csv</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="hoehe_festg_OG" type="tns:Type.GDS.Geldbetrag">
+                    <xs:annotation>
+                      <xs:documentation>Bislang Feld 35 des csv</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum.ZU_OG" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Tatsächliches Datum aus der Urkunde, nicht Eingang bei BfJ (Feld 36 der CSV)</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="art_ZU_OG" minOccurs="0" type="tns:Code.EHUG.Post_ZU" />
+                  <xs:element name="datum.sof_Beschw" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Bislang Feld 33 des csv</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eingang_sof_Beschw" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Bislang Feld 32 des csv</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum.Nichtabhilfebescheid" minOccurs="0" type="xs:date" />
+                  <xs:element name="az_Gerichtsentscheid" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Bei weiteren Ordnungsgeldern</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum.Gerichtsentscheid" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Bei weiteren Ordnungsgeldern</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum.Gerichtsentscheid_Post" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Wann ist der Gerichtsentscheid zur Post gegeben (zur Berechnung der Frist für weitere Androhungsverfügung)</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Fachdaten_EHUG_Version" type="xoev-lc:String.Latin" use="required" fixed="1.0" />
+  </xs:complexType>
+  <xs:complexType name="Type.EHUG.Grunddaten">
+    <xs:sequence>
+      <xs:element name="verfahrensdaten">
+        <xs:annotation>
+          <xs:documentation>Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren mit sich bringt.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="instanznummer" type="xoev-lc:String.Latin" />
+                  <xs:element name="sachgebiet" type="tns:Code.GDS.Sachgebiet" />
+                  <xs:element name="instanzbehoerde" type="tns:Type.GDS.Behoerde" />
+                  <xs:element name="abteilung" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="aktenzeichen" type="xoev-lc:String.Latin" />
+                  <xs:element name="kurzrubrum" type="xoev-lc:String.Latin" />
+                  <xs:element name="verfahrensgegenstand" minOccurs="0">
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:restriction base="tns:Type.GDS.Verfahrensgegenstand">
+                          <xs:sequence>
+                            <xs:element name="gegenstand" fixed="EHUG" type="xoev-lc:String.Latin" />
+                            <xs:element name="gegenstandswert" minOccurs="0" type="tns:Type.GDS.Geldbetrag" />
+                          </xs:sequence>
+                        </xs:restriction>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="beteiligung" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="rolle" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="rollennummer" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Die Rollennummer wird als eindeutige Kennziffer innerhalb des XML-Dokuments benötigt, um aus anderen Elementen innerhalb des XML-Dokuments heraus auf Beteiligte und Rollen verweisen zu können.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="rollenbezeichnung" type="tns:Code.EHUG.Beteiligte_BfJ">
+                          <xs:annotation>
+                            <xs:documentation />
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nr" default="1" type="xs:integer" />
+                        <xs:element name="geschaeftszeichen" minOccurs="0" type="xoev-lc:String.Latin" />
+                        <xs:element name="referenz" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Ref.Rollennummer">
+                          <xs:annotation>
+                            <xs:documentation>Hier kann ein Bezug zu einer anderem Rolle angegeben werden. Einige Rollen haben einen Bezug zu einer anderen Beteiligung. Typisches Beispiel sind Rechtsanwälte.Diese handeln in aller Regel als Prozessbevollmächtigte für einen anderen Beteiligten.Im vorliegenden Feld wird dann vermerkt, für welchen Beteiligten (ggf. auch in welcher Rolle ) der Rechtsanwalt handelt.  Für jede Rolle, auf die verwiesen wird, muss ein entsprechendes Element "Beteiligung/Rolle" vorhanden sein. Verwiesen wird auf die Rollennummer.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="anrede" minOccurs="0" type="tns:Code.GDS.Anrede.PV">
+                          <xs:annotation>
+                            <xs:documentation>Hier sind die Anredeformen aus der Codeliste WL_Anreden_BfJ zu verwenden.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="beteiligter" type="tns:Type.GDS.Beteiligter" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendungsdaten">
+        <xs:annotation>
+          <xs:documentation>Sendungsdaten nehmen alle Informationen auf, die die jeweils vorliegende Sendung betreffen. Sendungsübergreifende Informationen sind in den Verfahrensdaten enthalten.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="absenderkennung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier wird nicht der gesamte Datensatz eines Beteiligten referenziert, sondern nur eine Angabe eines Absendernamens gemacht. Eventuell können hierzu auch E-Mail-Adresse, der OSCI-Benutzername oder die Postfach-ID einer virtuellen Poststelle verwendet werden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="empfaengerkennung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier wird nicht der gesamte Datensatz eines Beteiligten referenziert, sondern nur eine Angabe eines Empfängernamens gemacht. Eventuell können hierzu auch E-Mail-Adresse, der OSCI-Benutzername oder die Postfach-ID einer virtuellen Poststelle verwendet werden</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="papiervorgang" fixed="false" type="xs:boolean" />
+            <xs:element name="xdomea_2">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="akte" minOccurs="0" type="xdomea:AkteType" />
+                  <xs:element name="dokument" minOccurs="0" type="xdomea:DokumentType" />
+                  <xs:element name="vorgang" minOccurs="0" type="xdomea:VorgangType" />
+                </xs:sequence>
+                <xs:attribute name="XDOMEA_Version" type="xoev-lc:String.Latin" use="required" fixed="2.2.0" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Type.EHUG.Nachrichtenkopf_Extern_Justiz" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Dieser Typ ist ein universeller Nachrichtenkopf-Typ  für den FDS EHUG. Er ist identisch mit dem entsprechenden Typ des Fachdantensatzes Insolvenz. Evtl. kann im Zuge der Evaluierung von XJustiz eine Vereinheitlichung der Nachrichtenköpfe erfolgen und entsprechende Kernkomponenten im Grunddatensatz definiert werden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nachrichtennummer" minOccurs="0" maxOccurs="unbounded" type="xs:positiveInteger" />
+      <xs:element name="aktenzeichen.Absender" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="erstellungszeitpunkt" minOccurs="0" maxOccurs="unbounded" type="xs:dateTime" />
+      <xs:element name="absender" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="empfaenger" minOccurs="0" maxOccurs="unbounded" type="tns:Code.GDS.Gerichte">
+        <xs:annotation>
+          <xs:documentation />
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ereignis" minOccurs="0" maxOccurs="unbounded" type="xoev-code:Code">
+        <xs:annotation>
+          <xs:documentation />
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.ehug.uebergabe.2100001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.EHUG.Nachrichtenkopf_Extern_Justiz">
+                <xs:sequence>
+                  <xs:element name="nachrichtennummer" minOccurs="0" type="xs:positiveInteger" />
+                  <xs:element name="aktenzeichen.Absender" type="xoev-lc:String.Latin" />
+                  <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin" />
+                  <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+                  <xs:element name="absender" fixed="Bundesamt für Justiz" type="xoev-lc:String.Latin" />
+                  <xs:element name="empfaenger" type="tns:Code.GDS.Gerichte">
+                    <xs:annotation>
+                      <xs:documentation>Empfänger ist das LG Bonn mit der XJustiz-ID R3200.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ereignis" minOccurs="0" maxOccurs="unbounded" type="tns:Code.EHUG.Nachrichten_BfJ">
+                    <xs:annotation>
+                      <xs:documentation />
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.EHUG.Grunddaten" />
+        <xs:element name="fachdaten" type="tns:Type.EHUG.Fachdaten" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

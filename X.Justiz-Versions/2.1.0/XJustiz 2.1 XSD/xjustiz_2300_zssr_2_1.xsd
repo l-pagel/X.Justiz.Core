@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_2310_cl_zssr_2_1.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.ZSSR.Anschrift">
+    <xs:sequence>
+      <xs:element name="anschriftenzusatz" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier ist Raum für Adressierungszusätze, z.B. Name des Wohnungsgebers.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="strasse" type="xoev-lc:String.Latin" />
+      <xs:element name="hausnummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Hausnummer ist ggf. einschliesslich Buchstaben oder dergleichen anzugeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postfachnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="postleitzahl" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bei ausländischen Adressen hier bitte keine Länderkennungskürzel eintragen. Wegen der Schreibweise ausländischer Orte vgl. die Anmerkung zum Element "Ort".</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ort" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bei postalischen Anschriften kann der hier angegebene Ort von der politischen Gemeinde abweichen. In diesem Fall sollten die postalische und die Lieferadresse separat mitgeteilt werden. Bei ausländischen Adressen empfiehlt die Deutsche Post AG, den Ort möglichst in der Landessprache zu schreiben. Dies erscheint auch im vorliegenden Zusammenhang sinnvoll. Die Deutsche Post AG empfiehlt ferner,  ausländische Ortsnamen in Großbuchstaben anzugeben. Hiervon sollte bei der Übermittlung von XJustiz-Daten möglichst Abstand genommen werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="staat" type="tns:Code.GDS.Staaten">
+        <xs:annotation>
+          <xs:documentation>Zulässige Staaten sind in der Datei xj_0050_wl_staaten_x_x.xsd definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Beteiligter">
+    <xs:sequence>
+      <xs:element name="beteiligtennummer" type="xoev-lc:String.Latin" />
+      <xs:choice>
+        <xs:element name="ra_Kanzlei" type="tns:Type.ZSSR.RA_Kanzlei" />
+        <xs:element name="natuerliche_Person" type="tns:Type.ZSSR.Natuerliche_Person" />
+        <xs:element name="organisation" type="tns:Type.ZSSR.Organisation" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Dokument">
+    <xs:sequence>
+      <xs:element name="id" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="dokumenttyp" type="tns:Code.ZSSR.Dokumenttyp" />
+      <xs:element name="dateiname" type="xoev-lc:String.Latin" />
+      <xs:element name="signatur" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier soll der Dateiname der Signaturdatei hinterlegt werden, z.B. "Schutzschrift_XYZ.pdf.pkcs7".</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Nachrichtenkopf">
+    <xs:sequence>
+      <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Referenz bei Rückantwort/Ihr Zeichen</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hat der Einreicher der Schutzschrift bei der Einreichung ein Aktenzeichen mitgeliefert, wird dies hier als Referenz mit angegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="erstellungszeitpunkt" minOccurs="0" type="xs:dateTime" />
+      <xs:element name="absender" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bezeichnung des Absenders (z.B. Formulartheke)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="ereignis" minOccurs="0" type="xoev-code:Code" />
+      <xs:element name="email_Absender" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Diese Adresse wird ggf. für automatisierte Rückmeldungen verwendet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sendungs_ID" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Technisch eindeutige ID der Sendung. Mehrere Nachrichten, die zu einer Sendung gehören, haben die gleiche ID.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anzahl_Nachrichten_gesamt" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Besteht die Sendung aus mehr als einer Nachricht, steht hier die Gesamtzahl der Nachrichten dieser Sendung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nachrichten_Nr" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Nummer der Nachricht innerhalb der Sendung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Natuerliche_Person">
+    <xs:sequence>
+      <xs:element name="voller_Name" type="tns:Type.ZSSR.Voller_Name" />
+      <xs:element name="weiterer_Name" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="anschrift" type="tns:Type.ZSSR.Anschrift" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Natuerliche_Person_Antragssteller">
+    <xs:sequence>
+      <xs:element name="voller_Name" type="tns:Type.ZSSR.Voller_Name" />
+      <xs:element name="weiterer_Name" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="anschrift" minOccurs="0" type="tns:Type.ZSSR.Anschrift" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Organisation">
+    <xs:sequence>
+      <xs:element name="bezeichnung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung_Aktuell" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kurzbezeichnung" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="rechtsform" type="tns:Code.GDS.Rechtsform">
+        <xs:annotation>
+          <xs:documentation>Verwendet werden die Abkürzungen aus der Liste WL_Rechtsform, die im Schema "xj_0030_wl_rechtsform_x_x.xsd" vorliegt. Wenn die betreffende Organisationsform dort nicht aufgeführt ist, soll die vollständige Bezeichnung angegeben werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sitz">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ort" type="xoev-lc:String.Latin" />
+            <xs:element name="postleitzahl" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten">
+              <xs:annotation>
+                <xs:documentation>Vgl. die Anmerkung zum Element "Geburtsort".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anschrift" type="tns:Type.ZSSR.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Auch Postfach-Anschriften fallen unter den Type.ZSSR.Anschrift</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Organisation_Antragssteller">
+    <xs:sequence>
+      <xs:element name="bezeichnung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung_Aktuell" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kurzbezeichnung" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="rechtsform" minOccurs="0" type="tns:Code.GDS.Rechtsform">
+        <xs:annotation>
+          <xs:documentation>Verwendet werden die Abkürzungen aus der Liste WL_Rechtsform, die im Schema "xj_0030_wl_rechtsform_x_x.xsd" vorliegt. Wenn die betreffende Organisationsform dort nicht aufgeführt ist, soll die vollständige Bezeichnung angegeben werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sitz" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ort" type="xoev-lc:String.Latin" />
+            <xs:element name="postleitzahl" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten">
+              <xs:annotation>
+                <xs:documentation>Vgl. die Anmerkung zum Element "Geburtsort".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" type="tns:Type.ZSSR.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Auch Postfach-Anschriften fallen unter den Type.ZSSR.Anschrift</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.RA_Kanzlei">
+    <xs:sequence>
+      <xs:element name="safe_ID" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Perspektivisch soll ein RA ausschließlich über die Safe-ID identifiziert und beschrieben werden. Die anderen Kind-Elemente sind dann entbehrlich, da diese Informationen über die Safe-ID bereits vorliegen. Da zurzeit aber kein Service existiert, der die entsprechenden Informationen liefert, müssen diese Angaben vorerst weiter gemacht werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bezeichnung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung_Aktuell" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="rechtsform" minOccurs="0" type="tns:Code.GDS.Rechtsform">
+        <xs:annotation>
+          <xs:documentation>Hier kann die Rechtsform der Kanzlei übergeben werden, z.B. GmbH, Partnerschaft.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="kanzleiform" type="tns:Code.GDS.Kanzleiform" />
+      <xs:element name="anschrift" type="tns:Type.ZSSR.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Hier muss die Kanzleianschrift angebenen  werden, die verfahrensbezogen maßgeblich sein soll. Es wird eine vollständige Anschrift benötigt, um die Nachricht verarbeiten zu können.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation" />
+      <xs:element name="ra_im_Verfahren" minOccurs="0" type="tns:Type.ZSSR.Natuerliche_Person">
+        <xs:annotation>
+          <xs:documentation>Hier kann die Daten des Rechtsanwalts / der Rechtsanwältin übergeben werden, der/die als Bevollmächtigter im Verfahren auftritt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZSSR.Voller_Name">
+    <xs:sequence>
+      <xs:element name="vorname" type="xoev-lc:String.Latin" />
+      <xs:element name="rufname" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Rufname gibt bei mehreren Vornamen an, welcher Vorname der Rufname ist. Der Rufname wird häufig als eindeutiges Element benötigt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="titel" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier werden akademische und nichtakademische Titel aufgeführt, die vor dem Vornamen stehen, z.B. "Professor", "Dr.", "Prof. Dr." usw. Werden mehrere Titel benötigt, ist eine Reihenfolge zu berücksichtigt: 1) Militärischer Rang 2.) Akademischer Titel 3.) Nichtakademischer Grad</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="namensvorsatz" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier werden Adelstitel aufgeführt, die vor dem Nachnamen stehen, z.B. "Graf von"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nachname" type="xoev-lc:String.Latin" />
+      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="nachname_Alt" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+      <xs:element name="namenszusatz" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier ist Raum für Zusätze, die hinter den Nachnamen stehen, z.B. "MdB" oder "LLM."</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.zssr.bestaetigung.2300001">
+    <xs:annotation>
+      <xs:documentation>Diese Nachricht dient der Bestätigung von Eingängen (Schutzschriften und Rücknahmen).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.ZSSR.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut gibt die XJustiz-Versionsnummer an, gegen die das Instanzdokument auf Validität geprüft werden kann. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auswahl_ZSSR_Rueckmeldung">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="einstellbestaetigung" default="Einstellbestätigung" type="xoev-lc:String.Latin" />
+                    <xs:element name="ruecknahmebestaetigung" default="Rücknahmebestätigung" type="xoev-lc:String.Latin" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="verfahrensdaten">
+                <xs:annotation>
+                  <xs:documentation>Die vom ZSSR erfassten Daten werden zur Kontrolle bei der Bestätigung mitgeliefert.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registernummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Registernummer der hinterlegten Schutzschrift</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ruecknahmecode" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Code zur Rücknahme einer Schutzschrift. Dieser wird neben der Registernummer benötigt für Rücknahmen. Dies soll eine missbräuchliche Rücknahme vermeiden.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:choice>
+                      <xs:element name="einstellungsdatum" type="xs:dateTime">
+                        <xs:annotation>
+                          <xs:documentation>Datum und Uhrzeit der Einstellung der Schutzschrift</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="ruecknahmedatum" type="xs:dateTime">
+                        <xs:annotation>
+                          <xs:documentation>Datum und Uhrzeit der Rücknahme der Schutzschrift</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:choice>
+                    <xs:element name="antragssteller" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>NN, Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="antragsgegner" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="verfahrensgegenstand" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Bestätigung des Streitgegenstands der Einreichung</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dokumente" type="tns:Type.ZSSR.Dokument" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zssr.einreichung_schutzschrift.2300002">
+    <xs:annotation>
+      <xs:documentation>Nachricht für die Einreichung einer Schutzschrift</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.ZSSR.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="absender" type="xoev-lc:String.Latin" />
+                  <xs:element name="email_Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="sendungs_ID" type="xoev-lc:String.Latin" />
+                  <xs:element name="anzahl_Nachrichten_gesamt" type="xs:integer" />
+                  <xs:element name="nachrichten_Nr" type="xs:integer" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="instanzdaten">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="verfahrensgegenstand" type="tns:Type.GDS.Verfahrensgegenstand">
+                            <xs:annotation>
+                              <xs:documentation>Hier wird der Streitgegenstand hinterlegt. Falls sinnvoll, kann noch eine Codeliste definiert werden.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="beteiligung" maxOccurs="unbounded">
+                      <xs:annotation>
+                        <xs:documentation>Es muss immer eine Beteiligung mit der Rolle "Antragsgegner" vorhanden sein.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="rolle" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="rollennummer" type="xoev-lc:String.Latin" />
+                                <xs:element name="rollenbezeichnung" type="tns:Code.ZSSR.Rollenbezeichnung" />
+                                <xs:element name="nr" type="xs:integer">
+                                  <xs:annotation>
+                                    <xs:documentation>Wenn es in einem Verfahren mehrere gleichartige Beteiligte gibt, sind diese fortlaufend zu numerieren.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="referenz" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Ref.Rollennummer">
+                                  <xs:annotation>
+                                    <xs:documentation>Hier kann über die Rollennummer ein Bezug zu einem oder mehreren anderen Beteiligten angegeben werden. So kann etwa bei Prozessbevollmächtigten angegeben werden, für welche anderen Beteiligten sie handeln.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="beteiligter" type="tns:Type.ZSSR.Beteiligter" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut gibt die XJustiz-Versionsnummer an, gegen die das Instanzdokument auf Validität geprüft werden kann. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gesetzlicher_oder_gewillkuerter_Vertreter" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xoev-lc:String.Latin" />
+                    <xs:element name="ref_Beteiligtennummer" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="antragssteller" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:choice>
+                      <xs:element name="nn" type="xs:boolean">
+                        <xs:annotation>
+                          <xs:documentation>Sofern mögliche Antragssteller bei Einreichung der Schutzschrift unbekannt sind, soll dies durch NN kenntlich gemacht werden.</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="zssr_Organisation_Antragssteller" type="tns:Type.ZSSR.Organisation_Antragssteller" />
+                      <xs:element name="zssr_Natuerliche_Person_Antragssteller" type="tns:Type.ZSSR.Natuerliche_Person_Antragssteller" />
+                    </xs:choice>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dokumente" maxOccurs="unbounded" type="tns:Type.ZSSR.Dokument">
+                <xs:annotation>
+                  <xs:documentation>Schutzschrift und die ggf. mitgelieferten Anlagen.
+Eigentlich ist der in XJustiz eingebettete Standard XDomea zur Beschreibung von Dokumenten vorgesehen. Hier scheint XDomea 2 allerdings nur bedingt geeignet.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zssr.fehlermeldung.2300003">
+    <xs:annotation>
+      <xs:documentation>Diese Nachricht dient der Übermittlung von Fehlermeldungen vom ZSSR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.ZSSR.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut gibt die XJustiz-Versionsnummer an, gegen die das Instanzdokument auf Validität geprüft werden kann. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sendungsdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fehlerquelle" type="tns:Code.ZSSR.Fehler" />
+                    <xs:element name="fehlermeldung" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Informationen zu dem aufgetretenen Fehler</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="verfahrensdaten" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registernummer" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Registernummer der Schutzschrift</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ruecknahmecode" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Code zur Rücknahme, der bei der Eintragung an den Einreicher übermittelt wird. Schutz vor Missbrauch der Rücknahme.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="antragssteller" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>NN, Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="antragsgegner" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="verfahrensgegenstand" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Streitgegenstand der Schutzschrift</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dokumente" type="tns:Type.ZSSR.Dokument">
+                <xs:annotation>
+                  <xs:documentation>Dokument mit der Fehlermeldung als Anlage</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zssr.mitteilung_einschlaegig.2300004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.ZSSR.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="instanzdaten">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="instanznummer" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="sachgebiet" minOccurs="0" type="tns:Code.GDS.Sachgebiet" />
+                          <xs:element name="instanzbehoerde">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="aktenzeichen" type="xoev-lc:String.Latin" />
+                          <xs:element name="verfahrensgegenstand" type="tns:Type.GDS.Verfahrensgegenstand">
+                            <xs:annotation>
+                              <xs:documentation>Hier wird der Streitgegenstand hinterlegt. Falls sinnvoll, kann noch eine Codeliste definiert werden.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut gibt die XJustiz-Versionsnummer an, gegen die das Instanzdokument auf Validität geprüft werden kann. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registernummer" type="xoev-lc:String.Latin" />
+                    <xs:element name="datum_Einschlaegigkeitsmarkierung" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Datum der Markierung der Schutzschrift durch ein Gericht</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="einstellungsdatum" type="xs:dateTime">
+                      <xs:annotation>
+                        <xs:documentation>Datum und Uhrzeit der Einstellung in das ZSSR</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="antragssteller" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>NN, Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="antragsgegner" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Bezeichnung_aktuell bei Organisation oder Name, Vorname bei Natürliche_Person</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dokumente" maxOccurs="unbounded" type="tns:Type.ZSSR.Dokument" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zssr.ruecknahme_schutzschrift.2300005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.ZSSR.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="absender" type="xoev-lc:String.Latin" />
+                  <xs:element name="email_Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="sendungs_ID" type="xoev-lc:String.Latin" />
+                  <xs:element name="anzahl_Nachrichten_gesamt" type="xs:integer" />
+                  <xs:element name="nachrichten_Nr" type="xs:integer" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut gibt die XJustiz-Versionsnummer an, gegen die das Instanzdokument auf Validität geprüft werden kann. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:annotation>
+                  <xs:documentation>Verfahrensspezifische Daten, die für die Rücknahme benötigt werden.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="registernummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Registernummer der Schutzschrift, die zurückgenommen werden soll.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ruecknahmecode" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Code zur Rücknahme der bei der Eintragung an den Einreicher übermittelt wird. Schutz vor Missbrauch der Rücknahme.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dokumente" maxOccurs="unbounded" type="tns:Type.ZSSR.Dokument">
+                <xs:annotation>
+                  <xs:documentation>Beschreibung von der Nachricht berigefügter Dokumente. Es muss mindestens die Erklärung der Rücknahme mitgeliefert werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

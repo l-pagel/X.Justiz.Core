@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_6.xsd" />
+  <xs:include schemaLocation="xjustiz_0710_cl_grundbuch_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_0720_cl_rollenbezeichnung_grundbuch_2_1.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.GRBU.Berechtigter">
+    <xs:choice>
+      <xs:element name="eigentuemer_Rechtsinhaber" type="tns:Type.GRBU.Person_oder_Gesamthandsgemeinschaft" />
+      <xs:element name="anderer_Bestand_berechtigt" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Bestand" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Bestandsverzeichnis">
+    <xs:sequence>
+      <xs:element name="bestand" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bestandsnummer" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Eindeutige Nummer zur Referenzierung</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="grundbuchamt" type="tns:Code.GDS.Gerichte">
+              <xs:annotation>
+                <xs:documentation>Amtsgericht oder sonstige Stelle, bei der das Grundbuchblatt geführt wird</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="grundbuchbezirk" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Der Grundbuchbezirk ist auf dem Grundbuchblatt in der Regel mit der Einleitung "Grundbuch von" oder "Grundbuch für" angegeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="blattstelle" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Nr. des Grundbuchblatts</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="lfd_Nr" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Jedes Grundstück ist im Bestandsverzeichnis unter einer eigenen lfd.Nr. gebucht</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="auswahl_Baurecht" minOccurs="0">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="erbbaurecht" type="tns:Type.GRBU.Erbbaurecht" />
+                  <xs:element name="grundstueck" type="tns:Type.GRBU.Grundstueck" />
+                  <xs:element name="sonstige" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Z.B. Bergwerks, Bahn- und Fischereigrundbücher.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="aktivvermerke" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Herrschvermerk.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="wohnungs_Teileigentum">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="grundstueck" type="tns:Type.GRBU.Grundstueck" />
+                        <xs:element name="groesse_Miteigentumsanteil" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Angabe des Bruchteils</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="bezeichnung_des_Sondereigentums" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Beliebige Bezeichnung z.B.als Wohnung, Büro,Gewerbefläche (beispielsweise Praxis usw.) o.ä.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sondernutzungsrecht" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Inhalt der Sondernutzungsrechte am gemeinschaftlichen Eigentum.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="zustimmungserfordernis" minOccurs="0" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Z.B. des Verwalters bei Veräußerung. Auch Ausnahmen können hier angegeben werden.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="wohnungserbbaurecht_Teilerbbaurecht">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="erbbaurecht" type="tns:Type.GRBU.Erbbaurecht" />
+                        <xs:element name="groesse_Miteigentumsanteil" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Angabe des Bruchteils</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="bezeichnung_des_Sondereigentums" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                        <xs:element name="sondernutzungsrecht" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                        <xs:element name="zustimmungserfordernis" minOccurs="0" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Z.B. Verwalter bei Veräußerung.  Auch Ausnahmen können hier angegeben werden.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="miteigentumsanteil" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="bezeichnung" type="xoev-lc:String.Latin" />
+                  <xs:element name="hoehe" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hoehe des MA</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="gemeinde" minOccurs="0" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Beurkundung_Grundbuch">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.GDS.Beurkundung">
+        <xs:sequence>
+          <xs:element name="beteiligter" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="betroffener_Beteiligter" type="tns:Type.GDS.Ref.Rollennummer" />
+                <xs:element name="vollmacht" minOccurs="0" type="xoev-lc:String.Latin" />
+                <xs:element name="identifikation" minOccurs="0" type="xoev-lc:String.Latin">
+                  <xs:annotation>
+                    <xs:documentation>Feststellung der Personenechtheit, z.B. Reisepass.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ref_Dok_ID" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Dieses Element enthält einen Verweis auf die ID eines Dokuments, das im Grunddatensatz in der Liste der (übermittelten) Dokumente aufgeführt ist.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:complexContent>
+                <xs:extension base="tns:Type.GDS.Identifikation" />
+              </xs:complexContent>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Erbbaurecht">
+    <xs:sequence>
+      <xs:element name="bezeichnung_Als_Erbbaurecht" type="xoev-lc:String.Latin" />
+      <xs:element name="daten_des_Erbbaugrundstuecks" maxOccurs="unbounded" type="tns:Type.GRBU.Grundstueck" />
+      <xs:element name="dauer_Erbbaurecht" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Anzahl der Jahre, für die das Erbbaurecht bestellt wurde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="zustimmungserfordernis_Grundstueckseigentuemer" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Eventuell bestehende Zustimmungserfordernisse des Grundstückseigentümers nach § 5 ErbbauRG.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Gesamthandsgemeinschaft">
+    <xs:sequence>
+      <xs:element name="berechtigungsverhaeltnis" minOccurs="0" type="tns:Code.GRBU.Berechtigungsverhaeltnis.Typ3">
+        <xs:annotation>
+          <xs:documentation>Zulässige Werte sind definiert in der Codeliste WL_Berechtigungsverhaeltnis.             Bei Alleineigentum kann das Element weggelassen werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="eigentuemer_Rechtsinhaber" maxOccurs="unbounded" type="tns:Type.GRBU.Person_oder_Gesamthandsgemeinschaft" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Grundstueck">
+    <xs:sequence>
+      <xs:element name="flurstueck" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="gemarkung" type="xoev-lc:String.Latin" />
+            <xs:element name="flur" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Flurnummer</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="flurstuecksnummer">
+              <xs:annotation>
+                <xs:documentation>Flurstücksnummer</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="zaehler" type="xoev-lc:String.Latin" />
+                  <xs:element name="nenner" minOccurs="0" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="beschrieb" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Wirtschaftsart und Lage des betroffenen Flurstücks</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="wirtschaftsart" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                  <xs:element name="lage" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="groesse" minOccurs="0" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Person_oder_Gesamthandsgemeinschaft">
+    <xs:sequence>
+      <xs:element name="auswahl_Person_Gesamthandsgemeinschaft">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gesamthandsgemeinschaft" type="tns:Type.GRBU.Gesamthandsgemeinschaft" />
+            <xs:element name="person">
+              <xs:annotation>
+                <xs:documentation>Dieses Element enthält einen Verweis auf einen Beteiligten, der in den Grunddaten in der Liste der Beteiligten aufgeführt ist.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="betroffene_Person" type="tns:Type.GDS.Ref.Rollennummer" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anteil" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bruchteil</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lfd_Nr" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die laufende Nummer des Eigentümers in Abt.I des Grundbuchblattes</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Rangvorbehalt">
+    <xs:sequence>
+      <xs:element name="beschreibung" default="Grundpfandrecht" type="xoev-lc:String.Latin" />
+      <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag" />
+      <xs:element name="zinsen" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Zinssatz in Prozent</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="zinsbeginn" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="zinszeitraum" minOccurs="0" default="jährlich" type="xoev-lc:String.Latin" />
+            <xs:element name="sonstiges" minOccurs="0" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nebenleistung_wiederkehrend" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>In der Regel Verzinsung des Nennbetrages eines Grundpfandrechtes</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="auswahl_Pozentsatz_Betrag">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Zinssatz in Prozent</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                    <xs:annotation>
+                      <xs:documentation>Als Währungsbezeichnung sind die dreistelligen Buchstaben-Abkürzungen gemäss ISO 4217 zu verwenden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="beginn" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="zeitraum" minOccurs="0" default="jährlich" type="xoev-lc:String.Latin" />
+            <xs:element name="sonstiges" minOccurs="0" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="auswahl_Nebenleistung_einmalig" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Einmalige Nebenleistung eines Grundpfandrechts</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+              <xs:annotation>
+                <xs:documentation>Als Währungsbezeichnung sind die dreistelligen Buchstaben-Abkürzungen gemäss ISO 4217 zu verwenden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Zinssatz in Prozent</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anfangszeit" type="xoev-lc:String.Latin" />
+      <xs:element name="einmalig" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Beschränkung des Rangvorbehalts auf einen Ausübungsfall.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Recht">
+    <xs:sequence>
+      <xs:element name="rechtenummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Eindeutige Nummer zur Referenzierung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="betroffener_Bestand" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Bestand">
+        <xs:annotation>
+          <xs:documentation>Betroffener Bestand</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="eintragungsgrundlage" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Beurkundung_Grundbuch" />
+      <xs:element name="auswahl_Abteilung">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="abteilungI">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="eigentuemer_Rechtsinhaber" maxOccurs="unbounded" type="tns:Type.GRBU.Person_oder_Gesamthandsgemeinschaft" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="abteilungII">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="lfd_Nr" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Die laufende Nummer des Rechts in Abt. II des Grundbuchblattes</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="belastungsart_AbtII" minOccurs="0" type="tns:Code.GRBU.Belastungsart.AbtII.Typ3">
+                    <xs:annotation>
+                      <xs:documentation>Zulässige Werte sind definiert in der Codeliste WL_Belastungsart_AbtII.
+Vormerkungen (mit Ausnahme der Auflassungsvormerkung/ Rückauflassungsvormerkung und der Vormerkung auf Bildung von Sondereigentum) können mit Hilfe des Elements Ist_Vormerkung realisiert werden. Bei Belastungsarten, die nicht in der Liste enthalten sind, soll der Listeneintrag Sonstiges gewählt und die Belastung im Feld Bemerkung näher spezifiziert werden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="bemerkung" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Schlagwort zur näheren Spezifikation der Belastungart: für Belastungsarten, die eigentlich Oberbegriffe sind.                     Beispiel: Bei der Belasungsart "beschränkte persönliche Dienstbarkeit" kann als Bemerkung "Geh- und Fahrrecht"                     angegeben werden.                     Bei Belastungsarten, die nicht in der Codeliste vorkommen, kann unter Belastungsart_AbtII der Wert "Sonstiges"                     angegeben und hier eine nähere Angabe über die Art der Belastung eingetragen werden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="spezifizierung_der_Belastung" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Deckt die Fälle Teilflächenbelastung (Flurstücksbelastung oder §7 GBO),                      Quotennießbrauch sowie Nießbrauch eines ideellen Miteigentumsanteils ab.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anteilsbelastung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="betroffener_Bestand" type="tns:Type.GRBU.Ref.Bestand">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf die jeweilige Bestandsnummer</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ref_Nr_Abteilung_I" type="tns:Type.GRBU.Ref.AbteilungI">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf einen Eintrag in Abteilung I</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ist_Vormerkung" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Nach § 883 BGB oder ggf. § 18 Abs. 2 GBO bei bestehendem Recht.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="auswahl_Berechtigter" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Berechtigter" />
+                  <xs:element name="rangvermerk" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Regelt das Rangverhältnis zu anderen Rechten in Abt. II und Abt. III des Grundbuches.                     Hier wird sowohl die Rangänderung zwischen mehreren bestehenden Rechten als auch die Rangänderung zwischen einem bestehenden und einem neu einzutragenden Recht abgedeckt.                     Standardtext: Das Recht hat Vorrang/Gleichrang/Nachrang gegenüber dem Recht Abteilung XXX Nr. 00.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="art_des_Ranges" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="beschreibung" type="xoev-lc:String.Latin">
+                                <xs:annotation>
+                                  <xs:documentation>Freitextfeld zur Darstellung von Informationen, die nicht strukturiert abbildbar sind. Hier kann z.Bsp. auch eingetragen werden "unter Ausnutzung / unter teilweiser Ausnutzung des Rangvorbehaltes".</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="betroffenes_Recht" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Recht">
+                                <xs:annotation>
+                                  <xs:documentation>Zur Referenzierung auf ein oder mehrere bestehende Rechte</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="wirksamkeitsvermerk" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Vermerk, dass das Recht gegenüber einer vorrangig eingetragenen Vormerkung oder einer zeitlich früher eingetragenen relativen Verfügungsbeschränkung (z.B. Nacherbenvernerk) wirksam ist.                     Hier wird sowohl die Wirksamkeit zwischen mehreren bestehenden Rechten als auch die Wirksamkeit zwischen einem bestehenden und einem neu einzutragenden Recht abgedeckt.                     Standardtext: Das Recht ist wirksam gegenüber dem Recht Abteilung XXX Nr. 00.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="beschreibung" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Freitextfeld zur Darstellung von Informationen, die nicht strukturiert abbildbar sind..</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="betroffenes_Recht" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Recht">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf ein oder mehrere bestehende Rechte</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="veraenderung" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Beispiel Verpfändung einer Auflassungsvormerkung</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="lfd_Nr" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Laufende Nummer des von der Veränderung betroffenen Rechts in Abt. II</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="auswahl_Veraenderungsart">
+                          <xs:complexType>
+                            <xs:choice>
+                              <xs:element name="sonstige_Veraenderungsart" type="xoev-lc:String.Latin" />
+                              <xs:element name="veraenderungsart" type="tns:Code.GRBU.Veraenderungen.AbtII.Typ3">
+                                <xs:annotation>
+                                  <xs:documentation>Werte aus WL_Veraenderungen_AbtII</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="auswahl_Berechtigter" minOccurs="0" type="tns:Type.GRBU.Berechtigter" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="loeschung" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="lfd_Nr" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Laufende Nummer des von der Löschung betroffenen Rechts in Abt. II.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="einschraenkung" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Teillöschung, z.B. ein Berechtigter o. Teil des Rechts</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="abtretungsausschluss" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Standardtext: Die Abtretung des Rechts / des durch die Vormerkung gesicherten Anspruchs ist ausgeschlossen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="vorloeschungsklausel" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Löschungserleichterung gem. § 23 GBO                     Standardtext: Zur Löschung des Rechts genügt der Nachweis des Todes des Berechtigten.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rangvorbehalt" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Rangvorbehalt" />
+                  <xs:element name="bedingung" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="befristung" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="verfuegungsbeschraenkung_Nach_P26_InvG" minOccurs="0" default="false" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="abteilungIII">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="lfd_Nr" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Die Laufende Nummer des Rechts im Grundbuchblatt</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="belastungsart_AbtIII" minOccurs="0" maxOccurs="unbounded" type="tns:Code.GRBU.Belastungsart.AbtIII.Typ3">
+                    <xs:annotation>
+                      <xs:documentation>Verwendet werden die Werte aus der Codeliste WL_Belastungsart_AbtIII.
+Vormerkungen (mit Ausnahme der Auflassungsvormerkung/ Rückauflassungsvormerkung und der Vormerkung auf Bildung von Sondereigentum) können mit Hilfe des Elements Ist_Vormerkung ergänzt werden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="spezifizierung_der_Belastung" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Deckt die Fälle Teilflächenbelastung (Flurstücksbelastung oder §7 GBO),                     Quotennießbrauch sowie Nießbrauch eines ideellen Miteigentumsanteils ab.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anteilsbelastung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ref_Bestandsnummer" type="tns:Type.GRBU.Ref.Bestand">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf die jeweilige Bestandsnummer</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ref_Nr_Abteilung_I" type="tns:Type.GRBU.Ref.AbteilungI">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf einen Eintrag in Abteilung I</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ist_Vormerkung" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="hauptsachebetrag" minOccurs="0" type="tns:Type.GDS.Geldbetrag">
+                    <xs:annotation>
+                      <xs:documentation>Nennbetrag eines eingetragenen Rechts in Abteilung III des Grundbuches</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zinsen" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Zinssatz in Prozent</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="zinsbeginn" minOccurs="0" type="xoev-lc:String.Latin" />
+                        <xs:element name="zinszeitraum" minOccurs="0" default="jährlich" type="xoev-lc:String.Latin" />
+                        <xs:element name="sonstiges" minOccurs="0" type="xoev-lc:String.Latin" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="nebenleistung_wiederkehrend" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>In der Regel Verzinsung des Nennbetrages eines Grundpfandrechtes</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="auswahl_Pozentsatz_Betrag">
+                          <xs:complexType>
+                            <xs:choice>
+                              <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+                                <xs:annotation>
+                                  <xs:documentation>Zinssatz in Prozent</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                                <xs:annotation>
+                                  <xs:documentation>Als Währungsbezeichnung sind die dreistelligen Buchstaben-Abkürzungen gemäss ISO 4217 zu verwenden.</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="beginn" minOccurs="0" type="xoev-lc:String.Latin" />
+                        <xs:element name="zeitraum" minOccurs="0" default="jährlich" type="xoev-lc:String.Latin" />
+                        <xs:element name="sonstiges" minOccurs="0" type="xoev-lc:String.Latin" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="auswahl_Nebenleistung_einmalig" minOccurs="0">
+                    <xs:annotation>
+                      <xs:documentation>Einmalige Nebenleistung eines Grundpfandrechts</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                          <xs:annotation>
+                            <xs:documentation>Als Währungsbezeichnung sind die dreistelligen Buchstaben-Abkürzungen gemäss ISO 4217 zu verwenden.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="prozentsatz" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Zinssatz in Prozent</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ohne_Brief" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Über dieses Element wird angegeben, ob die Erteilung eines Grundschuld- bzw. Hypothekenbriefs ausgeschlossen ist.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="glaeubiger" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Person_oder_Gesamthandsgemeinschaft" />
+                  <xs:element name="sofort_vollstreckbar" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Ist das eingetragene Grundpfandrecht nach § 800 ZPO vollstreckbar?</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="teilvollstreckung" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="rangvermerk" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Regelt das Rangverhältnis zu anderen Rechten in Abt. II und Abt. III des Grundbuches.                     Hier wird sowohl die Rangänderung zwischen mehreren bestehenden Rechten als auch die Rangänderung zwischen einem bestehenden und einem neu einzutragenden Recht abgedeckt.                     Standardtext: Das Recht hat Vorrang/Gleichrang/Nachrang gegenüber dem Recht Abteilung XXX Nr. 00.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="art_des_Ranges" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="beschreibung" type="xoev-lc:String.Latin">
+                                <xs:annotation>
+                                  <xs:documentation>Freitextfeld zur Darstellung von Informationen, die nicht strukturiert abbildbar sind. Hier kann z.Bsp. auch eingetragen werden "unter Ausnutzung / unter teilweiser Ausnutzung des Rangvorbehaltes".</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="betroffenes_Recht" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Recht">
+                                <xs:annotation>
+                                  <xs:documentation>Zur Referenzierung auf ein oder mehrere bestehende Rechte</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="wirksamkeitsvermerk" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Vermerk, dass das Recht gegenüber einer vorrangig eingetragenen Vormerkung oder einer zeitlich früher eingetragenen relativen Verfügungsbeschränkung (z.B. Nacherbenvernerk) wirksam ist.                     Hier wird sowohl die Wirksamkeit zwischen mehreren bestehenden Rechten als auch die Wirksamkeit zwischen einem bestehenden und einem neu einzutragenden Recht abgedeckt.                     Standardtext: Das Recht ist wirksam gegenüber dem Recht Abteilung XXX Nr. 00.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="beschreibung" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Freitextfeld zur Darstellung von Informationen, die nicht strukturiert abbildbar sind..</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="betroffenes_Recht" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Recht">
+                          <xs:annotation>
+                            <xs:documentation>Zur Referenzierung auf ein oder mehrere bestehende Rechte</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ausschluss_Loeschungsanspruch" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Ausschluß gesetzlicher Löschungsanspruch gemäß § 1179 a und b BGB</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="verfuegungsbeschraenkungen" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Eintragbare Verfügungsbeschränkungen bei Grundpfandrecht (Einschränkung der Abtretbarkeit)</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="gesamthaftung" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Vermerk, wenn mehrere Pfandobjekte an unter-schiedlichen Blattstellen belastet sind.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="veraenderung" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Beispiel Abtretung Grundschuld</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="lfd_Nr" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Laufende Nummer des von der Veränderung betroffenen Rechtes in Abt. III</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                          <xs:annotation>
+                            <xs:documentation>Wert der Veränderung</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="auswahl_Veraenderungsart">
+                          <xs:complexType>
+                            <xs:choice>
+                              <xs:element name="sonstige_Veraenderungsart" type="xoev-lc:String.Latin" />
+                              <xs:element name="veraenderungsart" type="tns:Code.GRBU.Veraenderungen.AbtIII.Typ3">
+                                <xs:annotation>
+                                  <xs:documentation>Werte aus WL_Veraenderungen_AbtIII</xs:documentation>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="auswahl_Berechtigter" minOccurs="0" type="tns:Type.GRBU.Berechtigter" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="loeschung" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="lfd_Nr" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Laufende Nummer des von der Löschung betroffenen Rechtes in Abt. III</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag">
+                          <xs:annotation>
+                            <xs:documentation>Wert der Löschung</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="einschraenkung" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Teillöschung, z.B. ein Berechtigter o. Teil des Rechts</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="treuhandsperrvermerk" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="abtretungsausschluss" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Standardtext: Die Abtretung des Rechts ist ausgeschlossen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rangvorbehalt" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Rangvorbehalt" />
+                  <xs:element name="bedingung" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="befristung" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="verfuegungsbeschraenkung_Nach_P26_InvG" minOccurs="0" default="false" type="xs:boolean" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Ref.AbteilungI">
+    <xs:sequence>
+      <xs:element name="ref_AbteilungInummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Referenz auf einen Anteil in Abteilung I definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Ref.Antrag">
+    <xs:sequence>
+      <xs:element name="ref_Antragsnummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Referenz auf einen Antrag definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Ref.Bestand">
+    <xs:sequence>
+      <xs:element name="ref_Bestandsnummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Referenz auf einen Bestand definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.GRBU.Ref.Recht">
+    <xs:sequence>
+      <xs:element name="ref_Rechtenummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Referenz auf eine bestehendes Recht definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.grbu.antrag.0700001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.GDS.Nachrichtenkopf.Extern_zu_Justiz">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.GRBU.Ereignis.Typ3" />
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten" />
+        <xs:element name="fachdaten_Grundbuch">
+          <xs:annotation>
+            <xs:documentation>In einer Datei wird nur ein Fachdatensatz übermittelt</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bestandsverzeichnis" type="tns:Type.GRBU.Bestandsverzeichnis" />
+              <xs:element name="bestehendes_Recht" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Hier werden bestehende Rechte angegeben.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="recht" type="tns:Type.GRBU.Recht" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="antrag" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Die einzelnen Anträge beschreiben die Änderungen im Grundbucheintrag</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="antragsnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Eindeutige Nummer zur Referenzierung</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ref_Dok_ID" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Identifikation">
+                      <xs:annotation>
+                        <xs:documentation>Dieses Element enthält einen Verweis auf die ID eines Dokuments, das im Grunddatensatz in der Liste der (übermittelten) Dokumente aufgeführt ist.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geschaeftsregister_Grundbuch" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Das Geschäftsregister Grundbuch ist ein Aktenzeichen im System FOLIA/EGB.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nummer" type="xoev-lc:String.Latin" />
+                          <xs:element name="jahr" minOccurs="0" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="bemerkung" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+                    <xs:element name="paragraph15GBO" default="true" type="xs:boolean" />
+                    <xs:element name="ausdruck_gewuenscht" minOccurs="0">
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="gesamtbestand" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>Mehrere betroffene Bestände, die in unterschiedlichen Blättern eingetragen sind.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="anzahl" type="xoev-lc:String.Latin" />
+                                <xs:element name="ausdrucksart" type="tns:Code.GRBU.Auszugsart.Typ3" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="einzelbestand" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="betroffener_Bestand" type="tns:Type.GRBU.Ref.Bestand" />
+                                <xs:element name="anzahl" type="xoev-lc:String.Latin" />
+                                <xs:element name="ausdrucksart" type="tns:Code.GRBU.Auszugsart.Typ3" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="auswahl_Eintragung_Loeschung">
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="eintragung">
+                            <xs:annotation>
+                              <xs:documentation>Neueintragung oder Änderung eines Rechts.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="bestehendes_Recht" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GRBU.Ref.Recht">
+                                  <xs:annotation>
+                                    <xs:documentation>Bestehendes Recht ist auch das Eigentum, das durch einen Verweis auf Abteilung I dargestellt wird Dies dient zur Abbildung der Neueintragung einer Belastung. Sofern nichts eingegeben wird, ist der gesamte Bestand bzw. das gesamte Eigentum in Abt. I belastet.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="recht" type="tns:Type.GRBU.Recht">
+                                  <xs:annotation>
+                                    <xs:documentation>Hier steht das einzutragende Recht.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="rangbestimmung" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                                  <xs:annotation>
+                                    <xs:documentation>Rangbestimmung zwischen mehreren neu einzutragenden Rechten.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="wirksamkeitsbestimmung" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                                  <xs:annotation>
+                                    <xs:documentation>Wirksamkeitsbestimmung zwischen mehreren neu einzutragenden Rechten.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="loeschung">
+                            <xs:annotation>
+                              <xs:documentation>Löschung eines bestehenden Rechtes</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="bestehendes_Recht" type="tns:Type.GRBU.Ref.Recht" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wert" minOccurs="0" type="tns:Type.GDS.Geldbetrag">
+                      <xs:annotation>
+                        <xs:documentation>Wert, der der Grundbuchgebührenberechnung zugrundegelegt wird z. B. Kaufpreis</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten_fuer_Kreditinstitute" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Diese Erweiterung dient zur Übermittlung von Daten, die nur in der Kommunikation mit Kreditinstituten nötig sind. Sie steht außerhalbg von XJustiz.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referenz_Antragsnummer" type="tns:Type.GRBU.Ref.Antrag">
+                <xs:annotation>
+                  <xs:documentation>Betroffener Antrag</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="freitext_Auftrag" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="art_der_Grundbuchabschrift" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Es muss mit der Justiz abgestimmt werden, ob das Element im Fachdatensatz Grundbuch aufgenommen werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erwerbsgeschaeft" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="freitext_Aenderung" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="freitext_Belehrung" minOccurs="0" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="schluessel_antragsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag" />
+      <xs:field xpath="tns:antragsnummer" />
+    </xs:key>
+    <xs:key name="schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestandsverzeichnis/tns:bestand" />
+      <xs:field xpath="tns:bestandsnummer" />
+    </xs:key>
+    <xs:key name="schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht" />
+      <xs:field xpath="tns:rechtenummer" />
+    </xs:key>
+    <xs:keyref name="referenz_antragsnummer_antrag" refer="tns:schluessel_antragsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_fuer_Kreditinstitute/tns:referenz_Antragsnummer" />
+      <xs:field xpath="tns:ref_Antragsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:anteilsbelastung/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_berechtigter_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_eintragung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungII/tns:anteilsbelastung/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_eintragung_berechtigter_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungII/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_eintragung_veraenderung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_veraenderung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:anteilsbelastung/tns:ref_Bestandsnummer" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_eintragung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungIII/tns:anteilsbelastung/tns:ref_Bestandsnummer" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_eintragung_veraenderung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungIII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_veraenderung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_eintragung_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_einzelbestand_antrag" refer="tns:schluessel_bestandsnummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:ausdruck_gewuenscht/tns:einzelbestand/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_eintragung_rangvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_eintragung_wirksamkeitsvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_rangvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_wirksamkeitsvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_eintragung_rangvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungIII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_eintragung_wirksamkeitsvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:recht/tns:abteilungIII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_rangvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_wirksamkeitsvermerk_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_eintragung_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:eintragung/tns:bestehendes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_loeschung_antrag" refer="tns:schluessel_rechtenummer_antrag">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:antrag/tns:loeschung/tns:bestehendes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.grbu.gemarkungsliste.0700002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Extern" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.6.0" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten_Grundbuch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grundbuchamt" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="bezeichnung" type="xoev-lc:String.Latin" />
+                    <xs:element name="xjustiz_ID" type="xoev-lc:String.Latin" />
+                    <xs:element name="behoerden_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="govello_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="elrv_ab" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+                      <xs:annotation>
+                        <xs:documentation>Teilnahme am Elektronischen Rechtsverkehr ab diesem Datum</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="anschrift" maxOccurs="unbounded" type="tns:Type.GDS.Anschrift">
+                      <xs:annotation>
+                        <xs:documentation>Hausanschrift und ggf. abweichende Postanschrift</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="kontakt" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation" />
+                    <xs:element name="gemarkung" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="grundbuchbezirk" type="xoev-lc:String.Latin" />
+                          <xs:element name="bezirksnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="bundesland" type="xoev-lc:String.Latin" />
+                          <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="gemeindekennzahl" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="gemarkungsname" type="xoev-lc:String.Latin" />
+                          <xs:element name="gemarkungsnummer" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.grbu.mitteilung.0700003">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Extern">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.GRBU.Ereignis.Typ3" />
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten" />
+        <xs:element name="fachdaten_Grundbuch">
+          <xs:annotation>
+            <xs:documentation>In einer Datei wird nur ein Fachdatensatz übermittelt</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bestandsverzeichnis" type="tns:Type.GRBU.Bestandsverzeichnis" />
+              <xs:element name="bestehendes_Recht" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Hier werden bestehende Rechte angegeben.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="recht" type="tns:Type.GRBU.Recht" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten_fuer_Kreditinstitute" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Diese Erweiterung dient zur Übermittlung von Daten, die nur in der Kommunikation mit Kreditinstituten nötig sind. Sie steht außerhalbg von XJustiz.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ref_Antragssnummer" type="tns:Type.GRBU.Ref.Antrag">
+                <xs:annotation>
+                  <xs:documentation>Betroffener Antrag</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="freitext_Auftrag" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="art_der_Grundbuchabschrift" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Es muss mit der Justiz abgestimmt werden, ob das Element im Fachdatensatz Grundbuch aufgenommen werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erwerbsgeschaeft" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="freitext_Aenderung" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="freitext_Belehrung" minOccurs="0" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestandsverzeichnis/tns:bestand" />
+      <xs:field xpath="tns:bestandsnummer" />
+    </xs:key>
+    <xs:key name="schluessel_rechtenummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht" />
+      <xs:field xpath="tns:rechtenummer" />
+    </xs:key>
+    <xs:keyref name="referenz_bestandsnummer_aii_berechtigter_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:anteilsbelastung/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aii_veraenderung_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:anteilsbelastung/tns:ref_Bestandsnummer" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_aiii_veraenderung_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:veraenderung/tns:berechtigter/tns:anderer_Bestand_berechtigt" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_bestandsnummer_mitteilung" refer="tns:schluessel_bestandsnummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:betroffener_Bestand" />
+      <xs:field xpath="tns:ref_Bestandsnummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_rangvermerk_mitteilung" refer="tns:schluessel_rechtenummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aii_wirksamkeitsvermerk_mitteilung" refer="tns:schluessel_rechtenummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_rangvermerk_mitteilung" refer="tns:schluessel_rechtenummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:rangvermerk/tns:art_des_Ranges/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+    <xs:keyref name="referenz_rechtenummer_aiii_wirksamkeitsvermerk_mitteilung" refer="tns:schluessel_rechtenummer_mitteilung">
+      <xs:selector xpath="tns:fachdaten_Grundbuch/tns:bestehendes_Recht/tns:recht/tns:abteilungIII/tns:wirksamkeitsvermerk/tns:betroffenes_Recht" />
+      <xs:field xpath="tns:ref_Rechtenummer" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
+

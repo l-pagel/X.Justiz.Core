@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdo="http://www.xdomea.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_1410_cl_zwangsversteigerung_2_0.xsd" />
+  <xs:import schemaLocation="xdomea_typen_1_0.xsd" namespace="http://www.xdomea.de" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.ZVG.Zahlung">
+    <xs:sequence>
+      <xs:element name="datum" type="xs:date" />
+      <xs:element name="betrag" type="tns:Type.GDS.Geldbetrag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.zvg.zwangsversteigerungstermin.1400001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf">
+          <xs:annotation>
+            <xs:documentation />
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="instanzdaten">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="sachgebiet" minOccurs="0" type="tns:Code.GDS.Sachgebiet" />
+                          <xs:element name="instanzbehoerde">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="aktenzeichen" type="tns:Type.GDS.Aktenzeichen" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="termin">
+                      <xs:annotation>
+                        <xs:documentation>Termin der Versteigerung</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="terminsdaten">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="terminsort">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="gerichtsort">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="gebaeude" minOccurs="0" type="xoev-lc:String.Latin" />
+                                            <xs:element name="anschrift" minOccurs="0" type="tns:Type.GDS.Anschrift" />
+                                            <xs:element name="stockwerk" minOccurs="0" type="xoev-lc:String.Latin" />
+                                            <xs:element name="raum" type="xoev-lc:String.Latin" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="terminszeit">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="terminsdatum" type="xs:date" />
+                                      <xs:element name="terminsuhrzeit" type="xs:time" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="xdomea" type="xdo:T_XDOMEA">
+                      <xs:annotation>
+                        <xs:documentation>Hier sind ggf. angehängte Dokumente zu spezifizieren.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="letzte_Aktualisierung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="datum" type="tns:Type.GDS.Datumsangabe" />
+                    <xs:element name="uhrzeit" type="tns:Type.GDS.Zeitangabe" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="veroeffentlichung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="zvg_id" type="xoev-lc:String.Latin" />
+                    <xs:element name="land_abk" type="xoev-lc:String.Latin" />
+                    <xs:element name="versteigerungsart" type="tns:Code.ZVG.Versteigerungsart" />
+                    <xs:element name="grundbuch" minOccurs="0" type="xs:integer" />
+                    <xs:element name="objekt" type="xoev-lc:String.Latin" />
+                    <xs:element name="objekt_Liste" maxOccurs="unbounded" type="tns:Code.ZVG.Objekt" />
+                    <xs:element name="lage" type="tns:Type.GDS.Anschrift" />
+                    <xs:element name="beschreibung" type="xoev-lc:String.Latin" />
+                    <xs:element name="glaeubiger" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="verkehrswert" type="xoev-lc:String.Latin" />
+                    <xs:element name="bemerkung" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="aenderung" minOccurs="0" type="xs:integer" />
+                    <xs:element name="hinweis" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="geoServer" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="googleMaps" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

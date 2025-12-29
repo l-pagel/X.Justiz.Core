@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdo="http://www.xdomea.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0005_nachrichten_2_4.xsd" />
+  <xs:include schemaLocation="xjustiz_0610_cl_mahn_2_0.xsd" />
+  <xs:import schemaLocation="xdomea_typen_1_0.xsd" namespace="http://www.xdomea.de" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.MAHN.Fachdaten_Aktenzeichenmitteilung">
+    <xs:sequence>
+      <xs:element name="instanzdaten">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="instanznummer" fixed="2" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Enthält eine Referenz auf die Instanznummer des Mahngerichts in den Instanzdaten des Grunddatensatzes.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="geschaeftszeichen.Gericht" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>In der Aktenzeichenmitteilung ist das Geschäftszeichen des Antragsgegners zurückzugeben, auf den sich die Abgabe des Mahngerichts bezog. Dieser ergibt sich aus der Nachricht_Mahn_Uebergabe (Element Fachdaten_Mahn_Uebergabe/Verfahrensablauf/Antragsgegner). Anschließend kann das Element Fachdaten_Mahn/Mahnbescheid/Geschaeftszeichen_Gericht aus dem Mahnbescheid entnommen werden, das sich gegen diesen Antragsgegner richtet.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.MAHN.Fachdaten_Uebergabe">
+    <xs:sequence>
+      <xs:element name="mahnbescheid" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Daten des Mahnbescheids als Grundlage für einen Vollstreckungsbescheid, der evt. erst im streitigen Verfahren erlassen wird. In einem Mahnverfahren können mehrere Mahnbescheid gegen div. Antragsgegner ergehen.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="antragsgegner" type="tns:Type.GDS.Ref.Rollennummer">
+              <xs:annotation>
+                <xs:documentation>Über eine Referenz auf den Grunddatensatz wird der Antragsgegner angegeben. Je Antragsgegner ergeht ein Mahnbescheid.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="geschaeftszeichen.Gericht" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Rollenspezifisches gerichtliches Geschäftszeichen. Wenn ein Mahnverfahren gegen mehrere Antragsgegner geht, wird pro einzelnen Antragsgegner ein rollenspezifisches Geschäftszeichen vergeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="antragsdatum" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Antragsdatum des Mahnbescheids</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="antragseingangsdatum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Eingangsdatum des Antrag auf Erstellung eines Mahnbescheids</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="erlassdatum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datum, wann der Mahnbescheid erlassen wurde</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="zustelldatum" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Hier ist das Datum der Zustellung des Mahnbescheids an den einzelnen Antragsgegner anzugeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anspruch" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Die Informationen zu einem gestellten Anspruch.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="anspruchsnummer" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Anspruchsnummer des Anspruchs: Eindeutige Kennzeichnung des Anspruchs innerhalb eines MB wird vom Mahngericht vergeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="auswahl_Anspruch">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="sonstiger_Anspruch" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Bezeichnung des Sonstigen Anspruchs (=Zeile 36 des Mahnbescheidsantrags). Angabe eines Sonstigen Anspruchs, der nicht dem Hauptkatalog zu entnehmen ist.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="hauptforderung">
+                    <xs:annotation>
+                      <xs:documentation>Bezeichnung des Anspruchs entsprechend dem Hauptforderungs-Katalog von AUGEMA. (= Bezeichnung der im Mahnbescheidsantrag ausgewählten Hauptkatalognummer)</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="bezeichnung" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Mögliche Werte sind Dienstleistungsvertrag, Frachtkosten etc.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="betrag" minOccurs="0" type="tns:Type.GDS.Geldbetrag">
+              <xs:annotation>
+                <xs:documentation>Betragswert des Anspruchs</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="widerspruch" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="widerspruchsart" type="tns:Code.MAHN.Widerspruchsart">
+              <xs:annotation>
+                <xs:documentation>Gesamt / Teilwiderspruch</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="datum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datum des Widerspruchs (wird vom Mahngericht aus den                    Angaben im Formular, Schreiben etc. übernommen)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="eingangsdatum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datum des Eingangs des Widerspruchs beim Mahngericht</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="verspaetet" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>verspäteter Widerspruch J/N</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="eingelegt_fuer" type="tns:Type.GDS.Ref.Rollennummer">
+              <xs:annotation>
+                <xs:documentation>Hier ist die Referenz auf die Rollennummer des Beteiligten anzugeben, für den das Rechtsmittel eingelegt wurde.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="eingelegt_durch" type="tns:Type.GDS.Ref.Rollennummer">
+              <xs:annotation>
+                <xs:documentation>Hier ist die Referenz auf die Rollennummer des Beteiligten anzugeben, der das Rechtsmittel eingelegt hat.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="vollstreckungsbescheid" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="schuldner" type="tns:Type.GDS.Ref.Rollennummer">
+              <xs:annotation>
+                <xs:documentation>Referenz auf die Rollennummer des Schuldners, gegen den der Vollstreckungsbescheid erlassen wird.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="datum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datum des Vollstreckungsbescheids</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="einspruch" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="datum" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Datum des Einspruchs</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eingangsdatum" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Datum des Eingangs des Einspruchs beim Mahngericht</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eingelegt_fuer" type="tns:Type.GDS.Ref.Rollennummer">
+                    <xs:annotation>
+                      <xs:documentation>Hier ist die Referenz auf die Rollennummer des Beteiligten anzugeben, für den das Rechtsmittel eingelegt wurde.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eingelegt_durch" type="tns:Type.GDS.Ref.Rollennummer">
+                    <xs:annotation>
+                      <xs:documentation>Hier ist die Referenz auf die Rollennummer des Beteiligten anzugeben, der das Rechtsmittel eingelegt hat.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="zustelldatum" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Hier ist das Datum der Zustellung des Vollstreckungsbescheids an den Schuldner anzugeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="verfahrensablauf" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Kosten bezüglich Mahnverfahren oder Verfahrensablauf</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="antragsgegner" type="tns:Type.GDS.Ref.Rollennummer">
+              <xs:annotation>
+                <xs:documentation>Mit Nachricht_Mahn_Uebergabe wird nur der Verfahrensablauf gegen den Antragsgegner, gegen den das Verfahren abgegeben wird, übergeben. Aus der Referenz auf die Rollennummer des Antragsgegners geht hervor, gegen welchen von ggf. mehreren Antragsgegnern die Abgabe erfolgt.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="kosten" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="kostenbefreiung" type="tns:Code.MAHN.Kostenbefreiung">
+                    <xs:annotation>
+                      <xs:documentation>WL_Kostenbefreiung: Kostenbefreiung, volle Zahlungspflicht, kostenbefreit, Gebührenbefreit</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Fachdaten_Mahn_Version" type="xoev-lc:String.Latin" use="required" fixed="1.4" />
+  </xs:complexType>
+  <xs:complexType name="Type.MAHN.Instanzdaten">
+    <xs:sequence>
+      <xs:element name="instanznummer">
+        <xs:annotation>
+          <xs:documentation>Bei den Instanzdaten des Mahngerichts wird hier stets        der Wert "1" übergeben. Bei den Instanzdaten des        Prozessgerichts wird stets der Wert "2" übergeben.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="sachgebiet" type="tns:Code.MAHN.Sachgebiet">
+        <xs:annotation>
+          <xs:documentation>Bei den Instanzdaten des Mahngerichts wird stets der Wert              "Mahnsachen" übergeben. Bei den Instanzdaten des Prozessgerichts              wird stets einer der Werte "Familiensachen", "Zivilsachen", oder              "Handelssachen" übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sachgebietszusatz" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="auswahl_instanzbehoerde">
+        <xs:annotation>
+          <xs:documentation>Wird bei beiden Instanzdaten übergeben. Als Kindelement ist nur              "Gericht" zulässig, da beide Instanzbehörden              (Mahngericht, Prozessgericht) Gerichte sind.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="verfahrensinstanznummer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Bei den Instanzdaten des Mahngerichts wird dieses Element nicht              übergeben. Bei den Instanzdaten des Prozessgerichts wird hier              stets der Wert "neu" übergeben.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="neu" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="aktenzeichen" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>In Nachricht_Mahn_Uebergabe: Bei den Instanzdaten des Mahngerichts werden die ersten neun Stellen der Mahnverfahrensgeschäftsnummer übergeben, d.h. Schuldnerkennziffer und Prüfziffer werden weggelassen. Bei den Instanzdaten des Prozessgerichts wird hier stets der Wert "neu" übergeben. In Nachricht_Mahn_Bestaetigung: Bei den Instanzdaten des Prozessgerichts wird hier das Aktenzeichen des neuen Verfahrens am Prozessgericht übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="kurzrubrum" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bei beiden Instanzdaten wird hier die Zeichenkette "xxx./.yyy"              übergeben, wobei "xxx" durch den ersten Antragstellerund "yyy"              durch den ersten Antragsgegner zu ersetzen ist.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="verfahrensgegenstand" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Verfahrensgegenstand">
+        <xs:annotation>
+          <xs:documentation>Hier wird der Text der ersten Hauptforderung übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="posteingang.Verfahren" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+        <xs:annotation>
+          <xs:documentation>Hier wird das Eingangsdatum der Übergabe an das Prozessgericht              übergeben. Ist der entsprechende Bereich des Prozessgerichts              noch nicht für den ERV freigegeben, so ist dies das              Eingangsdatum des Aktenausdrucks in Papierform. Ist der Bereich              bereits freigegeben, so ist dies der Eingang der OSCI-Nachricht              mit dem Aktenausdruck als Anhang im OSCI-Postfach des              empfangenden Gerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.MAHN.Ref_Rollennummer">
+    <xs:complexContent>
+      <xs:restriction base="tns:Type.GDS.Ref.Rollennummer">
+        <xs:sequence>
+          <xs:element name="ref.rollennummer" type="tns:Type.MAHN.Rollennummer" />
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="Type.MAHN.Rollennummer">
+    <xs:annotation>
+      <xs:documentation>Bei der Bildung der Rollennummer werden Präfixes vergeben, die von den          Rollen und den Zuordnungen abgeleitet sind:              R_AS (Antragsteller),              R_GV (Gesetzlicher Vertreter),              R_PV (Prozessbevollmächtigter),              R_AG (Antragsgegner),              R_AB (Früherer Gläubiger).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xoev-lc:String.Latin">
+      <xs:pattern value="R_AS.*|R_GV.*|R_PV.*|R_AG.*|R_AB.*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="nachricht.mahn.aktenzeichenmitteilung.0600001">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.GDS.Aktenzeichenmitteilung.Justiz_zu_Justiz">
+          <xs:sequence>
+            <xs:element name="fachdaten.mahn.Aktenzeichenmitteilung" type="tns:Type.MAHN.Fachdaten_Aktenzeichenmitteilung" />
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.mahn.uebergabe.0600002">
+    <xs:annotation>
+      <xs:documentation>Dieses Element ist das Wurzelelement einer Nachricht mittels derer ein Mahnverfahren von einem Mahngericht an ein Prozessgericht übergeben wird.
+Es gibt Datensätze in AUGEMA, in denen im Element "Vorname" Inhalte wie "Vorstand", "Geschäftsführer" oder dergleichen stehen, da die Rechtsprechung es zuließ, dass die namentliche Bezeichnung der Vertretungsorgane nicht immer erforderlich ist. Da für den Datenaustausch die Unterdrückung eines gültigen gesetzlichen Vertreters keine glückliche Lösung wäre (würde auch zu Constraintverletzungen im Verfahrensablauf führen, wenn Ref_Rollennummer ins Leere läuft), wurde beschlossen, in diesen Fällen den Eintrag "Name nicht bekannt" im Nachnamen zu setzten.  Das übernehmende Fachverfahren muss darauf reagieren.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Justiz">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.MAHN.Ereignis.Uebergabe" />
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.MAHN.Instanzdaten" />
+                    <xs:element name="beteiligung" minOccurs="2" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="rolle" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="rollennummer" type="tns:Type.MAHN.Rollennummer">
+                                  <xs:annotation>
+                                    <xs:documentation>Die Rollennummer wird als eindeutige                                        Kennziffer innerhalb des XML-Dokuments                                        benötigt, um aus anderen Elementen innerhalb                                        des XML-Dokuments heraus auf Beteiligte und                                        Rollen verweisen zu können.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="rollenbezeichnung" type="tns:Code.MAHN.Rollenbezeichnung" />
+                                <xs:element name="nr" default="1" type="xs:integer">
+                                  <xs:annotation>
+                                    <xs:documentation>Nummeriert wird getrennt nach                                        Rollenbezeichnung, jeweils bei 1 beginnend.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="geschaeftszeichen" minOccurs="0" type="xoev-lc:String.Latin">
+                                  <xs:annotation>
+                                    <xs:documentation>Hier wird das Geschäftszeichen des entsprechenden Beteiligten übergeben, sofern es eines gibt und dem Mahngericht bekannt ist.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="referenz" minOccurs="0" maxOccurs="unbounded" type="tns:Type.MAHN.Ref_Rollennummer">
+                                  <xs:annotation>
+                                    <xs:documentation>Dieses Element wird übergeben, wenn das                                        Element "Rollenbezeichnung" einen der Werte                                        "Prozessbevollmächtigte(r)" oder "Gesetzliche(r)                                        Vertreter(in)" hat. In diesem Fall wird die                                        Rollennummer der vertretenen Rolle übergeben.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="auswahl_anrede" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>Hier werden Anredeformen übermittelt, die                                        in einem Fachverfahren für den Beteiligten                                        in der betreffenden Rolle gespeichert sind.</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:choice>
+                                      <xs:element name="anrede.PV" type="tns:Code.GDS.Anrede.PV">
+                                        <xs:annotation>
+                                          <xs:documentation>Dieses Element ist zu verwenden, wenn                                             das Element "Rollenbezeichnung" den                                             Wert "Prozessbevollmächtigte(r)" hat.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="anrede.Partei" type="tns:Code.GDS.Anrede.Partei">
+                                        <xs:annotation>
+                                          <xs:documentation>Dieses Element ist zu verwenden, wenn das Element "Rollenbezeichnung" nicht den Wert "Prozessbevollmächtigte(r)" hat.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:choice>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="beteiligter" type="tns:Type.GDS.Beteiligter" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="papiervorgang" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Wenn zusätzlich zur elektronischen Nachricht der               Aktenausdruck als Papierdokument verschickt wird, ist               hier "true" zu übergeben. Anderenfalls ist "false" zu              übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="xdomea" minOccurs="0" type="xdo:T_XDOMEA">
+                      <xs:annotation>
+                        <xs:documentation>Restriktion dieses Typs derzeit aus technischen Gründen               (lokale Typen in xdomea_typen_1_0.xsd) nicht möglich.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.4.0">
+              <xs:annotation>
+                <xs:documentation>Analog zum statischen Fachdatensatz erhalten die Grunddaten von Nachrichten ein Versionsattribut.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten.mahn.Uebergabe" type="tns:Type.MAHN.Fachdaten_Uebergabe" />
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="eindeutigkeit_beteiligtennummer">
+      <xs:annotation>
+        <xs:documentation>Für jedes Element Beteiligter muss die Beteiligtennummer eindeutig       sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:beteiligter" />
+      <xs:field xpath="tns:beteiligtennummer" />
+    </xs:unique>
+    <xs:unique name="eindeutigkeit_geschaeftszeichen_antragsgegner_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jeden Antragsgegner muss das Geschäftszeichen des Gerichts      ein eindeutiger Schlüssel sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:fachdaten_Mahn_Uebergabe/tns:mahnbescheid" />
+      <xs:field xpath="tns:geschaeftszeichen_Gericht" />
+    </xs:unique>
+    <xs:unique name="eindeutigkeit_mahn_instanznummer_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jedes Element Instanzdaten muss die Instanznummer eindeutig sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:instanzdaten" />
+      <xs:field xpath="tns:instanznummer" />
+    </xs:unique>
+    <xs:unique name="eindeutigkeit_rollenbezeichnung_nr">
+      <xs:annotation>
+        <xs:documentation>Für jede Rolle muss die Kombination aus der Bezeichnung und       der Nummer instanzdokumentweit (eigentlich verfahrensweit)       eindeutig sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:nr" />
+      <xs:field xpath="tns:rollenbezeichnung/tns:content" />
+    </xs:unique>
+    <xs:key name="schluessel_anspruch_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jeden Anspruch muss die Anspruchsnummer ein eindeutiger       Schlüssel sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:fachdaten_Mahn_Uebergabe/tns:anspruch" />
+      <xs:field xpath="tns:anspruchsnummer" />
+    </xs:key>
+    <xs:key name="schluessel_beteiligter_rollennummer_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jede Rolle muss die Rollennummer ein eindeutiger Schlüssel sein.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="ref_anspruchsnummer_uebergabe" refer="tns:schluessel_anspruch_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jedes Auftreten des Elements Ref_Anspruchsnummer (dieses       Element kann unterhalb von Abtretung und Zinsen auftreten)       muss es ein Element Anspruch geben, dessen Anspruchsnummer       identisch mit dem Wert im Element Ref_Anspruchsnummer ist.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//*" />
+      <xs:field xpath="tns:ref.anspruchsnummer" />
+    </xs:keyref>
+    <xs:keyref name="ref_rollennummer_uebergabe" refer="tns:schluessel_beteiligter_rollennummer_uebergabe">
+      <xs:annotation>
+        <xs:documentation>Für jedes Auftreten des Elements Ref_Rollennummer (dieses       Element tritt an verschiedenen Stellen auf) muss es ein Element       Rolle geben, dessen Rollennummer identisch mit dem Wert im       Element Ref_Rollennummer ist.</xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//*" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
+

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_2410_cl_ezoll_2_0.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.EZOLL.Grunddaten">
+    <xs:sequence>
+      <xs:element name="verfahrensdaten">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+            <xs:element name="beteiligung" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="rolle" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="rollennummer" type="xoev-lc:String.Latin" />
+                        <xs:element name="rollenbezeichnung" type="tns:Code.EZOLL.Rollenbezeichnung" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="beteiligter">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="beteiligtennummer" minOccurs="0" type="xoev-lc:String.Latin" />
+                        <xs:element name="auswahl_Beteiligter">
+                          <xs:complexType>
+                            <xs:choice>
+                              <xs:element name="natuerliche_Person" type="tns:Type.EZOLL.Natuerliche_Person" />
+                              <xs:element name="organisation" type="tns:Type.EZOLL.Organisation" />
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Type.EZOLL.Natuerliche_Person">
+    <xs:sequence>
+      <xs:element name="voller_Name" type="tns:Type.GDS.Voller_Name" />
+      <xs:element name="geburt" type="tns:Type.GDS.Geburt" />
+      <xs:element name="anschrift" type="tns:Type.GDS.Anschrift" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.EZOLL.Organisation">
+    <xs:sequence>
+      <xs:element name="bezeichnung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung_aktuell" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kurzbezeichnung" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="rechtsform" minOccurs="0" type="tns:Code.GDS.Rechtsform" />
+      <xs:element name="anschrift" minOccurs="0" type="tns:Type.GDS.Anschrift" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Type.EZOLL.String300">
+    <xs:restriction base="xoev-lc:String.Latin">
+      <xs:maxLength value="300" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="nachricht.ezoll.auskunft.2400001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Safe-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angabe des GV bzw. der Vollstreckungsbehörde (Safe-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.EZOLL.Ereignis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.EZOLL.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichten_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="auskunft_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="weitere_Angaben" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="hinweistext" minOccurs="0" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.ezoll.auskunftsersuchen.2400002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin" />
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+              <xs:element name="ereignis" type="tns:Code.EZOLL.Ereignis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.EZOLL.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichten_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="voraussetzungen_Auskunftsersuchen">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="grund_der_Forderung" type="tns:Code.EZOLL.Forderung">
+                      <xs:annotation>
+                        <xs:documentation>Bezeichnung der Forderung gemäß der Codeliste WL_Forderung</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="kommentar" type="tns:Type.EZOLL.String300">
+                      <xs:annotation>
+                        <xs:documentation>Freitextfeld, maximal 300 Zeichen</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="mindesthoehe" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="bisherige_Bemuehungen_erfolglos" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Angabe, dass vorherige Bemühungen bei anderen Stellen erfolglos waren</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="bestaetigung_Daten_notwendig" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Bestätigung, dass die Daten zur Erfüllung der Aufgaben notwendig sind</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.ezoll.fehlermeldung.2400003">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin" />
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin" />
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+              <xs:element name="ereignis" type="tns:Code.EZOLL.Ereignis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" type="tns:Type.GDS.Herstellerinformation" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichten_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="fehlercode" type="xs:integer" />
+              <xs:element name="fehlertext" minOccurs="0" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.ezoll.prueffallmeldung.2400004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin" />
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin" />
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+              <xs:element name="ereignis" type="tns:Code.EZOLL.Ereignis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" type="tns:Type.GDS.Herstellerinformation" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachrichten_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="prueffall_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="prueffall_Erklaerung" minOccurs="0" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

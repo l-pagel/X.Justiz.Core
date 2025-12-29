@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_6.xsd" />
+  <xs:include schemaLocation="xjustiz_2010_cl_kasse_2_0.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.KASSE.SEPA_Lastschrift">
+    <xs:sequence>
+      <xs:element name="konto.BIC" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bank Identifier Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="konto.IBAN" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>International Bank Account Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="kontoinhaber" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="glaeubiger.ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Originalname: Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mandats.ID">
+        <xs:simpleType>
+          <xs:restriction base="xoev-lc:String.Latin">
+            <xs:pattern value="([A-Za-z0-9]|[\+|\?|/|\-|:|\(|\)|\.|,]){1,35}" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="mandatszeichnungsdatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Originalname: DateOfSignature</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lastschrifttyp" minOccurs="0" type="tns:Code.KASSE.Lastschrifttyp">
+        <xs:annotation>
+          <xs:documentation>Originalname: SequenceType</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="faelligkeitsdatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Originalname: RequestedCollectionDate</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.kasse.lastschrift.2000001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Justiz" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.6.0" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten" type="tns:Type.KASSE.SEPA_Lastschrift" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

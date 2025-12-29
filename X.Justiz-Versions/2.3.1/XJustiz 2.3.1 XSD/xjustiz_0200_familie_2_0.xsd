@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_3.xsd" />
+  <xs:include schemaLocation="xjustiz_0210_cl_familie_2_0.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.FAM.Instanzdaten">
+    <xs:sequence>
+      <xs:element name="instanznummer" type="xoev-lc:String.Latin" />
+      <xs:element name="sachgebiet" type="tns:Code.GDS.Sachgebiet" />
+      <xs:element name="sachgebietszusatz" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="auswahl_Instanzbehoerde">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="behoerde" type="xoev-lc:String.Latin" />
+            <xs:element name="sonstige" type="xoev-lc:String.Latin" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="abteilung" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="aktenzeichen" type="xoev-lc:String.Latin" />
+      <xs:element name="kurzrubrum" type="xoev-lc:String.Latin" />
+      <xs:element name="verfahrensgegenstand" minOccurs="0" maxOccurs="unbounded" type="tns:Code.FAM.Gegenstandsbezeichnung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.fam.allgemein.0200001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="absender_Empfaenger" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_Extern" />
+              <xs:element name="ereignis" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier muss noch eine Codeliste erstellt werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="instanzdaten" maxOccurs="unbounded" type="tns:Type.FAM.Instanzdaten" />
+                    <xs:element name="beteiligung" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Beteiligung" />
+                    <xs:element name="auswahl_Termin" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="terminsdaten" type="tns:Type.GDS.Terminsdaten" />
+                          <xs:element name="fortsetzungsterminsdaten" type="tns:Type.GDS.Fortsetzungsterminsdaten" />
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.3.1" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten_Familie_allgemein">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="familienname" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="heiratsdatum" minOccurs="0" type="xs:date" />
+              <xs:element name="auswahl_Heiratsort" minOccurs="0">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="heiratsort_Standesamt" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="heiratsort_kein_Standesamt" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="heiratsregister" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="familienart" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="familienart" minOccurs="0" type="tns:Code.FAM.Familienart" />
+                    <xs:element name="beginn_Ehezeit" minOccurs="0" type="xs:date" />
+                    <xs:element name="ende_Ehezeit" minOccurs="0" type="xs:date" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="auswahl_Zustelldatum" minOccurs="0">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="zustelldatum_Scheidungsantrag" minOccurs="0" type="xs:date" />
+                    <xs:element name="zustelldatum_Trennungsantrag" minOccurs="0" type="xs:date" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="trennungszeitpunkt" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="rechtswahl_Scheidungsrecht" minOccurs="0" type="tns:Code.GDS.Staaten" />
+              <xs:element name="scheidungsdatum" minOccurs="0" type="xs:date" />
+              <xs:element name="rechtskraft_Entscheidung" minOccurs="0" type="xs:date" />
+            </xs:sequence>
+            <xs:attribute name="fachdaten_Familie_allgemein_Version" type="xoev-lc:String.Latin" use="required" fixed="1.0" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

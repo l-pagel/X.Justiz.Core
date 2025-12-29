@@ -1,0 +1,3143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.STRAF.Abwesenheitsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Abwesenheitsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Straf/Haft/Haftvollzug/Abwesenheitsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arbeitsurlaub</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausgang</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonderurlaub</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Urlaub</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.abwesenheitsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Angewandte_Vorschrift">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Angewandte_Vorschrift</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Tat/Delikt/Angewandte_Vorschrift.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="" />
+                <xs:enumeration value="" />
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deliktskatalog</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.angewandte-vorschrift">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Anordnungsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Anordnungsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Entscheidung/Entscheidungstenor/Anordnung/Sonstige_Anordnung/Anordnungsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aberkennung des Wahl- und Stimmrechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abgabe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abgabe von Urinproben</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anordnung der Bekanntgabe der Verurteilung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anordnung einer Maßregel der Besserung und Sicherung abgelehnt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arbeitsauflage</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arbeitsstunden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Asservierung eines Führerscheins</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufbauseminar</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufhebung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufhebung der vorläufigen Entziehung der Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufschub</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslieferungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Außervollzugsetzung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aussetzung der Jugendstrafe § 88 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aussetzung der Unterbringung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aussetzung der Verhängung der Jugendstrafe § 27 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufsverbot</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschäftigungsverbot</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschlagnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bestellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bewährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bewährungsaufsicht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dauerarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Drogenberatungsgespräch</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Durchsuchungsbeschluss betreffend einen Führerschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einheitsjugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="028">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einstellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="029">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einstellung nach § 47 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="030">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einziehung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="031">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entbindung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="032">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entbindung und Neubestellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="033">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entschuldigung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="034">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entziehung der Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="035">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eröffnung des Hauptverfahrens abgelehnt wegen Schuldunfähigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="036">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erzwingungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="037">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>europäischer Haftbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="038">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrverbot</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="039">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="040">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freizeitarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="041">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Führungsaufsicht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="042">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamtfreiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="043">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamtstrafarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="044">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gewinnabschöpfung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="045">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Haftbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="046">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Isolierte Sperre</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="047">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendarrest nach § 16a JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="048">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="049">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kurzarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="050">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Lebenslange Freiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="051">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Lebenslange Freiheitsstrafe mit besonderer Schwere der Schuld</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="052">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mitteilung zum Gewerbezentralregister gemäß § 149 Abs. 2 Nr. 4 GewO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="053">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ordnungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="054">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Dauerarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="055">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Einheitsjugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="056">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="057">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Kurzarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="058">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schadenswiedergutmachung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="059">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaftbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="060">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungsverwahrung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="061">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige strafrechtliche Maßnahme außerhalb StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="062">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sozialer Hilfsdienst</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="063">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sperrfrist für Wiedererteilung der Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="064">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="065">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straferlass</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="066">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafvollstreckung durch Anrechnung erledigt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="067">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafvorbehalt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="068">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Teilnahme an sozialen Trainingskurs</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="069">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unbrauchbarmachung, Vernichtung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="070">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbrechung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="071">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="072">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung § 63 StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="073">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung § 64 StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="074">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterhaltszahlungen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="075">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Untersuchungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="076">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verbot der Ausbildung/Beschäftigung von Jugendlichen (§ 25 JArbSchG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="077">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verbot der Jagdausübung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="078">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verbot der Tätigkeit als Geschäftsführer gemäß § 6 Abs. 2 S. 2 Nr. 3 GmbHG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="079">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren eingestellt wegen auf Geisteskrankheit beruhender Verhandlungsunfähigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="080">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren eingestellt wegen Schuldunfähigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="081">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfall</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="082">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkürzung der Bewährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="083">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkürzung Weisungsbetreuung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="084">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlängerung der Bewährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="085">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlängerung Weisungsbetreuung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="086">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlust der Amtsfähigkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="087">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlust der Amtsfähigkeit und Wählbarkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="088">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlust der Wählbarkeit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="089">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlust des Stimmrechts</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="090">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwarnung § 14 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="091">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verweisung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="092">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckungshaftbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="093">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckungsverjährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="094">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorbehaltene Sicherungsverwahrung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="095">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorführungsbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="096">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Entziehung der Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="097">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Unterbringung in einem psychiatrischen Krankenhaus</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="098">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Unterbringung in einer Entziehungsanstalt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="099">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufiges Beschäftigungsverbot</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="100">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Weisungsbetreuung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="101">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Widerruf der Bewährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="102">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zurückstellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.anordnungsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Besuchserlaubnisart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Besuchserlaubnisart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Haft/Haftkontrolle/Besuchserlaubnis/Besuchserlaubnisart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dauersprecherlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einzelsprecherlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sammelsprecherlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sondersprecherlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verteidigersprecherlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.besuchserlaubnisart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Beteiligungsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Beteiligungsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Tat/Delikt/Personenbezug/Beteiligungsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>alleinhandelnd</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anstiftung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beihilfe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>gemeinschaftlich</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nebentäter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.beteiligungsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Beweismittel">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Beweismittel</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Beweismittel/Bezug.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Augenscheinsobjekt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beiakte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einlassung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ermittlungsvermerk</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geständnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gutachten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Polizeilicher Ermittlungsvermerk</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sachverständiger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sachverständiger Zeuge</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Überführungsstück</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Urkunde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zeuge</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.beweismittel">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Ergebnisart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Ergebnisart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Entscheidung/Entscheidungstenor/Ergebnis.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschluss</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einstellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freispruch</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verurteilung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.ergebnisart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahndungsanlass">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahndungsanlass</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahndung/Anlass.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abschiebung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auskunftsperson</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausweisung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entwichener Strafgefangener</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entziehung der Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gefahrenabwehr</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Grenzfahndung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Polizeiliche Beobachtung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straftat</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafvollstreckung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vermißt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verstoss gegen das AsylVfG (§ 66)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zeuge</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>zurückgeschoben</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>zurückgewiesen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahndungsanlass">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahndungsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahndungsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahndung/Fahndungsart. Die Art des Fahndungsvorgangs.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausschreibung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berichtigung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fristverlängerung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Löschung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahndungsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahndungsverfahren">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahndungsverfahren</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahndung/Verfahren. Welches Fahndungsverfahren wird verwendet?</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Europäischer Haftbefehl</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>INPOL</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Öffentlichkeitsfahndung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Steckbriefnachricht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Suchvermerk</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahndungsverfahren">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahndungszweck">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahndungszweck</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahndung/Zweck. Der Zweck der Fahnung.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufenthaltsermittlung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausreiseuntersagung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beobachtung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschlagnahme Führerschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erkennungsdienstliche Maßnahmen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrverbot (ausländischer Führerschein)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Festnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Festnahme aufgrund Haftbefehls</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Feststellung der Identität</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ingewahrsamnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sachfahndung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahndungszweck">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Gegenstandsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Gegenstandsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Asservat/Gegenstandsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausgestopfte Tiere</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausweise und Pässe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betäubungsmittel</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Computer und Zubehör</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrräder</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Führerschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gefahrgut</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gefälschte Markenware</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geld und andere Wertgegenstände</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geschäftsunterlagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gift</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Handys und Zubehör</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftfahrzeug-Kennzeichen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftfahrzeuge</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Krankenakten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pässe, Ausweise und sonstige Dokumente</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pornografische Schriften / Gegenstände</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pyrotechnische Gegenstände</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schmuck</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schmuck und Wertsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstiges</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Urkunden, Ausweise</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verderbliche Beweismittel</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Waffen und Munition</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wirtschaftsstrafsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zahlungsmittel, Wertpapiere, Geld</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.gegenstandsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Geldanordnungsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Geldanordnungsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Entscheidung/Entscheidungstenor/Anordnung/Geldanordnung/Anordnungsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldauflage</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldbuße</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kaution</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ordnungsgeld</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.geldanordnungsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Haftart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Haftart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Haft/Haftvollzug/Haftart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abschiebungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abschiebungshaft mit Fix-Ende</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslieferungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausnüchterung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beugehaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dauerarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Durchlieferungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einheits-Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ersatzfreiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erzwingungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erzwingungshaft (Fest-Betrag)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erzwingungshaft (Zivilhaft)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freiheitsstrafe nach § 114 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freiheitsstrafe o. Unterlagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Freizeitarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>FS Lebenslang</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>FS Lebenslang ( GESAMTSTRAFE )</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamt-Ersatzfreiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamt-Strafarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesamtfreiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Hauptverhandl.H. § 127b,2 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendstrafe nach § 92 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendstrafe ohne Unterlagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="028">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kurzarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="029">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ordnungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="030">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ordnungshaft (Zivilhaft)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="031">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Organisationshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="032">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Einheits-Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="033">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Ersatzfreiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="034">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Freiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="035">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Freiheitsstrafe (abstrakt)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="036">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Gesamt-Ersatzfreiheitsst.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="037">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Gesamt-Freiheitsstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="038">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Jugendstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="039">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Lebenslang</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="040">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rest-Sicherungsverwahrung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="041">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schuldhaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="042">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaft (Jugendliche)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="043">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaft (SV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="044">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaft (Zivilhaft)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="045">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaft § 453c StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="046">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungshaft §453c StPO (LL)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="047">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungsverwahrung I.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="048">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungsverwahrung I., unb.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="049">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sicherungsverwahrung II.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="050">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="051">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Überhaft - befristet</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="052">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Überhaftnotierung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="053">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ungehorsamsarrest</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="054">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ungehorsamshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="055">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ungehorsamshaft (§ 230 StPO)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="056">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="057">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung (§275a StPO) SV</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="058">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung (Entz.) m. Ber.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="059">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung (Entz.) o. Ber.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="060">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung (Psych.) m. Ber.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="061">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung (Psych.) o. Ber.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="062">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringung, einstw. o. Ber.</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="063">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Untersuchungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="064">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Untersuchungshaft (junge Gef.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="065">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Auslieferungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="066">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Festnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="067">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Unterbringung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="068">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zivilhaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="069">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zivilhaft (mit Tagessatz)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="070">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zurückweisungshaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="071">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zwangshaft (Zivilhaft)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.haftart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Haftbeginn">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Haftbeginn</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Haft/Haftvollzug/Beginn/Art.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Antritt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entlassung in anderer Sache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Festnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige Festnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.haftbeginn">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Haftzeitendeart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Haftzeitendeart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Haft/Haftvollzug/Ende/Beendigungsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abschiebung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entlassung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>errechneter Entlassungszeitpunkt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Tod</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbrechung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlegung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>vorverlegter Entlassungszeitpunkt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.haftzeitendeart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Herkunftsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Herkunftsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Asservat/Herkunft/Herkunftsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschreibung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eigentümer</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Letzter Gewahrsamsinhaber</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.herkunftsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Listenart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Listenart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Asservat/Listenart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="AL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Asservatenliste</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LÜ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Liste der Überführungsstücke</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ÜL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Überführungsstückliste</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ÜL(FS)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Überführungsstückliste Führerschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.listenart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Loeschungsgrund">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Loeschungsgrund</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahndung/Loeschungsgrund. Grund für die Löschung der Fahndung.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufenthalt ermittelt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslieferung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Festnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fristablauf</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Führerschein sichergestellt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldstrafe bezahlt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ingewahrsamnahme</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Maßnahme aufgehoben</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Person verstorben</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Tilgung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren eingestellt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verjährung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.loeschungsgrund">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Pruefvorschrift">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Pruefvorschrift</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Haft/Haftvollzug/Prueffrist/Vorschrift.Die Vorschrift, in der die Prüffrist vorgeschrieben ist.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>57 StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>67d StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>67e StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>70 Abs. 2 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>87 Abs. 4 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>88 JGG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>117 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>121 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>122 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>127b StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>454 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>456 Abs. 2 StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Halbstrafe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafende</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zweidrittel</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.pruefvorschrift">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Verbleibsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Verbleibsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Asservat/Verbleib/Verbleibsart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abgabe an andere Behörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beinahme zur Akte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschreibung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fundsachenbehandlung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rückgabe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vernichtung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwertung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.verbleibsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

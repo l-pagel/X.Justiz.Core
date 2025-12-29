@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MagicDrawProfile="http://www.omg.org/spec/UML/20131001/MagicDrawProfile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/UML/20131001/MagicDrawProfile UML_Standard_Profile.MagicDraw_Profile.profile.uml#_X5QkHhgeEeqs2-ilF5BL1Q">
+  <uml:Profile xmi:id="_18_0_6_5b501fb_1536141993254_502289_7570" name="proxy-profil" URI="" metamodelReference="_18_0_6_5b501fb_1536141993254_618293_7549">
+    <eAnnotations xmi:id="_X5vEhBgeEeqs2-ilF5BL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_X5vEhRgeEeqs2-ilF5BL1Q" name="proxyprofil" nsURI="http:///schemas/proxyprofil/_X5QgExgeEeqs2-ilF5BL1Q/0" nsPrefix="proxyprofil">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_X5vEhhgeEeqs2-ilF5BL1Q" name="proxyStandard">
+          <eAnnotations xmi:id="_X5vEhxgeEeqs2-ilF5BL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_0_6_5b501fb_1536141993254_112074_7543"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_X5vEiBgeEeqs2-ilF5BL1Q" name="base_Model" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Model"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEihgeEeqs2-ilF5BL1Q" name="nameLang" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEjBgeEeqs2-ilF5BL1Q" name="nameKurz" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEjhgeEeqs2-ilF5BL1Q" name="nameTechnisch" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEkBgeEeqs2-ilF5BL1Q" name="kennung" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEkhgeEeqs2-ilF5BL1Q" name="beschreibung" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_X5vElBgeEeqs2-ilF5BL1Q" name="proxyVersionStandard">
+          <eAnnotations xmi:id="_X5vElRgeEeqs2-ilF5BL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_18_0_6_5b501fb_1536141993254_506658_7539"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_X5vElhgeEeqs2-ilF5BL1Q" name="base_Model" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Model"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEmBgeEeqs2-ilF5BL1Q" name="version" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEmhgeEeqs2-ilF5BL1Q" name="beschreibung" ordered="false">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEnBgeEeqs2-ilF5BL1Q" name="versionXOEVHandbuch" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEnhgeEeqs2-ilF5BL1Q" name="versionXGenerator" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEoBgeEeqs2-ilF5BL1Q" name="versionModellierungswerkzeug" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_X5vEohgeEeqs2-ilF5BL1Q" name="nameModellierungswerkzeug" ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/4.0.0/Types#//String"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+    <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_26008_7557" annotatedElement="_18_0_6_5b501fb_1536141993254_502289_7570" body="Proxy-Profil 1.5.1&#xA;Dieses Werk ist lizensiert unter einer Creative Commons Namensnennung - Keine Bearbeitung 4.0 International Lizenz.&#xA;"/>
+    <packageImport xmi:id="_18_0_6_5b501fb_1536141993254_618293_7549">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0primitiveTypesproxy-profil">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:id="_0javaPrimitiveTypesproxy-profil">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_6_5b501fb_1536141993254_112074_7543" name="proxyStandard">
+      <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_363533_7548" annotatedElement="_18_0_6_5b501fb_1536141993254_112074_7543" body="Mittels dieses Stereotyps wird das UML-Modell des Standards annotiert. Er erlaubt die Angabe der versionsunabhängigen Metadaten des Standards."/>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_204408_7560" name="base_Model" visibility="private" association="_18_0_6_5b501fb_1536141993254_862069_7574">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Model"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_394874_7550" name="nameLang" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993253_594322_7527" annotatedElement="_18_0_6_5b501fb_1536141993254_394874_7550" body="Der Name (kurz) ist die &quot;sprechende&quot; Kurzbezeichnung eines Standards. Dieser Name wird beispielsweise im XRepository in Listendarstellungen von Inhalten verwendet oder kann zur Bezeichnung des Standards in Texten (Spezifikationsdokument) verwendet werden."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993253_988429_7512" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_698087_7513" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_798760_7547" name="nameKurz" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_572161_7572" annotatedElement="_18_0_6_5b501fb_1536141993254_798760_7547" body="Der Name (kurz) ist die &quot;sprechende&quot; Kurzbezeichnung eines Standards. Dieser Name wird beispielsweise im XRepository in Listendarstellungen von Inhalten verwendet oder kann zur Bezeichnung des Standards in Texten (Spezifikationsdokument) verwendet werden."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993253_66023_7522" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_345767_7525" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_792267_7544" name="nameTechnisch" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_683403_7541" annotatedElement="_18_0_6_5b501fb_1536141993254_792267_7544" body="Neben den Namen (lang) und Namen (kurz) besitzt ein Standard einen technischen Namen. Dieser Name soll &quot;sprechend&quot; und gleichzeitig zur technischen Verarbeitung optimiert sein. In der Regel ist der technische Name vom Namen (kurz) abgeleitet.&#xA;&#xA;Die Regeln zur Bildung des technischen Namens sind im XÖV-Handbuch detailliert dargestellt."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993253_631449_7515" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_821002_7576" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993253_162208_7516" name="kennung" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993253_432268_7519" annotatedElement="_18_0_6_5b501fb_1536141993253_162208_7516" body="Mittels einer Kennung wird ein Standard versionsübergreifend eindeutig identifiziert.&#xA;&#xA;Die Regeln zur Bildung von Kennungen sind im XÖV-Handbuch detailliert dargestellt."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_924642_7567" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_43955_7520" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993253_727474_7517" name="beschreibung" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_244724_7555" annotatedElement="_18_0_6_5b501fb_1536141993253_727474_7517" body="Zu einem Standard liegt eine Beschreibung in Form eines unformatierten Fließtextes vor."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_847078_7529" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_87251_7524" name="" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_6_5b501fb_1536141993254_862069_7574" name="" memberEnd="_18_0_6_5b501fb_1536141993254_204408_7560 _18_0_6_5b501fb_1536141993254_573369_7545" navigableOwnedEnd="_18_0_6_5b501fb_1536141993254_573369_7545">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_6_5b501fb_1536141993254_573369_7545" name="extension_xoevStandard" visibility="private" type="_18_0_6_5b501fb_1536141993254_112074_7543" aggregation="composite" association="_18_0_6_5b501fb_1536141993254_862069_7574">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_422217_7536" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_147701_7523" name="" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="_18_0_6_5b501fb_1536141993254_506658_7539" name="proxyVersionStandard">
+      <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_660816_7554" annotatedElement="_18_0_6_5b501fb_1536141993254_506658_7539" body="Mittels dieses Stereotyps wird das UML-Modell des Standards annotiert. Er erlaubt die Angabe der versionsspezifischen Metadaten des Standards."/>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993253_435557_7526" name="base_Model" visibility="private" association="_18_0_6_5b501fb_1536141993254_453702_7533">
+        <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Model"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_930341_7561" name="version" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_327912_7531" annotatedElement="_18_0_6_5b501fb_1536141993254_930341_7561" body="Die Version kennzeichnet einen definierten Stand der Entwicklung oder Fortschreibung eines Standards. Sie wird zur Bildung der Kennung der Version des Standards genutzt."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_294466_7566" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_912539_7530" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_676607_7559" name="beschreibung" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_891032_7534" annotatedElement="_18_0_6_5b501fb_1536141993254_676607_7559" body="Zur Version eines Standards kann eine Beschreibung in Form eines unformatierten Fließtextes vorliegen."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_977478_7563" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_353210_7562" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_920833_7569" name="versionXOEVHandbuch" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_260261_7542" annotatedElement="_18_0_6_5b501fb_1536141993254_920833_7569" body="Die Version des XÖV-Handbuchs, zu dessen Regelungen die Version eines Standards konform ist."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_188086_7540" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_244679_7514" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_94016_7573" name="versionXGenerator" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_602906_7564" annotatedElement="_18_0_6_5b501fb_1536141993254_94016_7573" body="Die Version des XGenerators, mit dem das XÖV-Fachmodell der Version eines Standards verarbeitet und die Bestandteile der Version des Standards erzeugt wurden."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_874094_7551" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_876570_7535" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993253_970639_7518" name="versionModellierungswerkzeug" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_874134_7537" annotatedElement="_18_0_6_5b501fb_1536141993253_970639_7518" body="Die Version des Modellierungswerkzeugs, mit dem das XÖV-Fachmodell der Version eines Standards erstellt wurde."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993253_814033_7521" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_842068_7556" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_18_0_6_5b501fb_1536141993254_793207_7558" name="nameModellierungswerkzeug" visibility="private">
+        <ownedComment xmi:id="_18_0_6_5b501fb_1536141993254_462202_7538" annotatedElement="_18_0_6_5b501fb_1536141993254_793207_7558" body="Der Name des Modellierungswerkzeugs, mit dem das XÖV-Fachmodell der Version eines Standards erstellt wurde. Wird der Name nicht angegeben, gilt der Standardwert &quot;MagicDraw&quot;."/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_705251_7553" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993254_447141_7546" name="" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Extension" xmi:id="_18_0_6_5b501fb_1536141993254_453702_7533" name="" memberEnd="_18_0_6_5b501fb_1536141993253_435557_7526 _18_0_6_5b501fb_1536141993254_182089_7552" navigableOwnedEnd="_18_0_6_5b501fb_1536141993254_182089_7552">
+      <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_18_0_6_5b501fb_1536141993254_182089_7552" name="extension_xoevVersionStandard" visibility="private" type="_18_0_6_5b501fb_1536141993254_506658_7539" aggregation="composite" association="_18_0_6_5b501fb_1536141993254_453702_7533">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_18_0_6_5b501fb_1536141993254_349261_7568" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_18_0_6_5b501fb_1536141993253_687334_7528" name="" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:id="_be00301_1073394351331_445580_2profileApplicationproxy-profil">
+      <eAnnotations xmi:id="_YAUxaxgeEeqs2-ilF5BL1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_X5QkHhgeEeqs2-ilF5BL1Q"/>
+      </eAnnotations>
+      <appliedProfile href="UML_Standard_Profile.MagicDraw_Profile.profile.uml#_be00301_1073394351331_445580_2"/>
+    </profileApplication>
+  </uml:Profile>
+  <MagicDrawProfile:Info xmi:id="_YAUxbBgeEeqs2-ilF5BL1Q" base_Package="_18_0_6_5b501fb_1536141993254_502289_7570" version="1.5.1"/>
+</xmi:XMI>

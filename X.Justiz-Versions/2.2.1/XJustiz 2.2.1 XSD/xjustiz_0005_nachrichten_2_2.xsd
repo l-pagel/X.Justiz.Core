@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdomea="http://www.xdomea.de/V2.2.0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.2.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_2.xsd" />
+  <xs:import schemaLocation="xdomea-Baukasten.xsd" namespace="http://www.xdomea.de/V2.2.0" />
+  <xs:import schemaLocation="xdomea-Datentypen.xsd" namespace="http://www.xdomea.de/V2.2.0" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:element name="nachricht.gds.aktenzeichenmitteilung.justiz_zu_justiz.0005001">
+    <xs:annotation>
+      <xs:documentation>Dieses Element ist das Wurzelelement einer Nachricht mittels derer ein Gericht einem anderen Gericht oder einer Staatsanwaltschaft das Anlegen eines neuen Verfahrens als Reaktion auf eine Einleitungsnachricht bestätigt.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.GDS.Aktenzeichenmitteilung.Justiz_zu_Justiz" />
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:unique name="eindeutigkeit_instanznummer_aktenzeichenmitteilung_justiz_zu_justiz">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:instanzdaten" />
+      <xs:field xpath="tns:instanznummer" />
+    </xs:unique>
+  </xs:element>
+  <xs:element name="nachricht.gds.uebermittlung_schriftgutobjekte.0005005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.GDS.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="absender_Gericht" type="tns:Code.GDS.Gerichte" />
+                    <xs:element name="absender_Sonstige" type="xoev-lc:String.Latin" />
+                  </xs:choice>
+                  <xs:choice>
+                    <xs:element name="empfaenger_Gericht" type="tns:Code.GDS.Gerichte" />
+                    <xs:element name="empfaenger_Sonstige" type="xoev-lc:String.Latin" />
+                    <xs:element name="empfaenger_RVTraeger" type="tns:Code.GDS.RVTraeger" />
+                  </xs:choice>
+                  <xs:element name="eigene_Nachrichten_ID" type="xdomea:stringUUIDType" />
+                  <xs:element name="fremde_Nachrichten_ID" minOccurs="0" type="xdomea:stringUUIDType" />
+                  <xs:element name="sendungsprioritaet" minOccurs="0" default="false" type="xs:boolean" />
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="instanzdaten_erweitert" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="instanzdaten" type="tns:Type.GDS.Instanzdaten.Justiz" />
+                          <xs:element name="verfahrensgegenstand_Zeitraum" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="verfahrensgegenstand" type="tns:Type.GDS.Verfahrensgegenstand" />
+                                <xs:element name="auswahl_Zeitraum_des_Verwaltungsaktes" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:choice>
+                                      <xs:element name="jahr" type="xs:gYear" />
+                                      <xs:element name="zeitraum" type="xoev-lc:String.Latin" />
+                                      <xs:element name="stichtag" type="xs:date" />
+                                      <xs:element name="kein_Zeitraum" type="xoev-lc:String.Latin" />
+                                    </xs:choice>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="beteiligung" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Beteiligung" />
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                      <xs:element name="terminsdaten" type="tns:Type.GDS.Terminsdaten" />
+                      <xs:element name="fortsetzungsterminsdaten" type="tns:Type.GDS.Fortsetzungsterminsdaten" />
+                    </xs:choice>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="akte" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Akte" />
+        <xs:element name="teilakte" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Teilakte" />
+        <xs:element name="dokument" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Dokument" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

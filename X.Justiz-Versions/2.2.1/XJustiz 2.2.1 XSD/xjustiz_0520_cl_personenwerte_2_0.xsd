@@ -1,0 +1,3349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.STRAF.Fahrerlaubnisart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahrerlaubnisart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Personendaten/Fuehrerschein/Fahrerlaubnisart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis der ehemaligen DDR</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausländische Fahrerlaubnis nach der Zweiten EU-Führerscheinrichtlinie (§ 91/434/EWG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der zweiten Führerscheinrichtlinie §6 FeV</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis-Klassen (§ 6 i. V. m. § 26 FeV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis-Klassen (bisheriger § 5 i. V. m. § 14 StVZO)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis-Klassen Bundeswehr (Anlage 8 i. V. m. § 26 FeV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis-Klassen Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrlehrerlaubnisse (außer Bundeswehr)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrlehrerlaubnisse der Bundeswehr</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 48 FeV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrerlaubnisse für die allgemeine Fahrerlaubnis nach bisherigen § 5 StVZO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrerlaubnisse für die deutsche allgemeine Fahrerlaubnis nach der FeV</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Internationaler / ausländischer Führerschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Keine Angaben zur Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nicht im Besitz einer Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahrerlaubnisart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahrzeugantrieb">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahrzeugantrieb</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahrzeug/Antrieb.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Alternativ</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dieselmotor</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Elektromotor</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ottomotor</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahrzeugantrieb">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahrzeugart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahrzeugart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahrzeug/Fahrzeugart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anhänger der Zugmaschine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anhänger landw. Zugmaschine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrrad</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrrad mit Hilfsmotor</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugkombination (Zug)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gespannfuhrwerk</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kennzeichnungspflichtiges Kfz mit gefährlichen Gütern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kleinkraftrad</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftomnibus</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftomnibus mit Anhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftomnibus mit Fahrgästen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftrad</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftrad mit Anhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kraftroller</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftliche Zugmaschine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftlicher Zug</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Leichtkraftrad</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>LKW</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>LKW mit Anhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mofa</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Moped</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Motorrad</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Omnibus</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>PKW</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>PKW mit Anhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sattelzuganhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sattelzugmaschine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="028">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="029">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straßenbahn</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="030">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wohnmobil</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="031">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wohnmobil mit Anhänger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="032">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zugmaschine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahrzeugart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fahrzeugunterart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fahrzeugunterart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahrzeug/Fahrzeugart.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugkombination bis 7,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrzeugkombination über 7,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kfz bis 3,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kfz bis 7,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kfz mit Anhänger bis 2 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kfz mit Anhänger über 2 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kfz über 7,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ohne</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wohnmobil über 3,5 t zul. GG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fahrzeugunterart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Fuehrerscheinklasse">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Fuehrerscheinklasse</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Personendaten/Fuehrerschein/Fuehrerscheinklasse.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>1a</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>1b</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>3</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>4</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>5</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>A1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>A2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 1a</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 1b</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 3</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 4</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Fahrerlaubnis (§ 5 StVZO) Klasse 5</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>AY</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>C1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>C1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>C75</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>C75E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="028">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>D1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="029">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>D1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="030">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="031">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="032">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse A1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="033">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="034">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="035">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="036">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse C1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="037">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse C1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="038">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="039">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="040">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse D1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="041">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse D1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="042">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="043">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse L</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="044">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse M</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="045">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Deutsche allgemeine Fahrerlaubnis nach der FeV (§ 6 FeV in Verbindung mit 91/439/EWG Klasse T</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="046">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="047">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse A1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="048">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse AY</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="049">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="050">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="051">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="052">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse C1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="053">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse C1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="054">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="055">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="056">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse D1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="057">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse D1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="058">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="059">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse F</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="060">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse G</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="061">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse GE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="062">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse L</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="063">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse M</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="064">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse P</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="065">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (§ 14 StVZO, §6, §26 FeV) Klasse T</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="066">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="067">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 1a</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="068">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 1b</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="069">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="070">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 3</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="071">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Alt) Klasse 4</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="072">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse 4</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="073">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse 5</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="074">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="075">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse A1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="076">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse A2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="077">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="078">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="079">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse C75</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="080">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse C75E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="081">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="082">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="083">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (bisheriger § 5 i. V. m. § 14 StVZO) Klasse F</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="084">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="085">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse A1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="086">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="087">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="088">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="089">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse C1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="090">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse C1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="091">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="092">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse D1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="093">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse D1E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="094">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="095">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse L</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="096">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse M</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="097">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstfahrerlaubnis der Bundeswehr (Neu) Klasse T</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="098">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>E</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="099">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>F</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="100">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse 1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="101">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse 2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="102">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse 3</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="103">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse 4</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="104">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse 5</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="105">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="106">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse B</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="107">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="108">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse C</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="109">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="110">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse D</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="111">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="112">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse M</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="113">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis der ehemaligen DDR (§ 4 StVZO der DDR) Klasse T</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="114">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="115">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Krankenkraftwagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="116">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Mietwagen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="117">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Personenkraftwagen im Linienverkehr</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="118">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Personenkraftwagen mit dem gewerbsmäßig Ausflugsfahrten durchgeführt werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="119">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Personenkraftwagen, mit dem Ferienziel-Reisen durchgeführt werden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="120">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrerlaubnis zur Fahrgastbeförderung (§ 15d ff StVZO, § 48 FeV) Taxi</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="121">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für die allgemeine Fahrerlaubnis (§ 1 FahrlG, § 5 StVZO) Klasse 1</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="122">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für die allgemeine Fahrerlaubnis (§ 1 FahrlG, § 5 StVZO) Klasse 2</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="123">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für die allgemeine Fahrerlaubnis (§ 1 FahrlG, § 5 StVZO) Klasse 3</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="124">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis der Bundeswehr Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="125">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis der Bundeswehr Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="126">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis der Bundeswehr Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="127">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis der Bundeswehr Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="128">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis der Bundeswehr Sonstige Dienstfahrlehrerlaubnisklasse</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="129">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="130">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="131">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="132">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis für eine Dienstfahrerlaubnis Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="133">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis nach der 2. Führerscheinrichtlinie (91/439/EWG) Klasse A</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="134">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis nach der 2. Führerscheinrichtlinie (91/439/EWG) Klasse BE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="135">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis nach der 2. Führerscheinrichtlinie (91/439/EWG) Klasse CE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="136">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrlehrererlaubnis nach der 2. Führerscheinrichtlinie (91/439/EWG) Klasse DE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="137">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>G</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="138">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>GE</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="139">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Internationaler / Ausländischer Führerschein (§ 4, § 8, § 9 IntKfzVO) die Angabe einzelner Klassen ist nicht erforderlich</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="140">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Keine Angaben zur Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="141">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>L</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="142">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>M</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="143">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nicht im Besitz einer Fahrerlaubnis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="144">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>P</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="145">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>T</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.fuehrerscheinklasse">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Legitimationsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Legitimationsart</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Personendaten/Legitimationspapier/Art.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausländischer Dienstausweis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstausweis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kinderausweis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Personalausweis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Reisepass</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufiger Personalausweis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufiger Reisepass</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Waffenbesitzkarte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Waffenschein</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.legitimationsart">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Personenbezug">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Personenbezug</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Fahrzeug/Personenbezug/Art.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eigentümer</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fahrer</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Halter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.personenbezug">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Rollenbezeichnung">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Rollenbezeichnung</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element ../Rolle/Rollenbezeichnung/content.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="001">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Abwesenheitspfleger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="002">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aliasidentität</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="003">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Angeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="004">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Angeschuldigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="005">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Annehmende(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="006">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussberufungsbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="007">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussberufungskläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="008">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussbeschwerdeführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="009">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussbeschwerdegegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="010">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussrechtsbeschwerdeführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="011">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussrechtsbeschwerdegegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="012">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussrevisionsbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="013">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anschlussrevisionskläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="014">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Antragsgegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="015">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Antragsteller(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="016">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anzeigeerstatter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="017">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anzeigenerstatter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="018">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anzunehmende(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="019">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arrestgläubiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="020">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arrestschuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="021">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufsichtsbehörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="022">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausschlagende(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="023">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beamter(Beamtin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="024">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Behörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="025">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beigeladene(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="026">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beistand</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="027">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bekannte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="028">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="029">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungsbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="030">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungskläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="031">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschuldigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="032">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerdeführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="033">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerdegegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="034">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Besucher(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="035">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beteiligte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="036">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betreuer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="037">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betreute(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="038">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betreuungsbehörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="039">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betroffene(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="040">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="041">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bewährungshelfer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="042">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bewährungshilfe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="043">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beweisanwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="044">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bruder(Schwester)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="045">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bundeswehrdisziplinaranwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="046">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bußgeldempfänger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="047">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Cousin(e)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="048">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstvorgesetzte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="049">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dolmetscher(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="050">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dritte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="051">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Drittschuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="052">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Drittwiderbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="053">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Drittwiderkläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="054">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ehefrau</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="055">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ehemann</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="056">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eigentümer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="057">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eingetragene(r) Lebenspartner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="058">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einleitungsbehörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="059">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Eltern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="060">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Elternteil</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="061">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Enkel(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="062">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erbe(Erbin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="063">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erbe(Erbin) (ausschlagend)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="064">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erbe(Erbin) (vorverstorben)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="065">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erblasser(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="066">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ergänzungspfleger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="067">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erinnerungsführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="068">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erinnerungsgegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="069">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ersatzbetreuer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="070">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ersteher(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="071">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erwerber(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="072">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erziehungsberechtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="073">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere Ehegatte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="074">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere(r) Beklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="075">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere(r) Beteiligter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="076">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere(r) Gläubiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="077">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere(r) Kläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="078">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Frühere(r) Soldat(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="079">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gegenvormund</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="080">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Generalbundesanwalt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="081">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gericht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="082">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gerichtshilfe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="083">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gerichtsvollzieher(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="084">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geschädigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="085">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geschäftsführende(r) Gesellschafter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="086">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geschäftsführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="087">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesetzliche(r) Erbe(Erbin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="088">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gesetzliche(r) Vertreter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="089">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gläubiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="090">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großeltern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="091">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großmutter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="092">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großvater</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="093">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Hauptbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="094">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Hoferbe (Hoferbin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="095">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Inhaber(in) der Firma</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="096">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendamt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="097">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Justizvollzug</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="098">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kammer</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="099">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kammermitglied</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="100">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kind</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="101">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="102">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kontrollbetreuer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="103">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Korrespondenzanwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="104">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kostenschuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="105">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftsrichter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="106">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Lebenspartner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="107">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Liquidator(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="108">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Minderjährige(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="109">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mitvormund</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="110">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mündel</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="111">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mutter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="112">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachbesserungsgläubiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="113">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachlasspfleger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="114">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nachlassverwalter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="115">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nebenkläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="116">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Neffe (Nichte)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="117">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nicht verwandt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="118">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Onkel (Tante)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="119">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Opfer</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="120">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pächter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="121">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pflegeeltern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="122">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pflegemutter des Mündels</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="123">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pfleger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="124">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pfleger(in) für das Sammelvermögen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="125">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pfleger(in) für die Leibesfrucht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="126">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pflegevater des Mündels</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="127">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pflichtverteidiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="128">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Polizei</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="129">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Privatbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="130">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Privatkläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="131">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozessbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="132">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozesskostenhilfe-Anwalt(-Anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="133">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozesskostenhilfe-Korrespondenzanwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="134">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsanwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="135">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeistand</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="136">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerdeführer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="137">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerdegegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="138">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="139">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionskläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="140">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sachberarbeiter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="141">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sachverständige(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="142">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="143">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schwager(Schwägerin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="144">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schwiegermutter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="145">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schwiegersohn</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="146">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schwiegertochter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="147">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schwiegervater</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="148">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sohn (Tochter)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="149">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Soldat(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="150">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige(r) Beteiligte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="151">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige(r) Vertreter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="152">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Staatsanwaltschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="153">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiefeltern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="154">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiefmutter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="155">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stiefvater</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="156">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Streithelfer(in) Beklagte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="157">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Streithelfer(in) Kläger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="158">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Streitverkündete(r) Beklagte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="159">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Streitverkündete(r) Kläger</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="160">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Terminsbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="161">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Testamentsvollstrecker(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="162">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Testator(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="163">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Übernehmer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="164">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="165">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ur-Enkel(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="166">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vater</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="167">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Veräußerer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="168">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahrensbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="169">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahrenspfleger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="170">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahrensvertreter(in) (§787ZPO)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="171">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfügungsbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="172">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfügungskläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="173">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkehrsanwalt(-anwältin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="174">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verlobte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="175">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vermächtnisnehmer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="176">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vermieter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="177">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verpächter(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="178">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Versorgungsträger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="179">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verteidiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="180">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vertreter der Interessen des Ausgleichsfonds</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="181">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vertreter der Staatskasse</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="182">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vertreter des Bundesinteresses beim Bundesverwaltungsgericht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="183">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vertreter des öffentlichen Interesses</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="184">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verurteilte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="185">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwalter(in) der Wohnungseigentumsgemeinschaft</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="186">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwaltungsbehörde</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="187">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckungsgläubiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="188">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckungsschuldner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="189">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorläufige(r) Betreuer(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="190">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vormund</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="191">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorsorgebevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="192">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wahlverteidiger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="193">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Widerbeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="194">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Widerkläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="195">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wiederaufnahmebeklagte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="196">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wiederaufnahmekläger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="197">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zahlungs- und Auflagenempfänger(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="198">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zeuge(Zeugin)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="199">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zeugenbeistand</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="200">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zulassungsantragsgegner(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="201">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zulassungsantragsteller(in)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="202">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zustellbevollmächtigte(r)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="203">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zustellungsvertreter(in) (§6ZVG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.rollenbezeichnung">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Strafverfolgungshindernis">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Strafverfolgungshindernis</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Personendaten/Strafverfolgungshindernis.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="Abgeordneter">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Immunität als Abgeordneter der Bundesversammlung, des Deutschen Bundestages oder eines Landesparlaments</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Diplomat">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Diplomaten (einschließlich von Familienangehörigen und Personal) mit diplomatischer Immunität im Sinne des Wiener Übereinkommens über diplomatische Beziehungen vom 18. April 1961</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EU_TS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Soldat oder dessen Familienangehörige, auf die das EU-Truppenstatut vom 17. November 2003 anwendbar ist</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NTS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Soldat oder dessen Familienangehörige, auf die das NATO-Truppenstatut vom 19. Juni 1951 (einschließlich Zusatzübereinkommen und Unterzeichnungsprotokoll) anwendbar ist</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.strafverfolgungshindernis">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

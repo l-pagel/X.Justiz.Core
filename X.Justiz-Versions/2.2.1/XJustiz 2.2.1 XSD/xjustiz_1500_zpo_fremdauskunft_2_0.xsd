@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_2.xsd" />
+  <xs:include schemaLocation="xjustiz_1510_cl_zpo_fremdauskunft_2_0.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.ZPO.Beteiligter">
+    <xs:sequence>
+      <xs:element name="beteiligtennummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="auswahl_Beteiligter">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="natuerliche_Person" type="tns:Type.GDS.NatuerlichePerson" />
+            <xs:element name="organisation" type="tns:Type.GDS.Organisation" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.ZPO.Beteiligung">
+    <xs:sequence>
+      <xs:element name="rolle">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="rollennummer" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Die Rollennummer wird als eindeutige Kennziffer innerhalb des XML-Dokuments benötigt, um aus anderen Elementen innerhalb des XML-Dokuments heraus auf Beteiligte und Rollen verweisen zu können.  Die Rollennummer kann aus einem Datenbank-Schlüssel abgeleitet werden, der dem Beteiligten in der Datenbank eines Gerichts, einer Staatsanwaltschaft oder einer sonstigen Behörde zur eindeutigen Identifizierung zugeordnet ist. Zwingend erforderlich ist dies nicht. Sofern die einzelnen Kommunikationsteilnehmer intern unterschiedliche Datenbank-Schlüssel verwenden, können diese im Element Rollen_ID (siehe unten) abgelegt werden. Die Rollennummer kann dann frei bestimmt werden, solange sie nur innerhalb eines XML-Dokuments eindeutig bleibt.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="rollenbezeichnung" type="tns:Code.ZPO.Rollenbezeichnung">
+              <xs:annotation>
+                <xs:documentation>Zulässige Rollenbezeichnungen sind in der Datei WL_Rollenbezeichnung_ZPO definiert.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="nr" default="1" type="xs:integer">
+              <xs:annotation>
+                <xs:documentation>Wenn es in einem Verfahren mehrere gleichartige Beteiligte gibt (z. B. mehrere Kläger), sind diese fortlaufend zu numerieren. Jede Kombination aus Rollenbezeichnung und Nummer (z.B. Kläger 1, Kläger 2, Beklagter 1 usw.) darf pro Verfahren nur einmal vorkommen.  Mit XML-Mitteln kann nur die Eindeutigkeit innerhalb des jeweiligen XJustiz-Datensatzes überprüft werden.  Für die überprüfung der verfahrensweiten Eindeutigkeit sind die jeweiligen Kommunikationsteilnehmer verantwortlich. Default ist 1.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="geschaeftszeichen" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Das Element Geschaeftszeichen kann leer bleiben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beteiligter" type="tns:Type.ZPO.Beteiligter">
+        <xs:annotation>
+          <xs:documentation>Ein Beteiligter kann eine natürliche Person oder eine Organisation sein.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.zpo.auskunft.anschrift.1500001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird die Dienstregisternummer der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Bitte die Versicherungsnummer angeben (falls vorhanden).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es ist nur das Ereignis "Auskunft Anschrift" aus der Codeliste zulässig.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                    <xs:element name="beteiligung" maxOccurs="unbounded" type="tns:Type.ZPO.Beteiligung">
+                      <xs:annotation>
+                        <xs:documentation>Als Rollenbezeichnungen sind  nur "Schuldner(in)" und "RV-Träger" zugelassen.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="weitere_Angaben" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Von der DRV werden keine weiteren Angaben gemacht.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.auskunft.arbeitgeber.1500002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird die Dienstregisternummer der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Bitte die Versicherungsnummer angeben (falls vorhanden).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es ist nur das Ereignis "Auskunft Arbeitgeber" aus der Codeliste zulässig.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                    <xs:element name="beteiligung" maxOccurs="unbounded" type="tns:Type.ZPO.Beteiligung">
+                      <xs:annotation>
+                        <xs:documentation>Es darf nur ein/e Schuldner/in angegeben werden.
+Die Daten des/r Schuldners/in werden aus der Anfrage übernommen.
+Es können zuständige RV-Träger angegeben werden.
+Es dürfen mehrere Arbeitgeber angegeben werden. (je nach Auskunftsergebnis)</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="weitere_Angaben" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Von der DRV werden keine weiteren Angaben gemacht.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="hinweistext" minOccurs="0" default="Für die angegebene Person ist ein aktueller Arbeitgeber bei der Rentenversicherung nicht bekannt. Dies ist eine kostenpflichtige Auskunft." type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.auskunft.fahrzeug.1500003">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird das Aktenzeichen aus der Anfrage angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es sind folgende Ereignisse aus der Codeliste zulässig:
+- Personenliste 
+- Fahrzeugliste 
+- Fahrzeugakte</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                    <xs:element name="beteiligung" maxOccurs="unbounded" type="tns:Type.ZPO.Beteiligung">
+                      <xs:annotation>
+                        <xs:documentation>Es darf nur ein/e Schuldner/in angegeben werden.
+Die Daten des/r Schuldners/in werden aus der Anfrage übernommen.
+Es dürfen mehrere Trefferlisten angegeben werden. (je nach Auskunftsergebnis)</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="anfrage.parameter" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Wiedergabe der Parameter aus der Anfrage</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="fahrzeug" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="zulassungsabschnitt_ID" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="erstzulassung" minOccurs="0" type="tns:Type.GDS.Datumsangabe" />
+                    <xs:element name="kennzeichen" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="fahrzeugklasse" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Klasse des Fahrzeugs (z.B. PKW)</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="hersteller" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="marke" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="typ" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="arbeitsgang" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="zeitpunktaenderung" minOccurs="0" type="tns:Type.GDS.Datumsangabe" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.auskunftsersuchen.1500004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Bei Anfragen an DRV bitte die Versicherungsnummer angeben (falls vorhanden).</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="aktenzeichen.Absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird die Dienstregisternummer der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es sind folgende Ereignisse aus der Codeliste zulässig:
+- Anfrage Anschrift 
+- Anfrage Arbeitgeber 
+- Anfrage Fahrzeugdaten</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                    <xs:element name="beteiligung" type="tns:Type.ZPO.Beteiligung">
+                      <xs:annotation>
+                        <xs:documentation>Als Rollenbezeichnung ist nur "Schuldner(in)" zugelassen.
+Bei der Anschrift kann es sich auch um eine alte Anschrift handeln.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="voraussetzungen_des_Auskunftsersuchens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gueltiger_Vollstreckungstitel" default="false" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Das Auskunftsersuchen wird im Rahmen eines laufenden Vollstreckungsverfahren gestellt. Es liegt ein gültiger Vollstreckungstitel vor.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="mindestbetrag" default="false" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Die zu vollstreckenden Ansprüche betragen mindestens 500,- €,</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="anfrage.meldebehoerde" minOccurs="0" default="false" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Die Anschrift oder der derzeitige oder zukünftige Aufenthaltsort des Schuldners ist trotz Anfrage bei der Meldebehörde nicht bekannt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="vermoegensauskunft" minOccurs="0" default="false" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Der Schuldner ist seiner Pflicht zur Abgabe der Vermögensauskunft nach § 802c ZPO nicht nachgekommen.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="keine_vollstaendige_Befriedigung" minOccurs="0" default="false" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Bei einer Vollstreckung in die in der Vermögensauskunft aufgeführten Vermögensgegenstände ist eine vollständige Befriedigung des Gläubigers voraussichtlich nicht zu erwarten.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="anfrage.parameter" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>Die Anfrageparameter werden nur von der KBA benötigt.
+Für die Anfrage bei der DRV sind keine Parameter anzugeben.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="anfrage.typ" type="tns:Code.ZPO.Anfragetyp" />
+                    <xs:element name="zeitraum_von" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+                      <xs:annotation>
+                        <xs:documentation>Beginn des Abfragezeitraums</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="zulassungsabschnitt_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>ID aus zuvor ermittelter Fahrzeugliste zur Anforderung der Fahrzeugakte</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.fehlermeldung.1500005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird die Dienstregisternummer der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es ist nur das Ereignis "Fehler aufgetreten" aus der Codeliste zulässig.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="fehlercode" type="tns:Code.ZPO.Fehlercode">
+                <xs:annotation>
+                  <xs:documentation>Hier wird der nummerische Fehlercode aus der Codeliste angegeben.
+Der Klartext kann von den Fachverfahren aus der Codeliste entnommen werden.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="fehlertext" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Weitere Erläuterung zur Fehlersituation</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="anfrage.parameter" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Wiedergabe der Parameter aus der Anfrage</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.prueffallmeldung.1500006">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird die Dienstregisternummer der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es ist nur das Ereignis "Prüffall aufgetreten" aus der Codeliste zulässig.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="prueffall_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>DRV: Prüffallnummer</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="prueffall_Erklaerung" minOccurs="0" default="Zwischennachricht (kostenfrei):  Wir können Ihre Anfrage noch nicht abschließend bearbeiten. Ihr Auskunftersuchen hat zu einem Mehrfachtreffer geführt. Das bedeutet, Name und Identifizierungsdaten der betroffenen Person sind mehrfach gefunden worden. Wir versuchen in einem manuellen Verfahren eine eindeutige Zuordnung vorzunehmen. Das wird einige Zeit in Anspruch nehmen. Haben Sie bitte Geduld!  Senden Sie uns das Auskunftersuchen bitte nicht erneut zu! Auch telefonische Rückfragen zu diesen Fällen können nicht beantwortet werden!  Sie erhalten nach Klärung in jedem Fall eine abschließende elektronische Nachricht.  Diese Zwischennachricht ist kostenfrei." type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Zwischennachricht</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.zpo.rechnung.1500007">
+    <xs:annotation>
+      <xs:documentation>Da den Gerichtsvollziehern ausschließlich kostenpflichtige Auskünfte nach SGB X § 74a Abs. 2 erteilt werden, wird von Seiten der DSRV immer eine Kostenrechnung in Form einer zusätzliche XJustiz-Datei (Nachricht_ZPO_Rechnung) geschickt.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Hier wird das Aktenzeichen der/s Gerichtsvollzieherin/s angegeben.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+              <xs:element name="absender" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben zu Register (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Angaben der/s Gerichtsvollzieherin/s bzw. der Vollstreckungsbehörde (Govello-ID=SAFE-ID)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ereignis" type="tns:Code.ZPO.Ereignis">
+                <xs:annotation>
+                  <xs:documentation>Es ist nur das Ereignis "Rechnung" aus der Codeliste zulässig.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+                    <xs:element name="beteiligung" maxOccurs="unbounded" type="tns:Type.ZPO.Beteiligung" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.2.1">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.
+DRV: Ticketnummer (wie beim elektronischen Versorgungsausgleich)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="anfrage.datum" type="tns:Type.GDS.Datumsangabe" />
+              <xs:element name="auswahl_Auskunfttyp">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="p_755_ZPO" type="tns:Code.ZPO.Ereignis">
+                      <xs:annotation>
+                        <xs:documentation>Auskunft Anschrift nach § 755 ZPO</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="p_802l_ZPO" type="tns:Code.ZPO.Ereignis">
+                      <xs:annotation>
+                        <xs:documentation>Auskunft Arbeitgeber nach § 802l ZPO</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="rechnung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gebuehr" type="tns:Type.GDS.Geldbetrag">
+                      <xs:annotation>
+                        <xs:documentation>Höhe der Gebühr</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="zahlungsfrist" type="tns:Type.GDS.Datumsangabe">
+                      <xs:annotation>
+                        <xs:documentation>zwei Monate nach Rechnungsstellung</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="kassenzeichen" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>eindeutiges Kassenzeichen für den einzelnen Geschäftsvorfall</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="datum_Rechnungsstellung" type="tns:Type.GDS.Datumsangabe">
+                      <xs:annotation>
+                        <xs:documentation>Datum der Rechnungsstellung durch die DSRV</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="versicherungsnummer" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

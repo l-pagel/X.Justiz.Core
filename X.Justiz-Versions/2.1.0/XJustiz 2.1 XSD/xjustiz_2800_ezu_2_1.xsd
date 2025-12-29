@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdomea="http://www.xdomea.de/V2.2.0" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_2810_cl_ezu_2_0.xsd" />
+  <xs:import schemaLocation="xdomea-Baukasten.xsd" namespace="http://www.xdomea.de/V2.2.0" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.EZU.Anschrift">
+    <xs:sequence>
+      <xs:element name="strasse" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Einzeiliges Feld für Straße und Hausnummer.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postleitzahl" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.EZU.Fachdaten">
+    <xs:sequence>
+      <xs:element name="zustellungsinhalt" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="dokumenten_ID" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Vom Fachverfahren erzeugte ID des Dokuments</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dokumenten-Bezeichnung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Dateiname oder eine beliebige andere Bezeichnung, die die Zuordnung des Datensatzes zum zuzustellenden Schriftsatz erlaubt</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="art_Schriftstueck" type="tns:Code.GDS.Zuzustellendes_Schriftstueck" />
+            <xs:element name="art_Schriftstueck_Freitext" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Dieses Element wird befüllt, wenn aus der Codeliste zuzustellendes Schriftstück „Sonstiges“ gewählt wurde.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ausstellungsdatum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Ausstellungsdatum des zuzustellenden Schriftstückes</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dokument_Daten" minOccurs="0" type="xdomea:DokumentType">
+              <xs:annotation>
+                <xs:documentation>Metadaten des zuzustellenden Schriftstücks nach dem XDomea-Standard</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="weitersenden_innerhalb" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezirk_AG" minOccurs="0" type="xs:boolean" />
+            <xs:element name="bezirk_LG" minOccurs="0" type="xs:boolean" />
+            <xs:element name="inland" minOccurs="0" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="vermerke" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ersatzzustellung_ausgeschlossen" minOccurs="0" type="xs:boolean" />
+            <xs:element name="keine_Ersatzzustellung_an" minOccurs="0" type="xs:boolean" />
+            <xs:element name="nicht_durch_Niederlegung_zustellen" minOccurs="0" type="xs:boolean" />
+            <xs:element name="mit_Angabe_der_Uhrzeit_zuzustellen" minOccurs="0" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.EZU.Grunddaten">
+    <xs:annotation>
+      <xs:documentation>Der Type.EZU.Grunddaten enthält Meta-Informationen zum übersandten Dokument und zu dem zugehörigen Verfahren. Die darin enthaltenen Daten sind für alle Gerichtszweige und für alle Verfahrensarten von Interesse. Zusätzliche oder abgewandelte Datenstrukturen können in einem Fachmodul definiert werden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="verfahrensdaten">
+        <xs:annotation>
+          <xs:documentation>Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren mit sich bringt.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="verfahrensnummer" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Die Verfahrensnummer ist eine eindeutige Kennziffer für das gesamte betreffende Verfahren im Sinne eines Primärschlüssels. Bei der Übermittlung verfahrenseinleitender Dokumente ist hier "neu" einzutragen. Wenn das Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, erhält das Element den Wert "unbekannt".  Das vorliegende Element ist vorgesehen für eine Verfahrensnummer, die für das Verfahren über alle Instanzen hinweg gelten soll. Alternativ oder kumulativ kann dem Verfahren in jeder Instanz eine separate Nummer zugewiesen werden; diese wird im Element Instanzdaten/Verfahrensinstanznummer übermittelt.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="instanzdaten" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="instanznummer" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Mit diesem Element ist nicht die juristische Bezeichnung einer Instanz gemeint. Das Element dient vielmehr als Schlüsselfeld für interne Referenzierungen. Die Instanznummer muss für das aktuelle XML-Instanzdokument eindeutig sein und identifiziert die jeweiligen Instanzdaten. Jedoch sollte auf die zeitliche Abfolge der Instanzen geachtet werden. Handelt die STA vor einem Gericht, erhält die STA 0 und das Gericht 1.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="sachgebiet" type="tns:Code.GDS.Sachgebiet" />
+                  <xs:element name="sachgebietszusatz" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Möglichkeit für zusätzliche Angaben bezüglich des Sachgebiets beispielsweise in der Finanzgerichtsbarkeit die Angabe des Steuerjahres.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="instanzbehoerde" type="tns:Type.GDS.Behoerde">
+                    <xs:annotation>
+                      <xs:documentation>Instanzbehörde ist die Institution, bei der das Verfahren in der betreffenden Instanz anhängig gewesen ist. Dies kann ein Gericht oder eine Staatsanwaltschaft sein, aber auch z.B. eine Polizeidienststelle oder eine andere Institution. Hier wird entweder das Gericht mit dessen Gerichtskennzahl angegeben oder eine andere Behörde. Wenn die andere Behörde nicht in einer Liste aufgeführt ist, ist sie komplett unter einer Beteiligung anzugeben. Der Verweis auf diese Beteiligung erfolgt unter der Ref_Instanznummer. (Beispielsweise: Polizei) Eine XML-Beispielsdatei ist unter www.xjustiz.de zu finden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="abteilung" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hier kann die zuständige Abteilung oder der zuständige Spruchkörper angegeben werden, z.B. "7.Zivilkammer", "Dezernat 77" oder "Inspektion 7".</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="verfahrensinstanznummer" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Die Verfahrensinstanznummer ist eine eindeutige Kennziffer für die betreffende Instanz in einem Verfahren im Sinne eines Primärschlüssels. Bei der Übermittlung verfahrenseinleitender Dokumente ist hier "neu" einzutragen.  Wenn das Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, erhält das Element den Wert "unbekannt".  Das vorliegende Element ist vorgesehen für eine Verfahrensnummer, die nur in der betreffenden Instanz hinweg gelten soll. Alternativ oder kumulativ kann dem Verfahren eine instanzübergreifende Nummer zugewiesen werden; diese wird im Element Verfahrensdaten/Verfahrensnummer übermittelt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="aktenzeichen" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hier steht das Aktenzeichen, unter dem die Instanzbehörde (siehe oben) das Verfahren führt. Bei der Übermittlung verfahrenseinleitender Dokumente ist hier "neu" einzutragen. Wenn das Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, erhält das Element den Wert "unbekannt".</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="kurzrubrum" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hier wird die schlagwortartige Bezeichnung des Verfahrens angegeben, z.B. "Müller ./. Maier" oder "Strafsache gegen Erich Schulze".</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="verfahrensgegenstand" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Verfahrensgegenstand">
+                    <xs:annotation>
+                      <xs:documentation>Es soll eine 1:N-Zuordnung Verfahren zu Verfahrensgegenständen möglich sein.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="beteiligung" maxOccurs="unbounded" type="tns:Type.GDS.Beteiligung">
+              <xs:annotation>
+                <xs:documentation>Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die richtige Version des XML-Schemas geprüft wird. Angegeben werden alle drei Stellen der Versionsnummer.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Type.EZU.Nachrichtenkopf">
+    <xs:sequence>
+      <xs:element name="aktenzeichen.Absender_Zustellungsauftrag" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="erstellungszeitpunkt" minOccurs="0" type="xs:dateTime" />
+      <xs:element name="absender_Zustellungsauftrag" minOccurs="0" type="tns:Code.GDS.Gerichte" />
+      <xs:element name="zusteller" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="zustellungsunternehmen" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="zu_id" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.ezu.auftrag.2800001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:restriction base="tns:Type.EZU.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="aktenzeichen.Absender_Zustellungsauftrag" type="xoev-lc:String.Latin" />
+                  <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+                  <xs:element name="absender_Zustellungsauftrag" type="tns:Code.GDS.Gerichte">
+                    <xs:annotation>
+                      <xs:documentation>XJustiz-ID oder Name oder ID der Behörde</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zu_id" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:restriction>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.EZU.Grunddaten" />
+        <xs:element name="fachdaten" type="tns:Type.EZU.Fachdaten" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.ezu.urkunde.2800002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="aktenzeichen.Absender_Zustellungsauftrag" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Das Aktenzeichen dient der Zuordnung beim Gericht/Behörde</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="absender_Zustellungsauftrag" type="tns:Code.GDS.Gerichte" />
+              <xs:element name="zusteller" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Name und Vorname des Zustellers laut Feld 13.5 der Zustellungsurkunde.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="zustellungsunternehmen" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Bezeichnung des Postunternehmens/Behörde, Feld 13.4 der Zustellungsurkunde</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="zu_id" type="xoev-lc:String.Latin" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="abweichungen_Zustellungsadressat" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eintragungen, wenn Adresse oder Name des Zustellungsadressats geändert</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="zustellakt" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="datum_Zustellakt" minOccurs="0" type="xs:date">
+                      <xs:annotation>
+                        <xs:documentation>Dieses Element gibt an, wann die Zustellung versucht wurde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="uhrzeit_Zustellakt" minOccurs="0" type="xs:time" />
+                    <xs:element name="erfolgreich_zugestellt" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Dieses Element gibt an, ob die Zustellung erfolgreich war.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zustellversuch_erfolglos" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>In der folgenden Unterstruktur kann der Grund der Nichtzustellung vermerkt werden (Felder 1.4.1 bis 1.4.5 der Zustellungsurkunde).</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="adressat_nicht_zu_ermitteln" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="adressat_verzogen_nach" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="adressat_verzogen" type="xs:boolean" />
+                          <xs:element name="ortsangabe" minOccurs="0" type="tns:Type.EZU.Anschrift" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="weitersendung_nicht_moeglich" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="weitersendung_nicht_verlangt" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="empfaenger_unbekannt_verzogen" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="anderer_Grund" minOccurs="0" type="xs:boolean" />
+                    <xs:element name="angabe_Grund" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Angabe des Grundes der Nichtzustellung bei Feld 1.4.5.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zusteller" minOccurs="0" type="tns:Code.EZU.Eigenschaft_Zusteller">
+                <xs:annotation>
+                  <xs:documentation>Feld 2 der Zustellungsurkunde.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="uebergabe_erfolgreich" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="unter_Zustellanschrift" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 4.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ortsangabe" minOccurs="0" type="tns:Type.EZU.Anschrift">
+                      <xs:annotation>
+                        <xs:documentation>Feld 4.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Adressaten" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 5.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Vertretungsberechtigten" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 5.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_rechtsgeschaeftlichen_Vertreter" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 5.3 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Familienangehoerigen" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 6.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_in_Familie_beschaeftigter_Person" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 6.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Mitbewohner" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 6.3 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Beschaeftigtem" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 7.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_Leiter_Einrichtung" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 8.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_ermaechtigten_Vertreter" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 8.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="name" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Angabe von Name und Vorname bei Feld 5.4 oder 6.4 oder 7.2 oder 8.3. Für welches Feld die Namensangabe gilt, ergibt sich aus dem vorhergehenden booleschen Element.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="uebergabe_versucht" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="eingelegt_in_Briefkasten_Wohnung" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 10.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="eingelegt_in_Briefkasten_Geschaeftsraum" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 10.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="niederlegungsstelle" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Feld 11.1.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ortsangabe" minOccurs="0" type="tns:Type.EZU.Anschrift">
+                      <xs:annotation>
+                        <xs:documentation>Felder 11.1.2 bis 11.1.3 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="abgabeart" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Feld 11.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="an_der_Tuer_angeheftet" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 11.3 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="annahme_verweigert_durch" minOccurs="0" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Feld 12 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beziehung_zum_Adressaten" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="zurueckgelassen_in_Wohnung_oder_Briefkasten" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 12.1 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="zurueckgelassen_in_Geschaeftsraum_oder_Briefkasten" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 12.2 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="zurueckgeschickt_an_Absender" minOccurs="0" type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>Feld 12.3 der Zustellungsurkunde.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

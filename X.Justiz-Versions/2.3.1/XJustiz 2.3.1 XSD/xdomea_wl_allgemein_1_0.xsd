@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdo="http://www.xdomea.de" targetNamespace="http://www.xdomea.de" version="1.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:annotation>
+    <xs:documentation>Diese Datei ist Bestandteil des Datenformats XDOMEA. Sie enthält allgemeine Typdeklarationen für Wertelisten, die von XDOMEA verwendet werden.  Weitere Einzelheiten ergeben sich aus der Dokumentation zu XDOMEA, die im Internet unter http://www.xdomea.de erhältlich ist.</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="WL_Anschriftstyp">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Anschriftstyp.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Anschriftstyp.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="Aktuelle Anschrift" />
+        <xs:enumeration value="Hauptsitz" />
+        <xs:enumeration value="Zweitsitz" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Dateiformat">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Dateiformat.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Elemente Primaerdokument/Dateiformat und alle künftigen Elemente mit vergleichbarem Inhalt.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="ASCII" />
+        <xs:enumeration value="HTML" />
+        <xs:enumeration value="MS-WORD" />
+        <xs:enumeration value="PDF" />
+        <xs:enumeration value="PKCS#7" />
+        <xs:enumeration value="RTF" />
+        <xs:enumeration value="TIFF" />
+        <xs:enumeration value="UNICODE" />
+        <xs:enumeration value="XML" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Dokumenttyp">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Dokumenttyp.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Beschreibung/Dokumenttyp</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="Asservat" />
+        <xs:enumeration value="Auskunft" />
+        <xs:enumeration value="Beiakte" />
+        <xs:enumeration value="Bericht" />
+        <xs:enumeration value="Bescheid" />
+        <xs:enumeration value="Beschluss" />
+        <xs:enumeration value="Entscheidung" />
+        <xs:enumeration value="Erlass" />
+        <xs:enumeration value="Gutachten" />
+        <xs:enumeration value="Kosten" />
+        <xs:enumeration value="Protokoll" />
+        <xs:enumeration value="Schreiben" />
+        <xs:enumeration value="Schreiben mit Antrag" />
+        <xs:enumeration value="Urteil" />
+        <xs:enumeration value="Verfügung" />
+        <xs:enumeration value="Vermerk" />
+        <xs:enumeration value="Zustellungsnachweis" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Kommunikationsart">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Kommunikationsart.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Kanal bei den Teledaten.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="E-Mail" />
+        <xs:enumeration value="Fax" />
+        <xs:enumeration value="Institution-E-Mail-Adresse" />
+        <xs:enumeration value="Institution-Fax" />
+        <xs:enumeration value="Institution-Telefon" />
+        <xs:enumeration value="Institution-Web" />
+        <xs:enumeration value="Internet" />
+        <xs:enumeration value="Mobilfunk" />
+        <xs:enumeration value="Mobiltelefon" />
+        <xs:enumeration value="Nutzer-E-Mail-Adresse" />
+        <xs:enumeration value="Nutzer-Fax" />
+        <xs:enumeration value="Nutzer-Telefon" />
+        <xs:enumeration value="Pager" />
+        <xs:enumeration value="Sonstige" />
+        <xs:enumeration value="Telefon" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Medium">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Medium.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Medium.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="Elektronisch" />
+        <xs:enumeration value="Hybrid" />
+        <xs:enumeration value="Papier" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Referenzart">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Referenzart.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Referenzart der Identifizierung des Dokuments.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="Anlage" />
+        <xs:enumeration value="Frühere Version" />
+        <xs:enumeration value="Hauptdokument" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_String">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" />
+        <xs:attribute name="wl_version" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Telekennzeichnung">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Telekennzeichnung.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Kennzeichnung bei den Teledaten.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="dienstlich" />
+        <xs:enumeration value="geschäftlich" />
+        <xs:enumeration value="home-office" />
+        <xs:enumeration value="privat" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WL_Vertraulichkeitsstufe">
+    <xs:annotation>
+      <xs:appinfo>
+        <implementationHint>http://www.osci.de/xjustiz14/WL_DOMEA_Vertraulichkeitsstufe.xml</implementationHint>
+      </xs:appinfo>
+      <xs:documentation>Diese Werteliste ist vorgesehen für das Element Beschreibung/Vertraulichkeitsstufe</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xdo:WL_String">
+        <xs:enumeration value="Geheim" />
+        <xs:enumeration value="NfD" />
+        <xs:enumeration value="Offen" />
+        <xs:enumeration value="Streng Geheim" />
+        <xs:enumeration value="Vertraulich" />
+        <xs:attribute name="wl_fassung" type="xs:string" use="optional" default="0" />
+        <xs:attribute name="wl_version" type="xs:string" use="required" fixed="1.0" />
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
+

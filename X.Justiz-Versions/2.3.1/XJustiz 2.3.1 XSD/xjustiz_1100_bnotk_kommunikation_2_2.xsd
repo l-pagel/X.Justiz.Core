@@ -1,0 +1,2545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.2.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0005_nachrichten_2_3.xsd" />
+  <xs:include schemaLocation="xjustiz_1110_cl_bnotk_2_2.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.BNOTK.Amtstaetigkeit">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst alle Informationen über eine Amtstätigkeit eines Notars zusammen. Es wird als Output-Datentyp des Dienstes "Suche Amtstätigkeiten" verwendet.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:Type.BNOTK.Notar_Ref">
+        <xs:sequence>
+          <xs:element name="vorname" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Vorname des Notars.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="nachname" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Nachname des Notars.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="amtstitel" type="tns:Code.BNOTK.Amtstitel_Notar">
+            <xs:annotation>
+              <xs:documentation>Codeliste mit möglichen Amtstitel für Notare und Notarinnen.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="amtssitz" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Der Amtssitz des Notars.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="werdegang">
+            <xs:annotation>
+              <xs:documentation>Zeitraum der Amtstätigkeit</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="beginn" type="xs:date">
+                  <xs:annotation>
+                    <xs:documentation>Der Beginn der Amtstätigkeit nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="ende" minOccurs="0" type="xs:date">
+                  <xs:annotation>
+                    <xs:documentation>Das Ende der Amtstätigkeit nach ISO 8601 (yyyy-mm-dd). Ist das Ende der aktiven Amtstätigkeit bereits bekannt, wird das in der Zukunft liegende Datum übermittelt.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="entwurfssprache" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Die Sprachen, auf denen ein Notar die zu beurkundenden Dokumente selber erstellen kann. Sprachcodes gemäß ISO 639-1.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="urkundssprache" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Die Sprachen, in denen ein Notar Dokumente beurkunden kann. Sprachcodes gemäß ISO 639-1.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="verwahrung_durch" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Werden Urkunden der Amtstätigkeit durch eine andere Stelle verwahrt, wird pro Verwahrung der Zeitraum sowie die verwahrende Stelle übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="urkunden_von" type="xs:date">
+                  <xs:annotation>
+                    <xs:documentation>Urkunden der Amtstätigkeit, die ab diesem Datum erstellt worden sind, werden bei der angegebenen Verwahrstelle verwahrt.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="urkunden_bis" type="xs:date">
+                  <xs:annotation>
+                    <xs:documentation>Urkunden der Amtstätigkeit, die bis zu diesem Datum erstellt worden sind, werden bei der angegebenen Verwahrstelle verwahrt.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="urkundenverwahrung" type="tns:Type.BNOTK.Notar_Gericht_Ref">
+                  <xs:annotation>
+                    <xs:documentation>Referenz auf einen Notar (Amtstaetigkeit) oder ein Gericht als Verwahrstelle für die Urkunden, die vom Notar im angegebenen Zeitraum erstellt worden sind.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Empfangene_Urkunde.ZTR">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp repräsentiert eine empfangene Urkunde im ZTR. Eine Urkunde kann im Rahmen ihrer Verwahrung, Rücksendung, Ablieferung, usw. empfangen werden.
+Der Datentyp wird als Output des Dienstes "Suche empfangene Urkunden" verwendet. Der Dienst ist NOCH NICHT IMPLEMENTIERT.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="empfangstyp" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Typ des Empfangs in einem bestimmten Prozessschritt. Bekannte Werte sind in WL_Empfangstyp_ZTR_BW definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="urkunde" type="tns:Type.BNOTK.Urkunde.ZTR">
+        <xs:annotation>
+          <xs:documentation>Daten über die empfangene Urkunde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="empfangsbestaetigung_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Id mit der der Empfang der Urkunde bestätigt werden kann.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="erledigt" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Dieses Flag zeigt, ob der Empfang der Urkunde schon bestätigt worden ist.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="empfangsdatum" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Das Empfangsdatum der Urkunde. Es wird erst bei der Abgabe der Empfangsbestätigung gesetzt und ist deswegen nur für schon empfangsbestätigte Urkunden vorhanden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Empfangsbestaetigung.ZTR">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp definiert die Informationen, die bei der  Empfangsbestätigung vom Verwahr- oder Nachlassgericht übertragen werden.
+Der Datentyp wird als Input des Dienstes "Neue Erledigung" verwendet. Der Dienst ist NOCH NICHT IMPLEMENTIERT.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="empfangsbestaetigung_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Id der zu erledigenden Empfangsbestätigung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="empfangsdatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="eigenes_Verwahrkennzeichen" type="xoev-lc:String.Latin">
+          <xs:annotation>
+            <xs:documentation>Eigene Verwahrungsbuchnummer des Verwahrgerichts. Es wird bei der Inverwahrnahme einer empfangenen Urkunde angegeben.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="aktenzeichen_Nachlassverfahren" type="xoev-lc:String.Latin">
+          <xs:annotation>
+            <xs:documentation>Aktenzeichen des Nachlassvorgangs bei Nachlassgericht.
+Es wird bei der Empfangsbestätigung einer abglieferten Urkunde angegeben.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Erblasser.ZTR">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.BNOTK.Erblasser_Daten.ZTR">
+        <xs:sequence>
+          <xs:element name="id" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Bei Nachrichten vom ZTR wird die interne ID des Erblassers hier übermittelt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Erblasser_Daten.ZTR">
+    <xs:annotation>
+      <xs:documentation>Beschreibung eines Erblassers innerhalb des ZTR. Anpassung von Type.GDS.Natuerliche_Person unter Verwendung von Type.BNOTK.Geburt.ZTR und Type.BNOTK.Tod.ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="voller_Name" type="tns:Type.GDS.Voller_Name">
+        <xs:annotation>
+          <xs:documentation>Der vollständige Name des Erblassers. Bei der Registrierung werden nur die Felder Vorname, Nachname und Geburtsname berücksichtigt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geburt" type="tns:Type.BNOTK.Geburt.ZTR">
+        <xs:annotation>
+          <xs:documentation>Angaben zu einer Geburt, die im ZTR erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="tod" minOccurs="0" type="tns:Type.BNOTK.Tod.ZTR">
+        <xs:annotation>
+          <xs:documentation>Angaben zum Tod eines Erblassers, die im ZTR erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geschlecht" minOccurs="0" type="tns:Code.GDS.Geschlecht">
+        <xs:annotation>
+          <xs:documentation>Zulässige Werte sind im Schema "xj_0010_wl_allgemein_x_x.xsd" in der Codeliste WL_Geschlecht definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Bei neuer Registrierung die Anschrift des Rechnungsempfängers. Bei Sterbefallbenachrichtigungen der zuletzt bekannte Wohnort bzw. der gewöhnliche Aufenthaltsort.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="staatsangehoerigkeit" minOccurs="0" type="tns:Code.GDS.Staaten">
+        <xs:annotation>
+          <xs:documentation>Wird angegeben bei Mitteilung von Sterbefällen.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Fehlerfall">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst die Beschreibung eines fachlichen oder technischen Fehlers zusammen. Es wird entweder als Fachdaten-Teil in der Fehlerfall Nachricht verwendet oder im Fall eines grundlegenden Fehlers direkt in einer SOAP-Fault Nachricht eingebettet und ohne Grunddaten und Kopfdaten zurückgeliefert.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="fehlercode" type="tns:Code.BNOTK.Fehlercode">
+        <xs:annotation>
+          <xs:documentation>Fehlercode entsprechend der Codeliste.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mitteilung" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Zusätzlich zur Fehlermeldung entsprechend der Codeliste können weitere Hinweise zum Fehler übergeben werden. Bekannte Fehlerfälle werden durch gut verständlichen Fehlernachrichten kommuniziert. Bei sonstigen Fehlern kann die Exception als Meldung weitergereicht werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Geburt.ZTR">
+    <xs:annotation>
+      <xs:documentation>Angaben zu einer Geburt, die im ZTR erfasst werden</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="geburtsdatum" type="tns:Type.GDS.Datumsangabe">
+        <xs:annotation>
+          <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd). Ist das Geburtsdatum nicht vollständig bekannt, werden die bekannten Teile angegeben (yyyy-mm oder yyyy). Vergleiche XPersonenstand.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geburtsname" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Vollständiger Geburtsname.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="geburtsort">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.GDS.Ortsangabe">
+                <xs:sequence>
+                  <xs:element name="ort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Eine eindeutige Id des Ortes. Wenn angegeben, hat es Vorrang vor den textuellen Ortsangaben, welche bei mehrfachem Vorkommen eines Namens ggf. nicht eindeutig sein können.
+Die Ort_Id eines Ortes liefert der Service „Suche zuständige Standesämter“. Dort können Sie mit dem Ortsnamen suchen und im Ergebnis die Orts_Id unter „Nachricht_SVZ_Suche_Zustaendige_Standesaemter_Output / Fachdaten / Ort_Standesaemter / Ort_Id“ für den gesuchten Ort finden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="landkreis" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Zur Unterstützung der eindeutigen regionalen Zuordnung von Geburtsorten.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="geburtsort_unbekannt" fixed="true" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Das Flag wird gesetzt, wenn der Geburtsort nicht bekannt ist. In dem Fall wird das Element 'Geburtsort' auch weggelassen. Der Wert ist fixed true.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="registrierungsdaten_Geburt" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="standesamt_ID" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Die eindeutige Id des Standesamtes im Standesamtverzeichnis.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="geburtsstandesamt" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Der Name des Standesamtes.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="geburtsregisternummer" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Die Elemente werden als string kodiert, da die Geburtenregisternummer bei ausländischen Geburten nicht nur Ziffern enthalten kann.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nummer" type="xoev-lc:String.Latin" />
+                  <xs:element name="jahr" type="xoev-lc:String.Latin" />
+                  <xs:element name="registerart" minOccurs="0" type="tns:Code.BNOTK.Registerart_Personenstand">
+                    <xs:annotation>
+                      <xs:documentation>Ein Präfix für Personenstandsurkunden (z.B. G für Geburtsurkunden) wird von den Standesämtern im Sinne von §15 PStV an das ZTR übergeben. Das Präfix wird, falls für den Datensatz vorhanden, hier zurückgegeben.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="keine_Beurkundung_in_De" minOccurs="0" default="false" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Das Flag wird gesetzt, wenn die Geburt nicht im Inland beurkundet wurde. Default ist false.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Gericht_Ref">
+    <xs:annotation>
+      <xs:documentation>Referenz auf ein Gericht, z.B. als Verwahrstelle einer Urkunde.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="gericht_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Gerichts. Hier wird bewusst auf die Einschränkung auf Elemente der Codeliste WL_Gerichte verzichtet, damit tagesaktuelle Werte möglich sind.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rollennummer" minOccurs="0" type="tns:Type.GDS.Ref.Rollennummer">
+        <xs:annotation>
+          <xs:documentation>Verweis auf die Gerichtsdaten (Name, Anschrift, etc.) im Grunddatensatz.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Grundbuchamt">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst alle Daten eines Grundbuchamts zusammen. Es wird als Output Datentyp in den Grundbuchamt-bezogenen Diensten des Gerichtsverzeichnisses verwendet.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="gericht_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Grundbuchamtes. Hier wird bewusst auf die Einschränkung auf Elemente der Codeliste WL_Gerichte verzichtet, damit tagesaktuelle Werte möglich sind.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="govello_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Govello Id des Grundbuchamtes für die EGVP Kommunikation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Vollständiger Name des Grundbuchamtes bzw. des Gerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bundesland" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Das Bundesland des Grundbuchamtes.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Die Anschrift des Grundbuchamtes. Auch Postfach-Anschriften fallen unter den Type.GDS.Anschrift.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation">
+        <xs:annotation>
+          <xs:documentation>Hier können Kommunikationswege wie Telefon, Fax, usw. zum Grundbuchamt erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="elektronischer_Rechtsverkehr_ab" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+        <xs:annotation>
+          <xs:documentation>Teilnahme am Elektronischen Rechtsverkehr ab diesem Datum. Das Datum wird nach ISO 8601 (yyyy-mm-dd) angegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="elektronischer_Rechtsverkehr_Ausnahme_ab" minOccurs="0" type="tns:Code.BNOTK.ELRV_Ausnahme_Ab">
+        <xs:annotation>
+          <xs:documentation>Teilnahme am elektronischen Rechtsverkehr mit Ausnahme von Plänen ab dieser Größe. Größer als A3 bedeutet z.B., dass wenn ein Dokument (Bauplan, Teilungserklärung, usw.) entweder in der Breite (297mm) oder in der Länge (420mm) die Größe von A3 überschreitet, kann es als Papier auf dem nicht elektronischen Wege beim Grundbuchamt eingereicht werden. In den verschiedenen Bundesländern können im Detail unterschiedliche Ausnahmeregelungen bezogen auf die einzelnen Dokumente einer Urkunde mit verschiedenen Größen gelten.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Grundbuchbezirk">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst alle Daten eines Grundbuchbezirks zusammen. Es wird als Output Datentyp im Kontext der Grundbuchamt-Zuständigkeiten verwendet.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="grundbuchbezirk" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Name des Grundbuchbezirks.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bezirksnummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Nummer des Grundbuchbezirks.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bundesland" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Das Bundesland in dem sich der Grundbuchbezirk befindet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Ort in dem sich der Gemarkung befindet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gemeindekennzahl" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Id der Gemeinde, zu der die Gemarkung gehört.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gemarkungsname" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Name der Gemarkung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gemarkungsnummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Nummer der Gemarkung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gba_Gericht_ID_Ref" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Gericht Id des zuständigen Grundbuchamtes.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gba_Name_Ref" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Name des zuständigen Grundbuchamtes.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gba_Zustaendigkeit_ab" type="tns:Type.GDS.Datumsangabe">
+        <xs:annotation>
+          <xs:documentation>Das Datum zeigt, ab wann das referenzierte Grundbuchamt für die Gemarkung zuständig ist. Es wird nach ISO 8601 (yyyy-mm-dd) angegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Kopf_Und_Grunddaten.Input" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Dieser Basistyp fasst alle Kopf- und Grunddaten zusammen, die in den Input Datentypen von allen BNotK Diensten verwendet werden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="nachrichtenkopf.extern_zu_BNotK" type="tns:Type.GDS.Nachrichtenkopf.Extern_zu_BNotK">
+          <xs:annotation>
+            <xs:documentation>Nachrichtenkopf für Nachrichten von externen Stellen (z.B. Notare) an die BNotK</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="nachrichtenkopf.Justiz_zu_BNotK" type="tns:Type.GDS.Nachrichtenkopf.Justiz_zu_BNotK">
+          <xs:annotation>
+            <xs:documentation>Nachrichtenkopf für Nachrichten von Stellen der Justiz (z.B. Verwahrgericht) an die BNotK.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK">
+        <xs:annotation>
+          <xs:documentation>Der Typ Type.GDS.Grunddaten.BNotK enthält Meta-Informationen zum Übersandten Dokument und zu dem zugehörigen Verfahren. Die darin enthaltenen Daten sind für alle Gerichtszweige und für alle Verfahrensarten von Interesse. Zusätzliche oder abgewandelte Datenstrukturen können in einem Fachmodul definiert werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Kopf_Und_Grunddaten.Output" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Dieser Basistyp fasst alle Kopf- und Grunddaten zusammen, die in den Output Datentypen von allen BNotK Diensten verwendet werden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="nachrichtenkopf.BNotK_zu_extern" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Extern">
+          <xs:annotation>
+            <xs:documentation>Nachrichtenkopf für Nachrichten von der BNotK an externe Stellen (z.B. Notare)</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="nachrichtenkopf.BNotK_zu_Justiz" type="tns:Type.GDS.Nachrichtenkopf.BNotK_zu_Justiz">
+          <xs:annotation>
+            <xs:documentation>Nachrichtenkopf für Nachrichten von der BNotK an Stellen der Justiz (z.B. Verwahrgericht)</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="grunddaten" type="tns:Type.GDS.Grunddaten.BNotK">
+        <xs:annotation>
+          <xs:documentation>Der Type.GDS.Grunddaten.BNotK enthält Meta-Informationen zum Übersandten Dokument und zu dem zugehörigen Verfahren. Die darin enthaltenen Daten sind für alle Gerichtszweige und für alle Verfahrensarten von Interesse. Zusätzliche oder abgewandelte Datenstrukturen können in einem Fachmodul definiert werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Mitteilung.ZTR">
+    <xs:annotation>
+      <xs:documentation>Der Datentyp definiert die Daten einer Mitteilung an ZTR. Es wird als Output des Dienstes "Suche Mitteilungen" verwendet. Der Dienst ist NOCH NICHT IMPLEMENTIERT.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mitteilung_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id der Mitteilung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="typ" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Typ der Mitteilung. Bekannte Werte sind in WL_Mitteilungstyp_ZTR_BW definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dokument_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Eine eindeutige Id des Dokumentes.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dokument_URL" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Hier wird ein permanenter Link zum Dokument zurückgegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mitteilungsdatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Das Entstehungsdatum der Mitteilung. Es wird nach ISO 8601 (yyyy-mm-dd) angegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gelesen" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Ein Flag, ob die Mitteilung schon gelesen wurde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="erledigt" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Ein Flag, ob die Mitteilung schon erledigt wurde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="registrierungsnummer" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Die Registrierungsnummer zeigt, auf welcher Registrierung sich die Mitteilung bezieht.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="registerart" minOccurs="0" type="tns:Code.BNOTK.Registerart_Personenstand">
+        <xs:annotation>
+          <xs:documentation>Ein Präfix für Personenstandsurkunden (z.B. S für Sterbeurkunden) wird von den Standesämtern im Sinne von §15 PStV an das ZTR übergeben. Das Präfix wird, falls für den Datensatz vorhanden, hier zurückgegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Nachlassgericht">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst alle Daten eines Nachlassgerichts zusammen.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="gericht_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Nachlassgerichts, früher auch als XJustiz-Id bezeichnet. Hier wird bewusst auf die Einschränkung auf Elemente der Codeliste WL_Gerichte verzichtet, damit tagesaktuelle Werte möglich sind.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="govello_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Govello Id des Nachlassgerichts für die EGVP Kommunikation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Name des Nachlassgerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bundesland" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Das Bundesland des Nachlassgerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Die Anschrift des Nachlassgerichtes. Auch Postfach-Anschriften fallen unter den Type.GDS.Anschrift.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation">
+        <xs:annotation>
+          <xs:documentation>Hier können Kommunikationswege wie Telefon, Fax, usw. zum Nachlassgericht erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Notar_Gericht_Ref">
+    <xs:annotation>
+      <xs:documentation>Referenz auf einen Notar (bzw. seine Amtstätigkeit) oder ein Gericht.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="auswahl_Notar_Gericht_Ref">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="notar" type="tns:Type.BNOTK.Notar_Ref">
+              <xs:annotation>
+                <xs:documentation>Referenz auf einen Notar, z.B. als Melder einer ZTR Registrierung.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="gericht" type="tns:Type.BNOTK.Gericht_Ref">
+              <xs:annotation>
+                <xs:documentation>Referenz auf ein Gericht, z.B. als Verwahrstelle einer Urkunde.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Notar_Ref">
+    <xs:annotation>
+      <xs:documentation>Referenz auf einen Notar, z.B. als Melder einer ZTR Registrierung.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="amtstaetigkeit_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id einer Amtstätigkeit eines Notars aus dem Notarverzeichnis der BNotK.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rollennummer" minOccurs="0" type="tns:Type.GDS.Ref.Rollennummer">
+        <xs:annotation>
+          <xs:documentation>Verweis auf die Notarsdaten (Name, Anschrift, etc.) im Grunddatensatz.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Ort">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.GDS.Ortsangabe">
+        <xs:sequence>
+          <xs:element name="ort_ID" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Eine eindeutige Id des Ortes.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="landkreis" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Zur Unterstützung der eindeutigen regionalen Zuordnung von Geburtsorten.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="postleitzahl" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Postleitzahl des Ortes.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="historisch" default="false" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Das Flag zeigt, ob der Ort historisch oder aktuell existent ist.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Registergericht">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp definiert alle Daten eines Registergerichts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="gericht_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Registergerichts, früher auch als XJustiz-Id bezeichnet. Hier wird bewusst auf die Einschränkung auf Elemente der Codeliste WL_Gerichte verzichtet, damit tagesaktuelle Werte möglich sind.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="govello_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Govello Id des Registergerichts für die EGVP Kommunikation.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Name des Registergerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bundesland" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Das Bundesland des Registergerichts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Die Anschrift des Registergerichts. Auch Postfach-Anschriften fallen unter den Type.GDS.Anschrift.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation">
+        <xs:annotation>
+          <xs:documentation>Hier können Kommunikationswege wie Telefon, Fax, usw. zum Registergericht erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mit_Vereinsregister" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Das Flag zeigt, ob das Registergericht ein Vereinsregister führt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mit_Partnerschaftsregister" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Das Flag zeigt, ob das Registergericht ein Partnerschaftsregister führt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Standesamt">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp definiert die Daten eines Standesamtes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="id" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Standesamtes im Standesamtverzeichnis der BNotK.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="behoerdennummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Behördennummer als eindeutige Id für das Standesamt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Name des Standesamtes.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Die Anschrift des Standesamtes. Auch Postfach-Anschriften fallen unter den Type.GDS.Anschrift.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Telekommunikation">
+        <xs:annotation>
+          <xs:documentation>Hier können Kommunikationswege wie Telefon, Fax, usw. zum Standesamt erfasst werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="historisch" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Das Flag zeigt, ob das Standesamt immer noch exisitert oder ob es sich um ein historisches Standesamt handelt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Sterbefall.ZTR">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst die Informationen zusammen, die vom ZTR als Sterbefallbenachrichtigung versendet werden. Es beinhaltet sowohl Daten zur verstorbenen Person als auch über die im ZTR registrierten abzuliefernden Urkunden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="sterbefall_ID" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id des Sterbefalls.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="verstorbene_Person" type="tns:Type.BNOTK.Verstorbene_Person.ZTR">
+        <xs:annotation>
+          <xs:documentation>Alle Daten zur verstorbenen Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nachlassgericht" type="tns:Type.BNOTK.Gericht_Ref">
+        <xs:annotation>
+          <xs:documentation>Referenz auf das Nachlassgericht.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="eingangsdatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Ein von ZTR vergebenes Datum, wann die Sterbefallmitteilung eingegangen ist.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="gelesen" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Ein Flag, ob die Sterbefallbenachrichtigung schon gelesen wurde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="erledigt" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Ein Flag, ob die Sterbefallbenachrichtigung schon erledigt wurde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="zugeordnete_Urkunde" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Liegt keine Registrierung vor, wird die Sterbefallmitteilung ohne Urkunden als Negativbenachrichtigung weitergereicht.
+Beim Versand der Sterbefallbenachrichtigung an die Verwahrstelle per EGVP, werden nur die Urkunden übergeben, die bei der jeweiligen Verwahrstelle verwahrt sind. Die Daten zu den Urkunden sind in dem Fall auch eingeschränkt. Sie beinhalten nur den Urkundentyp</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="urkunde" type="tns:Type.BNOTK.Urkunde.ZTR" />
+            <xs:element name="benachrichtigte_Verwahrstelle" minOccurs="0" type="tns:Type.BNOTK.Notar_Gericht_Ref">
+              <xs:annotation>
+                <xs:documentation>Referenz auf die Verwahrstelle, die zwecks Ablieferung der Urkunde im Sterbefall benachrichtigt wird. Die Verwahrstelle kann ein Notar (bzw. eine Amtstätigkeit) oder ein Gericht sein.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="datum_Benachrichtigung" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Die oben referenzierte Verwahrstelle wurde an dem Datum benachrichtigt, um die Urkunde abzuliefern. Datumsfeld nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="weitere_Angaben" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Weitere Angaben aus der Sterbefallmitteilung werden hier weitergegeben (Nachrichtentyp StA2ZTR.Sterbefall.065010). Eine Speicherung im ZTR erfolgt nicht. vgl. § 6 Abs. 2 ZTRV</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="familienstand" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Der Familienstand der verstorbenen Person.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="lebenspartner" minOccurs="0" type="tns:Type.BNOTK.Erblasser.ZTR">
+              <xs:annotation>
+                <xs:documentation>Falls vorhanden, werden hier Informationen über den Lebenspartner der verstorbenen Person bereit gestellt.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="kind" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Sterbefall_Person">
+              <xs:annotation>
+                <xs:documentation>Falls vorhanden, werden hier Informationen zu einem oder mehreren Kindern der verstorbenen Person abgebildet.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="auswahl_Auskunftgeber" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Falls vorhanden, werden hier Informationen zu einem oder mehreren Auskunftgeber abgebildet, welche das Nachlassgericht bei Fragen kontaktieren kann. Es können natürliche Personen sowie Behörden sein, wobei in den Datensätzen fast immer natürliche Personen angegeben werden. Siehe auch unter 'xpersonenstand:Auskunftsgeber' in dem XPersonenStand Standard.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="person" type="tns:Type.BNOTK.Sterbefall_Person">
+                    <xs:annotation>
+                      <xs:documentation>Eine natürliche Person als Auskunftgeber.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="behoerde">
+                    <xs:annotation>
+                      <xs:documentation>Fasst die Daten zu einer Behörde als Auskunftgeber zusammen.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="name" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Name der Behörde.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="funktion" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Funktion der Behörde.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="nachlass" minOccurs="0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="vermoegen_vorhanden" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="grundbesitz_vorhanden" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="nachlassvermoegen" minOccurs="0" type="xoev-lc:String.Latin" />
+                  <xs:element name="nachlasssicherung" minOccurs="0" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="bemerkungen" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Weitere Kommentare.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Sterbefall_Person">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp definiert die nötigen Grunddaten über eine im Kontext eines Sterbefalls beschriebene Person (z.B. das Kind oder der Auskunftgeber der verstorbenen Person aber nicht der Verstorbene selbst).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nachname" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Nachname der Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vornamen" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Vorname der Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Geburtsname der Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geschlecht" minOccurs="0" type="tns:Code.GDS.Geschlecht" />
+      <xs:element name="beziehung" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Beziehung zur verstorbenen Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" type="tns:Type.GDS.Anschrift">
+        <xs:annotation>
+          <xs:documentation>Die aktuelle (bzw. zuletzt bekannte) Anschrift der Person.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Suchoptionen">
+    <xs:annotation>
+      <xs:documentation>Optionale Parameter für freie Suchen.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="fuzzy_Suche" minOccurs="0" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Schaltet die ungenaue fuzzy Suche für alle String Parameter ein oder aus. Default ist 'false'.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maximale_Treffer" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Hier kann eine maximale Anzahl an Treffern festgelegt werden. 0 bedeutet unbegrenzt. Default ist 100.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Tod.ZTR">
+    <xs:annotation>
+      <xs:documentation>Angaben zum Tod eines Erblassers, die im ZTR erfasst werden.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="sterbedatum_Zeitraum_Anfang" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd). Es wird nur angegeben, wenn das Sterbedatum als Zeitraum definiert ist.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterbedatum" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd). Bei Zeitraum bedeutet dieses Datum das Ende des Zeitraums.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterbedatum_unbekannt" minOccurs="0" default="true" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Das Flag wird im seltenen Fall gesetzt, wenn das Sterbedatum in der Sterbefallmitteilung nicht enthalten war und dadurch als unbekannt gilt. Das Sterbedatum wird in diesem Fall auf den Pseudowert "0001-01-01" gesetzt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterbeort" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten">
+              <xs:annotation>
+                <xs:documentation>Zulässige Staaten sind in der Datei xj_0050_wl_staaten_x_x.xsd definiert.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Bei postalischen Anschriften kann der hier angegebene Ort von der politischen Gemeinde abweichen. In diesem Fall sollten die postalische und die Lieferadresse separat mitgeteilt werden. Bei ausländischen Adressen empfiehlt die Deutsche Post AG, den Ort möglichst in der Landessprache zu schreiben. Dies erscheint auch im vorliegenden Zusammenhang sinnvoll. Die Deutsche Post AG empfiehlt ferner, ausländische Ortsnamen in Großbuchstaben anzugeben. Hiervon sollte bei der Übermittlung von XJustiz-Daten möglichst Abstand genommen werden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ortsteil" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Zusatz, nicht für postalische Zwecke zu verwenden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="strasse" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="hausnummer" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Die Hausnummer ist ggf. einschliesslich Buchstaben oder dergleichen anzugeben.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="postfachnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+            <xs:element name="postleitzahl" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Bei ausländischen Adressen hier bitte keine Länderkennungskürzel eintragen. Wegen der Schreibweise ausländischer Orte vgl. die Anmerkung zum Element "Ort".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="anschriftenzusatz" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier ist Raum für Adressierungszusätze, z.B. Name des Wohnungsgebers.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sterbestandesamt_Behoerdennummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Wird für Standesämter in Deutschland verwendet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterbestandesamt_Name" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Wird vor allem für ausländische Standesämter verwendet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterberegisternummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Sterberegisternummer wird vom Standesamt im Sterbafall vergeben und folgt in der Regel dem Muster 'Nr/Jahr'. Innerhalb eines Standesamtes sollte die Sterberegisternummer immer eindeutig sein, sie wird allerdings gelegentlich vertippt, was die Eindeutigkeit verletzen kann.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sterberegisterart" minOccurs="0" type="tns:Code.BNOTK.Registerart_Personenstand">
+        <xs:annotation>
+          <xs:documentation>Ein Präfix für Personenstandsurkunden (z.B. S für Sterbeurkunden) wird von den Standesämtern im Sinne von §15 PStV an das ZTR übergeben. Das Präfix wird, falls für den Datensatz vorhanden, hier zurückgegeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="eintragungsdatum" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="tod_erklaert" minOccurs="0" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Urkunde.ZTR">
+    <xs:annotation>
+      <xs:documentation>Daten einer im ZTR registrierten oder zu registrierenden Urkunde. Der Datentyp wird in mehreren Services sowohl als Input als auch als Output verwendet. Welche optionalen Bereiche dabei aufgefüllt werden, wird in der Dokumentation der jeweiligen Datenfelder bzw. Services beschrieben.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="typ" type="tns:Code.BNOTK.Urkundentyp.ZTR">
+        <xs:annotation>
+          <xs:documentation>Diese Codeliste ist vorgesehen für das Element Urkundentyp.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="errichtungsdatum" type="xs:date">
+          <xs:annotation>
+            <xs:documentation>Errichtungsdatum der Urkunde nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:sequence>
+          <xs:element name="errichtungsdatum_unbekannt" default="true" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>Das Flag wird gesetzt, wenn das Errichtungsdatum der Urkunde nicht tagesgenau bekannt ist (z.B. Weihnachten 2012, Q1 2013, usw.). In dem Fall wird das Element 'Errichtungsdatum' auch weggelassen. Default ist true.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="bemerkung_zum_Errichtungsdatum" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Wenn das Errichtungsdatum der Urkunde nicht tagesgenau bekannt ist, kann eine Bemerkung dazu hinterlegt werden (z.B. Weihnachten 2012, Q1 2013, usw.).</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:choice>
+      <xs:element name="datum_Inverwahrnahme" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Das Datum der Inverwahrnahme beim Gericht nach ISO 8601 (yyyy-mm-dd). Wenn das Errichtungsdatum unbekannt ist, muss dieses Datum definiert werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="beurkundender_Notar" minOccurs="0" type="tns:Type.BNOTK.Notar_Ref">
+        <xs:annotation>
+          <xs:documentation>Angaben des Notars, der die Urkunde errichtet hat.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="melder">
+        <xs:annotation>
+          <xs:documentation>Angaben zum institutionellen Melder, der die Registrierung übermittelt hat.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="meldende_Stelle" type="tns:Type.BNOTK.Notar_Gericht_Ref">
+              <xs:annotation>
+                <xs:documentation>Referenz auf einen Notar (bzw. eine Amtstätigkeit) oder ein Gericht.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="bearbeiter" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Durchschleusung Bearbeiter der Registrierung an der meldenden Stelle. UserID aus ZTR-Login. Keine Auflösung auf Personendaten im ZTR.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="urkundenrollennummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Gefüllt, wenn vom Notar gemeldet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="verwahrstelle">
+        <xs:annotation>
+          <xs:documentation>Angabe, wo die Urkunde aktuell verwahrt wird und unter welcher Nummer sie dort gefunden werden kann.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="tns:Type.BNOTK.Notar_Gericht_Ref">
+              <xs:sequence>
+                <xs:element name="ztr_Verwahrnummer" minOccurs="0" type="xoev-lc:String.Latin">
+                  <xs:annotation>
+                    <xs:documentation>Eindeutige Id, die vom ZTR für die Urkunde vergeben wurde. Leer bei Neuregistrierung.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="aktenzeichen_Verfahren" minOccurs="0" type="xoev-lc:String.Latin">
+                  <xs:annotation>
+                    <xs:documentation>Nach Ablieferung der Urkunde enthält dieses Feld das Aktenzeichen des Nachlassvorgans beim Nachlassgericht. Bei der Registrierung des Urkundentyps "Gerichtlicher Vergleich" wird das Feld schon bei der Registrierung mit übernommen.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="eigenes_Verwahrkennzeichen" minOccurs="0" type="xoev-lc:String.Latin">
+                  <xs:annotation>
+                    <xs:documentation>Verwahrungsbuchnummer bei dem Verwahrgericht. Bei einer gerichtlichen Registrierung wird das Feld mit Ausnahme des Urkundentyps "Gerichtlicher Verglich" mit übernommen.</xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="status" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Der Status einer Urkunde. Leer bei Neuregistrierung. Bekannte Werte sind in WL_Urkunde_Status_ZTR_BW definiert.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="registrierung" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Alle zur Urkunde gehörenden Registrierungen. Mehrere bei gemeinschaftlichen Testamenten oder Erbverträgen.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="registrierungsnummer" minOccurs="0" type="xs:integer">
+              <xs:annotation>
+                <xs:documentation>Eindeutige Id der Registrierung im ZTR. Nicht übergeben bei Neuregistrierungen.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="status_Registrierung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Der Status einer Registrierung. Leer bei Neuregistrierung. Bekannte Werte sind in WL_Registrierung_Status_ZTR_BW definiert.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="datum_Registrierung" minOccurs="0" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd). Nicht übergeben bei Neuregistrierungen.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="erblasser" type="tns:Type.BNOTK.Erblasser.ZTR">
+              <xs:annotation>
+                <xs:documentation>Beschreibung eines Erblassers innerhalb des ZTR. Anpassung von Type.GDS.Natuerliche_Person unter Verwendung von Type.BNOTK.Geburt.ZTR und Type.BNOTK.Tod.ZTR.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="vorgang" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Bearbeitungshistorie einer Registrierung abgebildet. Bei Neuregistrierungen wird kein Vorgang übergeben, sondern der erste Vorgang von Typ Neuregistrierung entsteht implizit durch die Registrierung selbst.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="vorgangsart" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Der Typ des Vorgangs. Bekannte Werte sind in WL_Vorgangsart_ZTR_BW definiert.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="vorgangsdatum" type="xs:date">
+              <xs:annotation>
+                <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="dokument" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Dokumente, die im Kontext des Vorgangs zur Urkunde erzeugt wurden: Anlagen, Anschreiben, usw. Es ist leer bei Neuregistrierung. Die Dokumente entstehen erst während des Vorgangs.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="typ" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Der Typ des Dokumentes. Bekannte Werte sind in WL_Dokumententyp_ZTR_BW definiert.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="id" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Eine eindeutige Id des Dokumentes.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="url" type="xs:anyURI">
+                    <xs:annotation>
+                      <xs:documentation>Ein permanenter Link zum Dokument.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="registrierungsnummer" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Das Dokument bezieht sich auf diese Registrierung (es können bei gemeinschaftlichen Testamenten und Erbverträgen mehrere Registrierungen zu einer Urkunde geben).</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="bemerkung" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bemerkung zu einer Urkunde.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Verstorbene_Person.ZTR">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.BNOTK.Erblasser_Daten.ZTR">
+        <xs:sequence>
+          <xs:element name="erblasser_Ref" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Die IDs der dazugehörigen Erblasser unter den Registrierungen werden hier angegeben.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.BNOTK.Vorlaeufige_Registrierung">
+    <xs:annotation>
+      <xs:documentation>Dieser Datentyp fasst die Informationen über eine vorläufige Registrierung zusammen, die auf der ZTR Oberfläche manuell finalisiert werden muss.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="vorlaeufige_ID" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Die eindeutige Id einer vorläufigen Registrierung.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ztr_URL" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Unter dieser URL kann die vorläufig angelegte Registrierung händisch bearbeitet und finalisiert werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anmerkungen" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier können Hinweise zu den erforderlichen weiteren Bearbeitungsschritten auf der ZTR Benutzeroberfläche enthalten sein.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.bnotk.fehlerfall.1100001">
+    <xs:annotation>
+      <xs:documentation>Nachricht der BNotK, die bei Webserviceaufrufen im fachlichen Fehlerfall zurückgegeben wird. Dies ist nur dann möglich, wenn der Input Datentyp beim Serviceaufruf schemakonform ist,  korrekt eingelesen werden kann und kein tieferliegendes Problem im Kommunikationskanal vorhanden ist. In diesen grundlegenden Fehlerfällen wird eine SOAP-Fault Nachricht zurückgegeben, in der der Datentyp Type.BNOTK.Fehlerfall ohne diese Nachricht direkt eingebettet ist.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten" type="tns:Type.BNOTK.Fehlerfall" />
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.liste.grundbuchaemter_zustaendigkeiten.output.1100002">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'ListeGrundbuchaemterZustaendigkeiten': Liste aller Grundbuchämter und deren Zuständigkeiten aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="grundbuchamt" maxOccurs="unbounded" type="tns:Type.BNOTK.Grundbuchamt">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Grundbuchamts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="grundbuchbezirk" maxOccurs="unbounded" type="tns:Type.BNOTK.Grundbuchbezirk">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Grundbuchbezirks mit Referenz auf das zuständige Grundbuchamt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="liste_grundbuchaemter_gba_xjustizid_key">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchamt" />
+      <xs:field xpath="tns:gericht_ID" />
+    </xs:key>
+    <xs:key name="liste_grundbuchaemter_name">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchamt" />
+      <xs:field xpath="tns:name" />
+    </xs:key>
+    <xs:keyref name="liste_grundbuchaemter_grundbuchbezirk_gba_name_keyref" refer="tns:liste_grundbuchaemter_name">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchbezirk" />
+      <xs:field xpath="tns:gba_Name_Ref" />
+    </xs:keyref>
+    <xs:keyref name="liste_grundbuchaemter_grundbuchbezirk_gba_xjustizid_keyref" refer="tns:liste_grundbuchaemter_gba_xjustizid_key">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchbezirk" />
+      <xs:field xpath="tns:gba_Gericht_ID_Ref" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.liste.grundbuchaemter.output.1100003">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'ListeGrundbuchaemter': Liste aller Grundbuchämter aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="grundbuchamt" maxOccurs="unbounded" type="tns:Type.BNOTK.Grundbuchamt">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Grundbuchamts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.liste.nachlassgerichte.output.1100004">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'ListeNachlassgerichte': Liste aller Nachlassgerichte aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nachlassgericht" maxOccurs="unbounded" type="tns:Type.BNOTK.Nachlassgericht">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Nachlassgerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.liste.registergerichte.output.1100005">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'ListeRegistergerichte': Liste aller Registergerichte aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="registergericht" maxOccurs="unbounded" type="tns:Type.BNOTK.Registergericht">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Registergerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendige_grundbuchaemter.input.1100006">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheZustaendigeGrundbuchaemter': Suchparameter nach zuständigen Grundbuchämtern im Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:annotation>
+                <xs:documentation>Das Fachdaten Element beinhaltet alle Suchparameter für die Suche nach einem Grundbuchamt oder mehreren Grundbuchämtern. Die angegebenen Suchparameter werden mit logischem UND verknüpft.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="grundbuchamt_Name" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Findet ein Grundbuchamt mit dem eindeutigen Namen des Gerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="grundbuchamt_Gericht_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Findet ein Grundbuchamt mit der eindeutigen Id des Gerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Findet Grundbuchämter mit Sitz im definierten Ort.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="grundbuchbezirk" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Findet das für den Grundbuchbezirk zuständige Grundbuchamt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="gemarkung" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Findet das für die Gemarkung zuständige Grundbuchamt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendige_grundbuchaemter.output.1100007">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheZustaendigeGrundbuchaemter': Liste der gefundenen zuständigen Grundbuchaemter mit Zuständigkeitsdaten aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="grundbuchamt" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Grundbuchamt">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Grundbuchamts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="grundbuchbezirk" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Grundbuchbezirk">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Grundbuchbezirks mit Referenz auf das zuständige Grundbuchamt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="suche_zustaendige_grundbuchaemter_gba_xjustizid_key">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchamt" />
+      <xs:field xpath="tns:gericht_ID" />
+    </xs:key>
+    <xs:key name="suche_zustaendige_grundbuchaemter_name">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchamt" />
+      <xs:field xpath="tns:name" />
+    </xs:key>
+    <xs:keyref name="suche_zustaendige_grundbuchaemter_grundbuchbezirk_gba_name_keyref" refer="tns:suche_zustaendige_grundbuchaemter_name">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchbezirk" />
+      <xs:field xpath="tns:gba_Name_Ref" />
+    </xs:keyref>
+    <xs:keyref name="suche_zustaendige_grundbuchaemter_grundbuchbezirk_gba_xjustizid_keyref" refer="tns:suche_zustaendige_grundbuchaemter_gba_xjustizid_key">
+      <xs:selector xpath="tns:fachdaten/tns:grundbuchbezirk" />
+      <xs:field xpath="tns:gba_Gericht_ID_Ref" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendiges_nachlassgericht.input.1100008">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheZustaendigesNachlassgericht': Suchparameter nach dem zuständigen Nachlassgericht im Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ort" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Nachlassgericht für eine Adresse mit diesem Ort.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="postleitzahl" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Nachlassgericht für eine Adresse mit dieser Postleitzahl.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="strasse" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Nachlassgericht für eine Adresse mit dieser Straße.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="hausnummer" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Nachlassgericht für eine Adresse mit dieser Hausnummer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendiges_nachlassgericht.output.1100009">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheZustaendigesNachlassgericht': das gefundene zuständige Nachlassgericht aus dem Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nachlassgericht" minOccurs="0" type="tns:Type.BNOTK.Nachlassgericht">
+                    <xs:annotation>
+                      <xs:documentation>Daten des zuständigen Nachlassgerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendiges_registergericht.input.1100010">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheZustaendigesRegistergericht': Suchparameter nach dem zuständigen Registergericht im Gerichtsverzeichnis (GVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ort" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Registergericht für eine Adresse mit diesem Ort.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="postleitzahl" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Registergericht für eine Adresse mit dieser Postleitzahl.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="strasse" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Registergericht für eine Adresse mit dieser Straße.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="hausnummer" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht das zuständige Registergericht für eine Adresse mit dieser Adresse.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.gvz.suche.zustaendiges_registergericht.output.1100011">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheZustaendigesRegistergericht': das gefundene zuständige Registergericht aus dem Gerichtsverzeichnis (GVZ) für eine bestimmte Adresse.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="registergericht" minOccurs="0" type="tns:Type.BNOTK.Registergericht">
+                    <xs:annotation>
+                      <xs:documentation>Daten des zuständigen Registergerichts.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.nvz.suche.amtstaetigkeiten.input.1100012">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheAmtstaetigkeiten': Suchparameter nach Amtstätigkeiten im Notarverzeichnis (NVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="id_Suche">
+                      <xs:annotation>
+                        <xs:documentation>Die Id-Suche sucht immer nach eindeutigen Eigenschaften und liefert keine oder maximal eine Amtstätigkeit.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="amtstaetigkeit" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Eindeutige ID der Amtstaetigkeit im Notarverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="notar_ID" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Eindeutige ID des Notars im Notarverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="benutzername" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Eindeutiger Benutzername zur Authentifizierung über S.A.F.E.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="freie_Suche">
+                      <xs:annotation>
+                        <xs:documentation>Die freie Suche kann je nach Suchparameter keine, eine oder mehrere Amtstätigkeiten zurückgeben. Die angegebenen Suchparameter werden mit logischem UND verknüpft.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vorname" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Der Vorname des Notars im Notarverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="nachname" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Der Nachname des Notars im Notarverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Der Ort des Amtssitzes des Notars.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="plz" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Die Postleitzahl des Amtssitzes des Notars.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="kammerbezirk" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Der Kammerbezirk zu dem der Notar mit seiner aktuellen Amtstätigkeit zugehörig ist.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:choice minOccurs="0">
+                            <xs:element name="notarsuche">
+                              <xs:annotation>
+                                <xs:documentation>Weitere Suchparameter mit Eigenschaften des Notars.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="entwurfssprache" minOccurs="0" type="xoev-lc:String.Latin">
+                                    <xs:annotation>
+                                      <xs:documentation>Sprachcodes gemäß ISO 639-1 für die Sprachen, auf denen ein Notar Dokumente und Verträge für die Beurkundung selber entwerfen kann.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element name="beurkundungssprache" minOccurs="0" type="xoev-lc:String.Latin">
+                                    <xs:annotation>
+                                      <xs:documentation>Sprachcodes gemäß ISO 639-1 für die Sprachen, in denen der Notar beurkunden kann.</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="urkundensuche">
+                              <xs:annotation>
+                                <xs:documentation>Weitere Suchparameter mit Eigenschaften einer vom Notar erstellten Urkunde.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="beurkundungsjahr" type="tns:Type.GDS.Datumsangabe">
+                                    <xs:annotation>
+                                      <xs:documentation>Das Beurkundungsjahr einer Urkunde (YYYY).</xs:documentation>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:choice>
+                          <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                            <xs:annotation>
+                              <xs:documentation>Unterstützte Suchparameter: Fuzzy_Suche, Maximale_Treffer</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.nvz.suche.amtstaetigkeiten.output.1100013">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheAmtstaetigkeiten': Liste der gefundenen Amtstätigkeiten aus dem Notarverzeichnis (NVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="amtstaetigkeit" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Amtstaetigkeit">
+                    <xs:annotation>
+                      <xs:documentation>Alle Informationen über eine Amtstätigkeit.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anzahl_Treffer" minOccurs="0" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Die Anzahl der entsprechend den Suchkriterien erzielten Treffer. Die Anzahl kann die der zurückgelieferten Amtstätigkeiten übersteigen, wenn die Treffermenge in der Anfrage begrenzt wurde. Das Element ist aus Kompatibilitätsgründen optional. Mehr Amtstätigkeiten gefunden werden, wird es allerdings immer gesetzt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="suche_amtstaetigkeiten_rn_key">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="suche_amtstaetigkeiten_amtstaetigkeit_keyref" refer="tns:suche_amtstaetigkeiten_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:amtstaetigkeit/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_amtstaetigkeiten_verwahrung_gericht_keyref" refer="tns:suche_amtstaetigkeiten_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:amtstaetigkeit/tns:verwahrung_durch/tns:urkundenverwahrung/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_amtstaetigkeiten_verwahrung_notar_keyref" refer="tns:suche_amtstaetigkeiten_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:amtstaetigkeit/tns:verwahrung_durch/tns:urkundenverwahrung/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.svz.liste.standesaemter.output.1100014">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'ListeStandesaemter': Liste aller Standesämter aus dem Standesamtsverzeichnis (SVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="standesamt" maxOccurs="unbounded" type="tns:Type.BNOTK.Standesamt">
+                    <xs:annotation>
+                      <xs:documentation>Daten eines Standesamtes.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.svz.suche.zustaendige_standesaemter.input.1100015">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheZustaendigeStandesaemter': Suchparameter nach zuständigen Standesämtern im Standesamtsverzeichnis (SVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach der eindeutigen Id eines Standesamtes im Standesamtsverzeichnis. Die Suche liefert kein oder ein Ergebnis.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="behoerdennummer" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach der eindeutigen Behördennummer eines Standesamtes. Die Suche liefert kein oder ein Ergebnis.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ort" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach den zuständigen Standesämter für den angegebenen Ort. Mit Hilfe des wildcard Charakters "%" ist es möglich, unscharf nach dem Ortsnamen zu suchen (z.B. findet "Berlin%" alle Ortsnamen, welche mit Berlin beginnen).</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach den zuständigen Standesämter für den angegebenen Ort Id, welche den Ort eindeutig identifiziert.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum" minOccurs="0" type="xs:date">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach dem zuständigen Standesamt an dem angegebenen Datum. Wenn der Ort definiert wird, ist das default Datum das aktuelle. Für die Suche nach historischen Standesämter muss das Datum explizit angegeben werden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.svz.suche.zustaendige_standesaemter.output.1100016">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheZustaendigeStandesaemter': Liste der gefundenen zuständigen Standesämter aus dem Standesamtsverzeichnis (SVZ).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ort_Standesaemter" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Beschreibt einen Ort und die dazu gehörigen zuständigen Standesämter. Die aktuelle Entsprechung historischer Orte und Standesämter werden auch zurückgegeben, um dadurch die Unterscheidung gleichnamiger historischer Orte zu ermöglichen.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="tns:Type.BNOTK.Ort">
+                          <xs:sequence>
+                            <xs:element name="aktueller_Ort" minOccurs="0" type="tns:Type.BNOTK.Ort">
+                              <xs:annotation>
+                                <xs:documentation>Für historische Orte wird hier der dem historischen Ort entsprechenden aktuelle Ort angegeben.</xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element name="standesamt" maxOccurs="unbounded">
+                              <xs:annotation>
+                                <xs:documentation>Standesamt, das für die übergebenen Daten als zuständig für den Ort ermittelt wurde.</xs:documentation>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:complexContent>
+                                  <xs:extension base="tns:Type.BNOTK.Standesamt">
+                                    <xs:sequence>
+                                      <xs:element name="aktuelles_Standesamt" minOccurs="0" type="tns:Type.BNOTK.Standesamt">
+                                        <xs:annotation>
+                                          <xs:documentation>Für historische Standesämter wird hier das dem historischen Standesamt entsprechenden aktuelle Standesamt angegeben.</xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:extension>
+                                </xs:complexContent>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.neue_erledigung.input.1100017">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'NeueErledigung': Daten über die zu erledigende Aufgabe.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:annotation>
+                <xs:documentation>Daten zu den jeweiligen Aufgabearten.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="empfangsbestaetigung" type="tns:Type.BNOTK.Empfangsbestaetigung.ZTR" />
+                  <xs:element name="bearbeitung_Mitteilung">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="mitteilung_ID" type="xoev-lc:String.Latin" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="bearbeitung_Sterbefall">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="sterbefall_ID" type="xoev-lc:String.Latin" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.neue_erledigung.output.1100018">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'NeueErledigung': Antwort auf eine Anfrage zur Erledigung einer offenen Aufgabe im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="bestaetigt" type="xs:boolean" />
+                  <xs:element name="dokument" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="id" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Eine eindeutige Id des Dokumentes.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="url" type="xs:anyURI">
+                          <xs:annotation>
+                            <xs:documentation>Ein permanenter Link zum Dokument</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.neue_registrierung.input.1100019">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'NeueRegistrierung': Daten zur Neuregistrierung einer Urkunde im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="urkunde" type="tns:Type.BNOTK.Urkunde.ZTR">
+                    <xs:annotation>
+                      <xs:documentation>Diese Urkunde beinhaltet alle für die Registrierung notwendige Informationen. Optionale Felder wie Status, Vorgang und Registrierungsnummer werden nicht ausgewertet.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.neue_registrierung.output.1100020">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'NeueRegistrierung': Antwort auf eine Neuregistrierung einer Urkunde im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="urkunde" type="tns:Type.BNOTK.Urkunde.ZTR">
+                    <xs:annotation>
+                      <xs:documentation>Daten einer im ZTR registrierten Urkunde mit gefüllten optionalen Feldern für Status, Vorgang, Dokumente und Registrierungsnummer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="neue_registrierung_rn_key">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="neue_registrierung_finaleRegistrierung_urkunde_beurkundenderNotar_keyref" refer="tns:neue_registrierung_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:beurkundender_Notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="neue_registrierung_finaleRegistrierung_urkunde_melder_gericht_keyref" refer="tns:neue_registrierung_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="neue_registrierung_finaleRegistrierung_urkunde_melder_notar_keyref" refer="tns:neue_registrierung_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="neue_registrierung_finaleRegistrierung_urkunde_verwahrstelle_gericht_keyref" refer="tns:neue_registrierung_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:verwahrstelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="neue_registrierung_finaleRegistrierung_urkunde_verwahrstelle_notar_keyref" refer="tns:neue_registrierung_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:verwahrstelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.dokumente.input.1100021">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheDokumente': Suchparameter nach Dokumenten zum Herunterladen.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dokument_ID" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Die eindeutigen IDs der Dokumente zum Herunterladen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.dokumente.output.1100022">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheDokumente': Metainformationen und binäre Daten der angefragten Dokumente.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="dokument" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Daten zu einem abgefragten Dokument.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="id" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Eindeutige Id des Dokumentes.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="daten" type="xs:base64Binary">
+                          <xs:annotation>
+                            <xs:documentation>Base64 enkodierte binäre Daten des Dokumentes.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateiname" minOccurs="0" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Dateiname im ZTR.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.empfangene_urkunden.input.1100023">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheEmpfangeneUrkunden': Suchparameter nach eingegangenen Urkunden, deren Empfang bestätigt werden muss oder schon bestätigt wurde.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="erledigt" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Sollen es schon empfangsbestätigte oder noch nicht empfangsbestätigte Urkunden gefunden werden? Wenn das Element nicht gesetzt wird, werden beide zurückgegeben.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.empfangene_urkunden.output.1100024">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheEmpfangeneUrkunden': Liste der gefundenen eingegangenen Urkunden aus dem ZTR, deren Empfang bestätigt werden muss oder schon bestätigt wurde.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="empfangeneurkunde" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Empfangene_Urkunde.ZTR">
+                    <xs:annotation>
+                      <xs:documentation>Daten über eine empfangene Urkunde.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="suche_empfangeneUrkunde_urkunde_beurkundenderNotar_keyref" refer="tns:suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:empfangeneUrkunde/tns:urkunde/tns:beurkundender_Notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_empfangeneUrkunde_urkunde_melder_gericht_keyref" refer="tns:suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:empfangeneUrkunde/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_empfangeneUrkunde_urkunde_melder_notar_keyref" refer="tns:suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:empfangeneUrkunde/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_empfangeneUrkunde_urkunde_verwahrstelle_gericht_keyref" refer="tns:suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:empfangeneUrkunde/tns:urkunde/tns:verwahrstelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_empfangeneUrkunde_urkunde_verwahrstelle_notar_keyref" refer="tns:suche_empfangeneUrkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:empfangeneUrkunde/tns:urkunde/tns:verwahrstelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.mitteilungen.input.1100025">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheMitteilungen': Suchparameter nach Mitteilungen aus dem ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="gelesen" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Sollen es nur gelesene oder nur ungelesene Mitteilungen gefunden werden? Wenn das Element nicht gesetzt wird, werden beide zurückgegeben.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="erledigt" minOccurs="0" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Sollen es nur erledigte oder nur nicht erledigte Mitteilungen gefunden werden? Wenn das Element nicht gesetzt wird, werden beide zurückgegeben.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                    <xs:annotation>
+                      <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.mitteilungen.output.1100026">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheMitteilungen': Suchergebnis mit allen gefundenen Mitteilungen aus dem ZTR. Später werden Mitteilungen, die als Aufgabe eredigt werden können, über den Dienst "SucheAufgaben" zurückgegeben.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="mitteilung" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Mitteilung.ZTR" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.registrierung_status.input.1100027">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheRegistrierungStatus': Suchparameter nach Registrierungsstatus im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="vorlaeufige_ID" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Sucht nach der eindeutigen Id einer vorläufigen Registrierung, welche als Ergebnis einer neuen Registrierung zurückgegeben wurde, da die Registrierung nur vorläufig und nicht final erfolgen konnte. Als Ergebnis werden entweder die Daten einer mittlerweile final registrierten Urkunde mit allen Registrierungen zurückgegeben oder die Information, dass die Registrierung immer noch vorläufig ist bzw. wie es manuell finalisiert werden kann.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.registrierung_status.output.1100028">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheRegistrierungStatus': Status der gesuchten vorläufigen Registrierung im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="vorlaeufige_Registrierung" type="tns:Type.BNOTK.Vorlaeufige_Registrierung">
+                    <xs:annotation>
+                      <xs:documentation>Dieses Ergebnis wird verwendet, wenn die gesuchte vorläufige Registrierung noch nicht manuell finalisiert wurde.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="registrierungsnummer" maxOccurs="unbounded" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Die eindeutigen Registrierungsnummern zu einer mittlerweile finalisierten vorläufigen Registrierung.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.sterbefaelle.input.1100029">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheSterbefaelle': Suchparameter nach Sterbefaelle aus dem ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="id_Suche">
+                    <xs:annotation>
+                      <xs:documentation>Die Id-Suche sucht nach eindeutigen Eigenschaften und liefert keinen oder maximal einen Sterbefall zurück.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="sterbefall_ID" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Sucht nach der eindeutigen Id des Sterbefalls.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="freie_Suche">
+                    <xs:annotation>
+                      <xs:documentation>Die freie Suche kann je nach Suchparameter von 0 bis n Sterbefälle zurückgeben. Die angegebenen Suchparameter werden mit logischem UND verknüpft.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="gelesen" minOccurs="0" type="xs:boolean">
+                          <xs:annotation>
+                            <xs:documentation>Sollen es nur gelesene oder nur ungelesene Sterbefallbenachrichtigungen gefunden werden? Wenn das Element nicht gesetzt wird, werden beide zurückgegeben.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="erledigt" minOccurs="0" type="xs:boolean">
+                          <xs:annotation>
+                            <xs:documentation>Sollen es nur erledigte oder nur nicht erledigte Sterbefallbenachrichtigungen gefunden werden? Wenn das Element nicht gesetzt wird, werden beide zurückgegeben.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="keine_Negativbenachrichtigung" minOccurs="0" type="xs:boolean">
+                          <xs:annotation>
+                            <xs:documentation>Nur Sterbefälle, für die mindestens eine Urkunde aus dem ZTR zugeordnet werden konnte.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="eingangsdatum" minOccurs="0" type="xs:date">
+                          <xs:annotation>
+                            <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd). Bei Zeitraum bedeutet dieses Datum das Ende des Zeitraums.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="eingangsdatum_Anfang" minOccurs="0" type="xs:date">
+                          <xs:annotation>
+                            <xs:documentation>Datumsfeld nach ISO 8601 (yyyy-mm-dd).</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                          <xs:annotation>
+                            <xs:documentation>Unterstützte Suchparameter: Maximale_Treffer</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.sterbefaelle.output.1100030">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheSterbefaelle': die gefundenen Sterbefaelle aus dem ZTR.
+Der Datentyp wird (ggf. in einer anderen XJustiz Version) auch als Grundlage für die Übertragung der Sterbefallbenachrichtigung als strukturierter XML Datensatz per EGVP verwendet. Die Nachlassgerichte erhalten dabei einen vollständigen Datensatz, während Verwahrgerichten nur eine abgespeckte Version über die von ihnen abzuliefernden Urkunden bereit gestellt wird. Notarielle Verwahrstellen erhalten beim Sterbefall nur das PDF Dokument aber keinen strukturierten XML Datensatz.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="sterbefall" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Sterbefall.ZTR">
+                    <xs:annotation>
+                      <xs:documentation>Sterbefalldaten mit der verstorbenen Person und den im ZTR registrierten abzuliefernden Urkunden.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="suche_sterbefall_nachlassgericht_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:nachlassgericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_benachrichtigteVerwahrstelle_gericht_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:benachrichtigte_Verwahrstelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_benachrichtigteVerwahrstelle_notar_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:benachrichtigte_Verwahrstelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_urkunde_beurkundenderNotar_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:urkunde/tns:beurkundender_Notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_urkunde_melder_gericht_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_urkunde_melder_notar_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_urkunde_verwahrstelle_gericht_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:urkunde/tns:verwahrstelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_sterbefall_zugeordneteUrkunde_urkunde_verwahrstelle_notar_keyref" refer="tns:suche_sterbefall_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:sterbefall/tns:zugeordnete_Urkunde/tns:urkunde/tns:verwahrstelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.urkunden.input.1100031">
+    <xs:annotation>
+      <xs:documentation>Input vom Service 'SucheUrkunden': Suchparameter nach Urkunds- und Registrierungsdaten im ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Input">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="id_Suche">
+                      <xs:annotation>
+                        <xs:documentation>Die Id-Suche sucht nach eindeutigen Eigenschaften und liefert keine oder maximal eine Urkunde zurück.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:choice>
+                          <xs:element name="vorlaeufige_ID" type="xs:integer">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach der eindeutigen Id einer vorläufigen Registrierung, welche als Ergebnis einer neuen Registrierung zurückgegeben wurde, da die Registrierung nur vorläufig und nicht final erfolgen konnte. Als Ergebnis wird entweder eine mittlerweile final registrierte Urkunde mit allen Registrierungen zurückgegeben oder die Information, dass die Registrierung immer noch vorläufig ist bzw. wie es manuell finalisiert werden kann.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="registrierungsnummer" type="xs:integer">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach der eindeutigen Registrierungsnummer, welche vom ZTR bei der finalen Registrierung der Urkunde vergeben wird.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ztr_Verwahrnummer" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach der eindeutigen Verwahrnummer, welche vom ZTR bei der Registrierung einer Urkunde generiert wird.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="freie_Suche">
+                      <xs:annotation>
+                        <xs:documentation>Die freie Suche kann je nach Suchparameter von 0 bis n Urkunden zurückgeben. Die angegebenen Suchparameter werden mit logischem UND verknüpft.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vorname" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Vornamen des Erblassers.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="familienname" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Nachnamen des Erblassers.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="geburtsort" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Geburtsort des Erblassers.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="geburtsdatum" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Geburtsdatum des Erblassers. Ein vollständiges Datum nach ISO 8601 (yyyy-mm-dd) ist erforderlich.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="errichtungsdatum" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Errichtungsdatum der Urkunde. Ein vollständiges Datum nach ISO 8601 (yyyy-mm-dd) ist erforderlich.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="registrierungsdatum" minOccurs="0" type="tns:Type.GDS.Datumsangabe">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach dem Registrierungsdatum der Urkunde im ZTR. Ein vollständiges Datum nach ISO 8601 (yyyy-mm-dd) ist erforderlich.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="urkundentyp" minOccurs="0" type="tns:Code.BNOTK.Urkundentyp.ZTR">
+                            <xs:annotation>
+                              <xs:documentation>Der Typ der Urkunde mit möglichen Werten aus der Codeliste WL_Urkundentyp_ZTR.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="urkundenrollennummer" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Sucht nach der Rollennummer der Urkunde, welche vom Notar als Melder der Urkunde vergeben worden ist.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="status" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Der Status einer Urkunde. Bekannte Werte sind in WL_Urkunde_Status_ZTR_BW definiert.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="suchoptionen" minOccurs="0" type="tns:Type.BNOTK.Suchoptionen">
+                            <xs:annotation>
+                              <xs:documentation>Unterstützte Suchparameter: Fuzzy_Suche, Maximale_Treffer</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.bnotk.ztr.suche.urkunden.output.1100032">
+    <xs:annotation>
+      <xs:documentation>Output vom Service 'SucheUrkunden': Liste der gefundenen Urkunden aus dem ZTR.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tns:Type.BNOTK.Kopf_Und_Grunddaten.Output">
+          <xs:sequence>
+            <xs:element name="fachdaten">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="vorlaeufige_Registrierung" type="tns:Type.BNOTK.Vorlaeufige_Registrierung">
+                    <xs:annotation>
+                      <xs:documentation>Dieses Ergebnis wird verwendet, wenn die gesuchte vorläufige Registrierung immer noch nicht manuell finalisiert wurde.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="urkunde" minOccurs="0" maxOccurs="unbounded" type="tns:Type.BNOTK.Urkunde.ZTR">
+                    <xs:annotation>
+                      <xs:documentation>Alle Daten, die über eine final registrierte Urkunde zur Verfügung stehen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="suche_urkunden_regNr_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:registrierung" />
+      <xs:field xpath="tns:registrierungsnummer" />
+    </xs:key>
+    <xs:key name="suche_urkunden_rn_key">
+      <xs:selector xpath="tns:grunddaten/tns:verfahrensdaten/tns:beteiligung/tns:rolle" />
+      <xs:field xpath="tns:rollennummer" />
+    </xs:key>
+    <xs:keyref name="suche_urkunden_beurkundenderNotar_keyref" refer="tns:suche_urkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:beurkundender_Notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_urkunden_melder_gericht_keyref" refer="tns:suche_urkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_urkunden_melder_notar_keyref" refer="tns:suche_urkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:melder/tns:meldende_Stelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_urkunden_verwahrstelle_gericht_keyref" refer="tns:suche_urkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:verwahrstelle/tns:gericht/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_urkunden_verwahrstelle_notar_keyref" refer="tns:suche_urkunden_rn_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:verwahrstelle/tns:notar/tns:rollennummer" />
+      <xs:field xpath="tns:ref.rollennummer" />
+    </xs:keyref>
+    <xs:keyref name="suche_urkunden_vorgang_dokument_regNr_keyref" refer="tns:suche_urkunden_regNr_key">
+      <xs:selector xpath="tns:fachdaten/tns:urkunde/tns:vorgang/tns:dokument" />
+      <xs:field xpath="tns:registrierungsnummer" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
+

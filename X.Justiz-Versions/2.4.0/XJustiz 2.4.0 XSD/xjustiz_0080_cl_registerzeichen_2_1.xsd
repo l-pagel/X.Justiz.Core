@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.GDS.Registerzeichen">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>GDS.Registerzeichen</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Registerzeichen des Aktenzeichens.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="A">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erstinstanzliche Klagen und Wiederaufnahmeverfahren in Verwaltungsstreitsachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ABR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aktenkontrolle für Haftprüfungsverfahren (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AktE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge auf gerichtliche Entscheidung nach dem AktG, dem EGAktG und verwandten Gesetzen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AnwSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anwaltsgerichtliche Verfahren (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AnwZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zulassungssachen betreffend Rechtsanwälte beim BGH, Sofortige Beschwerden gegen Entscheidungen eines Anwaltsgerichtshofes und Anfechtung von Wahlen und Beschlüssen der Rechtsanwaltskammer beim BGH und der Bundesrechtsanwaltskammer (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeines Register (GenBAnw., AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ARP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeines Register für politische Sachen (GenBAnw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ARs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gerichtsstandbestimmungen in Strafsachen;  Auslieferungssachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ARV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorlagen nach §§ 80, 86 BetrVG (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ARZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Register, Akteneinsicht und Gerichtsstandsbestimmungen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ausl">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslieferungssachen, Durchlieferungssachen (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Anträge außerhalb eines schwebenden Verfahrens, soweit eine Zuständigkeit des BVerwG überhaupt denkbar ist (Allgemeine Verfahren) (BVerwG) AZA</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AZA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozesskostenhilfeanträge außerhalb anhängiger Verfahren (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AZB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsbeschwerden (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AZR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="B">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mahnsachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ba">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arbeitsgerichtliche Mahnsachen (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BAusl">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslieferungssachen (GenBAnw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BewÜberwR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bewährungs- und Führungsaufsichtsüberwachung (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BGns">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gnadensachen (GenBAnw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BGs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Teilregister für Strafsachen; einzelne Anordnungen des Ermittlungsrichters (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BJs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ermittlungsverfahren in erstinstanzlichen Strafsachen (GenBAnw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BLw">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden in Landwirtschaftssachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BN">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nichtzulassungsbeschwerden in Normenkontrollsachen nach § 47 Abs. 7 VwGO (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BReg.-H">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozeßkostenhilferegister (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BReg.-St.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Strafsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BReg.-Z">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Zivilsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Bs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Privatklage- und Bußgeldsachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschlussverfahren (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BSch">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zusatz bei Binnenschifffahrtssachen (AG, OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BSR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Binnenschiffsregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschlussverfahren (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwirkung von Grundrechten, Art. 18 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Feststellung der Verfassungswidrigkeit von Parteien, Art. 21 Abs. 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvC">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden im Wahlprüfungsverfahren,  Art. 41 Abs. 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvD">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anklagen gegen den Bundespräsidenten, Art. 61 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfassungsstreitigkeiten zwischen Bundesorganen, Art. 93 Abs. 1 Nr. 1 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvF">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Normenkontrolle auf Antrag von Verfassungsorganen, Art. 93 Abs. 1 Nr. 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfassungsstreitigkeiten zwischen Bund und Ländern, Art. 93 Abs. 1 Nr. 3; Art. 84 Abs. 4 Satz 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Öffentlich-rechtliche Streitigkeiten nach  Art. 93 Abs. 1 Nr. 4 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvJ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Richteranklagen, Art. 98 Abs. 2 und 5 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landesverfassungsstreitigkeiten kraft landesrechtlicher Zuweisung, Art. 99 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Normenkontrolle auf Vorlage der Gerichte, Art. 100 Abs. 1 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvM">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Völkerrechtsregel als Teil des Bundesrechts, Art. 100 Abs. 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvN">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auslegung des Grundgesetzes auf Vorlage eines Landesverfassungsgerichts, Art. 100 Art. 3 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvO">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Meinungsverschiedenheiten über das Fortgelten von Recht als Bundesrecht, Art. 126 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren in den sonst durch Bundesgesetz zugewiesenen Fällen, Art. 93 Abs. 2 GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvQ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einstweilige Anordnungen, § 32 BVerfGG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfassungsbeschwerden, Art. 93 Abs. 1 Nr. 4a und 4b GG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BvT">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Verfahren (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BW-RegSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden in Wirtschaftsstrafsachen usw. (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BZR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bundeszentralregister</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="C">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Zivilsachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ca">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Zivilsachen am Arbeitsgericht (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="CN">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Verfahren nach § 47 Abs. 5 VwGO (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Cs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafbefehle (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="D">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Disziplinarsachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Disziplinarsachen (Beschlußsachen) (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstgericht für Richter (LG, OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DGH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Dienstgerichtshof für Richter (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufträge an Gerichtsvollzieher (GV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ds">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafsachen des Einzelrichters (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wiederaufnahmeverfahren in Disziplinarsachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="E-(pat)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerde in Patent-, Gebrauchsmuster-, Sortenschutz- und Warenzeichensachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge auf Einleitung des ehrengerichtlichen Verfahrens (EG f. RA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EGH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen, Beschwerden und Anträge auf gerichtliche Entscheidungen (EGH f. RA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ehrengerichtliche Verfahren gegen Rechtsanwälte (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EVY">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zweitinstanzliche Ehrengerichtsverfahren gegen Rechtsanwälte (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="EWs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entlassungs- und Widerrufssachen (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="F">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Familiensachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="FA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Register für Führungsaufsichten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="FH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Familiensachen außerhalb anhängiger Verfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ga">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Arreste und einstweilige Verfügungen (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Register für Gerichtshilfe</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GnR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Genossenschaftsregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gns">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gnadensachen (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Güterrechtsregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gr.Sen.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren vor dem Großen Senat des Bundesverwaltungsgerichts (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Gs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einzelne richterliche Anordnungen in Strafsachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großer Senat (BAG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GSSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großer Senat in Strafsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GSZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Großer Senat in Zivilsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="H">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Zivilverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ha">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Verfahren (ArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HEs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Register für Haftentscheidungen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Hinterlegungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HLw">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Landwirtschaften</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HLw">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Landwirtschaftssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Handelsregistersachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HRA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Handelsregister (Einzelkaufleute, Personengesellschaften) (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HRB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Handelsregister (Kapitalgesellschaften) (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Hs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zivilsachen (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="I">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beurkundungen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Insolvenzverfahren nach Art. 102 Abs.3 EGInsO und §§ 354 und 356 InsO (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="II">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstiges in der freiwilligen Gerichtsbarkeit (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="III">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Standesamtssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verbraucherinsolvenzverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IN">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Insolvenzverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfügungen von Todes wegen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="IX">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beistandschaften (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="J">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verteilungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="JL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Aufträge der Justizbehörden an Gerichtsvollzieher (GV)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Js">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ermittlungsverfahren (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="K">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zwangsversteigerungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Kart.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zusatz bei Kartellsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KLs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zusatz bei Strafsachen vor der Großen Strafkammer (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KRB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bußgeld-Rechtsbeschwerden in Kartellsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ks">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zusatz bei Schwurgerichtssachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erinnerungen gegen den Kostenansatz und Gegenvorstellungen gegen die Streitwertfestsetzung (Kosten und Streitwert) (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KVR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kartellsachen (BGH) - Verwaltungs-Rechtsbeschwerden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KVZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nichtzulassungsbeschwerden Kartellsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KZA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhanlb eines in der Revisionsinstanz anhängigen Rechtsstreits in Kartellsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KZR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kartellsachen (BGH) - Nichtzulassungsbeschwerden</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="L">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zwangsverwaltungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Li">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zwangslizenzverfahren (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LiQ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einstweilige Verfügung in Zwangslizenzverfahren (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LiR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rücknahmeklagen in Zwangslizenzsachen (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ls">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafsachen vor dem Schöffengericht (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Lw">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftliche Entschuldungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftliche Genehmigungsverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Höfesachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landpachtsachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge nach § 10 RSiedlG (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geschäfte nach § 1 Nr. 4 LwVG (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Landwirtschaftssachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="LwZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zuweisungsverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="M">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Zwangsvollstreckungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="MR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Musterregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="N">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Konkursverfahren oder Gesamtvollstreckungsverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ni">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Patentnichtigkeitsverfahren (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NotSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Notarsachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NotZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwaltungsstreitverfahren in Notarsachen und sofortige Beschwerden gegen Entscheidungen der Oberlandesgerichte (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ns">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Strafsachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="O">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Zivilsachen 1. Instanz (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ObJs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafsachen 1. Instanz (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ObSs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Strafsachen und Rechtsbeschwerden in Bußgeldsachen (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Verfahren der 1. Instanz (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OJs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erstinstanzliche Strafsachen (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OWi">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Bußgeldverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="P">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden in Personalvertretungs- und Richtervertretungssachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PatAnwSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden und Revisionen in Patentanwaltssachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PatAnwZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwaltungsstreitverfahren in Patentanwaltssachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Nichtzulassungsbeschwerden in Personalvertretungs- und Richtervertretungssachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PBvS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beendigung des Amtes eines Richters des BVerfG bei Dienstunfähigkeit oder aus sonstigen Gründen, § 105 BVerfGG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PBvU">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Plenarentscheidungen, § 16 BVerfGG (BVerfG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Pk">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pachtkreditregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PKH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge auf Bewilligung von Prozeßkostenhilfe, auch soweit sie während eines schwebenden Verfahrens gestellt werden (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PLs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafprozessliste (Amtsanw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Partnerschaftsregistersachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ps">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Privatklagesachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Qs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Straf- und Bußgeldsachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RE-Miet">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsentscheide in Mietsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RiSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Disziplinarsachen nach dem Richtergesetz (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RiZ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Versetzungs- und Prüfungsverfahren nach dem Richtergesetz (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RReg.H">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Prozeßkostenhilferegister (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RReg.St">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Strafsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RReg.Z">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Zivilsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Rs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Zivilsachen (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="S">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Zivilsachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Sa">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungssachen (LArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SBR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Schiffsbauregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Sch">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Liste für Zvilprozesssachen; Schiedsrichterliches Verfahren  (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SchH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Liste für Zvilprozesssachen; Anträge auf gerichtliche Entscheidung in den in § 1062 Abs. 1 Nr.1 bis 3 ZPO genannten Fällen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Berufungsverfahren (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SHa">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Berufungsverfahren (LArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ss">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Strafsachen und Rechtsbeschwerden in Bußgeldsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ss (B)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden in Bußgeldsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ss (OWi)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtsbeschwerden in Bußgeldsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SSR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Seeschiffsregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="St">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Stellungnahmen gegenüber dem Bundesverfassungsgericht, gegenüber dem Gemeinsamen Senat der obersten Gerichtshöfe des Bundes, gegenüber dem Großen Senat und zu Gesetzentwürfen (Stellungnahmen) (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Strafsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StBR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerderegister in Strafsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StbST">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufsgerichtliche Verfahren in Steuerberater- und Steuerbevollmächtigtensachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren in erstinstanzlichen Strafsachen beim BGH (GenBAnw.)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Strafsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StrEs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Register für Entschädigungssachen nach dem StrEG (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StRR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Strafsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StRR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Strafsachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="StVK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren vor der Strafvollstreckungskammer (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="T">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Zivilsachen (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ta">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine arbeitsgerichtliche Beschwerdesachen (LArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TaBV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerdesachen in Beschlussverfahren (LArbG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="U">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Zivilsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UF">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen und Beschwerden gegen Endentscheidungen in Familiensachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UFH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Berufungsverfahren in Familiensachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Berufungsverfahren (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UJs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ermittlungsverfahren gegen Unbekannt (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringungsverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="V">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auseinandersetzungen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="V">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Auseinandersetzungen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entscheidungen über Justizverwaltungsakte in Zivilsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VAs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Entscheidungen über Justizverwaltungsakte in Strafsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Verg">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Liste für Vergaberechtssachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VerwB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwahrungsbuch für Verfügungen von Todes wegen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VGS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vereinigte Große Senate (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Nachlasssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VII">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vormundschaften (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VIII">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pflegschaften (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VN">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vergleichsverfahren (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Vollz">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren vor der Strafvollstreckungskammer nach  §§ 109, 110 StVollzG (LG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Vollz (Ws)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren vor dem Strafsenat nach §§ 116, 117 StVollzG (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vereinsregister (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VRG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorlagen nach §§ 80, 84, 86 BVerfGG (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VRJs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckungsregister für Jugendgerichtssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VRs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Strafvollstreckungssachen (StA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Vs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Privatklagesachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="W">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Zivilsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="W-(pat)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Patent-, Gebrauchsmuster-, Sortenschutz- und Warenzeichensachen (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorlagen, Anträge und Beschwerden nach der Wehrbeschwerdeordnung (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WB-Reg.">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verwahrungsregister (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WBW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wiederaufnahmeverfahren in Wehrbeschwerdesachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WD">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungen in Wehrdisziplinarsachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WDB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorlagen, Anträge und Beschwerden nach der Wehrdisziplinarordnung (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WDW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wiederaufnahmeverfahren in Wehrdisziplinarsachen (BVerwG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WF">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Beschwerden in Familiensachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WpSt">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufsgerichtliche Verfahren in Wirtschaftsprüfersachen (GenBAnw., BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ws">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Straf- und Bußgeldsachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Ww">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Landwirtschaftssachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Wx">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Weitere Beschwerden in freiwilliger Gerichtsbarkeit (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WXv">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Landwirtschaftssachen (OLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="X">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Andere vormundschaftsgerichtliche Angelegenheiten (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Erziehungsbeistandschaften (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XII">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Fürsorgeerziehungen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XIV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Unterbringungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Landwirtschaftssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XVI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Adoptionssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XVI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Adoptionssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="XVII">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betreuungssachen (AG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Revisionsverfahren (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZA-(Pat)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Patentsachen (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZAR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeines Register in Zivilsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZB">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden in Zivilsachen, Rechtsbeschwerden und weitere Beschwerden (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZBR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerderegister in Zivilsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionen in Zivilsachen und Berufungen in Patentsachen (BGH)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZRR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Revisionsregister in Zivilsachen (BayObLG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="Zs">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschwerden gegen Amts- und Staatsanwälte (GenStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ZS-(pat)">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Anträge außerhalb anhängiger Patentsachen (BPatG)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:gds.registerzeichen">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.1">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

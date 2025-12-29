@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xdo="http://www.xdomea.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_1610_cl_smallclaims_2_0.xsd" />
+  <xs:import schemaLocation="xdomea_typen_1_0.xsd" namespace="http://www.xdomea.de" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Type.SC.Anschrift">
+    <xs:sequence>
+      <xs:element name="anschriftstyp" type="tns:Code.GDS.Anschriftstyp" />
+      <xs:element name="strasse" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="hausnummer" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Die Hausnummer ist ggf. einschliesslich Buchstaben oder dergleichen anzugeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postfachnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="postleitzahl" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bei ausländischen Adressen hier bitte keine Länderkennungskürzel eintragen. Wegen der Schreibweise ausländischer Orte vgl. die Anmerkung zum Element "Ort".</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ort" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Bei postalischen Anschriften kann der hier angegebene Ort von der politischen Gemeinde abweichen. In diesem Fall sollten die postalische und die Lieferadresse separat mitgeteilt werden. Bei ausländischen Adressen empfiehlt die Deutsche Post AG, den Ort möglichst in der Landessprache zu schreiben. Dies erscheint auch im vorliegenden Zusammenhang sinnvoll. Die Deutsche Post AG empfiehlt ferner,  ausländische Ortsnamen in Großbuchstaben anzugeben. Hiervon sollte bei der Übermittlung von XJustiz-Daten möglichst Abstand genommen werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Bankverbindung">
+    <xs:annotation>
+      <xs:documentation>Hier steht die allgemeine Bankverbindung</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="bank" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="kontoinhaber" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="iban" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>IBAN der Bankverbindung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bic" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>BIC der Bankverbindung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Beteiligter">
+    <xs:choice>
+      <xs:element name="natuerliche_Person">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="voller_Name" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="vorname" type="xoev-lc:String.Latin" />
+                  <xs:element name="nachname" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="anschrift" maxOccurs="unbounded" type="tns:Type.SC.Anschrift" />
+            <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.SC.Telekommunikation" />
+            <xs:element name="bankverbindung" minOccurs="0" maxOccurs="unbounded" type="tns:Type.SC.Bankverbindung" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="organisation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="bezeichnung_aktuell" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="anschrift" maxOccurs="unbounded" type="tns:Type.SC.Anschrift" />
+            <xs:element name="telekommunikation" minOccurs="0" maxOccurs="unbounded" type="tns:Type.SC.Telekommunikation" />
+            <xs:element name="bankverbindung" minOccurs="0" maxOccurs="unbounded" type="tns:Type.SC.Bankverbindung" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sonstige_Angaben_Beteiligter" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Beteiligung">
+    <xs:sequence>
+      <xs:element name="rolle" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Jede/r Beteiligte hat eine oder mehrere Rollen, z.B. Kläger, Beklagter, Zeuge, Dolmetscher, Rechtsanwalt.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="rollennummer" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Die Rollennummer wird als eindeutige Kennziffer innerhalb des XML-Dokuments benötigt, um aus anderen Elementen innerhalb des XML-Dokuments heraus auf Beteiligte und Rollen verweisen zu können.  Die Rollennummer kann aus einem Datenbank-Schlüssel abgeleitet werden, der dem Beteiligten in der Datenbank eines Gerichts, einer Staatsanwaltschaft oder einer sonstigen Behörde zur eindeutigen Identifizierung zugeordnet ist. Zwingend erforderlich ist dies nicht. Sofern die einzelnen Kommunikationsteilnehmer intern unterschiedliche Datenbank-Schlüssel verwenden, können diese im Element Rollen_ID (siehe unten) abgelegt werden. Die Rollennummer kann dann frei bestimmt werden, solange sie nur innerhalb eines XML-Dokuments eindeutig bleibt.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="rollenbezeichnung" type="tns:Code.SC.Rollenbezeichnung">
+              <xs:annotation>
+                <xs:documentation>Zulässige Rollenbezeichnungen sind in der Datei WL_SC_Rollenbezeichnung definiert.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="referenz" minOccurs="0" maxOccurs="unbounded" type="tns:Type.GDS.Ref.Rollennummer" />
+            <xs:element name="nr" default="1" type="xs:integer">
+              <xs:annotation>
+                <xs:documentation>Wenn es in einem Verfahren mehrere gleichartige Beteiligte gibt (z. B. mehrere Kläger), sind diese fortlaufend zu numerieren. Jede Kombination aus Rollenbezeichnung und Nummer (z.B. Kläger 1, Kläger 2, Beklagter 1 usw.) darf pro Verfahren nur einmal vorkommen.  Mit XML-Mitteln kann nur die Eindeutigkeit innerhalb des jeweiligen XJustiz-Datensatzes überprüft werden.  Für die überprüfung der verfahrensweiten Eindeutigkeit sind die jeweiligen Kommunikationsteilnehmer verantwortlich. Default ist 1.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beteiligter" type="tns:Type.SC.Beteiligter">
+        <xs:annotation>
+          <xs:documentation>Ein Beteiligter kann eine natürliche Person oder eine Organisation sein.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Grunddaten">
+    <xs:sequence>
+      <xs:element name="verfahrensdaten">
+        <xs:annotation>
+          <xs:documentation>Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren mit sich bringt.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="instanzdaten" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="instanzbehoerde" type="xoev-lc:String.Latin" />
+                  <xs:element name="aktenzeichen" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hier steht das Aktenzeichen, unter dem die Instanzbehörde (siehe oben) das Verfahren führt. Bei der Übermittlung verfahrenseinleitender Dokumente ist hier "neu" einzutragen. Wenn das Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, erhält das Element den Wert "unbekannt".</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="verfahrensgegenstand" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="gegenstand" type="xoev-lc:String.Latin">
+                          <xs:annotation>
+                            <xs:documentation>Gegenstand der Forderung</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="gegenstandswert" minOccurs="0">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="zahl" type="xs:double" />
+                              <xs:element name="auswahl_Waehrung">
+                                <xs:complexType>
+                                  <xs:choice>
+                                    <xs:element name="waehrung_Art" type="tns:Code.GDS.Waehrung" />
+                                    <xs:element name="sonstige_Waehrung" type="xoev-lc:String.Latin" />
+                                  </xs:choice>
+                                </xs:complexType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="beteiligung" maxOccurs="20" type="tns:Type.SC.Beteiligung" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendungsdaten" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Sendungsdaten nehmen alle Informationen auf, die die jeweils vorliegende Sendung betreffen. Sendungsübergreifende Informationen sind in den Verfahrensdaten enthalten.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="sendungsprioritaet" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Sendungspriorität enthält Sendungsanmerkungen wie "eilt", "eilt sehr" etc. in Form von freiem Text</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="sendungsinhalt" minOccurs="0" type="tns:Code.GDS.Sendungsinhalt" />
+            <xs:element name="bemerkung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Dies ist ein generelles Bemerkungsfeld, das alle Arten an Bemerkungen zur Sendung enhalten kann.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="absenderkennung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier wird nicht der gesamte Datensatz eines Beteiligten referenziert, sondern nur eine Angabe eines Absendernamens gemacht. Eventuell können hierzu auch E-Mail-Adresse, der OSCI-Benutzername oder die Postfach-ID einer virtuellen Poststelle verwendet werden.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="empfaengerkennung" minOccurs="0" type="xoev-lc:String.Latin">
+              <xs:annotation>
+                <xs:documentation>Hier wird nicht der gesamte Datensatz eines Beteiligten referenziert, sondern nur eine Angabe eines Empfängernamens gemacht. Eventuell können hierzu auch E-Mail-Adresse, der OSCI-Benutzername oder die Postfach-ID einer virtuellen Poststelle verwendet werden</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="eingangsbestaetigungswunsch" minOccurs="0" default="false" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Mit diesem Element kann ein Einreicher bei einer Sendung AN das Gericht oder die Staatsanwaltschaft angeben, ob er eine Eingangsbestätigung haben möchte oder nicht. Mit dieser Eingangsbestätigung ist ausdrücklich NICHT das EMPFANGSBEKENNTNIS (EB) gemeint, das ein Anwalt bei Sendungen VOM Gericht abgeben soll. Der Einreicher erhält bei Setzen von "true" eine automatisiert erstellte Bestätigung des Erhalts seiner Sendung durch das adressierte Gericht bzw. die adressierte Staatsanwaltschaft.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="papiervorgang" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Flag für die Erkennung, ob es sich um einen Papiervorgang in elektronischer Form handelt. Liegt ein Papiervorgang auch elektronisch vor ? J(true)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="xdomea" minOccurs="0" type="xdo:T_XDOMEA" />
+            <xs:element name="absendernachricht" minOccurs="0">
+              <xs:annotation>
+                <xs:documentation>Zusatzinformationen zur Nachricht des Absenders, wenn sich die Nachricht auf mehrere Einzelnachrichten verteilt.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nachrichten_ID" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Eindeutige ID der Nachricht. Alle Einzelnachrichten müssen die gleiche ID besitzen, damit eine Zusammengehörigkeit hergestellt werden kann.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachrichtenanzahl" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Anzahl der einzelnen Nachrichten, aus der sich die gesamte Nachricht zusammensetzt.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachrichten_Nr" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Nummer der aktuellen Einzelnachricht.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="xjustizversion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Kreditkartendaten">
+    <xs:sequence>
+      <xs:element name="kreditkartenunternehmen" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="gueltigkeit" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="kartenpruefnummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="karteninhaber" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="kartennummer" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="kartennummer_Gueltigkeit_Pruefnr" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Nachrichtenkopf">
+    <xs:sequence>
+      <xs:element name="erstellungszeitpunkt" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Datum bei Unterschrift</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="absender" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angaben aus EGVP/Signatur</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="empfaenger" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angaben aus EGVP/Gerichtskennzahl</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Ort_Datum_Unterschrift">
+    <xs:sequence>
+      <xs:element name="ort" type="xoev-lc:String.Latin" />
+      <xs:element name="datum" type="xs:date" />
+      <xs:element name="unterschrift" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>EGVP; elektronische Signatur</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Sonstige_Angaben_Beteiligter">
+    <xs:sequence>
+      <xs:element name="freitext" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Freitexteingabe; weitere Angaben zum Beteiligten</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ref_Rollennummer" type="tns:Type.GDS.Ref.Rollennummer">
+        <xs:annotation>
+          <xs:documentation>Die weiteren Angaben werden über Ref_Rollennummer referenziert</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC.Telekommunikation">
+    <xs:sequence>
+      <xs:element name="telekommunikationsart" type="tns:Code.GDS.Telekommunikationsart" />
+      <xs:element name="verbindung" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse oder dergleichen mitgeteilt.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.SC_Muendliche_Verhandlung">
+    <xs:sequence>
+      <xs:element name="flag_Muendliche_Verhandlung" default="false" type="xs:boolean" />
+      <xs:element name="begruendung_Muendliche_Verhandlung" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.sc.forma_klageformblatt.1600001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.SC.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.SC.Ereignis">
+                    <xs:annotation>
+                      <xs:documentation>Es ist nur das Ereignis "SC-Form A - Klageformblatt" aus der Codeliste WL_SC_Ereignis zulässig.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.SC.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gerichtliche_Zustaendigkeit">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="begruendung" type="tns:Code.SC.Gerichtliche_Zustaendigkeit" />
+                    <xs:element name="sonstiger_Zustaendigkeitsgrund" type="xoev-lc:String.Latin" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="grenzueberschreitender_Sachverhalt">
+                <xs:annotation>
+                  <xs:documentation>Zulässige Staaten sind in der Datei xj_0050_wl_staaten_x_x.xsd definiert.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="staat_Aufenthalt_Klaeger" type="tns:Code.GDS.Staaten">
+                      <xs:annotation>
+                        <xs:documentation>Staat des Wohnsitzes oder gewöhlichen Aufenthalts des Klägers</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="staat_Aufenthalt_Beklagter" type="tns:Code.GDS.Staaten">
+                      <xs:annotation>
+                        <xs:documentation>Staat des Wohnsitzes oder gewöhlichen Aufenthalts des Beklagten</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="staat_Gericht" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Mitgliedstaat des Gerichts: fixed "Deutschland"</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="bezahlung_Gerichtsgebuehren" minOccurs="0">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="eingangbeigericht" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="zahlungsart" type="tns:Code.SC.Zahlungsart" />
+                    <xs:element name="sonstige_Zahlungsart" type="xoev-lc:String.Latin" />
+                    <xs:element name="bankverbindung" minOccurs="0" type="tns:Type.SC.Bankverbindung" />
+                    <xs:element name="kreditkartendaten" minOccurs="0" type="tns:Type.SC.Kreditkartendaten" />
+                    <xs:element name="sprach_Code" type="xoev-lc:String.Latin" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="erstattung_Verfahrenskosten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Erstattung" default="false" type="xs:boolean" />
+                    <xs:element name="naehere_Angaben_Erstattung" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="zinsforderung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Zinsforderung" default="false" type="xs:boolean" />
+                    <xs:element name="zinsen" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Beim gesetzlichen Zinssatz wird der %-Wert nicht angegeben.
+Der Zinsbeginn muß sowohl beim gesetzlichen als auch beim vertraglichen Zinssatz angegeben werden.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="vertraglicher_Zinssatz" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>Im Formular muß mindestens ein Wert angegeben werden; es können alle drei Werte angegeben werden.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="zinssatz" minOccurs="0" type="xoev-lc:String.Latin">
+                                  <xs:annotation>
+                                    <xs:documentation>vertraglicher Zinssatz in %</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="basiszinssatz" minOccurs="0" type="xoev-lc:String.Latin">
+                                  <xs:annotation>
+                                    <xs:documentation>Bitte geben Sie die Prozentpunktezahl über dem Zinssatz der EZB an; wenn der EZB Zinssatz z.B. 4 % beträgt und Sie 5 % Zinsen fordern, geben Sie „1“ an.</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="anderer_Wert" minOccurs="0" type="xoev-lc:String.Latin" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="zinsbeginn" type="xs:date">
+                            <xs:annotation>
+                              <xs:documentation>Der Zinsbeginn muß sowohl bei einem vertraglichen Zinssatz, als auch bei einem gesetzlichen Zinssatz angegeben werden.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="einzelheiten_zur_Klage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="klage_Begruendung" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="beweismittel" maxOccurs="3">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="urkundenbeweis" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="zeugenbeweis" minOccurs="0" type="xoev-lc:String.Latin" />
+                          <xs:element name="sonstige_Beweismittel" minOccurs="0" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="muendliche_Verhandlung" type="tns:Type.SC_Muendliche_Verhandlung" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="flag_Bestaetigung_Urteil" default="false" type="xs:boolean" />
+              <xs:element name="ort_Datum_Unterschrift">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Name des Klägers</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ort_Datum_Unterschrift" type="tns:Type.SC.Ort_Datum_Unterschrift" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.sc.formb_korrekturblatt.1600002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.SC.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.SC.Ereignis">
+                    <xs:annotation>
+                      <xs:documentation>Es ist nur das Ereignis "SC-Form B - Korrekturblatt" aus der Codeliste WL_SC_Ereignis zulässig.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.SC.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="eingabefehler">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fristdatum" type="xs:date" />
+                    <xs:element name="sprache_FormA" minOccurs="0" maxOccurs="3" type="tns:Code.GDS.Sprachen">
+                      <xs:annotation>
+                        <xs:documentation>Das Klageformblatt wurde nicht in der richtigen Sprache ausgefüllt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="sonstige_Fehler" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ort_Datum_Unterschrift" type="tns:Type.SC.Ort_Datum_Unterschrift" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.sc.formc_antwortblatt.1600003">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.SC.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.SC.Ereignis">
+                    <xs:annotation>
+                      <xs:documentation>Es ist nur das Ereignis "SC-Form B - Korrekturblatt" aus der Codeliste WL_SC_Ereignis zulässig.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.SC.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="anerkennung_Forderung">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element name="flag_Ja" fixed="true" type="xs:boolean" />
+                    <xs:element name="auswahl_Nein_Teilweise">
+                      <xs:annotation>
+                        <xs:documentation>Wenn mit "Nein" oder "Teilweise" geantwortet wurde, sollten die Gründe dafür angegeben werden.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="flag_Nein" default="false" type="xs:boolean" />
+                          <xs:element name="flag_Teilweise" default="false" type="xs:boolean" />
+                          <xs:element name="begruendung_kein_SmallClaims" minOccurs="0" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Begründung, warum die Klage nicht in den Anwendungsbereich des europäischen Verfahrens für geringfügige Forderungen fällt.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="sonstige_Gruende" minOccurs="0" type="xoev-lc:String.Latin" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="beweismittel_Bestreitung" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="urkundenbeweis_Bestreitung" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="zeugenbeweis_Bestreitung" minOccurs="0" type="xoev-lc:String.Latin" />
+                    <xs:element name="sonstige_Beweismittel_Bestreitung" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="muendliche_Verhandlung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Muendliche_Verhandlung" default="false" type="xs:boolean" />
+                    <xs:element name="begruendung_Muendliche_Verhandlung" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="erstattung_Verfahrenskosten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Erstattung_Verfahrenskosten" default="false" type="xs:boolean" />
+                    <xs:element name="begruendung_Erstattung_Verfahrenskosten" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="widerklage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Widerklage" default="false" type="xs:boolean" />
+                    <xs:element name="begruendung_Widerklage" minOccurs="0" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sonstige_Angaben" minOccurs="0" type="xoev-lc:String.Latin" />
+              <xs:element name="ort_Datum_Unterschrift" type="tns:Type.SC.Ort_Datum_Unterschrift" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.sc.formd_urteil.1600004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf">
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="tns:Type.SC.Nachrichtenkopf">
+                <xs:sequence>
+                  <xs:element name="ereignis" type="tns:Code.SC.Ereignis">
+                    <xs:annotation>
+                      <xs:documentation>Es ist nur das Ereignis "SC-Form B - Korrekturblatt" aus der Codeliste WL_SC_Ereignis zulässig.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="grunddaten" type="tns:Type.SC.Grunddaten" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="urteil">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="datum" type="xs:date" />
+                    <xs:element name="aktenzeichen" type="xoev-lc:String.Latin" />
+                    <xs:element name="inhalt_Urteil" type="xoev-lc:String.Latin" />
+                    <xs:element name="name_Beklagter" type="xoev-lc:String.Latin" />
+                    <xs:element name="name_Klaeger" type="xoev-lc:String.Latin" />
+                    <xs:element name="hauptforderung" type="xs:double" />
+                    <xs:element name="zinsen" type="xs:double" />
+                    <xs:element name="kosten" type="xs:double" />
+                    <xs:element name="urteil_Text" type="xoev-lc:String.Latin" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="berufungsgericht_Pruefung">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="flag_Berufungsgericht_Pruefung" default="false" type="xs:boolean" />
+                    <xs:element name="vorrang" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="datum.vorrang" type="xs:date" />
+                          <xs:element name="aktenzeichen_Vorrang" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Referenz zu einem vorherergangenen Urteil</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ort_Datum_Unterschrift" type="tns:Type.SC.Ort_Datum_Unterschrift" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

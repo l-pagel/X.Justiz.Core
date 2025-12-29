@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-code="http://xoev.de/schemata/code/1_0" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+  <xs:import schemaLocation="xoev-code.xsd" namespace="http://xoev.de/schemata/code/1_0" />
+  <xs:complexType name="Code.STRAF.Sachgebietsschluessel">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Sachgebietsschluessel</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Aktenzeichen/Sachgebietsschlüssel</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="10">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Staatschutzsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="11">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Politische Strafsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="12">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vergehen nach § 131 StGB</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="13">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Ermittlungsverfahren bei der StA bei dem OLG/Bayer. OLG (GStA)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="15">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straftaten gegen die sexuelle Selbstbestimmung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="16">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verbreitung pornografischer Schriften (§ 184 StGB)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="20">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kapitalverbrechen im Sinne von § 74 Abs. 2 GVG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="21">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vorsätzliche Körperverletzungen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="25">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Diebstahl und Unterschlagung (nur soweit nicht die Sachgebiete 30, 40 oder 41 in Betracht kommen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="26">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betrug und Untreue (nur soweit nicht die Sachgebiete 30, 40, 41 oder 51 in Betracht kommen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="30">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straftaten der Serien- und Bandenkriminalität sowie Gewaltkriminalität mit mehreren Tätern, für die das Gesetz Freiheitsstrafen von nicht unter einem Jahr vorsieht (soweit nicht Sachgebiete 55, 56, 60)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="31">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Straftaten der Serien und Bandenkriminalität sowie Gewaltkriminalität mit mehreren Tätern (soweit nicht Sachgebiete 55, 56 oder 61)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="35">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkehr mit fahrlässiger Tötung sowie gemeingefährliche Straftaten nach §§ 315 bis 315d, ohne § 315c Abs.1a</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="36">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Verkehrsstraftaten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="40">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wirtschaftsstrafverfahren nach § 74c GVG</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="41">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Wirtschaftsstrafverfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="42">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Steuerstrafverfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="43">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldwäschedelikte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="45">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Umweltschutzstrafsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="50">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Korruptionsdelikte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="51">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren gegen Justizbedienstete, Richter, Notare, sonstige Amtsträger und Rechtsanwälte</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="55">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Einschleusung von Ausländern</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="56">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Straftaten nach dem Ausländer- und dem Asylverfahrensgesetz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="60">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Straftaten nach dem Betäubungsmittelgesetz, für die das Gesetz eine Freiheitsstrafe von nicht unter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="61">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige Straftaten nach dem Betäubungsmittelgesetz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="65">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ärztesachen und Straftaten nach dem Heilpraktikergesetz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="66">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pressestrafsachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="90">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeine Strafsachen, für die das Gesetz Freiheitsstrafen von nicht unter 1 Jahr vorsieht</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="98">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren gegen Strafunmündige</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="99">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige allgemeine Straftaten</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="A1">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtshilfesachen einschließlich Auslieferungssachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="A2">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verfahren zur DNA - Identitätsfeststellung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="A3">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige AR-Register-Sachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="O1">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Sonstige OWi-Sache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="O2">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkehrs-OWi-Sache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="U1">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>UJs-Sachen: Leichen-, Kapital-, Brandsachen und politische Verfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="U2">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>UJs-Sachen: Sonstige UJs-Verfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.sachgebietsschlüssel">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.0">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Code.STRAF.Zusatzkennzeichnung">
+    <xs:annotation>
+      <xs:appinfo>
+        <listAgencyName>BLK-AG IT-Standards für die Justiz</listAgencyName>
+        <listName>STRAF.Zusatzkennzeichnung</listName>
+      </xs:appinfo>
+      <xs:documentation>Diese Codeliste ist vorgesehen für das Element Aktenzeichen/Zusatzkennzeichnung.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="xoev-code:Code">
+        <xs:sequence>
+          <xs:element name="code">
+            <xs:annotation>
+              <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+              <xs:documentation>In diesem XML-Element wird der Code einer Codeliste übermittelt.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="AA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Amtsanwaltssachen nach neuer OrgStA</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="ALLGU">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Allgemeiner Unfall</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="AUSLG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Ausländergesetz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BETRU">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Betriebsunfall</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BRAND">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Brandsache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BT-GW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Geldwäsche</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-A">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Amphetamine</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-AG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Amphetamine (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-B">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Beschaffung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-BG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Beschaffung (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-C">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Canabis</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-CG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Canabis (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-Cr">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Crack</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-H">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Heroin</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-HG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Heroin (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-K">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Kokain</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-KG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Kokain (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-KW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Kontrollierte Weiterleitung</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-S">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Sonstige</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BTM-SG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>BTMG-Sonstige (Großmengen)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="BV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Beschleunigtes Verfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DATSCH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Datenschutz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DHKC">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kurden (DHKC)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DNA">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>DNA-Analyse</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DNA1">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>DNA-Antrag gem. § 81g StPO (Beschuldigte)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DNA2">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Antrag gem. §§2 DNA-IFG, 81 g StPO (rechtskr. VU)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DNA3">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>stattgebender Beschluß gemäß § 81 g StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="DNA4">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>stattgebender Beschluß gemäß §§ 2 DNA-IFG, 81 g StPO</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="FÜ">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Führerscheinsache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GNS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gnadensachen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="GW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Geldwäsche</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="HAFT">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Haftsache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="JUG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendsache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="JUS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Jugendschutz</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="KAIP">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Gewalt in der Familie</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="MIT">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Mehrfach-Intensiv-Täter</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="MIZI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Konkursvorermittlungsverfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NATO">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Natosache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NBV">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Normal beschleunigtes Verfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="NS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Berufungsverfahren AA Frankfurt</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="OK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Organisierte Kriminalität</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PKK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kurden (PKK)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="POL">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Politik</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="PR">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Pressesache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="RH">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Rechtshilfeersuchen</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="SUICID">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Suicid</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TE">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Todesermittlungssache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TKP/ML">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Kurden (TKP/ML)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="TRUNK">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Trunkenheit</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="UMW">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Umweltverfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VRS">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Vollstreckung (Privatklagesache)</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VU">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Verkehrsunfall</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="VZJUG">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>vorgezogenes Jugendverfahren</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="WI">
+                  <xs:annotation>
+                    <xs:appinfo>
+                      <codeName>Wirtschaftsstrafsache</codeName>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="listURI" type="xs:anyURI" use="optional" fixed="urn:xoev-de:xjustiz:codeliste:straf.zusatzkennzeichnung">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Mit diesem XML-Attribut wird die Kennung der Codeliste übermittelt, in deren Kontext der jeweilige Code zu interpretieren ist. Die Kennung identifiziert die Codeliste, nicht jedoch deren Version eindeutig.
+
+Wird bereits im Rahmen des XÖV-Standards eine Kennung vorgegeben (es handelt sich in diesem Fall um einen Code-Typ 1, 2 oder 3) darf auf eine nochmalige Angabe der Kennung bei der Übermittlung eines Codes verzichtet werden. Aus diesem Grund ist das XML-Attribut listURI zunächst als optional deklariert.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="listVersionID" type="xs:normalizedString" use="required" fixed="2.1">
+          <xs:annotation>
+            <xs:documentation>Dokumentation aus XOEV-Bibliothek:</xs:documentation>
+            <xs:documentation>Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen.
+
+Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

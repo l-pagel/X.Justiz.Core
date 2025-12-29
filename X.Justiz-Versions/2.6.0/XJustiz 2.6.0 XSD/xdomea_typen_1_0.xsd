@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdo="http://www.xdomea.de" targetNamespace="http://www.xdomea.de" version="1.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xdomea_wl_allgemein_1_0.xsd" />
+  <xs:complexType name="T_Adress_Informationen">
+    <xs:sequence>
+      <xs:element name="Absender" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Referenz" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Hier steht die Referenz auf eine in diesem Dokument angelegte Adresse. Der Verweis geht über das Element Name_ID.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Referenzart" default="XDOMEA">
+              <xs:annotation>
+                <xs:documentation>Für gewöhnlich ist hier die Adresse eines XDOMEA Satzes angegeben. Andere mögliche externe Adressen können sein: XJUSTIZ-Rolle oder XJUSTIZ-Instanz</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:enumeration value="XDOMEA" />
+                  <xs:enumeration value="XJustiz" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Empfaenger" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Referenz" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Hier steht die Referenz auf eine in diesem Dokument angelegte Adresse. Der Verweis geht über das Element Name_ID.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Referenzart" default="XDOMEA">
+              <xs:annotation>
+                <xs:documentation>Für gewöhnlich ist hier die Adresse eines XDOMEA Satzes angegeben. Andere mögliche externe Adressen können sein: XJUSTIZ-Rolle oder XJUSTIZ-Instanz</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:enumeration value="XDOMEA" />
+                  <xs:enumeration value="XJustiz" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_Adresse">
+    <xs:sequence>
+      <xs:element name="Name">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name_ID" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Eine eindeutige Identifizierung über diese ID der Person/Organisation über ihren Namen.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Anrede" minOccurs="0" type="xs:string" />
+            <xs:element name="Titel" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+            <xs:element name="Nachname" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+            <xs:element name="Vorname" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+            <xs:element name="Institution" minOccurs="0" type="xs:string" />
+            <xs:element name="Organisationseinheit" minOccurs="0" type="xs:string" />
+            <xs:element name="Amtsbezeichnung" minOccurs="0" type="xs:string" />
+            <xs:element name="Funktion" minOccurs="0" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Anschrift" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Strasse" minOccurs="0" type="xs:string" />
+            <xs:element name="Hausnummer" minOccurs="0" type="xs:string" />
+            <xs:element name="Postleitzahl_Ort" minOccurs="0" type="xs:string" />
+            <xs:element name="Ort" minOccurs="0" type="xs:string" />
+            <xs:element name="Postleitzahl_Postfach" minOccurs="0" type="xs:string" />
+            <xs:element name="Postfach" minOccurs="0" type="xs:string" />
+            <xs:element name="Staat" minOccurs="0" type="xs:string" />
+            <xs:element name="Laenderkennzeichen" minOccurs="0" type="xdo:WL_String" />
+            <xs:element name="Adresszusaetze" minOccurs="0" type="xs:string" />
+            <xs:element name="Anschriftstyp" minOccurs="0" type="xdo:WL_String">
+              <xs:annotation>
+                <xs:documentation>Hier ist anzugeben, um welche Anschrift es sich handelt. Mögliche Werte sind der Werteliste WL_Anschriftstyp des Schema xdomea_wl_allgemein_x_x.xsd  zu entnehmen. (Hauptsitz, Zweitsitz, Aktuelle Anschrift, etc.)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Teledaten" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Kanal" minOccurs="0" type="xdo:WL_String">
+              <xs:annotation>
+                <xs:documentation>Hier wird angegeben, um welche Art von Kommunikationskanälen  es sich handelt (z.B. Email, Telefon, Fax, Web, etc.) Zulässige Werte sind definiert in WL_Kommunikationsart des Schema xdomea_wl_allgemein_x_x.xsd.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Kanalsdaten" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Die Telefonnummer, die Email-Adresse, etc.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="Kennzeichnung" minOccurs="0" type="xdo:WL_String">
+              <xs:annotation>
+                <xs:documentation>Hier können die Teledaten gekennzeichnet werden. Handelt es sich um eine dienstliche oder private Telefonnummer. Zulässige Werte sind sind definiert in WL_Telekennzeichnung des Schema xdomea_wl_allgemein_x_x.xsd.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_Identifizierung">
+    <xs:sequence>
+      <xs:element name="ID" minOccurs="0" type="xs:string" />
+      <xs:element name="Referenz" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="gehoert_zu" minOccurs="0" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Referenz auf die ID des "übergeordneten" Objektes z. B. für den Fall, dass eine Akte als Anlage eines Dokumentes übermittelt wird.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_Verweis">
+    <xs:sequence>
+      <xs:element name="ID" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Verweis auf ein anderes Objekt in diesem Datensatz.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Bemerkung" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Hinweise und Bemerkungen zu diesem Verweis.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="T_XDOMEA">
+    <xs:sequence>
+      <xs:element name="XDOMEA_Daten">
+        <xs:annotation>
+          <xs:documentation>Die Beschreibung von XDOMEA Daten: Dokument, Vorgang, Akte und Adresse</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Dokument" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen. So kann auch der Anforderung nach einer ggf. erforderlichen Beschränkung der übertragenen Metadaten Rechnung getragen werden (z. B. auf Grund datenschutzrechtlicher oder sonstiger gesetzlicher Bestimmungen). Neben den Metadaten kann auch das beschriebene Dokument in seinem ursprünglichen Format (z. B. PDF, Word, Excel, ...) mit übermittelt werden. Darüber hinaus besteht die Möglichkeit, das beschriebene Dokument dem Datensatz in weiteren Formatvarianten beizufügen.</xs:documentation>
+                <xs:documentation>Die folgende Beschreibung enthält die Metadatenfelder für den Austausch von Dokumenten.</xs:documentation>
+                <xs:documentation>Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen. So kann auch der Anforderung nach einer ggf. erforderlichen Beschränkung der übertragenen Metadaten Rechnung getragen werden (z. B. auf Grund datenschutzrechtlicher oder sonstiger gesetzlicher Bestimmungen). Neben den Metadaten kann auch das beschriebene Dokument in seinem ursprünglichen Format (z. B. PDF, Word, Excel, ...) mit übermittelt werden. Darüber hinaus besteht die Möglichkeit, das beschriebene Dokument dem Datensatz in weiteren Formatvarianten beizufügen.</xs:documentation>
+                <xs:documentation>Die folgende Beschreibung enthält die Metadatenfelder für den Austausch von Dokumenten.</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Identifizierung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:complexContent>
+                        <xs:extension base="xdo:T_Identifizierung">
+                          <xs:sequence>
+                            <xs:element name="Referenzart" minOccurs="0" type="xdo:WL_String">
+                              <xs:annotation>
+                                <xs:documentation>Dieses Element beschreibt, ob es sich um eine "normale Anlage" oder ein Hauptdokument handelt. Mögliche Werte sind der Werteliste WL_Referenzart des Schema xdomea_wl_allgemein_x_x.xsd zu entnehmen. Es könnte eine Dokumentversion oder eine Formatvariante des Primärdokumentes handelt. Mögliche Werte sind hier z.B.  Anlage,"Version oder Formatvariante.</xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Versionsnummer" minOccurs="0" type="xs:string">
+                              <xs:annotation>
+                                <xs:documentation>Dieses Element nimmt eine Versionsnummer als Stringwert auf.</xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Anlagennummer" minOccurs="0" type="xs:integer">
+                              <xs:annotation>
+                                <xs:documentation>Dieses Element nimmt eine Anlagennummer als Integerwert auf, falls eine vorliegt.</xs:documentation>
+                              </xs:annotation>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:extension>
+                      </xs:complexContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Verweis" minOccurs="0" maxOccurs="unbounded" type="xdo:T_Verweis">
+                    <xs:annotation>
+                      <xs:documentation>Drückt inhaltliche Querbeziehungen aus.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Beschreibung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Dokumenttyp" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Das Feld Dokumenttyp ist relevant beim Austausch von Dokumenten im Vorgangs- oder Aktenzusammenhang. Hier kann die Werteliste WL_Dokumenttyp des Schema xdomea_wl_allgemein_x_x.xsd verwendet werden. Zulässige Werte sind z.B. Erlass, Vermerk, Bericht, Bescheid</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Posteingangsdatum" minOccurs="0" type="xs:date">
+                          <xs:annotation>
+                            <xs:documentation>Das Feld Posteingangsdatum ist relevant beim Austausch von Dokumenten im Vorgangs- oder Aktenzusammenhang</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Postausgangsdatum" minOccurs="0" type="xs:date">
+                          <xs:annotation>
+                            <xs:documentation>Das Feld Postausgangsdatum ist relevant beim Austausch von Dokumenten im Vorgangs- oder Aktenzusammenhang</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Dokumentdatum" minOccurs="0" type="xs:date" />
+                        <xs:element name="Betreff" minOccurs="0" type="xs:string" />
+                        <xs:element name="Hier" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Wird gewöhnlich als "hier" verwendet, kann aber auch im Betreff enthalten sein</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Bezug" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Der konkrete Bezug wird hier angegeben z.B. Ihr Schreiben vom...</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Anlagen" minOccurs="0" maxOccurs="unbounded" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Ein reines Textfeld mit der Information, dass und wieviele Anlagen vorhanden sind. Der Bezug auf die Anlage erfolgt nicht hier, sondern über den Dokumenttyp "Anlage"</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Geschaeftszeichen" minOccurs="0" type="xs:string" />
+                        <xs:element name="Fremdes_Geschaeftszeichen" minOccurs="0" type="xs:string" />
+                        <xs:element name="Medium" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Dieses Feld beschreibt, ob es sich um ein Papier- oder elektronisches Dokument handelt. Mögliche Werte sind der Werteliste WL_Medium des Schema xdomea_wl_allgemein_x_x.xsd zu entnehmen: Zulässige Werte sind z.B. papier,elektronisch, etc.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Vertraulichkeitsstufe" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Für das Element kann die Werteliste WL_Vertraulichkeitsstuffe des Schema xdomea_wl_allgemein_x_x.xsd verwendet werden. Zulässige Werte sind z.B. Offen, NfD, Vertraulich, Geheim, Streng Geheim</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Primaerdokument" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                      <xs:documentation>Unter Primärdokument sind Dateiangaben zu dem tatsächliche beschriebene DOKUMENT  zu verstehen.</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Dateiname" minOccurs="0" type="xs:string" />
+                        <xs:element name="Dateiformat" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Dieses Feld beschreibt das Dateiformat des Dokumentes (z. B. PDF, Word, Excel, Zip, verschlüsselte Formate) und gibt die Version des Dateiformates mit an (z. B. PDF 6.0 oder Word 10.0)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Ursprungsformat" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Wenn eine Signatur vorliegt, wird dieses Feld befüllt. Es bezieht sich auf das Dateiformat des entsprechenden Primärdokuments.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Ersteller" minOccurs="0" type="xs:string" />
+                        <xs:element name="Datum" minOccurs="0" type="xs:date" />
+                        <xs:element name="Uhrzeit" minOccurs="0" type="xs:time">
+                          <xs:annotation>
+                            <xs:documentation>Uhrzeit der Erstellung (die Zeit ist sekundengenau anzugeben)</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Adress_Informationen" minOccurs="0" type="xdo:T_Adress_Informationen">
+                    <xs:annotation>
+                      <xs:documentation>Beim Austausch von Dokumenten, Vorgängen und Akten werden jeweils Adressinformationen eines oder mehrerer Absender bzw. Empfänger mit übermittelt. Da dieser Adressdatensatz für alle Informationsobjekte identisch ist, wird er in XDOMEA-Adresse beschrieben. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Vorgang" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Die folgende Beschreibung enthält die Metadatenfelder für den Austausch von Vorgängen. Dies betrifft im Wesentlichen die vorübergehende oder endgültige Abgabe von kompletten Vorgängen zur Bearbeitung. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen. So kann auch der Anforderung nach einer ggf. erforderlichen Beschränkung der übertragenen Metadaten Rechnung getragen werden (z. B. auf Grund datenschutzrechtlicher oder sonstiger gesetzlicher Bestimmungen).</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Identifizierung" minOccurs="0" type="xdo:T_Identifizierung" />
+                  <xs:element name="Verweis" minOccurs="0" maxOccurs="unbounded" type="xdo:T_Verweis">
+                    <xs:annotation>
+                      <xs:documentation>Drückt inhaltliche Querbeziehungen aus.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Beschreibung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Geschaeftszeichen" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Hier besteht die Möglichkeit für: Aktenzeichen + Organisationskennzeichen + Vorgangskennzeichen</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Vorgangsbetreff" minOccurs="0" type="xs:string" />
+                        <xs:element name="Aktenplankennzeichen" minOccurs="0" type="xs:string" />
+                        <xs:element name="Aktenplaneintrag" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Klartext aus Aktenplan</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Aktenbetreff" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Inhaltsangabe der Akte</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Vorgangstyp" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Der Vorgangstyp wird hier beschrieben. Mögliche Werte können unter anderem sein: Genehmigungsverfahren, Widerspruchsverfahren, Kabinettsvorlage etc.. Eine Werteliste liegt derzeit nicht vor.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Medium" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Dieses Feld beschreibt, ob es sich um ein Papier- oder elektronisches Dokument handelt. Mögliche Werte sind der Werteliste WL_Medium des Schema xdomea_wl_allgemein_x_x.xsd zu entnehmen: Zulässige Werte sind z.B. papier,elektronisch, hybrid.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Laufzeit_von" minOccurs="0" type="xs:date" />
+                        <xs:element name="Laufzeit_bis" minOccurs="0" type="xs:date" />
+                        <xs:element name="Aufbewahrungsdauer" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>in Jahren, plausibilisiert bei Import</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Vertraulichkeitsstufe" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Für das Element kann die Werteliste WL_Vertraulichkeitsstuffe des Schema xdomea_wl_allgemein_x_x.xsd verwendet werden. Zulässige Werte sind z.B. Offen, NfD, Vertraulich, Geheim, Streng Geheim</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Adress_Informationen" minOccurs="0" type="xdo:T_Adress_Informationen">
+                    <xs:annotation>
+                      <xs:documentation>Beim Austausch von Dokumenten, Vorgängen und Akten werden jeweils Adressinformationen eines oder mehrerer Absender bzw. Empfänger mit übermittelt. Da dieser Adressdatensatz für alle Informationsobjekte identisch ist, wird er in XDOMEA-Adresse beschrieben. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Akte" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Die folgende Beschreibung enthält die Metadatenfelder für den Austausch von Akten. Dies betrifft im Wesentlichen die vorübergehende oder endgültige Abgabe von kompletten Akten zur Bearbeitung. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen. So kann auch der Anforderung nach einer ggf. erforderlichen Beschränkung der übertragenen Metadaten Rechnung getragen werden (z. B. auf Grund datenschutzrechtlicher oder sonstiger gesetzlicher Bestimmungen).</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Identifizierung" minOccurs="0" type="xdo:T_Identifizierung" />
+                  <xs:element name="Verweis" minOccurs="0" maxOccurs="unbounded" type="xdo:T_Verweis">
+                    <xs:annotation>
+                      <xs:documentation>Drückt inhaltliche Querbeziehungen aus.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="Beschreibung" minOccurs="0">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="Geschaeftszeichen" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Enthält entweder das Geschäftszeichen der Akte (incl. der Organisationseinheit) oder das Aktenzeichen der Akte je nach behördenspezifischen Organisationskonzept.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Aktenbetreff" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Beschreibung der Akte</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Aktenplankennzeichen" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Ordnungsnummer eines Aktenplaneintrags</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Aktenplaneintrag" minOccurs="0" type="xs:string" />
+                        <xs:element name="Aktentyp" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>Der Aktenstyp wird hier beschrieben. Mögliche Werte können unter anderem sein: Sachakte, Fallakte,etc.. Eine Werteliste liegt derzeit nicht vor.</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Medium" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Dieses Feld beschreibt, ob es sich um ein Papier- oder elektronisches Dokument handelt. Mögliche Werte sind der Werteliste WL_Medium des Schema xdomea_wl_allgemein_x_x.xsd zu entnehmen: Zulässige Werte sind z.B. papier,elektronisch, hybrid</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Laufzeit_von" minOccurs="0" type="xs:date" />
+                        <xs:element name="Laufzeit_bis" minOccurs="0" type="xs:date" />
+                        <xs:element name="Aufbewahrungsdauer" minOccurs="0" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>in Jahren</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Vertraulichkeitsstufe" minOccurs="0" type="xdo:WL_String">
+                          <xs:annotation>
+                            <xs:documentation>Für das Element kann die Werteliste WL_Vertraulichkeitsstuffe des Schema xdomea_wl_allgemein_x_x.xsd verwendet werden. Zulässige Werte sind z.B. Offen, NfD, Vertraulich, Geheim, Streng Geheim</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Adress_Informationen" minOccurs="0" type="xdo:T_Adress_Informationen">
+                    <xs:annotation>
+                      <xs:documentation>Beim Austausch von Dokumenten, Vorgängen und Akten werden jeweils Adressinformationen eines oder mehrerer Absender bzw. Empfänger mit übermittelt. Da dieser Adressdatensatz für alle Informationsobjekte identisch ist, wird er in XDOMEA-Adresse beschrieben. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="Adresse" minOccurs="0" maxOccurs="unbounded" type="xdo:T_Adresse">
+              <xs:annotation>
+                <xs:documentation>Beim Austausch von Dokumenten, Vorgängen und Akten werden jeweils Adressinformationen eines oder mehrerer Absender bzw. Empfänger mit übermittelt. Da dieser Adressdatensatz für alle Informationsobjekte identisch ist, wird er in XDOMEA-Adresse beschrieben. Alle Felder sind optional, so dass die absendende Behörde jeweils festlegen kann, welche Informationen dem Empfänger mit der Übertragung zur Verfügung gestellt werden sollen.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="Eindeutigkeit_Dateiname">
+          <xs:selector xpath="*/Dokument/Primaerdokument" />
+          <xs:field xpath="Dateiname" />
+        </xs:unique>
+        <xs:key name="Schluessel">
+          <xs:selector xpath="*/*/Identifizierung" />
+          <xs:field xpath="ID" />
+        </xs:key>
+        <xs:key name="Schluessel_Adresse">
+          <xs:selector xpath="*/Adresse/Name" />
+          <xs:field xpath="Name_ID" />
+        </xs:key>
+        <xs:keyref name="Referenz" refer="xdo:Schluessel">
+          <xs:selector xpath="*/*/Identifizierung/Referenz" />
+          <xs:field xpath="gehoert_zu" />
+        </xs:keyref>
+        <xs:keyref name="Referenz_Adresse" refer="xdo:Schluessel_Adresse">
+          <xs:selector xpath="*/*/Adress_Informationen/*" />
+          <xs:field xpath="Referenz" />
+        </xs:keyref>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="XDOMEA_Version" type="xs:string" use="required" fixed="1.0" />
+  </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xjustiz.de" xmlns:xoev-lc="http://xoev.de/latinchars/1_1/datatypes" targetNamespace="http://www.xjustiz.de" version="2.1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:include schemaLocation="xjustiz_0000_grunddatensatz_2_1.xsd" />
+  <xs:include schemaLocation="xjustiz_0910_cl_vollstreckung_2_0.xsd" />
+  <xs:import schemaLocation="latinchars.xsd" namespace="http://xoev.de/latinchars/1_1/datatypes" />
+  <xs:complexType name="Type.VSTR.Anschrift_Schuldnerverzeichnis">
+    <xs:complexContent>
+      <xs:restriction base="tns:Type.GDS.Anschrift">
+        <xs:sequence>
+          <xs:element name="anschriftstyp" type="tns:Code.GDS.Anschriftstyp">
+            <xs:annotation>
+              <xs:documentation>Über dieses Element wird die Art der Adresse angegeben. Zulässige Werte sind definiert im Schema "xj_0010_wl_allgemein_x_x.xsd"</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="anschriftenzusatz" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Hier ist Raum für Adressierungszusätze, z.B. Name des Wohnungsgebers.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="strasse" type="xoev-lc:String.Latin" />
+          <xs:element name="hausnummer" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Die Hausnummer ist ggf. einschliesslich Buchstaben oder dergleichen anzugeben.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="postleitzahl" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Bei ausländischen Adressen hier bitte keine Länderkennungskürzel eintragen. Wegen der Schreibweise ausländischer Orte vgl. die Anmerkung zum Element "Ort".</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="ort" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Bei postalischen Anschriften kann der hier angegebene Ort von der politischen Gemeinde abweichen. In diesem Fall sollten die postalische und die Lieferadresse separat mitgeteilt werden. Bei ausländischen Adressen empfiehlt die Deutsche Post AG, den Ort möglichst in der Landessprache zu schreiben. Dies erscheint auch im vorliegenden Zusammenhang sinnvoll. Die Deutsche Post AG empfiehlt ferner,  ausländische Ortsnamen in Großbuchstaben anzugeben. Hiervon sollte bei der Übermittlung von XJustiz-Daten möglichst Abstand genommen werden.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="ortsteil" minOccurs="0" type="xoev-lc:String.Latin">
+            <xs:annotation>
+              <xs:documentation>Zusatz, nicht für postalische Zwecke zu verwenden.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten">
+            <xs:annotation>
+              <xs:documentation>Zulässige Staaten sind in der Datei xj_0050_wl_staaten_x_x.xsd definiert.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Auswahl_Beteiligter_Schuldnerverzeichnis">
+    <xs:choice>
+      <xs:element name="natuerliche_Person" type="tns:Type.VSTR.Natuerliche_Person_Schuldnerverzeichnis" />
+      <xs:element name="organisation" type="tns:Type.VSTR.Organisation_Schuldnerverzeichnis" />
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Beteiligung_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="rolle">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="rollennummer" type="xoev-lc:String.Latin" />
+            <xs:element name="rollenbezeichnung" type="tns:Code.VSTR.Rollenbezeichnung.Schuldnerverzeichnis">
+              <xs:annotation>
+                <xs:documentation>Hier ist nur der Wert Schuldner/in zulässig.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="anrede" maxOccurs="unbounded" type="tns:Code.GDS.Anrede.Partei" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="beteiligter" type="tns:Type.VSTR.Auswahl_Beteiligter_Schuldnerverzeichnis" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.VSTR.Eintragungsanordnung_allgemein">
+        <xs:sequence>
+          <xs:element name="korrektur_Loeschung" minOccurs="0" type="tns:Code.VSTR.Korrektur_Loeschung">
+            <xs:annotation>
+              <xs:documentation>Soll eine bereits übermittelte Eintragung geändert werden, ist hier festzulegen, (1) ob der Datensatz durch einen korrigierten Datensatz zu ersetzen ist oder der gesamte Datensatz gelöscht werden muss, (2) ob der Datensatz von Anfang an fehlerhaft war (irriger Eintrag) oder sich die Daten nachträglich geändert haben.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis_Portal">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.VSTR.Eintragungsanordnung_allgemein">
+        <xs:sequence>
+          <xs:element name="loeschung_Aenderung_der_Eintragung_im_Schuldnerverzeichnis" minOccurs="0" type="tns:Code.VSTR.Schuldnerverzeichnis_Loeschungsgruende">
+            <xs:annotation>
+              <xs:documentation>Dieses Element findet Verwendung im Datenaustausch zwischen zentralem Vollstreckungsgericht und Vollstreckungsportal. Es wird außerdem durch das Vollstreckungsportal für die Nachrichten an die Abdruckempfänger genutzt.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Eintragungsanordnung_allgemein">
+    <xs:annotation>
+      <xs:documentation>Dieser Typ ist die Basis für die Typen Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis und Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis_Portal.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="auswahl_Anordnungsbehoerde_Eintragungsgrund">
+        <xs:annotation>
+          <xs:documentation>Hier sind die Stelle, von der die Eintragungsanordnung stammt, anzugeben und der Grund der Eintragung.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="anordnung_Gerichtsvollzieher_Vollstreckungsbehoerde">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="auswahl_Gerichtsvollzieher_Vollstreckungsbehoerde">
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="gerichtsvollzieher" type="tns:Type.VSTR.Gerichtsvollzieher" />
+                        <xs:element name="vollstreckungsbehoerde" type="tns:Type.VSTR.Vollstreckungsbehoerde" />
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="eintragungsgrund_Gerichtsvollzieher_Vollstreckungsbehoerde" type="tns:Code.VSTR.Eintragungsgruende.Gerichtsvollzieher_Vollstreckungsbehoerde">
+                    <xs:annotation>
+                      <xs:documentation>Jede Eintragungsanordnung kann nur einen Eintragungsgrund enthalten.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="anordnung_Insolvenzgericht">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="insolvenzgericht" type="tns:Code.GDS.Gerichte" />
+                  <xs:element name="eintragungsgrund_Insolvenzgericht" type="tns:Code.VSTR.Eintragungsgruende.Insolvenzgericht">
+                    <xs:annotation>
+                      <xs:documentation>Jede Eintragungsanordnung kann nur einen Eintragungsgrund enthalten.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datum_Erlass_des_Beschlusses" type="xs:date" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="aktenzeichen.Eintragungsanordnung" type="xoev-lc:String.Latin" />
+      <xs:element name="datum_der_Eintragungsanordnung" type="xs:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Entscheidung_Schuldnerwiderspruch">
+    <xs:sequence>
+      <xs:element name="eintragungsanordnung_allgemein" type="tns:Type.VSTR.Eintragungsanordnung_allgemein" />
+      <xs:element name="datum_der_Entscheidung" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Hier ist das Datum der Entscheidung über den Schuldnerwiderspruch anzugeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="inhalt_der_Entscheidung" type="tns:Code.VSTR.Entscheidungsinhalt_Schuldnerwiderspruch">
+        <xs:annotation>
+          <xs:documentation>Hier ist der Inhalt der Entscheidung über den Schuldnerwiderspruch anzugeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="korrektur_Loeschung" minOccurs="0" type="tns:Code.VSTR.Korrektur_Loeschung">
+        <xs:annotation>
+          <xs:documentation>Soll eine bereits übermittelte Eintragung geändert werden, ist hier festzulegen, (1) ob der Datensatz durch einen korrigierten Datensatz zu ersetzen ist oder der gesamte Datensatz gelöscht werden muss, (2) ob der Datensatz von Anfang an fehlerhaft war (irriger Eintrag) oder sich die Daten nachträglich geändert haben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Geburt_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="geburtsdatum" minOccurs="0" type="xs:date" />
+      <xs:element name="geburtsort" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ort" type="xoev-lc:String.Latin" />
+            <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten">
+              <xs:annotation>
+                <xs:documentation>Zulässige Einträge sind definiert in der Liste xj_0050_wl_staaten_x_x.xsd. Standardwert: DE. Verwendet werden die zweibuchstabigen Abkürzungen aus dem vom Auswärtigen Amt herausgegebenen Verzeichnis der Staatennamen für den amtlichen Gebrauch in der Bundesrepublik Deutschland (http://www.auswaertiges-amt.de/www/de/infoservice/download/pdf/publikationen/staatennamen.pdf). Diese entsprechen der ISO 3166-1 (http://www.iso.ch/iso/en/prods-services/iso3166ma/index.html).</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Gerichtsvollzieher">
+    <xs:sequence>
+      <xs:element name="dienstbezeichnung" type="tns:Code.VSTR.Gerichtsvollzieher_Dienstbezeichnung" />
+      <xs:element name="vorname" type="xoev-lc:String.Latin" />
+      <xs:element name="name" type="xoev-lc:String.Latin" />
+      <xs:element name="amtsgericht" type="tns:Code.GDS.Gerichte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Grunddaten_Extern_Extern">
+    <xs:sequence>
+      <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis" />
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+      <xs:annotation>
+        <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="instanznummer" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Mit diesem Element ist nicht die juristische Bezeichnung einer Instanz gemeint. Das Element dient vielmehr als Schlüsselfeld für interne Referenzierungen. Die Instanznummer muss für das aktuelle XML-Instanzdokument eindeutig sein und identifiziert die jeweiligen Instanzdaten. Im Bereich der Kommunikation mit dem zentralen Vollstreckungsgerich verwendet der Absender einer Nachricht immer den Wert "1". Bei den Instanzdaten des Empfängers wird immer der Wert "2" übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sachgebiet" type="tns:Code.GDS.Sachgebiet">
+        <xs:annotation>
+          <xs:documentation>Dieses Element dient der Bezeichnung des Sachgebiets und bezieht sich auf eine Instanz. Die zulässigen Werte sind im Wertelisten-Schema "xj_0010_wl_allgemein_x_x.xsd" aufgeführt.
+Bei den Instanzdaten des Vollstreckungsportals, des zentralen Vollstreckungsgerichts und der Gerichtsvollzieher/Vollstreckungsbehörden ist hier entweder der Wert "Schuldnerverzeichnissachen" oder der Wert "Vermögensverzeichnissachen" zu übergeben. Bei den Instanzdaten des Insolvenzgerichts ist hier stets der Wert "Insolvenzsachen" zu übergeben. Bei den Instanzdaten anderer Beteiligter ist hier stets der Wert "Zwangsvollstreckungssachen" zu übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="auswahl_Instanzbehoerde">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="gerichtsvollzieher_Vollstreckungsbehoerde" type="xoev-lc:String.Latin" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="aktenzeichen" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier steht das Aktenzeichen, unter dem die Instanzbehörde (siehe oben) das Verfahren führt. Bei der Übermittlung verfahrenseinleitender Dokumente ist hier "neu" einzutragen. Wenn das Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, erhält das Element den Wert "unbekannt". Bei den Instanzdaten des zentralen Vollstreckungsgerichts und des Vollstreckungsportals wird stets ein Nullwert übergeben, da diese Stellen bei der Verwaltung des Schuldnerverzeichnisses und der Vermögensverzeichnisse keine Aktenzeichen führen.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Nachrichtenkopf_Extern_Extern">
+    <xs:complexContent>
+      <xs:extension base="tns:Type.GDS.Nachrichtenkopf">
+        <xs:sequence>
+          <xs:element name="absender" type="xoev-lc:String.Latin" />
+          <xs:element name="empfaenger" type="xoev-lc:String.Latin" />
+          <xs:element name="ereignis">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="content" fixed="Schuldnerverzeichnisabdrucke" type="xoev-lc:String.Latin" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Nachrichtenkopf_Extern_zentrales_Vollstreckungsgericht">
+    <xs:sequence>
+      <xs:element name="aktenzeichen.Absender" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+      <xs:element name="auswahl_Absender">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="sonstige" type="xoev-lc:String.Latin" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="empfaenger" type="tns:Code.GDS.Gerichte" />
+      <xs:element name="ereignis" type="tns:Code.VSTR.Ereignis.Zentrales_Vollstreckungsgericht" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Nachrichtenkopf_zentrales_Vollstreckungsgericht_Extern">
+    <xs:sequence>
+      <xs:element name="aktenzeichen.Empfaenger" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="erstellungszeitpunkt" type="xs:dateTime" />
+      <xs:element name="auswahl_Absender">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="sonstige" type="xoev-lc:String.Latin" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="auswahl_Empfaenger">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gericht" type="tns:Code.GDS.Gerichte" />
+            <xs:element name="sonstige" type="xoev-lc:String.Latin" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ereignis" type="tns:Code.VSTR.Ereignis.Zentrales_Vollstreckungsgericht" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Natuerliche_Person_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="voller_Name" type="tns:Type.VSTR.Voller_Name_Schuldnerverzeichnis">
+        <xs:annotation>
+          <xs:documentation>Pro Beteiligten ist nur ein Element "Voller_Name" zulässig.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="weiterer_Name" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>z.B. Ordens-, Künstler- oder Aliasname. Im Schuldnerverzeichnis werden die Echtpersonalien eingetragen, ggf. mit der zusätzlichen Angabe eines Künstler- oder Aliasnamens. Vollständige Aliaspersonalienen, die es erfordern würden, dass pro Eintragungsnachricht mehrere Elemente Beteilung bzw. Beteiligter übermittelt werden müssen, werden nicht eingetragen.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="handelnd_unter" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier kann der Name der Firma eines Einzelkaufmannes eingetragen werden.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geburt" type="tns:Type.VSTR.Geburt_Schuldnerverzeichnis" />
+      <xs:element name="geschlecht" type="tns:Code.GDS.Geschlecht">
+        <xs:annotation>
+          <xs:documentation>Nullwert nicht zulässig</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anschrift" maxOccurs="unbounded" type="tns:Type.VSTR.Anschrift_Schuldnerverzeichnis" />
+      <xs:element name="auskunftssperre" minOccurs="0" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Organisation_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="bezeichnung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="bezeichnung_Aktuell" type="xoev-lc:String.Latin" />
+            <xs:element name="bezeichnung_Alt" minOccurs="0" maxOccurs="unbounded" type="xoev-lc:String.Latin" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="kurzbezeichnung" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="rechtsform" type="tns:Code.GDS.Rechtsform">
+        <xs:annotation>
+          <xs:documentation>Nullwert nicht zulässig</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sitz" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Nullwert nicht zulässig</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ort" type="xoev-lc:String.Latin" />
+            <xs:element name="staat" minOccurs="0" type="tns:Code.GDS.Staaten" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="namenszusatz_fuer_Organisationen" minOccurs="0" type="xoev-lc:String.Latin" />
+      <xs:element name="auswahl_Registereintragung" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="inlaendisches_Registergericht">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="registergericht_Ort" type="tns:Code.GDS.Gerichte" />
+                  <xs:element name="registerart" type="tns:Code.VSTR.Registerart_Mobiliarvollstreckung" />
+                  <xs:element name="registernummer" type="xoev-lc:String.Latin" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="sonstige_Registerbehoerde">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="registerbehoerde" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Hier wird eine Langbezeichnung  der Registerbehörde übergeben, wenn diese nicht ein inländisches Registergericht ist.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="registerbezeichnung" type="xoev-lc:String.Latin">
+                    <xs:annotation>
+                      <xs:documentation>Dieses Element enthält die Bezeichnung in dem Register.</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="anschrift" maxOccurs="unbounded" type="tns:Type.VSTR.Anschrift_Schuldnerverzeichnis" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Sendungsdaten_Schuldnerverzeichnis">
+    <xs:annotation>
+      <xs:documentation>Sendungsdaten nehmen alle Informationen auf, die die jeweils vorliegende Sendung betreffen. Sendungsübergreifende Informationen sind in den Verfahrensdaten enthalten.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="absenderkennung" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Angabe der OSCI-Postfachadresse (Govello-ID)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="papiervorgang" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Dient der Kennzeichnung, ob es sich um einen Papiervorgang in elektronischer Form handelt. Im Bereich der zentralen Führung der Schuldnerverzeichnisse und der zentralen Verwaltung der Vermögesnverzeichnisse liegt kein Papiervorgang mehr vor. Es ist daher der Wert N (false) zu übergeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Uebermittlung_Vermoegensverzeichnis">
+    <xs:sequence>
+      <xs:element name="auswahl_Anordnende_Stelle">
+        <xs:annotation>
+          <xs:documentation>Hier ist d. Gerichtsvollzieher(in) oder die Vollstreckungsbehörde anzugeben, der/die das Vermögensverzeichnis abnimmt.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="gerichtsvollzieher" type="tns:Type.VSTR.Gerichtsvollzieher" />
+            <xs:element name="vollstreckungsbehoerde" type="tns:Type.VSTR.Vollstreckungsbehoerde" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="aktenzeichen.anordnende_Stelle" type="xoev-lc:String.Latin" />
+      <xs:element name="datum_des_Vermoegensverzeichnisses" type="xs:date" />
+      <xs:element name="art_des_Vermoegensverzeichnisses" type="tns:Code.VSTR.Vermoegensverzeichnis_Art">
+        <xs:annotation>
+          <xs:documentation>Hier wird klargestellt, ob das Vermögensverzeichnis beruht auf (1) der erstmaligen Vermögensauskunft d. Schuldners/Schuldnerin, ggf. nach Ablauf der zweijährigen Löschfrist, (2) einer erneuten Vermögensauskunft nach §  802d ZPO oder (3) der Nachbesserung (Ergänzung) eines bereits übermittelten Vermögensverzeichnisses.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="korrektur_Loeschung" minOccurs="0" type="tns:Code.VSTR.Korrektur_Loeschung">
+        <xs:annotation>
+          <xs:documentation>Soll eine bereits übermittelte Eintragung geändert werden, ist hier festzulegen, (1) ob der Datensatz durch einen korrigierten Datensatz zu ersetzen ist oder der gesamte Datensatz gelöscht werden muss, (2) ob der Datensatz von Anfang an fehlerhaft war (irriger Eintrag) oder sich die Daten nachträglich geändert haben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dokumentenname" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier ist der Dateiname des beigefügten Vermögensverzeichnisses anzugeben.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Voller_Name_Schuldnerverzeichnis">
+    <xs:sequence>
+      <xs:element name="vorname" maxOccurs="unbounded" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Nullwert nicht zulässig</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rufname" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Das Element Rufname gibt bei mehreren Vornamen an, welcher Vorname der Rufname ist.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="titel" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier werden akademische Titel aufgeführt, die vor dem Vornamen stehen, z.B. "Professor", "Dr.", "Prof. Dr." usw.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="namensvorsatz" minOccurs="0" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Hier werden Adelstitel aufgeführt, die vor dem Nachnamen stehen, z.B. "Graf von"</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nachname" type="xoev-lc:String.Latin">
+        <xs:annotation>
+          <xs:documentation>Nullwert nicht zulässig</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="geburtsname" minOccurs="0" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Type.VSTR.Vollstreckungsbehoerde">
+    <xs:sequence>
+      <xs:element name="name" type="xoev-lc:String.Latin" />
+      <xs:element name="ort" type="xoev-lc:String.Latin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nachricht.vstr.entscheidung_schuldnerwiderspruch.0900001">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_Extern_zentrales_Vollstreckungsgericht" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Verarbeitungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis" />
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="entscheidung_Schuldnerwiderspruch" type="tns:Type.VSTR.Entscheidung_Schuldnerwiderspruch" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.entscheidung_schuldnerwiderspruch_eintragungsbestaetigung.0900002">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_zentrales_Vollstreckungsgericht_Extern" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Verarbeitungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis" />
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="entscheidung_Schuldnerwiderspruch" type="tns:Type.VSTR.Entscheidung_Schuldnerwiderspruch" />
+              <xs:element name="ergebnis_der_Verarbeitung" type="tns:Code.VSTR.Verarbeitungsergebnis_Schuldnerverzeichnis">
+                <xs:annotation>
+                  <xs:documentation>Hier wird nicht das Ergebnis formaler Prüfungen (z.B. Signaturprüfung, Virenprüfung, Authentifizierung usw.) mitgeteilt.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.schuldnerverzeichnis_eintragung_korrektur.0900003">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_Extern_zentrales_Vollstreckungsgericht" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Verarbeitungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis" />
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation">
+                      <xs:annotation>
+                        <xs:documentation>Hier können das Produkt, der jeweilige Softwarehersteller sowie die aktuelle Version des Produkts genannt werden.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis" />
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="eintragungsanordnung" type="tns:Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.schuldnerverzeichnis_verarbeitungsbestaetigung_portal.0900004">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_zentrales_Vollstreckungsgericht_Extern" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Verarbeitungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis" />
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation">
+                      <xs:annotation>
+                        <xs:documentation>Hier können die genutzte Software, der Hersteller sowie die aktuelle Version angegeben werden.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis" />
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="eintragungsanordnung" type="tns:Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis_Portal" />
+              <xs:element name="ergebnis_der_Verarbeitung" type="tns:Code.VSTR.Verarbeitungsergebnis_Schuldnerverzeichnis">
+                <xs:annotation>
+                  <xs:documentation>Hier wird nicht das Ergebnis formaler Prüfungen (z.B. Signaturprüfung, Virenprüfung, Authentifizierung usw.) mitgeteilt.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.schuldnerverzeichnisabdrucke.0900005">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_Extern_Extern" />
+        <xs:element name="grunddaten" type="tns:Type.VSTR.Grunddaten_Extern_Extern" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="mitteilungsdaten" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="eintragungsanordnung" type="tns:Type.VSTR.Eintragungsanordnung_Schuldnerverzeichnis_Portal" />
+                    <xs:element name="verfahrensdaten">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Die Verfahresnummer dient der eindeutigen Identifizierung eines Datensatzes im Schuldnerverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="beteiligter" type="tns:Type.VSTR.Auswahl_Beteiligter_Schuldnerverzeichnis" />
+                          <xs:element name="anrede" type="tns:Code.GDS.Anrede.Partei" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="abdruckzeitraum">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="beginn" type="xs:dateTime" />
+                    <xs:element name="ende" type="xs:dateTime" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.vermoegensverzeichnis_uebermittlung_korrektur.0900006">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_Extern_zentrales_Vollstreckungsgericht" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Eintragungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Hier genau eine Beteiligung: Es wird immer nur eine Person als Schuldner übermittelt und es besteht auch kein Bedarf für die Übermittlung vollständiger Aliaspersonalien.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation">
+                      <xs:annotation>
+                        <xs:documentation>Hier können das Produkt, der jeweilige Softwarehersteller sowie die aktuelle Version des Produkts genannt werden.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis">
+                <xs:annotation>
+                  <xs:documentation>Sendungsdaten nehmen alle Informationen auf, die die jeweils vorliegende Sendung betreffen. Sendungsübergreifende Informationen sind in den Verfahrensdaten enthalten.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="uebermittlung_Vermoegensverzeichnis" type="tns:Type.VSTR.Uebermittlung_Vermoegensverzeichnis" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.vermoegensverzeichnis_uebermittlungsbestaetigung_portal.0900007">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_zentrales_Vollstreckungsgericht_Extern" />
+        <xs:element name="grunddaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="verfahrensdaten">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                      <xs:annotation>
+                        <xs:documentation>Die Verfahrensnummer dient der eindeutigen Identifizierung eines Datensatzes des zentralen Vollstreckungsgerichts. Bei der erstmaligen Übermittlung der Daten ist hier "neu" einzutragen. Soll auf einen bereits übermittelten Datensatz Bezug genommen werden, ist hier immer die Verfahrensnummer anzugeben, die das zentrale Vollstreckungsgericht mit der Eintragungsbestätigung übermittelt.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="instanzdaten" minOccurs="2" maxOccurs="2" type="tns:Type.VSTR.Instanzdaten_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Die Instanzdaten werden genau zweimal übergeben.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="beteiligung" type="tns:Type.VSTR.Beteiligung_Schuldnerverzeichnis">
+                      <xs:annotation>
+                        <xs:documentation>Hier genau eine Beteiligung: Es wird immer nur eine Person als Schuldner übermittelt und es besteht auch kein Bedarf für die Übermittlung vollständiger Aliaspersonalien.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="herstellerinformation" minOccurs="0" type="tns:Type.GDS.Herstellerinformation">
+                      <xs:annotation>
+                        <xs:documentation>Hier können die genutzte Software, der Hersteller sowie die aktuelle Version angegeben werden.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sendungsdaten" type="tns:Type.VSTR.Sendungsdaten_Schuldnerverzeichnis">
+                <xs:annotation>
+                  <xs:documentation>Sendungsdaten nehmen alle Informationen auf, die die jeweils vorliegende Sendung betreffen. Sendungsübergreifende Informationen sind in den Verfahrensdaten enthalten.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="xjustizVersion" type="xoev-lc:String.Latin" use="required" fixed="2.1.0">
+              <xs:annotation>
+                <xs:documentation>Dieses Attribut wird verwendet,um sicherzustellen, dass jedes Instanzdokument gegen die "richtige" Version des XML-Schemas geprüft wird. Angegeben werden hier alle drei Stellen der Versionsnummer. In der Dateibezeichnung sind nur die ersten beiden Stellen aufgeführt, dies ermöglicht es, an einzelnen Dateien Fehlerbereinigungen und dergleichen vorzunehmen, ohne dass die anderen Bestandteile von XJustiz geändert werden müssen.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="uebermittlung_Vermoegensverzeichnis" type="tns:Type.VSTR.Uebermittlung_Vermoegensverzeichnis" />
+              <xs:element name="ergebnis_der_Verarbeitung" type="tns:Code.VSTR.Verarbeitungsergebnis_Schuldnerverzeichnis">
+                <xs:annotation>
+                  <xs:documentation>Hier wird nicht das Ergebnis formaler Prüfungen (z.B. Signaturprüfung, Virenprüfung, Authentifizierung usw.) mitgeteilt.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nachricht.vstr.vermoegensverzeichnis_vollabzug.0900008">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nachrichtenkopf" type="tns:Type.VSTR.Nachrichtenkopf_Extern_Extern" />
+        <xs:element name="grunddaten" type="tns:Type.VSTR.Grunddaten_Extern_Extern" />
+        <xs:element name="fachdaten">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nachricht.ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der ein Kommunikationsprozess begonnen wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="antwort_ID" minOccurs="0" type="xoev-lc:String.Latin">
+                <xs:annotation>
+                  <xs:documentation>Eindeutige Kennzeichnung einer Nachricht, mit der auf eine Nachricht geantwortet wird.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="mitteilungsdaten" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="uebermittlung_Vermoegensverzeichnis" type="tns:Type.VSTR.Uebermittlung_Vermoegensverzeichnis" />
+                    <xs:element name="verfahrensdaten">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="verfahrensnummer" type="xoev-lc:String.Latin">
+                            <xs:annotation>
+                              <xs:documentation>Die Verfahresnummer dient der eindeutigen Identifizierung eines Datensatzes im Schuldnerverzeichnis.</xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="beteiligter" type="tns:Type.VSTR.Auswahl_Beteiligter_Schuldnerverzeichnis" />
+                          <xs:element name="anrede" type="tns:Code.GDS.Anrede.Partei" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="abdruckzeitraum">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="beginn" type="xs:dateTime" />
+                    <xs:element name="ende" type="xs:dateTime" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
