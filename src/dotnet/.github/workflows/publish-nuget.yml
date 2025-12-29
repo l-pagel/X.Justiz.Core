@@ -1,0 +1,53 @@
+name: Publish NuGet package
+
+on:
+  push:
+    tags:
+      - 'v*'   # e.g. v1.2.3
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # 1) Get version from tag: v1.2.3 -> 1.2.3
+      - name: Get version from tag
+        id: get_version
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      # 2) Update the <Version> element in the csproj
+      - name: Update csproj version
+        run: |
+          VERSION='${{ steps.get_version.outputs.version }}'
+          CSProj="src/dotnet/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj"
+
+          echo "Setting <Version>$VERSION</Version> in $CSProj"
+
+          # Replace the <Version>...</Version> in PropertyGroup:
+          sed -i "s#<Version>.*</Version>#<Version>$VERSION</Version>#g" "$CSProj"
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Pack
+        run: dotnet pack "$CSProj" --configuration Release --no-build -o ./artifacts
+
+      - name: Push to NuGet
+        run: >
+          dotnet nuget push "./artifacts/*.nupkg"
+          --api-key ${{ secrets.NUGET_API_KEY }}
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
