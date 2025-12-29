@@ -5,34 +5,27 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Eine Organisation (juristische Person).
-/// An organization (legal entity).
 /// </summary>
 public class Organisation
 {
     /// <summary>
-    /// Die Bezeichnung der Organisation.
-    /// The designation of the organization.
+    /// Kanzleiname
     /// </summary>
     [XmlElement("bezeichnung", Namespace = XJustizExport.Tns)]
     public Bezeichnung? Bezeichnung { get; set; }
-
     /// <summary>
-    /// Die Anschrift der Organisation.
-    /// The address of the organization.
+    /// Auch Postfach-Anschriften fallen hierunter.
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizExport.Tns)]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
-    /// Telekommunikationsverbindungen der Organisation.
-    /// Telecommunication connections of the organization.
+    /// Informationen zur Telekommunikation (Telefon, Email, etc.).
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizExport.Tns)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
-
     /// <summary>
-    /// Bankverbindung der Organisation.
-    /// Bank account of the organization.
+    /// Hier steht die allgemeine Bankverbindung.
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizExport.Tns)]
     public Bankverbindung? Bankverbindung { get; set; }

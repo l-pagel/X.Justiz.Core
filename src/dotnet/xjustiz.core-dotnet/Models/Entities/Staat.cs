@@ -4,20 +4,13 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Repräsentiert einen Staat als Code.
-/// Represents a country / state as a code.
 /// </summary>
 public class Staat
 {
-    /// <summary>
-    /// Die Version der Codeliste.
-    /// The version of the code list.
-    /// </summary>
     [XmlAttribute("listVersionID")]
     public string ListVersionId { get; set; } = "3.5.1";
-
     /// <summary>
-    /// Der Ländercode.
-    /// The country code.
+    /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom Code-Typ 3" beschrieben.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     public string Code { get; set; } = string.Empty;

@@ -8,16 +8,11 @@ using System.Xml.Serialization;
 /// </summary>
 public class DokumentklasseCode
 {
-    /// <summary>
-    /// Die Version der Codeliste.
-    /// The version of the code list.
-    /// </summary>
     [XmlAttribute("listVersionID")]
     public string ListVersionId { get; set; } = "3.5.1";
 
     /// <summary>
-    /// Der Code der Dokumentklasse.
-    /// The code of the document class.
+    /// In diesem XML-Element wird der Code einer Codeliste übermittelt.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     public string Code { get; set; } = string.Empty;

@@ -5,13 +5,11 @@ using xjustiz.core_dotnet.Models.Codes;
 
 /// <summary>
 /// Auswahlstruktur für eine Instanzbehörde.
-/// Selection structure for an instance authority.
 /// </summary>
 public class AuswahlInstanzbehoerde
 {
     /// <summary>
-    /// Das Gericht der Instanz.
-    /// The court of the instance.
+    /// Hier ist die jeweilige XJustiz-ID des Gerichts oder der Staatsanwaltschaft aus der Codeliste anzugeben.
     /// </summary>
     [XmlElement("gericht", Namespace = XJustizExport.Tns)]
     public GerichtCode? Gericht { get; set; }

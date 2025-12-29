@@ -9,15 +9,13 @@ using System.Xml.Serialization;
 public class GerichtCode
 {
     /// <summary>
-    /// Die Version der Codeliste.
-    /// The version of the code list.
+    /// Die Version der Codeliste. Dokumentation aus XOEV-Bibliothek: Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen. Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).
     /// </summary>
     [XmlAttribute("listVersionID")]
     public string ListVersionId { get; set; } = "3.5.1";
 
     /// <summary>
-    /// Der Gerichtscode.
-    /// The court code.
+    /// In diesem XML-Element wird der Code einer Codeliste übermittelt.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     public string Code { get; set; } = string.Empty;

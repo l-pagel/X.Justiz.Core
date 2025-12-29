@@ -6,34 +6,26 @@ using xjustiz.core_dotnet.Models;
 
 /// <summary>
 /// Eine Gruppe von Feldern.
-/// A group of fields.
 /// </summary>
 public class Feldgruppe
 {
     /// <summary>
     /// Der Name der Feldgruppe.
-    /// The name of the field group.
     /// </summary>
     [XmlElement("name", Namespace = XJustizExport.Tns, Order = 1)]
     public string? Name { get; set; }
-
     /// <summary>
-    /// Eine Beschreibung der Feldgruppe.
-    /// A description of the field group.
+    /// Die Hinweise und Erläuterungen zu einer Feldgruppe.
     /// </summary>
     [XmlElement("beschreibung", Namespace = XJustizExport.Tns, Order = 2)]
     public string Beschreibung { get; set; } = string.Empty;
-
     /// <summary>
-    /// Verschachtelte Unter-Feldgruppen.
-    /// Nested sub-field groups.
+    /// Über Unterfeldgruppe erfolgt die hierarchische Unterteilung einer Feldgruppe in weitere Feldgruppen.
     /// </summary>
     [XmlElement("unterfeldgruppe", Namespace = XJustizExport.Tns, Order = 3)]
     public List<Feldgruppe>? UnterFeldgruppen { get; set; }
-
     /// <summary>
-    /// Die Felder in dieser Gruppe.
-    /// The fields in this group.
+    /// Über Feld erfolgt die Unterteilung einer Feldgruppe in konkrete Felder.
     /// </summary>
     [XmlElement("feld", Namespace = XJustizExport.Tns, Order = 4)]
     public List<Feld>? Felder { get; set; }

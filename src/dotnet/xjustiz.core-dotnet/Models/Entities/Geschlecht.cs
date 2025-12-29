@@ -4,13 +4,11 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Repräsentiert das Geschlecht einer Person als Code.
-/// Represents the gender of a person as a code.
 /// </summary>
 public class Geschlecht
 {
     /// <summary>
-    /// Der Code für das Geschlecht.
-    /// The code for the gender.
+    /// Mögliche Codes können der Codeliste Code.INSO.IRI.Fehlercode entnommen werden.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     public string? Code { get; set; }

@@ -4,41 +4,31 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Der volle Name einer natürlichen Person.
-/// The full name of a natural person.
 /// </summary>
 public class VollerName
 {
     /// <summary>
-    /// Der Vorname.
-    /// The first name.
+    /// Bei ggfls. mehreren Vornamen werden diese alle in diesem Element in ihrer Reihenfolge eingetragen.
     /// </summary>
     [XmlElement("vorname", Namespace = XJustizExport.Tns)]
     public string? Vorname { get; set; }
-
     /// <summary>
-    /// Der Rufname.
-    /// The called name / preferred name.
+    /// Der Rufname gibt bei mehreren Vornamen an, welcher Vorname der Rufname ist. Der Rufname wird häufig als eindeutiges Element benötigt.
     /// </summary>
     [XmlElement("rufname", Namespace = XJustizExport.Tns)]
     public string? Rufname { get; set; }
-
     /// <summary>
-    /// Der Titel.
-    /// The title.
+    /// Hier werden akademische und nichtakademische Titel aufgeführt, die vor dem Vornamen stehen, z.B. "Professor", "Dr.", "Prof. Dr." usw.
     /// </summary>
     [XmlElement("titel", Namespace = XJustizExport.Tns)]
     public string? Titel { get; set; }
-
     /// <summary>
-    /// Der Namensvorsatz (z.B. "von").
-    /// The name prefix (e.g., "von").
+    /// Hier werden Adelstitel aufgeführt, die vor dem Nachnamen stehen, z.B. "Graf von"
     /// </summary>
     [XmlElement("namensvorsatz", Namespace = XJustizExport.Tns)]
     public string? Namensvorsatz { get; set; }
-
     /// <summary>
-    /// Der Nachname.
-    /// The last name / surname.
+    /// Falls der Nachname nicht bekannt ist, ist "nicht bekannt" anzugegeben.
     /// </summary>
     [XmlElement("nachname", Namespace = XJustizExport.Tns)]
     public string? Nachname { get; set; }

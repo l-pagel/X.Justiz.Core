@@ -5,42 +5,34 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Eine natürliche Person.
-/// A natural person.
 /// </summary>
 public class NatuerlichePerson
 {
     /// <summary>
-    /// Der volle Name der Person.
-    /// The full name of the person.
+    /// Der volle Name einer natürlichen Person.
     /// </summary>
     [XmlElement("vollerName", Namespace = XJustizExport.Tns)]
     public VollerName VollerName { get; set; } = new();
 
     /// <summary>
-    /// Das Geschlecht der Person.
-    /// The gender of the person.
+    /// Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.
     /// </summary>
     [XmlElement("geschlecht", Namespace = XJustizExport.Tns)]
     public Geschlecht Geschlecht { get; set; } = new();
-
     /// <summary>
-    /// Die Anschrift der Person.
-    /// The address of the person.
+    /// Auch Postfach-Anschriften fallen hierunter.
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizExport.Tns)]
     [XJustizCore]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
-    /// Telekommunikationsverbindungen der Person.
-    /// Telecommunication connections of the person.
+    /// Informationen zur Telekommunikation (Telefon, Email, etc.). Information on telecommunication (phone, email, etc.).
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizExport.Tns)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
-
     /// <summary>
-    /// Bankverbindung der Person.
-    /// Bank account of the person.
+    /// Hier steht die allgemeine Bankverbindung.
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizExport.Tns)]
     public Bankverbindung? Bankverbindung { get; set; }

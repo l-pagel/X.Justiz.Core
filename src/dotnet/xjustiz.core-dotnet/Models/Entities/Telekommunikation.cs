@@ -4,20 +4,17 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Informationen zur Telekommunikation (Telefon, Email, etc.).
-/// Information on telecommunication (phone, email, etc.).
 /// </summary>
 public class Telekommunikation
 {
     /// <summary>
-    /// Die Art der Telekommunikation (Code).
-    /// The type of telecommunication (code).
+    /// Art der Telekommunikation als Code.
     /// </summary>
     [XmlElement("telekommunikationsart", Namespace = XJustizExport.Tns)]
     public Telekommunikationsart? Telekommunikationsart { get; set; }
 
     /// <summary>
-    /// Die Verbindungsdaten (z.B. Telefonnummer oder E-Mail-Adresse).
-    /// The connection data (e.g., phone number or email address).
+    /// Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder dergleichen mitgeteilt.
     /// </summary>
     [XmlElement("verbindung", Namespace = XJustizExport.Tns)]
     public string? verbindung { get; set; }

@@ -6,20 +6,17 @@ using xjustiz.core_dotnet.Models.Entities;
 
 /// <summary>
 /// Fachspezifische Daten eines Dokuments.
-/// Specialized data of a document.
 /// </summary>
 public class XjustizFachspezifischeDaten
 {
     /// <summary>
-    /// Die Dokumentklasse.
-    /// The document class.
+    /// Bezeichnet die Dokumentklasse anhand der vorgegebenen Werteliste. Diese ist für einen reibungslosen, systemübergreifenden Austausch bewusst knappgehalten. Für eine spezifischere Bezeichnung kann das Element 'dokumententyp' verwendet werden.
     /// </summary>
     [XmlElement("dokumentklasse", Namespace = XJustizExport.Tns, Order = 1)]
     public DokumentklasseCode? Dokumentklasse { get; set; }
 
     /// <summary>
-    /// Die eigentliche Datei-Referenz.
-    /// The actual file reference.
+    /// Repräsentiert eine Datei.
     /// </summary>
     [XmlElement("datei", Namespace = XJustizExport.Tns, Order = 2)]
     public Datei Datei { get; set; } = new();
