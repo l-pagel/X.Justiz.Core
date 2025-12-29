@@ -2,9 +2,15 @@
 
   <PropertyGroup>
 	<ProjectGuid>06fa7ce5-d056-4930-9474-30b0b49b7500</ProjectGuid>
-	<Authors>Lukas M. Pagel, Samuel Stauss, Hamit Gueler</Authors>
-    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>xjustiz.core_dotnet</RootNamespace>
+	<Version>0.0.0</Version> <!--github action pipline will override--> 
+	<Authors>Lukas M. Pagel, Samuel Stauss, Hamit Gueler</Authors>
+	<Description>Models and utilities to use the X.Justiz-based X.Justiz.Core.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
+	<PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
+	  
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
