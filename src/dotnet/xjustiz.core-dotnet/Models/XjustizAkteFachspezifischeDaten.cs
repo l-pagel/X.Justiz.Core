@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Entities;
 
 /// <summary>
 /// Fachspezifische Daten einer Akte.
