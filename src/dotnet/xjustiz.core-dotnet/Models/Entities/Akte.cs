@@ -4,22 +4,27 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Repräsentiert eine Akte.
+/// Represents a file / case.
 /// </summary>
 public class Akte
 {
     /// <summary>
     /// Der Typ dient der eindeutigen Kennzeichnung von Schriftgutobjekten und entspricht dem xdomea-Typ 'IdentifikationObjektType'.
+    /// The type serves to uniquely identify document objects and corresponds to the xdomea type 'IdentifikationObjektType'.
     /// </summary>
     [XmlElement("identifikation", Namespace = XJustizExport.Tns, Order = 1)]
     public Identifikation Identifikation { get; set; } = new();
+
     /// <summary>
     /// In dieser Elementgruppe können Felder und/oder Feldgruppen, in denen mehrere Felder zusammengefasst sind, übermittelt werden. Da es hierfür keine festen Schema-Vorgaben gibt, darf diese Elementgruppe nur verwendet werden, wenn mit dem jeweiligen Kommunikationspartner Name und Inhalt der Felder und/oder Feldgruppen abgestimmt wurden. Es kann nicht davon ausgegangen werden, dass die hier hinterlegten Metadaten von Kommunikationspartnern, mit denen keine Absprachen erfolgten, ausgelesen werden können.
+    /// In this element group, fields and/or field groups in which several fields are summarized can be transmitted. Since there are no fixed schema specifications for this, this element group may only be used if the name and content of the fields and/or field groups have been agreed with the respective communication partner. It cannot be assumed that the metadata deposited here can be read by communication partners with whom no agreements have been made.
     /// </summary>
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizExport.Tns, Order = 2)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
 
     /// <summary>
     /// Fachspezifische Daten einer Akte.
+    /// Specialized data of a file/case.
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizExport.Tns, Order = 3)]
     public XjustizAkteFachspezifischeDaten FachspezifischeDaten { get; set; } = new();

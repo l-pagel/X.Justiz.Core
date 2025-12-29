@@ -2,6 +2,7 @@ namespace xjustiz.core_dotnet.Models;
 
 /// <summary>
 /// Enthält Konstanten für XJustiz-Namespaces.
+/// Contains constants for XJustiz namespaces.
 /// </summary>
 public static class XJustizExport
 {

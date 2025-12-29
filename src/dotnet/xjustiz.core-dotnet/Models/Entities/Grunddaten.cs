@@ -4,11 +4,13 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Grunddaten der Nachricht.
+/// Basic data of the message.
 /// </summary>
 public class Grunddaten
 {
     /// <summary>
     /// Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren mit sich bringt.
+    /// Procedures data captures all information that the respective procedure entails.
     /// </summary>
     [XmlElement("verfahrensdaten", Namespace = XJustizExport.Tns)]
     public Verfahrensdaten? Verfahrensdaten { get; set; }

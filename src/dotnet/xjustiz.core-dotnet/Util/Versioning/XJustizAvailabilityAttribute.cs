@@ -1,6 +1,7 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
 
-public sealed class XJustizAvailabilityAttribute(XJustizVersion introduced) : VersionAvailabilityAttribute((int)introduced)
+public sealed class XJustizAvailabilityAttribute(XJustizVersion introduced)
+    : VersionAvailabilityAttribute((int)introduced)
 {
     public XJustizVersion IntroducedIn => (XJustizVersion)IntroducedRaw;
 

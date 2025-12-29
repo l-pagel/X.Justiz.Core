@@ -13,6 +13,7 @@ public class DokumentklasseCode
 
     /// <summary>
     /// In diesem XML-Element wird der Code einer Codeliste übermittelt.
+    /// The code of a code list is transmitted in this XML element.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     public string Code { get; set; } = string.Empty;

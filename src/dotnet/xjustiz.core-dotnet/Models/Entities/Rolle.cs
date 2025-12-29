@@ -4,11 +4,13 @@ using System.Xml.Serialization;
 
 /// <summary>
 /// Repräsentiert eine Rolle in einem Verfahren.
+/// Represents a role in a proceeding.
 /// </summary>
 public class Rolle
 {
     /// <summary>
     /// Hier kann die fachliche Bezeichnung der Rolle des Beteiligten beschrieben werden.
+    /// The technical designation of the role of the participant can be described here.
     /// </summary>
     [XmlElement("rollenbezeichnung", Namespace = XJustizExport.Tns)]
     public Rollenbezeichnung Rollenbezeichnung { get; set; } = new();
