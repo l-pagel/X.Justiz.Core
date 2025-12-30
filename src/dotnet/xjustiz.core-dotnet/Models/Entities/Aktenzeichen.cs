@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Repräsentiert ein Aktenzeichen.
 /// Represents a file reference / case number.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Aktenzeichen
 {
     /// <summary>
@@ -13,5 +15,6 @@ public class Aktenzeichen
     /// Selection structure for file references.
     /// </summary>
     [XmlElement("auswahl_aktenzeichen", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public AuswahlAktenzeichen Auswahl { get; set; } = new();
 }

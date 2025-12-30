@@ -2,11 +2,13 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Eine natürliche Person.
 /// A natural person.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class NatuerlichePerson
 {
     /// <summary>
@@ -14,6 +16,7 @@ public class NatuerlichePerson
     /// The full name of a natural person.
     /// </summary>
     [XmlElement("vollerName", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public VollerName VollerName { get; set; } = new();
 
     /// <summary>
@@ -21,6 +24,7 @@ public class NatuerlichePerson
     /// A biological or grammatical gender can be specified here. This allows specialized systems to generate a salutation.
     /// </summary>
     [XmlElement("geschlecht", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Geschlecht Geschlecht { get; set; } = new();
 
     /// <summary>
@@ -28,6 +32,7 @@ public class NatuerlichePerson
     /// Post office box addresses also fall under this.
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
@@ -35,6 +40,7 @@ public class NatuerlichePerson
     /// Information on telecommunication (phone, email, etc.).
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
 
     /// <summary>
@@ -42,5 +48,6 @@ public class NatuerlichePerson
     /// Here is the general bank connection.
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Bankverbindung? Bankverbindung { get; set; }
 }

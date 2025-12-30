@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Repräsentiert die Bezeichnung einer Rolle als Code.
 /// Represents the designation of a role as a code.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Rollenbezeichnung
 {
     /// <summary>
@@ -13,6 +15,7 @@ public class Rollenbezeichnung
     /// The version of the code list. Documentation from XOEV library: The specific version of the code list to be used is transmitted with this XML attribute. Analogous to listURI, determining the version of a code list is mandatory when transmitting a code. However, the version can also already be defined in the XÖV standard (in this case, it is a code type 1 or 2).
     /// </summary>
     [XmlAttribute("listVersionID")]
+    [XJustizAvailability(XJustizVersion.Unknown)]
     public string ListVersionId { get; set; } = "3.5.1";
 
     /// <summary>
@@ -20,5 +23,6 @@ public class Rollenbezeichnung
     /// The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
     [XmlElement("code", Namespace = "")]
+    [XJustizAvailability(XJustizVersion.Unknown)]
     public string Code { get; set; } = string.Empty;
 }

@@ -2,11 +2,13 @@ namespace xjustiz.core_dotnet.Models;
 
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Entities;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Fachspezifische Daten einer Akte.
 /// Specialized data of a file/case.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V3_1_1)]
 public class XjustizAkteFachspezifischeDaten
 {
     /// <summary>
@@ -14,6 +16,7 @@ public class XjustizAkteFachspezifischeDaten
     /// Designates the file type based on the predefined value list. This is deliberately kept concise for smooth exchange. For a more specific designation, the field 'anzeigename' (display name) can be used.
     /// </summary>
     [XmlElement("aktentyp", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public Aktentyp Aktentyp { get; set; } = new();
 
     /// <summary>
@@ -21,6 +24,7 @@ public class XjustizAkteFachspezifischeDaten
     /// The display name allows the transmission of the designation of the file as it is displayed in the sending system as free text. More specific information on the file name can be transmitted here than is possible within the framework of the value list for the file type, e.g., 'Asylakte' (asylum file) as a more specific specification of the file type 'Behördenakte' (authority file).
     /// </summary>
     [XmlElement("anzeigename", Namespace = XJustizExport.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public string? Anzeigename { get; set; }
 
     /// <summary>
@@ -28,5 +32,6 @@ public class XjustizAkteFachspezifischeDaten
     /// Here is the file reference under which the station (see above) conducts the proceeding.
     /// </summary>
     [XmlElement("aktenzeichen", Namespace = XJustizExport.Tns, Order = 3)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public Aktenzeichen Aktenzeichen { get; set; } = new();
 }

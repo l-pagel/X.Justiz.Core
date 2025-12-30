@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Repräsentiert eine Rolle in einem Verfahren.
 /// Represents a role in a proceeding.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Rolle
 {
     /// <summary>
@@ -13,5 +15,6 @@ public class Rolle
     /// The technical designation of the role of the participant can be described here.
     /// </summary>
     [XmlElement("rollenbezeichnung", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Rollenbezeichnung Rollenbezeichnung { get; set; } = new();
 }

@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Daten zur Instanz.
 /// Data regarding the instance.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V3_1_1)]
 public class Instanzdaten
 {
     /// <summary>
@@ -13,6 +15,7 @@ public class Instanzdaten
     /// The element serves as a key field for internal referencing. The instance number must be unique for the current XML instance document and identifies the respective instance data.
     /// </summary>
     [XmlElement("instanznummer", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public string? Instanznummer { get; set; }
 
     /// <summary>
@@ -20,6 +23,7 @@ public class Instanzdaten
     /// Opportunity for additional information regarding the subject area.
     /// </summary>
     [XmlElement("sachgebietszusatz", Namespace = XJustizExport.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public string? Sachgebietszusatz { get; set; }
 
     /// <summary>
@@ -27,5 +31,6 @@ public class Instanzdaten
     /// The instance authority to be selected is a station that the process has passed through. This can be a court or a public prosecutor's office, a judicial authority, but also another authority. Usually, it corresponds to the court (public prosecutor's office) to which the message is addressed. Furthermore, other authorities (e.g., court of the previous instance, police in criminal proceedings) that have already processed the process/proceeding can be specified.
     /// </summary>
     [XmlElement("auswahl_instanzbehoerde", Namespace = XJustizExport.Tns, Order = 3)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public AuswahlInstanzbehoerde? AuswahlInstanzbehoerde { get; set; }
 }

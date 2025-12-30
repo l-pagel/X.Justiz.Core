@@ -1,32 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-	<ProjectGuid>06fa7ce5-d056-4930-9474-30b0b49b7500</ProjectGuid>
-    <RootNamespace>xjustiz.core_dotnet</RootNamespace>
-	<Version>0.0.0</Version> <!--github action pipline will override--> 
-	<Authors>Lukas M. Pagel, Samuel Stauss, Hamit Gueler</Authors>
-	<Description>Models and utilities to use the X.Justiz-based X.Justiz.Core.</Description>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
-	<PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
-	  
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-	<CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <ProjectGuid>06fa7ce5-d056-4930-9474-30b0b49b7500</ProjectGuid>
+        <RootNamespace>xjustiz.core_dotnet</RootNamespace>
+        <Version>0.0.0</Version> <!-- github action pipline will override -->
+        <Authors>Lukas M. Pagel, Samuel Stauss, Hamit Gueler</Authors>
+        <Description>Models and utilities to use the X.Justiz-based X.Justiz.Core.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+        <CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
 </Project>

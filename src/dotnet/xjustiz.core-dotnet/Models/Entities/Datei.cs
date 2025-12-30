@@ -2,11 +2,13 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Repräsentiert eine Datei.
 /// Represents a file.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Datei
 {
     /// <summary>
@@ -14,6 +16,7 @@ public class Datei
     /// The filename should be formed according to the syntax 'DocumentName_UUID.FileFormat'. The length of filenames must not exceed 90 characters including file extensions. Only letters of the German alphabet including umlauts Ä, ä, Ö, ö, Ü, ü and ß may be used in filenames. In addition, all digits and the characters 'underscore' and 'minus' may be used. Dots are only permitted as separators between the filename and the file extension. Dots may only be used in the filename for concatenated file extensions, e.g., for detached signature files (e.g., Document1.pdf.pkcs7). If a signed file is sent together with an associated signature file, the signature file must have exactly the same filename as the signed file, with the exception of the file format, which reflects the format of the signature file (identity of UUID and document name, e.g., Klage_UUID.pdf and Klage_UUID.pdf.pkcs7). This only applies to the first signature file created for a file. Any further signature file must have a different filename (e.g., addition of a digit), otherwise completely identical filenames will result. The length of filenames of signature files must also not exceed 90 characters including the signature file extensions. The XJustiz message attached to an EGVP message describes the content of the message and must always bear the filename xjustiz_nachricht.xml. If further XJustiz messages must be attached to the EGVP message, e.g., when forwarding messages from other participants or as part of files, a UUID must be prefixed to the filename of these XJustiz data sets (xjustiz_nachricht_UUID.xml).
     /// </summary>
     [XmlElement("dateiname", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string? Dateiname { get; set; }
 
     /// <summary>
@@ -21,5 +24,6 @@ public class Datei
     /// A document can consist of several files. For example, the pleading can be transmitted in one file and the associated signature in another file. Technically, both files together form the document. The same applies if further files are created for a submitted original file (representatives, versions, transfer notes, signature verification logs). The value list serves to specify the component type for the individual files. The component type 'Original' may only occur once for the same document.
     /// </summary>
     [XmlElement("bestandteil", Namespace = XJustizExport.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public List<Bestandteil> Bestandteile { get; set; } = new();
 }

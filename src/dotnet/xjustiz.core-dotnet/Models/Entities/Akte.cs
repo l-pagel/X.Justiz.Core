@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Repräsentiert eine Akte.
 /// Represents a file / case.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_2_1)]
 public class Akte
 {
     /// <summary>
@@ -13,6 +15,7 @@ public class Akte
     /// The type serves to uniquely identify document objects and corresponds to the xdomea type 'IdentifikationObjektType'.
     /// </summary>
     [XmlElement("identifikation", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V2_2_1)]
     public Identifikation Identifikation { get; set; } = new();
 
     /// <summary>
@@ -20,6 +23,7 @@ public class Akte
     /// In this element group, fields and/or field groups in which several fields are summarized can be transmitted. Since there are no fixed schema specifications for this, this element group may only be used if the name and content of the fields and/or field groups have been agreed with the respective communication partner. It cannot be assumed that the metadata deposited here can be read by communication partners with whom no agreements have been made.
     /// </summary>
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizExport.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
 
     /// <summary>
@@ -27,5 +31,6 @@ public class Akte
     /// Specialized data of a file/case.
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizExport.Tns, Order = 3)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
     public XjustizAkteFachspezifischeDaten FachspezifischeDaten { get; set; } = new();
 }

@@ -6,7 +6,7 @@ public enum XJustizVersion
     /// Unbekannte Version / Veröffentlichungsdatum.
     /// Unknown version / release date.
     /// </summary>
-    Unkmown = 0,
+    Unknown = 0,
 
     /// <summary>
     /// Gültig ab 31.10.2017

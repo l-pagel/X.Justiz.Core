@@ -2,11 +2,13 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Auswahlstruktur für eine Instanzbehörde.
 /// Selection structure for an instance authority.
 /// </summary>
+[XJustizAvailability(XJustizVersion.Unknown)]
 public class AuswahlInstanzbehoerde
 {
     /// <summary>
@@ -14,5 +16,6 @@ public class AuswahlInstanzbehoerde
     /// The respective XJustiz ID of the court or public prosecutor's office from the code list must be specified here.
     /// </summary>
     [XmlElement("gericht", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.Unknown)]
     public GerichtCode? Gericht { get; set; }
 }

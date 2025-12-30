@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Grunddaten der Nachricht.
 /// Basic data of the message.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Grunddaten
 {
     /// <summary>
@@ -13,5 +15,6 @@ public class Grunddaten
     /// Procedures data captures all information that the respective procedure entails.
     /// </summary>
     [XmlElement("verfahrensdaten", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Verfahrensdaten? Verfahrensdaten { get; set; }
 }

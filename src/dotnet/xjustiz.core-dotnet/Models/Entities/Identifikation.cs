@@ -2,11 +2,13 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Identifiziert ein Objekt eindeutig.
 /// Uniquely identifies an object.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class Identifikation
 {
     /// <summary>
@@ -14,6 +16,7 @@ public class Identifikation
     /// The data type for specifying a UUID.
     /// </summary>
     [XmlElement("id", Namespace = XJustizExport.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string Id { get; set; } = Guid.NewGuid().ToString();
 
     /// <summary>
@@ -21,5 +24,6 @@ public class Identifikation
     /// A sequence is given to the document objects via the number in the superordinate container. 'Container' refers to the file, sub-file or document segment in which the document objects are listed. Implementation notes: The numbers may not be assigned twice within a container. This also applies to different types of document objects within a container (e.g., sub-files and documents within a file). The numbering must start with 1 in the container. Omissions are not permitted, as the meaning of a missing number allows no conclusions, e.g., on the completeness of a file.
     /// </summary>
     [XmlElement("nummerImUebergeordnetenContainer", Namespace = XJustizExport.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string NummerImUebergeordnetenContainer { get; set; } = "1";
 }

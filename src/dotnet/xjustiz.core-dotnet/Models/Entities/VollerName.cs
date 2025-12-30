@@ -1,11 +1,13 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Der volle Name einer natürlichen Person.
 /// The full name of a natural person.
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 public class VollerName
 {
     /// <summary>
@@ -13,6 +15,7 @@ public class VollerName
     /// If there are multiple first names, they are all entered in this element in their order.
     /// </summary>
     [XmlElement("vorname", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string? Vorname { get; set; }
 
     /// <summary>
@@ -20,6 +23,7 @@ public class VollerName
     /// The call name indicates which first name is the call name if there are multiple first names. The call name is often required as a unique element.
     /// </summary>
     [XmlElement("rufname", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.Unknown)]
     public string? Rufname { get; set; }
 
     /// <summary>
@@ -27,6 +31,7 @@ public class VollerName
     /// Academic and non-academic titles that appear before the first name are listed here, e.g., 'Professor', 'Dr.', 'Prof. Dr.', etc.
     /// </summary>
     [XmlElement("titel", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string? Titel { get; set; }
 
     /// <summary>
@@ -34,6 +39,7 @@ public class VollerName
     /// Titles of nobility that appear before the last name are listed here, e.g., 'Graf von'.
     /// </summary>
     [XmlElement("namensvorsatz", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string? Namensvorsatz { get; set; }
 
     /// <summary>
@@ -41,5 +47,6 @@ public class VollerName
     /// If the last name is not known, 'nicht bekannt' (unknown) must be specified.
     /// </summary>
     [XmlElement("nachname", Namespace = XJustizExport.Tns)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     public string? Nachname { get; set; }
 }
