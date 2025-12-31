@@ -75,7 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*" /d:sonar.branch.name="main"
           dotnet build $CSPROJ_PATH
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
