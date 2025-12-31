@@ -1,5 +1,8 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
 
+using System;
+
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
 public sealed class XJustizAvailabilityAttribute(XJustizVersion introduced)
     : VersionAvailabilityAttribute((int)introduced)
 {
