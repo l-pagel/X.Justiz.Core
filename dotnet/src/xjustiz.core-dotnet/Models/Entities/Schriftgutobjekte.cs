@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Contains lists of document objects (files/cases and documents).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Schriftgutobjekte
 {
     /// <summary>
@@ -17,6 +18,7 @@ public class Schriftgutobjekte
     /// </summary>
     [XmlElement("akte", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Akte>? Akte { get; set; }
 
     /// <summary>
@@ -25,5 +27,6 @@ public class Schriftgutobjekte
     /// </summary>
     [XmlElement("dokument", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Dokument>? Dokumente { get; set; }
 }

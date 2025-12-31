@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents a generic field (key-value pair).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Feld
 {
     /// <summary>
@@ -15,7 +16,8 @@ public class Feld
     /// The name of the field.
     /// </summary>
     [XmlElement("name", Namespace = XJustizExport.Tns, Order = 1)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Name { get; set; }
 
     /// <summary>
@@ -23,6 +25,7 @@ public class Feld
     /// The value of the field.
     /// </summary>
     [XmlElement("wert", Namespace = XJustizExport.Tns, Order = 2)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Wert { get; set; }
 }

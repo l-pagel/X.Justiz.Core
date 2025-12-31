@@ -7,7 +7,8 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Repräsentiert eine Rolle in einem Verfahren.
 /// Represents a role in a proceeding.
 /// </summary>
-[XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizAvailability(XJustizVersion.V2_2_1)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Rolle
 {
     /// <summary>
@@ -16,5 +17,6 @@ public class Rolle
     /// </summary>
     [XmlElement("rollenbezeichnung", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Rollenbezeichnung Rollenbezeichnung { get; set; } = new();
 }

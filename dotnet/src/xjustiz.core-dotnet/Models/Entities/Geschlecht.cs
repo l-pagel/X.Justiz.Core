@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents the gender of a person as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Geschlecht
 {
     /// <summary>
@@ -15,6 +16,7 @@ public class Geschlecht
     /// Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
     /// </summary>
     [XmlElement("code", Namespace = "")]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Code { get; set; }
 }

@@ -6,7 +6,8 @@ using xjustiz.core_dotnet.Util.Versioning;
 [XmlRoot(
     ElementName = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005",
     Namespace = XJustizExport.Tns)]
-[XJustizAvailability(XJustizVersion.Unknown)]
+[XJustizAvailability(XJustizVersion.V3_1_1)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class UebermittlungSchriftgutobjekteNachricht
 {
     /// <summary>
@@ -14,7 +15,8 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// The header of the message.
     /// </summary>
     [XmlElement("nachrichtenkopf", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Nachrichtenkopf Kopf { get; set; } = new();
 
     /// <summary>
@@ -22,7 +24,8 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// The Type.GDS.Grunddaten contains meta-information about the proceeding and its participants. It can also contain information about appointments.
     /// </summary>
     [XmlElement("grunddaten", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Grunddaten? Grunddaten { get; set; }
 
     /// <summary>
@@ -30,7 +33,8 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// This element is only used for communication with the electronic file repository for bailiffs.
     /// </summary>
     [XmlElement("schriftgutobjekte", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Schriftgutobjekte? Schriftgutobjekte { get; set; }
 
     /// <summary>
@@ -38,6 +42,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// Specifies the association between XML namespaces and the locations of their corresponding XML Schema documents. Provided as namespace–URI / schema‐URL pairs, it acts as a hint to validators and parsers where the schemas can be found.
     /// </summary>
     [XmlAttribute(AttributeName = "schemaLocation", Namespace = XJustizExport.Xsi)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string SchemaLocation { get; set; } = $"{XJustizExport.Tns} xjustiz_0005_nachrichten_3_1.xsd";
 }

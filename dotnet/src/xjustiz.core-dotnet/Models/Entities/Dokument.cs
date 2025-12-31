@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents a document.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Dokument
 {
     /// <summary>
@@ -17,6 +18,7 @@ public class Dokument
     /// </summary>
     [XmlElement("identifikation", Namespace = XJustizExport.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Identifikation Identifikation { get; set; } = new();
 
     /// <summary>
@@ -25,6 +27,7 @@ public class Dokument
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizExport.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public XjustizFachspezifischeDaten FachspezifischeDaten { get; set; } = new();
 
     /// <summary>
@@ -33,5 +36,6 @@ public class Dokument
     /// </summary>
     [XmlElement("erstellungszeitpunkt", Namespace = XJustizExport.Tns, DataType = "dateTime", Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_4_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public DateTime? Erstellungszeitpunkt { get; set; }
 }

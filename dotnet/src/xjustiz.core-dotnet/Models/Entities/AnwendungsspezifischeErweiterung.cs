@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Container for application-specific extensions.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class AnwendungsspezifischeErweiterung
 {
     /// <summary>
@@ -16,7 +17,8 @@ public class AnwendungsspezifischeErweiterung
     /// The identification tag of the application-specific extension.
     /// </summary>
     [XmlElement("kennung", Namespace = XJustizExport.Tns, Order = 1)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string Kennung { get; set; } = "Mandatensoftware";
 
     /// <summary>
@@ -24,7 +26,8 @@ public class AnwendungsspezifischeErweiterung
     /// The name of the application-specific extension.
     /// </summary>
     [XmlElement("name", Namespace = XJustizExport.Tns, Order = 2)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string Name { get; set; } = "JL.Portal";
 
     /// <summary>
@@ -32,7 +35,8 @@ public class AnwendungsspezifischeErweiterung
     /// A field group assigned to the application-specific extension.
     /// </summary>
     [XmlElement("feldgruppe", Namespace = XJustizExport.Tns, Order = 3)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Feldgruppe>? Feldgruppen { get; set; }
 
     /// <summary>
@@ -40,6 +44,7 @@ public class AnwendungsspezifischeErweiterung
     /// A field assigned to the application-specific extension.
     /// </summary>
     [XmlElement("feld", Namespace = XJustizExport.Tns, Order = 4)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Feld>? Felder { get; set; }
 }

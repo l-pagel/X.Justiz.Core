@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// The full name of a natural person.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class VollerName
 {
     /// <summary>
@@ -16,6 +17,7 @@ public class VollerName
     /// </summary>
     [XmlElement("vorname", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Vorname { get; set; }
 
     /// <summary>
@@ -23,7 +25,8 @@ public class VollerName
     /// The call name indicates which first name is the call name if there are multiple first names. The call name is often required as a unique element.
     /// </summary>
     [XmlElement("rufname", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Rufname { get; set; }
 
     /// <summary>
@@ -32,6 +35,7 @@ public class VollerName
     /// </summary>
     [XmlElement("titel", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Titel { get; set; }
 
     /// <summary>
@@ -40,6 +44,7 @@ public class VollerName
     /// </summary>
     [XmlElement("namensvorsatz", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Namensvorsatz { get; set; }
 
     /// <summary>
@@ -48,5 +53,6 @@ public class VollerName
     /// </summary>
     [XmlElement("nachname", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Nachname { get; set; }
 }

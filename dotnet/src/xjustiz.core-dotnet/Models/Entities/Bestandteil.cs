@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// A component of a file (e.g., format, version).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Bestandteil
 {
     /// <summary>
@@ -15,7 +16,8 @@ public class Bestandteil
     /// The version of the code list. Documentation from XOEV library: The specific version of the code list to be used is transmitted with this XML attribute. Analogous to listURI, determining the version of a code list is mandatory when transmitting a code. However, the version can also already be defined in the XÖV standard (in this case, it is a code type 1 or 2).
     /// </summary>
     [XmlAttribute("listVersionID")]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string ListVersionId { get; set; } = "2.4";
 
     /// <summary>
@@ -23,6 +25,7 @@ public class Bestandteil
     /// Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
     /// </summary>
     [XmlElement("code", Namespace = "", Order = 1)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string Code { get; set; } = "001";
 }

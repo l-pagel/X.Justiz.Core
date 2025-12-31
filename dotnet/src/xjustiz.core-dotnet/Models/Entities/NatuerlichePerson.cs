@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// A natural person.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class NatuerlichePerson
 {
     /// <summary>
@@ -17,6 +18,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("vollerName", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public VollerName VollerName { get; set; } = new();
 
     /// <summary>
@@ -25,6 +27,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("geschlecht", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Geschlecht Geschlecht { get; set; } = new();
 
     /// <summary>
@@ -33,6 +36,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
 
     /// <summary>
@@ -49,5 +54,6 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Bankverbindung? Bankverbindung { get; set; }
 }

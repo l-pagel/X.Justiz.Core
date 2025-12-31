@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Designation of an organization.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Bezeichnung
 {
     /// <summary>
@@ -16,5 +17,6 @@ public class Bezeichnung
     /// </summary>
     [XmlElement("bezeichnung.aktuell", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Aktuell { get; set; }
 }

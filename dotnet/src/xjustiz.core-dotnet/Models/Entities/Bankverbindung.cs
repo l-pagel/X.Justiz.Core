@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents a bank account connection.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Bankverbindung
 {
     /// <summary>
@@ -16,6 +17,7 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("kontoinhaber", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Kontoinhaber { get; set; }
 
     /// <summary>
@@ -24,6 +26,7 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("iban", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Iban { get; set; }
 
     /// <summary>
@@ -32,5 +35,6 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("bic", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Bic { get; set; }
 }

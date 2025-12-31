@@ -10,6 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Specialized data of a document.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class XjustizFachspezifischeDaten
 {
     /// <summary>
@@ -18,6 +19,7 @@ public class XjustizFachspezifischeDaten
     /// </summary>
     [XmlElement("dokumentklasse", Namespace = XJustizExport.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public DokumentklasseCode? Dokumentklasse { get; set; }
 
     /// <summary>
@@ -26,5 +28,6 @@ public class XjustizFachspezifischeDaten
     /// </summary>
     [XmlElement("datei", Namespace = XJustizExport.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Datei Datei { get; set; } = new();
 }

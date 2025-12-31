@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Type of telecommunication as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Telekommunikationsart
 {
     /// <summary>
@@ -15,6 +16,7 @@ public class Telekommunikationsart
     /// Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
     /// </summary>
     [XmlElement("code", Namespace = "")]
-    [XJustizAvailability(XJustizVersion.Unknown)]
-    public string? code { get; set; }
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    public string? Code { get; set; }
 }

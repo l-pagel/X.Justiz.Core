@@ -3,10 +3,10 @@
 public enum XJustizVersion
 {
     /// <summary>
-    /// Unbekannte Version / Veröffentlichungsdatum.
-    /// Unknown version / release date.
+    /// Nicht Teil des X.Justiz Standards.
+    /// Not part of the XJustiz standard.
     /// </summary>
-    Unknown = 0,
+    None = 0,
 
     /// <summary>
     /// Gültig ab 31.10.2017

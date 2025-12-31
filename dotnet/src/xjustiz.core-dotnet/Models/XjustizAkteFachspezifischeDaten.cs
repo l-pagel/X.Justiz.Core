@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Specialized data of a file/case.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class XjustizAkteFachspezifischeDaten
 {
     /// <summary>
@@ -17,6 +18,7 @@ public class XjustizAkteFachspezifischeDaten
     /// </summary>
     [XmlElement("aktentyp", Namespace = XJustizExport.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Aktentyp Aktentyp { get; set; } = new();
 
     /// <summary>
@@ -25,6 +27,7 @@ public class XjustizAkteFachspezifischeDaten
     /// </summary>
     [XmlElement("anzeigename", Namespace = XJustizExport.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Anzeigename { get; set; }
 
     /// <summary>
@@ -33,5 +36,6 @@ public class XjustizAkteFachspezifischeDaten
     /// </summary>
     [XmlElement("aktenzeichen", Namespace = XJustizExport.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Aktenzeichen Aktenzeichen { get; set; } = new();
 }

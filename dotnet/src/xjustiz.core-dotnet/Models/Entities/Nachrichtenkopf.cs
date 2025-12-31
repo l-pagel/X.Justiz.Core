@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// The header of the message.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Nachrichtenkopf
 {
     /// <summary>
@@ -16,7 +17,8 @@ public class Nachrichtenkopf
     /// Used X.Justiz version for this message.
     /// </summary>
     [XmlAttribute("xjustizVersion")]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string Version { get; set; } = "3.5.1";
 
     /// <summary>
@@ -24,7 +26,8 @@ public class Nachrichtenkopf
     /// File reference of the sender.
     /// </summary>
     [XmlElement("aktenzeichen.absender", Namespace = XJustizExport.Tns, Order = 1)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string[]? AktenzeichenAbsender { get; set; }
 
     /// <summary>
@@ -32,7 +35,8 @@ public class Nachrichtenkopf
     /// File reference of the recipient.
     /// </summary>
     [XmlElement("aktenzeichen.empfaenger", Namespace = XJustizExport.Tns, Order = 2)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string[]? AktenzeichenEmpfaenger { get; set; }
 
     /// <summary>
@@ -41,6 +45,7 @@ public class Nachrichtenkopf
     /// </summary>
     [XmlElement("erstellungszeitpunkt", Namespace = XJustizExport.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public DateTime Erstellungszeitpunkt { get; set; }
 
     /// <summary>
@@ -49,6 +54,7 @@ public class Nachrichtenkopf
     /// </summary>
     [XmlElement("auswahl_absender", Namespace = XJustizExport.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public AuswahlAdresse Absender { get; set; } = new();
 
     /// <summary>
@@ -57,6 +63,7 @@ public class Nachrichtenkopf
     /// </summary>
     [XmlElement("auswahl_empfaenger", Namespace = XJustizExport.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public AuswahlAdresse Empfaenger { get; set; } = new();
 
     /// <summary>
@@ -65,5 +72,6 @@ public class Nachrichtenkopf
     /// </summary>
     [XmlElement("eigeneNachrichtenID", Namespace = XJustizExport.Tns, Order = 6)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EigeneNachrichtenId { get; set; }
 }

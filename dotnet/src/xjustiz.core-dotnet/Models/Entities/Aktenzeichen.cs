@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents a file reference / case number.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Aktenzeichen
 {
     /// <summary>
@@ -16,5 +17,6 @@ public class Aktenzeichen
     /// </summary>
     [XmlElement("auswahl_aktenzeichen", Namespace = XJustizExport.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public AuswahlAktenzeichen Auswahl { get; set; } = new();
 }

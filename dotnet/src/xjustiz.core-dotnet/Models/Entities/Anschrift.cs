@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Represents an address.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Anschrift
 {
     /// <summary>
@@ -16,6 +17,7 @@ public class Anschrift
     /// </summary>
     [XmlElement("strasse", Namespace = XJustizExport.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Strasse { get; set; }
 
     /// <summary>
@@ -24,6 +26,7 @@ public class Anschrift
     /// </summary>
     [XmlElement("hausnummer", Namespace = XJustizExport.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Hausnummer { get; set; }
 
     /// <summary>
@@ -32,6 +35,7 @@ public class Anschrift
     /// </summary>
     [XmlElement("postleitzahl", Namespace = XJustizExport.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Postleitzahl { get; set; }
 
     /// <summary>
@@ -40,6 +44,7 @@ public class Anschrift
     /// </summary>
     [XmlElement("ort", Namespace = XJustizExport.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Ort { get; set; }
 
     /// <summary>
@@ -48,5 +53,6 @@ public class Anschrift
     /// </summary>
     [XmlElement("staat", Namespace = XJustizExport.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Staat? Staat { get; set; }
 }

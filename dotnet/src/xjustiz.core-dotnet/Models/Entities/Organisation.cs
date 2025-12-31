@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// An organization (legal entity).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Organisation
 {
     /// <summary>
@@ -17,6 +18,7 @@ public class Organisation
     /// </summary>
     [XmlElement("bezeichnung", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Bezeichnung? Bezeichnung { get; set; }
 
     /// <summary>

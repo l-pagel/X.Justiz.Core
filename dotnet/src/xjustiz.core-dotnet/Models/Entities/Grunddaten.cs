@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Basic data of the message.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Grunddaten
 {
     /// <summary>
@@ -16,5 +17,6 @@ public class Grunddaten
     /// </summary>
     [XmlElement("verfahrensdaten", Namespace = XJustizExport.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Verfahrensdaten? Verfahrensdaten { get; set; }
 }

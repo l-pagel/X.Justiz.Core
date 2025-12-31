@@ -7,6 +7,8 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Auswahlstruktur für Adressen (Absender oder Empfänger).
 /// Selection structure for addresses (sender or receiver).
 /// </summary>
+[XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class AuswahlAdresse
 {
     /// <summary>
@@ -14,7 +16,8 @@ public class AuswahlAdresse
     /// Address or description of the sender.
     /// </summary>
     [XmlElement("absender.sonstige", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? AbsenderSonstige { get; set; }
 
     /// <summary>
@@ -22,7 +25,8 @@ public class AuswahlAdresse
     /// Address or description of the recipient.
     /// </summary>
     [XmlElement("empfaenger.sonstige", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EmpfaengerSonstige { get; set; }
 
     /// <summary>
@@ -30,7 +34,8 @@ public class AuswahlAdresse
     /// Address or code of the receiving court. The use of the code should be preferred over the address. The code of the court. This code list contains the name and address of the court. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
     [XmlElement("empfaenger.gericht", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EmpfaengerGericht { get; set; }
 
     /// <summary>
@@ -38,7 +43,8 @@ public class AuswahlAdresse
     /// Address or code of the receiving pension insurance carrier. The use of the code should be preferred over the address. The code of the pension insurance carrier. This code list contains the name and address of the pension insurance carrier. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
     [XmlElement("empfaenger.rvTraeger", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EmpfaengerRvTraeger { get; set; }
 
     /// <summary>
@@ -46,6 +52,7 @@ public class AuswahlAdresse
     /// Address or code of the receiving police authority. The use of the code should be preferred over the address. The code of the police authority. This code list contains the name and address of the police authorities. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
     [XmlElement("empfaenger.polizeibehoerde", Namespace = XJustizExport.Tns)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EmpfaengerPolizei { get; set; }
 }

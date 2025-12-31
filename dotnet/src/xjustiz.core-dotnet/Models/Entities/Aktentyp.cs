@@ -8,6 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Defines the type of a file/case.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Aktentyp
 {
     /// <summary>
@@ -15,6 +16,7 @@ public class Aktentyp
     /// Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
     /// </summary>
     [XmlElement("code", Namespace = "", Order = 1)]
-    [XJustizAvailability(XJustizVersion.Unknown)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string Code { get; set; } = "001";
 }
