@@ -1,9 +1,8 @@
-using xjustiz.core_dotnet.Models.Entities;
-
 namespace xjustiz.core_dotnet.Models;
 
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Util.Versioning;
 
 [XmlRoot(
