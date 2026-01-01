@@ -18,24 +18,24 @@ using xjustiz.core_dotnet.Models.Codes;
 public static class Zip
 {
     /// <summary>
-    /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie als temporäre Datei.
-    /// Creates a ZIP file containing the XJustiz data and optional attachments and saves it as a temporary file.
+    /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie am angegebenen Pfad.
+    /// Creates a ZIP file containing the XJustiz data and optional attachments and saves it at the specified path.
     /// </summary>
     /// <param name="uebermittlungSchriftgutobjekteNachricht">Die XJustiz-Nachricht. / The XJustiz message.</param>
+    /// <param name="destinationZipPath">Der Pfad, an dem die ZIP-Datei erstellt werden soll. / The path where the ZIP file should be created.</param>
     /// <param name="exportFiles">Eine Liste von Dateipfaden, die als Anhänge hinzugefügt werden sollen. / A list of file paths to be added as attachments.</param>
-    /// <returns>Der Pfad zur erstellten temporären ZIP-Datei. / The path to the created temporary ZIP file.</returns>
-    public static async Task<string> ArchiveToZipFileAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, List<string>? exportFiles = null)
+    /// <returns>Der Pfad zur erstellten ZIP-Datei. / The path to the created ZIP file.</returns>
+    public static async Task<string> ArchiveToZipFileAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, string destinationZipPath, List<string>? exportFiles = null)
     {
-        var tempZipPath = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
         var fileName = GetFileName(uebermittlungSchriftgutobjekteNachricht);
 
-        using (var zip = ZipFile.Open(tempZipPath, ZipArchiveMode.Create))
+        using (var zip = ZipFile.Open(destinationZipPath, ZipArchiveMode.Create))
         {
             await AddXJustizXmlToZipAsync(zip, uebermittlungSchriftgutobjekteNachricht, fileName);
             await AddFilesToZipAsync(zip, exportFiles ?? []);
         }
 
-        return tempZipPath;
+        return destinationZipPath;
     }
 
     /// <summary>

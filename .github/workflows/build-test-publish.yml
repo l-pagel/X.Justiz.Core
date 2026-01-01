@@ -1,4 +1,4 @@
-name: Publish NuGet package
+name: Build, Test and Publish
 
 on:
   push:
@@ -11,6 +11,7 @@ jobs:
 
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
+      TEST_PROJECT_PATH: dotnet/src/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
 
     steps:
 
@@ -22,6 +23,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
@@ -75,11 +78,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*" /d:sonar.branch.name="main"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
           dotnet build $CSPROJ_PATH
+          dotnet test $TEST_PROJECT_PATH --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
-      - name: Build
+      - name: Build Release
         run: dotnet build $CSPROJ_PATH --configuration Release --no-restore
 
       - name: Pack
