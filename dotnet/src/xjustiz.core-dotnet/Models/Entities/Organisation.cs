@@ -2,6 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -16,7 +17,7 @@ public class Organisation
     /// Kanzleiname
     /// Law firm name
     /// </summary>
-    [XmlElement("bezeichnung", Namespace = XJustizExport.Tns)]
+    [XmlElement("bezeichnung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Bezeichnung? Bezeichnung { get; set; }
@@ -25,7 +26,7 @@ public class Organisation
     /// Auch Postfach-Anschriften fallen hierunter.
     /// Post office box addresses also fall under this.
     /// </summary>
-    [XmlElement("anschrift", Namespace = XJustizExport.Tns)]
+    [XmlElement("anschrift", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Anschrift? Anschrift { get; set; }
 
@@ -33,7 +34,7 @@ public class Organisation
     /// Informationen zur Telekommunikation (Telefon, Email, etc.).
     /// Information on telecommunication (phone, email, etc.).
     /// </summary>
-    [XmlElement("telekommunikation", Namespace = XJustizExport.Tns)]
+    [XmlElement("telekommunikation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
 
@@ -41,7 +42,7 @@ public class Organisation
     /// Hier steht die allgemeine Bankverbindung.
     /// Here is the general bank connection.
     /// </summary>
-    [XmlElement("bankverbindung", Namespace = XJustizExport.Tns)]
+    [XmlElement("bankverbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Bankverbindung? Bankverbindung { get; set; }
 }

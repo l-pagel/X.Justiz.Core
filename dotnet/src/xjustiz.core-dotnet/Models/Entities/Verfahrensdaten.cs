@@ -2,6 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -16,7 +17,7 @@ public class Verfahrensdaten
     /// Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
     /// The proceeding number is a unique identifier that is intended to apply to the proceeding across all stations and can be transmitted alongside the file reference. It can be used, for example, in a specialized procedure for the unique identification of the proceeding.
     /// </summary>
-    [XmlElement("verfahrensnummer", Namespace = XJustizExport.Tns, Order = 1)]
+    [XmlElement("verfahrensnummer", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Verfahrensnummer { get; set; }
@@ -25,7 +26,7 @@ public class Verfahrensdaten
     /// Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
     /// The instance data contains information about the stations that a process has passed through. This can be a court, a public prosecutor's office, a judicial authority, but also another authority.
     /// </summary>
-    [XmlElement("instanzdaten", Namespace = XJustizExport.Tns, Order = 2)]
+    [XmlElement("instanzdaten", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Instanzdaten? Instanzdaten { get; set; }
@@ -34,7 +35,7 @@ public class Verfahrensdaten
     /// Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
     /// For each participation, there is exactly one participant. This participant can have multiple roles.
     /// </summary>
-    [XmlElement("beteiligung", Namespace = XJustizExport.Tns, Order = 3)]
+    [XmlElement("beteiligung", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public List<Beteiligung>? Beteiligungen { get; set; }

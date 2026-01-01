@@ -2,6 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -25,7 +26,7 @@ public class Nachrichtenkopf
     /// Aktenzeichen des Absenders.
     /// File reference of the sender.
     /// </summary>
-    [XmlElement("aktenzeichen.absender", Namespace = XJustizExport.Tns, Order = 1)]
+    [XmlElement("aktenzeichen.absender", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string[]? AktenzeichenAbsender { get; set; }
@@ -34,7 +35,7 @@ public class Nachrichtenkopf
     /// Aktenzeichen des Empfängers.
     /// File reference of the recipient.
     /// </summary>
-    [XmlElement("aktenzeichen.empfaenger", Namespace = XJustizExport.Tns, Order = 2)]
+    [XmlElement("aktenzeichen.empfaenger", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string[]? AktenzeichenEmpfaenger { get; set; }
@@ -43,7 +44,7 @@ public class Nachrichtenkopf
     /// Hier ist der Erstellungszeitpunkt der XJustiz-Nachricht einzutragen.
     /// The creation time of the XJustiz message must be entered here.
     /// </summary>
-    [XmlElement("erstellungszeitpunkt", Namespace = XJustizExport.Tns, Order = 3)]
+    [XmlElement("erstellungszeitpunkt", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public DateTime Erstellungszeitpunkt { get; set; }
@@ -52,7 +53,7 @@ public class Nachrichtenkopf
     /// Auswahlstruktur für Adressen (Absender oder Empfänger).
     /// Selection structure for addresses (sender or receiver).
     /// </summary>
-    [XmlElement("auswahl_absender", Namespace = XJustizExport.Tns, Order = 4)]
+    [XmlElement("auswahl_absender", Namespace = XJustizConstants.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public AuswahlAdresse Absender { get; set; } = new();
@@ -61,7 +62,7 @@ public class Nachrichtenkopf
     /// Auswahlstruktur für Adressen (Absender oder Empfänger).
     /// Selection structure for addresses (sender or receiver).
     /// </summary>
-    [XmlElement("auswahl_empfaenger", Namespace = XJustizExport.Tns, Order = 5)]
+    [XmlElement("auswahl_empfaenger", Namespace = XJustizConstants.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public AuswahlAdresse Empfaenger { get; set; } = new();
@@ -70,7 +71,7 @@ public class Nachrichtenkopf
     /// Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
     /// A unique identification of the message created during this transmission process must be specified here to enable later references.
     /// </summary>
-    [XmlElement("eigeneNachrichtenID", Namespace = XJustizExport.Tns, Order = 6)]
+    [XmlElement("eigeneNachrichtenID", Namespace = XJustizConstants.Tns, Order = 6)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? EigeneNachrichtenId { get; set; }

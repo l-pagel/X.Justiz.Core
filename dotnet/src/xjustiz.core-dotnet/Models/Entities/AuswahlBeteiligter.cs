@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -14,7 +15,7 @@ public class AuswahlBeteiligter
     /// <summary>
     /// Eine natürliche Person. A natural person.
     /// </summary>
-    [XmlElement("natuerlichePerson", Namespace = XJustizExport.Tns)]
+    [XmlElement("natuerlichePerson", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public NatuerlichePerson? NP { get; set; }
@@ -23,7 +24,7 @@ public class AuswahlBeteiligter
     /// Hier werden alle Beteiligten aufgeführt, die nicht mit dem Type.GDS.NatuerlichePerson abgedeckt werden können: Gesellschaften, Vereine, Bruchteilsgemeinschaften etc. Die Abgrenzung erfolgt nicht nach juristischen Kategorien, sondern nach datentechnischer Zweckmäßigkeit.
     /// All participants who cannot be covered by Type.GDS.NatuerlichePerson are listed here: companies, associations, fractional communities, etc. The distinction is not based on legal categories but on data technical expediency.
     /// </summary>
-    [XmlElement("organisation", Namespace = XJustizExport.Tns)]
+    [XmlElement("organisation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Organisation? Org { get; set; }

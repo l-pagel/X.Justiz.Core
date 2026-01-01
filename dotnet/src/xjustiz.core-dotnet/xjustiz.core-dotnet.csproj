@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <ProjectGuid>06fa7ce5-d056-4930-9474-30b0b49b7500</ProjectGuid>
@@ -15,6 +15,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         <CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
+        <UserSecretsId>6df0a473-8ad6-4bcf-9151-c5a12dc14c2f</UserSecretsId>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">

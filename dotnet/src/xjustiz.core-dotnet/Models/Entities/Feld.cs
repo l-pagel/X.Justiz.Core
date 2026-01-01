@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -15,7 +16,7 @@ public class Feld
     /// Der Name des Feldes.
     /// The name of the field.
     /// </summary>
-    [XmlElement("name", Namespace = XJustizExport.Tns, Order = 1)]
+    [XmlElement("name", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Name { get; set; }
@@ -24,7 +25,7 @@ public class Feld
     /// Der Wert des Feldes.
     /// The value of the field.
     /// </summary>
-    [XmlElement("wert", Namespace = XJustizExport.Tns, Order = 2)]
+    [XmlElement("wert", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Wert { get; set; }

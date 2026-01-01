@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -15,7 +16,7 @@ public class Anschrift
     /// Der Datentyp B wurde vor allem für sonstige Namen, wie z. B. Ortsnamen und Straßennamen mit Hausnummer, entworfen.
     /// Data type B was designed primarily for other names, such as place names and street names with house numbers.
     /// </summary>
-    [XmlElement("strasse", Namespace = XJustizExport.Tns, Order = 1)]
+    [XmlElement("strasse", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Strasse { get; set; }
@@ -24,7 +25,7 @@ public class Anschrift
     /// Die Hausnummer ist ggf. einschliesslich Buchstaben oder dergleichen anzugeben.
     /// The house number must be specified, including letters or similar if applicable.
     /// </summary>
-    [XmlElement("hausnummer", Namespace = XJustizExport.Tns, Order = 2)]
+    [XmlElement("hausnummer", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Hausnummer { get; set; }
@@ -33,7 +34,7 @@ public class Anschrift
     /// Bei einer ausländischen PLZ ist das Element "staat" zwingend anzugeben.
     /// For a foreign postal code, the element 'staat' (country) must be specified.
     /// </summary>
-    [XmlElement("postleitzahl", Namespace = XJustizExport.Tns, Order = 3)]
+    [XmlElement("postleitzahl", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Postleitzahl { get; set; }
@@ -42,7 +43,7 @@ public class Anschrift
     /// Bei postalischen Anschriften kann der hier angegebene Ort von der politischen Gemeinde abweichen. In diesem Fall sollten die postalische und die Lieferadresse separat mitgeteilt werden. Bei ausländischen Adressen empfiehlt die Deutsche Post AG, den Ort möglichst in der Landessprache zu schreiben. Dies erscheint auch im vorliegenden Zusammenhang sinnvoll.
     /// For postal addresses, the city specified here may differ from the political municipality. In this case, the postal and delivery addresses should be communicated separately. For foreign addresses, Deutsche Post AG recommends writing the city in the local language if possible. This also seems appropriate in the present context.
     /// </summary>
-    [XmlElement("ort", Namespace = XJustizExport.Tns, Order = 4)]
+    [XmlElement("ort", Namespace = XJustizConstants.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Ort { get; set; }
@@ -51,7 +52,7 @@ public class Anschrift
     /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom Code-Typ 3" beschrieben.
     /// The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
-    [XmlElement("staat", Namespace = XJustizExport.Tns, Order = 5)]
+    [XmlElement("staat", Namespace = XJustizConstants.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Staat? Staat { get; set; }

@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -15,7 +16,7 @@ public class Telekommunikation
     /// Art der Telekommunikation als Code.
     /// Type of telecommunication as a code.
     /// </summary>
-    [XmlElement("telekommunikationsart", Namespace = XJustizExport.Tns)]
+    [XmlElement("telekommunikationsart", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public Telekommunikationsart? Telekommunikationsart { get; set; }
@@ -24,7 +25,7 @@ public class Telekommunikation
     /// Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder dergleichen mitgeteilt.
     /// The telephone number, fax number, e-mail address, Safe-ID, or similar is communicated here.
     /// </summary>
-    [XmlElement("verbindung", Namespace = XJustizExport.Tns)]
+    [XmlElement("verbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? verbindung { get; set; }
