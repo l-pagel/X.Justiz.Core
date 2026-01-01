@@ -1,6 +1,8 @@
 ﻿# X.Justiz-LegalTech Version 0.1.0
 Ein Projekt zur Erweiterung des X.Justiz-Formats basierend auf XJustiz-Export (3.5.1)
 
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=l-pagel_X.Justiz.Core&token=63adaa7af33ae168a0611157ea45aaa0db36852f)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core)
+
 ## Setup / Herangehensweise
 
 Um den XJustiz-Export sauber aufzubauen und zu prüfen, bin ich wie folgt vorgegangen:
