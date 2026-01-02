@@ -275,6 +275,8 @@ public class CompatibilityCheckerTests
 
         Assert.Equal(result.CompatibleXJustizVersions, resultFromModel.CompatibleXJustizVersions);
         Assert.Equal(result.CompatibleXJustizCoreVersions, resultFromModel.CompatibleXJustizCoreVersions);
+
+        Assert.Equal(message.Kopf.AktenzeichenAbsender.FirstOrDefault(), message.GetAktenzeichen());
     }
 
     internal class UebermittlungSchriftgutobjekteNachrichtWithRemovedPropertyInUse : UebermittlungSchriftgutobjekteNachricht

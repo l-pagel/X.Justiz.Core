@@ -64,8 +64,12 @@ public static class CompatibilityChecker
             ApplyAttributes(type.GetCustomAttributes(), xVersions, xCoreVersions);
         }
 
-        // Iterate Properties
-        foreach (var prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+        CheckProperties(obj, xVersions, xCoreVersions);
+    }
+
+    private static void CheckProperties(object obj, List<XJustizVersion> xVersions, List<XJustizCoreVersion> xCoreVersions)
+    {
+        foreach (var prop in obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
         {
             // Skip indexers
             if (prop.GetIndexParameters().Length > 0)
@@ -73,45 +77,10 @@ public static class CompatibilityChecker
                 continue;
             }
 
-            object? val = null;
-            try
+            if (TryGetPropertyValue(prop, obj, out var val) && val != null)
             {
-                val = prop.GetValue(obj);
-            }
-            catch
-            {
-                // Ignore properties we can't read
-                continue;
-            }
-
-            if (val == null)
-            {
-                continue;
-            }
-
-            // Apply Property Attributes
-            ApplyAttributes(prop.GetCustomAttributes(), xVersions, xCoreVersions);
-
-            // Recurse
-            if (val is string)
-            {
-                // String is IEnumerable but we treat it as primitive
-                continue;
-            }
-            else if (val is IEnumerable enumerable)
-            {
-                foreach (var item in enumerable)
-                {
-                    CheckObject(item, xVersions, xCoreVersions);
-                }
-            }
-            else
-            {
-                // Recurse into complex type if it's potentially one of ours
-                if (IsXJustizModel(val.GetType()))
-                {
-                    CheckObject(val, xVersions, xCoreVersions);
-                }
+                ApplyAttributes(prop.GetCustomAttributes(), xVersions, xCoreVersions);
+                CheckValueRecursively(val, xVersions, xCoreVersions);
             }
 
             // Optimization: Stop if no versions left
@@ -119,6 +88,41 @@ public static class CompatibilityChecker
             {
                 return;
             }
+        }
+    }
+
+    private static bool TryGetPropertyValue(PropertyInfo prop, object obj, out object? val)
+    {
+        try
+        {
+            val = prop.GetValue(obj);
+            return true;
+        }
+        catch
+        {
+            val = null;
+            return false;
+        }
+    }
+
+    private static void CheckValueRecursively(object val, List<XJustizVersion> xVersions, List<XJustizCoreVersion> xCoreVersions)
+    {
+        if (val is string)
+        {
+            // String is IEnumerable but we treat it as primitive
+            return;
+        }
+
+        if (val is IEnumerable enumerable)
+        {
+            foreach (var item in enumerable)
+            {
+                CheckObject(item, xVersions, xCoreVersions);
+            }
+        }
+        else if (IsXJustizModel(val.GetType()))
+        {
+            CheckObject(val, xVersions, xCoreVersions);
         }
     }
 
