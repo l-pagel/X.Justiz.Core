@@ -6,16 +6,16 @@ using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Eine Organisation (juristische Person).
-/// An organization (legal entity).
+/// Eine Organisation (juristische Person).<br/>
+/// <u><b>Organization:</b></u> An organization (legal entity).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Organisation
 {
     /// <summary>
-    /// Kanzleiname
-    /// Law firm name
+    /// Bezeichnung / Name der Organisation.<br/>
+    /// <u><b>Designation:</b></u> Name of the organization.
     /// </summary>
     [XmlElement("bezeichnung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
@@ -23,24 +23,24 @@ public class Organisation
     public Bezeichnung? Bezeichnung { get; set; }
 
     /// <summary>
-    /// Auch Postfach-Anschriften fallen hierunter.
-    /// Post office box addresses also fall under this.
+    /// Auch Postfach-Anschriften fallen hierunter.<br/>
+    /// <u><b>Address:</b></u> Post office box addresses also fall under this.
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
-    /// Informationen zur Telekommunikation (Telefon, Email, etc.).
-    /// Information on telecommunication (phone, email, etc.).
+    /// Informationen zur Telekommunikation (Telefon, Email, etc.).<br/>
+    /// <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
 
     /// <summary>
-    /// Hier steht die allgemeine Bankverbindung.
-    /// Here is the general bank connection.
+    /// Hier steht die allgemeine Bankverbindung.<br/>
+    /// <u><b>Bank details:</b></u> Here is the general bank connection.
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]

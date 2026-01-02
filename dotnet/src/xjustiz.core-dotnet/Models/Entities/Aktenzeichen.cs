@@ -5,16 +5,16 @@ using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert ein Aktenzeichen.
-/// Represents a file reference / case number.
+/// Repräsentiert ein Aktenzeichen.<br/>
+/// <u><b>File reference:</b></u> Represents a file reference / case number.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Aktenzeichen
 {
     /// <summary>
-    /// Auswahlstruktur für Aktenzeichen.
-    /// Selection structure for file references.
+    /// Auswahlstruktur für Aktenzeichen.<br/>
+    /// <u><b>Selection:</b></u> Selection structure for file references.
     /// </summary>
     [XmlElement("auswahl_aktenzeichen", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]

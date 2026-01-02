@@ -1,8 +1,8 @@
 namespace xjustiz.core_dotnet.Models.Codes;
 
 /// <summary>
-/// Enthält Konstanten für XJustiz-Namespaces.
-/// Contains constants for XJustiz namespaces.
+/// Enthält Konstanten für XJustiz-Namespaces.<br/>
+/// <u><b>XJustiz constants:</b></u> Contains constants for XJustiz namespaces.
 /// </summary>
 public static class XJustizConstants
 {

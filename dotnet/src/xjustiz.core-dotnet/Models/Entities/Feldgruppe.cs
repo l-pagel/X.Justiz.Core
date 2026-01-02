@@ -6,16 +6,16 @@ using xjustiz.core_dotnet.Util.Versioning;
 using xjustiz.core_dotnet.Models.Codes;
 
 /// <summary>
-/// Eine Gruppe von Feldern.
-/// A group of fields.
+/// Eine Gruppe von Feldern.<br/>
+/// <u><b>Field group:</b></u> A group of fields.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
 public class Feldgruppe
 {
     /// <summary>
-    /// Der Name der Feldgruppe.
-    /// The name of the field group.
+    /// Der Name der Feldgruppe.<br/>
+    /// <u><b>Name:</b></u> The name of the field group.
     /// </summary>
     [XmlElement("name", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
@@ -23,8 +23,8 @@ public class Feldgruppe
     public string? Name { get; set; }
 
     /// <summary>
-    /// Die Hinweise und Erläuterungen zu einer Feldgruppe.
-    /// Notes and explanations for a field group.
+    /// Die Hinweise und Erläuterungen zu einer Feldgruppe.<br/>
+    /// <u><b>Description:</b></u> Notes and explanations for a field group.
     /// </summary>
     [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
@@ -32,8 +32,8 @@ public class Feldgruppe
     public string Beschreibung { get; set; } = string.Empty;
 
     /// <summary>
-    /// Über Unterfeldgruppe erfolgt die hierarchische Unterteilung einer Feldgruppe in weitere Feldgruppen.
-    /// The hierarchical subdivision of a field group into further field groups takes place via 'Unterfeldgruppe'.
+    /// Über Unterfeldgruppe erfolgt die hierarchische Unterteilung einer Feldgruppe in weitere Feldgruppen.<br/>
+    /// <u><b>Sub-field groups:</b></u> The hierarchical subdivision of a field group into further field groups takes place via 'Unterfeldgruppe'.
     /// </summary>
     [XmlElement("unterfeldgruppe", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
@@ -41,8 +41,8 @@ public class Feldgruppe
     public List<Feldgruppe>? UnterFeldgruppen { get; set; }
 
     /// <summary>
-    /// Über Feld erfolgt die Unterteilung einer Feldgruppe in konkrete Felder.
-    /// The fields subdivision of a field group into concrete fields happens via 'Feld'.
+    /// Über Feld erfolgt die Unterteilung einer Feldgruppe in konkrete Felder.<br/>
+    /// <u><b>Fields:</b></u> The fields subdivision of a field group into concrete fields happens via 'Feld'.
     /// </summary>
     [XmlElement("feld", Namespace = XJustizConstants.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
