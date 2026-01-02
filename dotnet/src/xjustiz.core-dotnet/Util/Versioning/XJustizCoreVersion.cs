@@ -1,4 +1,5 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
+
 public enum XJustizCoreVersion
 {
     /// <summary>

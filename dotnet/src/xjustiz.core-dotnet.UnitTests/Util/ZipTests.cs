@@ -99,7 +99,7 @@ public class ZipTests : IDisposable
     [Fact]
     public async Task ArchiveToZipStreamAsync_ShouldWork_WithoutAttachments()
     {
-         // Arrange
+        // Arrange
         var msg = new UebermittlungSchriftgutobjekteNachricht();
 
         // Act

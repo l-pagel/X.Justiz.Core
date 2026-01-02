@@ -8,7 +8,7 @@ public sealed class XJustizCoreAvailabilityAttribute(XJustizCoreVersion introduc
 {
     public XJustizCoreVersion IntroducedIn => (XJustizCoreVersion)IntroducedRaw;
 
-    public XJustizCoreVersion RemovedIn
+    public XJustizCoreVersion Removed
     {
         get => (XJustizCoreVersion)RemovedRaw;
         set => RemovedRaw = (int)value;

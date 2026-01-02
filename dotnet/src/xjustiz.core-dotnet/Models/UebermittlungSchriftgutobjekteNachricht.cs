@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Util.Versioning;
+using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
 
 /// <summary>
 /// Basiselement zur Übermittlung von Daten im X.Justiz- bzw. X.Justiz-Core-Format.<br/>
@@ -52,5 +53,15 @@ public class UebermittlungSchriftgutobjekteNachricht
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string SchemaLocation { get; set; } = $"{XJustizConstants.Tns} xjustiz_0005_nachrichten_3_1.xsd";
 
-    internal string? GetAktenzeichen() => Kopf?.AktenzeichenAbsender?.FirstOrDefault() ?? Kopf?.AktenzeichenEmpfaenger?.FirstOrDefault();
+    /// <summary>
+    /// Gibt die kompatiblen Versionen von X.Justiz und X.JustizCore für <see cref = "UebermittlungSchriftgutobjekteNachricht" /> an.<br/>
+    /// Specifies the compatible X.Justiz and X.JustizCore versions for <see cref = "UebermittlungSchriftgutobjekteNachricht" />.
+    /// </summary>
+    public CompatibilityResult GetCompatibility() => Check(this);
+
+    /// <summary>
+    /// Gibt das erste Aktenzeichen des <see cref="Nachrichtenkopf" /> zurück. Die Ermittlung erfolgt zunächst über <see cref = "Nachrichtenkopf.AktenzeichenAbsender" />, ersatzweise über<see cref = "Nachrichtenkopf.AktenzeichenEmpfaenger" />.<br/>
+    /// Returns the first case reference of the <see cref="Nachrichtenkopf" />. Resolution is performed by first checking <see cref="Nachrichtenkopf.AktenzeichenAbsender" />, and falling back to <see cref = "Nachrichtenkopf.AktenzeichenEmpfaenger" /> if necessary.
+    /// </summary>
+    public string? GetAktenzeichen() => Kopf?.AktenzeichenAbsender?.FirstOrDefault() ?? Kopf?.AktenzeichenEmpfaenger?.FirstOrDefault();
 }
