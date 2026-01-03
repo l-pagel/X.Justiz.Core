@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -16,8 +17,10 @@ public static class XmlValidator
     /// <param name="xmlPath">The absolute path to the XML file.</param>
     /// <param name="version">The X.Justiz version to validate against.</param>
     /// <returns>A list of validation errors. Returns an empty list if the XML is valid.</returns>
-    public static List<string> Validate(string xmlPath, XJustizVersion version)
+    public static async Task<List<string>> ValidateAsync(string xmlPath, XJustizVersion version)
     {
+        ArgumentNullException.ThrowIfNull(version);
+
         if (string.IsNullOrWhiteSpace(xmlPath))
         {
             throw new ArgumentNullException(nameof(xmlPath));
@@ -29,7 +32,7 @@ public static class XmlValidator
         }
 
         using var stream = File.OpenRead(xmlPath);
-        return Validate(stream, version);
+        return await ValidateAsync(stream, version);
     }
 
     /// <summary>
@@ -38,7 +41,7 @@ public static class XmlValidator
     /// <param name="xmlStream">The stream containing the XML data. Can be a MemoryStream.</param>
     /// <param name="version">The X.Justiz version to validate against.</param>
     /// <returns>A list of validation errors. Returns an empty list if the XML is valid.</returns>
-    public static List<string> Validate(Stream xmlStream, XJustizVersion version)
+    public static async Task<List<string>> ValidateAsync(Stream xmlStream, XJustizVersion version)
     {
         ArgumentNullException.ThrowIfNull(xmlStream);
 
@@ -67,6 +70,7 @@ public static class XmlValidator
         // Adding all schemas allows the validator to resolve any root element found in the XML,
         // as well as internal dependencies (imports/includes) which are resolved by relative paths.
         var xsdFiles = Directory.GetFiles(xsdDir, "*.xsd", SearchOption.AllDirectories);
+
         foreach (var xsdFile in xsdFiles)
         {
             try
@@ -98,7 +102,7 @@ public static class XmlValidator
             }
 
             using var reader = XmlReader.Create(xmlStream, settings);
-            while (reader.Read())
+            while (await reader.ReadAsync())
             {
             }
         }
@@ -117,7 +121,7 @@ public static class XmlValidator
     private static string? GetXsdDirectory(XJustizVersion version)
     {
         // Convert Enum V3_4_1 -> 3.4.1
-        var versionStr = version.ToString().Substring(1).Replace('_', '.');
+        var versionStr = version.ToString()[1..].Replace('_', '.');
 
         // Find the X.Justiz-Versions directory by traversing up from the base directory
         var currentDir = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);

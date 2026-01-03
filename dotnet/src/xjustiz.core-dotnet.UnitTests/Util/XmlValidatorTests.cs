@@ -41,7 +41,7 @@ public class XmlValidatorTests : IDisposable
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.Validate(filePath, XJustizVersion.V3_4_1);
+        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Empty(errors);
@@ -63,7 +63,7 @@ public class XmlValidatorTests : IDisposable
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.Validate(filePath, XJustizVersion.V3_4_1);
+        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.NotEmpty(errors);
@@ -79,7 +79,7 @@ public class XmlValidatorTests : IDisposable
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.Validate(filePath, XJustizVersion.V3_4_1);
+        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Contains(errors, e => e.Contains("XML Parsing failed") || e.Contains("Unexpected error"));
@@ -89,7 +89,7 @@ public class XmlValidatorTests : IDisposable
     public void Validate_NonExistentFile_ThrowsFileNotFound()
     {
         Assert.Throws<FileNotFoundException>(() =>
-            XmlValidator.Validate(Path.Combine(this._tempPath, "doesnotexist.xml"), XJustizVersion.V3_4_1));
+            XmlValidator.ValidateAsync(Path.Combine(this._tempPath, "doesnotexist.xml"), XJustizVersion.V3_4_1));
     }
 
     [Fact]
@@ -116,7 +116,7 @@ public class XmlValidatorTests : IDisposable
         using var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(xmlContent));
 
         // Act
-        var errors = XmlValidator.Validate(stream, XJustizVersion.V3_4_1);
+        var errors = XmlValidator.ValidateAsync(stream, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Empty(errors);
@@ -153,7 +153,7 @@ public class XmlValidatorTests : IDisposable
         // V3_2_1 schemas should complain about xjustizVersion fixed attribute or missing elements defined solely in 3.4.1 etc.
         // However, 3.2.1 might not have 0005006 or might have different definition.
         // If the element doesn't exist in 3.2.1, it's an error.
-        var errors = XmlValidator.Validate(filePath, XJustizVersion.V3_2_1);
+        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_2_1);
 
         // Assert
         Assert.NotEmpty(errors);
