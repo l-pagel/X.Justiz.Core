@@ -16,7 +16,11 @@
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
         <CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
         <UserSecretsId>6df0a473-8ad6-4bcf-9151-c5a12dc14c2f</UserSecretsId>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
     <ItemGroup>
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
             <PrivateAssets>all</PrivateAssets>
