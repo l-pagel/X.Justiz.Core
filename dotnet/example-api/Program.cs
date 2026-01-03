@@ -1,3 +1,5 @@
+using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,7 +13,24 @@ builder.Services
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+
+    options.SwaggerDoc("demo", new OpenApiInfo
+    {
+        Title = "Demo X.Justiz-Core API",
+        Version = "v1",
+        Description = "A demo dotnet API, that implements the <a href='https://www.nuget.org/packages/xjustiz.core-dotnet/'>xjustiz.core-dotnet</a> nuget.",
+        Contact = new OpenApiContact
+        {
+            Name = "Lukas M. Pagel",
+            Email = "lukas.pagel@the-onepiece.com",
+            Url = new Uri("https://github.com/l-pagel/X.Justiz.Core"),
+        },
+    });
+});
 
 var app = builder.Build();
 
@@ -39,7 +58,10 @@ app.UseExceptionHandler(exceptionHandlerApp =>
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/demo/swagger.json", "Demo X.Justiz-Core API");
+    });
 }
 
 app.UseHttpsRedirection();
