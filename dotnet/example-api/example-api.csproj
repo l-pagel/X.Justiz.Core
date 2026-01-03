@@ -1,10 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <ProjectGuid>44a6e1d5-7613-4d8b-824e-c8a27ac2a207</ProjectGuid>
+    <RootNamespace>example_api</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Lukas M. Pagel</Authors>
+    <Description>A demo dotnet API, that implements the <a href='https://www.nuget.org/packages/xjustiz.core-dotnet/'>xjustiz.core-dotnet</a> nuget.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>example_api</RootNamespace>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
