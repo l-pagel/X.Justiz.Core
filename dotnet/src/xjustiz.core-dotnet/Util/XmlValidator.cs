@@ -1,4 +1,4 @@
-namespace xjustiz.core_dotnet.Util;
+﻿namespace xjustiz.core_dotnet.Util;
 
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,8 @@ using xjustiz.core_dotnet.Util.Versioning;
 
 public static class XmlValidator
 {
+    private static readonly System.Collections.Concurrent.ConcurrentDictionary<XJustizVersion, Lazy<(XmlSchemaSet, List<string>)>> SchemaCache = new();
+
     /// <summary>
     /// Validates an XML file against the X.Justiz XSD schemas for the specified version.
     /// </summary>
@@ -50,43 +52,21 @@ public static class XmlValidator
             throw new ArgumentException("Version cannot be None", nameof(version));
         }
 
-        var errors = new List<string>();
-        var xsdDir = GetXsdDirectory(version);
+        // Get schemas from cache (optimizing performance by loading once)
+        var lazyResult = SchemaCache.GetOrAdd(version, v => new Lazy<(XmlSchemaSet, List<string>)>(() => LoadSchemas(v)));
+        var (schemaSet, loadErrors) = lazyResult.Value;
 
-        if (string.IsNullOrEmpty(xsdDir) || !Directory.Exists(xsdDir))
-        {
-            throw new DirectoryNotFoundException($"Could not find XSD directory for version {version}. Checked path: {xsdDir ?? "null"}");
-        }
+        var errors = new List<string>(loadErrors);
 
         var settings = new XmlReaderSettings
         {
             ValidationType = ValidationType.Schema,
+            Schemas = schemaSet,
+            Async = true,
         };
 
         settings.ValidationFlags |= XmlSchemaValidationFlags.ProcessInlineSchema;
         settings.ValidationFlags |= XmlSchemaValidationFlags.ReportValidationWarnings;
-
-        // Load all XSD files from the directory.
-        // Adding all schemas allows the validator to resolve any root element found in the XML,
-        // as well as internal dependencies (imports/includes) which are resolved by relative paths.
-        var xsdFiles = Directory.GetFiles(xsdDir, "*.xsd", SearchOption.AllDirectories);
-
-        foreach (var xsdFile in xsdFiles)
-        {
-            try
-            {
-                settings.Schemas.Add(null, xsdFile);
-            }
-            catch (Exception ex)
-            {
-                // If a schema fails to load individually (e.g. due to missing dependencies not yet added),
-                // we log it but continue. XmlSchemaSet is resilient; if the dependency is added later or found via relative path
-                // during the add of another schema, it usually works out.
-                // However, 'Add' with a file path sets BaseUri, so imports should work immediately.
-                // If it fails, it's likely a malformed XSD or a missing file that shouldn't be missing.
-                errors.Add($"[Warning] Failed to load schema {Path.GetFileName(xsdFile)}: {ex.Message}");
-            }
-        }
 
         settings.ValidationEventHandler += (sender, args) =>
         {
@@ -116,6 +96,53 @@ public static class XmlValidator
         }
 
         return errors;
+    }
+
+    private static (XmlSchemaSet, List<string>) LoadSchemas(XJustizVersion version)
+    {
+        var errors = new List<string>();
+        var xsdDir = GetXsdDirectory(version);
+
+        if (string.IsNullOrEmpty(xsdDir) || !Directory.Exists(xsdDir))
+        {
+             // We throw here, which will be cached as an exception by Lazy.
+            throw new DirectoryNotFoundException($"Could not find XSD directory for version {version}. Checked path: {xsdDir ?? "null"}");
+        }
+
+        var schemas = new XmlSchemaSet();
+
+        // Load all XSD files from the directory.
+        // Adding all schemas allows the validator to resolve any root element found in the XML,
+        // as well as internal dependencies (imports/includes) which are resolved by relative paths.
+        var xsdFiles = Directory.GetFiles(xsdDir, "*.xsd", SearchOption.AllDirectories);
+
+        foreach (var xsdFile in xsdFiles)
+        {
+            try
+            {
+                schemas.Add(null, xsdFile);
+            }
+            catch (Exception ex)
+            {
+                // If a schema fails to load individually (e.g. due to missing dependencies not yet added),
+                // we log it but continue. XmlSchemaSet is resilient; if the dependency is added later or found via relative path
+                // during the add of another schema, it usually works out.
+                // However, 'Add' with a file path sets BaseUri, so imports should work immediately.
+                // If it fails, it's likely a malformed XSD or a missing file that shouldn't be missing.
+                errors.Add($"[Warning] Failed to load schema {Path.GetFileName(xsdFile)}: {ex.Message}");
+            }
+        }
+
+        try
+        {
+            schemas.Compile();
+        }
+        catch(Exception ex)
+        {
+             errors.Add($"[Error] Schema compilation failed: {ex.Message}");
+        }
+
+        return (schemas, errors);
     }
 
     private static string? GetXsdDirectory(XJustizVersion version)

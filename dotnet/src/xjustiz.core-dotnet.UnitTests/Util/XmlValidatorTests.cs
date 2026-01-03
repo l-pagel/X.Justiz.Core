@@ -5,19 +5,20 @@ using System.IO;
 using Xunit;
 using xjustiz.core_dotnet.Util;
 using xjustiz.core_dotnet.Util.Versioning;
+using System.Threading.Tasks;
 
 public class XmlValidatorTests : IDisposable
 {
-    private readonly string _tempPath;
+    private readonly string tempPath;
 
     public XmlValidatorTests()
     {
-        this._tempPath = Path.Combine(Path.GetTempPath(), "XmlValidatorTests_" + Guid.NewGuid());
-        Directory.CreateDirectory(this._tempPath);
+        tempPath = Path.Combine(Path.GetTempPath(), "XmlValidatorTests_" + Guid.NewGuid());
+        Directory.CreateDirectory(tempPath);
     }
 
     [Fact]
-    public void Validate_ValidXml_ReturnsNoErrors()
+    public async Task Validate_ValidXml_ReturnsNoErrorsAsync()
     {
         // Arrange
         var xmlContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -37,18 +38,18 @@ public class XmlValidatorTests : IDisposable
                                     <tns:grunddaten/>
                                 </tns:nachricht.gds.basisnachricht.0005006>";
 
-        var filePath = Path.Combine(this._tempPath, "valid.xml");
+        var filePath = Path.Combine(tempPath, "valid.xml");
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
+        var errors = await XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Empty(errors);
     }
 
     [Fact]
-    public void Validate_InvalidXml_ReturnsErrors()
+    public async Task Validate_InvalidXml_ReturnsErrorsAsync()
     {
         // Arrange
         var xmlContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -59,11 +60,11 @@ public class XmlValidatorTests : IDisposable
     </tns:nachrichtenkopf>
 </tns:nachricht.gds.basisnachricht.0005006>";
 
-        var filePath = Path.Combine(this._tempPath, "invalid.xml");
+        var filePath = Path.Combine(tempPath, "invalid.xml");
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
+        var errors = await XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.NotEmpty(errors);
@@ -71,29 +72,29 @@ public class XmlValidatorTests : IDisposable
     }
 
     [Fact]
-    public void Validate_MalformedXml_ReturnsParsingError()
+    public async Task Validate_MalformedXml_ReturnsParsingErrorAsync()
     {
         // Arrange
         var xmlContent = @"<not<valid>xml";
-        var filePath = Path.Combine(this._tempPath, "malformed.xml");
+        var filePath = Path.Combine(tempPath, "malformed.xml");
         File.WriteAllText(filePath, xmlContent);
 
         // Act
-        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
+        var errors = await XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Contains(errors, e => e.Contains("XML Parsing failed") || e.Contains("Unexpected error"));
     }
 
     [Fact]
-    public void Validate_NonExistentFile_ThrowsFileNotFound()
+    public async Task Validate_NonExistentFile_ThrowsFileNotFound()
     {
-        Assert.Throws<FileNotFoundException>(() =>
-            XmlValidator.ValidateAsync(Path.Combine(this._tempPath, "doesnotexist.xml"), XJustizVersion.V3_4_1));
+        await Assert.ThrowsAsync<FileNotFoundException>(() =>
+            XmlValidator.ValidateAsync(Path.Combine(tempPath, "doesnotexist.xml"), XJustizVersion.V3_4_1));
     }
 
     [Fact]
-    public void Validate_Stream_ValidXml_ReturnsNoErrors()
+    public async Task Validate_Stream_ValidXml_ReturnsNoErrorsAsync()
     {
         // Arrange
         var xmlContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
@@ -116,14 +117,14 @@ public class XmlValidatorTests : IDisposable
         using var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(xmlContent));
 
         // Act
-        var errors = XmlValidator.ValidateAsync(stream, XJustizVersion.V3_4_1);
+        var errors = await XmlValidator.ValidateAsync(stream, XJustizVersion.V3_4_1);
 
         // Assert
         Assert.Empty(errors);
     }
 
     [Fact]
-    public void Validate_WrongVersion_ReturnsErrors()
+    public async Task Validate_WrongVersion_ReturnsErrorsAsync()
     {
         // Arrange: XML claims 3.4.1 but we validate against 3.2.1 (if 3.2.1 is available)
         // Or structure is just wrong for another version.
@@ -146,14 +147,14 @@ public class XmlValidatorTests : IDisposable
                                     <tns:grunddaten/>
                                 </tns:nachricht.gds.basisnachricht.0005006>";
 
-        var filePath = Path.Combine(this._tempPath, "wrong_version.xml");
+        var filePath = Path.Combine(tempPath, "wrong_version.xml");
         File.WriteAllText(filePath, xmlContent);
 
         // Act
         // V3_2_1 schemas should complain about xjustizVersion fixed attribute or missing elements defined solely in 3.4.1 etc.
         // However, 3.2.1 might not have 0005006 or might have different definition.
         // If the element doesn't exist in 3.2.1, it's an error.
-        var errors = XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_2_1);
+        var errors = await XmlValidator.ValidateAsync(filePath, XJustizVersion.V3_2_1);
 
         // Assert
         Assert.NotEmpty(errors);
@@ -167,11 +168,11 @@ public class XmlValidatorTests : IDisposable
 
     protected virtual void Dispose(bool disposing)
     {
-        if (Directory.Exists(this._tempPath))
+        if (Directory.Exists(tempPath))
         {
             try
             {
-                Directory.Delete(this._tempPath, true);
+                Directory.Delete(tempPath, true);
             }
             catch
             {
