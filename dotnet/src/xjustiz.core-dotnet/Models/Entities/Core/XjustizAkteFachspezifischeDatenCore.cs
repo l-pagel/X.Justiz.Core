@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-public class XjustizAkteFachspezifischeDaten
+public class XjustizAkteFachspezifischeDatenCore : XjustizAkteFachspezifischeDaten
 {
     /// <summary>
     /// Bezeichnet den Aktentyp anhand der vorgegebenen Werteliste. Diese ist für einen reibungslosen Austausch bewusst knappgehalten. Für eine spezifischere Bezeichnung kann das Feld "anzeigename" verwendet werden.<br/>
