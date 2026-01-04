@@ -23,8 +23,8 @@ public class Nachrichtenkopf
     public string Version { get; set; } = "3.5.1";
 
     /// <summary>
-    /// Aktenzeichen des Absenders.<br/>
-    /// <u><b>Sender file reference:</b></u> File reference of the sender.
+    /// Aktenzeichen des Absenders. Der Wert wird aus <see cref="Nachrichtenkopf.AktenzeichenAbsender"></see> übernommen<br/>
+    /// <u><b>Sender file reference:</b></u> File reference of the sender. The value of <see cref="Nachrichtenkopf.AktenzeichenAbsender"></see> will be taken.
     /// </summary>
     [XmlElement("aktenzeichen.absender", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
