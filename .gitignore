@@ -183,12 +183,6 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
-# Publish Functions
-/JL.Portal/DocumentGeneration/Properties/*Deploy*/**
-/JL.Portal/DocumentGeneration/Properties/*Deploy*
-/JL.Portal/ThumbnailGeneration/Properties/*Deploy*/**
-/JL.Portal/ThumbnailGeneration/Properties/*Deploy*
-
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
@@ -355,7 +349,6 @@ healthchecksdb
 .terraform
 **/terraform.tfstate
 **/terraform.lock.hcl
-/JL.Portal/DocumentGeneration/Util/Mappers/CaseFileViewMapper.cs
 
 # Generated XSD files
 X.Justiz-Core-Versions/**/XJustiz-Core_*.xsd

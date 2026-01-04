@@ -20,7 +20,7 @@ public class AnwendungsspezifischeErweiterung
     [XmlElement("kennung", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string Kennung { get; set; } = "Mandatensoftware";
+    public string Kennung { get; set; } = string.Empty;
 
     /// <summary>
     /// Der Name der anwendungsspezifischen Erweiterung.<br/>
@@ -29,7 +29,7 @@ public class AnwendungsspezifischeErweiterung
     [XmlElement("name", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string Name { get; set; } = "JL.Portal";
+    public string Name { get; set; } = string.Empty;
 
     /// <summary>
     /// Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.<br/>
