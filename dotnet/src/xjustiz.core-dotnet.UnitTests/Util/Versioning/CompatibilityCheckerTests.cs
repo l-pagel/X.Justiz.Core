@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
@@ -248,7 +249,7 @@ public class CompatibilityCheckerTests
                         Erstellungszeitpunkt = new DateTime(2025, 12, 1, 10, 30, 0),
                         FachspezifischeDaten = new XjustizFachspezifischeDaten
                         {
-                            Dokumentklasse = new DokumentklasseCode { Code = "002", ListVersionId = "1.0" },
+                            Dokumentklasse = new Dokumentklasse { Code = DokumentklasseCode.Klage_Antrag, ListVersionId = "1.0" },
                             Datei = new Datei
                             {
                                 Dateiname = "Klage.pdf",
