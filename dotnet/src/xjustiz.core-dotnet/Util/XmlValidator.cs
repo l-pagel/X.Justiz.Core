@@ -84,6 +84,7 @@ public static class XmlValidator
             using var reader = XmlReader.Create(xmlStream, settings);
             while (await reader.ReadAsync())
             {
+                // do nothing while checking for errors
             }
         }
         catch (XmlException ex)

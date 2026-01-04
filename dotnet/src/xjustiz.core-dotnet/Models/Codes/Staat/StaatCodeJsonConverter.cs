@@ -17,12 +17,9 @@ public class StaatCodeJsonConverter : JsonConverter<StaatCode>
                 return result;
             }
         }
-        else if (reader.TokenType == JsonTokenType.Number)
+        else if (reader.TokenType == JsonTokenType.Number && StaatCodeMapper.TryParse(reader.GetInt32().ToString().PadLeft(3, '0'), out var result))
         {
-             if (StaatCodeMapper.TryParse(reader.GetInt32().ToString().PadLeft(3, '0'), out var result))
-             {
-                 return result;
-             }
+            return result;
         }
 
         throw new JsonException($"Unable to convert \"{reader.GetString()}\" to {nameof(StaatCode)}.");

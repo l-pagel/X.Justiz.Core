@@ -47,10 +47,10 @@ public class StaatTests
         using var reader = new StringReader(xml);
 
         // Act
-        var staat = (Staat)serializer.Deserialize(reader);
+        var staat = serializer.Deserialize(reader) as Staat;
 
         // Assert
-        Assert.Equal(StaatCode.Belgien, staat.Code);
+        Assert.Equal(StaatCode.Belgien, staat?.Code);
     }
 
     /// <summary>
