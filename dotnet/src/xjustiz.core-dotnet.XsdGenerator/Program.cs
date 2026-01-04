@@ -1,0 +1,83 @@
+﻿using System.Reflection;
+using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models;
+using xjustiz.core_dotnet.Models.Helpers;
+using xjustiz.core_dotnet.Util.Versioning;
+
+if (args.Length == 0)
+{
+    Console.WriteLine("Please provide the repository root path as an argument.");
+    return;
+}
+
+string repoRoot = args[0];
+string outputBaseDir = Path.Combine(repoRoot, "X.Justiz-Core-Versions");
+
+Console.WriteLine($"Repository Root: {repoRoot}");
+Console.WriteLine($"Output Base Dir: {outputBaseDir}");
+
+var versions = Enum.GetValues<XJustizCoreVersion>();
+
+foreach (var version in versions)
+{
+    GenerateXsdForVersion(version, outputBaseDir);
+}
+
+void GenerateXsdForVersion(XJustizCoreVersion version, string baseDir)
+{
+    Console.WriteLine($"Generating XSD for version {version}...");
+
+    // Format folder name: "1.0.0" from "V1_0_0"
+    string versionString = version.ToString().Replace("V", "").Replace("_", ".");
+    string outputDir = Path.Combine(baseDir, versionString);
+    Directory.CreateDirectory(outputDir);
+
+    var overrides = CreateOverrides(version);
+    var importer = new XmlReflectionImporter(overrides, XJustizConstants.Tns);
+    var schemas = new XmlSchemas();
+    var exporter = new XmlSchemaExporter(schemas);
+
+    var mapping = importer.ImportTypeMapping(typeof(UebermittlungSchriftgutobjekteNachricht));
+    exporter.ExportTypeMapping(mapping);
+
+    // Post-process schemas if necessary (e.g. set schemaLocation for imports if we had them, 
+    // but mostly everything is in TNS or standard XML/XSI which we might want to handle).
+    
+    // Core models use TNS.
+    
+    foreach (System.Xml.Schema.XmlSchema schema in schemas)
+    {
+        if (schema.TargetNamespace == XJustizConstants.Tns)
+        {
+             string filename = $"XJustiz-Core_{versionString}.xsd";
+             string outputPath = Path.Combine(outputDir, filename);
+
+             using var writer = new StreamWriter(outputPath);
+             schema.Write(writer);
+             Console.WriteLine($"Written {outputPath}");
+        }
+    }
+}
+
+XmlAttributeOverrides CreateOverrides(XJustizCoreVersion targetVersion)
+{
+    var overrides = new XmlAttributeOverrides();
+    var assembly = typeof(UebermittlungSchriftgutobjekteNachricht).Assembly;
+    
+    foreach (var type in assembly.GetTypes())
+    {
+        foreach (var prop in type.GetProperties())
+        {
+            var availability = prop.GetCustomAttribute<XJustizCoreAvailabilityAttribute>();
+            if (availability != null)
+            {
+                if (!availability.IsAvailableIn(targetVersion))
+                {
+                    overrides.Add(type, prop.Name, new XmlAttributes { XmlIgnore = true });
+                    Console.WriteLine($"Ignoring {type.Name}.{prop.Name} (Not available in {targetVersion})");
+                }
+            }
+        }
+    }
+    return overrides;
+}

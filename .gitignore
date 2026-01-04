@@ -355,3 +355,6 @@ healthchecksdb
 **/terraform.tfstate
 **/terraform.lock.hcl
 /JL.Portal/DocumentGeneration/Util/Mappers/CaseFileViewMapper.cs
+
+# Generated XSD files
+X.Justiz-Core-Versions/**/XJustiz-Core_*.xsd
