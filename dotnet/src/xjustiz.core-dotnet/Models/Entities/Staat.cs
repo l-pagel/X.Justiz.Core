@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -24,8 +25,8 @@ public class Staat
     /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom Code-Typ 3" beschrieben.<br/>
     /// <u><b>Code:</b></u> The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
     /// </summary>
-    [XmlElement("code", Namespace = "")]
+    [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public string Code { get; set; } = string.Empty;
+    public StaatCode Code { get; set; }
 }

@@ -1,10 +1,10 @@
 namespace xjustiz.core_dotnet.UnitTests.Util.Versioning;
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Util.Versioning;
 using Xunit;
@@ -171,7 +171,7 @@ public class CompatibilityCheckerTests
                                             Hausnummer = "1",
                                             Postleitzahl = "12345",
                                             Ort = "Musterstadt",
-                                            Staat = new Staat { Code = "DE", ListVersionId = "1.0" },
+                                            Staat = new Staat { Code = StaatCode.Belgien, ListVersionId = "1.0" },
                                         },
                                         Telekommunikation =
                                         [
@@ -220,7 +220,7 @@ public class CompatibilityCheckerTests
                                 {
                                     Name = "Gruppe 1",
                                     Beschreibung = "Testgruppe",
-                                    Felder = new List<Feld> { new Feld { Name = "Feld1", Wert = "Wert1" } },
+                                    Felder = [new Feld { Name = "Feld1", Wert = "Wert1" }],
                                 },
                             ],
                         },
