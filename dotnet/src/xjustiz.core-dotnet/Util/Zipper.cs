@@ -15,7 +15,7 @@ using xjustiz.core_dotnet.Models.Helpers;
 /// Stellt Hilfsmethoden zum Erstellen von XJustiz-ZIP-Dateien bereit.
 /// Provides utility methods for creating XJustiz ZIP files.
 /// </summary>
-public static class Zip
+public static class Zipper
 {
     /// <summary>
     /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie am angegebenen Pfad.

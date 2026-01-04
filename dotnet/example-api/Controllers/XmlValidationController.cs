@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// </summary>
 [ApiController]
 [Route("[controller]")]
-public class XmlValidationController() : ControllerBase
+public class XmlValidationController : ControllerBase
 {
     /// <summary>
     /// Validates an X.Justiz XML file against a specific version.
@@ -19,9 +19,9 @@ public class XmlValidationController() : ControllerBase
     /// <returns>A success message if valid, or a list of validation errors if invalid.</returns>
     /// <response code="200">Returns if the validation succeeded.</response>
     /// <response code="400">Returns if the validation failed with errors.</response>
-    [HttpGet("validate/xjustiz")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [HttpPost("validate/xjustiz")]
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(List<string>), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> ValidateXJustizAsync(IFormFile file, XJustizVersion xJustizVersion)
     {
         var memoryStream = new MemoryStream();

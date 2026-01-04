@@ -29,6 +29,8 @@ bld/
 [Dd]ebug_*.dacpac
 [Dd]ebug_*.publish.sql
 build_output.txt
+build_errors.txt
+test_output.txt
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

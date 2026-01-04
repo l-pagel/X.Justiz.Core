@@ -1,4 +1,6 @@
+#pragma warning disable SA1200 // Using directives should be placed correctly
 using Microsoft.OpenApi.Models;
+#pragma warning restore SA1200 // Using directives should be placed correctly
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,7 +50,7 @@ app.UseExceptionHandler(exceptionHandlerApp =>
             await context.Response.WriteAsJsonAsync(new
             {
                 Error = exception.Message,
-                exception.StackTrace
+                exception.StackTrace,
             });
         }
     });

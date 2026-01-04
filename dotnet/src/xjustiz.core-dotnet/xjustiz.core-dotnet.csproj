@@ -14,7 +14,7 @@
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-        <CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisRuleSet>..\..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
         <UserSecretsId>6df0a473-8ad6-4bcf-9151-c5a12dc14c2f</UserSecretsId>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
@@ -26,5 +26,10 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+        <_Parameter1>xjustiz.core-dotnet.UnitTests</_Parameter1>
+      </AssemblyAttribute>
     </ItemGroup>
 </Project>
