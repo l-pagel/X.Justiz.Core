@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert die Bezeichnung einer Rolle als Code.<br/>
-/// <u><b>Role designation:</b></u> Represents the designation of a role as a code.
+/// Repräsentiert die Bezeichnung einer Rolle als Code der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>Codeliste "Rollenbezeichnung"</a>.<br/>
+/// <u><b>Role designation:</b></u> Represents the designation of a role as a code of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>code list "Rollenbezeichnung"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]

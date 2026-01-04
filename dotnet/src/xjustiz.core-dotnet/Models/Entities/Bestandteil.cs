@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Ein Bestandteil einer Datei (z.B. Format, Version).<br/>
-/// <u><b>Component:</b></u> A component of a file (e.g., format, version).
+/// Ein Bestandteil einer Datei (z.B. Format, Version) als Code der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp'>Codeliste "Bestandteiltyp"</a>.<br/>
+/// <u><b>Component:</b></u> A component of a file (e.g., format, version) as a code of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp'>code list "Bestandteiltyp"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]

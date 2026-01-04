@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Der Code für eine Dokumentklasse.<br/>
-/// <u><b>Document class code:</b></u> The code for a document class.
+/// Der Code für eine Dokumentklasse der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse'>Codeliste "Dokumentklasse"</a>.<br/>
+/// <u><b>Document class code:</b></u> The code for a document class of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse'>code list "Dokumentklasse"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]

@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert den Code eines Gerichts.
-/// <u><b>Court code:</b></u> Represents the code of a court.
+/// Repräsentiert den Code eines Gerichts der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>Codeliste "Gerichte"</a>.<br/>
+/// <u><b>Court code:</b></u> Represents the code of a court of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>code list "Gerichte"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]

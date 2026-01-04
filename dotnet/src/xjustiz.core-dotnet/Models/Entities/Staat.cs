@@ -4,8 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert einen Staat als Code.<br/>
-/// <u><b>Country:</b></u> Represents a country / state as a code.
+/// Repräsentiert einen Staat als Code der <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>Codeliste "Staat"</a>.<br/>
+/// <u><b>Country:</b></u> Represents a country / state as a code of the <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>code list "Staat"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
