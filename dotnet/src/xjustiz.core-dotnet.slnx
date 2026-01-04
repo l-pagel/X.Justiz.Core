@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="../../.github/workflows/build-test-publish.yml" />
+    <File Path="../../.gitignore" />
     <File Path="StyleCopRules.ruleset" />
   </Folder>
   <Project Path="../example-api/example-api.csproj" />
