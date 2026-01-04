@@ -1,4 +1,4 @@
-namespace xjustiz.core_dotnet.Models.Codes;
+namespace xjustiz.core_dotnet.Models.Helpers;
 
 /// <summary>
 /// Enthält Konstanten für XJustiz-Namespaces.<br/>
