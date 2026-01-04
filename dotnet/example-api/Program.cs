@@ -27,7 +27,6 @@ builder.Services.AddSwaggerGen(options =>
         Contact = new OpenApiContact
         {
             Name = "Lukas M. Pagel",
-            Email = "lukas.pagel@the-onepiece.com",
             Url = new Uri("https://github.com/l-pagel/X.Justiz.Core"),
         },
     });

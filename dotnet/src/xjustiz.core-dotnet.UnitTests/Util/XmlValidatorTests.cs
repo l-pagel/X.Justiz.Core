@@ -53,12 +53,12 @@ public class XmlValidatorTests : IDisposable
     {
         // Arrange
         var xmlContent = @"<?xml version=""1.0"" encoding=""utf-8""?>
-<tns:nachricht.gds.basisnachricht.0005006
-    xmlns:tns=""http://www.xjustiz.de"">
-    <tns:nachrichtenkopf xjustizVersion=""3.4.1"">
-        <!-- Missing required fields like erstellungszeitpunkt -->
-    </tns:nachrichtenkopf>
-</tns:nachricht.gds.basisnachricht.0005006>";
+                            <tns:nachricht.gds.basisnachricht.0005006
+                                xmlns:tns=""http://www.xjustiz.de"">
+                                <tns:nachrichtenkopf xjustizVersion=""3.4.1"">
+                                    <!-- Missing required fields like erstellungszeitpunkt -->
+                                </tns:nachrichtenkopf>
+                            </tns:nachricht.gds.basisnachricht.0005006>";
 
         var filePath = Path.Combine(tempPath, "invalid.xml");
         File.WriteAllText(filePath, xmlContent);
