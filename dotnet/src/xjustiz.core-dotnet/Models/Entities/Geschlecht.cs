@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Gender:</b></u> Represents the gender of a person as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Geschlecht
 {
     /// <summary>
@@ -17,6 +17,6 @@ public class Geschlecht
     /// </summary>
     [XmlElement("code", Namespace = "")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Code { get; set; }
 }

@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Component:</b></u> A component of a file (e.g., format, version) as a code of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp'>code list "Bestandteiltyp"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Bestandteil
 {
     /// <summary>
@@ -17,7 +17,7 @@ public class Bestandteil
     /// </summary>
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string ListVersionId { get; set; } = "2.4";
 
     /// <summary>
@@ -26,6 +26,6 @@ public class Bestandteil
     /// </summary>
     [XmlElement("code", Namespace = "", Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string Code { get; set; } = "001";
 }

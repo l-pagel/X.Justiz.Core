@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Identification:</b></u> Uniquely identifies an object.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Identifikation
 {
     /// <summary>
@@ -19,7 +19,7 @@ public class Identifikation
     /// </summary>
     [XmlElement("id", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string Id { get; set; } = Guid.NewGuid().ToString();
 
     /// <summary>
@@ -28,6 +28,6 @@ public class Identifikation
     /// </summary>
     [XmlElement("nummerImUebergeordnetenContainer", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string NummerImUebergeordnetenContainer { get; set; } = "1";
 }

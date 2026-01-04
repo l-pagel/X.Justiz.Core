@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Country Codes:</b></u> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 [System.Text.Json.Serialization.JsonConverter(typeof(StaatCodeJsonConverter))]
 public enum StaatCode
 {

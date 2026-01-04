@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Address selection:</b></u> Selection structure for addresses (sender or receiver).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class AuswahlAdresse
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class AuswahlAdresse
     /// </summary>
     [XmlElement("absender.sonstige", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? AbsenderSonstige { get; set; }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class AuswahlAdresse
     /// </summary>
     [XmlElement("empfaenger.sonstige", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerSonstige { get; set; }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class AuswahlAdresse
     /// </summary>
     [XmlElement("empfaenger.gericht", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerGericht { get; set; }
 
     /// <summary>
@@ -45,7 +45,7 @@ public class AuswahlAdresse
     /// </summary>
     [XmlElement("empfaenger.rvTraeger", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerRvTraeger { get; set; }
 
     /// <summary>
@@ -54,6 +54,6 @@ public class AuswahlAdresse
     /// </summary>
     [XmlElement("empfaenger.polizeibehoerde", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerPolizei { get; set; }
 }

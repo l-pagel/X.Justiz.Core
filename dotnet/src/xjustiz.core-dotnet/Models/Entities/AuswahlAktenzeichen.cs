@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>File reference selection:</b></u> Selection structure for file references.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class AuswahlAktenzeichen
 {
     /// <summary>
@@ -18,6 +18,6 @@ public class AuswahlAktenzeichen
     /// </summary>
     [XmlElement("aktenzeichen.freitext", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Freitext { get; set; }
 }

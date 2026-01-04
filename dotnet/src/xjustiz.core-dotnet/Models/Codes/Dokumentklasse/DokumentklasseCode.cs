@@ -7,7 +7,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Dokumentklasse Codes from <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse'>XRepository: Codeliste GDS.Dokumentklasse</a>.<br/>
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 [System.Text.Json.Serialization.JsonConverter(typeof(DokumentklasseCodeJsonConverter))]
 public enum DokumentklasseCode
 {

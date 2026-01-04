@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Document class code:</b></u> The code for a document class of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse'>code list "Dokumentklasse"</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Dokumentklasse
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Dokumentklasse
     /// </summary>
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string ListVersionId { get; set; } = "1.4"; // Default to latest
 
     /// <summary>
@@ -27,6 +27,6 @@ public class Dokumentklasse
     /// </summary>
     [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public DokumentklasseCode Code { get; set; }
 }

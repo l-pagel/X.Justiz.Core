@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>File:</b></u> Represents a file.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Datei
 {
     /// <summary>
@@ -19,7 +19,7 @@ public class Datei
     /// </summary>
     [XmlElement("dateiname", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Dateiname { get; set; }
 
     /// <summary>
@@ -28,6 +28,6 @@ public class Datei
     /// </summary>
     [XmlElement("bestandteil", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Bestandteil> Bestandteile { get; set; } = new();
 }

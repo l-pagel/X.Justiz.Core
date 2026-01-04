@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>File:</b></u> Represents a file / case.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Akte
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Akte
     /// </summary>
     [XmlElement("identifikation", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Identifikation Identifikation { get; set; } = new();
 
     /// <summary>
@@ -27,7 +27,7 @@ public class Akte
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public XjustizAkteFachspezifischeDaten FachspezifischeDaten { get; set; } = new();
 
     /// <summary>
@@ -36,6 +36,6 @@ public class Akte
     /// </summary>
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
 }

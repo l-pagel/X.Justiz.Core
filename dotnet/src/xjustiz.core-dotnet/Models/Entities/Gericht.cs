@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Court:</b></u> Represents a court as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Gericht
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Gericht
     /// </summary>
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string ListVersionId { get; set; } = "3.6";
 
     /// <summary>
@@ -27,6 +27,6 @@ public class Gericht
     /// </summary>
     [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public GerichtCode Code { get; set; }
 }

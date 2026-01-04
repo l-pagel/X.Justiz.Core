@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Country:</b></u> Represents a country / state as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Staat
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Staat
     /// </summary>
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string ListVersionId { get; set; } = "3.5.1";
 
     /// <summary>
@@ -27,6 +27,6 @@ public class Staat
     /// </summary>
     [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public StaatCode Code { get; set; }
 }

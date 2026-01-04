@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Telekommunikation
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Telekommunikation
     /// </summary>
     [XmlElement("telekommunikationsart", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Telekommunikationsart? Telekommunikationsart { get; set; }
 
     /// <summary>
@@ -27,6 +27,6 @@ public class Telekommunikation
     /// </summary>
     [XmlElement("verbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? verbindung { get; set; }
 }
