@@ -1,8 +1,10 @@
-﻿using System.Reflection;
+﻿#pragma warning disable SA1200 // Using directives should be placed correctly
+using System.Reflection;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
+#pragma warning restore SA1200 // Using directives should be placed correctly
 
 if (args.Length == 0)
 {
@@ -30,19 +32,27 @@ Console.WriteLine($"Total known versions in Enum: {allVersions.Length}");
 Console.WriteLine($"Versions referenced in code:  {referencedVersions.Count}");
 Console.WriteLine("--------------------------------------------------");
 Console.WriteLine("DETECTED / TO BE GENERATED:");
-foreach (var v in usedVersions) Console.WriteLine($" - {v}");
 
-if (unusedVersions.Any())
+foreach (var v in usedVersions)
+{
+    Console.WriteLine($" - {v}");
+}
+
+if (unusedVersions.Count != 0)
 {
     Console.WriteLine("UNUSED / GHOST VERSIONS (Skipped):");
-    foreach (var v in unusedVersions) Console.WriteLine($" - {v}");
+    foreach (var v in unusedVersions)
+    {
+        Console.WriteLine($" - {v}");
+    }
 }
 else
 {
     Console.WriteLine("No unused versions detected.");
 }
+
 Console.WriteLine("--------------------------------------------------");
-Console.WriteLine("");
+Console.WriteLine(string.Empty);
 
 foreach (var version in allVersions)
 {
@@ -61,7 +71,7 @@ void GenerateXsdForVersion(XJustizCoreVersion version, string baseDir)
     Console.WriteLine($"Generating XSD for version {version}...");
 
     // Format folder name: "1.0.0" from "V1_0_0"
-    string versionString = version.ToString().Replace("V", "").Replace("_", ".");
+    string versionString = version.ToString().Replace("V", string.Empty).Replace("_", ".");
     string outputDir = Path.Combine(baseDir, versionString);
     Directory.CreateDirectory(outputDir);
 
@@ -73,11 +83,11 @@ void GenerateXsdForVersion(XJustizCoreVersion version, string baseDir)
     var mapping = importer.ImportTypeMapping(typeof(UebermittlungSchriftgutobjekteNachricht));
     exporter.ExportTypeMapping(mapping);
 
-    // Post-process schemas if necessary (e.g. set schemaLocation for imports if we had them, 
+    // Post-process schemas if necessary (e.g. set schemaLocation for imports if we had them,
     // but mostly everything is in TNS or standard XML/XSI which we might want to handle).
-    
+
     // Core models use TNS.
-    
+
     foreach (System.Xml.Schema.XmlSchema schema in schemas)
     {
         if (schema.TargetNamespace == XJustizConstants.Tns)
@@ -96,7 +106,7 @@ XmlAttributeOverrides CreateOverrides(XJustizCoreVersion targetVersion)
 {
     var overrides = new XmlAttributeOverrides();
     var assembly = typeof(UebermittlungSchriftgutobjekteNachricht).Assembly;
-    
+
     foreach (var type in assembly.GetTypes())
     {
         foreach (var prop in type.GetProperties())
@@ -112,6 +122,7 @@ XmlAttributeOverrides CreateOverrides(XJustizCoreVersion targetVersion)
             }
         }
     }
+
     return overrides;
 }
 
@@ -137,25 +148,29 @@ HashSet<XJustizCoreVersion> GetReferencedVersions(Assembly assembly)
         }
     }
 
-    // Always include the oldest version if nothing is found? 
-    // Or assume implicit baseline? 
+    // Always include the oldest version if nothing is found?
+    // Or assume implicit baseline?
     // Usually code starts with *some* version.
-    
+
     return versions;
 
     void CheckAttribute(XJustizCoreAvailabilityAttribute? attr)
     {
-        if (attr == null) return;
+        if (attr == null)
+        {
+            return;
+        }
+
         versions.Add(attr.IntroducedIn);
-        
+
         // If 'Removed' is set (it's not min/default), then that version is also a pivot point.
         // Assuming 0 or some default value indicates "not removed".
         // The attribute helper logic often handles this, but here we access the property directly.
         // Let's assume the default raw value 0 or similar means not set.
         // However, looking at the Attribute definition, Removed returns (XJustizCoreVersion)RemovedRaw.
         // We catch everything that is a valid enum value distinct from "unspecified".
-        
-        if (Enum.IsDefined(typeof(XJustizCoreVersion), attr.Removed))
+
+        if (Enum.IsDefined(attr.Removed))
         {
              versions.Add(attr.Removed);
         }

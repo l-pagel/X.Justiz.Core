@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<ProjectGuid>227d8d4b-5c46-4bbb-80c4-185bc006aafb</ProjectGuid>
-		<RootNamespace>example_api</RootNamespace>
+		<RootNamespace>xjustiz.core-dotnet.XsdGenerator</RootNamespace>
 		<Version>1.0.0</Version>
 		<Authors>Lukas M. Pagel</Authors>
 		<Description>
@@ -16,7 +16,15 @@
 		<RootNamespace>xjustiz.core_dotnet.XsdGenerator</RootNamespace>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	</ItemGroup>
 	
 	<ItemGroup>
 		<ProjectReference Include="..\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
