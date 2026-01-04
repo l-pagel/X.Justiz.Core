@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 
 //TODO: What namespace to use for completely new fields and types
-//TODO: Should we add this Type or rather extend Organisation
 public class Versicherung
 {
     [XmlElement("versicherungsnummer", Namespace = "")]

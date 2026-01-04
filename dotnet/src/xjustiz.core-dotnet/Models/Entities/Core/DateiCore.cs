@@ -14,9 +14,9 @@ public class DateiCore : Datei
     /// Gibt an ob die Datei teil des Export Verzeichnisses ist oder ob der Zugriff über eine externe quelle (z.B Downloadlink) erfolgt.<br/>
     /// <u><b>IsExternal</b></u> 'true' if the file must be retrieved from an external source.
     /// </summary>
-    [XmlElement("lokal", Namespace = "", Order = 4)]
+    [XmlElement("istExtern", Namespace = "", Order = 4)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public bool IsExternal { get; set; }
+    public bool IstExtern { get; set; }
 
     /// <summary>
     /// Gibt eine externe Quelle an über die man die Datei beziehen kann.<br/>
