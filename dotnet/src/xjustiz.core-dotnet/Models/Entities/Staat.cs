@@ -5,8 +5,8 @@ using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert einen Staat als Code der <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>Codeliste "Staat"</a>.<br/>
-/// <u><b>Country:</b></u> Represents a country / state as a code of the <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>code list "Staat"</a>.
+/// Repräsentiert einen Staat als Code.<br/>
+/// <u><b>Country:</b></u> Represents a country / state as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
@@ -22,8 +22,8 @@ public class Staat
     public string ListVersionId { get; set; } = "3.5.1";
 
     /// <summary>
-    /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom Code-Typ 3" beschrieben.<br/>
-    /// <u><b>Code:</b></u> The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
+    /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden: <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>Codeliste "Staat"</a><br/>
+    /// <u><b>Code:</b></u> The values of a code list of code type 3 can be viewed in the XRepository: <a href='https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat'>code list "Staat"</a>.
     /// </summary>
     [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]

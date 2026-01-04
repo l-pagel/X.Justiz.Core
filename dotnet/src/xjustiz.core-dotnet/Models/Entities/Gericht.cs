@@ -1,15 +1,16 @@
-namespace xjustiz.core_dotnet.Models.Codes;
+namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert den Code eines Gerichts der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>Codeliste "Gerichte"</a>.<br/>
-/// <u><b>Court code:</b></u> Represents the code of a court of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>code list "Gerichte"</a>.
+/// Repräsentiert ein Gericht als Code.<br/>
+/// <u><b>Court:</b></u> Represents a court as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-public class GerichtCode
+public class Gericht
 {
     /// <summary>
     /// Die Version der Codeliste. Dokumentation aus XOEV-Bibliothek: Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen. Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen Code-Typ 1 oder 2).<br/>
@@ -18,14 +19,14 @@ public class GerichtCode
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public string ListVersionId { get; set; } = "3.5.1";
+    public string ListVersionId { get; set; } = "3.6";
 
     /// <summary>
-    /// In diesem XML-Element wird der Code einer Codeliste übermittelt.<br/>
-    /// <u><b>Code:</b></u> The code of a code list is transmitted in this XML element.
+    /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden: <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>Codeliste "Gerichte"</a><br/>
+    /// <u><b>Code:</b></u> The values of a code list of code type 3 can be viewed in the XRepository: <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>code list "Gerichte"</a>
     /// </summary>
-    [XmlElement("code", Namespace = "")]
+    [XmlElement("code")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public string Code { get; set; } = string.Empty;
+    public GerichtCode Code { get; set; }
 }

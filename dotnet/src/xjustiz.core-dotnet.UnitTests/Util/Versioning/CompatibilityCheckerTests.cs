@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -140,7 +141,7 @@ public class CompatibilityCheckerTests
                         Sachgebietszusatz = "Zivilsache",
                         AuswahlInstanzbehoerde = new AuswahlInstanzbehoerde
                         {
-                            Gericht = new GerichtCode { Code = "D12345", ListVersionId = "1.0" },
+                            Gericht = new Gericht { Code = GerichtCode.Amtsgericht_Baden_Baden, ListVersionId = "3.6" },
                         },
                     },
                     Beteiligungen =

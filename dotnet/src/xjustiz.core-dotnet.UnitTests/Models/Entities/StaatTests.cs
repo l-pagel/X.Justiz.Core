@@ -1,3 +1,5 @@
+namespace xjustiz.core_dotnet.UnitTests.Models.Entities;
+
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
