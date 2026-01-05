@@ -140,7 +140,7 @@ public class CompatibilityCheckerTests
                         Sachgebietszusatz = "Zivilsache",
                         AuswahlInstanzbehoerde = new AuswahlInstanzbehoerde
                         {
-                            Gericht = new GerichtCode { Code = "D12345", ListVersionId = "1.0" },
+                            Gericht = new Code { CodeValue = "D12345", ListVersionId = "1.0", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte" },
                         },
                     },
                     Beteiligungen =
@@ -149,7 +149,7 @@ public class CompatibilityCheckerTests
                         {
                             Rolle = new Rolle
                             {
-                                Rollenbezeichnung = new Rollenbezeichnung { Code = "rolle.klaeger", ListVersionId = "1.0" },
+                                Rollenbezeichnung = new Code { CodeValue = "rolle.klaeger", ListVersionId = "1.0", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung" },
                             },
                             Beteiligter = new Beteiligter
                             {
@@ -171,7 +171,7 @@ public class CompatibilityCheckerTests
                                             Hausnummer = "1",
                                             Postleitzahl = "12345",
                                             Ort = "Musterstadt",
-                                            Staat = new Staat { Code = "DE", ListVersionId = "1.0" },
+                                            Staat = new Code { CodeValue = "DE", ListVersionId = "1.0" },
                                         },
                                         Telekommunikation =
                                         [
@@ -226,7 +226,7 @@ public class CompatibilityCheckerTests
                         },
                         FachspezifischeDaten = new XjustizAkteFachspezifischeDaten
                         {
-                            Aktentyp = new Aktentyp { Code = "001" },
+                            Aktentyp = new Code { CodeValue = "001" },
                             Anzeigename = "Hauptakte",
                             Aktenzeichen = new Aktenzeichen
                             {
@@ -247,14 +247,11 @@ public class CompatibilityCheckerTests
                         Erstellungszeitpunkt = new DateTime(2025, 12, 1, 10, 30, 0),
                         FachspezifischeDaten = new XjustizFachspezifischeDaten
                         {
-                            Dokumentklasse = new DokumentklasseCode { Code = "002", ListVersionId = "1.0" },
+                            Dokumentklasse = new Code { CodeValue = "002", ListVersionId = "1.0", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse" },
                             Datei = new Datei
                             {
                                 Dateiname = "Klage.pdf",
-                                Bestandteile =
-                                [
-                                    new Bestandteil { Code = "001", ListVersionId = "2.4" },
-                                ],
+                                Bestandteil = new Code { CodeValue = "001", ListVersionId = "2.4", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp" },
                             },
                         },
                     },

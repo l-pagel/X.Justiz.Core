@@ -19,7 +19,7 @@ public class XjustizFachspezifischeDaten
     [XmlElement("dokumentklasse", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public DokumentklasseCode? Dokumentklasse { get; set; }
+    public Code? Dokumentklasse { get; set; }
 
     /// <summary>
     /// Repräsentiert eine Datei.<br/>

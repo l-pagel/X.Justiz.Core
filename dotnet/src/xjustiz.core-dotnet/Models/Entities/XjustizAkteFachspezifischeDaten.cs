@@ -19,7 +19,7 @@ public class XjustizAkteFachspezifischeDaten
     [XmlElement("aktentyp", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public Aktentyp Aktentyp { get; set; } = new();
+    public Code Aktentyp { get; set; } = new();
 
     /// <summary>
     /// Der Anzeigename ermöglicht als Freitext die Übermittlung der Bezeichnung der Akte, wie sie im versendenden System angezeigt wird. Hier können spezifischere Informationen zum Aktennamen übermittelt werden, als dies im Rahmen der Werteliste zum Aktentyp möglich ist, z.B. "Asylakte" als nähere Spezifizierung des Aktentyps "Behördenakte".<br/>

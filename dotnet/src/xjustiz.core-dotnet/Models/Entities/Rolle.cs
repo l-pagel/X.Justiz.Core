@@ -19,5 +19,5 @@ public class Rolle
     [XmlElement("rollenbezeichnung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public Rollenbezeichnung Rollenbezeichnung { get; set; } = new();
+    public Code Rollenbezeichnung { get; set; } = new();
 }

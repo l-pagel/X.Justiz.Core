@@ -49,11 +49,11 @@ public class Anschrift
     public string? Ort { get; set; }
 
     /// <summary>
-    /// Die Werte einer Codeliste vom Code-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom Code-Typ 3" beschrieben.<br/>
-    /// <u><b>Country:</b></u> The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'Code lists of code type 3'.
+    /// Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.<br/>
+    /// <u><b>Country:</b></u> The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
     /// </summary>
     [XmlElement("staat", Namespace = XJustizConstants.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public Staat? Staat { get; set; }
+    public Code? Staat { get; set; }
 }

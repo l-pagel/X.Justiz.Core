@@ -29,7 +29,7 @@ public class NatuerlichePerson
     [XmlElement("geschlecht", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-    public Geschlecht Geschlecht { get; set; } = new();
+    public Code Geschlecht { get; set; } = new();
 
     /// <summary>
     /// Auch Postfach-Anschriften fallen hierunter.<br/>

@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Art der Telekommunikation als Code.<br/>
+/// Art der Telekommunikation als CodeValue.<br/>
 /// <u><b>Telecommunication type:</b></u> Type of telecommunication as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
@@ -12,8 +12,8 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Telekommunikationsart
 {
     /// <summary>
-    /// Mögliche Codes können der Codeliste Code.INSO.IRI.Fehlercode entnommen werden.<br/>
-    /// <u><b>Code:</b></u> Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
+    /// Mögliche Codes können der Codeliste CodeValue.INSO.IRI.Fehlercode entnommen werden.<br/>
+    /// <u><b>CodeValue:</b></u> Possible codes can be taken from the code list CodeValue.INSO.IRI.Fehlercode.
     /// </summary>
     [XmlElement("code", Namespace = "")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]

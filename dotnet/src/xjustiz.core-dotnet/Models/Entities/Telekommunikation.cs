@@ -13,7 +13,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Telekommunikation
 {
     /// <summary>
-    /// Art der Telekommunikation als Code.<br/>
+    /// Art der Telekommunikation als CodeValue.<br/>
     /// <u><b>Telecommunication type:</b></u> Type of telecommunication as a code.
     /// </summary>
     [XmlElement("telekommunikationsart", Namespace = XJustizConstants.Tns)]

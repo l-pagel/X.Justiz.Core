@@ -32,6 +32,15 @@ public class AnwendungsspezifischeErweiterung
     public string Name { get; set; } = "JL.Portal";
 
     /// <summary>
+    /// Die textuelle Erläuterung zu einer anwendungsspezifischen Erweiterung.<br/>
+    /// <u><b>Description:</b></u> The textual explanation of an application-specific extension.
+    /// </summary>
+    [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 2)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    public string? Beschreibung { get; set; }
+
+    /// <summary>
     /// Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.<br/>
     /// <u><b>Field groups:</b></u> A field group assigned to the application-specific extension.
     /// </summary>
