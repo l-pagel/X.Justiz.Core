@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<ProjectGuid>227d8d4b-5c46-4bbb-80c4-185bc006aafb</ProjectGuid>
 		<RootNamespace>xjustiz.core-dotnet.XsdGenerator</RootNamespace>
@@ -29,5 +28,4 @@
 	<ItemGroup>
 		<ProjectReference Include="..\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
 	</ItemGroup>
-
 </Project>
