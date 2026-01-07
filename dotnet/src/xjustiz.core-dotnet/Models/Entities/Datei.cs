@@ -1,6 +1,5 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
-using System.Collections.Generic;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -29,5 +28,5 @@ public class Datei
     [XmlElement("bestandteil", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public List<Bestandteil> Bestandteile { get; set; } = new();
+    public Bestandteil Bestandteil { get; set; } = new();
 }

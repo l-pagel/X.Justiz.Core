@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
-using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Geschlecht;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,14 +10,11 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-public class Geschlecht
+public class Geschlecht : ICode<GeschlechtCode>
 {
-    /// <summary>
-    /// Mögliche Codes können der Codeliste Code.INSO.IRI.Fehlercode entnommen werden.<br/>
-    /// <u><b>Code:</b></u> Possible codes can be taken from the code list Code.INSO.IRI.Fehlercode.
-    /// </summary>
-    [XmlElement("code", Namespace = "")]
-    [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string? Code { get; set; }
+    public string ListVersionId { get; set; } = "2.0";
+
+    public string? ListUri { get; set; } = "https://www.xrepository.de/details/urn:de:xauslaender:codelist:geschlecht";
+
+    public GeschlechtCode Code { get; set; }
 }

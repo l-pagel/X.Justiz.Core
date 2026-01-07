@@ -22,6 +22,24 @@ public class Feld
     public string? Name { get; set; }
 
     /// <summary>
+    /// Die Hinweise und Erläuterungen zu einem Feld.<br/>
+    /// <u><b>Description:</b></u> The notes and explanations for a field.
+    /// </summary>
+    [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    public string? Beschreibung { get; set; }
+
+    /// <summary>
+    /// Der Datentyp des Feldwertes. Gültige Angaben sind die W3C-Datentypen.<br/>
+    /// <u><b>Data type:</b></u> The data type of the field value. Valid entries are the W3C data types.
+    /// </summary>
+    [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 1)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    public string? Datentyp { get; set; }
+
+    /// <summary>
     /// Der Wert des Feldes.<br/>
     /// <u><b>Value:</b></u> The value of the field.
     /// </summary>
