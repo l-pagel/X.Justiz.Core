@@ -1,10 +1,11 @@
 namespace xjustiz.core_dotnet.UnitTests.Util.Versioning;
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using xjustiz.core_dotnet.Models;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
+using xjustiz.core_dotnet.Models.Codes.Gericht;
+using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Util.Versioning;
 using Xunit;
@@ -96,7 +97,7 @@ public class CompatibilityCheckerTests
         var result = CompatibilityChecker.Check(message);
 
         // Assert
-        Assert.Contains(XJustizCoreVersion.V1_0_0, result.CompatibleXJustizCoreVersions);
+        Assert.Contains(XJustizCoreVersion.V0_2_0, result.CompatibleXJustizCoreVersions);
     }
 
     [Fact]
@@ -140,7 +141,7 @@ public class CompatibilityCheckerTests
                         Sachgebietszusatz = "Zivilsache",
                         AuswahlInstanzbehoerde = new AuswahlInstanzbehoerde
                         {
-                            Gericht = new Code { CodeValue = "D12345", ListVersionId = "1.0", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte" },
+                            Gericht = new Code { CodeValue = "D12345", ListVersionId = "3.6", ListUri = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte" },
                         },
                     },
                     Beteiligungen =
@@ -220,7 +221,7 @@ public class CompatibilityCheckerTests
                                 {
                                     Name = "Gruppe 1",
                                     Beschreibung = "Testgruppe",
-                                    Felder = new List<Feld> { new Feld { Name = "Feld1", Wert = "Wert1" } },
+                                    Felder = [new Feld { Name = "Feld1", Wert = "Wert1" }],
                                 },
                             ],
                         },
@@ -279,7 +280,7 @@ public class CompatibilityCheckerTests
     internal class UebermittlungSchriftgutobjekteNachrichtWithRemovedPropertyInUse : UebermittlungSchriftgutobjekteNachricht
     {
         [XJustizAvailability(XJustizVersion.V3_2_1, Removed = XJustizVersion.V3_3_1)]
-        [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
         public int PropertyWithRemovedUsed { get; set; }
     }
 }

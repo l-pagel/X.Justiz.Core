@@ -28,6 +28,9 @@ bld/
 [Ll]og/
 [Dd]ebug_*.dacpac
 [Dd]ebug_*.publish.sql
+build_output.txt
+build_errors.txt
+test_output.txt
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -181,12 +184,6 @@ publish/
 # checkin your Azure Web App publish settings, but sensitive information contained
 # in these scripts will be unencrypted
 PublishScripts/
-
-# Publish Functions
-/JL.Portal/DocumentGeneration/Properties/*Deploy*/**
-/JL.Portal/DocumentGeneration/Properties/*Deploy*
-/JL.Portal/ThumbnailGeneration/Properties/*Deploy*/**
-/JL.Portal/ThumbnailGeneration/Properties/*Deploy*
 
 # NuGet Packages
 *.nupkg
@@ -354,4 +351,6 @@ healthchecksdb
 .terraform
 **/terraform.tfstate
 **/terraform.lock.hcl
-/JL.Portal/DocumentGeneration/Util/Mappers/CaseFileViewMapper.cs
+
+# Generated XSD files
+X.Justiz-Core-Versions/**/XJustiz-Core_*.xsd

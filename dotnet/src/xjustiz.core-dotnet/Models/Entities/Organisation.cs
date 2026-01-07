@@ -2,7 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Organization:</b></u> An organization (legal entity).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Organisation
 {
     /// <summary>
@@ -19,7 +19,7 @@ public class Organisation
     /// </summary>
     [XmlElement("bezeichnung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Bezeichnung? Bezeichnung { get; set; }
 
     /// <summary>

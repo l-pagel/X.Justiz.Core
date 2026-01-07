@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 
 /// <summary>
 /// Stellt Hilfsmethoden zum Erstellen von XJustiz-ZIP-Dateien bereit.
 /// Provides utility methods for creating XJustiz ZIP files.
 /// </summary>
-public static class Zip
+public static class Zipper
 {
     /// <summary>
     /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie am angegebenen Pfad.

@@ -3,8 +3,14 @@
 public enum XJustizCoreVersion
 {
     /// <summary>
-    /// Gültig ab 01.01.2026
-    /// Valid from 01.01.2026
+    /// Beta-Version, gültig ab 01.01.2026<br/>
+    /// Vate version, valid from 01.01.2026
+    /// </summary>
+    V0_2_0 = 020,
+
+    /// <summary>
+    /// Startversion<br/>
+    /// First official
     /// </summary>
     V1_0_0 = 100,
 }

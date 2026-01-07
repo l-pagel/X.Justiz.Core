@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Instance data:</b></u> Data regarding the instance.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Instanzdaten
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Instanzdaten
     /// </summary>
     [XmlElement("instanznummer", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Instanznummer { get; set; }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class Instanzdaten
     /// </summary>
     [XmlElement("sachgebietszusatz", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Sachgebietszusatz { get; set; }
 
     /// <summary>
@@ -36,6 +36,6 @@ public class Instanzdaten
     /// </summary>
     [XmlElement("auswahl_instanzbehoerde", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AuswahlInstanzbehoerde? AuswahlInstanzbehoerde { get; set; }
 }

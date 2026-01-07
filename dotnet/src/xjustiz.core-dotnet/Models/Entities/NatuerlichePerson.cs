@@ -2,7 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Natural person:</b></u> A natural person.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class NatuerlichePerson
 {
     /// <summary>
@@ -19,7 +19,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("vollerName", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public VollerName VollerName { get; set; } = new();
 
     /// <summary>
@@ -28,7 +28,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("geschlecht", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Code Geschlecht { get; set; } = new();
 
     /// <summary>
@@ -37,7 +37,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("anschrift", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Anschrift? Anschrift { get; set; }
 
     /// <summary>
@@ -46,7 +46,7 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("telekommunikation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
 
     /// <summary>
@@ -55,6 +55,6 @@ public class NatuerlichePerson
     /// </summary>
     [XmlElement("bankverbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Bankverbindung? Bankverbindung { get; set; }
 }

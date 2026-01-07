@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Full name:</b></u> The full name of a natural person.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class VollerName
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class VollerName
     /// </summary>
     [XmlElement("vorname", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Vorname { get; set; }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class VollerName
     /// </summary>
     [XmlElement("rufname", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Rufname { get; set; }
 
     /// <summary>
@@ -36,7 +36,7 @@ public class VollerName
     /// </summary>
     [XmlElement("titel", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Titel { get; set; }
 
     /// <summary>
@@ -45,7 +45,7 @@ public class VollerName
     /// </summary>
     [XmlElement("namensvorsatz", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Namensvorsatz { get; set; }
 
     /// <summary>
@@ -54,6 +54,6 @@ public class VollerName
     /// </summary>
     [XmlElement("nachname", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Nachname { get; set; }
 }

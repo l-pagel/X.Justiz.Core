@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Participant selection:</b></u> Selection structure for a participant (natural person or organization).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class AuswahlBeteiligter
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class AuswahlBeteiligter
     /// </summary>
     [XmlElement("natuerlichePerson", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public NatuerlichePerson? NP { get; set; }
 
     /// <summary>
@@ -27,6 +27,6 @@ public class AuswahlBeteiligter
     /// </summary>
     [XmlElement("organisation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Organisation? Org { get; set; }
 }

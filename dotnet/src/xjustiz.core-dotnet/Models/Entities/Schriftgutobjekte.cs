@@ -2,7 +2,7 @@ namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Document objects:</b></u> Contains lists of document objects (files/cases and documents).
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Schriftgutobjekte
 {
     /// <summary>
@@ -19,7 +19,7 @@ public class Schriftgutobjekte
     /// </summary>
     [XmlElement("akte", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Akte>? Akte { get; set; }
 
     /// <summary>
@@ -28,6 +28,6 @@ public class Schriftgutobjekte
     /// </summary>
     [XmlElement("dokument", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Dokument>? Dokumente { get; set; }
 }

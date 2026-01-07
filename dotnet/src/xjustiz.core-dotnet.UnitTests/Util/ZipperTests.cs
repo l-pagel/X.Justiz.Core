@@ -10,11 +10,11 @@ using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Util;
 using Xunit;
 
-public class ZipTests : IDisposable
+public class ZipperTests : IDisposable
 {
     private readonly string _tempDirectory;
 
-    public ZipTests()
+    public ZipperTests()
     {
         _tempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
         Directory.CreateDirectory(_tempDirectory);
@@ -34,7 +34,7 @@ public class ZipTests : IDisposable
         var exportFiles = new List<string> { file1Path, file2Path };
 
         // Act
-        using var memoryStream = await Zip.ArchiveToZipStreamAsync(msg, exportFiles);
+        using var memoryStream = await Zipper.ArchiveToZipStreamAsync(msg, exportFiles);
 
         // Assert
         Assert.NotNull(memoryStream);
@@ -77,7 +77,7 @@ public class ZipTests : IDisposable
         var destinationZipPath = Path.Combine(_tempDirectory, "test_archive.zip");
 
         // Act
-        var zipPath = await Zip.ArchiveToZipFileAsync(msg, destinationZipPath, exportFiles);
+        var zipPath = await Zipper.ArchiveToZipFileAsync(msg, destinationZipPath, exportFiles);
 
         // Assert
         Assert.Equal(destinationZipPath, zipPath);
@@ -103,7 +103,7 @@ public class ZipTests : IDisposable
         var msg = new UebermittlungSchriftgutobjekteNachricht();
 
         // Act
-        using var memoryStream = await Zip.ArchiveToZipStreamAsync(msg, null);
+        using var memoryStream = await Zipper.ArchiveToZipStreamAsync(msg, null);
 
         // Assert
         Assert.NotNull(memoryStream);
@@ -126,7 +126,7 @@ public class ZipTests : IDisposable
         var destinationZipPath = Path.Combine(_tempDirectory, "test_archive_az.zip");
 
         // Act
-        await Zip.ArchiveToZipFileAsync(msg, destinationZipPath);
+        await Zipper.ArchiveToZipFileAsync(msg, destinationZipPath);
 
         // Assert
         Assert.True(File.Exists(destinationZipPath));

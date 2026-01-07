@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Bank details:</b></u> Represents a bank account connection.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Bankverbindung
 {
     /// <summary>
@@ -18,7 +18,7 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("kontoinhaber", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Kontoinhaber { get; set; }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("iban", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Iban { get; set; }
 
     /// <summary>
@@ -36,6 +36,6 @@ public class Bankverbindung
     /// </summary>
     [XmlElement("bic", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Bic { get; set; }
 }

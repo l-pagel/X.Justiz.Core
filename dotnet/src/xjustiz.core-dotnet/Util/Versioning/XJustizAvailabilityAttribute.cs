@@ -2,7 +2,7 @@
 
 using System;
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Enum | AttributeTargets.Field)]
 public sealed class XJustizAvailabilityAttribute(XJustizVersion introduced)
     : VersionAvailabilityAttribute((int)introduced)
 {

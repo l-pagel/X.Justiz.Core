@@ -1,8 +1,8 @@
 namespace xjustiz.core_dotnet.Models;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Entities;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
 
@@ -14,7 +14,7 @@ using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
     ElementName = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005",
     Namespace = XJustizConstants.Tns)]
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class UebermittlungSchriftgutobjekteNachricht
 {
     /// <summary>
@@ -23,7 +23,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// </summary>
     [XmlElement("nachrichtenkopf", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Nachrichtenkopf Kopf { get; set; } = new();
 
     /// <summary>
@@ -32,7 +32,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// </summary>
     [XmlElement("grunddaten", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Grunddaten? Grunddaten { get; set; }
 
     /// <summary>
@@ -41,7 +41,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// </summary>
     [XmlElement("schriftgutobjekte", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Schriftgutobjekte? Schriftgutobjekte { get; set; }
 
     /// <summary>
@@ -50,7 +50,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// </summary>
     [XmlAttribute(AttributeName = "schemaLocation", Namespace = XJustizConstants.Xsi)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string SchemaLocation { get; set; } = $"{XJustizConstants.Tns} xjustiz_0005_nachrichten_3_1.xsd";
 
     /// <summary>

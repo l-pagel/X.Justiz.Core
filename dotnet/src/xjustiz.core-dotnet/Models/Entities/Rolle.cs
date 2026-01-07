@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Role:</b></u> Represents a role in a proceeding.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Rolle
 {
     /// <summary>
@@ -18,6 +18,6 @@ public class Rolle
     /// </summary>
     [XmlElement("rollenbezeichnung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Code Rollenbezeichnung { get; set; } = new();
 }

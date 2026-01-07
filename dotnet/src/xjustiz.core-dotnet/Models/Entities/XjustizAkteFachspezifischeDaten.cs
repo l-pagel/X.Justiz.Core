@@ -1,7 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
-using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Subject-specific data of a file:</b></u> Specialized data of a file/case.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class XjustizAkteFachspezifischeDaten
 {
     /// <summary>
@@ -18,16 +18,16 @@ public class XjustizAkteFachspezifischeDaten
     /// </summary>
     [XmlElement("aktentyp", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Code Aktentyp { get; set; } = new();
 
     /// <summary>
-    /// Der Anzeigename ermöglicht als Freitext die Übermittlung der Bezeichnung der Akte, wie sie im versendenden System angezeigt wird. Hier können spezifischere Informationen zum Aktennamen übermittelt werden, als dies im Rahmen der Werteliste zum Aktentyp möglich ist, z.B. "Asylakte" als nähere Spezifizierung des Aktentyps "Behördenakte".<br/>
-    /// <u><b>Display name:</b></u> The display name allows the transmission of the designation of the file as it is displayed in the sending system as free text. More specific information on the file name can be transmitted here than is possible within the framework of the value list for the file type, e.g., 'Asylakte' (asylum file) as a more specific specification of the file type 'Behördenakte' (authority file).
+    /// Der Anzeigename ermöglicht als Freitext die Übermittlung der Bezeichnung der Akte, wie sie im versendenden System angezeigt wird, bspw. als <a href='https://de.wikipedia.org/wiki/Rubrum'>Rubrum</a> (Max Muster ./. Sabine Schmidt).<br/>
+    /// <u><b>Display name:</b></u> The display name allows the transmission of the designation of the file as it is displayed in the sending system as free text, e.g. as <a href='https://de.wikipedia.org/wiki/Rubrum'>Rubrum</a> (Max Muster ./. Sabine Schmidt).
     /// </summary>
     [XmlElement("anzeigename", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Anzeigename { get; set; }
 
     /// <summary>
@@ -36,6 +36,6 @@ public class XjustizAkteFachspezifischeDaten
     /// </summary>
     [XmlElement("aktenzeichen", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Aktenzeichen Aktenzeichen { get; set; } = new();
 }
