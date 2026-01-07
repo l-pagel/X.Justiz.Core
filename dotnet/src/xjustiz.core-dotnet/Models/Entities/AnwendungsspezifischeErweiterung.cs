@@ -35,7 +35,7 @@ public class AnwendungsspezifischeErweiterung
     /// Die textuelle Erläuterung zu einer anwendungsspezifischen Erweiterung.<br/>
     /// <u><b>Description:</b></u> The textual explanation of an application-specific extension.
     /// </summary>
-    [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 2)]
+    [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
     public string? Beschreibung { get; set; }
@@ -44,7 +44,7 @@ public class AnwendungsspezifischeErweiterung
     /// Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.<br/>
     /// <u><b>Field groups:</b></u> A field group assigned to the application-specific extension.
     /// </summary>
-    [XmlElement("feldgruppe", Namespace = XJustizConstants.Tns, Order = 3)]
+    [XmlElement("feldgruppe", Namespace = XJustizConstants.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Feldgruppe>? Feldgruppen { get; set; }
@@ -53,7 +53,7 @@ public class AnwendungsspezifischeErweiterung
     /// Ein Feld, das der anwendungsspezifischen Erweiterung zugeordnet ist.<br/>
     /// <u><b>Fields:</b></u> A field assigned to the application-specific extension.
     /// </summary>
-    [XmlElement("feld", Namespace = XJustizConstants.Tns, Order = 4)]
+    [XmlElement("feld", Namespace = XJustizConstants.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Feld>? Felder { get; set; }

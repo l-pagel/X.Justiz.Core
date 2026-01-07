@@ -1,4 +1,4 @@
-namespace xjustiz.core_dotnet.example_api;
+namespace example_api;
 
 using Microsoft.OpenApi.Models;
 

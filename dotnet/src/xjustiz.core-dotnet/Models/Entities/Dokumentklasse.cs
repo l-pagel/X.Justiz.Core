@@ -1,5 +1,6 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
+using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -10,11 +11,23 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+
 public class Dokumentklasse : ICode<DokumentklasseCode>
 {
-    public string ListVersionId { get; set; } = "1.4"; // Default to latest
+    [XmlAttribute("listVersionID")]
+    public string ListVersionId { get; set; } = "1.4"; //Default to latest
 
+    [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse";
 
+    [XmlElement("code", Namespace = "")]
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+    public string? CodeForXml
+    {
+        get => Code.ToCode();
+        set => Code = DokumentklasseCodeMapper.TryParse(value ?? string.Empty, out var result) ? result : default;
+    }
+
+    [XmlIgnore]
     public DokumentklasseCode Code { get; set; }
 }
