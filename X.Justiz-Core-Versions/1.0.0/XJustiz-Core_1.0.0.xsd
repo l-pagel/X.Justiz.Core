@@ -186,6 +186,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="kennung" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beschreibung" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="feldgruppe" type="tns:Feldgruppe" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="feld" type="tns:Feld" />
     </xs:sequence>
@@ -201,6 +202,8 @@
   <xs:complexType name="Feld">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beschreibung" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="datentyp" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="wert" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
