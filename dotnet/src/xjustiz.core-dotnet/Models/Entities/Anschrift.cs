@@ -56,5 +56,5 @@ public class Anschrift
     [XmlElement("staat", Namespace = XJustizConstants.Tns, Order = 5)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public Code? Staat { get; set; }
+    public Staat? Staat { get; set; }
 }

@@ -20,5 +20,5 @@ public class AuswahlInstanzbehoerde
     [XmlElement("gericht", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public Code? Gericht { get; set; }
+    public Gericht? Gericht { get; set; }
 }
