@@ -4,17 +4,20 @@ using System.Collections.Generic;
 using xjustiz.core_dotnet.Models;
 
 /// <summary>
-/// Result of the conversion process.
+/// Ergebnis des Konvertierungsvorgangs.<br/>
+/// <u><b>Conversion result:</b></u> Result of the conversion process.
 /// </summary>
 public class ConversionResult
 {
     /// <summary>
-    /// Gets or sets the converted object.
+    /// Ruft das konvertierte Objekt ab oder legt dieses fest.<br/>
+    /// <u><b>Result:</b></u> Gets or sets the converted object.
     /// </summary>
     public UebermittlungSchriftgutobjekteNachricht? Result { get; set; }
 
     /// <summary>
-    /// Gets or sets the list of data lost during conversion.
+    /// Ruft die Liste der während der Konvertierung verlorenen Daten ab oder legt diese fest.<br/>
+    /// <u><b>Lost data:</b></u> Gets or sets the list of data lost during conversion.
     /// </summary>
     public List<string> LostData { get; set; } = [];
 }

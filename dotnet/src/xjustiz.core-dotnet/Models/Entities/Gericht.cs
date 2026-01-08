@@ -13,12 +13,18 @@ using xjustiz.core_dotnet.Util.Versioning;
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Gericht : ICode<GerichtCode>
 {
+    /// <inheritdoc/>
     [XmlAttribute("listVersionID")]
     public string ListVersionId { get; set; } = GerichtCodeLists.LatestList.Version;
 
+    /// <inheritdoc/>
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = GerichtCodeLists.Uri;
 
+    /// <summary>
+    /// Interne Eigenschaft für die XML-Serialisierung.<br/>
+    /// <u><b>Code for XML:</b></u> Internal property for XML serialization.
+    /// </summary>
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public string? CodeForXml
@@ -27,6 +33,10 @@ public class Gericht : ICode<GerichtCode>
         set => Code = GerichtCodeMapper.TryParse(value ?? string.Empty, out var result) ? result : default;
     }
 
+    /// <summary>
+    /// Ruft den Gericht-Code ab oder legt diesen fest.<br/>
+    /// <u><b>Code:</b></u> Gets or sets the court code.
+    /// </summary>
     [XmlIgnore]
     public GerichtCode Code { get; set; }
 }
