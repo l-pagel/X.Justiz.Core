@@ -1,0 +1,26 @@
+namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
+
+using System.Collections.Generic;
+
+/// <summary>
+/// Versionslisten für <see cref="BestandteiltypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codelisten GDS.Bestandteiltyp</a>.<br/>
+/// <u><b>Component code lists:</b></u> for <see cref="BestandteiltypCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code lists GDS.Components</a>.
+/// </summary>
+public static class BestandteiltypCodeLists
+{
+    /// <summary>
+    /// Bestandteil Codes Version <b>2.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: GDS.Bestandteiltyp</a>.<br/>
+    /// <u><b>Components codes:</b></u> version <b>2.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: Code lists GDS.Components</a>.
+    /// </summary>
+    public static readonly List<BestandteiltypCode> V2_4 =
+    [
+        BestandteiltypCode.Original,
+        BestandteiltypCode.Repraesentat,
+        BestandteiltypCode.Signaturdatei,
+        BestandteiltypCode.signierte_Vorversion,
+        BestandteiltypCode.Transfervermerk,
+        BestandteiltypCode.Pruefvermerk,
+        BestandteiltypCode.VHN,
+        BestandteiltypCode.hinlaufendes_eEB,
+    ];
+}

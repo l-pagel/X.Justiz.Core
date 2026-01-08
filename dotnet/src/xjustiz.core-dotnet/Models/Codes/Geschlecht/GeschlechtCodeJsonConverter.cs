@@ -1,0 +1,23 @@
+namespace xjustiz.core_dotnet.Models.Codes.Geschlecht;
+
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+public class GeschlechtCodeJsonConverter : JsonConverter<GeschlechtCode>
+{
+    public override GeschlechtCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        var value = reader.GetString();
+        if (GeschlechtCodeMapper.TryParse(value, out var result))
+        {
+            return result;
+        }
+
+        throw new JsonException($"Unknown Geschlecht: {value}");
+    }
+
+    public override void Write(Utf8JsonWriter writer, GeschlechtCode value, JsonSerializerOptions options)
+    {
+        writer.WriteStringValue(value.ToCode());
+    }
+}

@@ -1183,8 +1183,8 @@ public static partial class StaatCodeMapper
     {
         if (string.IsNullOrWhiteSpace(value))
         {
-             code = default;
-             return false;
+            code = default;
+            return false;
         }
 
         return Map.TryGetValue(value.Trim(), out code);

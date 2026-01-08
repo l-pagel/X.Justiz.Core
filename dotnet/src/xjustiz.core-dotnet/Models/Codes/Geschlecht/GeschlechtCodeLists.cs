@@ -1,0 +1,23 @@
+namespace xjustiz.core_dotnet.Models.Codes.Geschlecht;
+
+using System.Collections.Generic;
+
+/// <summary>
+/// Versionslisten für <see cref="GeschlechtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Codelisten GDS.Geschlecht</a>.<br/>
+/// <u><b>Gender code lists:</b></u> for <see cref="GeschlechtCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Code lists GDS.Gender</a>.
+/// </summary>
+public static class GeschlechtCodeLists
+{
+    /// <summary>
+    /// Geschlecht Codes Version <b>2.1</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1#version">XRepository: GDS.Geschlecht</a>.<br/>
+    /// <u><b>Gender codes:</b></u> version <b>2.1</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1#version">XRepository: Code lists GDS.Gender</a>.
+    /// </summary>
+    public static readonly List<GeschlechtCode> V2_1 =
+    [
+        GeschlechtCode.Unbekannt,
+        GeschlechtCode.Maennlich,
+        GeschlechtCode.Weiblich,
+        GeschlechtCode.Divers,
+        GeschlechtCode.Saechlich,
+    ];
+}

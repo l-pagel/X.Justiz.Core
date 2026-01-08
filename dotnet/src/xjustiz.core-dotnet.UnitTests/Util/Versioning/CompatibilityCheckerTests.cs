@@ -3,7 +3,6 @@ namespace xjustiz.core_dotnet.UnitTests.Util.Versioning;
 using System;
 using System.Linq;
 using xjustiz.core_dotnet.Models;
-using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Codes.Aktentyp;
 using xjustiz.core_dotnet.Models.Codes.Bestandteil;
 using xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
@@ -154,7 +153,7 @@ public class CompatibilityCheckerTests
                         {
                             Rolle = new Rolle
                             {
-                                Rollenbezeichnung = new Rollenbezeichnung { Code = RollenCode.PLACEHOLDER },
+                                Code = RollenCode.Klaeger,
                             },
                             Beteiligter = new Beteiligter
                             {
@@ -231,7 +230,7 @@ public class CompatibilityCheckerTests
                         },
                         FachspezifischeDaten = new XjustizAkteFachspezifischeDaten
                         {
-                            Aktentyp = new Aktentyp { Code = AktentypCode.PLACEHOLDER },
+                            Aktentyp = new Aktentyp { Code = AktentypCode.Zivilakte },
                             Anzeigename = "Hauptakte",
                             Aktenzeichen = new Aktenzeichen
                             {
@@ -256,7 +255,7 @@ public class CompatibilityCheckerTests
                             Datei = new Datei
                             {
                                 Dateiname = "Klage.pdf",
-                                Bestandteil = new Bestandteil { Code = BestandteilCode.PLACEHOLDER },
+                                Bestandteil = new Bestandteiltyp { Code = BestandteiltypCode.Original },
                             },
                         },
                     },

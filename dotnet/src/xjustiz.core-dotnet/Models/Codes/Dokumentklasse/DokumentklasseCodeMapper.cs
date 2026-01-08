@@ -54,8 +54,8 @@ public static partial class DokumentklasseCodeMapper
     {
         if (string.IsNullOrWhiteSpace(value))
         {
-             code = default;
-             return false;
+            code = default;
+            return false;
         }
 
         return Map.TryGetValue(value.Trim(), out code);

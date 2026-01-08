@@ -2,8 +2,16 @@ namespace xjustiz.core_dotnet.Models.Codes.Staat;
 
 using System.Collections.Generic;
 
+/// <summary>
+/// Versionslisten für <see cref="StaatCode"/> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: Codelisten Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
+/// <u><b>Country code lists:</b></u> for <see cref="StaatCode"/> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: State code lists from the State and Territorial Classification of the Federal Statistical Office</a>.
+/// </summary>
 public static class StaatCodeLists
 {
+    /// <summary>
+    /// Staat Codes Version <b>2024-08-01</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01:technischerBestandteilGenericode">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
+    /// <u><b>Country codes:</b></u> version <b>2024-08-01</b> from <a href="https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01:technischerBestandteilGenericode">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
+    /// </summary>
     public static readonly IReadOnlyList<StaatCode> V2024_08_01 =
     [
         StaatCode.Deutschland,
@@ -205,6 +213,10 @@ public static class StaatCodeLists
         StaatCode.Foederierte_Staaten_von_Mikronesien,
     ];
 
+    /// <summary>
+    /// Staat Codes Version <b>2023-02-24</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24:technischerBestandteilGenericode">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
+    /// <u><b>Country codes:</b></u> version <b>2023-02-24</b> from <a href="https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24:technischerBestandteilGenericode">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
+    /// </summary>
     public static readonly IReadOnlyList<StaatCode> V2023_02_24 =
     [
         StaatCode.Deutschland,

@@ -106,7 +106,7 @@ public static class XmlValidator
 
         if (string.IsNullOrEmpty(xsdDir) || !Directory.Exists(xsdDir))
         {
-             // We throw here, which will be cached as an exception by Lazy.
+            // We throw here, which will be cached as an exception by Lazy.
             throw new DirectoryNotFoundException($"Could not find XSD directory for version {version}. Checked path: {xsdDir ?? "null"}");
         }
 
@@ -138,9 +138,9 @@ public static class XmlValidator
         {
             schemas.Compile();
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-             errors.Add($"[Error] Schema compilation failed: {ex.Message}");
+            errors.Add($"[Error] Schema compilation failed: {ex.Message}");
         }
 
         return (schemas, errors);

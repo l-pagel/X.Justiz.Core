@@ -28,5 +28,5 @@ public class Datei
     [XmlElement("bestandteil", Namespace = XJustizConstants.Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public Bestandteil Bestandteil { get; set; } = new();
+    public Bestandteiltyp Bestandteil { get; set; } = new();
 }

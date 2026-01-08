@@ -2,8 +2,16 @@ namespace xjustiz.core_dotnet.Models.Codes.Gericht;
 
 using System.Collections.Generic;
 
+/// <summary>
+/// Versionslisten für <see cref="GerichtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codelisten GDS.Gerichte</a>.<br/>
+/// <u><b>Court code lists:</b></u> for <see cref="GerichtCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code lists GDS.Courts</a>.
+/// </summary>
 public static class GerichtCodeLists
 {
+    /// <summary>
+    /// Gericht Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: GDS.Gerichte</a>.<br/>
+    /// <u><b>Court codes:</b></u> version <b>3.6</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: Code lists GDS.Courts</a>.
+    /// </summary>
     public static readonly IReadOnlyList<GerichtCode> V3_6 =
     [
         GerichtCode.ZZ_Test_Bund,
@@ -2759,6 +2767,10 @@ public static class GerichtCodeLists
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
     ];
 
+    /// <summary>
+    /// Gericht Codes Version <b>3.5</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: GDS.Gerichte</a>.<br/>
+    /// <u><b>Court codes:</b></u> version <b>3.5</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: Code lists GDS.Courts</a>.
+    /// </summary>
     public static readonly IReadOnlyList<GerichtCode> V3_5 =
     [
         GerichtCode.ZZ_Test_Bund,
@@ -5329,6 +5341,10 @@ public static class GerichtCodeLists
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
     ];
 
+    /// <summary>
+    /// Gericht Codes Version <b>3.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: GDS.Gerichte</a>.<br/>
+    /// <u><b>Court codes:</b></u> version <b>3.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: Code lists GDS.Courts</a>.
+    /// </summary>
     public static readonly IReadOnlyList<GerichtCode> V3_4 =
     [
         GerichtCode.ZZ_Test_Bund,
@@ -7899,6 +7915,10 @@ public static class GerichtCodeLists
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
     ];
 
+    /// <summary>
+    /// Gericht Codes Version <b>3.3</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: GDS.Gerichte</a>.<br/>
+    /// <u><b>Court codes:</b></u> version <b>3.3</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: Code lists GDS.Courts</a>.
+    /// </summary>
     public static readonly IReadOnlyList<GerichtCode> V3_3 =
     [
         GerichtCode.ZZ_Test_Bund,
@@ -10468,6 +10488,10 @@ public static class GerichtCodeLists
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
     ];
 
+    /// <summary>
+    /// Gericht Codes Version <b>3.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: GDS.Gerichte</a>.<br/>
+    /// <u><b>Court codes:</b></u> version <b>3.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: Code lists GDS.Courts</a>.
+    /// </summary>
     public static readonly IReadOnlyList<GerichtCode> V3_2 =
     [
         GerichtCode.ZZ_Test_Bund,
