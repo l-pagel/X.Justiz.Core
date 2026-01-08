@@ -4,7 +4,7 @@ using System;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Enum | AttributeTargets.Field)]
 /// <summary>
-/// Legt die Verfügbarkeit basierend auf der XJustiz-Core-Version fest.<br/>
+/// Legt die Verfügbarkeit basierend auf der X.Justiz Core-Version fest.<br/>
 /// <u><b>XJustiz core availability attribute:</b></u> Defines availability based on the XJustiz Core version.
 /// </summary>
 public sealed class XJustizCoreAvailabilityAttribute(XJustizCoreVersion introduced)

@@ -23,7 +23,7 @@ public class Program
 
             options.SwaggerDoc("demo", new OpenApiInfo
             {
-                Title = "Demo X.Justiz-Core API",
+                Title = "Demo X.Justiz Core API",
                 Version = "v1",
                 Description = "A demo dotnet API, that implements the <a href='https://www.nuget.org/packages/xjustiz.core-dotnet/'>xjustiz.core-dotnet</a> nuget.",
                 Contact = new OpenApiContact
@@ -64,7 +64,7 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/demo/swagger.json", "Demo X.Justiz-Core API");
+                c.SwaggerEndpoint("/swagger/demo/swagger.json", "Demo X.Justiz Core API");
             });
         }
 

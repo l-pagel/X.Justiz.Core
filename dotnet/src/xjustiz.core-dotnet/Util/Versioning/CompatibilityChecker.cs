@@ -8,7 +8,7 @@ using System.Reflection;
 using xjustiz.core_dotnet.Models;
 
 /// <summary>
-/// Überprüft die Kompatibilität von X.Justiz-Nachrichten mit verschiedenen X.Justiz- und X.Justiz-Core-Versionen.<br/>
+/// Überprüft die Kompatibilität von X.Justiz-Nachrichten mit verschiedenen X.Justiz- und X.Justiz Core Versionen.<br/>
 /// <u><b>Compatibility Checker:</b></u> Checks the compatibility of X.Justiz messages with different X.Justiz and X.Justiz Core versions.
 /// </summary>
 public static class CompatibilityChecker
@@ -163,7 +163,7 @@ public static class CompatibilityChecker
         public List<XJustizVersion> CompatibleXJustizVersions { get; set; } = [];
 
         /// <summary>
-        /// Eine Liste der kompatiblen X.Justiz-Core-Versionen.<br/>
+        /// Eine Liste der kompatiblen X.Justiz Core-Versionen.<br/>
         /// <u><b>Compatible X.Justiz Core versions:</b></u> A list of compatible X.Justiz Core versions.
         /// </summary>
         public List<XJustizCoreVersion> CompatibleXJustizCoreVersions { get; set; } = [];

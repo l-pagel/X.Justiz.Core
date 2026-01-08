@@ -9,7 +9,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
 
 /// <summary>
-/// Basiselement zur Übermittlung von Daten im X.Justiz- bzw. X.Justiz-Core-Format.<br/>
+/// Basiselement zur Übermittlung von Daten im X.Justiz- bzw. X.Justiz Core Format.<br/>
 /// <u><b>Document Object Transmission Message:</b></u> Root element for the transmission of data in the X.Justiz or X.Justiz Core format.
 /// </summary>
 [XmlRoot(

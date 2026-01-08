@@ -6,7 +6,7 @@ using xjustiz.core_dotnet.Util.Converter;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Controller for converting X.Justiz and X.Justiz-Core versions.
+/// Controller for converting X.Justiz and X.Justiz Core versions.
 /// </summary>
 [ApiController]
 [Route("[controller]")]

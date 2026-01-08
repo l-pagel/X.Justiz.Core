@@ -22,7 +22,7 @@ public class Akte
     public Identifikation Identifikation { get; set; } = new();
 
     /// <summary>
-    /// Daten einer Akte, die bereits durch in X.Justiz oder X.Justiz-Core definierten Datenfeldern abbildbar sind.<br/>
+    /// Daten einer Akte, die bereits durch in X.Justiz oder X.Justiz Core definierten Datenfeldern abbildbar sind.<br/>
     /// <u><b>Case file data:</b></u> Data of a case file that can already be represented by data fields defined in X.Justiz or X.Justiz Core.
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 3)]
@@ -31,7 +31,7 @@ public class Akte
     public XjustizAkteFachspezifischeDaten FachspezifischeDaten { get; set; } = new();
 
     /// <summary>
-    /// Daten einer Akte, die <u>nicht</u> durch in X.Justiz oder X.Justiz-Core definierten Datenfeldern abbildbar sind.<br/>
+    /// Daten einer Akte, die <u>nicht</u> durch in X.Justiz oder X.Justiz Core definierten Datenfeldern abbildbar sind.<br/>
     /// <u><b>Custom case file data:</b></u> Data of a case file that can <u>not</u> be represented by data fields defined in X.Justiz or X.Justiz Core.
     /// </summary>
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizConstants.Tns, Order = 2)]

@@ -97,7 +97,7 @@ public class Program
         {
             if (schema.TargetNamespace == XJustizConstants.Tns)
             {
-                string filename = $"XJustiz-Core_{versionString}.xsd";
+                string filename = $"X.Justiz Core_{versionString}.xsd";
                 string outputPath = Path.Combine(outputDir, filename);
 
                 using var writer = new StreamWriter(outputPath);

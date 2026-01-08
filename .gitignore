@@ -353,4 +353,4 @@ healthchecksdb
 **/terraform.lock.hcl
 
 # Generated XSD files
-X.Justiz-Core-Versions/**/XJustiz-Core_*.xsd
+X.Justiz-Core-Versions/**/X.Justiz Core_*.xsd

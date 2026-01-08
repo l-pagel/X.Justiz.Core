@@ -1,7 +1,7 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Definiert die XJustiz-Core-Versionen.<br/>
+/// Definiert die X.Justiz Core-Versionen.<br/>
 /// <u><b>XJustiz core version:</b></u> Defines the XJustiz Core versions.
 /// </summary>
 [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter))]

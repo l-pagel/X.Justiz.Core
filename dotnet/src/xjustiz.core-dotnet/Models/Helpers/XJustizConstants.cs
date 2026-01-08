@@ -21,19 +21,19 @@ public static class XJustizConstants
     public const string Xsi = "http://www.w3.org/2001/XMLSchema-instance";
 
     /// <summary>
-    /// Enthält Informationen zur neuesten XJustiz-Core-Version.<br/>
+    /// Enthält Informationen zur neuesten X.Justiz Core-Version.<br/>
     /// <u><b>Latest XJustiz core version:</b></u> Contains information about the latest XJustiz Core version.
     /// </summary>
     public static class LatestXJustizCoreVersion
     {
         /// <summary>
-        /// Die neueste XJustiz-Core-Version.<br/>
+        /// Die neueste X.Justiz Core-Version.<br/>
         /// <u><b>Version:</b></u> The latest XJustiz Core version.
         /// </summary>
         public static XJustizCoreVersion Version => XJustizCoreVersion.V0_2_0;
 
         /// <summary>
-        /// Die Zeichenkettendarstellung der neuesten XJustiz-Core-Version (z.B. '0.2.0').<br/>
+        /// Die Zeichenkettendarstellung der neuesten X.Justiz Core-Version (z.B. '0.2.0').<br/>
         /// <u><b>Version string:</b></u> The string representation of the latest XJustiz Core version (e.g. '0.2.0').
         /// </summary>
         public static string VersionString

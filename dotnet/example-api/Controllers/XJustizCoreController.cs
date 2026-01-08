@@ -130,9 +130,9 @@ public class XJustizCoreController : ControllerBase
     }
 
     /// <summary>
-    /// Generates a JSON file in the specified XJustiz-Core version from the provided body.
+    /// Generates a JSON file in the specified XJustiz Core version from the provided body.
     /// </summary>
-    /// <param name="version">Target XJustiz-Core version.</param>
+    /// <param name="version">Target X.Justiz Core version.</param>
     /// <param name="message">The message payload to convert.</param>
     /// <returns>A JSON file download.</returns>
     [HttpPost("json/generate-file")]
@@ -149,10 +149,10 @@ public class XJustizCoreController : ControllerBase
     }
 
     /// <summary>
-    /// Generates a JSON file in the specified XJustiz-Core version from a sample dataset.
+    /// Generates a JSON file in the specified X.Justiz Core version from a sample dataset.
     /// </summary>
     /// <param name="dataset">The name of the sample dataset.</param>
-    /// <param name="version">Target XJustiz-Core version.</param>
+    /// <param name="version">Target X.Justiz Core version.</param>
     /// <returns>A JSON file download.</returns>
     [HttpGet("json/generate-file/sample/{dataset}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -169,9 +169,9 @@ public class XJustizCoreController : ControllerBase
     }
 
     /// <summary>
-    /// Generates an XML file in the specified XJustiz-Core version from the provided body.
+    /// Generates an XML file in the specified X.Justiz Core version from the provided body.
     /// </summary>
-    /// <param name="version">Target XJustiz-Core version.</param>
+    /// <param name="version">Target X.Justiz Core version.</param>
     /// <param name="message">The message payload to convert.</param>
     /// <returns>An XML file download.</returns>
     [HttpPost("xml/generate-file")]
@@ -189,10 +189,10 @@ public class XJustizCoreController : ControllerBase
     }
 
     /// <summary>
-    /// Generates an XML file in the specified XJustiz-Core version from a sample dataset.
+    /// Generates an XML file in the specified X.Justiz Core version from a sample dataset.
     /// </summary>
     /// <param name="dataset">The name of the sample dataset.</param>
-    /// <param name="version">Target XJustiz-Core version.</param>
+    /// <param name="version">Target X.Justiz Core version.</param>
     /// <returns>An XML file download.</returns>
     [HttpGet("xml/generate-file/sample/{dataset}")]
     [ProducesResponseType(StatusCodes.Status200OK)]

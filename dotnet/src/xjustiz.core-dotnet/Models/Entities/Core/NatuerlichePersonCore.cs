@@ -5,8 +5,8 @@ using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Eine natürliche Person inklusive XJustiz-Core Erweiterungen.<br/>
-/// <u><b>Natural person:</b></u> A natural person with X-Justiz-Core additons.
+/// Eine natürliche Person inklusive X.Justiz Core Erweiterungen.<br/>
+/// <u><b>Natural person:</b></u> A natural person with X-Justiz Core additons.
 /// </summary>
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class NatuerlichePersonCore : NatuerlichePerson
