@@ -39,7 +39,7 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// Dokumentklassen Codes Version <b>1.3</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
     /// <u><b>DocumentClass codes:</b></u> version <b>1.3</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
-    /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
+    /// <b>Änderung zur Vorversion:</b> Es gibt keine inhaltlichen Änderungen zur Vorgängerversion. Es wurde lediglich das Fachmodul REG bei einigen Codelisteneinträgen in der Fachmodulspalte ergänzt.<br/>
     /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_3 = new("1.3")
@@ -68,8 +68,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// Dokumentklassen Codes Version <b>1.2</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
     /// <u><b>DocumentClass codes:</b></u> version <b>1.2</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
-    /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
-    /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
+    /// <b>Änderung zur Vorversion:</b> Die Codeliste wurde um den Wert "020|Kostendokument" ergänzt. Die Fachmodule in der Fachmodulspalte werden nun komma-separiert ohne zusätzliches Leerzeichen aufgeführt.<br/>
+    /// <b>Changelog:</b> "The code list was extended by adding the value ‘020|Cost document’. The specialist modules listed in the specialist-module column are now shown as comma-separated values without additional spaces.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_2 = new("1.2")
     {
@@ -125,8 +125,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// Dokumentklassen Codes Version <b>1.0</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
     /// <u><b>DocumentClass codes:</b></u> version <b>1.0</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
-    /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
-    /// <b>Changelog:</b> None. This is the first version.
+    /// <b>Änderung zur Vorversion:</b> Die Einträge entsprechen den Einträgen mit den Schlüsseln 001 bis 019 der früheren Typ1-Codeliste 'GDS-Dokumenttyp in der Version 3.1, welche in die Typ3-Codelisten 'GDS.Dokumentklasse' und 'GDS.Dokumenttyp' aufgeteilt wurde. Die früheren Einträge "002|Eingangsschreiben" und "004|Ausgangsschreiben" wurden entfernt.<br/>
+    /// <b>Changelog:</b> The entries correspond to those with keys 001 to 019 from the former Type-1 code list ‘GDS document type, version 3.1’, which has been split into the Type-3 code lists ‘GDS.DocumentClass’ and ‘GDS.DocumentType’. The former entries ‘002 | Incoming correspondence’ and ‘004 | Outgoing correspondence’ were removed.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_0 = new("1.0")
     {
