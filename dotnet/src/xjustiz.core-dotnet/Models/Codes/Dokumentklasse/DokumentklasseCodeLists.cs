@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="DokumentklasseCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Codelisten GDS.Dokumentklasse</a>.<br/>
 /// <u><b>DocumentClass code lists:</b></u> for <see cref="DokumentklasseCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Code lists GDS.DocumentClass</a>.
 /// </summary>
-public sealed class DokumentklasseCodeLists : ICodeList<DokumentklasseCode>
+public sealed class DokumentklasseCodeLists : ICodeListCollection<DokumentklasseCode>
 {
     /// <summary>
     /// Dokumentklassen Codes Version <b>1.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4#version">XRepository: GDS.Dokumentklasse</a>.<br/>

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="GerichtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codelisten GDS.Gerichte</a>.<br/>
 /// <u><b>Court code lists:</b></u> for <see cref="GerichtCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code lists GDS.Courts</a>.
 /// </summary>
-public sealed class GerichtCodeLists : ICodeList<GerichtCode>
+public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
 {
     /// <summary>
     /// Gericht Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: GDS.Gerichte</a>.<br/>

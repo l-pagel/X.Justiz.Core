@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="AktentypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codelisten GDS.Aktentyp</a>.<br/>
 /// <u><b>CaseFileType code lists:</b></u> for <see cref="AktentypCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code lists GDS.CaseFileType</a>.
 /// </summary>
-public sealed class AktentypCodeLists : ICodeList<AktentypCode>
+public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
 {
     /// <summary>
     /// Aktentyp Codes Version <b>2.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: GDS.Aktentyp</a>.<br/>

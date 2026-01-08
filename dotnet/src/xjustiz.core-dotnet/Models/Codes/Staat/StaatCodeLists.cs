@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="StaatCode"/> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: Codelisten Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
 /// <u><b>Country code lists:</b></u> for <see cref="StaatCode"/> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: State code lists from the State and Territorial Classification of the Federal Statistical Office</a>.
 /// </summary>
-public sealed class StaatCodeLists : ICodeList<StaatCode>
+public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
 {
     /// <summary>
     /// Staat Codes Version <b>2024-08-01</b> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01#version">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>

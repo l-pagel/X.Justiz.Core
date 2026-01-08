@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Aktentyp : ICode<AktentypCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = AktentypCodeLists.GetLatestListVersion();
+    public string ListVersionId { get; set; } = "2.2";
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = AktentypCodeLists.Uri;

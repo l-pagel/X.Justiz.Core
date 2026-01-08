@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-internal interface ICodeList<T>
+internal interface ICodeListCollection<T>
     where T : Enum
 {
     public static abstract string Uri { get; }
