@@ -2,6 +2,7 @@ namespace xjustiz.core_dotnet.Models;
 
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Entities;
+using xjustiz.core_dotnet.Models.Entities.Core;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
@@ -24,7 +25,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     [XmlElement("nachrichtenkopf", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public Nachrichtenkopf Kopf { get; set; } = new();
+    public NachrichtenkopfCore Kopf { get; set; } = new();
 
     /// <summary>
     /// Der Type.GDS.Grunddaten enthält Meta-Informationen zum Verfahren und dessen Beteiligte. Er kann auch Angaben zu Terminen enthalten.<br/>
