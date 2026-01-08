@@ -1,0 +1,156 @@
+{
+    "Kopf": {
+        "XJustizVersion": "3.5.1",
+        "AbsenderAktenzeichen": "FLY-2026-DELAY-88",
+        "EmpfaengerAktenzeichen": "AG-ERD-11/26",
+        "Erstellungszeitpunkt": "2026-01-08T16:45:00Z",
+        "AuswahlAbsender": {
+            "AbsenderSonstige": "Peter Pan, Abenteuerweg 2, 80331 München"
+        },
+        "AuswahlEmpfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht Erding (Zuständig für Flughafen München)"
+        },
+        "EigeneNachrichtenID": "MSG-FLY-004"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "3 C 444/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Fluggastrechte",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "Amtsgericht_Baden_Baden"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "005"
+                    },
+                    "Beteiligter": {
+                        "AuswahlBeteiligter": {
+                            "NatuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Peter",
+                                    "Nachname": "Pan"
+                                },
+                                "Geschlecht": {
+                                    "Code": "maennlich"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "006"
+                    },
+                    "Beteiligter": {
+                        "AuswahlBeteiligter": {
+                            "Organisation": {
+                                "Name": "Global Air Lines PLC",
+                                "Anschrift": {
+                                    "Strasse": "Aviation Blvd",
+                                    "Hausnummer": "1",
+                                    "Postleitzahl": "W1A 1AA",
+                                    "Ort": "London",
+                                    "Staat": {
+                                        "Code": "Grossbritannien_und_Nordirland"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "ID": "e9d8c7b6-a5b4-4321-9876-fedcba098765",
+                    "NummerImUebergeordnetenContainer": 1
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "FLY-EXT-001",
+                    "Name": "Flugdaten",
+                    "Beschreibung": "Detaillierte Informationen zum beanstandeten Flug",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Flugverbindung",
+                            "Beschreibung": "Route und Flugnummer",
+                            "Felder": [
+                                {
+                                    "Name": "Flugnummer",
+                                    "Beschreibung": "Die offizielle Flugnummer",
+                                    "Datentyp": "string",
+                                    "Wert": "GA1234"
+                                },
+                                {
+                                    "Name": "Abflughafen",
+                                    "Beschreibung": "IATA-Code des Startflughafens",
+                                    "Datentyp": "string",
+                                    "Wert": "MUC"
+                                },
+                                {
+                                    "Name": "Zielflughafen",
+                                    "Beschreibung": "IATA-Code des Zielflughafens",
+                                    "Datentyp": "string",
+                                    "Wert": "JFK"
+                                }
+                            ]
+                        }
+                    ],
+                    "Felder": [
+                        {
+                            "Name": "VerspaetungMinuten",
+                            "Beschreibung": "Dauer der Verspätung am Zielort in Minuten",
+                            "Datentyp": "int",
+                            "Wert": "245"
+                        },
+                        {
+                            "Name": "Entschaedigungssumme",
+                            "Beschreibung": "Angeforderte Summe gemäß EU-Verordnung",
+                            "Datentyp": "decimal",
+                            "Wert": "600.00"
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    },
+                    "Anzeigename": "Fluggast-Klage Pan ./ Global Air",
+                    "Aktenzeichen": {
+                        "AuswahlAktenzeichen": {
+                            "Freitext": "3 C 444/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "ID": "e5f6a7b8-c9d0-41e2-bf3a-4b5c6d7e8f9a",
+                    "NummerImUebergeordnetenContainer": 2
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "Anlage"
+                    },
+                    "Datei": {
+                        "Dateiname": "BoardingPass_JFK.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        }
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-01-08T16:30:00Z"
+            }
+        ]
+    }
+}

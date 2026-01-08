@@ -1,0 +1,144 @@
+{
+    "Kopf": {
+        "XJustizVersion": "3.5.1",
+        "AbsenderAktenzeichen": "ARB-KL-2026-44",
+        "EmpfaengerAktenzeichen": "AG-ARB-55/26",
+        "Erstellungszeitpunkt": "2026-01-08T16:30:00Z",
+        "AuswahlAbsender": {
+            "AbsenderSonstige": "Klaus Kleber, Klageallee 1, 12345 Hauptstadt"
+        },
+        "AuswahlEmpfaenger": {
+            "EmpfaengerSonstige": "Arbeitsgericht Berlin"
+        },
+        "EigeneNachrichtenID": "MSG-ARB-003"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "15 Ga 1234/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Kuendigungsschutzsache",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "Amtsgericht_Baden_Baden"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "AuswahlBeteiligter": {
+                            "NatuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Klaus",
+                                    "Nachname": "Kleber"
+                                },
+                                "Geschlecht": {
+                                    "Code": "maennlich"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "004"
+                    },
+                    "Beteiligter": {
+                        "AuswahlBeteiligter": {
+                            "Organisation": {
+                                "Name": "Tech-Solutions GmbH",
+                                "Anschrift": {
+                                    "Strasse": "Innovationsring",
+                                    "Hausnummer": "100",
+                                    "Postleitzahl": "10117",
+                                    "Ort": "Berlin",
+                                    "Staat": {
+                                        "Code": "Deutschland"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "ID": "f5e4d3c2-b1a0-4987-a2b3-c4d5e6f7a8b9",
+                    "NummerImUebergeordnetenContainer": 1
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "ARB-EXT-001",
+                    "Name": "Arbeitsverhältnis Details",
+                    "Beschreibung": "Eckdaten des beendeten Arbeitsverhältnisses",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Konditionen",
+                            "Beschreibung": "Gehalt and Zeiten",
+                            "Felder": [
+                                {
+                                    "Name": "Bruttomonatsgehalt",
+                                    "Beschreibung": "Letztes vertraglich vereinbartes Bruttogehalt",
+                                    "Datentyp": "decimal",
+                                    "Wert": "5200.00"
+                                },
+                                {
+                                    "Name": "Eintrittsdatum",
+                                    "Beschreibung": "Beginn der Betriebszugehörigkeit",
+                                    "Datentyp": "date",
+                                    "Wert": "2018-01-01"
+                                }
+                            ]
+                        }
+                    ],
+                    "Felder": [
+                        {
+                            "Name": "Betriebsrat",
+                            "Beschreibung": "Existenz eines Betriebsrats im Unternehmen",
+                            "Datentyp": "boolean",
+                            "Wert": "true"
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Arbeitsgerichtsakte"
+                    },
+                    "Anzeigename": "KSch-Klage Kleber ./ Tech-Solutions",
+                    "Aktenzeichen": {
+                        "AuswahlAktenzeichen": {
+                            "Freitext": "15 Ga 1234/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "ID": "d4e5f6a7-b8c9-40d1-ae2f-3a4b5c6d7e8f",
+                    "NummerImUebergeordnetenContainer": 2
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "Schriftsatz"
+                    },
+                    "Datei": {
+                        "Dateiname": "Kuendigungsschutzklage_Kleber.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        }
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-01-08T16:00:00Z"
+            }
+        ]
+    }
+}

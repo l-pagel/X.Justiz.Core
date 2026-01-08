@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+  <nachrichtenkopf xjustizVersion="3.5.1">
+    <aktenzeichen.absender>ARB-KL-2026-44</aktenzeichen.absender>
+    <aktenzeichen.empfaenger>AG-ARB-55/26</aktenzeichen.empfaenger>
+    <erstellungszeitpunkt>2026-01-08T16:30:00Z</erstellungszeitpunkt>
+    <auswahl_absender>
+      <absender.sonstige>Klaus Kleber, Klageallee 1, 12345 Hauptstadt</absender.sonstige>
+    </auswahl_absender>
+    <auswahl_empfaenger>
+      <empfaenger.sonstige>Arbeitsgericht Berlin</empfaenger.sonstige>
+    </auswahl_empfaenger>
+    <eigeneNachrichtenID>MSG-ARB-003</eigeneNachrichtenID>
+  </nachrichtenkopf>
+  <grunddaten>
+    <verfahrensdaten>
+      <verfahrensnummer>15 Ga 1234/26</verfahrensnummer>
+      <instanzdaten>
+        <instanznummer>1</instanznummer>
+        <sachgebietszusatz>Kuendigungsschutzsache</sachgebietszusatz>
+        <auswahl_instanzbehoerde>
+          <gericht>
+            <code xmlns="">B1102</code>
+          </gericht>
+        </auswahl_instanzbehoerde>
+      </instanzdaten>
+      <beteiligung>
+        <rolle>
+          <code>003</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <natuerlichePerson>
+              <vollerName>
+                <vorname>Klaus</vorname>
+                <nachname>Kleber</nachname>
+              </vollerName>
+              <geschlecht>
+                <code>1</code>
+              </geschlecht>
+            </natuerlichePerson>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+      <beteiligung>
+        <rolle>
+          <code>004</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <organisation>
+              <name>Tech-Solutions GmbH</name>
+              <anschrift>
+                <strasse>Innovationsring</strasse>
+                <hausnummer>100</hausnummer>
+                <postleitzahl>10117</postleitzahl>
+                <ort>Berlin</ort>
+                <staat>
+                  <code xmlns="">DE</code>
+                </staat>
+              </anschrift>
+            </organisation>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+    </verfahrensdaten>
+  </grunddaten>
+  <schriftgutobjekte>
+    <akte>
+      <identifikation>
+        <id>f5e4d3c2-b1a0-4987-a2b3-c4d5e6f7a8b9</id>
+        <nummerImUebergeordnetenContainer>1</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <anwendungsspezifischeErweiterung>
+        <kennung>ARB-EXT-001</kennung>
+        <name>Arbeitsverhältnis Details</name>
+        <beschreibung>Eckdaten des beendeten Arbeitsverhältnisses</beschreibung>
+        <feldgruppe>
+          <name>Konditionen</name>
+          <beschreibung>Gehalt und Zeiten</beschreibung>
+          <feld>
+            <name>Bruttomonatsgehalt</name>
+            <beschreibung>Letztes vertraglich vereinbartes Bruttogehalt</beschreibung>
+            <datentyp>decimal</datentyp>
+            <wert>5200.00</wert>
+          </feld>
+          <feld>
+            <name>Eintrittsdatum</name>
+            <beschreibung>Beginn der Betriebszugehörigkeit</beschreibung>
+            <datentyp>date</datentyp>
+            <wert>2018-01-01</wert>
+          </feld>
+        </feldgruppe>
+        <feld>
+          <name>Betriebsrat</name>
+          <beschreibung>Existenz eines Betriebsrats im Unternehmen</beschreibung>
+          <datentyp>boolean</datentyp>
+          <wert>true</wert>
+        </feld>
+      </anwendungsspezifischeErweiterung>
+      <xjustiz.fachspezifischeDaten>
+        <aktentyp>
+          <code>013</code>
+        </aktentyp>
+        <anzeigename>KSch-Klage Kleber ./ Tech-Solutions</anzeigename>
+        <aktenzeichen>
+          <auswahl_aktenzeichen>
+            <aktenzeichen.freitext>15 Ga 1234/26</aktenzeichen.freitext>
+          </auswahl_aktenzeichen>
+        </aktenzeichen>
+      </xjustiz.fachspezifischeDaten>
+    </akte>
+    <dokument>
+      <identifikation>
+        <id>d4e5f6a7-b8c9-40d1-ae2f-3a4b5c6d7e8f</id>
+        <nummerImUebergeordnetenContainer>2</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <xjustiz.fachspezifischeDaten>
+        <dokumentklasse>
+          <code>002</code>
+        </dokumentklasse>
+        <datei>
+          <dateiname>Kuendigungsschutzklage_Kleber.pdf</dateiname>
+          <bestandteil>
+            <code>001</code>
+          </bestandteil>
+        </datei>
+      </xjustiz.fachspezifischeDaten>
+      <erstellungszeitpunkt>2026-01-08T16:00:00Z</erstellungszeitpunkt>
+    </dokument>
+  </schriftgutobjekte>
+</nachricht.gds.uebermittlungSchriftgutobjekte.0005005>

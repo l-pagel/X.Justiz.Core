@@ -1,0 +1,146 @@
+{
+    "Kopf": {
+        "XJustizVersion": "3.5.1",
+        "AbsenderAktenzeichen": "HV-MIET-2026-X7",
+        "EmpfaengerAktenzeichen": "AG-MIET-404/26",
+        "Erstellungszeitpunkt": "2026-01-08T16:15:00Z",
+        "AuswahlAbsender": {
+            "AbsenderSonstige": "Hausverwaltung Wohnen & Leben GmbH"
+        },
+        "AuswahlEmpfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht Musterstadt - Zivilabteilung"
+        },
+        "EigeneNachrichtenID": "MSG-MIET-002"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "44 C 188/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Wohnraummietsache",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "Amtsgericht_Baden_Baden"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "002"
+                    },
+                    "Beteiligter": {
+                        "AuswahlBeteiligter": {
+                            "NatuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Sabine",
+                                    "Nachname": "Schmidt"
+                                },
+                                "Geschlecht": {
+                                    "Code": "weiblich"
+                                },
+                                "Anschrift": {
+                                    "Strasse": "Mietweg",
+                                    "Hausnummer": "12",
+                                    "Postleitzahl": "54321",
+                                    "Ort": "Wohnhausen",
+                                    "Staat": {
+                                        "Code": "Deutschland"
+                                    }
+                                },
+                                "Telekommunikation": [
+                                    {
+                                        "Telekommunikationsart": {
+                                            "Code": "Email"
+                                        },
+                                        "verbindung": "sabine.schmidt@email.de"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "ID": "a1b2c3d4-e5f6-4789-8b9c-1234567890ab",
+                    "NummerImUebergeordnetenContainer": 1
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "MIET-EXT-001",
+                    "Name": "Mietobjekt Details",
+                    "Beschreibung": "Informationen zur betroffenen Mieteinheit",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Objektbeschreibung",
+                            "Beschreibung": "Lage und Größe",
+                            "Felder": [
+                                {
+                                    "Name": "Etage",
+                                    "Beschreibung": "Stockwerk des Mietobjekts",
+                                    "Datentyp": "string",
+                                    "Wert": "3. OG rechts"
+                                },
+                                {
+                                    "Name": "Zimmeranzahl",
+                                    "Beschreibung": "Gesamtanzahl der Wohnräume",
+                                    "Datentyp": "int",
+                                    "Wert": "3"
+                                }
+                            ]
+                        }
+                    ],
+                    "Felder": [
+                        {
+                            "Name": "Nettokaltmiete",
+                            "Beschreibung": "Monatliche Grundmiete ohne Nebenkosten",
+                            "Datentyp": "decimal",
+                            "Wert": "850.00"
+                        },
+                        {
+                            "Name": "Kuendigungsdatum",
+                            "Beschreibung": "Datum, an dem die Kündigung ausgesprochen wurde",
+                            "Datentyp": "date",
+                            "Wert": "2025-11-01"
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    },
+                    "Anzeigename": "Raeumungsklage Schmidt",
+                    "Aktenzeichen": {
+                        "AuswahlAktenzeichen": {
+                            "Freitext": "44 C 188/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "ID": "c3d4e5f6-a7b8-49c0-9d1e-2f3a4b5c6d7e",
+                    "NummerImUebergeordnetenContainer": 2
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "Vertrag"
+                    },
+                    "Datei": {
+                        "Dateiname": "Mietvertrag_Schmidt.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        }
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-01-08T15:45:00Z"
+            }
+        ]
+    }
+}

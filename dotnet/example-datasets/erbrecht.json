@@ -1,0 +1,145 @@
+{
+  "Kopf": {
+    "XJustizVersion": "3.5.1",
+    "AbsenderAktenzeichen": "ABS-ERB-2026-001",
+    "EmpfaengerAktenzeichen": "RA-ERB-99/2026",
+    "Erstellungszeitpunkt": "2026-01-08T16:00:00Z",
+    "AuswahlAbsender": {
+      "AbsenderSonstige": "Nachlassgericht Musterstadt"
+    },
+    "AuswahlEmpfaenger": {
+      "EmpfaengerSonstige": "RA Dr. Erbe, Beispielweg 1, 12345 Teststadt"
+    },
+    "EigeneNachrichtenID": "MSG-ERB-001"
+  },
+  "Grunddaten": {
+    "Verfahrensdaten": {
+      "Verfahrensnummer": "12 VI 45/26",
+      "Instanzdaten": {
+        "Instanznummer": "1",
+        "Sachgebietszusatz": "Nachlasssache",
+        "AuswahlInstanzbehoerde": {
+          "Gericht": {
+            "Code": "Amtsgericht_Baden_Baden"
+          }
+        }
+      },
+      "Beteiligungen": [
+        {
+          "Rolle": {
+            "Code": "001"
+          },
+          "Beteiligter": {
+            "AuswahlBeteiligter": {
+              "NatuerlichePerson": {
+                "VollerName": {
+                  "Vorname": "Max",
+                  "Nachname": "Mustermann"
+                },
+                "Geschlecht": {
+                  "Code": "maennlich"
+                },
+                "Anschrift": {
+                  "Strasse": "Grabesruhe",
+                  "Hausnummer": "7",
+                  "Postleitzahl": "12345",
+                  "Ort": "Teststadt",
+                  "Staat": {
+                    "Code": "Deutschland"
+                  }
+                },
+                "Telekommunikation": [
+                  {
+                    "Telekommunikationsart": {
+                      "Code": "Telefon"
+                    },
+                    "verbindung": "+49 123 456789"
+                  }
+                ],
+                "Bankverbindung": {
+                  "Kontoinhaber": "Max Mustermann",
+                  "Iban": "DE12345678901234567890",
+                  "Bic": "GENO DE F1 ABC"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Schriftgutobjekte": {
+    "Akte": [
+      {
+        "Identifikation": {
+          "ID": "79dbf731-1f9a-4c91-9556-3c7f3e8b0a1d",
+          "NummerImUebergeordnetenContainer": 1
+        },
+        "AnwendungsspezifischeErweiterung": {
+          "Kennung": "ERB-EXT-001",
+          "Name": "Zusatzinfos Erbrecht",
+          "Beschreibung": "Zusätzliche Fakten zum Erbfall",
+          "Feldgruppen": [
+            {
+              "Name": "Nachlasswerte",
+              "Beschreibung": "Detaillierte Aufstellung der Vermögenswerte",
+              "Felder": [
+                {
+                  "Name": "Immobilienwert",
+                  "Beschreibung": "Verkehrswert der Immobilie in Teststadt",
+                  "Datentyp": "decimal",
+                  "Wert": "450000.00"
+                },
+                {
+                  "Name": "Bankguthaben",
+                  "Beschreibung": "Summe aller Kontostände am Todestag",
+                  "Datentyp": "decimal",
+                  "Wert": "12500.50"
+                }
+              ]
+            }
+          ],
+          "Felder": [
+            {
+              "Name": "Sterbedatum",
+              "Beschreibung": "Das offizielle Datum des Ablebens",
+              "Datentyp": "date",
+              "Wert": "2025-12-24"
+            }
+          ]
+        },
+        "FachspezifischeDaten": {
+          "Aktentyp": {
+            "Code": "Nachlassakte"
+          },
+          "Anzeigename": "Erbrechtsfall Mustermann",
+          "Aktenzeichen": {
+            "AuswahlAktenzeichen": {
+              "Freitext": "12 VI 45/26"
+            }
+          }
+        }
+      }
+    ],
+    "Dokumente": [
+      {
+        "Identifikation": {
+          "ID": "b2c3d4e5-f6a7-48b9-9c0d-1e2f3a4b5c6d",
+          "NummerImUebergeordnetenContainer": 2
+        },
+        "FachspezifischeDaten": {
+          "Dokumentklasse": {
+            "Code": "Antrag"
+          },
+          "Datei": {
+            "Dateiname": "Erbscheinantrag_b2c3d4e5.pdf",
+            "Bestandteil": {
+              "Code": "Original"
+            }
+          }
+        },
+        "Erstellungszeitpunkt": "2026-01-08T15:30:00Z"
+      }
+    ]
+  }
+}

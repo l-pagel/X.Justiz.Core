@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+  <nachrichtenkopf xjustizVersion="3.5.1">
+    <aktenzeichen.absender>FLY-2026-DELAY-88</aktenzeichen.absender>
+    <aktenzeichen.empfaenger>AG-ERD-11/26</aktenzeichen.empfaenger>
+    <erstellungszeitpunkt>2026-01-08T16:45:00Z</erstellungszeitpunkt>
+    <auswahl_absender>
+      <absender.sonstige>Peter Pan, Abenteuerweg 2, 80331 München</absender.sonstige>
+    </auswahl_absender>
+    <auswahl_empfaenger>
+      <empfaenger.sonstige>Amtsgericht Erding (Zuständig für Flughafen München)</empfaenger.sonstige>
+    </auswahl_empfaenger>
+    <eigeneNachrichtenID>MSG-FLY-004</eigeneNachrichtenID>
+  </nachrichtenkopf>
+  <grunddaten>
+    <verfahrensdaten>
+      <verfahrensnummer>3 C 444/26</verfahrensnummer>
+      <instanzdaten>
+        <instanznummer>1</instanznummer>
+        <sachgebietszusatz>Fluggastrechte</sachgebietszusatz>
+        <auswahl_instanzbehoerde>
+          <gericht>
+            <code xmlns="">B1102</code>
+          </gericht>
+        </auswahl_instanzbehoerde>
+      </instanzdaten>
+      <beteiligung>
+        <rolle>
+          <code>005</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <natuerlichePerson>
+              <vollerName>
+                <vorname>Peter</vorname>
+                <nachname>Pan</nachname>
+              </vollerName>
+              <geschlecht>
+                <code>1</code>
+              </geschlecht>
+            </natuerlichePerson>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+      <beteiligung>
+        <rolle>
+          <code>006</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <organisation>
+              <name>Global Air Lines PLC</name>
+              <anschrift>
+                <strasse>Aviation Blvd</strasse>
+                <hausnummer>1</hausnummer>
+                <postleitzahl>W1A 1AA</postleitzahl>
+                <ort>London</ort>
+                <staat>
+                  <code xmlns="">GB</code>
+                </staat>
+              </anschrift>
+            </organisation>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+    </verfahrensdaten>
+  </grunddaten>
+  <schriftgutobjekte>
+    <akte>
+      <identifikation>
+        <id>e9d8c7b6-a5b4-4321-9876-fedcba098765</id>
+        <nummerImUebergeordnetenContainer>1</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <anwendungsspezifischeErweiterung>
+        <kennung>FLY-EXT-001</kennung>
+        <name>Flugdaten</name>
+        <beschreibung>Detaillierte Informationen zum beanstandeten Flug</beschreibung>
+        <feldgruppe>
+          <name>Flugverbindung</name>
+          <beschreibung>Route und Flugnummer</beschreibung>
+          <feld>
+            <name>Flugnummer</name>
+            <beschreibung>Die offizielle Flugnummer</beschreibung>
+            <datentyp>string</datentyp>
+            <wert>GA1234</wert>
+          </feld>
+          <feld>
+            <name>Abflughafen</name>
+            <beschreibung>IATA-Code des Startflughafens</beschreibung>
+            <datentyp>string</datentyp>
+            <wert>MUC</wert>
+          </feld>
+          <feld>
+            <name>Zielflughafen</name>
+            <beschreibung>IATA-Code des Zielflughafens</beschreibung>
+            <datentyp>string</datentyp>
+            <wert>JFK</wert>
+          </feld>
+        </feldgruppe>
+        <feld>
+          <name>VerspaetungMinuten</name>
+          <beschreibung>Dauer der Verspätung am Zielort in Minuten</beschreibung>
+          <datentyp>int</datentyp>
+          <wert>245</wert>
+        </feld>
+        <feld>
+          <name>Entschaedigungssumme</name>
+          <beschreibung>Angeforderte Summe gemäß EU-Verordnung</beschreibung>
+          <datentyp>decimal</datentyp>
+          <wert>600.00</wert>
+        </feld>
+      </anwendungsspezifischeErweiterung>
+      <xjustiz.fachspezifischeDaten>
+        <aktentyp>
+          <code>001</code>
+        </aktentyp>
+        <anzeigename>Fluggast-Klage Pan ./ Global Air</anzeigename>
+        <aktenzeichen>
+          <auswahl_aktenzeichen>
+            <aktenzeichen.freitext>3 C 444/26</aktenzeichen.freitext>
+          </auswahl_aktenzeichen>
+        </aktenzeichen>
+      </xjustiz.fachspezifischeDaten>
+    </akte>
+    <dokument>
+      <identifikation>
+        <id>e5f6a7b8-c9d0-41e2-bf3a-4b5c6d7e8f9a</id>
+        <nummerImUebergeordnetenContainer>2</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <xjustiz.fachspezifischeDaten>
+        <dokumentklasse>
+          <code>080</code>
+        </dokumentklasse>
+        <datei>
+          <dateiname>BoardingPass_JFK.pdf</dateiname>
+          <bestandteil>
+            <code>001</code>
+          </bestandteil>
+        </datei>
+      </xjustiz.fachspezifischeDaten>
+      <erstellungszeitpunkt>2026-01-08T16:30:00Z</erstellungszeitpunkt>
+    </dokument>
+  </schriftgutobjekte>
+</nachricht.gds.uebermittlungSchriftgutobjekte.0005005>
