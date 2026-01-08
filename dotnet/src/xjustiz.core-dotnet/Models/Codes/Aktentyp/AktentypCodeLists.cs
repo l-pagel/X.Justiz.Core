@@ -7,8 +7,8 @@ namespace xjustiz.core_dotnet.Models.Codes.Aktentyp;
 public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
 {
     /// <summary>
-    /// Aktentyp Codes Version <b>2.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: GDS.Aktentyp</a>.<br/>
-    /// <u><b>CaseFileType codes:</b></u> version <b>2.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: Code lists GDS.CaseFileType</a>.
+    /// Aktentyp Codes Version <b>2.2</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2:technischerBestandteilGenericode">XRepository: GDS.Aktentyp</a>.<br/>
+    /// <u><b>CaseFileType codes:</b></u> version <b>2.2</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2:technischerBestandteilGenericode">XRepository: Code lists GDS.CaseFileType</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.

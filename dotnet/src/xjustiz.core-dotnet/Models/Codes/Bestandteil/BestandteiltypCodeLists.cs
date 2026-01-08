@@ -7,8 +7,8 @@ namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
 public sealed class BestandteiltypCodeLists : ICodeListCollection<BestandteiltypCode>
 {
     /// <summary>
-    /// Bestandteil Codes Version <b>2.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: GDS.Bestandteiltyp</a>.<br/>
-    /// <u><b>Components codes:</b></u> version <b>2.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: Code lists GDS.Components</a>.
+    /// Bestandteil Codes Version <b>2.4</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4:technischerBestandteilGenericode">XRepository: GDS.Bestandteiltyp</a>.<br/>
+    /// <u><b>Components codes:</b></u> version <b>2.4</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4:technischerBestandteilGenericode">XRepository: Code lists GDS.Components</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.

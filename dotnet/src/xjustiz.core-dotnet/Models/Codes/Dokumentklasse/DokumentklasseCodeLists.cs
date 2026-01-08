@@ -7,8 +7,8 @@ namespace xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 public sealed class DokumentklasseCodeLists : ICodeListCollection<DokumentklasseCode>
 {
     /// <summary>
-    /// Dokumentklassen Codes Version <b>1.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4#version">XRepository: GDS.Dokumentklasse</a>.<br/>
-    /// <u><b>DocumentClass codes:</b></u> version <b>1.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4#version">XRepository: Code lists GDS.DocumentClass</a>.
+    /// Dokumentklassen Codes Version <b>1.4</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
+    /// <u><b>DocumentClass codes:</b></u> version <b>1.4</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
     /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
@@ -36,8 +36,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     };
 
     /// <summary>
-    /// Dokumentklassen Codes Version <b>1.3</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3#version">XRepository: GDS.Dokumentklasse</a>.<br/>
-    /// <u><b>DocumentClass codes:</b></u> version <b>1.3</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3#version">XRepository: Code lists GDS.DocumentClass</a>.
+    /// Dokumentklassen Codes Version <b>1.3</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
+    /// <u><b>DocumentClass codes:</b></u> version <b>1.3</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
     /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
@@ -65,8 +65,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     };
 
     /// <summary>
-    /// Dokumentklassen Codes Version <b>1.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2#version">XRepository: GDS.Dokumentklasse</a>.<br/>
-    /// <u><b>DocumentClass codes:</b></u> version <b>1.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2#version">XRepository: Code lists GDS.DocumentClass</a>.
+    /// Dokumentklassen Codes Version <b>1.2</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
+    /// <u><b>DocumentClass codes:</b></u> version <b>1.2</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
     /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
@@ -94,8 +94,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     };
 
     /// <summary>
-    /// Dokumentklassen Codes Version <b>1.1</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.1#version">XRepository: GDS.Dokumentklasse</a>.<br/>
-    /// <u><b>DocumentClass codes:</b></u> version <b>1.1</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.1#version">XRepository: Code lists GDS.DocumentClass</a>.
+    /// Dokumentklassen Codes Version <b>1.1</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.1:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
+    /// <u><b>DocumentClass codes:</b></u> version <b>1.1</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.1:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Die Codeliste wurde um eine Spalte 'fachmodul' ergänzt, in der die dort aufgeführten Fachmodule ausschließlich die für sie gekennzeichneten Werte nutzen.<br/>
     /// <b>Changelog:</b> The code list was supplemented by a 'specialized module' column, in which the specialized modules listed there exclusively use the values marked for them.
@@ -122,8 +122,8 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     };
 
     /// <summary>
-    /// Dokumentklassen Codes Version <b>1.0</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0#version">XRepository: GDS.Dokumentklasse</a>.<br/>
-    /// <u><b>DocumentClass codes:</b></u> version <b>1.0</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0#version">XRepository: Code lists GDS.DocumentClass</a>.
+    /// Dokumentklassen Codes Version <b>1.0</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0:technischerBestandteilGenericode">XRepository: GDS.Dokumentklasse</a>.<br/>
+    /// <u><b>DocumentClass codes:</b></u> version <b>1.0</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.0:technischerBestandteilGenericode">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.

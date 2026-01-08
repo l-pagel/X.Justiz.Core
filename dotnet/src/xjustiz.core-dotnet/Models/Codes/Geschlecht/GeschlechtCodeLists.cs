@@ -7,8 +7,8 @@
 public sealed class GeschlechtCodeLists : ICodeListCollection<GeschlechtCode>
 {
     /// <summary>
-    /// Geschlecht Codes Version <b>2.1</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1#version">XRepository: GDS.Geschlecht</a>.<br/>
-    /// <u><b>Gender codes:</b></u> version <b>2.1</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1#version">XRepository: Code lists GDS.Gender</a>.
+    /// Geschlecht Codes Version <b>2.1</b> aus <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1:technischerBestandteilGenericode">XRepository: GDS.Geschlecht</a>.<br/>
+    /// <u><b>Gender codes:</b></u> version <b>2.1</b> from <a href="https://www.xrepository.de/api/xrepository/urn:xoev-de:xjustiz:codeliste:gds.geschlecht_2.1:technischerBestandteilGenericode">XRepository: Code lists GDS.Gender</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.
