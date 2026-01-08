@@ -11,7 +11,7 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// <u><b>DocumentClass codes:</b></u> version <b>1.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.4#version">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
-    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
+    /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_4 = new("1.4")
     {
@@ -40,7 +40,7 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// <u><b>DocumentClass codes:</b></u> version <b>1.3</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.3#version">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
-    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
+    /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_3 = new("1.3")
     {
@@ -69,7 +69,7 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// <u><b>DocumentClass codes:</b></u> version <b>1.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.2#version">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Entfernung des Wertes "Anlage" │ Entfernung der Spalte "Fachmodul" │ Erweiterung um die Spalte "Beschreibung" │ Erweiterung um den Wert "Gerichtsbescheid".<br/>
-    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
+    /// <b>Changelog:</b> Removal of the value 'Attachment' | Removal of the column 'Specialized Module' | Addition of the column 'Description' | Addition of the value 'Court Order'.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_2 = new("1.2")
     {
@@ -98,7 +98,7 @@ public sealed class DokumentklasseCodeLists : ICodeListCollection<Dokumentklasse
     /// <u><b>DocumentClass codes:</b></u> version <b>1.1</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse_1.1#version">XRepository: Code lists GDS.DocumentClass</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> Die Codeliste wurde um eine Spalte 'fachmodul' ergänzt, in der die dort aufgeführten Fachmodule ausschließlich die für sie gekennzeichneten Werte nutzen.<br/>
-    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
+    /// <b>Changelog:</b> The code list was supplemented by a 'specialized module' column, in which the specialized modules listed there exclusively use the values marked for them.
     /// </summary>
     public static readonly VersionedCodeList<DokumentklasseCode> V1_1 = new("1.1")
     {

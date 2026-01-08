@@ -11,7 +11,7 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
     /// <u><b>Role codes:</b></u> version <b>3.5</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.5#version">XRepository: Code lists GDS.RoleName</a>.
     /// <br/><br/>
     /// <b>Änderung zur Vorversion:</b> In der Fachmodulspalte zum Eintrag '246|Gesellschafter(in)' wurde die Nutzung durch das Fachmodul Register (REG) ergänzt. Der Codelistentyp wurde von Typ1 nach Typ3 geändert.<br/>
-    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
+    /// <b>Changelog:</b> In the specialized module column for the entry '246|Partner', the usage by the specialized module Register (REG) was added. The code list type was changed from Type1 to Type3.
     /// </summary>
     public static readonly VersionedCodeList<RollenCode> V3_6 = new("3.6")
     {
