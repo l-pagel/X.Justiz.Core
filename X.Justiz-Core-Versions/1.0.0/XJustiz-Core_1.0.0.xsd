@@ -70,11 +70,6 @@
   </xs:complexType>
   <xs:complexType name="Rolle">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="rollenbezeichnung" type="tns:Rollenbezeichnung" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Rollenbezeichnung">
-    <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" ref="code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
@@ -254,10 +249,10 @@
   <xs:complexType name="Datei">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="dateiname" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="bestandteil" type="tns:Bestandteil" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bestandteil" type="tns:Bestandteiltyp" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Bestandteil">
+  <xs:complexType name="Bestandteiltyp">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" ref="code" />
     </xs:sequence>
