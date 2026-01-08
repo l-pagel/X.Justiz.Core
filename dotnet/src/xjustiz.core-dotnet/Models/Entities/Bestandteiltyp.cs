@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Bestandteiltyp : ICode<BestandteiltypCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "2.4";
+    public string ListVersionId { get; set; } = BestandteiltypCodeLists.LatestList.Version;
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = BestandteiltypCodeLists.Uri;

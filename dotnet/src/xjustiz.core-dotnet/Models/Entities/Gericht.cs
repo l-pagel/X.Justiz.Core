@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Gericht : ICode<GerichtCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "3.6"; //Default to latest
+    public string ListVersionId { get; set; } = GerichtCodeLists.LatestList.Version;
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = GerichtCodeLists.Uri;

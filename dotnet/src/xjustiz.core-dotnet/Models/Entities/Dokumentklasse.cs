@@ -15,7 +15,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Dokumentklasse : ICode<DokumentklasseCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "1.4"; //Default to latest
+    public string ListVersionId { get; set; } = DokumentklasseCodeLists.LatestList.Version; 
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = DokumentklasseCodeLists.Uri;

@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Geschlecht : ICode<GeschlechtCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "2.1";
+    public string ListVersionId { get; set; } = GeschlechtCodeLists.LatestList.Version;
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = GeschlechtCodeLists.Uri;

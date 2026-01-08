@@ -1,9 +1,7 @@
-namespace xjustiz.core_dotnet.Models.Codes.Staat;
-
-using System.Collections.Generic;
+﻿namespace xjustiz.core_dotnet.Models.Codes.Staat;
 
 /// <summary>
-/// Versionslisten f�r <see cref="StaatCode"/> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: Codelisten Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
+/// Versionslisten für <see cref="StaatCode"/> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: Codelisten Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
 /// <u><b>Country code lists:</b></u> for <see cref="StaatCode"/> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: State code lists from the State and Territorial Classification of the Federal Statistical Office</a>.
 /// </summary>
 public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
@@ -12,8 +10,8 @@ public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
     /// Staat Codes Version <b>2024-08-01</b> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01#version">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
     /// <u><b>Country codes:</b></u> version <b>2024-08-01</b> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01#version">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
     /// </summary>
-    public static readonly IReadOnlyList<StaatCode> V2024_08_01 =
-    [
+    public static readonly VersionedCodeList<StaatCode> V2024_08_01 = new("2024.08.01")
+    {
         StaatCode.Deutschland,
         StaatCode.Albanien,
         StaatCode.Bosnien_und_Herzegowina,
@@ -211,14 +209,14 @@ public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
         StaatCode.Samoa,
         StaatCode.Marshallinseln,
         StaatCode.Foederierte_Staaten_von_Mikronesien,
-    ];
+    };
 
     /// <summary>
     /// Staat Codes Version <b>2023-02-24</b> aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24#version">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
     /// <u><b>Country codes:</b></u> version <b>2023-02-24</b> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24#version">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
     /// </summary>
-    public static readonly IReadOnlyList<StaatCode> V2023_02_24 =
-    [
+    public static readonly VersionedCodeList<StaatCode> V2023_02_24 = new("2023.02.24")
+    {
         StaatCode.Deutschland,
         StaatCode.Albanien,
         StaatCode.Bosnien_und_Herzegowina,
@@ -416,9 +414,11 @@ public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
         StaatCode.Samoa,
         StaatCode.Marshallinseln,
         StaatCode.Foederierte_Staaten_von_Mikronesien,
-    ];
+    };
 
     public static string Uri => "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat";
 
-    public static IReadOnlyList<StaatCode> LatestList => V2024_08_01;
+    public static IVersionedCodeList<StaatCode> LatestList => V2024_08_01;
 }
+
+

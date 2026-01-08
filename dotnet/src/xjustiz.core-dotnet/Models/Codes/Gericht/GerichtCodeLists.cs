@@ -1,9 +1,7 @@
-namespace xjustiz.core_dotnet.Models.Codes.Gericht;
-
-using System.Collections.Generic;
+﻿namespace xjustiz.core_dotnet.Models.Codes.Gericht;
 
 /// <summary>
-/// Versionslisten f�r <see cref="GerichtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codelisten GDS.Gerichte</a>.<br/>
+/// Versionslisten für <see cref="GerichtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codelisten GDS.Gerichte</a>.<br/>
 /// <u><b>Court code lists:</b></u> for <see cref="GerichtCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code lists GDS.Courts</a>.
 /// </summary>
 public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
@@ -12,8 +10,8 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// Gericht Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.6</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: Code lists GDS.Courts</a>.
     /// </summary>
-    public static readonly IReadOnlyList<GerichtCode> V3_6 =
-    [
+    public static readonly VersionedCodeList<GerichtCode> V3_6 = new("3.6")
+    {
         GerichtCode.ZZ_Test_Bund,
         GerichtCode.ZZ_Test_Baden_Wuerttemberg,
         GerichtCode.ZZ_Test_Bayern,
@@ -2765,14 +2763,14 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
         GerichtCode.Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
-    ];
+    };
 
     /// <summary>
     /// Gericht Codes Version <b>3.5</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.5</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: Code lists GDS.Courts</a>.
     /// </summary>
-    public static readonly IReadOnlyList<GerichtCode> V3_5 =
-    [
+    public static readonly VersionedCodeList<GerichtCode> V3_5 = new("3.5")
+    {
         GerichtCode.ZZ_Test_Bund,
         GerichtCode.ZZ_Test_Baden_Wuerttemberg,
         GerichtCode.ZZ_Test_Bayern,
@@ -5339,14 +5337,14 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
         GerichtCode.Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
-    ];
+    };
 
     /// <summary>
     /// Gericht Codes Version <b>3.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: Code lists GDS.Courts</a>.
     /// </summary>
-    public static readonly IReadOnlyList<GerichtCode> V3_4 =
-    [
+    public static readonly VersionedCodeList<GerichtCode> V3_4 = new("3.4")
+    {
         GerichtCode.ZZ_Test_Bund,
         GerichtCode.ZZ_Test_Baden_Wuerttemberg,
         GerichtCode.ZZ_Test_Bayern,
@@ -7913,14 +7911,14 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
         GerichtCode.Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
-    ];
+    };
 
     /// <summary>
     /// Gericht Codes Version <b>3.3</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.3</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: Code lists GDS.Courts</a>.
     /// </summary>
-    public static readonly IReadOnlyList<GerichtCode> V3_3 =
-    [
+    public static readonly VersionedCodeList<GerichtCode> V3_3 = new("3.3")
+    {
         GerichtCode.ZZ_Test_Bund,
         GerichtCode.ZZ_Test_Baden_Wuerttemberg,
         GerichtCode.ZZ_Test_Bayern,
@@ -10486,14 +10484,14 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
         GerichtCode.Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
-    ];
+    };
 
     /// <summary>
     /// Gericht Codes Version <b>3.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: Code lists GDS.Courts</a>.
     /// </summary>
-    public static readonly IReadOnlyList<GerichtCode> V3_2 =
-    [
+    public static readonly VersionedCodeList<GerichtCode> V3_2 = new("3.2")
+    {
         GerichtCode.ZZ_Test_Bund,
         GerichtCode.ZZ_Test_Baden_Wuerttemberg,
         GerichtCode.ZZ_Test_Bayern,
@@ -12977,9 +12975,11 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
         GerichtCode.Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
-    ];
+    };
 
     public static string Uri => "urn:xoev-de:xjustiz:codeliste:gds.gerichte";
 
-    public static IReadOnlyList<GerichtCode> LatestList => V3_6;
+    public static IVersionedCodeList<GerichtCode> LatestList => V3_6;
 }
+
+

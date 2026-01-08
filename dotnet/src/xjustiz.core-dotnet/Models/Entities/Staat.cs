@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Staat : ICode<StaatCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "2024-08-01";
+    public string ListVersionId { get; set; } = StaatCodeLists.LatestList.Version;
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = StaatCodeLists.Uri;

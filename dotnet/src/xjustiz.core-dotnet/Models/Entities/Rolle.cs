@@ -14,7 +14,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class Rolle : ICode<RollenCode>
 {
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "3.6";
+    public string ListVersionId { get; set; } = RollenCodeLists.LatestList.Version;
 
     [XmlAttribute("listURI")]
     public string? ListUri { get; set; } = RollenCodeLists.Uri;

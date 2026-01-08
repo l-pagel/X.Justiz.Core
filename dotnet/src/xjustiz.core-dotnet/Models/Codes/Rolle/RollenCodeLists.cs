@@ -1,9 +1,7 @@
-namespace xjustiz.core_dotnet.Models.Codes.Rolle;
-
-using System.Collections.Generic;
+﻿namespace xjustiz.core_dotnet.Models.Codes.Rolle;
 
 /// <summary>
-/// Versionslisten f�r <see cref="RollenCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codelisten GDS.Rollenbezeichnung</a>.<br/>
+/// Versionslisten für <see cref="RollenCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codelisten GDS.Rollenbezeichnung</a>.<br/>
 /// <u><b>Role name code lists:</b></u> for <see cref="RollenCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code lists GDS.RoleName</a>.
 /// </summary>
 public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
@@ -12,8 +10,8 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
     /// Rollen Codes Version <b>3.5</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.5#version">XRepository: GDS.Rollenbezeichnung</a>.<br/>
     /// <u><b>Role codes:</b></u> version <b>3.5</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.5#version">XRepository: Code lists GDS.RoleName</a>.
     /// </summary>
-    public static readonly List<RollenCode> V3_5 =
-    [
+    public static readonly VersionedCodeList<RollenCode> V3_5 = new("3.5")
+    {
         RollenCode.Abwesenheitspfleger,
         RollenCode.Aliasidentitaet,
         RollenCode.Angehoerige,
@@ -377,14 +375,14 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
         RollenCode.Streithelfer,
         RollenCode.Streitverkuendete,
         RollenCode.Uebersetzer,
-    ];
+    };
 
     /// <summary>
     /// Rollen Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.6#version">XRepository: GDS.Rollenbezeichnung</a>.<br/>
     /// <u><b>Role codes:</b></u> version <b>3.6</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.6#version">XRepository: ode lists GDS.RoleName</a>.
     /// </summary>
-    public static readonly List<RollenCode> V3_6 =
-    [
+    public static readonly VersionedCodeList<RollenCode> V3_6 = new("3.6")
+    {
         RollenCode.Abwesenheitspfleger,
         RollenCode.Aliasidentitaet,
         RollenCode.Angehoerige,
@@ -770,9 +768,11 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
         RollenCode.Wirtschaftspruefer,
         RollenCode.Zedent,
         RollenCode.Registerfuehrende_Behoerde_oder_Stelle,
-    ];
+    };
 
     public static string Uri => "urn:de:xauslaender:codelist:geschlecht";
 
-    public static IReadOnlyList<RollenCode> LatestList => V3_6;
+    public static IVersionedCodeList<RollenCode> LatestList => V3_6;
 }
+
+

@@ -7,5 +7,5 @@ internal interface ICodeListCollection<T>
 {
     public static abstract string Uri { get; }
 
-    public static abstract IReadOnlyList<T> LatestList { get; }
+    public static abstract IVersionedCodeList<T> LatestList { get; }
 }

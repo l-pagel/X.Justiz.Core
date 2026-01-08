@@ -1,9 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Codes.Aktentyp;
 
-using System.Collections.Generic;
-
 /// <summary>
-/// Versionslisten für <see cref="AktentypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codelisten GDS.Aktentyp</a>.<br/>
+/// Versionslisten fÃ¼r <see cref="AktentypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codelisten GDS.Aktentyp</a>.<br/>
 /// <u><b>CaseFileType code lists:</b></u> for <see cref="AktentypCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code lists GDS.CaseFileType</a>.
 /// </summary>
 public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
@@ -12,8 +10,8 @@ public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
     /// Aktentyp Codes Version <b>2.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: GDS.Aktentyp</a>.<br/>
     /// <u><b>CaseFileType codes:</b></u> version <b>2.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: Code lists GDS.CaseFileType</a>.
     /// </summary>
-    public static readonly List<AktentypCode> V2_2 =
-    [
+    public static readonly VersionedCodeList<AktentypCode> V2_2 = new("2.2")
+    {
         AktentypCode.Zivilakte,
         AktentypCode.Betreuungsakte,
         AktentypCode.Familienakte,
@@ -38,9 +36,9 @@ public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
         AktentypCode.Gerichtsvollziehergeschaeftsbuch_DR_II,
         AktentypCode.Gerichtsvollziehergeschaeftsbuch_KB_I,
         AktentypCode.Gerichtsvollziehergeschaeftsbuch_KB_II,
-    ];
+    };
 
     public static string Uri => "urn:xoev-de:xjustiz:codeliste:gds.aktentyp";
 
-    public static IReadOnlyList<AktentypCode> LatestList => V2_2;
+    public static IVersionedCodeList<AktentypCode> LatestList => V2_2;
 }
