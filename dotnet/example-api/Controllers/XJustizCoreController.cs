@@ -71,7 +71,6 @@ public class XJustizCoreController : ControllerBase
         };
 
         var options = jsonSerializerOptions;
-        options.Converters.Add(new JsonStringEnumConverter());
 
         try
         {
@@ -224,7 +223,6 @@ public class XJustizCoreController : ControllerBase
         };
 
         var options = jsonSerializerOptions;
-        options.Converters.Add(new JsonStringEnumConverter());
 
         var json = JsonSerializer.Serialize(converted, options);
         var bytes = System.Text.Encoding.UTF8.GetBytes(json);

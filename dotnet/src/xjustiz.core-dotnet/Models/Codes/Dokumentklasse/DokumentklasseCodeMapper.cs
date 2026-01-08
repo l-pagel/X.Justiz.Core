@@ -62,6 +62,12 @@ public static partial class DokumentklasseCodeMapper
             return false;
         }
 
-        return Map.TryGetValue(value.Trim(), out code);
+        var trimmedValue = value.Trim();
+        if (Map.TryGetValue(trimmedValue, out code))
+        {
+            return true;
+        }
+
+        return Enum.TryParse(trimmedValue, out code);
     }
 }

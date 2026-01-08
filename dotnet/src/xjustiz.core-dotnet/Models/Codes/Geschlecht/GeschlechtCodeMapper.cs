@@ -58,6 +58,6 @@ public static class GeschlechtCodeMapper
                 return true;
         }
 
-        return false;
+        return System.Enum.TryParse(value, out result);
     }
 }

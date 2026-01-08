@@ -38,7 +38,7 @@ public interface ICode<TEnum>
     /// In diesem XML-Element wird der CodeValue einer Codeliste übermittelt.<br/>
     /// <u><b>CodeValue:</b></u> The code of a code list is transmitted in this XML element.
     /// </summary>
-    [XmlElement("code", Namespace = "")]
+    [XmlIgnore]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public TEnum Code { get; set; }

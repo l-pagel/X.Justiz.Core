@@ -1,32 +1,44 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
+using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Codes.Rolle;
 using xjustiz.core_dotnet.Util.Versioning;
-using xjustiz.core_dotnet.Models.Codes;
 
 /// <summary>
-/// Repräsentiert die Bezeichnung einer Rolle als Code der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>Codeliste "Rollenbezeichnung"</a>.<br/>
-/// <u><b>Role designation:</b></u> Represents the designation of a role as a code of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>code list "Rollenbezeichnung"</a>.
+/// Ermöglicht die Angabe einer Rollenbezeichnung als Code.<br/>
+/// <u><b>Role name:</b></u> Enables the specification of a role name as a code.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Rollenbezeichnung : ICode<RollenCode>
 {
+    /// <inheritdoc/>
     [XmlAttribute("listVersionID")]
-    public string ListVersionId { get; set; } = "3.6"; //Default to latest
+    public string ListVersionId { get; set; } = RollenCodeLists.LatestList.Version;
 
+    /// <inheritdoc/>
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung";
+    public string? ListUri { get; set; } = RollenCodeLists.Uri;
 
-    [XmlElement("code", Namespace = "")]
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-    public string? CodeForXml
-    {
-        get => Code.ToString();
-        set => Code = Enum.TryParse<RollenCode>(value ?? string.Empty, out var result) ? result : default;
-    }
-
+    /// <summary>
+    /// Ruft den Rollenbezeichnung-Code ab oder legt diesen fest.<br/>
+    /// <u><b>Code:</b></u> Gets or sets the role name code.
+    /// </summary>
     [XmlIgnore]
+    [JsonPropertyName("code")]
     public RollenCode Code { get; set; }
+
+    /// <summary>
+    /// Hilfseigenschaft für die XML-Serialisierung.<br/>
+    /// <u><b>Code for XML:</b></u> Helper property for XML serialization.
+    /// </summary>
+    [XmlElement("code", Namespace = "")]
+    [JsonIgnore]
+    public string CodeForXml
+    {
+        get => Code.ToCode();
+        set => Code = RollenCodeMapper.TryParse(value, out var result) ? result : default;
+    }
 }

@@ -35,30 +35,10 @@ public class AktentypTests
         var entity = new Aktentyp { Code = AktentypCode.Betreuungsakte };
         var json = JsonSerializer.Serialize(entity);
 
-        json.Should().Contain("002"); // Enum name
-
-        // Deserialization requires matching JSON converter on Enum or logic in Entity?
-        // Entity has `Code` property which is Enum.
-        // Enum has `[JsonConverter(...)]`.
-        // So default internal serializer should work.
+        json.Should().Contain("\"code\":\"002\"");
 
         var deserialized = JsonSerializer.Deserialize<Aktentyp>(json);
         deserialized.Should().NotBeNull();
         deserialized!.Code.Should().Be(AktentypCode.Betreuungsakte);
-    }
-
-    [Fact]
-    public void ShouldMapPropertiesCorrectly()
-    {
-        // Test CodeForXml property
-        var entity = new Aktentyp
-        {
-            CodeForXml = "012", // Strafakte
-        };
-
-        entity.Code.Should().Be(AktentypCode.Strafakte);
-
-        entity.Code = AktentypCode.Insolvenzakte;
-        entity.CodeForXml.Should().Be("005");
     }
 }

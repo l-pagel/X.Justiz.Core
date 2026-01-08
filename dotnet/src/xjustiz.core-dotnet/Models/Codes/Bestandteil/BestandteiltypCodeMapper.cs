@@ -65,6 +65,6 @@ public static class BestandteiltypCodeMapper
                 return true;
         }
 
-        return false;
+        return System.Enum.TryParse(value, out result);
     }
 }

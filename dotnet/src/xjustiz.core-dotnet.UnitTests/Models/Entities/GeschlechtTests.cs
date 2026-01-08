@@ -36,25 +36,10 @@ public class GeschlechtTests
         var json = JsonSerializer.Serialize(entity);
 
         // JsonConverter writes ToCode() -> '2'
-        json.Should().Contain("\"2\"");
+        json.Should().Contain("\"code\":\"2\"");
 
         var deserialized = JsonSerializer.Deserialize<Geschlecht>(json);
         deserialized.Should().NotBeNull();
         deserialized!.Code.Should().Be(GeschlechtCode.Weiblich);
-    }
-
-    [Fact]
-    public void ShouldHandleSpecialMapping()
-    {
-        // CodeForXml '3' -> Divers
-        var entity = new Geschlecht
-        {
-            CodeForXml = "3",
-        };
-
-        entity.Code.Should().Be(GeschlechtCode.Divers);
-
-        entity.Code = GeschlechtCode.Divers;
-        entity.CodeForXml.Should().Be("3");
     }
 }

@@ -1571,6 +1571,6 @@ public static class RollenCodeMapper
                 return true;
         }
 
-        return false;
+        return System.Enum.TryParse(value, out result);
     }
 }

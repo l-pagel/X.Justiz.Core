@@ -1,6 +1,7 @@
 namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
+using System.Text.Json.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -22,21 +23,22 @@ public class Gericht : ICode<GerichtCode>
     public string? ListUri { get; set; } = GerichtCodeLists.Uri;
 
     /// <summary>
-    /// Interne Eigenschaft für die XML-Serialisierung.<br/>
-    /// <u><b>Code for XML:</b></u> Internal property for XML serialization.
-    /// </summary>
-    [XmlElement("code", Namespace = "")]
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-    public string? CodeForXml
-    {
-        get => Code.ToCode();
-        set => Code = GerichtCodeMapper.TryParse(value ?? string.Empty, out var result) ? result : default;
-    }
-
-    /// <summary>
     /// Ruft den Gericht-Code ab oder legt diesen fest.<br/>
     /// <u><b>Code:</b></u> Gets or sets the court code.
     /// </summary>
     [XmlIgnore]
+    [JsonPropertyName("code")]
     public GerichtCode Code { get; set; }
+
+    /// <summary>
+    /// Hilfseigenschaft für die XML-Serialisierung.<br/>
+    /// <u><b>Code for XML:</b></u> Helper property for XML serialization.
+    /// </summary>
+    [XmlElement("code", Namespace = "")]
+    [JsonIgnore]
+    public string CodeForXml
+    {
+        get => Code.ToCode();
+        set => Code = GerichtCodeMapper.TryParse(value, out var result) ? result : default;
+    }
 }

@@ -129,6 +129,6 @@ public static class AktentypCodeMapper
                 return true;
         }
 
-        return false;
+        return System.Enum.TryParse(value, out result);
     }
 }

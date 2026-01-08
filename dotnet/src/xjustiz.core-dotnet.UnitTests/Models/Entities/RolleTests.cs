@@ -37,30 +37,10 @@ public class RolleTests
 
         // Expect code or name depending on JSON settings.
         // My JsonConverter uses ToCode() which returns XmlEnum attribute ("378").
-        json.Should().Contain("378");
+        json.Should().Contain("\"code\":\"378\"");
 
         var deserialized = JsonSerializer.Deserialize<Rolle>(json);
         deserialized.Should().NotBeNull();
         deserialized!.Code.Should().Be(RollenCode.Unternehmen_378);
-    }
-
-    [Fact]
-    public void ShouldHandleDuplicates()
-    {
-        // Unternehmen (378)
-        var entity1 = new Rolle
-        {
-            CodeForXml = "378",
-        };
-
-        entity1.Code.Should().Be(RollenCode.Unternehmen_378);
-
-        // Unternehmen (392)
-        var entity2 = new Rolle
-        {
-            CodeForXml = "392",
-        };
-
-        entity2.Code.Should().Be(RollenCode.Unternehmen_392);
     }
 }

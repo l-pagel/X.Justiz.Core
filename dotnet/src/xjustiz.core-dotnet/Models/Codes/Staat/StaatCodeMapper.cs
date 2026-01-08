@@ -1183,7 +1183,7 @@ public static partial class StaatCodeMapper
     /// <summary>
     /// Tries to parse a string value (Code, Name, ISO, etc.) into a StaatCode.
     /// </summary>
-    public static bool TryParse(string value, out StaatCode code)
+    public static bool TryParse(string? value, out StaatCode code)
     {
         if (string.IsNullOrWhiteSpace(value))
         {
@@ -1191,6 +1191,12 @@ public static partial class StaatCodeMapper
             return false;
         }
 
-        return Map.TryGetValue(value.Trim(), out code);
+        var trimmedValue = value.Trim();
+        if (Map.TryGetValue(trimmedValue, out code))
+        {
+            return true;
+        }
+
+        return Enum.TryParse(trimmedValue, out code);
     }
 }
