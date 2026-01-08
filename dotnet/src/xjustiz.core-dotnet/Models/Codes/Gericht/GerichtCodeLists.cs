@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="GerichtCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codelisten GDS.Gerichte</a>.<br/>
 /// <u><b>Court code lists:</b></u> for <see cref="GerichtCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code lists GDS.Courts</a>.
 /// </summary>
-public static class GerichtCodeLists
+public sealed class GerichtCodeLists : ICodeList<GerichtCode>
 {
     /// <summary>
     /// Gericht Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: GDS.Gerichte</a>.<br/>
@@ -12978,4 +12978,8 @@ public static class GerichtCodeLists
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG,
         GerichtCode.Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90,
     ];
+
+    public static string Uri => "urn:xoev-de:xjustiz:codeliste:gds.gerichte";
+
+    public static IReadOnlyList<GerichtCode> LatestList => V3_6;
 }

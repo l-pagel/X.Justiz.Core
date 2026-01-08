@@ -17,7 +17,7 @@ public class Rolle : ICode<RollenCode>
     public string ListVersionId { get; set; } = "3.6";
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung";
+    public string? ListUri { get; set; } = RollenCodeLists.Uri;
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

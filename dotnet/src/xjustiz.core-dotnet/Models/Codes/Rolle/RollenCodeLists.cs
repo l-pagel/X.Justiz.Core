@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="RollenCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codelisten GDS.Rollenbezeichnung</a>.<br/>
 /// <u><b>Role name code lists:</b></u> for <see cref="RollenCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code lists GDS.RoleName</a>.
 /// </summary>
-public static class RollenCodeLists
+public sealed class RollenCodeLists : ICodeList<RollenCode>
 {
     /// <summary>
     /// Rollen Codes Version <b>3.5</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung_3.5#version">XRepository: GDS.Rollenbezeichnung</a>.<br/>
@@ -771,4 +771,8 @@ public static class RollenCodeLists
         RollenCode.Zedent,
         RollenCode.Registerfuehrende_Behoerde_oder_Stelle,
     ];
+
+    public static string Uri => "urn:de:xauslaender:codelist:geschlecht";
+
+    public static IReadOnlyList<RollenCode> LatestList => V3_6;
 }

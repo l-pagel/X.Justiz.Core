@@ -17,7 +17,7 @@ public class Geschlecht : ICode<GeschlechtCode>
     public string ListVersionId { get; set; } = "2.1";
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "urn:de:xauslaender:codelist:geschlecht";
+    public string? ListUri { get; set; } = GeschlechtCodeLists.Uri;
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

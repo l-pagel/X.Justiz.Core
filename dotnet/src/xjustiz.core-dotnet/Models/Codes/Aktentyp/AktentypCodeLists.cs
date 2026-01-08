@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="AktentypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codelisten GDS.Aktentyp</a>.<br/>
 /// <u><b>CaseFileType code lists:</b></u> for <see cref="AktentypCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code lists GDS.CaseFileType</a>.
 /// </summary>
-public static class AktentypCodeLists
+public sealed class AktentypCodeLists : ICodeList<AktentypCode>
 {
     /// <summary>
     /// Aktentyp Codes Version <b>2.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp_2.2#version">XRepository: GDS.Aktentyp</a>.<br/>
@@ -39,4 +39,8 @@ public static class AktentypCodeLists
         AktentypCode.Gerichtsvollziehergeschaeftsbuch_KB_I,
         AktentypCode.Gerichtsvollziehergeschaeftsbuch_KB_II,
     ];
+
+    public static string Uri => "urn:xoev-de:xjustiz:codeliste:gds.aktentyp";
+
+    public static IReadOnlyList<AktentypCode> LatestList => V2_2;
 }

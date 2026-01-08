@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// Versionslisten für <see cref="BestandteiltypCode"/> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codelisten GDS.Bestandteiltyp</a>.<br/>
 /// <u><b>Component code lists:</b></u> for <see cref="BestandteiltypCode"/> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code lists GDS.Components</a>.
 /// </summary>
-public static class BestandteiltypCodeLists
+public sealed class BestandteiltypCodeLists : ICodeList<BestandteiltypCode>
 {
     /// <summary>
     /// Bestandteil Codes Version <b>2.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: GDS.Bestandteiltyp</a>.<br/>
@@ -23,4 +23,8 @@ public static class BestandteiltypCodeLists
         BestandteiltypCode.VHN,
         BestandteiltypCode.hinlaufendes_eEB,
     ];
+
+    public static string Uri => "urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp";
+
+    public static IReadOnlyList<BestandteiltypCode> LatestList => V2_4;
 }

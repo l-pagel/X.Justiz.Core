@@ -17,7 +17,7 @@ public class Bestandteiltyp : ICode<BestandteiltypCode>
     public string ListVersionId { get; set; } = "2.4";
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp";
+    public string? ListUri { get; set; } = BestandteiltypCodeLists.Uri;
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

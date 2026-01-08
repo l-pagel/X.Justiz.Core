@@ -18,7 +18,7 @@ public class Dokumentklasse : ICode<DokumentklasseCode>
     public string ListVersionId { get; set; } = "1.4"; //Default to latest
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.dokumenttyp";
+    public string? ListUri { get; set; } = DokumentklasseCodeLists.Uri;
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
