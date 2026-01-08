@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 
 //TODO: What namespace to use for completely new fields and types
+
 /// <summary>
 /// Repräsentiert eine Versicherung.<br/>
 /// <u><b>Insurance:</b></u> Represents an insurance.

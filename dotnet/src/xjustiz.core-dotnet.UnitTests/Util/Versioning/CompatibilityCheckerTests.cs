@@ -10,6 +10,7 @@ using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Models.Codes.Rolle;
 using xjustiz.core_dotnet.Models.Codes.Staat;
 using xjustiz.core_dotnet.Models.Entities;
+using xjustiz.core_dotnet.Models.Entities.Core;
 using xjustiz.core_dotnet.Util.Versioning;
 using Xunit;
 
@@ -109,7 +110,7 @@ public class CompatibilityCheckerTests
         // Arrange
         var message = new UebermittlungSchriftgutobjekteNachricht
         {
-            Kopf = new Nachrichtenkopf
+            Kopf = new NachrichtenkopfCore
             {
                 Version = "3.5.1",
                 AktenzeichenAbsender = ["123/45", "XY-987"],

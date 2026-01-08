@@ -24,14 +24,14 @@
                 "Sachgebietszusatz": "Kuendigungsschutzsache",
                 "AuswahlInstanzbehoerde": {
                     "Gericht": {
-                        "Code": "Amtsgericht_Baden_Baden"
+                        "Code": "B1102"
                     }
                 }
             },
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "Angehoerige"
+                        "Code": "003"
                     },
                     "Beteiligter": {
                         "Auswahl": {
@@ -41,7 +41,7 @@
                                     "Nachname": "Kleber"
                                 },
                                 "Geschlecht": {
-                                    "Code": "Maennlich"
+                                    "Code": "1"
                                 }
                             }
                         }
@@ -49,7 +49,7 @@
                 },
                 {
                     "Rolle": {
-                        "Code": "Angeklagte"
+                        "Code": "004"
                     },
                     "Beteiligter": {
                         "Auswahl": {
@@ -134,7 +134,7 @@
                 },
                 "FachspezifischeDaten": {
                     "Dokumentklasse": {
-                        "Code": "Andere_Sonstige"
+                        "Code": "001"
                     },
                     "Datei": {
                         "Dateiname": "Kuendigungsschutzklage_Kleber.pdf",

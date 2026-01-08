@@ -24,14 +24,14 @@
         "Sachgebietszusatz": "Nachlasssache",
         "AuswahlInstanzbehoerde": {
           "Gericht": {
-            "Code": "Amtsgericht_Baden_Baden"
+            "Code": "B1102"
           }
         }
       },
       "Beteiligungen": [
         {
           "Rolle": {
-            "Code": "Abwesenheitspfleger"
+            "Code": "001"
           },
           "Beteiligter": {
             "Auswahl": {
@@ -41,7 +41,7 @@
                   "Nachname": "Mustermann"
                 },
                 "Geschlecht": {
-                  "Code": "Maennlich"
+                  "Code": "1"
                 },
                 "Anschrift": {
                   "Strasse": "Grabesruhe",
@@ -133,7 +133,7 @@
         },
         "FachspezifischeDaten": {
           "Dokumentklasse": {
-            "Code": "Andere_Sonstige"
+            "Code": "001"
           },
           "Datei": {
             "Dateiname": "Erbscheinantrag_b2c3d4e5.pdf",

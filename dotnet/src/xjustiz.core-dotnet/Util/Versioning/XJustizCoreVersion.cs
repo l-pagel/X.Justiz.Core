@@ -4,6 +4,7 @@
 /// Definiert die XJustiz-Core-Versionen.<br/>
 /// <u><b>XJustiz core version:</b></u> Defines the XJustiz Core versions.
 /// </summary>
+[System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter))]
 public enum XJustizCoreVersion
 {
     /// <summary>

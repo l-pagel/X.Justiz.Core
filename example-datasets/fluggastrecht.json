@@ -24,14 +24,14 @@
                 "Sachgebietszusatz": "Fluggastrechte",
                 "AuswahlInstanzbehoerde": {
                     "Gericht": {
-                        "Code": "Amtsgericht_Baden_Baden"
+                        "Code": "B1102"
                     }
                 }
             },
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "Angeschuldigte"
+                        "Code": "005"
                     },
                     "Beteiligter": {
                         "Auswahl": {
@@ -41,7 +41,7 @@
                                     "Nachname": "Pan"
                                 },
                                 "Geschlecht": {
-                                    "Code": "Maennlich"
+                                    "Code": "1"
                                 }
                             }
                         }
@@ -49,7 +49,7 @@
                 },
                 {
                     "Rolle": {
-                        "Code": "Annehmende"
+                        "Code": "006"
                     },
                     "Beteiligter": {
                         "Auswahl": {
@@ -63,7 +63,7 @@
                                     "Postleitzahl": "W1A 1AA",
                                     "Ort": "London",
                                     "Staat": {
-                                        "Code": "Vereinigtes_Koenigreich"
+                                        "Code": "168"
                                     }
                                 }
                             }
@@ -146,7 +146,7 @@
                 },
                 "FachspezifischeDaten": {
                     "Dokumentklasse": {
-                        "Code": "Andere_Sonstige"
+                        "Code": "001"
                     },
                     "Datei": {
                         "Dateiname": "BoardingPass_JFK.pdf",

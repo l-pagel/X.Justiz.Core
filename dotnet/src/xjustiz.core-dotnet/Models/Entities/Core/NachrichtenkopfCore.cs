@@ -33,7 +33,7 @@ public class NachrichtenkopfCore : Nachrichtenkopf
     /// Verwendete X.Justiz Core Version für diese Nachricht als String.<br/>
     /// <u><b>XJustiz Core version:</b></u> Used X.Justiz Core version for this message as string.
     /// </summary>
-    [XmlElement("xjustizReferenzVersion", Namespace = XJustizConstants.Tns, Order = 3)]
+    [XmlElement("xjustizReferenzVersion", Namespace = XJustizConstants.Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string Version_XJustizReferenz { get; set; } = XJustizConstants.LatestXJustizCoreVersion.XJustizReferenzVersionString;

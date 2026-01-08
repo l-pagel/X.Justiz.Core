@@ -1,5 +1,6 @@
 namespace xjustiz.core_dotnet.Models;
 
+using System.Linq;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Models.Entities.Core;

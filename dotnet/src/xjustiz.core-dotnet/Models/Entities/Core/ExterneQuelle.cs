@@ -11,6 +11,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class ExterneQuelle
 {
     //TODO: Define how a FileSource might look like
+
     /// <summary>
     /// Parameter für die Verbindung.<br/>
     /// <u><b>Connection parameters:</b></u> Connection parameters.
@@ -34,6 +35,7 @@ public class ExterneQuelle
 }
 
 //TODO: Define Enum for this ???
+
 /// <summary>
 /// Typ der Verbindung.<br/>
 /// <u><b>Connection type:</b></u> Connection type.

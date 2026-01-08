@@ -24,14 +24,14 @@
                 "Sachgebietszusatz": "Wohnraummietsache",
                 "AuswahlInstanzbehoerde": {
                     "Gericht": {
-                        "Code": "Amtsgericht_Baden_Baden"
+                        "Code": "B1102"
                     }
                 }
             },
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "Aliasidentitaet"
+                        "Code": "002"
                     },
                     "Beteiligter": {
                         "Auswahl": {
@@ -41,7 +41,7 @@
                                     "Nachname": "Schmidt"
                                 },
                                 "Geschlecht": {
-                                    "Code": "Weiblich"
+                                    "Code": "2"
                                 },
                                 "Anschrift": {
                                     "Strasse": "Mietweg",

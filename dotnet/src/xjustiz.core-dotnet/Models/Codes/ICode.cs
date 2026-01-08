@@ -11,7 +11,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// In every case, the transmitted data allows for the unambiguous identification of the underlying code list.
 /// </summary>
 /// <typeparam name="TEnum">The enum type for the code.</typeparam>
-internal interface ICode<TEnum>
+public interface ICode<TEnum>
 {
     /// <summary>
     /// Die Version der Codeliste. Dokumentation aus XOEV-Bibliothek: Die konkrete Version der zu nutzenden Codeliste wird mit diesem XML-Attribut übertragen. Analog zum listURI ist die Bestimmung der Version einer Codeliste bei der Übertragung eines Codes zwingend. Die Version kann jedoch ebenfalls bereits im XÖV-Standard festgelegt werden (es handelt sich in diesem Fall um einen CodeValue-Typ 1 oder 2).<br/>
