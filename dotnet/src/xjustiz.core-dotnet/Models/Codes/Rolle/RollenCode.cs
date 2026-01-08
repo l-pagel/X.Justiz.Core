@@ -4,7 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Rolle Codes.<br/>
+/// Rolle Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codeliste GDS.Rollenbezeichnung</a>.<br/>
+/// <u><b>Role codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code list GDS.RoleName</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]

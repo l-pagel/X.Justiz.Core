@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Aktentyp;
 
+/// <summary>
+/// Mapper für <see cref="AktentypCode"/>.<br/>
+/// <u><b>Case type code mapper:</b></u> Mapper for <see cref="AktentypCode"/>.
+/// </summary>
 public static class AktentypCodeMapper
 {
     public static AktentypCode FromCode(string code)

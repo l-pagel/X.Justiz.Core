@@ -8,13 +8,16 @@ using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Converter for X.Justiz and X.Justiz-Core messages.
+/// Konverter für Nachrichten im X.Justiz und X.Justiz-Core Format.<br/>
+/// Konvertiert Nachrichten in eine bestimmte Zielversion und filtert nicht unterstützte Eigenschaften heraus.<br/>
+/// <u><b>XJustiz Converter:</b></u> Converter for X.Justiz and X.Justiz-Core messages.
 /// Converts messages to a specific target version, filtering out unsupported properties.
 /// </summary>
 public static class XJustizConverter
 {
     /// <summary>
-    /// Converts the source message to the target X.Justiz version.
+    /// Konvertiert die Quellnachricht in die Ziel-X.Justiz-Version.<br/>
+    /// <u><b>Convert:</b></u> Converts the source message to the target X.Justiz version.
     /// </summary>
     /// <param name="source">The source message to convert.</param>
     /// <param name="targetVersion">The target X.Justiz version.</param>
@@ -25,7 +28,8 @@ public static class XJustizConverter
     }
 
     /// <summary>
-    /// Converts the source message to the target X.Justiz-Core version.
+    /// Konvertiert die Quellnachricht in die Ziel-X.Justiz-Core-Version.<br/>
+    /// <u><b>Convert:</b></u> Converts the source message to the target X.Justiz-Core version.
     /// </summary>
     /// <param name="source">The source message to convert.</param>
     /// <param name="targetVersion">The target X.Justiz-Core version.</param>
@@ -36,7 +40,8 @@ public static class XJustizConverter
     }
 
     /// <summary>
-    /// Deep copies the object and filters properties based on version availability.
+    /// Kopiert das Objekt und filtert Eigenschaften basierend auf der Versionsverfügbarkeit.<br/>
+    /// <u><b>Deep copy:</b></u> Deep copies the object and filters properties based on version availability.
     /// </summary>
     /// <param name="source">The source.</param>
     /// <param name="targetVersion">The target version.</param>

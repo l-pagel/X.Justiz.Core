@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Staat;
 using System.Collections.Concurrent;
 using System.Xml.Serialization;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="StaatCode"/>.<br/>
+/// <u><b>Country code extensions:</b></u> Extension methods for <see cref="StaatCode"/>.
+/// </summary>
 public static class StaatCodeExtensions
 {
     private static readonly ConcurrentDictionary<StaatCode, string> CodeCache = new();

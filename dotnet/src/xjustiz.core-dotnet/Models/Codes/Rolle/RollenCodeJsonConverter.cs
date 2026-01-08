@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Rolle;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// JSON Konverter für <see cref="RollenCode"/>.<br/>
+/// <u><b>Role code JSON converter:</b></u> JSON converter for <see cref="RollenCode"/>.
+/// </summary>
 public class RollenCodeJsonConverter : JsonConverter<RollenCode>
 {
     public override RollenCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

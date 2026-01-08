@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 using System.Collections.Concurrent;
 using System.Xml.Serialization;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="DokumentklasseCode"/>.<br/>
+/// <u><b>Document class code extensions:</b></u> Extension methods for <see cref="DokumentklasseCode"/>.
+/// </summary>
 public static class DokumentklasseCodeExtensions
 {
     private static readonly ConcurrentDictionary<DokumentklasseCode, string> CodeCache = new();

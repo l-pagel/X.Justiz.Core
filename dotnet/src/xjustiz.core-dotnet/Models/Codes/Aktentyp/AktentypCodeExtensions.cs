@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Aktentyp;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="AktentypCode"/>.<br/>
+/// <u><b>Case type code extensions:</b></u> Extension methods for <see cref="AktentypCode"/>.
+/// </summary>
 public static class AktentypCodeExtensions
 {
     public static string ToCode(this AktentypCode value)

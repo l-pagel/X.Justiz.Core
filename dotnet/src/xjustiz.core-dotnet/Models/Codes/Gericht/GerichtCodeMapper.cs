@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Gericht;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Mapper für <see cref="GerichtCode"/>.<br/>
+/// <u><b>Court code mapper:</b></u> Mapper for <see cref="GerichtCode"/>.
+/// </summary>
 public static partial class GerichtCodeMapper
 {
     private static readonly Dictionary<string, GerichtCode> Map = new Dictionary<string, GerichtCode>(StringComparer.OrdinalIgnoreCase)

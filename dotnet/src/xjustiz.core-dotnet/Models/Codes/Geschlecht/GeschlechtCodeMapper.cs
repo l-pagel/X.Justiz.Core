@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Geschlecht;
 
+/// <summary>
+/// Mapper für <see cref="GeschlechtCode"/>.<br/>
+/// <u><b>Gender code mapper:</b></u> Mapper for <see cref="GeschlechtCode"/>.
+/// </summary>
 public static class GeschlechtCodeMapper
 {
     public static GeschlechtCode FromCode(string code)

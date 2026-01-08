@@ -9,12 +9,17 @@ using System.Xml;
 using System.Xml.Schema;
 using xjustiz.core_dotnet.Util.Versioning;
 
+/// <summary>
+/// Validiert XML-Dateien gegen X.Justiz XSD-Schemata für die angegebene Version.<br/>
+/// <u><b>XML Validator:</b></u> Validates XML files against the X.Justiz XSD schemas for the specified version.
+/// </summary>
 public static class XmlValidator
 {
     private static readonly System.Collections.Concurrent.ConcurrentDictionary<XJustizVersion, Lazy<(XmlSchemaSet, List<string>)>> SchemaCache = new();
 
     /// <summary>
-    /// Validates an XML file against the X.Justiz XSD schemas for the specified version.
+    /// Validiert eine XML-Datei gegen die X.Justiz XSD-Schemata für die angegebene Version.<br/>
+    /// <u><b>Validate async:</b></u> Validates an XML file against the X.Justiz XSD schemas for the specified version.
     /// </summary>
     /// <param name="xmlPath">The absolute path to the XML file.</param>
     /// <param name="version">The X.Justiz version to validate against.</param>
@@ -38,7 +43,8 @@ public static class XmlValidator
     }
 
     /// <summary>
-    /// Validates an XML stream against the X.Justiz XSD schemas for the specified version.
+    /// Validiert einen XML-Stream gegen die X.Justiz XSD-Schemata für die angegebene Version.<br/>
+    /// <u><b>Validate async:</b></u> Validates an XML stream against the X.Justiz XSD schemas for the specified version.
     /// </summary>
     /// <param name="xmlStream">The stream containing the XML data. Can be a MemoryStream.</param>
     /// <param name="version">The X.Justiz version to validate against.</param>

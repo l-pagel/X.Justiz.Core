@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Mapper für <see cref="DokumentklasseCode"/>.<br/>
+/// <u><b>Document class code mapper:</b></u> Mapper for <see cref="DokumentklasseCode"/>.
+/// </summary>
 public static partial class DokumentklasseCodeMapper
 {
     private static readonly Dictionary<string, DokumentklasseCode> Map = new(StringComparer.OrdinalIgnoreCase)

@@ -12,14 +12,14 @@ using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Helpers;
 
 /// <summary>
-/// Stellt Hilfsmethoden zum Erstellen von XJustiz-ZIP-Dateien bereit.
-/// Provides utility methods for creating XJustiz ZIP files.
+/// Stellt Hilfsmethoden zum Erstellen von XJustiz-ZIP-Dateien bereit.<br/>
+/// <u><b>Zipper:</b></u> Provides utility methods for creating XJustiz ZIP files.
 /// </summary>
 public static class Zipper
 {
     /// <summary>
-    /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie am angegebenen Pfad.
-    /// Creates a ZIP file containing the XJustiz data and optional attachments and saves it at the specified path.
+    /// Erstellt eine ZIP-Datei mit den XJustiz-Daten und optionalen Anhängen und speichert sie am angegebenen Pfad.<br/>
+    /// <u><b>Archive to ZIP file:</b></u> Creates a ZIP file containing the XJustiz data and optional attachments and saves it at the specified path.
     /// </summary>
     /// <param name="uebermittlungSchriftgutobjekteNachricht">Die XJustiz-Nachricht. / The XJustiz message.</param>
     /// <param name="destinationZipPath">Der Pfad, an dem die ZIP-Datei erstellt werden soll. / The path where the ZIP file should be created.</param>
@@ -39,8 +39,8 @@ public static class Zipper
     }
 
     /// <summary>
-    /// Erstellt einen MemoryStream, der das ZIP-Archiv mit den XJustiz-Daten und optionalen Anhängen enthält.
-    /// Creates a MemoryStream containing the ZIP archive with the XJustiz data and optional attachments.
+    /// Erstellt einen MemoryStream, der das ZIP-Archiv mit den XJustiz-Daten und optionalen Anhängen enthält.<br/>
+    /// <u><b>Archive to ZIP stream:</b></u> Creates a MemoryStream containing the ZIP archive with the XJustiz data and optional attachments.
     /// </summary>
     /// <param name="uebermittlungSchriftgutobjekteNachricht">Die XJustiz-Nachricht. / The XJustiz message.</param>
     /// <param name="exportFiles">Eine Liste von Dateipfaden, die als Anhänge hinzugefügt werden sollen. / A list of file paths to be added as attachments.</param>

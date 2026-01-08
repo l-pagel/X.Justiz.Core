@@ -4,7 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Aktentyp Codes.<br/>
+/// Aktentyp Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codeliste GDS.Aktentyp</a>.<br/>
+/// <u><b>Case type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code list GDS.CaseFileType</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]

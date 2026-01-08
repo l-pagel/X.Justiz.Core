@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Rolle;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="RollenCode"/>.<br/>
+/// <u><b>Role code extensions:</b></u> Extension methods for <see cref="RollenCode"/>.
+/// </summary>
 public static class RollenCodeExtensions
 {
     public static string ToCode(this RollenCode value)

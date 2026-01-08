@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Rolle;
 
+/// <summary>
+/// Mapper für <see cref="RollenCode"/>.<br/>
+/// <u><b>Role code mapper:</b></u> Mapper for <see cref="RollenCode"/>.
+/// </summary>
 public static class RollenCodeMapper
 {
     public static RollenCode FromCode(string code)

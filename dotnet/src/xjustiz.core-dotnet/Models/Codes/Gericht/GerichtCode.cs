@@ -4,7 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Gericht Codes from <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte'>XRepository: Codeliste GDS.Gerichte</a>.<br/>
+/// Gericht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codeliste GDS.Gerichte</a>.<br/>
+/// <u><b>Court codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code list GDS.Courts</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]

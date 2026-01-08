@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
 
+/// <summary>
+/// Mapper für <see cref="BestandteiltypCode"/>.<br/>
+/// <u><b>Component type code mapper:</b></u> Mapper for <see cref="BestandteiltypCode"/>.
+/// </summary>
 public static class BestandteiltypCodeMapper
 {
     public static BestandteiltypCode FromCode(string code)

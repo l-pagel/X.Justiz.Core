@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Gericht;
 using System.Collections.Concurrent;
 using System.Xml.Serialization;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="GerichtCode"/>.<br/>
+/// <u><b>Court code extensions:</b></u> Extension methods for <see cref="GerichtCode"/>.
+/// </summary>
 public static class GerichtCodeExtensions
 {
     private static readonly ConcurrentDictionary<GerichtCode, string> CodeCache = new();

@@ -1,5 +1,9 @@
 namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
 
+/// <summary>
+/// Erweiterungsmethoden für <see cref="BestandteiltypCode"/>.<br/>
+/// <u><b>Component type code extensions:</b></u> Extension methods for <see cref="BestandteiltypCode"/>.
+/// </summary>
 public static class BestandteiltypCodeExtensions
 {
     public static string ToCode(this BestandteiltypCode value)

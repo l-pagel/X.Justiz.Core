@@ -2,6 +2,10 @@
 
 using System;
 
+/// <summary>
+/// Basisklasse für Versionsverfügbarkeitsattribute.<br/>
+/// <u><b>Version availability attribute:</b></u> Base class for version availability attributes.
+/// </summary>
 public abstract class VersionAvailabilityAttribute(int introduced)
     : Attribute
 {

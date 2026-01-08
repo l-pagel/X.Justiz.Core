@@ -1,5 +1,9 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
 
+/// <summary>
+/// Definiert die XJustiz-Versionen.<br/>
+/// <u><b>XJustiz version:</b></u> Defines the XJustiz versions.
+/// </summary>
 public enum XJustizVersion
 {
     /// <summary>

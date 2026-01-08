@@ -1,10 +1,14 @@
 ﻿namespace xjustiz.core_dotnet.Util.Versioning;
 
+/// <summary>
+/// Definiert die XJustiz-Core-Versionen.<br/>
+/// <u><b>XJustiz core version:</b></u> Defines the XJustiz Core versions.
+/// </summary>
 public enum XJustizCoreVersion
 {
     /// <summary>
     /// Beta-Version, gültig ab 01.01.2026<br/>
-    /// Vate version, valid from 01.01.2026
+    /// Beta version, valid from 01.01.2026
     /// </summary>
     V0_2_0 = 020,
 

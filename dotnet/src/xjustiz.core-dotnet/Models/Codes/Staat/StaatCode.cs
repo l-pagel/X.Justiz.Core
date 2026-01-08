@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Staat;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
+/// <summary>
+/// Staat Codes aus <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: Codeliste Staat aus der Staats- und Gebietssystematik des Statistischen Bundesamtes</a>.<br/>
+/// <u><b>Country codes:</b></u> from <a href="https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat">XRepository: State code list from the State and Territorial Classification of the Federal Statistical Office</a>.
+/// </summary>
 [XJustizAvailability(XJustizVersion.V3_1_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 [System.Text.Json.Serialization.JsonConverter(typeof(StaatCodeJsonConverter))]

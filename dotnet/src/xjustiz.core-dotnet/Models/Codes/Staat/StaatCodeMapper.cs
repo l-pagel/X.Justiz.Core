@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Staat;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Mapper für <see cref="StaatCode"/>.<br/>
+/// <u><b>Country code mapper:</b></u> Mapper for <see cref="StaatCode"/>.
+/// </summary>
 public static partial class StaatCodeMapper
 {
     private static readonly Dictionary<string, StaatCode> Map = new(StringComparer.OrdinalIgnoreCase)

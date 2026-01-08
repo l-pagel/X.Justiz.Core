@@ -4,6 +4,10 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// JSON Konverter für <see cref="DokumentklasseCode"/>.<br/>
+/// <u><b>Document class code JSON converter:</b></u> JSON converter for <see cref="DokumentklasseCode"/>.
+/// </summary>
 public class DokumentklasseCodeJsonConverter : JsonConverter<DokumentklasseCode>
 {
     public override DokumentklasseCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

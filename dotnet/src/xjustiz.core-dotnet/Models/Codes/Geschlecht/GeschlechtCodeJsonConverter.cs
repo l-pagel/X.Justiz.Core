@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Geschlecht;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// JSON Konverter für <see cref="GeschlechtCode"/>.<br/>
+/// <u><b>Gender code JSON converter:</b></u> JSON converter for <see cref="GeschlechtCode"/>.
+/// </summary>
 public class GeschlechtCodeJsonConverter : JsonConverter<GeschlechtCode>
 {
     public override GeschlechtCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

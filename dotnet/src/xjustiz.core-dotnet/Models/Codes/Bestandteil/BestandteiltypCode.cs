@@ -4,7 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Bestandteil Codes.<br/>
+/// Bestandteil Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codeliste GDS.Bestandteiltyp</a>.<br/>
+/// <u><b>Component codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code list GDS.Components</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]

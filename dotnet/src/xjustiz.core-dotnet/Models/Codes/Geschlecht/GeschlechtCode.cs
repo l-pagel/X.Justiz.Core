@@ -4,7 +4,8 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Geschlecht Codes.<br/>
+/// Geschlecht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Codeliste GDS.Geschlecht</a>.<br/>
+/// <u><b>Gender codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Code list GDS.Gender</a>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]

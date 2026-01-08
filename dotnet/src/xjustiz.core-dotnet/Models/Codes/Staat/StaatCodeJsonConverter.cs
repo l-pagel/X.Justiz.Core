@@ -4,6 +4,10 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// JSON Konverter für <see cref="StaatCode"/>.<br/>
+/// <u><b>Country code JSON converter:</b></u> JSON converter for <see cref="StaatCode"/>.
+/// </summary>
 public class StaatCodeJsonConverter : JsonConverter<StaatCode>
 {
     public override StaatCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)

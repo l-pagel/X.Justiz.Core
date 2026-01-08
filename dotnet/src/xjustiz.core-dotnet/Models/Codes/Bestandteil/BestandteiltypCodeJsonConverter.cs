@@ -3,6 +3,10 @@ namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// JSON Konverter für <see cref="BestandteiltypCode"/>.<br/>
+/// <u><b>Component type code JSON converter:</b></u> JSON converter for <see cref="BestandteiltypCode"/>.
+/// </summary>
 public class BestandteiltypCodeJsonConverter : JsonConverter<BestandteiltypCode>
 {
     public override BestandteiltypCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
