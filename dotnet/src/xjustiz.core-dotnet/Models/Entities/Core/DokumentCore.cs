@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Repräsentiert ein Dokument.<br/>
 /// <u><b>Document:</b></u> Represents a document.
 /// </summary>
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class DokumentCore : Dokument
 {
     /// <summary>
@@ -16,6 +16,6 @@ public class DokumentCore : Dokument
     /// <u><b>Subject-specific data:</b></u> Specialized data of a document.
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 2)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public new XjustizFachspezifischeDatenCore FachspezifischeDaten { get; set; } = new();
 }

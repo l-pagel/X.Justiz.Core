@@ -37,7 +37,7 @@ public class AnwendungsspezifischeErweiterung
     /// </summary>
     [XmlElement("beschreibung", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Beschreibung { get; set; }
 
     /// <summary>

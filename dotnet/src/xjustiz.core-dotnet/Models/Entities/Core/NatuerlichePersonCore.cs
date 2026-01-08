@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Eine natürliche Person inklusive XJustiz-Core Erweiterungen.<br/>
 /// <u><b>Natural person:</b></u> A natural person with X-Justiz-Core additons.
 /// </summary>
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class NatuerlichePersonCore : NatuerlichePerson
 {
     /// <summary>
@@ -17,6 +17,6 @@ public class NatuerlichePersonCore : NatuerlichePerson
     /// </summary>
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
 }

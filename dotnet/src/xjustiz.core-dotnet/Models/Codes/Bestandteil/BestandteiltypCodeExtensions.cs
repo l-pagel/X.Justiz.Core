@@ -1,6 +1,6 @@
 namespace xjustiz.core_dotnet.Models.Codes.Bestandteil;
 
-public static class BestandteilCodeExtensions
+public static class BestandteiltypCodeExtensions
 {
     public static string ToCode(this BestandteiltypCode value)
     {

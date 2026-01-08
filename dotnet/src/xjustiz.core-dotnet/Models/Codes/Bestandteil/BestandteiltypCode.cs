@@ -7,7 +7,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Bestandteil Codes.<br/>
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 [System.Text.Json.Serialization.JsonConverter(typeof(BestandteiltypCodeJsonConverter))]
 public enum BestandteiltypCode
 {

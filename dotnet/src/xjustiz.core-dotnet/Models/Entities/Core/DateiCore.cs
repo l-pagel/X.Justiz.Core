@@ -7,7 +7,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Repräsentiert eine Datei.<br/>
 /// <u><b>File:</b></u> Represents a file.
 /// </summary>
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class DateiCore : Datei
 {
     /// <summary>
@@ -15,7 +15,7 @@ public class DateiCore : Datei
     /// <u><b>IsExternal</b></u> 'true' if the file must be retrieved from an external source.
     /// </summary>
     [XmlElement("istExtern", Namespace = "", Order = 4)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public bool IstExtern { get; set; }
 
     /// <summary>
@@ -23,6 +23,6 @@ public class DateiCore : Datei
     /// <u><b>ExternalSource:</b></u> Specifies an external source from which the file can be obtained.
     /// </summary>
     [XmlElement("lokal", Namespace = "", Order = 4)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public ExterneQuelle? ExterneQuelle { get; set; }
 }

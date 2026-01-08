@@ -2,7 +2,6 @@ namespace xjustiz.core_dotnet.UnitTests.Util;
 
 using System;
 using System.Collections.Generic;
-using FluentAssertions;
 using xjustiz.core_dotnet.Util.Converter;
 using xjustiz.core_dotnet.Util.Versioning;
 using Xunit;
@@ -28,18 +27,18 @@ public class XJustizConverterTests
         // Arrange
         var source = new TestModel
         {
-            AlwaysAvailable = "Test",
-            IntroducedInV1 = "IgnoreMe",
+            IntroducedInV020 = "Test",
+            IntroducedInVTEST999 = "IgnoreMe",
         };
 
         // Act
         var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out var lostData);
 
         // Assert
-        result.Should().NotBeNull();
-        result.AlwaysAvailable.Should().Be("Test");
-        result.IntroducedInV1.Should().BeNull();
-        lostData.Should().Contain(x => x.Contains("IntroducedInV1"));
+        Assert.NotNull(result);
+        Assert.Equal("Test", result.IntroducedInV020);
+        Assert.Null(result.IntroducedInVTEST999);
+        Assert.Contains(lostData, x => x.Contains("IntroducedInVTEST999"));
     }
 
     /// <summary>
@@ -51,16 +50,16 @@ public class XJustizConverterTests
         // Arrange
         var source = new TestModel
         {
-            IntroducedInV1 = "KeepMe",
+            IntroducedInV020 = "KeepMe",
         };
 
         // Act
-        var result = InvokeDeepCopy(source, XJustizCoreVersion.V1_0_0, out var lostData);
+        var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out var lostData);
 
         // Assert
-        result.Should().NotBeNull();
-        result.IntroducedInV1.Should().Be("KeepMe");
-        lostData.Should().BeEmpty();
+        Assert.NotNull(result);
+        Assert.Equal("KeepMe", result.IntroducedInV020);
+        Assert.Empty(lostData);
     }
 
     /// <summary>
@@ -76,12 +75,12 @@ public class XJustizConverterTests
         };
 
         // Act
-        var result = InvokeDeepCopy(source, XJustizCoreVersion.V1_0_0, out var lostData);
+        var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out var lostData);
 
         // Assert
-        result.Should().NotBeNull();
-        result.RemovedInV1.Should().BeNull();
-        lostData.Should().Contain(x => x.Contains("RemovedInV1"));
+        Assert.NotNull(result);
+        Assert.Null(result.RemovedInV1);
+        Assert.Contains(lostData, x => x.Contains("RemovedInV1"));
     }
 
     /// <summary>
@@ -101,14 +100,14 @@ public class XJustizConverterTests
         };
 
         // Act
-        var result = InvokeDeepCopy(source, XJustizCoreVersion.V1_0_0, out var lostData);
+        var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out var lostData);
 
         // Assert
-        result.Should().NotBeNull();
-        result.Nested.Should().NotBeNull();
-        result.Nested!.NestedProperty.Should().Be("NestedValue");
-        result.Nested.NestedRemovedInV1.Should().BeNull();
-        lostData.Should().Contain(x => x.Contains("NestedRemovedInV1"));
+        Assert.NotNull(result);
+        Assert.NotNull(result.Nested);
+        Assert.Equal("NestedValue", result.Nested!.NestedProperty);
+        Assert.Null(result.Nested.NestedRemovedInV1);
+        Assert.Contains(lostData, x => x.Contains("NestedRemovedInV1"));
     }
 
     /// <summary>
@@ -128,13 +127,13 @@ public class XJustizConverterTests
         };
 
         // Act
-        var result = InvokeDeepCopy(source, XJustizCoreVersion.V1_0_0, out var lostData);
+        var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out _);
 
         // Assert
-        result.Should().NotBeNull();
-        result.ListOfNested.Should().HaveCount(2);
-        result.ListOfNested![0].NestedProperty.Should().Be("Item1");
-        result.ListOfNested![1].NestedProperty.Should().Be("Item2");
+        Assert.NotNull(result);
+        Assert.Equal(2, result.ListOfNested!.Count);
+        Assert.Equal("Item1", result.ListOfNested[0].NestedProperty);
+        Assert.Equal("Item2", result.ListOfNested[1].NestedProperty);
     }
 
     /// <summary>
@@ -154,9 +153,9 @@ public class XJustizConverterTests
 
         var result = InvokeDeepCopy(source, XJustizCoreVersion.V0_2_0, out var lostData);
 
-        result.Should().NotBeNull();
-        result.UnavailableItems.Should().BeEmpty();
-        lostData.Should().HaveCount(2); // One error per item
+        Assert.NotNull(result);
+        Assert.Empty(result.UnavailableItems!);
+        Assert.Equal(2, lostData.Count); // One error per item
     }
 
     private static TestModel InvokeDeepCopy(TestModel source, Enum targetVersion, out List<string> lostData)
@@ -182,18 +181,19 @@ public class XJustizConverterTests
         /// <summary>
         /// Always available property.
         /// </summary>
-        public string? AlwaysAvailable { get; set; }
+        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+        public string? IntroducedInV020 { get; set; }
 
         /// <summary>
-        /// Property introduced in V1.0.0.
+        /// Property introduced in VTEST9.9.9.
         /// </summary>
-        [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
-        public string? IntroducedInV1 { get; set; }
+        [XJustizCoreAvailability(XJustizCoreVersion.V_TEST_NOT_AVAILABLE_YET)]
+        public string? IntroducedInVTEST999 { get; set; }
 
         /// <summary>
         /// Property removed in V1.0.0.
         /// </summary>
-        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0, Removed = XJustizCoreVersion.V1_0_0)]
+        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0, Removed = XJustizCoreVersion.V0_2_0)]
         public string? RemovedInV1 { get; set; }
 
         /// <summary>
@@ -220,7 +220,7 @@ public class XJustizConverterTests
         /// <summary>
         /// Nested property removed in V1.0.0.
         /// </summary>
-        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0, Removed = XJustizCoreVersion.V1_0_0)]
+        [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0, Removed = XJustizCoreVersion.V0_2_0)]
         public string? NestedRemovedInV1 { get; set; }
     }
 
@@ -238,7 +238,7 @@ public class XJustizConverterTests
     /// <summary>
     /// Unavailable model class.
     /// </summary>
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V_TEST_NOT_AVAILABLE_YET)]
     public class UnavailableModel
     {
     }

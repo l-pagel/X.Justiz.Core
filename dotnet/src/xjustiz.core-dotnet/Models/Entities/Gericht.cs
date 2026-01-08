@@ -17,7 +17,7 @@ public class Gericht : ICode<GerichtCode>
     public string ListVersionId { get; set; } = "3.6"; //Default to latest
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte";
+    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.gerichte";
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

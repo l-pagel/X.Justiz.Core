@@ -10,6 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// A key characteristic of this data type is the ability to reference code lists in a differentiated way (code types 1 to 4).
 /// In every case, the transmitted data allows for the unambiguous identification of the underlying code list.
 /// </summary>
+/// <typeparam name="TEnum">The enum type for the code.</typeparam>
 public interface ICode<TEnum>
 {
     /// <summary>
@@ -18,7 +19,7 @@ public interface ICode<TEnum>
     /// </summary>
     [XmlAttribute("listVersionID")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string ListVersionId { get; set; }
 
     /// <summary>
@@ -30,7 +31,7 @@ public interface ICode<TEnum>
     /// </summary>
     [XmlAttribute("listURI")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? ListUri { get; set; }
 
     /// <summary>
@@ -39,6 +40,6 @@ public interface ICode<TEnum>
     /// </summary>
     [XmlElement("code", Namespace = "")]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public TEnum Code { get; set; }
 }

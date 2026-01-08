@@ -1,8 +1,9 @@
-namespace xjustiz.core_dotnet.Models.Codes;
+namespace xjustiz.core_dotnet.Models.Entities;
 
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes.Rolle;
 using xjustiz.core_dotnet.Util.Versioning;
+using xjustiz.core_dotnet.Models.Codes;
 
 /// <summary>
 /// Repräsentiert die Bezeichnung einer Rolle als Code der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>Codeliste "Rollenbezeichnung"</a>.<br/>
@@ -16,7 +17,7 @@ public class Rollenbezeichnung : ICode<RollenCode>
     public string ListVersionId { get; set; } = "3.6"; //Default to latest
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung";
+    public string? ListUri { get; set; } = "urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung";
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]

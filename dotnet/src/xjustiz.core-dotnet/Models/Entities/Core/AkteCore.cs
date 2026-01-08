@@ -8,7 +8,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Repräsentiert eine Akte.<br/>
 /// <u><b>File:</b></u> Represents a file / case.
 /// </summary>
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class AkteCore : Akte
 {
     /// <summary>
@@ -17,6 +17,6 @@ public class AkteCore : Akte
     /// </summary>
     [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
-    [XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public new XjustizAkteFachspezifischeDatenCore FachspezifischeDaten { get; set; } = new();
 }

@@ -9,8 +9,9 @@ public enum XJustizCoreVersion
     V0_2_0 = 020,
 
     /// <summary>
-    /// Startversion<br/>
-    /// First official
+    /// Version ausschliesslich zum Testen<br/>
+    /// Version for testing purposes only
     /// </summary>
-    V1_0_0 = 100,
+    [ForTestingOnly("In unit tests for compatibility- / availablity checks")]
+    V_TEST_NOT_AVAILABLE_YET = 9999,
 }

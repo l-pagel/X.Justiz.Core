@@ -7,7 +7,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Eine externe Quelle für eine Datei.<br/>
 /// <u><b>External source:</b></u> An external file source.
 /// </summary>
-[XJustizCoreAvailability(XJustizCoreVersion.V1_0_0)]
+[XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class ExterneQuelle
 {
     //TODO: Define how a FileSource might look like

@@ -17,7 +17,7 @@ public class Staat : ICode<StaatCode>
     public string ListVersionId { get; set; } = "2024-08-01";
 
     [XmlAttribute("listURI")]
-    public string? ListUri { get; set; } = "https://www.xrepository.de/details/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat";
+    public string? ListUri { get; set; } = "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat";
 
     [XmlElement("code", Namespace = "")]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
