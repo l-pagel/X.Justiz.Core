@@ -33,6 +33,7 @@ public static class CompatibilityChecker
              .ToList();
 
         var xCoreVersions = Enum.GetValues<XJustizCoreVersion>()
+             .Where(v => typeof(XJustizCoreVersion).GetField(v.ToString())?.GetCustomAttribute<ForTestingOnlyAttribute>() == null)
              .ToList();
 
         CheckObject(model, xVersions, xCoreVersions);

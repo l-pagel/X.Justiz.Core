@@ -281,6 +281,19 @@ public class CompatibilityCheckerTests
         Assert.Equal(message.Kopf.AktenzeichenAbsender.FirstOrDefault(), message.GetAktenzeichen());
     }
 
+    [Fact]
+    public void Check_ShouldNotReturnVersionsMarkedAsForTestingOnly()
+    {
+        // Arrange
+        var message = new UebermittlungSchriftgutobjekteNachricht();
+
+        // Act
+        var result = CompatibilityChecker.Check(message);
+
+        // Assert
+        Assert.DoesNotContain(XJustizCoreVersion.V_TEST_NOT_AVAILABLE_YET, result.CompatibleXJustizCoreVersions);
+    }
+
     internal class UebermittlungSchriftgutobjekteNachrichtWithRemovedPropertyInUse : UebermittlungSchriftgutobjekteNachricht
     {
         [XJustizAvailability(XJustizVersion.V3_2_1, Removed = XJustizVersion.V3_3_1)]
