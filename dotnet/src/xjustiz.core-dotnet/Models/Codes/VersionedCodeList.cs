@@ -7,7 +7,7 @@ public interface IVersionedCodeList<out T> : IReadOnlyList<T>
     string Version { get; }
 }
 
-public class VersionedCodeList<T> : List<T>, IVersionedCodeList<T>
+public sealed class VersionedCodeList<T> : List<T>, IVersionedCodeList<T>
 {
     public VersionedCodeList(string version)
     {
