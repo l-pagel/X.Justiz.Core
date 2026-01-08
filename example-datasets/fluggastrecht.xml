@@ -49,7 +49,9 @@
         <beteiligter>
           <auswahl_beteiligter>
             <organisation>
-              <name>Global Air Lines PLC</name>
+              <bezeichnung>
+                <bezeichnung.aktuell>Global Air Lines PLC</bezeichnung.aktuell>
+              </bezeichnung>
               <anschrift>
                 <strasse>Aviation Blvd</strasse>
                 <hausnummer>1</hausnummer>
@@ -129,7 +131,7 @@
       </identifikation>
       <xjustiz.fachspezifischeDaten>
         <dokumentklasse>
-          <code>080</code>
+          <code>001</code>
         </dokumentklasse>
         <datei>
           <dateiname>BoardingPass_JFK.pdf</dateiname>

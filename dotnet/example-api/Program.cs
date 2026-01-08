@@ -36,6 +36,8 @@ public class Program
                     Url = new Uri("https://github.com/l-pagel/X.Justiz.Core"),
                 },
             });
+
+            options.SchemaFilter<RemoveForTestingOnlyEnumValuesFilter>();
         });
 
         var app = builder.Build();

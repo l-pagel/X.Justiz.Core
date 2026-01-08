@@ -1,16 +1,20 @@
 {
     "Kopf": {
-        "XJustizVersion": "3.5.1",
-        "AbsenderAktenzeichen": "HV-MIET-2026-X7",
-        "EmpfaengerAktenzeichen": "AG-MIET-404/26",
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "HV-MIET-2026-X7"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-MIET-404/26"
+        ],
         "Erstellungszeitpunkt": "2026-01-08T16:15:00Z",
-        "AuswahlAbsender": {
+        "Absender": {
             "AbsenderSonstige": "Hausverwaltung Wohnen & Leben GmbH"
         },
-        "AuswahlEmpfaenger": {
+        "Empfaenger": {
             "EmpfaengerSonstige": "Amtsgericht Musterstadt - Zivilabteilung"
         },
-        "EigeneNachrichtenID": "MSG-MIET-002"
+        "EigeneNachrichtenId": "MSG-MIET-002"
     },
     "Grunddaten": {
         "Verfahrensdaten": {
@@ -27,17 +31,17 @@
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "002"
+                        "Code": "Aliasidentitaet"
                     },
                     "Beteiligter": {
-                        "AuswahlBeteiligter": {
-                            "NatuerlichePerson": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
                                 "VollerName": {
                                     "Vorname": "Sabine",
                                     "Nachname": "Schmidt"
                                 },
                                 "Geschlecht": {
-                                    "Code": "weiblich"
+                                    "Code": "Weiblich"
                                 },
                                 "Anschrift": {
                                     "Strasse": "Mietweg",
@@ -51,7 +55,7 @@
                                 "Telekommunikation": [
                                     {
                                         "Telekommunikationsart": {
-                                            "Code": "Email"
+                                            "Code": "002"
                                         },
                                         "verbindung": "sabine.schmidt@email.de"
                                     }
@@ -67,8 +71,8 @@
         "Akte": [
             {
                 "Identifikation": {
-                    "ID": "a1b2c3d4-e5f6-4789-8b9c-1234567890ab",
-                    "NummerImUebergeordnetenContainer": 1
+                    "Id": "a1b2c3d4-e5f6-4789-8b9c-1234567890ab",
+                    "NummerImUebergeordnetenContainer": "1"
                 },
                 "AnwendungsspezifischeErweiterung": {
                     "Kennung": "MIET-EXT-001",
@@ -115,8 +119,8 @@
                     },
                     "Anzeigename": "Raeumungsklage Schmidt",
                     "Aktenzeichen": {
-                        "AuswahlAktenzeichen": {
-                            "Freitext": "44 C 188/26"
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "44 C 188/26"
                         }
                     }
                 }
@@ -125,12 +129,12 @@
         "Dokumente": [
             {
                 "Identifikation": {
-                    "ID": "c3d4e5f6-a7b8-49c0-9d1e-2f3a4b5c6d7e",
-                    "NummerImUebergeordnetenContainer": 2
+                    "Id": "c3d4e5f6-a7b8-49c0-9d1e-2f3a4b5c6d7e",
+                    "NummerImUebergeordnetenContainer": "2"
                 },
                 "FachspezifischeDaten": {
                     "Dokumentklasse": {
-                        "Code": "Vertrag"
+                        "Code": "Kostendokument"
                     },
                     "Datei": {
                         "Dateiname": "Mietvertrag_Schmidt.pdf",

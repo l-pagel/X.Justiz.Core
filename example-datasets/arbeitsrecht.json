@@ -1,16 +1,20 @@
 {
     "Kopf": {
-        "XJustizVersion": "3.5.1",
-        "AbsenderAktenzeichen": "ARB-KL-2026-44",
-        "EmpfaengerAktenzeichen": "AG-ARB-55/26",
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "ARB-KL-2026-44"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-ARB-55/26"
+        ],
         "Erstellungszeitpunkt": "2026-01-08T16:30:00Z",
-        "AuswahlAbsender": {
+        "Absender": {
             "AbsenderSonstige": "Klaus Kleber, Klageallee 1, 12345 Hauptstadt"
         },
-        "AuswahlEmpfaenger": {
+        "Empfaenger": {
             "EmpfaengerSonstige": "Arbeitsgericht Berlin"
         },
-        "EigeneNachrichtenID": "MSG-ARB-003"
+        "EigeneNachrichtenId": "MSG-ARB-003"
     },
     "Grunddaten": {
         "Verfahrensdaten": {
@@ -27,17 +31,17 @@
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "003"
+                        "Code": "Angehoerige"
                     },
                     "Beteiligter": {
-                        "AuswahlBeteiligter": {
-                            "NatuerlichePerson": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
                                 "VollerName": {
                                     "Vorname": "Klaus",
                                     "Nachname": "Kleber"
                                 },
                                 "Geschlecht": {
-                                    "Code": "maennlich"
+                                    "Code": "Maennlich"
                                 }
                             }
                         }
@@ -45,12 +49,14 @@
                 },
                 {
                     "Rolle": {
-                        "Code": "004"
+                        "Code": "Angeklagte"
                     },
                     "Beteiligter": {
-                        "AuswahlBeteiligter": {
-                            "Organisation": {
-                                "Name": "Tech-Solutions GmbH",
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Tech-Solutions GmbH"
+                                },
                                 "Anschrift": {
                                     "Strasse": "Innovationsring",
                                     "Hausnummer": "100",
@@ -71,8 +77,8 @@
         "Akte": [
             {
                 "Identifikation": {
-                    "ID": "f5e4d3c2-b1a0-4987-a2b3-c4d5e6f7a8b9",
-                    "NummerImUebergeordnetenContainer": 1
+                    "Id": "f5e4d3c2-b1a0-4987-a2b3-c4d5e6f7a8b9",
+                    "NummerImUebergeordnetenContainer": "1"
                 },
                 "AnwendungsspezifischeErweiterung": {
                     "Kennung": "ARB-EXT-001",
@@ -81,7 +87,7 @@
                     "Feldgruppen": [
                         {
                             "Name": "Konditionen",
-                            "Beschreibung": "Gehalt and Zeiten",
+                            "Beschreibung": "Gehalt und Zeiten",
                             "Felder": [
                                 {
                                     "Name": "Bruttomonatsgehalt",
@@ -113,8 +119,8 @@
                     },
                     "Anzeigename": "KSch-Klage Kleber ./ Tech-Solutions",
                     "Aktenzeichen": {
-                        "AuswahlAktenzeichen": {
-                            "Freitext": "15 Ga 1234/26"
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "15 Ga 1234/26"
                         }
                     }
                 }
@@ -123,12 +129,12 @@
         "Dokumente": [
             {
                 "Identifikation": {
-                    "ID": "d4e5f6a7-b8c9-40d1-ae2f-3a4b5c6d7e8f",
-                    "NummerImUebergeordnetenContainer": 2
+                    "Id": "d4e5f6a7-b8c9-40d1-ae2f-3a4b5c6d7e8f",
+                    "NummerImUebergeordnetenContainer": "2"
                 },
                 "FachspezifischeDaten": {
                     "Dokumentklasse": {
-                        "Code": "Schriftsatz"
+                        "Code": "Andere_Sonstige"
                     },
                     "Datei": {
                         "Dateiname": "Kuendigungsschutzklage_Kleber.pdf",

@@ -49,7 +49,9 @@
         <beteiligter>
           <auswahl_beteiligter>
             <organisation>
-              <name>Tech-Solutions GmbH</name>
+              <bezeichnung>
+                <bezeichnung.aktuell>Tech-Solutions GmbH</bezeichnung.aktuell>
+              </bezeichnung>
               <anschrift>
                 <strasse>Innovationsring</strasse>
                 <hausnummer>100</hausnummer>
@@ -117,7 +119,7 @@
       </identifikation>
       <xjustiz.fachspezifischeDaten>
         <dokumentklasse>
-          <code>002</code>
+          <code>001</code>
         </dokumentklasse>
         <datei>
           <dateiname>Kuendigungsschutzklage_Kleber.pdf</dateiname>

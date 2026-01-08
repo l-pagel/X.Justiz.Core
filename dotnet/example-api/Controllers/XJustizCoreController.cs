@@ -259,7 +259,7 @@ public class XJustizCoreController : ControllerBase
     {
         var datasetName = dataset.ToString().ToLower();
         var ext = isXml ? "xml" : "json";
-        var path = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "example-datasets", $"{datasetName}.{ext}");
+        var path = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "..", "example-datasets", $"{datasetName}.{ext}");
 
         if (!System.IO.File.Exists(path))
         {

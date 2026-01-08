@@ -19,6 +19,7 @@ public class AuswahlBeteiligter
     [XmlElement("natuerlichePerson", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    [System.Text.Json.Serialization.JsonPropertyName("natuerlichePerson")]
     public NatuerlichePerson? NP { get; set; }
 
     /// <summary>
@@ -28,5 +29,6 @@ public class AuswahlBeteiligter
     [XmlElement("organisation", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    [System.Text.Json.Serialization.JsonPropertyName("organisation")]
     public Organisation? Org { get; set; }
 }

@@ -19,5 +19,6 @@ public class AuswahlAktenzeichen
     [XmlElement("aktenzeichen.freitext", Namespace = XJustizConstants.Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    [System.Text.Json.Serialization.JsonPropertyName("aktenzeichen.freitext")]
     public string? Freitext { get; set; }
 }

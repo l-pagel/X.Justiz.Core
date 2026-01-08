@@ -1,16 +1,20 @@
 {
     "Kopf": {
-        "XJustizVersion": "3.5.1",
-        "AbsenderAktenzeichen": "FLY-2026-DELAY-88",
-        "EmpfaengerAktenzeichen": "AG-ERD-11/26",
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "FLY-2026-DELAY-88"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-ERD-11/26"
+        ],
         "Erstellungszeitpunkt": "2026-01-08T16:45:00Z",
-        "AuswahlAbsender": {
+        "Absender": {
             "AbsenderSonstige": "Peter Pan, Abenteuerweg 2, 80331 München"
         },
-        "AuswahlEmpfaenger": {
+        "Empfaenger": {
             "EmpfaengerSonstige": "Amtsgericht Erding (Zuständig für Flughafen München)"
         },
-        "EigeneNachrichtenID": "MSG-FLY-004"
+        "EigeneNachrichtenId": "MSG-FLY-004"
     },
     "Grunddaten": {
         "Verfahrensdaten": {
@@ -27,17 +31,17 @@
             "Beteiligungen": [
                 {
                     "Rolle": {
-                        "Code": "005"
+                        "Code": "Angeschuldigte"
                     },
                     "Beteiligter": {
-                        "AuswahlBeteiligter": {
-                            "NatuerlichePerson": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
                                 "VollerName": {
                                     "Vorname": "Peter",
                                     "Nachname": "Pan"
                                 },
                                 "Geschlecht": {
-                                    "Code": "maennlich"
+                                    "Code": "Maennlich"
                                 }
                             }
                         }
@@ -45,19 +49,21 @@
                 },
                 {
                     "Rolle": {
-                        "Code": "006"
+                        "Code": "Annehmende"
                     },
                     "Beteiligter": {
-                        "AuswahlBeteiligter": {
-                            "Organisation": {
-                                "Name": "Global Air Lines PLC",
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Global Air Lines PLC"
+                                },
                                 "Anschrift": {
                                     "Strasse": "Aviation Blvd",
                                     "Hausnummer": "1",
                                     "Postleitzahl": "W1A 1AA",
                                     "Ort": "London",
                                     "Staat": {
-                                        "Code": "Grossbritannien_und_Nordirland"
+                                        "Code": "Vereinigtes_Koenigreich"
                                     }
                                 }
                             }
@@ -71,8 +77,8 @@
         "Akte": [
             {
                 "Identifikation": {
-                    "ID": "e9d8c7b6-a5b4-4321-9876-fedcba098765",
-                    "NummerImUebergeordnetenContainer": 1
+                    "Id": "e9d8c7b6-a5b4-4321-9876-fedcba098765",
+                    "NummerImUebergeordnetenContainer": "1"
                 },
                 "AnwendungsspezifischeErweiterung": {
                     "Kennung": "FLY-EXT-001",
@@ -125,8 +131,8 @@
                     },
                     "Anzeigename": "Fluggast-Klage Pan ./ Global Air",
                     "Aktenzeichen": {
-                        "AuswahlAktenzeichen": {
-                            "Freitext": "3 C 444/26"
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "3 C 444/26"
                         }
                     }
                 }
@@ -135,12 +141,12 @@
         "Dokumente": [
             {
                 "Identifikation": {
-                    "ID": "e5f6a7b8-c9d0-41e2-bf3a-4b5c6d7e8f9a",
-                    "NummerImUebergeordnetenContainer": 2
+                    "Id": "e5f6a7b8-c9d0-41e2-bf3a-4b5c6d7e8f9a",
+                    "NummerImUebergeordnetenContainer": "2"
                 },
                 "FachspezifischeDaten": {
                     "Dokumentklasse": {
-                        "Code": "Anlage"
+                        "Code": "Andere_Sonstige"
                     },
                     "Datei": {
                         "Dateiname": "BoardingPass_JFK.pdf",
