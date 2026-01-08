@@ -9,6 +9,9 @@ public sealed class BestandteiltypCodeLists : ICodeListCollection<Bestandteiltyp
     /// <summary>
     /// Bestandteil Codes Version <b>2.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: GDS.Bestandteiltyp</a>.<br/>
     /// <u><b>Components codes:</b></u> version <b>2.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp_2.4#version">XRepository: Code lists GDS.Components</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
+    /// <b>Changelog:</b> None. This is the first version.
     /// </summary>
     public static readonly VersionedCodeList<BestandteiltypCode> V2_4 = new("2.4")
     {

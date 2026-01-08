@@ -9,6 +9,9 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// <summary>
     /// Gericht Codes Version <b>3.6</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.6</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.6#version">XRepository: Code lists GDS.Courts</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Einige Einträge wurden aktualisiert, so wurden etwa einige Gerichte als aufgelöst gekennzeichnet. Außerdem wurden die Justizvollzugsanstalten in die Codeliste aufgenommen. Schließlich wurde die Beschreibung der Codeliste angepasst.<br/>
+    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
     /// </summary>
     public static readonly VersionedCodeList<GerichtCode> V3_6 = new("3.6")
     {
@@ -2768,6 +2771,9 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// <summary>
     /// Gericht Codes Version <b>3.5</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.5</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.5#version">XRepository: Code lists GDS.Courts</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Folgende Einträge wurden als aufgelöst gekennzeichnet: 'K6046|Verwaltungsgericht Hamburg', 'M6231|Arbeitsgericht Wetzlar', 'M6232|Arbeitsgericht Wetzlar', 'R6802|Sozialgericht Dortmund', 'R1100Q|Landgericht Düsseldorf' und 'R1900Q|Landgericht Arnsberg'.<br/>
+    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
     /// </summary>
     public static readonly VersionedCodeList<GerichtCode> V3_5 = new("3.5")
     {
@@ -5342,6 +5348,9 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// <summary>
     /// Gericht Codes Version <b>3.4</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.4</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.4#version">XRepository: Code lists GDS.Courts</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Neue XJustiz-ID: V1109V|Amtsgericht Saarbrücken Registergericht und Zwangsversteigerungsgericht; aufgelöst: H6039|aufgelöst-Arbeitsgericht Bremerhaven; geänderte Bezeichnungen: F1108|Amtsgericht Kreuzberg, F1110|Amtsgericht Pankow, V1120|Amtsgericht Neunkirchen Vereinsregister, V1121|Amtsgericht Saarlouis Vereinsregister, V1122|Amtsgericht Homburg Vereinsregister, V1123|Amtsgericht St.Ingbert Vereinsregister, V1124|Amtsgericht Ottweiler Vereinsregister, V1125|Amtsgericht Lebach Vereinsregister, V1126|Amtsgericht St.Wendel Vereinsregister, V1127|Amtsgericht Merzig Vereinsregister, V1128|Amtsgericht Völklingen Vereinsregister<br/>
+    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
     /// </summary>
     public static readonly VersionedCodeList<GerichtCode> V3_4 = new("3.4")
     {
@@ -7916,6 +7925,9 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// <summary>
     /// Gericht Codes Version <b>3.3</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.3</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.3#version">XRepository: Code lists GDS.Courts</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Änderungen an der Codeliste für XJustiz-IDs: Neue XJustiz lD's: C6087|Europäische Staatsanwaltschaft (EPPO/EUStA), M1001S|Generalstaatsanwaltschaft Frankfurt am Main, -Rechtshilfe-; weitere neue XJustizlD's 'Grundbuchämter Niedersachsen': P1101G|Grundbuchamt Bad Gandersheim, P1103G|Grundbuchamt Braunschweig, P1104G|Grundbuchamt Goslar, P1105G|Grundbuchamt Helmstedt, P1108G|Grundbuchamt Salzgitter, P1111G|Grundbuchamt Seesen, P1115G|Grundbuchamt Wolfenbüttel, P2101G|Grundbuchamt Bückeburg, P2104G|Grundbuchamt Rinteln, P2106G|Grundbuchamt Stadthagen, P2201G|Grundbuchamt Clausthal-Zellerfeld, P2202G|Grundbuchamt Duderstadt, P2203G|Grundbuchamt Einbeck, P2204G|Grundbuchamt Göttingen, P2205G|Grundbuchamt Hann. Münden, P2206G|Grundbuchamt Herzberg am Harz, P2208G|Grundbuchamt Northeim, P2209G|Grundbuchamt Osterode, P2303G|Grundbuchamt Burgwedel, P2304G|Grundbuchamt Hameln, P2305G|Grundbuchamt Hannover, P2306G|Grundbuchamt Neustadt a. Rbge., P2307G|Grundbuchamt Springe, P2308G|Grundbuchamt Wennigsen (Deister), P2401G|Grundbuchamt Alfeld, P2403G|Grundbuchamt Burgdorf, P2404G|Grundbuchamt Elze, P2407G|Grundbuchamt Gifhorn, P2408G|Grundbuchamt Hildesheim, P2409G|Grundbuchamt Holzminden, P2410G|Grundbuchamt Lehrte, P2411G|Grundbuchamt Peine, P2413G|Grundbuchamt Wolfsburg, P2503G|Grundbuchamt Celle, P2504G|Grundbuchamt Dannenberg (Elbe), P2507G|Grundbuchamt Lüneburg, P2509G|Grundbuchamt Soltau, P2510G|Grundbuchamt Uelzen, P2511G|Grundbuchamt Winsen, P2601G|Grundbuchamt Bremervörde, P2602G|Grundbuchamt Buxtehude, P2603G|Grundbuchamt Cuxhaven, P2608G|Grundbuchamt Geestland, P2611G|Grundbuchamt Otterndorf, P2612G|Grundbuchamt Stade, P2613G|Grundbuchamt Tostedt, P2614G|Grundbuchamt Zeven, P2701G|Grundbuchamt Achim, P2705G|Grundbuchamt Diepholz, P2708G|Grundbuchamt Nienburg (Weser), P2709G|Grundbuchamt Osterholz-Scharmbeck, P2710G|Grundbuchamt Rotenburg (Wümme), P2711G|Grundbuchamt Stolzenau, P2712G|Grundbuchamt Sulingen, P2713G|Grundbuchamt Syke, P2715G|Grundbuchamt Verden (Aller), P2716G|Grundbuchamt Walsrode, P3101G|Grundbuchamt Aurich, P3102G|Grundbuchamt Emden, P3104G|Grundbuchamt Leer, P3105G|Grundbuchamt Norden, P3107G|Grundbuchamt Wittmund, P3201G|Grundbuchamt Brake, P3202G|Grundbuchamt Cloppenburg, P3204G|Grundbuchamt Delmenhorst, P3207G|Grundbuchamt Jever, P3209G|Grundbuchamt Nordenham, P3210G|Grundbuchamt Oldenburg (Oldenburg), P3211G|Grundbuchamt Varel, P3212G|Grundbuchamt Vechta, P3213G|Grundbuchamt Westerstede, P3214G|Grundbuchamt Wildeshausen, P3215G|Grundbuchamt Wilhelmshaven, P3302G|Grundbuchamt Bersenbrück, P3307G|Grundbuchamt Bad Iburg, P3308G|Grundbuchamt Lingen (Ems), P3310G|Grundbuchamt Meppen, P3312G|Grundbuchamt Nordhorn, P3313G|Grundbuchamt Osnabrück, P3314G|Grundbuchamt Papenburg<br/>
+    /// <b>Changelog:</b> todo: translate 'Änderung zur Vorversion' and paste here".
     /// </summary>
     public static readonly VersionedCodeList<GerichtCode> V3_3 = new("3.3")
     {
@@ -10489,6 +10501,9 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
     /// <summary>
     /// Gericht Codes Version <b>3.2</b> aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: GDS.Gerichte</a>.<br/>
     /// <u><b>Court codes:</b></u> version <b>3.2</b> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte_3.2#version">XRepository: Code lists GDS.Courts</a>.
+    /// <br/><br/>
+    /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
+    /// <b>Changelog:</b> None. This is the first version.
     /// </summary>
     public static readonly VersionedCodeList<GerichtCode> V3_2 = new("3.2")
     {
@@ -12981,5 +12996,3 @@ public sealed class GerichtCodeLists : ICodeListCollection<GerichtCode>
 
     public static IVersionedCodeList<GerichtCode> LatestList => V3_6;
 }
-
-
