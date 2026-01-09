@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+  <nachrichtenkopf xjustizVersion="3.5.1">
+    <aktenzeichen.absender>HV-MIET-2026-X7</aktenzeichen.absender>
+    <aktenzeichen.empfaenger>AG-MIET-404/26</aktenzeichen.empfaenger>
+    <erstellungszeitpunkt>2026-01-08T16:15:00Z</erstellungszeitpunkt>
+    <auswahl_absender>
+      <absender.sonstige>Hausverwaltung Wohnen &amp; Leben GmbH</absender.sonstige>
+    </auswahl_absender>
+    <auswahl_empfaenger>
+      <empfaenger.sonstige>Amtsgericht Musterstadt - Zivilabteilung</empfaenger.sonstige>
+    </auswahl_empfaenger>
+    <eigeneNachrichtenID>MSG-MIET-002</eigeneNachrichtenID>
+  </nachrichtenkopf>
+  <grunddaten>
+    <verfahrensdaten>
+      <verfahrensnummer>44 C 188/26</verfahrensnummer>
+      <instanzdaten>
+        <instanznummer>1</instanznummer>
+        <sachgebietszusatz>Wohnraummietsache</sachgebietszusatz>
+        <auswahl_instanzbehoerde>
+          <gericht>
+            <code xmlns="">B1102</code>
+          </gericht>
+        </auswahl_instanzbehoerde>
+      </instanzdaten>
+      <beteiligung>
+        <rolle>
+          <code>002</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <natuerlichePerson>
+              <vollerName>
+                <vorname>Sabine</vorname>
+                <nachname>Schmidt</nachname>
+              </vollerName>
+              <geschlecht>
+                <code>2</code>
+              </geschlecht>
+              <anschrift>
+                <strasse>Mietweg</strasse>
+                <hausnummer>12</hausnummer>
+                <postleitzahl>54321</postleitzahl>
+                <ort>Wohnhausen</ort>
+                <staat>
+                  <code xmlns="">DE</code>
+                </staat>
+              </anschrift>
+              <telekommunikation>
+                <telekommunikationsart>
+                  <code>002</code>
+                </telekommunikationsart>
+                <verbindung>sabine.schmidt@email.de</verbindung>
+              </telekommunikation>
+            </natuerlichePerson>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+    </verfahrensdaten>
+  </grunddaten>
+  <schriftgutobjekte>
+    <akte>
+      <identifikation>
+        <id>a1b2c3d4-e5f6-4789-8b9c-1234567890ab</id>
+        <nummerImUebergeordnetenContainer>1</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <anwendungsspezifischeErweiterung>
+        <kennung>MIET-EXT-001</kennung>
+        <name>Mietobjekt Details</name>
+        <beschreibung>Informationen zur betroffenen Mieteinheit</beschreibung>
+        <feldgruppe>
+          <name>Objektbeschreibung</name>
+          <beschreibung>Lage und Größe</beschreibung>
+          <feld>
+            <name>Etage</name>
+            <beschreibung>Stockwerk des Mietobjekts</beschreibung>
+            <datentyp>string</datentyp>
+            <wert>3. OG rechts</wert>
+          </feld>
+          <feld>
+            <name>Zimmeranzahl</name>
+            <beschreibung>Gesamtanzahl der Wohnräume</beschreibung>
+            <datentyp>int</datentyp>
+            <wert>3</wert>
+          </feld>
+        </feldgruppe>
+        <feld>
+          <name>Nettokaltmiete</name>
+          <beschreibung>Monatliche Grundmiete ohne Nebenkosten</beschreibung>
+          <datentyp>decimal</datentyp>
+          <wert>850.00</wert>
+        </feld>
+        <feld>
+          <name>Kuendigungsdatum</name>
+          <beschreibung>Datum, an dem die Kündigung ausgesprochen wurde</beschreibung>
+          <datentyp>date</datentyp>
+          <wert>2025-11-01</wert>
+        </feld>
+      </anwendungsspezifischeErweiterung>
+      <xjustiz.fachspezifischeDaten>
+        <aktentyp>
+          <code>001</code>
+        </aktentyp>
+        <anzeigename>Raeumungsklage Schmidt</anzeigename>
+        <aktenzeichen>
+          <auswahl_aktenzeichen>
+            <aktenzeichen.freitext>44 C 188/26</aktenzeichen.freitext>
+          </auswahl_aktenzeichen>
+        </aktenzeichen>
+      </xjustiz.fachspezifischeDaten>
+    </akte>
+    <dokument>
+      <identifikation>
+        <id>c3d4e5f6-a7b8-49c0-9d1e-2f3a4b5c6d7e</id>
+        <nummerImUebergeordnetenContainer>2</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <xjustiz.fachspezifischeDaten>
+        <dokumentklasse>
+          <code>020</code>
+        </dokumentklasse>
+        <datei>
+          <dateiname>Mietvertrag_Schmidt.pdf</dateiname>
+          <bestandteil>
+            <code>001</code>
+          </bestandteil>
+          <dateiendung>.pdf</dateiendung>
+          <contentType>application/pdf</contentType>
+          <groesse>250000</groesse>
+          <hash>
+            <algorithmus>SHA-256</algorithmus>
+            <wert>c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4</wert>
+          </hash>
+          <artefaktListe>
+            <https>
+              <url>https://archivar-online.de/api/v1/files/c3d4e5f6</url>
+              <headerListe>
+                <header>
+                  <name>Authorization</name>
+                  <wert>Bearer token-12345</wert>
+                </header>
+                <header>
+                  <name>X-App-ID</name>
+                  <wert>XJustiz-Core-App</wert>
+                </header>
+              </headerListe>
+            </https>
+          </artefaktListe>
+        </datei>
+      </xjustiz.fachspezifischeDaten>
+      <erstellungszeitpunkt>2026-01-08T15:45:00Z</erstellungszeitpunkt>
+    </dokument>
+  </schriftgutobjekte>
+</nachricht.gds.uebermittlungSchriftgutobjekte.0005005>

@@ -1,0 +1,180 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "FLY-2026-DELAY-88"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-ERD-11/26"
+        ],
+        "Erstellungszeitpunkt": "2026-01-08T16:45:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Peter Pan, Abenteuerweg 2, 80331 München"
+        },
+        "Empfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht Erding (Zuständig für Flughafen München)"
+        },
+        "EigeneNachrichtenId": "MSG-FLY-004"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "3 C 444/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Fluggastrechte",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "B1102"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "005"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Peter",
+                                    "Nachname": "Pan"
+                                },
+                                "Geschlecht": {
+                                    "Code": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "006"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Global Air Lines PLC"
+                                },
+                                "Anschrift": {
+                                    "Strasse": "Aviation Blvd",
+                                    "Hausnummer": "1",
+                                    "Postleitzahl": "W1A 1AA",
+                                    "Ort": "London",
+                                    "Staat": {
+                                        "Code": "168"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "e9d8c7b6-a5b4-4321-9876-fedcba098765",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "FLY-EXT-001",
+                    "Name": "Flugdaten",
+                    "Beschreibung": "Detaillierte Informationen zum beanstandeten Flug",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Flugverbindung",
+                            "Beschreibung": "Route und Flugnummer",
+                            "Felder": [
+                                {
+                                    "Name": "Flugnummer",
+                                    "Beschreibung": "Die offizielle Flugnummer",
+                                    "Datentyp": "string",
+                                    "Wert": "GA1234"
+                                },
+                                {
+                                    "Name": "Abflughafen",
+                                    "Beschreibung": "IATA-Code des Startflughafens",
+                                    "Datentyp": "string",
+                                    "Wert": "MUC"
+                                },
+                                {
+                                    "Name": "Zielflughafen",
+                                    "Beschreibung": "IATA-Code des Zielflughafens",
+                                    "Datentyp": "string",
+                                    "Wert": "JFK"
+                                }
+                            ]
+                        }
+                    ],
+                    "Felder": [
+                        {
+                            "Name": "VerspaetungMinuten",
+                            "Beschreibung": "Dauer der Verspätung am Zielort in Minuten",
+                            "Datentyp": "int",
+                            "Wert": "245"
+                        },
+                        {
+                            "Name": "Entschaedigungssumme",
+                            "Beschreibung": "Angeforderte Summe gemäß EU-Verordnung",
+                            "Datentyp": "decimal",
+                            "Wert": "600.00"
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    },
+                    "Anzeigename": "Fluggast-Klage Pan ./ Global Air",
+                    "Aktenzeichen": {
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "3 C 444/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "Id": "e5f6a7b8-c9d0-41e2-bf3a-4b5c6d7e8f9a",
+                    "NummerImUebergeordnetenContainer": "2"
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "001"
+                    },
+                    "Datei": {
+                        "Dateiname": "BoardingPass_JFK.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 88400,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+                        },
+                        "artifacts": [
+                            {
+                                "type": "bundle-path",
+                                "path": "boarding-passes/BoardingPass_JFK.pdf"
+                            },
+                            {
+                                "type": "https",
+                                "url": "https://airlines-portal.com/boarding-passes/download?id=e5f6a7b8",
+                                "expiresAtUtc": "2026-03-08T16:30:00Z"
+                            }
+                        ]
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-01-08T16:30:00Z"
+            }
+        ]
+    }
+}

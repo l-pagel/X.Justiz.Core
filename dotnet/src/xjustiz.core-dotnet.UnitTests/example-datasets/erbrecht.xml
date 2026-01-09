@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+  <nachrichtenkopf xjustizVersion="3.5.1">
+    <aktenzeichen.absender>ABS-ERB-2026-001</aktenzeichen.absender>
+    <aktenzeichen.empfaenger>RA-ERB-99/2026</aktenzeichen.empfaenger>
+    <erstellungszeitpunkt>2026-01-08T16:00:00Z</erstellungszeitpunkt>
+    <auswahl_absender>
+      <absender.sonstige>Nachlassgericht Musterstadt</absender.sonstige>
+    </auswahl_absender>
+    <auswahl_empfaenger>
+      <empfaenger.sonstige>RA Dr. Erbe, Beispielweg 1, 12345 Teststadt</empfaenger.sonstige>
+    </auswahl_empfaenger>
+    <eigeneNachrichtenID>MSG-ERB-001</eigeneNachrichtenID>
+  </nachrichtenkopf>
+  <grunddaten>
+    <verfahrensdaten>
+      <verfahrensnummer>12 VI 45/26</verfahrensnummer>
+      <instanzdaten>
+        <instanznummer>1</instanznummer>
+        <sachgebietszusatz>Nachlasssache</sachgebietszusatz>
+        <auswahl_instanzbehoerde>
+          <gericht>
+            <code xmlns="">B1102</code>
+          </gericht>
+        </auswahl_instanzbehoerde>
+      </instanzdaten>
+      <beteiligung>
+        <rolle>
+          <code>001</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <natuerlichePerson>
+              <vollerName>
+                <vorname>Max</vorname>
+                <nachname>Mustermann</nachname>
+              </vollerName>
+              <geschlecht>
+                <code>1</code>
+              </geschlecht>
+              <anschrift>
+                <strasse>Grabesruhe</strasse>
+                <hausnummer>7</hausnummer>
+                <postleitzahl>12345</postleitzahl>
+                <ort>Teststadt</ort>
+                <staat>
+                  <code xmlns="">DE</code>
+                </staat>
+              </anschrift>
+              <telekommunikation>
+                <telekommunikationsart>
+                  <code>001</code>
+                </telekommunikationsart>
+                <verbindung>+49 123 456789</verbindung>
+              </telekommunikation>
+              <bankverbindung>
+                <kontoinhaber>Max Mustermann</kontoinhaber>
+                <iban>DE12345678901234567890</iban>
+                <bic>GENO DE F1 ABC</bic>
+              </bankverbindung>
+            </natuerlichePerson>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+    </verfahrensdaten>
+  </grunddaten>
+  <schriftgutobjekte>
+    <akte>
+      <identifikation>
+        <id>79dbf731-1f9a-4c91-9556-3c7f3e8b0a1d</id>
+        <nummerImUebergeordnetenContainer>1</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <anwendungsspezifischeErweiterung>
+        <kennung>ERB-EXT-001</kennung>
+        <name>Zusatzinfos Erbrecht</name>
+        <beschreibung>Zusätzliche Fakten zum Erbfall</beschreibung>
+        <feldgruppe>
+          <name>Nachlasswerte</name>
+          <beschreibung>Detaillierte Aufstellung der Vermögenswerte</beschreibung>
+          <feld>
+            <name>Immobilienwert</name>
+            <beschreibung>Verkehrswert der Immobilie in Teststadt</beschreibung>
+            <datentyp>decimal</datentyp>
+            <wert>450000.00</wert>
+          </feld>
+          <feld>
+            <name>Bankguthaben</name>
+            <beschreibung>Summe aller Kontostände am Todestag</beschreibung>
+            <datentyp>decimal</datentyp>
+            <wert>12500.50</wert>
+          </feld>
+        </feldgruppe>
+        <feld>
+          <name>Sterbedatum</name>
+          <beschreibung>Das offizielle Datum des Ablebens</beschreibung>
+          <datentyp>date</datentyp>
+          <wert>2025-12-24</wert>
+        </feld>
+      </anwendungsspezifischeErweiterung>
+      <xjustiz.fachspezifischeDaten>
+        <aktentyp>
+          <code>004</code>
+        </aktentyp>
+        <anzeigename>Erbrechtsfall Mustermann</anzeigename>
+        <aktenzeichen>
+          <auswahl_aktenzeichen>
+            <aktenzeichen.freitext>12 VI 45/26</aktenzeichen.freitext>
+          </auswahl_aktenzeichen>
+        </aktenzeichen>
+      </xjustiz.fachspezifischeDaten>
+    </akte>
+    <dokument>
+      <identifikation>
+        <id>b2c3d4e5-f6a7-48b9-9c0d-1e2f3a4b5c6d</id>
+        <nummerImUebergeordnetenContainer>2</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <xjustiz.fachspezifischeDaten>
+        <dokumentklasse>
+          <code>001</code>
+        </dokumentklasse>
+        <datei>
+          <dateiname>Erbscheinantrag_b2c3d4e5.pdf</dateiname>
+          <bestandteil>
+            <code>001</code>
+          </bestandteil>
+          <dateiendung>.pdf</dateiendung>
+          <contentType>application/pdf</contentType>
+          <groesse>125400</groesse>
+          <hash>
+            <algorithmus>SHA-256</algorithmus>
+            <wert>d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6</wert>
+          </hash>
+          <artefaktListe>
+            <https>
+              <url>https://files.nachlassgericht-musterstadt.de/download/b2c3d4e5-f6a7-48b9-9c0d-1e2f3a4b5c6d</url>
+              <ablaufdatum>2026-02-08T16:00:00Z</ablaufdatum>
+            </https>
+          </artefaktListe>
+        </datei>
+      </xjustiz.fachspezifischeDaten>
+      <erstellungszeitpunkt>2026-01-08T15:30:00Z</erstellungszeitpunkt>
+    </dokument>
+  </schriftgutobjekte>
+</nachricht.gds.uebermittlungSchriftgutobjekte.0005005>

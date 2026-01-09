@@ -1,0 +1,163 @@
+{
+  "Kopf": {
+    "Version": "3.5.1",
+    "AktenzeichenAbsender": [
+      "ABS-ERB-2026-001"
+    ],
+    "AktenzeichenEmpfaenger": [
+      "RA-ERB-99/2026"
+    ],
+    "Erstellungszeitpunkt": "2026-01-08T16:00:00Z",
+    "Absender": {
+      "AbsenderSonstige": "Nachlassgericht Musterstadt"
+    },
+    "Empfaenger": {
+      "EmpfaengerSonstige": "RA Dr. Erbe, Beispielweg 1, 12345 Teststadt"
+    },
+    "EigeneNachrichtenId": "MSG-ERB-001"
+  },
+  "Grunddaten": {
+    "Verfahrensdaten": {
+      "Verfahrensnummer": "12 VI 45/26",
+      "Instanzdaten": {
+        "Instanznummer": "1",
+        "Sachgebietszusatz": "Nachlasssache",
+        "AuswahlInstanzbehoerde": {
+          "Gericht": {
+            "Code": "B1102"
+          }
+        }
+      },
+      "Beteiligungen": [
+        {
+          "Rolle": {
+            "Code": "001"
+          },
+          "Beteiligter": {
+            "Auswahl": {
+              "natuerlichePerson": {
+                "VollerName": {
+                  "Vorname": "Max",
+                  "Nachname": "Mustermann"
+                },
+                "Geschlecht": {
+                  "Code": "1"
+                },
+                "Anschrift": {
+                  "Strasse": "Grabesruhe",
+                  "Hausnummer": "7",
+                  "Postleitzahl": "12345",
+                  "Ort": "Teststadt",
+                  "Staat": {
+                    "Code": "Deutschland"
+                  }
+                },
+                "Telekommunikation": [
+                  {
+                    "Telekommunikationsart": {
+                      "Code": "001"
+                    },
+                    "verbindung": "+49 123 456789"
+                  }
+                ],
+                "Bankverbindung": {
+                  "Kontoinhaber": "Max Mustermann",
+                  "Iban": "DE12345678901234567890",
+                  "Bic": "GENO DE F1 ABC"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "Schriftgutobjekte": {
+    "Akte": [
+      {
+        "Identifikation": {
+          "Id": "79dbf731-1f9a-4c91-9556-3c7f3e8b0a1d",
+          "NummerImUebergeordnetenContainer": "1"
+        },
+        "AnwendungsspezifischeErweiterung": {
+          "Kennung": "ERB-EXT-001",
+          "Name": "Zusatzinfos Erbrecht",
+          "Beschreibung": "Zusätzliche Fakten zum Erbfall",
+          "Feldgruppen": [
+            {
+              "Name": "Nachlasswerte",
+              "Beschreibung": "Detaillierte Aufstellung der Vermögenswerte",
+              "Felder": [
+                {
+                  "Name": "Immobilienwert",
+                  "Beschreibung": "Verkehrswert der Immobilie in Teststadt",
+                  "Datentyp": "decimal",
+                  "Wert": "450000.00"
+                },
+                {
+                  "Name": "Bankguthaben",
+                  "Beschreibung": "Summe aller Kontostände am Todestag",
+                  "Datentyp": "decimal",
+                  "Wert": "12500.50"
+                }
+              ]
+            }
+          ],
+          "Felder": [
+            {
+              "Name": "Sterbedatum",
+              "Beschreibung": "Das offizielle Datum des Ablebens",
+              "Datentyp": "date",
+              "Wert": "2025-12-24"
+            }
+          ]
+        },
+        "FachspezifischeDaten": {
+          "Aktentyp": {
+            "Code": "Nachlassakte"
+          },
+          "Anzeigename": "Erbrechtsfall Mustermann",
+          "Aktenzeichen": {
+            "Auswahl": {
+              "aktenzeichen.freitext": "12 VI 45/26"
+            }
+          }
+        }
+      }
+    ],
+    "Dokumente": [
+      {
+        "Identifikation": {
+          "Id": "b2c3d4e5-f6a7-48b9-9c0d-1e2f3a4b5c6d",
+          "NummerImUebergeordnetenContainer": "2"
+        },
+        "FachspezifischeDaten": {
+          "Dokumentklasse": {
+            "Code": "001"
+          },
+          "Datei": {
+            "Dateiname": "Erbscheinantrag_b2c3d4e5.pdf",
+            "Bestandteil": {
+              "Code": "Original"
+            },
+            "fileExtension": ".pdf",
+            "contentType": "application/pdf",
+            "size": 125400,
+            "hash": {
+              "algorithm": "SHA-256",
+              "value": "d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6"
+            },
+            "artifacts": [
+              {
+                "type": "https",
+                "url": "https://files.nachlassgericht-musterstadt.de/download/b2c3d4e5-f6a7-48b9-9c0d-1e2f3a4b5c6d",
+                "expiresAtUtc": "2026-02-08T16:00:00Z"
+              }
+            ]
+          }
+        },
+        "Erstellungszeitpunkt": "2026-01-08T15:30:00Z"
+      }
+    ]
+  }
+}
