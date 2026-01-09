@@ -152,7 +152,25 @@
                         "Dateiname": "BoardingPass_JFK.pdf",
                         "Bestandteil": {
                             "Code": "Original"
-                        }
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 88400,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+                        },
+                        "artifacts": [
+                            {
+                                "type": "bundle-path",
+                                "path": "boarding-passes/BoardingPass_JFK.pdf"
+                            },
+                            {
+                                "type": "https",
+                                "url": "https://airlines-portal.com/boarding-passes/download?id=e5f6a7b8",
+                                "expiresAtUtc": "2026-03-08T16:30:00Z"
+                            }
+                        ]
                     }
                 },
                 "Erstellungszeitpunkt": "2026-01-08T16:30:00Z"

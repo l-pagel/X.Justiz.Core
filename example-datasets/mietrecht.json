@@ -140,7 +140,30 @@
                         "Dateiname": "Mietvertrag_Schmidt.pdf",
                         "Bestandteil": {
                             "Code": "Original"
-                        }
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 250000,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4"
+                        },
+                        "artifacts": [
+                            {
+                                "type": "https",
+                                "url": "https://archivar-online.de/api/v1/files/c3d4e5f6",
+                                "headers": [
+                                    {
+                                        "name": "Authorization",
+                                        "value": "Bearer token-12345"
+                                    },
+                                    {
+                                        "name": "X-App-ID",
+                                        "value": "XJustiz-Core-App"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 },
                 "Erstellungszeitpunkt": "2026-01-08T15:45:00Z"

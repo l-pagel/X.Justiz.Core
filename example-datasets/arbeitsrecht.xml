@@ -126,6 +126,18 @@
           <bestandteil>
             <code>001</code>
           </bestandteil>
+          <dateiendung>.pdf</dateiendung>
+          <contentType>application/pdf</contentType>
+          <groesse>45820</groesse>
+          <hash>
+            <algorithmus>SHA-256</algorithmus>
+            <wert>f3e4d56789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</wert>
+          </hash>
+          <artefaktListe>
+            <bundlePfad>
+              <pfad>anhang/Kuendigungsschutzklage_Kleber.pdf</pfad>
+            </bundlePfad>
+          </artefaktListe>
         </datei>
       </xjustiz.fachspezifischeDaten>
       <erstellungszeitpunkt>2026-01-08T16:00:00Z</erstellungszeitpunkt>

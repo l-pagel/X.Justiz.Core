@@ -140,7 +140,20 @@
                         "Dateiname": "Kuendigungsschutzklage_Kleber.pdf",
                         "Bestandteil": {
                             "Code": "Original"
-                        }
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 45820,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "f3e4d56789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+                        },
+                        "artifacts": [
+                            {
+                                "type": "bundle-path",
+                                "path": "anhang/Kuendigungsschutzklage_Kleber.pdf"
+                            }
+                        ]
                     }
                 },
                 "Erstellungszeitpunkt": "2026-01-08T16:00:00Z"
