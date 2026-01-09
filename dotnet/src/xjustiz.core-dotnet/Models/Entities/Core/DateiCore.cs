@@ -1,28 +1,61 @@
 namespace xjustiz.core_dotnet.Models.Entities.Core;
 
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Repräsentiert eine Datei.<br/>
-/// <u><b>File:</b></u> Represents a file.
+/// Repräsentiert eine Datei im Sinne eines Dateimanifests.<br/>
+/// <u><b>File core:</b></u> Represents a file as a file manifest.
 /// </summary>
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class DateiCore : Datei
 {
     /// <summary>
-    /// Gibt an ob die Datei teil des Export Verzeichnisses ist oder ob der Zugriff über eine externe quelle (z.B Downloadlink) erfolgt.<br/>
-    /// <u><b>IsExternal</b></u> 'true' if the file must be retrieved from an external source.
+    /// Die Dateiendung (z.B. .pdf).<br/>
+    /// <u><b>File extension:</b></u> The file extension (e.g. .pdf).
     /// </summary>
-    [XmlElement("istExtern", Namespace = "", Order = 4)]
+    [XmlElement("dateiendung", Namespace = "", Order = 3)]
+    [JsonPropertyName("fileExtension")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public bool IstExtern { get; set; }
+    public string? Dateiendung { get; set; }
 
     /// <summary>
-    /// Gibt eine externe Quelle an über die man die Datei beziehen kann.<br/>
-    /// <u><b>ExternalSource:</b></u> Specifies an external source from which the file can be obtained.
+    /// Der Content-Type der Datei (z.B. application/pdf).<br/>
+    /// <u><b>Content type:</b></u> The content type of the file (e.g. application/pdf).
     /// </summary>
-    [XmlElement("lokal", Namespace = "", Order = 4)]
+    [XmlElement("contentType", Namespace = "", Order = 4)]
+    [JsonPropertyName("contentType")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public ExterneQuelle? ExterneQuelle { get; set; }
+    public string? ContentType { get; set; }
+
+    /// <summary>
+    /// Die Größe der Datei in Bytes.<br/>
+    /// <u><b>Size:</b></u> The size of the file in bytes.
+    /// </summary>
+    [XmlElement("groesse", Namespace = "", Order = 5)]
+    [JsonPropertyName("size")]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    public long? Groesse { get; set; }
+
+    /// <summary>
+    /// Integritätsinformationen der Datei.<br/>
+    /// <u><b>Hash:</b></u> Integrity information of the file.
+    /// </summary>
+    [XmlElement("hash", Namespace = "", Order = 6)]
+    [JsonPropertyName("hash")]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    public HashInfo? Hash { get; set; }
+
+    /// <summary>
+    /// Eine Liste von Abrufmöglichkeiten für die Datei.<br/>
+    /// <u><b>Artifacts:</b></u> A list of retrieval options for the file.
+    /// </summary>
+    [XmlArray("artefaktListe", Namespace = "", Order = 7)]
+    [XmlArrayItem("bundlePfad", typeof(BundlePathArtifact), Namespace = "")]
+    [XmlArrayItem("https", typeof(HttpsArtifact), Namespace = "")]
+    [JsonPropertyName("artifacts")]
+    [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
+    public List<Artifact> Artefakte { get; set; } = new();
 }
