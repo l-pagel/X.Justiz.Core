@@ -96,7 +96,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update generated XSDs [skip ci]"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi
 
   publish:
