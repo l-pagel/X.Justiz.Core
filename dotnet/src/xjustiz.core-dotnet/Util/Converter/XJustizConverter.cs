@@ -101,7 +101,7 @@ public static class XJustizConverter
             var elementType = type.GetElementType() !;
             var validItems = new List<object?>();
 
-            for (int i = 0; i < arr.Length; i++)
+            for (var i = 0; i < arr.Length; i++)
             {
                 var val = arr.GetValue(i);
                 var converted = DeepCopy(val, targetVersion, lostData, $"{context}[{i}]");
@@ -112,7 +112,7 @@ public static class XJustizConverter
             }
 
             var newArr = Array.CreateInstance(elementType, validItems.Count);
-            for (int i = 0; i < validItems.Count; i++)
+            for (var i = 0; i < validItems.Count; i++)
             {
                 newArr.SetValue(validItems[i], i);
             }
@@ -123,7 +123,7 @@ public static class XJustizConverter
         {
             var list = (IList)Activator.CreateInstance(type) !;
             var sourceList = (IList)source;
-            int i = 0;
+            var i = 0;
             foreach (var item in sourceList)
             {
                 var converted = DeepCopy(item, targetVersion, lostData, $"{context}[{i}]");

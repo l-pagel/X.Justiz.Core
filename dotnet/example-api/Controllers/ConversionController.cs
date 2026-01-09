@@ -13,7 +13,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 public class ConversionController : ControllerBase
 {
     /// <summary>
-    /// Converts to the requested xJustizVersion
+    /// Converts to the requested xJustizVersion.
     /// </summary>
     /// <param name="uebermittlungSchriftgutobjekteNachricht">The original object to convert.</param>
     /// <param name="xJustizVersion">Target converion version.</param>
@@ -24,11 +24,11 @@ public class ConversionController : ControllerBase
     public async Task<IActionResult> ConvertToXJustizAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, XJustizVersion xJustizVersion)
     {
         var conversionResult = XJustizConverter.Convert(uebermittlungSchriftgutobjekteNachricht, xJustizVersion);
-        return Ok(conversionResult);
+        return this.Ok(conversionResult);
     }
 
     /// <summary>
-    /// Converts to the requested xJustizVersion
+    /// Converts to the requested xJustizVersion.
     /// </summary>
     /// <param name="uebermittlungSchriftgutobjekteNachricht">The original object to convert.</param>
     /// <param name="xJustizCoreVersion">Target converion version.</param>
@@ -39,6 +39,6 @@ public class ConversionController : ControllerBase
     public async Task<IActionResult> ConvertToXJustizCoreAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, XJustizCoreVersion xJustizCoreVersion)
     {
         var conversionResult = XJustizConverter.Convert(uebermittlungSchriftgutobjekteNachricht, xJustizCoreVersion);
-        return Ok(conversionResult);
+        return this.Ok(conversionResult);
     }
 }

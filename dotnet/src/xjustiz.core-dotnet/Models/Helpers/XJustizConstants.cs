@@ -40,7 +40,7 @@ public static class XJustizConstants
         {
             get
             {
-                string name = Version.ToString();   // "V0_2_0"
+                var name = Version.ToString();   // "V0_2_0"
                 return name.TrimStart('V').Replace('_', '.'); // "0.2.0"
             }
         }
@@ -59,7 +59,7 @@ public static class XJustizConstants
         {
             get
             {
-                string name = XJustizReferenzVersion.ToString();   // "V0_2_0"
+                var name = XJustizReferenzVersion.ToString();   // "V0_2_0"
                 return name.TrimStart('V').Replace('_', '.'); // "0.2.0"
             }
         }

@@ -32,6 +32,6 @@ public class XmlValidationController : ControllerBase
 
         return validationResult.Count != 0
             ? new BadRequestObjectResult(validationResult)
-            : Ok($"Validation succeeded for X.Justiz version {xJustizVersion}.");
+            : this.Ok($"Validation succeeded for X.Justiz version {xJustizVersion}.");
     }
 }

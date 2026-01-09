@@ -2,10 +2,10 @@ namespace xjustiz.core_dotnet.UnitTests.Util;
 
 using System;
 using System.IO;
-using Xunit;
+using System.Threading.Tasks;
 using xjustiz.core_dotnet.Util;
 using xjustiz.core_dotnet.Util.Versioning;
-using System.Threading.Tasks;
+using Xunit;
 
 public class XmlValidatorTests : IDisposable
 {

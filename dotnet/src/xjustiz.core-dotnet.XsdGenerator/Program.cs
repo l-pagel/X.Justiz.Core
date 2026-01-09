@@ -16,8 +16,8 @@ public class Program
             return;
         }
 
-        string repoRoot = args[0];
-        string outputBaseDir = Path.Combine(repoRoot, "X.Justiz-Core-Versions");
+        var repoRoot = args[0];
+        var outputBaseDir = Path.Combine(repoRoot, "X.Justiz-Core-Versions");
 
         Console.WriteLine($"Repository Root: {repoRoot}");
         Console.WriteLine($"Output Base Dir: {outputBaseDir}");
@@ -76,8 +76,8 @@ public class Program
         Console.WriteLine($"Generating XSD for version {version}...");
 
         // Format folder name: "1.0.0" from "V1_0_0"
-        string versionString = version.ToString().Replace("V", string.Empty).Replace("_", ".");
-        string outputDir = Path.Combine(baseDir, versionString);
+        var versionString = version.ToString().Replace("V", string.Empty).Replace("_", ".");
+        var outputDir = Path.Combine(baseDir, versionString);
         Directory.CreateDirectory(outputDir);
 
         var overrides = CreateOverrides(version);
@@ -97,8 +97,8 @@ public class Program
         {
             if (schema.TargetNamespace == XJustizConstants.Tns)
             {
-                string filename = $"X.Justiz Core_{versionString}.xsd";
-                string outputPath = Path.Combine(outputDir, filename);
+                var filename = $"X.Justiz Core_{versionString}.xsd";
+                var outputPath = Path.Combine(outputDir, filename);
 
                 using var writer = new StreamWriter(outputPath);
                 schema.Write(writer);

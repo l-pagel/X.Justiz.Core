@@ -35,9 +35,9 @@ public class E2E_SampleFileTests
         UebermittlungSchriftgutobjekteNachricht? message = null;
         try
         {
-             message = JsonSerializer.Deserialize<UebermittlungSchriftgutobjekteNachricht>(jsonContent, options);
+            message = JsonSerializer.Deserialize<UebermittlungSchriftgutobjekteNachricht>(jsonContent, options);
         }
-        catch(JsonException ex)
+        catch (JsonException ex)
         {
             Assert.Fail($"JSON Deserialization failed for {datasetName}: {ex.Message} at path {ex.Path} | LineNumber: {ex.LineNumber} | BytePosition: {ex.BytePositionInLine}");
         }
@@ -68,11 +68,11 @@ public class E2E_SampleFileTests
         UebermittlungSchriftgutobjekteNachricht? message = null;
         try
         {
-             message = (UebermittlungSchriftgutobjekteNachricht?)xmlSerializer.Deserialize(stream);
+            message = (UebermittlungSchriftgutobjekteNachricht?)xmlSerializer.Deserialize(stream);
         }
-        catch(InvalidOperationException ex)
+        catch (InvalidOperationException ex)
         {
-             Assert.Fail($"XML Deserialization failed for {datasetName}: {ex.Message} {ex.InnerException?.Message}");
+            Assert.Fail($"XML Deserialization failed for {datasetName}: {ex.Message} {ex.InnerException?.Message}");
         }
 
         Assert.NotNull(message);

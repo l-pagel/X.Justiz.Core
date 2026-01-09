@@ -9,7 +9,7 @@ using System.Collections.Generic;
 /// </summary>
 public static partial class GerichtCodeMapper
 {
-    private static readonly Dictionary<string, GerichtCode> Map = new Dictionary<string, GerichtCode>(StringComparer.OrdinalIgnoreCase)
+    private static readonly Dictionary<string, GerichtCode> Map = new(StringComparer.OrdinalIgnoreCase)
     {
         { "9A0000", GerichtCode.ZZ_Test_Bund },
         { "9B0000", GerichtCode.ZZ_Test_Baden_Wuerttemberg },

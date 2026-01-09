@@ -57,7 +57,7 @@ public static class CompatibilityChecker
             return;
         }
 
-        Type type = obj.GetType();
+        var type = obj.GetType();
 
         // Check Class Attributes (only for our models)
         if (IsXJustizModel(type))

@@ -1,7 +1,5 @@
 ﻿namespace xjustiz.core_dotnet.Models.Codes;
 
-using System.Collections.Generic;
-
 /// <summary>
 /// Interface für eine Sammlung von Codelisten.<br/>
 /// <u><b>Code list collection interface:</b></u> Interface for a collection of code lists.

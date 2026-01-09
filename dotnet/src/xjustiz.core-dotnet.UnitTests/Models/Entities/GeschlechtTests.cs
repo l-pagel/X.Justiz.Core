@@ -1,9 +1,9 @@
 namespace xjustiz.core_dotnet.UnitTests.Models.Entities;
 
+using FluentAssertions;
 using System.IO;
 using System.Text.Json;
 using System.Xml.Serialization;
-using FluentAssertions;
 using xjustiz.core_dotnet.Models.Codes.Geschlecht;
 using xjustiz.core_dotnet.Models.Entities;
 using Xunit;
