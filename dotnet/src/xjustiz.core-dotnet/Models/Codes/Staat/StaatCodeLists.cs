@@ -13,7 +13,7 @@ public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
     /// <b>Änderung zur Vorversion:</b> Die Änderungen gegenüber der Fassung vom Februar 2023 betreffen folgende Sachverhalte: 1) Die Niederlande heißen nun auch in der amtlichen Kurzform „Königreich der Niederlande“. 2) Alle bisher in der Nomenklatur abgebildeten antarktischen Anspruchsgebiete von Staaten wurden entfernt. 3) Der Antarktis wurde ein eigener Code (555) zugewiesen (Tabelle A1: Einträge Alphabetisch) 4) Die neue Währung von Zimbabwe lautet ZWG (Simbabwe Gold).<br/>
     /// <b>Changelog:</b> The changes compared to the version of February 2023 concern the following issues: 1) The short official name for the Netherlands is now also 'Kingdom of the Netherlands'. 2) All Antarctic territorial claims by states previously depicted in the nomenclature have been removed. 3) Antarctica has been assigned its own code (555) - Table A1: Entries Alphabetical. 4) The new currency of Zimbabwe is ZWG (Zimbabwe Gold).
     /// </summary>
-    public static readonly VersionedCodeList<StaatCode> V2024_08_01 = new("2024.08.01")
+    public static IVersionedCodeList<StaatCode> V2024_08_01 { get; } = new VersionedCodeList<StaatCode>("2024.08.01")
     {
         StaatCode.Deutschland,
         StaatCode.Albanien,
@@ -221,7 +221,7 @@ public sealed class StaatCodeLists : ICodeListCollection<StaatCode>
     /// <b>Änderung zur Vorversion:</b> Änderungen in der Version 2023-02-24: Redaktionelle Änderungen beim Eintrag Island (Wegfall von "Republik" in der amtlichen Vollform). In der Tabelle "Synopse" wurde beim Eintrag "Kroatien" der Währungscode der Deutschen Bundesbank angepasst (neue Währung=Euro).<br/>
     /// <b>Changelog:</b> Editorial changes to the entry Iceland - removal of 'Republic' in the full official name. In the 'Synopsis' table, the updated currency code of the Deutsche Bundesbank was adapted for the entry 'Croatia' - new currency=Euro.
     /// </summary>
-    public static readonly VersionedCodeList<StaatCode> V2023_02_24 = new("2023.02.24")
+    public static IVersionedCodeList<StaatCode> V2023_02_24 { get; } = new VersionedCodeList<StaatCode>("2023.02.24")
     {
         StaatCode.Deutschland,
         StaatCode.Albanien,

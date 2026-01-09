@@ -13,7 +13,7 @@ public sealed class BestandteiltypCodeLists : ICodeListCollection<Bestandteiltyp
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.
     /// </summary>
-    public static readonly VersionedCodeList<BestandteiltypCode> V2_4 = new("2.4")
+    public static IVersionedCodeList<BestandteiltypCode> V2_4 { get; } = new VersionedCodeList<BestandteiltypCode>("2.4")
     {
         BestandteiltypCode.Original,
         BestandteiltypCode.Repraesentat,

@@ -13,7 +13,7 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
     /// <b>Änderung zur Vorversion:</b> Folgende Werte wurden hinzugefügt: 378 | Unternehmen, 379 | Kontaktperson des Unternehmens 380 | Beigetretene(r), 381 | Erklärende(r), 382 | Heim, 383 | Inhaftierte Person, 384 | Jugendgerichtshilfe, 385 | Krankenhaus, 386 | Nebenbetroffene(r), 387 | Nebenklägervertreter(in), 388 | Psychosoziale(r) Prozessbegleiter(in), 389 | Rentenberater(in), 390 | Sachverständige(n) Zeuge (Zeugin), 391 | Steuerberater(in), 392 | Unternehmen, 393 | Verfahrensbeistand, 394 | Verfahrensbeteiligte(r), 395 | Verhinderungsbetreuer, 396 | Verletztenbeistand, 397 | Wirtschaftsprüfer(in), 398 | Zedent(in), 399 | Registerführende Behörde/Stelle. Der Wert 024 | Behörde wurde dem Fachmodul REG zugeordnet.<br/>
     /// <b>Changelog:</b> The following values were added: 378 | Company, 379 | Company Contact Person, 380 | Joined Party, 381 | Declarant, 382 | Home, 383 | Incarcerated Person, 384 | Youth Court Assistance, 385 | Hospital, 386 | Additional Affected Party, 387 | Representative of Additional Plaintiff, 388 | Psychosocial Court Supporter, 389 | Pension Advisor, 390 | Expert Witness, 391 | Tax Advisor, 392 | Company, 393 | Procedural Guardian, 394 | Party to the Proceedings, 395 | Substitute Guardian, 396 | Victim’s Advocate, 397 | Auditor, 398 | Assignor, 399 | Registry Authority/Office. The value 024 | Authority was assigned to the REG module.
     /// </summary>
-    public static readonly VersionedCodeList<RollenCode> V3_6 = new("3.6")
+    public static IVersionedCodeList<RollenCode> V3_6 { get; } = new VersionedCodeList<RollenCode>("3.6")
     {
         RollenCode.Abwesenheitspfleger,
         RollenCode.Aliasidentitaet,
@@ -409,7 +409,7 @@ public sealed class RollenCodeLists : ICodeListCollection<RollenCode>
     /// <b>Änderung zur Vorversion:</b> In der Fachmodulspalte zum Eintrag '246|Gesellschafter(in)' wurde die Nutzung durch das Fachmodul Register (REG) ergänzt. Der Codelistentyp wurde von Typ1 nach Typ3 geändert.<br/>
     /// <b>Changelog:</b> In the specialized module column for the entry '246|Partner', the usage by the specialized module Register (REG) was added. The code list type was changed from Type1 to Type3.
     /// </summary>
-    public static readonly VersionedCodeList<RollenCode> V3_5 = new("3.5")
+    public static IVersionedCodeList<RollenCode> V3_5 { get; } = new VersionedCodeList<RollenCode>("3.5")
     {
         RollenCode.Abwesenheitspfleger,
         RollenCode.Aliasidentitaet,

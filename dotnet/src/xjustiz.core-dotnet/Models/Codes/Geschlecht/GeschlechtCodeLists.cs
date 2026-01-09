@@ -13,7 +13,7 @@ public sealed class GeschlechtCodeLists : ICodeListCollection<GeschlechtCode>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.
     /// </summary>
-    public static readonly VersionedCodeList<GeschlechtCode> V2_1 = new("2.1")
+    public static IVersionedCodeList<GeschlechtCode> V2_1 { get; } = new VersionedCodeList<GeschlechtCode>("2.1")
     {
         GeschlechtCode.Unbekannt,
         GeschlechtCode.Maennlich,

@@ -13,7 +13,7 @@ public sealed class AktentypCodeLists : ICodeListCollection<AktentypCode>
     /// <b>Änderung zur Vorversion:</b> Keine. Dies ist die erste Version.<br/>
     /// <b>Changelog:</b> None. This is the first version.
     /// </summary>
-    public static readonly VersionedCodeList<AktentypCode> V2_2 = new("2.2")
+    public static IVersionedCodeList<AktentypCode> V2_2 { get; } = new VersionedCodeList<AktentypCode>("2.2")
     {
         AktentypCode.Zivilakte,
         AktentypCode.Betreuungsakte,
