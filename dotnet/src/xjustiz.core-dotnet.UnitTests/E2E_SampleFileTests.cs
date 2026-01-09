@@ -29,7 +29,8 @@ public class E2E_SampleFileTests
         Assert.True(File.Exists(jsonPath), $"JSON file not found: {jsonPath}");
 
         var jsonContent = await File.ReadAllTextAsync(jsonPath);
-        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var options = jsonSerializerOptions;
 
         UebermittlungSchriftgutobjekteNachricht? message = null;
         try

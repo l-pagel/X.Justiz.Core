@@ -57,5 +57,5 @@ public class DateiCore : Datei
     [XmlArrayItem("https", typeof(HttpsArtifact), Namespace = "")]
     [JsonPropertyName("artifacts")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public List<Artifact> Artefakte { get; set; } = new();
+    public List<Artifact> Artefakte { get; set; } = [];
 }

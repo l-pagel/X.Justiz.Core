@@ -183,7 +183,7 @@ public class CompatibilityCheckerTests
                                             new Telekommunikation
                                             {
                                                 Telekommunikationsart = new Telekommunikationsart { Code = "Email" },
-                                                verbindung = "max@mustermann.de",
+                                                Verbindung = "max@mustermann.de",
                                             },
                                         ],
                                     },

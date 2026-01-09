@@ -274,7 +274,8 @@ public class XJustizCoreController : ControllerBase
             }
             else
             {
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var options = jsonSerializerOptions;
                 return await JsonSerializer.DeserializeAsync<UebermittlungSchriftgutobjekteNachricht>(stream, options);
             }
         }

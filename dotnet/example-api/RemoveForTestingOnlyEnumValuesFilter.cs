@@ -21,7 +21,7 @@ public class RemoveForTestingOnlyEnumValuesFilter : ISchemaFilter
                 .Select(f => f.Name)
                 .ToList();
 
-            if (fieldsToRemove.Any() && schema.Enum != null)
+            if (fieldsToRemove.Count != 0 && schema.Enum != null)
             {
                 var newEnumValues = new List<IOpenApiAny>();
 
@@ -47,7 +47,7 @@ public class RemoveForTestingOnlyEnumValuesFilter : ISchemaFilter
                     }
                 }
 
-                if (newEnumValues.Any())
+                if (newEnumValues.Count != 0)
                 {
                     schema.Enum = newEnumValues;
                 }

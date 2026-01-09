@@ -1,32 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <ProjectGuid>44a6e1d5-7613-4d8b-824e-c8a27ac2a207</ProjectGuid>
-    <RootNamespace>example_api</RootNamespace>
-    <Version>1.0.0</Version>
-    <Authors>Lukas M. Pagel</Authors>
-    <Description>A demo dotnet API, that implements the <a href="https://www.nuget.org/packages/xjustiz.core-dotnet/">xjustiz.core-dotnet</a> nuget.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<CodeAnalysisRuleSet>..\StyleCopRules.ruleset</CodeAnalysisRuleSet>
-    <NoWarn>$(NoWarn);1591</NoWarn>
-  </PropertyGroup>
+	<PropertyGroup>
+		<ProjectGuid>44a6e1d5-7613-4d8b-824e-c8a27ac2a207</ProjectGuid>
+		<RootNamespace>example_api</RootNamespace>
+		<Version>1.0.0</Version>
+		<Authors>Lukas M. Pagel</Authors>
+		<Description>
+			A demo dotnet API, that implements the <a href="https://www.nuget.org/packages/xjustiz.core-dotnet/">xjustiz.core-dotnet</a> nuget.
+		</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/l-pagel/X.Justiz.Core</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/l-pagel/X.Justiz.Core</PackageProjectUrl>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
+	<PropertyGroup>
+		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
+	</ItemGroup>
 
 </Project>

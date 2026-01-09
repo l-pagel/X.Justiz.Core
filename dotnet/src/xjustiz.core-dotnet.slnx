@@ -12,7 +12,7 @@
   <Folder Name="/Solution Items/">
     <File Path="../../.github/workflows/build-test-publish.yml" />
     <File Path="../../.gitignore" />
-    <File Path="../StyleCopRules.ruleset" />
+    <File Path=".editorconfig" />
   </Folder>
   <Project Path="../example-api/example-api.csproj" />
   <Project Path="xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj" Id="79950a8c-4dbd-44e0-9590-56456ce0520a" />

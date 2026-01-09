@@ -28,5 +28,5 @@ public class Telekommunikation
     [XmlElement("verbindung", Namespace = XJustizConstants.Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string? verbindung { get; set; }
+    public string? Verbindung { get; set; }
 }

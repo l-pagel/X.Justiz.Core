@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.<br/>
 /// <u><b>Case type code:</b></u> The code for a case type of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code list "Aktentyp"</a>.
 /// </summary>
-[XJustizAvailability(XJustizVersion.V2_4_0)] // todo: prüfen: Adjusted to conservative guess or typical
+[XJustizAvailability(XJustizVersion.V2_1_0)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class Aktentyp : ICode<AktentypCode>
 {
