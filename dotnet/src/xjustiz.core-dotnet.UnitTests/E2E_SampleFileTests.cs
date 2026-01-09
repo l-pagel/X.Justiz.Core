@@ -14,8 +14,7 @@ public class E2E_SampleFileTests
 
     public E2E_SampleFileTests()
     {
-        // Hardcode path for reliability in this environment
-        _datasetsPath = @"c:\Users\LukasPagel\source\repos\X.Justiz.Core\example-datasets";
+        _datasetsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example-datasets");
     }
 
     [Theory]
