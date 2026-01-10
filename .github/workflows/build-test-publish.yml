@@ -134,7 +134,12 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update generated XSDs [skip ci]"
-            git push origin HEAD:${{ github.ref_name }}
+            if [[ "${{ github.ref_type }}" == "tag" ]]; then
+              echo "Pushing to main since we are on a tag"
+              git push origin HEAD:main
+            else
+              git push origin HEAD:${{ github.ref_name }}
+            fi
           fi
 
   publish:
