@@ -42,7 +42,7 @@ public class GerichtTests
     public void Deserialize_Gericht_ShouldParseCorrectly()
     {
         // Arrange
-        var xml = "<Gericht listVersionID=\"3.6\"><code>B1102</code></Gericht>";
+        var xml = "<Gericht listVersionID=\"3.6\"><code xmlns=\"http://www.xjustizcore.de\">B1102</code></Gericht>";
         var serializer = new XmlSerializer(typeof(Gericht));
         using var reader = new StringReader(xml);
 

@@ -44,7 +44,7 @@ public class DokumentklasseTests
     public void Deserialize_Dokumentklasse_ShouldParseCorrectly()
     {
         // Arrange
-        var xml = "<Dokumentklasse listVersionID=\"1.4\"><code>003</code></Dokumentklasse>";
+        var xml = "<Dokumentklasse listVersionID=\"1.4\"><code xmlns=\"http://www.xjustizcore.de\">003</code></Dokumentklasse>";
         var serializer = new XmlSerializer(typeof(Dokumentklasse));
         using var reader = new StringReader(xml);
 

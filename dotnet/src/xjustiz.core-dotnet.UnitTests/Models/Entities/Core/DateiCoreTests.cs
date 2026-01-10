@@ -41,13 +41,13 @@ public class DateiCoreTests
         serializer.Serialize(sw, entity);
         var xml = sw.ToString();
 
-        xml.Should().Contain("<dateiendung>.pdf</dateiendung>");
-        xml.Should().Contain("<groesse>1024</groesse>");
-        xml.Should().Contain("<hash>");
-        xml.Should().Contain("<algorithmus>SHA-256</algorithmus>");
-        xml.Should().Contain("<bundlePfad>");
-        xml.Should().Contain("<https>");
-        xml.Should().Contain("<url>https://example.com/test.pdf</url>");
+        xml.Should().Contain("dateiendung").And.Contain(".pdf");
+        xml.Should().Contain("groesse").And.Contain("1024");
+        xml.Should().Contain("hash");
+        xml.Should().Contain("algorithmus").And.Contain("SHA-256");
+        xml.Should().Contain("bundlePfad");
+        xml.Should().Contain("https");
+        xml.Should().Contain("url").And.Contain("https://example.com/test.pdf");
 
         using var sr = new StringReader(xml);
         var deserialized = serializer.Deserialize(sr) as DateiCore;

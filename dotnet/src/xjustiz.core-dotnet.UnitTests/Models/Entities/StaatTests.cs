@@ -42,7 +42,7 @@ public class StaatTests
     public void Deserialize_Staat_ShouldParseCorrectly()
     {
         // Arrange
-        var xml = "<Staat listVersionID=\"2024-08-01\"><code xmlns=\"\">124</code></Staat>";
+        var xml = "<Staat listVersionID=\"2024-08-01\"><code xmlns=\"http://www.xjustizcore.de\">124</code></Staat>";
         var serializer = new XmlSerializer(typeof(Staat));
         using var reader = new StringReader(xml);
 
