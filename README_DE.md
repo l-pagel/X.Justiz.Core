@@ -9,6 +9,7 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [Hintergrund](#hintergrund)
 - [Motivation](#motivation)
 - [Ziele & Vorteile](#ziele--vorteile)
+- [X.Justiz Kompatibilität](#xjustiz-kompatibilität)
 - [Implementierung (SDKs)](#implementierung-sdk)
 - [Spezifikation & Dokumentation](#spezifikation--dokumentation)
 
@@ -34,6 +35,10 @@ Das Ziel von X.Justiz Core ist eine effiziente Interoperabilität:
 *   **Open Source:** Kostenfreie Bereitstellung zur Förderung eines vernetzten Ökosystems.
 
 ![X.Justiz Core](./.media/README/xjustizcore-venn_DE.drawio.svg)
+
+## X.Justiz Kompatibilität
+X.Justiz Core ist vollständig kompatibel mit **X.Justiz 3.2.1 bis X.Justiz 3.6.2**.  
+Mit entsprechenden Kompatibilitätseinbußen können X.Justiz Core-Daten auch mit älteren Versionen (bis 2.1.0) kompatibel verwendet werden.
 
 ## Implementierung (SDKs)
 Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit.  

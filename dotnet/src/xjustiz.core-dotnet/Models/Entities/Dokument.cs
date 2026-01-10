@@ -36,7 +36,7 @@ public class Dokument
     /// <u><b>Creation time:</b></u> This element provides information about when the document was created in the system.
     /// </summary>
     [XmlElement("erstellungszeitpunkt", Namespace = SchemeConstants.XJustiz_Tns, DataType = "dateTime", Order = 3)]
-    [XJustizAvailability(XJustizVersion.V3_4_1)]
+    [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public DateTime? Erstellungszeitpunkt { get; set; }
 }
