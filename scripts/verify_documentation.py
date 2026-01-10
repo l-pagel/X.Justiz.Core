@@ -150,4 +150,20 @@ if missing_types or missing_props:
             print(f"  - {mp}")
     sys.exit(1)
 
-print("Documentation verification PASSED! All reachable types and properties are documented.")
+# Success reporting
+print("Documentation verification PASSED!")
+print("-" * 40)
+print(f"Total documented types: {len(doc_types)}")
+print(f"Total documented properties: {len(doc_props)}")
+print("-" * 40)
+
+print("\nList of documented types:")
+for t in sorted(list(doc_types)):
+    print(f"  [Type] {t}")
+
+print("\nList of documented properties:")
+for c, p in sorted(list(doc_props)):
+    print(f"  [Prop] {c}.{p}")
+
+print("-" * 40)
+print("All reachable classes and properties are accounted for in XJustiz-Core-DataModel.md.")
