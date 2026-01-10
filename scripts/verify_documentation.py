@@ -5,7 +5,7 @@ import sys
 # Paths
 ROOT_DIR = os.getcwd()
 MODELS_DIR = os.path.join(ROOT_DIR, "dotnet", "src", "xjustiz.core-dotnet", "Models")
-DOC_FILE = os.path.join(ROOT_DIR, "XJustiz-Core-DataModel.md")
+DOC_FILE = os.path.join(ROOT_DIR, "Specification.md")
 
 type_map = {} # name -> {'path': path, 'type': 'class'|'enum'}
 
@@ -116,13 +116,15 @@ content = read_file_safe(DOC_FILE)
 lines = content.splitlines()
 current_class = None
 for line in lines:
-    class_match = re.match(r'\|\s*\*\*(\w+)\*\*\s*\|\s*\|\s*\|', line)
+    # Match class row: | **ClassName** | | [x] | ...
+    class_match = re.match(r'\|\s*\*\*(\w+)\*\*\s*\|\s*\|\s*(?:x| )?\s*\|', line)
     if class_match:
         current_class = class_match.group(1)
         doc_types.add(current_class)
         continue
         
-    prop_match = re.match(r'\|\s*\|\s*(\w+)\s*\|', line)
+    # Match property row: | | Property: Name <br/> Type: Type | ...
+    prop_match = re.match(r'\|\s*\|\s*Property:\s*(\w+)\s*<br/>', line)
     if prop_match and current_class:
         doc_props.add((current_class, prop_match.group(1)))
 
@@ -166,4 +168,4 @@ for c, p in sorted(list(doc_props)):
     print(f"  [Prop] {c}.{p}")
 
 print("-" * 40)
-print("All reachable classes and properties are accounted for in XJustiz-Core-DataModel.md.")
+print("All reachable classes and properties are accounted for in Specification.md.")
