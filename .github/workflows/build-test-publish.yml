@@ -68,10 +68,24 @@ jobs:
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
 
+  verify-documentation:
+    name: Verify Data Model Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run verification script
+        run: python scripts/verify_documentation.py
 
   generate-xsd:
     name: Generate and Push XSDs
-    needs: build-and-test
+    needs: [build-and-test, verify-documentation]
     runs-on: ubuntu-latest
     permissions:
       contents: write
