@@ -1,5 +1,6 @@
 namespace xjustiz.core_dotnet.Models.Entities.Core;
 
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Helpers;
@@ -10,7 +11,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Hash info:</b></u> Represents file integrity information.
 /// </summary>
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-public class HashInfoCore : IEquatable<HashInfoCore>
+public class HashInfoCore : IEqualityComparer<HashInfoCore>
 {
     /// <summary>
     /// Der verwendete Hash-Algorithmus (z.B. SHA-256).<br/>
@@ -30,26 +31,22 @@ public class HashInfoCore : IEquatable<HashInfoCore>
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string Value { get; set; } = string.Empty;
 
-    public static bool operator ==(HashInfoCore? left, HashInfoCore? right) => Equals(left, right);
-
-    public static bool operator !=(HashInfoCore? left, HashInfoCore? right) => !Equals(left, right);
-
-    public bool Equals(HashInfoCore? other)
+    public bool Equals(HashInfoCore? x, HashInfoCore? y)
     {
-        if (other is null)
+        if (x is null || y is null)
         {
             return false;
         }
 
-        if (ReferenceEquals(this, other))
+        if (ReferenceEquals(x, y))
         {
             return true;
         }
 
         // Use OrdinalIgnoreCase for Algorithm as naming conventions can vary,
         // but hashes are usually compared with Ordinal.
-        return string.Equals(Algorithm, other.Algorithm, StringComparison.OrdinalIgnoreCase) &&
-               string.Equals(Value, other.Value, StringComparison.Ordinal);
+        return string.Equals(x.Algorithm, y.Algorithm, StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(x.Value, y.Value, StringComparison.Ordinal);
     }
 
     public override bool Equals(object? obj)
@@ -64,4 +61,6 @@ public class HashInfoCore : IEquatable<HashInfoCore>
             Algorithm?.ToLowerInvariant(),
             Value);
     }
+
+    public int GetHashCode([DisallowNull] HashInfoCore obj) => obj.GetHashCode();
 }
