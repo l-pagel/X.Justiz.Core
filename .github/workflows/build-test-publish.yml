@@ -8,8 +8,8 @@ on:
       - 'v*'   # e.g. v1.2.3
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.sha }}-${{ github.ref_type }}
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.sha }}
+  cancel-in-progress: ${{ github.ref_type == 'tag' }}
 
 jobs:
   build-and-test:
@@ -34,6 +34,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Skip branch run if tag exists
+        if: github.ref_type == 'branch' && github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Wait a few seconds to ensure tag is registered in GitHub API
+          sleep 5
+          TAGS=$(gh api repos/${{ github.repository }}/commits/${{ github.sha }}/refs?type=tag --jq '.[].ref')
+          if [ -n "$TAGS" ]; then
+            echo "A tag ($TAGS) exists for this commit. Cancelling redundant branch run."
+            gh run cancel ${{ github.run_id }}
+            # Wait for cancellation to take effect
+            sleep 10
+          fi
 
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
