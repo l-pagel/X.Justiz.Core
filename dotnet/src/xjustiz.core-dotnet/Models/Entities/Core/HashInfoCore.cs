@@ -11,7 +11,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// <u><b>Hash info:</b></u> Represents file integrity information.
 /// </summary>
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-public class HashInfoCore : IEquatable<HashInfoCore>
+public class HashInfoCore : IEqualityComparer<HashInfoCore>
 {
     /// <summary>
     /// Der verwendete Hash-Algorithmus (z.B. SHA-256).<br/>
@@ -32,36 +32,42 @@ public class HashInfoCore : IEquatable<HashInfoCore>
     public string Value { get; set; } = string.Empty;
 
     /// <inheritdoc />
-    public bool Equals(HashInfoCore? other)
+    public bool Equals(HashInfoCore? x, HashInfoCore? y)
     {
-        if (other is null)
-        {
-            return false;
-        }
-
-        if (ReferenceEquals(this, other))
+        if (ReferenceEquals(x, y))
         {
             return true;
         }
 
+        if (x is null || y is null)
+        {
+            return false;
+        }
+
         // Use OrdinalIgnoreCase for Algorithm as naming conventions can vary,
         // but hashes are usually compared with Ordinal.
-        return string.Equals(Algorithm, other.Algorithm, StringComparison.OrdinalIgnoreCase) &&
-               string.Equals(Value, other.Value, StringComparison.Ordinal);
+        return string.Equals(x.Algorithm, y.Algorithm, StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(x.Value, y.Value, StringComparison.Ordinal);
     }
 
     /// <inheritdoc />
     public override bool Equals(object? obj)
     {
-        return Equals(obj as HashInfoCore);
+        return Equals(this, obj as HashInfoCore);
+    }
+
+    /// <inheritdoc />
+    public int GetHashCode([DisallowNull] HashInfoCore obj)
+    {
+        // HashCode.Combine is the modern, robust way to generate a hash code
+        return HashCode.Combine(
+            obj.Algorithm?.ToLowerInvariant(),
+            obj.Value);
     }
 
     /// <inheritdoc />
     public override int GetHashCode()
     {
-        // HashCode.Combine is the modern, robust way to generate a hash code
-        return HashCode.Combine(
-            Algorithm?.ToLowerInvariant(),
-            Value);
+        return GetHashCode(this);
     }
 }
