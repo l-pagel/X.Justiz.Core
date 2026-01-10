@@ -7,6 +7,10 @@ on:
     tags:
       - 'v*'   # e.g. v1.2.3
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.sha }}
+  cancel-in-progress: true
+
 jobs:
   build-and-test:
     name: Build, Test and Analyze
