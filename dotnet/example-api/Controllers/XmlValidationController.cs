@@ -1,3 +1,7 @@
+// <copyright file="XmlValidationController.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace example_api.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
