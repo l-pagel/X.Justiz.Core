@@ -33,6 +33,8 @@ Das Ziel von X.Justiz Core ist eine effiziente Interoperabilität:
 *   **Praxisnähe:** Spezifische Erweiterungen für gängige Rechtsgebiete wie Erbrecht, Verkehrsrecht oder Mietrecht.
 *   **Open Source:** Kostenfreie Bereitstellung zur Förderung eines vernetzten Ökosystems.
 
+![X.Justiz Core](./.media/README/xjustizcore-venn_DE.drawio.svg)
+
 ## Implementierung (SDKs)
 Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit.  
 Sie beinhalten:

@@ -33,7 +33,7 @@ The goal of X.Justiz Core is efficient interoperability:
 *   **Practice Orientation:** Specific extensions for common legal areas such as succession law, traffic law, or tenancy law.
 *   **Open Source:** Provided free of charge to promote a networked ecosystem.
 
-![X.Justiz Core](./.media/README/xjustizcore-venn_DE.drawio.svg)
+![X.Justiz Core](./.media/README/xjustizcore-venn_EN.drawio.svg)
 
 ## Implementation (SDKs)
 To accelerate integration, the project provides software libraries.
