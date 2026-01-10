@@ -192,7 +192,7 @@ The table below describes the hierarchy and evolution of the data model:
 | | Property: Telekommunikationsart <br/> Type: **Telekommunikationsart** | | 2.1.0 | 0.2.0 |
 | | Property: Verbindung <br/> Type: string | | 2.1.0 | 0.2.0 |
 | **Telekommunikationsart** | | | 2.1.0 | 0.2.0 |
-| | Property: Code <br/> Type: string | | 2.1.0 | 0.2.0 |
+| | Property: Code <br/> Type: TelekommunikationsartCode | | 2.1.0 | 0.2.0 |
 | **UebermittlungSchriftgutobjekteNachricht** | | | 3.1.1 | 0.2.0 |
 | | Property: Kopf <br/> Type: **NachrichtenkopfCore** | | 3.1.1 | 0.2.0 |
 | | Property: Grunddaten <br/> Type: **Grunddaten** | | 3.1.1 | 0.2.0 |
@@ -249,3 +249,4 @@ The table below describes the hierarchy and evolution of the data model:
 | **GeschlechtCode** | | | No | 2.1.0 | 0.2.0 |
 | **RollenCode** | | | No | 2.1.0 | 0.2.0 |
 | **StaatCode** | | | No | 3.1.1 | 0.2.0 |
+| **TelekommunikationsartCode** | | | No | 3.2.1 | 0.2.0 |

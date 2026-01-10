@@ -9,6 +9,7 @@ using xjustiz.core_dotnet.Models.Codes.Dokumentklasse;
 using xjustiz.core_dotnet.Models.Codes.Gericht;
 using xjustiz.core_dotnet.Models.Codes.Rolle;
 using xjustiz.core_dotnet.Models.Codes.Staat;
+using xjustiz.core_dotnet.Models.Codes.Telekommunikationsart;
 using xjustiz.core_dotnet.Models.Entities;
 using xjustiz.core_dotnet.Models.Entities.Core;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -182,7 +183,7 @@ public class CompatibilityCheckerTests
                                         [
                                             new Telekommunikation
                                             {
-                                                Telekommunikationsart = new Telekommunikationsart { Code = "Email" },
+                                                Telekommunikationsart = new Telekommunikationsart { Code = TelekommunikationsartCode.Email },
                                                 Verbindung = "max@mustermann.de",
                                             },
                                         ],
