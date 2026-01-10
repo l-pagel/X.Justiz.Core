@@ -33,25 +33,36 @@ The goal of X.Justiz Core is efficient interoperability:
 *   **Practice Orientation:** Specific extensions for common legal areas such as succession law, traffic law, or tenancy law.
 *   **Open Source:** Provided free of charge to promote a networked ecosystem.
 
-## Implementation (SDKs)
-To accelerate integration, the project provides software libraries:
+![X.Justiz Core](./.media/README/xjustizcore-venn_DE.drawio.svg)
 
--   ✅ [**.NET Code**](/dotnet) | [**nuget Package**](https://www.nuget.org/packages/xjustiz.core-dotnet)
+## Implementation (SDKs)
+To accelerate integration, the project provides software libraries.
+They include:
+- [Class library](/dotnet/src/xjustiz.core-dotnet/Models/)
+- [Utility tools](/dotnet/src/xjustiz.core-dotnet/Util)
+- [Code lists (X.Justiz & X.Justiz Core)](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
+
+The SDKs are available in the following languages:
+-   ✅ [**.NET Code**](/dotnet) | [**nuget Package**](https://www.nuget.org/packages/xjustiz.core-dotnet) | [**Getting Started**](/dotnet/README.md)
 -   ⏳ **Java (Spring)** (In progress)
 -   ⏳ **JavaScript / TypeScript** (In progress)
 -   ⏳ **Python** (In progress)
 
 ## Specification & Documentation
 
-- [X.Justiz Core Specification](Specification.md)
-- [X.Justiz Core Versions as XSD](/X.Justiz-Core-Versions)
-- [Example Datasets](/example-datasets)
-- [Archive of all X.Justiz Versions](/X.Justiz-Versions)
+### X.Justiz Core
+- [Specification](Specification.md)
+- [Validation rules as XSD](/X.Justiz-Core-Versions)
+- [Example datasets](/example-datasets)
+- [Lists of used codes](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 - [Changelog (DE)](/Changelog_DE.md), [Changelog (EN)](/Changelog.md)
 - [License](LICENSE)
 
-The project is regularly checked for quality. You can find the current status on SonarCloud:
+### X.Justiz
+- [Archive of all X.Justiz versions and specifications](/X.Justiz-Versions)
 
+### Quality Assurance
+The project is regularly checked for quality. You can find the current status on SonarCloud:  
 [![Quality Gate][badge-url]][link-url]
 
 [badge-url]: https://sonarcloud.io/api/project_badges/quality_gate?project=l-pagel_X.Justiz.Core&token=63adaa7af33ae168a0611157ea45aaa0db36852f
