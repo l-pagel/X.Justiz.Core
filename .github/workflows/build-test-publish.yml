@@ -22,7 +22,8 @@ jobs:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
       TEST_PROJECT_PATH: dotnet/src/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
     permissions:
-      contents: write
+      actions: write  # This is the required permission for 'gh run cancel'
+      contents: write # Required to checkout code/read tags
     steps:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -112,7 +113,8 @@ jobs:
     needs: [build-and-test]
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      actions: write  # This is the required permission for 'gh run cancel'
+      contents: write # Required to checkout code/read tags
     steps:
       - name: Checkout
         uses: actions/checkout@v4
