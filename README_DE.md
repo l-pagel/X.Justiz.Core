@@ -34,24 +34,33 @@ Das Ziel von X.Justiz Core ist eine effiziente Interoperabilität:
 *   **Open Source:** Kostenfreie Bereitstellung zur Förderung eines vernetzten Ökosystems.
 
 ## Implementierung (SDKs)
-Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit:
+Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit.  
+Sie beinhalten:
+- [Klassenbibliothek](/dotnet/src/xjustiz.core-dotnet/Models/)
+- [Utility-Tools](/dotnet/src/xjustiz.core-dotnet/Util)
+- [Code Listen (X.Justiz & X.Justiz Core)](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 
--   ✅ [**.NET Code**](/dotnet) | [**nuget Paket**](https://www.nuget.org/packages/xjustiz.core-dotnet)
+Die SDKs sind in folgenden Sprachen verfügbar:
+-   ✅ [**.NET Code**](/dotnet) | [**nuget Paket**](https://www.nuget.org/packages/xjustiz.core-dotnet) | [**Erste Schritte**](/dotnet/README_DE.md)
 -   ⏳ **Java (Spring)** (In Arbeit)
 -   ⏳ **JavaScript / TypeScript** (In Arbeit)
 -   ⏳ **Python** (In Arbeit)
 
 ## Spezifikation & Dokumentation
 
-- [X.Justiz Core Spezifikation](Specification.md)
-- [X.Justiz Core Versionen als XSD](/X.Justiz-Core-Versions)
+### X.Justiz Core
+- [Spezifikation](Specification.md)
+- [Validierungsregeln als XSD](/X.Justiz-Core-Versions)
 - [Beipieldatensätze](/example-datasets)
-- [Archiv aller X.Justiz Versionen](/X.Justiz-Versions)
+- [Listen verwendeter Codes](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 - [Änderungshistorie (DE)](/Changelog_DE.md), [Änderungshistorie (EN)](/Changelog.md)
 - [Lizenz](LICENSE)
 
-Das Projekt wird regelmäßig auf Qualität überprüft. Den aktuellen Status finden Sie auf SonarCloud:
+### X.Justiz
+- [Archiv aller X.Justiz Versionen und Spezifikationen](/X.Justiz-Versions)
 
+### Qualitätssicherung
+Das Projekt wird regelmäßig auf Qualität überprüft. Den aktuellen Status finden Sie auf SonarCloud:  
 [![Quality Gate][badge-url]][link-url]
 
 [badge-url]: https://sonarcloud.io/api/project_badges/quality_gate?project=l-pagel_X.Justiz.Core&token=63adaa7af33ae168a0611157ea45aaa0db36852f
