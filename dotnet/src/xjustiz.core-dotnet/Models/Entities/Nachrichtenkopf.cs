@@ -20,7 +20,7 @@ public class Nachrichtenkopf
     [XmlAttribute("xjustizVersion")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string Version { get; set; } = "3.5.1";
+    public string Version { get; set; } = SchemeConstants.XJustizVersion.XJustizReferenzVersionString;
 
     /// <summary>
     /// Aktenzeichen des Absenders. Der Wert wird aus <see cref="Nachrichtenkopf.AktenzeichenAbsender"></see> übernommen<br/>
