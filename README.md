@@ -1,7 +1,7 @@
 ﻿# X.Justiz Core [TL;DR]
 
 > [!TIP]  
-> ** :de: [Deutsche Version hier verfügbar](README_DE.md) 👈**
+> **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
 
 X.Justiz Core is a lightweight schema for data exchange between software solutions in the legal ecosystem. It is based on the established X.Justiz standard and optimizes it for out-of-court communication and modern LegalTech scenarios.
 
