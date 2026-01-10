@@ -285,6 +285,9 @@ dotnet_diagnostic.CS1591.severity = none
 dotnet_diagnostic.CS8019.severity = error
 
 # IDE Rules
+dotnet_diagnostic.IDE0001.severity = suggestion
+dotnet_diagnostic.IDE0002.severity = suggestion
+dotnet_diagnostic.IDE0003.severity = suggestion
 dotnet_diagnostic.IDE0051.severity = warning
 dotnet_diagnostic.IDE0060.severity = warning
 dotnet_diagnostic.IDE0065.severity = none

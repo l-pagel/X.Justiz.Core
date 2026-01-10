@@ -28,7 +28,7 @@ public class ConversionController : ControllerBase
     public async Task<IActionResult> ConvertToXJustizAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, XJustizVersion xJustizVersion)
     {
         var conversionResult = XJustizConverter.Convert(uebermittlungSchriftgutobjekteNachricht, xJustizVersion);
-        return this.Ok(conversionResult);
+        return Ok(conversionResult);
     }
 
     /// <summary>
@@ -43,6 +43,6 @@ public class ConversionController : ControllerBase
     public async Task<IActionResult> ConvertToXJustizCoreAsync(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht, XJustizCoreVersion xJustizCoreVersion)
     {
         var conversionResult = XJustizConverter.Convert(uebermittlungSchriftgutobjekteNachricht, xJustizCoreVersion);
-        return this.Ok(conversionResult);
+        return Ok(conversionResult);
     }
 }

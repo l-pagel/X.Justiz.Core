@@ -33,7 +33,7 @@ public class XJustizCoreController : ControllerBase
     public IActionResult SendXJustizCoreJson(UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht)
     {
         var compatibilityResult = uebermittlungSchriftgutobjekteNachricht.GetCompatibility();
-        return this.Ok(compatibilityResult);
+        return Ok(compatibilityResult);
     }
 
     /// <summary>
@@ -48,7 +48,7 @@ public class XJustizCoreController : ControllerBase
     public IActionResult SendXJustizCoreXml([FromBody] UebermittlungSchriftgutobjekteNachricht uebermittlungSchriftgutobjekteNachricht)
     {
         var compatibilityResult = uebermittlungSchriftgutobjekteNachricht.GetCompatibility();
-        return this.Ok(compatibilityResult);
+        return Ok(compatibilityResult);
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public class XJustizCoreController : ControllerBase
     {
         if (file == null || file.Length == 0)
         {
-            return this.BadRequest("File is empty.");
+            return BadRequest("File is empty.");
         }
 
         var jsonSerializerOptions = new JsonSerializerOptions
@@ -82,15 +82,15 @@ public class XJustizCoreController : ControllerBase
 
             if (uebermittlungSchriftgutobjekteNachricht == null)
             {
-                return this.BadRequest("Could not deserialize JSON.");
+                return BadRequest("Could not deserialize JSON.");
             }
 
             var compatibilityResult = uebermittlungSchriftgutobjekteNachricht.GetCompatibility();
-            return this.Ok(compatibilityResult);
+            return Ok(compatibilityResult);
         }
         catch (JsonException ex)
         {
-            return this.BadRequest($"Invalid JSON: {ex.Message}");
+            return BadRequest($"Invalid JSON: {ex.Message}");
         }
     }
 
@@ -109,7 +109,7 @@ public class XJustizCoreController : ControllerBase
     {
         if (file == null || file.Length == 0)
         {
-            return this.BadRequest("File is empty.");
+            return BadRequest("File is empty.");
         }
 
         var serializer = new XmlSerializer(typeof(UebermittlungSchriftgutobjekteNachricht));
@@ -121,15 +121,15 @@ public class XJustizCoreController : ControllerBase
 
             if (uebermittlungSchriftgutobjekteNachricht == null)
             {
-                return this.BadRequest("Could not deserialize XML.");
+                return BadRequest("Could not deserialize XML.");
             }
 
             var compatibilityResult = uebermittlungSchriftgutobjekteNachricht.GetCompatibility();
-            return this.Ok(compatibilityResult);
+            return Ok(compatibilityResult);
         }
         catch (InvalidOperationException ex)
         {
-            return this.BadRequest($"Invalid XML: {ex.Message}");
+            return BadRequest($"Invalid XML: {ex.Message}");
         }
     }
 
@@ -146,10 +146,10 @@ public class XJustizCoreController : ControllerBase
     {
         if (message == null)
         {
-            return this.BadRequest("No message provided in body.");
+            return BadRequest("No message provided in body.");
         }
 
-        return this.ProcessJsonGeneration(message, version);
+        return ProcessJsonGeneration(message, version);
     }
 
     /// <summary>
@@ -166,10 +166,10 @@ public class XJustizCoreController : ControllerBase
         var sourceMessage = await GetSampleMessageAsync(dataset, isXml: false);
         if (sourceMessage == null)
         {
-            return this.BadRequest($"Sample dataset '{dataset}' not found.");
+            return BadRequest($"Sample dataset '{dataset}' not found.");
         }
 
-        return this.ProcessJsonGeneration(sourceMessage, version);
+        return ProcessJsonGeneration(sourceMessage, version);
     }
 
     /// <summary>
@@ -186,10 +186,10 @@ public class XJustizCoreController : ControllerBase
     {
         if (message == null)
         {
-            return this.BadRequest("No message provided in body.");
+            return BadRequest("No message provided in body.");
         }
 
-        return this.ProcessXmlGeneration(message, version);
+        return ProcessXmlGeneration(message, version);
     }
 
     /// <summary>
@@ -206,10 +206,10 @@ public class XJustizCoreController : ControllerBase
         var sourceMessage = await GetSampleMessageAsync(dataset, isXml: true);
         if (sourceMessage == null)
         {
-            return this.BadRequest($"Sample dataset '{dataset}' not found.");
+            return BadRequest($"Sample dataset '{dataset}' not found.");
         }
 
-        return this.ProcessXmlGeneration(sourceMessage, version);
+        return ProcessXmlGeneration(sourceMessage, version);
     }
 
     private IActionResult ProcessJsonGeneration(UebermittlungSchriftgutobjekteNachricht message, XJustizCoreVersion version)
@@ -217,7 +217,7 @@ public class XJustizCoreController : ControllerBase
         var converted = XJustizConverter.Convert(message, version).Result;
         if (converted == null)
         {
-            return this.BadRequest("Conversion failed.");
+            return BadRequest("Conversion failed.");
         }
 
         var jsonSerializerOptions = new JsonSerializerOptions
@@ -231,7 +231,7 @@ public class XJustizCoreController : ControllerBase
         var json = JsonSerializer.Serialize(converted, options);
         var bytes = System.Text.Encoding.UTF8.GetBytes(json);
 
-        return this.File(bytes, "application/json", $"akte_{version}.json");
+        return File(bytes, "application/json", $"akte_{version}.json");
     }
 
     private IActionResult ProcessXmlGeneration(UebermittlungSchriftgutobjekteNachricht message, XJustizCoreVersion version)
@@ -239,7 +239,7 @@ public class XJustizCoreController : ControllerBase
         var converted = XJustizConverter.Convert(message, version).Result;
         if (converted == null)
         {
-            return this.BadRequest("Conversion failed.");
+            return BadRequest("Conversion failed.");
         }
 
         using var ms = new MemoryStream();
@@ -254,7 +254,7 @@ public class XJustizCoreController : ControllerBase
             serializer.Serialize(writer, converted, ns);
         }
 
-        return this.File(ms.ToArray(), "application/xml", $"akte_{version}.xml");
+        return File(ms.ToArray(), "application/xml", $"akte_{version}.xml");
     }
 
     private static async Task<UebermittlungSchriftgutobjekteNachricht?> GetSampleMessageAsync(DatasetType dataset, bool isXml)
