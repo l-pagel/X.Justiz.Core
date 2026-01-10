@@ -18,7 +18,7 @@ public interface IVersionedCodeList<out T> : IReadOnlyList<T>
 /// <u><b>Versioned code list:</b></u> Implementation of a versioned code list.
 /// </summary>
 /// <typeparam name="T">The type of elements in the list.</typeparam>
-public sealed class VersionedCodeList<T> : IVersionedCodeList<T>, IEnumerable<T>
+public sealed class VersionedCodeList<T> : IVersionedCodeList<T>
 {
     private readonly List<T> _items = [];
 
