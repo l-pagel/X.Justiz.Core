@@ -3,6 +3,7 @@ namespace xjustiz.core_dotnet.Models.Entities.Core;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -16,7 +17,7 @@ public class DateiCore : Datei
     /// Die Dateiendung (z.B. .pdf).<br/>
     /// <u><b>File extension:</b></u> The file extension (e.g. .pdf).
     /// </summary>
-    [XmlElement("dateiendung", Namespace = "", Order = 3)]
+    [XmlElement("dateiendung", Namespace = SchemeConstants.XJustizCore_Tns, Order = 3)]
     [JsonPropertyName("fileExtension")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Dateiendung { get; set; }
@@ -25,7 +26,7 @@ public class DateiCore : Datei
     /// Der Content-Type der Datei (z.B. application/pdf).<br/>
     /// <u><b>Content type:</b></u> The content type of the file (e.g. application/pdf).
     /// </summary>
-    [XmlElement("contentType", Namespace = "", Order = 4)]
+    [XmlElement("contentType", Namespace = SchemeConstants.XJustizCore_Tns, Order = 4)]
     [JsonPropertyName("contentType")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? ContentType { get; set; }
@@ -34,7 +35,7 @@ public class DateiCore : Datei
     /// Die Größe der Datei in Bytes.<br/>
     /// <u><b>Size:</b></u> The size of the file in bytes.
     /// </summary>
-    [XmlElement("groesse", Namespace = "", Order = 5)]
+    [XmlElement("groesse", Namespace = SchemeConstants.XJustizCore_Tns, Order = 5)]
     [JsonPropertyName("size")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public long? Groesse { get; set; }
@@ -43,19 +44,19 @@ public class DateiCore : Datei
     /// Integritätsinformationen der Datei.<br/>
     /// <u><b>Hash:</b></u> Integrity information of the file.
     /// </summary>
-    [XmlElement("hash", Namespace = "", Order = 6)]
+    [XmlElement("hash", Namespace = SchemeConstants.XJustizCore_Tns, Order = 6)]
     [JsonPropertyName("hash")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public HashInfo? Hash { get; set; }
+    public HashInfoCore? Hash { get; set; }
 
     /// <summary>
     /// Eine Liste von Abrufmöglichkeiten für die Datei.<br/>
     /// <u><b>Artifacts:</b></u> A list of retrieval options for the file.
     /// </summary>
-    [XmlArray("artefaktListe", Namespace = "", Order = 7)]
-    [XmlArrayItem("bundlePfad", typeof(BundlePathArtifact), Namespace = "")]
-    [XmlArrayItem("https", typeof(HttpsArtifact), Namespace = "")]
+    [XmlArray("artefaktListe", Namespace = SchemeConstants.XJustizCore_Tns, Order = 7)]
+    [XmlArrayItem("bundlePfad", typeof(BundlePathArtifactCore), Namespace = SchemeConstants.XJustizCore_Tns)]
+    [XmlArrayItem("https", typeof(HttpsArtifactCore), Namespace = SchemeConstants.XJustizCore_Tns)]
     [JsonPropertyName("artifacts")]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public List<Artifact> Artefakte { get; set; } = [];
+    public List<ArtifactCore> Artefakte { get; set; } = [];
 }

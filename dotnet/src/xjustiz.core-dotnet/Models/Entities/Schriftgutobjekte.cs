@@ -17,7 +17,7 @@ public class Schriftgutobjekte
     /// Repräsentiert eine Akte.<br/>
     /// <u><b>File:</b></u> Represents a file / case.
     /// </summary>
-    [XmlElement("akte", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("akte", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Akte>? Akte { get; set; }
@@ -26,7 +26,7 @@ public class Schriftgutobjekte
     /// In diesem Element sollen alle Dokumente aufgeführt werden, die im Rahmen des konkreten Kommunikationsanlasses übermittelt werden. Die XJustiz-Nachricht selbst soll nicht aufgeführt werden, da sie lediglich der Beschreibung des Inhalts der Übermittlung dient.<br/>
     /// <u><b>Documents:</b></u> All documents transmitted in the context of the specific communication occasion should be listed in this element. The XJustiz message itself should not be listed, as it only serves to describe the content of the transmission.
     /// </summary>
-    [XmlElement("dokument", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("dokument", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Dokument>? Dokumente { get; set; }

@@ -16,7 +16,7 @@ public class Bezeichnung
     /// Aktueller offizieller Name der RA-Kanzlei.<br/>
     /// <u><b>Current designation:</b></u> Current official name of the law firm.
     /// </summary>
-    [XmlElement("bezeichnung.aktuell", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("bezeichnung.aktuell", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Aktuell { get; set; }

@@ -14,7 +14,7 @@ using static xjustiz.core_dotnet.Util.Versioning.CompatibilityChecker;
 /// </summary>
 [XmlRoot(
     ElementName = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005",
-    Namespace = SchemaConstants.XJustiz_Tns)]
+    Namespace = SchemeConstants.XJustiz_Tns)]
 [XJustizAvailability(XJustizVersion.V3_1_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
 public class UebermittlungSchriftgutobjekteNachricht
@@ -23,7 +23,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// Der Kopf der Nachricht.<br/>
     /// <u><b>Message header:</b></u> The header of the message.
     /// </summary>
-    [XmlElement("nachrichtenkopf", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("nachrichtenkopf", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public NachrichtenkopfCore Kopf { get; set; } = new();
@@ -32,7 +32,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// Der Type.GDS.Grunddaten enthält Meta-Informationen zum Verfahren und dessen Beteiligte. Er kann auch Angaben zu Terminen enthalten.<br/>
     /// <u><b>Basic data:</b></u> The Type.GDS.Grunddaten contains meta-information about the proceeding and its participants. It can also contain information about appointments.
     /// </summary>
-    [XmlElement("grunddaten", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("grunddaten", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Grunddaten? Grunddaten { get; set; }
@@ -41,7 +41,7 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// Dieses Element wird nur für die Kommunikation mit der elektronischen Aktenablage für Gerichtsvollzieher verwendet.<br/>
     /// <u><b>Document objects:</b></u> This element is only used for communication with the electronic file repository for bailiffs.
     /// </summary>
-    [XmlElement("schriftgutobjekte", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("schriftgutobjekte", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Schriftgutobjekte? Schriftgutobjekte { get; set; }
@@ -50,10 +50,10 @@ public class UebermittlungSchriftgutobjekteNachricht
     /// Gibt die Zuordnung zwischen XML-Namespaces und den Speicherorten der zugehörigen XML-Schemadateien an. Die Angabe erfolgt als Paare aus Namespace-URI und Schema-URL und dient Parsern/Validatoren als Hinweis, wo das Schema zu finden ist.<br/>
     /// <u><b>Schema location:</b></u> Specifies the association between XML namespaces and the locations of their corresponding XML Schema documents. Provided as namespace–URI / schema‐URL pairs, it acts as a hint to validators and parsers where the schemas can be found.
     /// </summary>
-    [XmlAttribute(AttributeName = "schemaLocation", Namespace = SchemaConstants.Xsi)]
+    [XmlAttribute(AttributeName = "schemaLocation", Namespace = SchemeConstants.Xsi)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string SchemaLocation { get; set; } = $"{SchemaConstants.XJustiz_Tns} xjustiz_0005_nachrichten_3_1.xsd";
+    public string SchemaLocation { get; set; } = $"{SchemeConstants.XJustiz_Tns} xjustiz_0005_nachrichten_3_1.xsd";
 
     /// <summary>
     /// Gibt die kompatiblen Versionen von X.Justiz und X.JustizCore für <see cref = "UebermittlungSchriftgutobjekteNachricht" /> an.<br/>

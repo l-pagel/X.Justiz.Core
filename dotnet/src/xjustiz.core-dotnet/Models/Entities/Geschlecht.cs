@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
 using xjustiz.core_dotnet.Models.Codes.Geschlecht;
+using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
@@ -34,7 +35,7 @@ public class Geschlecht : ICode<GeschlechtCode>
     /// Hilfseigenschaft für die XML-Serialisierung.<br/>
     /// <u><b>Code for XML:</b></u> Helper property for XML serialization.
     /// </summary>
-    [XmlElement("code", Namespace = "")]
+    [XmlElement("code", Namespace = SchemeConstants.XJustizCore_Tns)]
     [JsonIgnore]
     public string CodeForXml
     {

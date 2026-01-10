@@ -16,7 +16,7 @@ public class AuswahlInstanzbehoerde
     /// Hier ist die jeweilige XJustiz-ID des Gerichts oder der Staatsanwaltschaft aus der Codeliste anzugeben.<br/>
     /// <u><b>Court:</b></u> The respective XJustiz ID of the court or public prosecutor's office from the code list must be specified here.
     /// </summary>
-    [XmlElement("gericht", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("gericht", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Gericht? Gericht { get; set; }

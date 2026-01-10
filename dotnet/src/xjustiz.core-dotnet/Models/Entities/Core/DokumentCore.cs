@@ -15,7 +15,7 @@ public class DokumentCore : Dokument
     /// Fachspezifische Daten eines Dokuments.<br/>
     /// <u><b>Subject-specific data:</b></u> Specialized data of a document.
     /// </summary>
-    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = SchemaConstants.XJustiz_Tns, Order = 2)]
+    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = SchemeConstants.XJustiz_Tns, Order = 2)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public new XjustizFachspezifischeDatenCore FachspezifischeDaten { get; set; } = new();
 }

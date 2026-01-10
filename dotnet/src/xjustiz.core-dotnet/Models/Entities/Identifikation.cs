@@ -17,7 +17,7 @@ public class Identifikation
     /// Der Datentyp zur Angabe einer UUID.<br/>
     /// <u><b>ID:</b></u> The data type for specifying a UUID.
     /// </summary>
-    [XmlElement("id", Namespace = SchemaConstants.XJustiz_Tns, Order = 1)]
+    [XmlElement("id", Namespace = SchemeConstants.XJustiz_Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string Id { get; set; } = Guid.NewGuid().ToString();
@@ -26,7 +26,7 @@ public class Identifikation
     /// Über die Nummer im übergeordneten Container wird den Schriftgutobjekten eine Reihenfolge mitgegeben. Unter "Container“ ist dabei jeweils das Akten-, Teilakten- oder Dokumentensegment, in dem die Schriftgutobjekte aufgeführt sind, zu verstehen. Umsetzungshinweise: Die Nummern dürfen innerhalb eines Containers nicht doppelt vergeben werden. Dies gilt auch für unterschiedliche Arten von Schriftgutobjekten innerhalb eines Containers (z.B. Teilakten und Dokumente innerhalb einer Akte). Die Nummerierung muss in dem Container mit 1 beginnen. Auslassungen sind nicht zulässig, da die Bedeutung einer fehlenden Zahl keine Rückschlüsse, z.B. auf die Vollständigkeit einer Akte, erlaubt.<br/>
     /// <u><b>Number in superordinate container:</b></u> A sequence is given to the document objects via the number in the superordinate container. 'Container' refers to the file, sub-file or document segment in which the document objects are listed. Implementation notes: The numbers may not be assigned twice within a container. This also applies to different types of document objects within a container (e.g., sub-files and documents within a file). The numbering must start with 1 in the container. Omissions are not permitted, as the meaning of a missing number allows no conclusions, e.g., on the completeness of a file.
     /// </summary>
-    [XmlElement("nummerImUebergeordnetenContainer", Namespace = SchemaConstants.XJustiz_Tns, Order = 2)]
+    [XmlElement("nummerImUebergeordnetenContainer", Namespace = SchemeConstants.XJustiz_Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string NummerImUebergeordnetenContainer { get; set; } = "1";

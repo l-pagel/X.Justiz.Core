@@ -16,7 +16,7 @@ public class AuswahlBeteiligter
     /// Eine natürliche Person.<br/>
     /// <u><b>Natural person:</b></u> A natural person.
     /// </summary>
-    [XmlElement("natuerlichePerson", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("natuerlichePerson", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     [System.Text.Json.Serialization.JsonPropertyName("natuerlichePerson")]
@@ -26,7 +26,7 @@ public class AuswahlBeteiligter
     /// Hier werden alle Beteiligten aufgeführt, die nicht mit dem Type.GDS.NatuerlichePerson abgedeckt werden können: Gesellschaften, Vereine, Bruchteilsgemeinschaften etc. Die Abgrenzung erfolgt nicht nach juristischen Kategorien, sondern nach datentechnischer Zweckmäßigkeit.<br/>
     /// <u><b>Organization:</b></u> All participants who cannot be covered by Type.GDS.NatuerlichePerson are listed here: companies, associations, fractional communities, etc. The distinction is not based on legal categories but on data technical expediency.
     /// </summary>
-    [XmlElement("organisation", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("organisation", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     [System.Text.Json.Serialization.JsonPropertyName("organisation")]

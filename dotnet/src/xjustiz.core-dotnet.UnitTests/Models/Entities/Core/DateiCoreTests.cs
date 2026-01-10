@@ -19,17 +19,17 @@ public class DateiCoreTests
             Dateiendung = ".pdf",
             ContentType = "application/pdf",
             Groesse = 1024,
-            Hash = new HashInfo { Algorithm = "SHA-256", Value = "ABCDEF" },
+            Hash = new HashInfoCore { Algorithm = "SHA-256", Value = "ABCDEF" },
             Artefakte =
             [
-                new BundlePathArtifact { Path = "files/test.pdf" },
-                new HttpsArtifact
+                new BundlePathArtifactCore { Path = "files/test.pdf" },
+                new HttpsArtifactCore
                 {
                     Url = "https://example.com/test.pdf",
                     ExpiresAtUtc = new DateTime(2026, 1, 1, 12, 0, 0, DateTimeKind.Utc),
                     Headers =
                     [
-                        new HttpHeader { Name = "Authorization", Value = "Bearer token" },
+                        new HttpHeaderCore { Name = "Authorization", Value = "Bearer token" },
                     ],
                 },
             ],
@@ -54,9 +54,9 @@ public class DateiCoreTests
         deserialized.Should().NotBeNull();
         deserialized!.Dateiname.Should().Be(entity.Dateiname);
         deserialized.Artefakte.Should().HaveCount(2);
-        deserialized.Artefakte[0].Should().BeOfType<BundlePathArtifact>();
-        deserialized.Artefakte[1].Should().BeOfType<HttpsArtifact>();
-        ((HttpsArtifact)deserialized.Artefakte[1]).Headers.Should().HaveCount(1);
+        deserialized.Artefakte[0].Should().BeOfType<BundlePathArtifactCore>();
+        deserialized.Artefakte[1].Should().BeOfType<HttpsArtifactCore>();
+        ((HttpsArtifactCore)deserialized.Artefakte[1]).Headers.Should().HaveCount(1);
     }
 
     [Fact]
@@ -67,11 +67,11 @@ public class DateiCoreTests
             Dateiname = "test_123.pdf",
             Dateiendung = ".pdf",
             ContentType = "application/pdf",
-            Hash = new HashInfo { Value = "123456" },
+            Hash = new HashInfoCore { Value = "123456" },
             Artefakte =
             [
-                new BundlePathArtifact { Path = "bundle/file.pdf" },
-                new HttpsArtifact { Url = "https://cdn.com/file.pdf" },
+                new BundlePathArtifactCore { Path = "bundle/file.pdf" },
+                new HttpsArtifactCore { Url = "https://cdn.com/file.pdf" },
             ],
         };
 
@@ -84,8 +84,8 @@ public class DateiCoreTests
         var deserialized = JsonSerializer.Deserialize<DateiCore>(json);
         deserialized.Should().NotBeNull();
         deserialized!.Artefakte.Should().HaveCount(2);
-        deserialized.Artefakte[0].Should().BeOfType<BundlePathArtifact>();
-        deserialized.Artefakte[1].Should().BeOfType<HttpsArtifact>();
-        ((BundlePathArtifact)deserialized.Artefakte[0]).Path.Should().Be("bundle/file.pdf");
+        deserialized.Artefakte[0].Should().BeOfType<BundlePathArtifactCore>();
+        deserialized.Artefakte[1].Should().BeOfType<HttpsArtifactCore>();
+        ((BundlePathArtifactCore)deserialized.Artefakte[0]).Path.Should().Be("bundle/file.pdf");
     }
 }

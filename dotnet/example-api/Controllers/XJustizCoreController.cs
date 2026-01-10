@@ -1,3 +1,7 @@
+// <copyright file="XJustizCoreController.cs" company="X.Justiz Core">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace example_api.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
@@ -241,8 +245,8 @@ public class XJustizCoreController : ControllerBase
         using var ms = new MemoryStream();
         var serializer = new XmlSerializer(typeof(UebermittlungSchriftgutobjekteNachricht));
         var ns = new XmlSerializerNamespaces();
-        ns.Add(string.Empty, SchemaConstants.XJustiz_Tns);
-        ns.Add("xsi", SchemaConstants.Xsi);
+        ns.Add(string.Empty, SchemeConstants.XJustiz_Tns);
+        ns.Add("xsi", SchemeConstants.Xsi);
 
         var settings = new XmlWriterSettings { Indent = true, Encoding = System.Text.Encoding.UTF8 };
         using (var writer = XmlWriter.Create(ms, settings))

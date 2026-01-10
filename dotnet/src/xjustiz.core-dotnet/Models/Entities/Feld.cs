@@ -16,7 +16,7 @@ public class Feld
     /// Der Name des Feldes.<br/>
     /// <u><b>Name:</b></u> The name of the field.
     /// </summary>
-    [XmlElement("name", Namespace = SchemaConstants.XJustiz_Tns, Order = 1)]
+    [XmlElement("name", Namespace = SchemeConstants.XJustiz_Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Name { get; set; }
@@ -25,7 +25,7 @@ public class Feld
     /// Die Hinweise und Erläuterungen zu einem Feld.<br/>
     /// <u><b>Description:</b></u> The notes and explanations for a field.
     /// </summary>
-    [XmlElement("beschreibung", Namespace = SchemaConstants.XJustiz_Tns, Order = 2)]
+    [XmlElement("beschreibung", Namespace = SchemeConstants.XJustiz_Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Beschreibung { get; set; }
@@ -34,7 +34,7 @@ public class Feld
     /// Der Datentyp des Feldwertes. Gültige Angaben sind die W3C-Datentypen.<br/>
     /// <u><b>Data type:</b></u> The data type of the field value. Valid entries are the W3C data types.
     /// </summary>
-    [XmlElement("datentyp", Namespace = SchemaConstants.XJustiz_Tns, Order = 3)]
+    [XmlElement("datentyp", Namespace = SchemeConstants.XJustiz_Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Datentyp { get; set; }
@@ -43,7 +43,7 @@ public class Feld
     /// Der Wert des Feldes.<br/>
     /// <u><b>Value:</b></u> The value of the field.
     /// </summary>
-    [XmlElement("wert", Namespace = SchemaConstants.XJustiz_Tns, Order = 4)]
+    [XmlElement("wert", Namespace = SchemeConstants.XJustiz_Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Wert { get; set; }

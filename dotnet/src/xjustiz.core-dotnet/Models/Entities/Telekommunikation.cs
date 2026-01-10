@@ -16,7 +16,7 @@ public class Telekommunikation
     /// Art der Telekommunikation als CodeValue.<br/>
     /// <u><b>Telecommunication type:</b></u> Type of telecommunication as a code.
     /// </summary>
-    [XmlElement("telekommunikationsart", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("telekommunikationsart", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Telekommunikationsart? Telekommunikationsart { get; set; }
@@ -25,7 +25,7 @@ public class Telekommunikation
     /// Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder dergleichen mitgeteilt.<br/>
     /// <u><b>Connection:</b></u> The telephone number, fax number, e-mail address, Safe-ID, or similar is communicated here.
     /// </summary>
-    [XmlElement("verbindung", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("verbindung", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Verbindung { get; set; }

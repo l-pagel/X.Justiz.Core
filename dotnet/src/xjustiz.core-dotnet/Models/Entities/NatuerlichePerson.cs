@@ -17,7 +17,7 @@ public class NatuerlichePerson
     /// Der volle Name einer natürlichen Person.<br/>
     /// <u><b>Full name:</b></u> The full name of a natural person.
     /// </summary>
-    [XmlElement("vollerName", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("vollerName", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public VollerName VollerName { get; set; } = new();
@@ -26,7 +26,7 @@ public class NatuerlichePerson
     /// Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.<br/>
     /// <u><b>Gender:</b></u> A biological or grammatical gender can be specified here. This allows specialized systems to generate a salutation.
     /// </summary>
-    [XmlElement("geschlecht", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("geschlecht", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Geschlecht Geschlecht { get; set; } = new();
@@ -35,7 +35,7 @@ public class NatuerlichePerson
     /// Auch Postfach-Anschriften fallen hierunter.<br/>
     /// <u><b>Address:</b></u> Post office box addresses also fall under this.
     /// </summary>
-    [XmlElement("anschrift", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("anschrift", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Anschrift? Anschrift { get; set; }
@@ -44,7 +44,7 @@ public class NatuerlichePerson
     /// Informationen zur Telekommunikation (Telefon, Email, etc.).<br/>
     /// <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
     /// </summary>
-    [XmlElement("telekommunikation", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("telekommunikation", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public List<Telekommunikation>? Telekommunikation { get; set; }
@@ -53,7 +53,7 @@ public class NatuerlichePerson
     /// Hier steht die allgemeine Bankverbindung.<br/>
     /// <u><b>Bank details:</b></u> Here is the general bank connection.
     /// </summary>
-    [XmlElement("bankverbindung", Namespace = SchemaConstants.XJustiz_Tns)]
+    [XmlElement("bankverbindung", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Bankverbindung? Bankverbindung { get; set; }

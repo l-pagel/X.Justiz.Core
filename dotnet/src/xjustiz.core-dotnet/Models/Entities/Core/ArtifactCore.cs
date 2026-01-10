@@ -6,14 +6,14 @@ using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
 /// Basisklasse für Abrufinformationen einer Datei.<br/>
-/// <u><b>Artifact:</b></u> Base class for file retrieval information.
+/// <u><b>ArtifactCore:</b></u> Base class for file retrieval information.
 /// </summary>
 [JsonPolymorphic(TypeDiscriminatorPropertyName = "type")]
-[JsonDerivedType(typeof(BundlePathArtifact), "bundle-path")]
-[JsonDerivedType(typeof(HttpsArtifact), "https")]
-[XmlInclude(typeof(BundlePathArtifact))]
-[XmlInclude(typeof(HttpsArtifact))]
+[JsonDerivedType(typeof(BundlePathArtifactCore), "bundle-path")]
+[JsonDerivedType(typeof(HttpsArtifactCore), "https")]
+[XmlInclude(typeof(BundlePathArtifactCore))]
+[XmlInclude(typeof(HttpsArtifactCore))]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-public abstract class Artifact
+public abstract class ArtifactCore
 {
 }

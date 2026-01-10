@@ -6,7 +6,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Enthält Konstanten für XJustiz-Namespaces.<br/>
 /// <u><b>XJustiz constants:</b></u> Contains constants for XJustiz namespaces.
 /// </summary>
-public static class SchemaConstants
+public static class SchemeConstants
 {
     /// <summary>
     /// Target Namespace für XJustiz.<br/>
