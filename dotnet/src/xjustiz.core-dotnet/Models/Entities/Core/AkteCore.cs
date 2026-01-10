@@ -15,7 +15,7 @@ public class AkteCore : Akte
     /// Fachspezifische Daten einer Akte.<br/>
     /// <u><b>Subject-specific data:</b></u> Specialized data of a file/case.
     /// </summary>
-    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 3)]
+    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = SchemaConstants.XJustiz_Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public new XjustizAkteFachspezifischeDatenCore FachspezifischeDaten { get; set; } = new();

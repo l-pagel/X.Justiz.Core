@@ -16,7 +16,7 @@ public class AuswahlAdresse
     /// Anschrift oder Beschreibung des Absenders.<br/>
     /// <u><b>Sender other:</b></u> Address or description of the sender.
     /// </summary>
-    [XmlElement("absender.sonstige", Namespace = XJustizConstants.Tns)]
+    [XmlElement("absender.sonstige", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? AbsenderSonstige { get; set; }
@@ -25,7 +25,7 @@ public class AuswahlAdresse
     /// Anschrift oder Beschreibung des Empfängers.<br/>
     /// <u><b>Recipient other:</b></u> Address or description of the recipient.
     /// </summary>
-    [XmlElement("empfaenger.sonstige", Namespace = XJustizConstants.Tns)]
+    [XmlElement("empfaenger.sonstige", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerSonstige { get; set; }
@@ -34,7 +34,7 @@ public class AuswahlAdresse
     /// Anschrift oder CodeValue des empfangenden Gerichts. Die Verwendung des Codes sollte der Anschrift bevorzugt werden. Der CodeValue des Gerichts. Diese Codeliste enthält Name und Anschrift des Gerichts.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.<br/>
     /// <u><b>Recipient court:</b></u> Address or code of the receiving court. The use of the code should be preferred over the address. The code of the court. This code list contains the name and address of the court. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
     /// </summary>
-    [XmlElement("empfaenger.gericht", Namespace = XJustizConstants.Tns)]
+    [XmlElement("empfaenger.gericht", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerGericht { get; set; }
@@ -43,7 +43,7 @@ public class AuswahlAdresse
     /// Anschrift oder CodeValue des empfangenden Rentenversicherungsträgers. Die Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue des Rentenversicherungsträgers. Diese Codeliste enthält Name und Anschrift des Rentenversicherungsträgers.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.<br/>
     /// <u><b>Recipient pension insurance carrier:</b></u> Address or code of the receiving pension insurance carrier. The use of the code should be preferred over the address. The code of the pension insurance carrier. This code list contains the name and address of the pension insurance carrier. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
     /// </summary>
-    [XmlElement("empfaenger.rvTraeger", Namespace = XJustizConstants.Tns)]
+    [XmlElement("empfaenger.rvTraeger", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerRvTraeger { get; set; }
@@ -52,7 +52,7 @@ public class AuswahlAdresse
     /// Anschrift oder CodeValue der empfangenden Polizeibehörde. Die Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue der Polizeibehörde. Diese Codeliste enthält Name und Anschrift der Polizeibehörden.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.<br/>
     /// <u><b>Recipient police authority:</b></u> Address or code of the receiving police authority. The use of the code should be preferred over the address. The code of the police authority. This code list contains the name and address of the police authorities. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
     /// </summary>
-    [XmlElement("empfaenger.polizeibehoerde", Namespace = XJustizConstants.Tns)]
+    [XmlElement("empfaenger.polizeibehoerde", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? EmpfaengerPolizei { get; set; }

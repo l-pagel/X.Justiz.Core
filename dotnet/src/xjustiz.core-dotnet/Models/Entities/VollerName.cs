@@ -16,7 +16,7 @@ public class VollerName
     /// Bei ggfls. mehreren Vornamen werden diese alle in diesem Element in ihrer Reihenfolge eingetragen.<br/>
     /// <u><b>First name:</b></u> If there are multiple first names, they are all entered in this element in their order.
     /// </summary>
-    [XmlElement("vorname", Namespace = XJustizConstants.Tns)]
+    [XmlElement("vorname", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Vorname { get; set; }
@@ -25,7 +25,7 @@ public class VollerName
     /// Der Rufname gibt bei mehreren Vornamen an, welcher Vorname der Rufname ist. Der Rufname wird häufig als eindeutiges Element benötigt.<br/>
     /// <u><b>Call name:</b></u> The call name indicates which first name is the call name if there are multiple first names. The call name is often required as a unique element.
     /// </summary>
-    [XmlElement("rufname", Namespace = XJustizConstants.Tns)]
+    [XmlElement("rufname", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Rufname { get; set; }
@@ -34,7 +34,7 @@ public class VollerName
     /// Hier werden akademische und nichtakademische Titel aufgeführt, die vor dem Vornamen stehen, z.B. "Professor", "Dr.", "Prof. Dr." usw.<br/>
     /// <u><b>Title:</b></u> Academic and non-academic titles that appear before the first name are listed here, e.g., 'Professor', 'Dr.', 'Prof. Dr.', etc.
     /// </summary>
-    [XmlElement("titel", Namespace = XJustizConstants.Tns)]
+    [XmlElement("titel", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Titel { get; set; }
@@ -43,7 +43,7 @@ public class VollerName
     /// Hier werden Adelstitel aufgeführt, die vor dem Nachnamen stehen, z.B. "Graf von".<br/>
     /// <u><b>Name prefix:</b></u> Titles of nobility that appear before the last name are listed here, e.g., 'Graf von'.
     /// </summary>
-    [XmlElement("namensvorsatz", Namespace = XJustizConstants.Tns)]
+    [XmlElement("namensvorsatz", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Namensvorsatz { get; set; }
@@ -52,7 +52,7 @@ public class VollerName
     /// Falls der Nachname nicht bekannt ist, ist "nicht bekannt" anzugegeben.<br/>
     /// <u><b>Last name:</b></u> If the last name is not known, 'nicht bekannt' (unknown) must be specified.
     /// </summary>
-    [XmlElement("nachname", Namespace = XJustizConstants.Tns)]
+    [XmlElement("nachname", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Nachname { get; set; }

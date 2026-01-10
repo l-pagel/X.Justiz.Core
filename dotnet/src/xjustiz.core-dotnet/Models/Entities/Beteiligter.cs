@@ -16,7 +16,7 @@ public class Beteiligter
     /// Auswahlstruktur für einen Beteiligten (natürliche Person oder Organisation).<br/>
     /// <u><b>Participant selection:</b></u> Selection structure for a participant (natural person or organization).
     /// </summary>
-    [XmlElement("auswahl_beteiligter", Namespace = XJustizConstants.Tns)]
+    [XmlElement("auswahl_beteiligter", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AuswahlBeteiligter Auswahl { get; set; } = new();

@@ -241,8 +241,8 @@ public class XJustizCoreController : ControllerBase
         using var ms = new MemoryStream();
         var serializer = new XmlSerializer(typeof(UebermittlungSchriftgutobjekteNachricht));
         var ns = new XmlSerializerNamespaces();
-        ns.Add(string.Empty, XJustizConstants.Tns);
-        ns.Add("xsi", XJustizConstants.Xsi);
+        ns.Add(string.Empty, SchemaConstants.XJustiz_Tns);
+        ns.Add("xsi", SchemaConstants.Xsi);
 
         var settings = new XmlWriterSettings { Indent = true, Encoding = System.Text.Encoding.UTF8 };
         using (var writer = XmlWriter.Create(ms, settings))

@@ -68,8 +68,8 @@ public static class Zipper
         var serializer = new XmlSerializer(typeof(T));
 
         var ns = new XmlSerializerNamespaces();
-        ns.Add(string.Empty, XJustizConstants.Tns);
-        ns.Add("xsi", XJustizConstants.Xsi);
+        ns.Add(string.Empty, SchemaConstants.XJustiz_Tns);
+        ns.Add("xsi", SchemaConstants.Xsi);
 
         using var entryStream = xmlEntry.Open();
 

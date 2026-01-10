@@ -6,13 +6,19 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Enthält Konstanten für XJustiz-Namespaces.<br/>
 /// <u><b>XJustiz constants:</b></u> Contains constants for XJustiz namespaces.
 /// </summary>
-public static class XJustizConstants
+public static class SchemaConstants
 {
     /// <summary>
     /// Target Namespace für XJustiz.<br/>
     /// <u><b>Target namespace:</b></u> Target Namespace for XJustiz.
     /// </summary>
-    public const string Tns = "http://www.xjustiz.de";
+    public const string XJustiz_Tns = "http://www.xjustiz.de";
+
+    /// <summary>
+    /// Target Namespace für XJustiz Core.<br/>
+    /// <u><b>Target namespace:</b></u> Target Namespace for XJustiz Core.
+    /// </summary>
+    public const string XJustizCore_Tns = "http://www.xjustizcore.de";
 
     /// <summary>
     /// XML Schema Instance Namespace.<br/>

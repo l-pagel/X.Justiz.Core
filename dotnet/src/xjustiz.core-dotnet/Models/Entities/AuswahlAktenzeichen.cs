@@ -16,7 +16,7 @@ public class AuswahlAktenzeichen
     /// Hier kann das vollständige Aktenzeichen als unstrukturierter Freitext übermittelt werden.<br/>
     /// <u><b>Free text:</b></u> The complete file reference can be transmitted here as unstructured free text.
     /// </summary>
-    [XmlElement("aktenzeichen.freitext", Namespace = XJustizConstants.Tns, Order = 1)]
+    [XmlElement("aktenzeichen.freitext", Namespace = SchemaConstants.XJustiz_Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     [System.Text.Json.Serialization.JsonPropertyName("aktenzeichen.freitext")]

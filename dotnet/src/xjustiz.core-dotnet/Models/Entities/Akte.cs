@@ -16,7 +16,7 @@ public class Akte
     /// Der Typ dient der eindeutigen Kennzeichnung von Schriftgutobjekten und entspricht dem xdomea-Typ 'IdentifikationObjektType'.<br/>
     /// <u><b>Identification:</b></u> The type serves to uniquely identify document objects and corresponds to the xdomea type 'IdentifikationObjektType'.
     /// </summary>
-    [XmlElement("identifikation", Namespace = XJustizConstants.Tns, Order = 1)]
+    [XmlElement("identifikation", Namespace = SchemaConstants.XJustiz_Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V2_2_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public Identifikation Identifikation { get; set; } = new();
@@ -25,7 +25,7 @@ public class Akte
     /// Daten einer Akte, die bereits durch in X.Justiz oder X.Justiz Core definierten Datenfeldern abbildbar sind.<br/>
     /// <u><b>Case file data:</b></u> Data of a case file that can already be represented by data fields defined in X.Justiz or X.Justiz Core.
     /// </summary>
-    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = XJustizConstants.Tns, Order = 3)]
+    [XmlElement("xjustiz.fachspezifischeDaten", Namespace = SchemaConstants.XJustiz_Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public XjustizAkteFachspezifischeDaten FachspezifischeDaten { get; set; } = new();
@@ -34,7 +34,7 @@ public class Akte
     /// Daten einer Akte, die <u>nicht</u> durch in X.Justiz oder X.Justiz Core definierten Datenfeldern abbildbar sind.<br/>
     /// <u><b>Custom case file data:</b></u> Data of a case file that can <u>not</u> be represented by data fields defined in X.Justiz or X.Justiz Core.
     /// </summary>
-    [XmlElement("anwendungsspezifischeErweiterung", Namespace = XJustizConstants.Tns, Order = 2)]
+    [XmlElement("anwendungsspezifischeErweiterung", Namespace = SchemaConstants.XJustiz_Tns, Order = 2)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }

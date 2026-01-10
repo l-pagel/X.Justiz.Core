@@ -16,7 +16,7 @@ public class Aktenzeichen
     /// Auswahlstruktur für Aktenzeichen.<br/>
     /// <u><b>Selection:</b></u> Selection structure for file references.
     /// </summary>
-    [XmlElement("auswahl_aktenzeichen", Namespace = XJustizConstants.Tns, Order = 1)]
+    [XmlElement("auswahl_aktenzeichen", Namespace = SchemaConstants.XJustiz_Tns, Order = 1)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public AuswahlAktenzeichen Auswahl { get; set; } = new();

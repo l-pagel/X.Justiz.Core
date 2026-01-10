@@ -16,7 +16,7 @@ public class Bankverbindung
     /// Der Name braucht nur angegeben zu werden, sofern der Kontoinhaber nicht mit dem Beteiligten identisch ist.<br/>
     /// <u><b>Account holder:</b></u> The name only needs to be specified if the account holder is not identical to the participant.
     /// </summary>
-    [XmlElement("kontoinhaber", Namespace = XJustizConstants.Tns)]
+    [XmlElement("kontoinhaber", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Kontoinhaber { get; set; }
@@ -25,7 +25,7 @@ public class Bankverbindung
     /// IBAN der Bankverbindung<br/>
     /// <u><b>IBAN:</b></u> IBAN of the bank details.
     /// </summary>
-    [XmlElement("iban", Namespace = XJustizConstants.Tns)]
+    [XmlElement("iban", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Iban { get; set; }
@@ -34,7 +34,7 @@ public class Bankverbindung
     /// BIC der Bankverbindung<br/>
     /// <u><b>BIC:</b></u> BIC of the bank details.
     /// </summary>
-    [XmlElement("bic", Namespace = XJustizConstants.Tns)]
+    [XmlElement("bic", Namespace = SchemaConstants.XJustiz_Tns)]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
     public string? Bic { get; set; }

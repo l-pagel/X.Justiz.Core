@@ -18,23 +18,23 @@ public class NachrichtenkopfCore : Nachrichtenkopf
     [XmlAttribute("xjustizVersion")]
     [XJustizAvailability(XJustizVersion.V2_1_0)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public new string Version { get; set; } = XJustizConstants.LatestXJustizCoreVersion.VersionString;
+    public new string Version { get; set; } = SchemaConstants.LatestXJustizCoreVersion.VersionString;
 
     /// <summary>
     /// Verwendete X.Justiz Core Version für diese Nachricht. Redundant zu <see cref="Version"/><br/>
     /// <u><b>XJustiz Core version:</b></u> Used X.Justiz Core version for this message. Redundant to <see cref="Version"/>
     /// </summary>
-    [XmlElement("xjustizCoreVersion", Namespace = XJustizConstants.Tns, Order = 3)]
+    [XmlElement("xjustizCoreVersion", Namespace = SchemaConstants.XJustiz_Tns, Order = 3)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string Version_XJustizCore { get; set; } = XJustizConstants.LatestXJustizCoreVersion.VersionString;
+    public string Version_XJustizCore { get; set; } = SchemaConstants.LatestXJustizCoreVersion.VersionString;
 
     /// <summary>
     /// Verwendete X.Justiz Core Version für diese Nachricht als String.<br/>
     /// <u><b>XJustiz Core version:</b></u> Used X.Justiz Core version for this message as string.
     /// </summary>
-    [XmlElement("xjustizReferenzVersion", Namespace = XJustizConstants.Tns, Order = 4)]
+    [XmlElement("xjustizReferenzVersion", Namespace = SchemaConstants.XJustiz_Tns, Order = 4)]
     [XJustizAvailability(XJustizVersion.V3_1_1)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_2_0)]
-    public string Version_XJustizReferenz { get; set; } = XJustizConstants.LatestXJustizCoreVersion.XJustizReferenzVersionString;
+    public string Version_XJustizReferenz { get; set; } = SchemaConstants.LatestXJustizCoreVersion.XJustizReferenzVersionString;
 }

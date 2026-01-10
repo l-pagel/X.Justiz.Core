@@ -81,7 +81,7 @@ public class Program
         Directory.CreateDirectory(outputDir);
 
         var overrides = CreateOverrides(version);
-        var importer = new XmlReflectionImporter(overrides, XJustizConstants.Tns);
+        var importer = new XmlReflectionImporter(overrides, SchemaConstants.XJustiz_Tns);
         var schemas = new XmlSchemas();
         var exporter = new XmlSchemaExporter(schemas);
 
@@ -95,7 +95,7 @@ public class Program
 
         foreach (System.Xml.Schema.XmlSchema schema in schemas)
         {
-            if (schema.TargetNamespace == XJustizConstants.Tns)
+            if (schema.TargetNamespace == SchemaConstants.XJustiz_Tns)
             {
                 var filename = $"X.Justiz Core_{versionString}.xsd";
                 var outputPath = Path.Combine(outputDir, filename);
