@@ -8,13 +8,16 @@ on:
       - 'v*'   # e.g. v1.2.3
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.sha }}
+  group: ${{ github.workflow }}-${{ github.sha }}-${{ github.ref_type }}
   cancel-in-progress: true
 
 jobs:
   build-and-test:
     name: Build, Test and Analyze
     runs-on: ubuntu-latest
+    if: |
+      github.ref_type == 'tag' || 
+      (github.ref_name == 'main' && !startsWith(github.ref, 'refs/tags/'))
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
       TEST_PROJECT_PATH: dotnet/src/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
@@ -74,6 +77,7 @@ jobs:
 
   verify-documentation:
     name: Verify Data Model Documentation
+    needs: [build-and-test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -89,7 +93,7 @@ jobs:
 
   generate-xsd:
     name: Generate and Push XSDs
-    needs: [build-and-test, verify-documentation]
+    needs: [build-and-test]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -119,7 +123,7 @@ jobs:
 
   publish:
     name: Version and Publish
-    needs: [build-and-test, generate-xsd]
+    needs: [build-and-test, generate-xsd, verify-documentation]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
