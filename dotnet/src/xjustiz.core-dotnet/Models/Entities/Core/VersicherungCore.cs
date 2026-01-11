@@ -59,15 +59,6 @@ public class VersicherungCore
     [XmlElement("versicherungstyp", Namespace = SchemeConstants.XJustizCore_Tns)]
     public VersicherungsTyp? Versicherungstyp { get; set; }
 
-    //TODO: Wie behandeln wir Zusatzinfos basierend auf sonderfällen wie KFZ versicherung?
-
-    /// <summary>
-    /// Das versicherte Fahrzeug.<br/>
-    /// <u><b>Vehicle:</b></u> The insured vehicle.
-    /// </summary>
-    [XmlElement("fahrzeug", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public Fahrzeug? Fahrzeug { get; set; }
-
     /// <summary>
     /// Informationen zur Selbstbeteiligung.<br/>
     /// <u><b>Deductible:</b></u> Information about the deductible.
@@ -97,20 +88,6 @@ public class VersicherungsTyp
     /// </summary>
     [XmlElement("code", Namespace = SchemeConstants.XJustizCore_Tns)]
     public string? Code { get; set; }
-}
-
-/// <summary>
-/// Fahrzeugdaten.<br/>
-/// <u><b>Vehicle:</b></u> Vehicle data.
-/// </summary>
-public class Fahrzeug
-{
-    /// <summary>
-    /// Das Fahrzeugkennzeichen.<br/>
-    /// <u><b>License plate:</b></u> The license plate.
-    /// </summary>
-    [XmlElement("fahrzeugkennzeichen", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public string? Fahrzeugkennzeichen { get; set; }
 }
 
 /// <summary>
