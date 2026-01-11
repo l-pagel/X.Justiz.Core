@@ -5,22 +5,11 @@
   <xs:element name="nachricht.gds.uebermittlungSchriftgutobjekte.0005005" nillable="true" type="tns:UebermittlungSchriftgutobjekteNachricht" />
   <xs:complexType name="UebermittlungSchriftgutobjekteNachricht">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="nachrichtenkopf" type="tns:NachrichtenkopfCore" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nachrichtenkopf" type="tns:Nachrichtenkopf" />
       <xs:element minOccurs="0" maxOccurs="1" name="grunddaten" type="tns:Grunddaten" />
       <xs:element minOccurs="0" maxOccurs="1" name="schriftgutobjekte" type="tns:Schriftgutobjekte" />
     </xs:sequence>
     <xs:attribute xmlns:q1="http://www.w3.org/2001/XMLSchema-instance" ref="q1:schemaLocation" />
-  </xs:complexType>
-  <xs:complexType name="NachrichtenkopfCore">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:Nachrichtenkopf">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="1" name="xjustizCoreVersion" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="xjustizReferenzVersion" type="xs:string" />
-        </xs:sequence>
-        <xs:attribute name="xjustizVersion" type="xs:string" />
-      </xs:extension>
-    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="Nachrichtenkopf">
     <xs:sequence>
