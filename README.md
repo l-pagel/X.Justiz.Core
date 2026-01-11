@@ -20,7 +20,7 @@ The "Arbeitsgruppe Schnittstellen" (Interfaces Working Group) of the [**LegalTec
 The official [**X.Justiz standard**](https://xjustiz.justiz.de/) serves as the basis, as it is the established benchmark for electronic legal transactions (ERV) in Germany and is maintained by the Federal-State Commission (BLK-AG IT-Standards).
 
 > [!IMPORTANT]  
->We want to hear from you! Whether you have questions, suggestions, or want to contribute, we welcome engagement from everyone. Please join our discussions:
+>We want to hear from you! Whether you have questions, suggestions, bug-reports or want to contribute, we welcome engagement from everyone. Please join our discussions:
 > 👉 **[GitHub Discussions](https://github.com/l-pagel/X.Justiz.Core/discussions)**
 
 ## Motivation

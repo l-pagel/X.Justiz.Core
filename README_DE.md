@@ -20,7 +20,7 @@ Die „Arbeitsgruppe Schnittstellen“ des [**LegalTech Verband Deutschland**]( 
 Als Basis dient der offizielle [**X.Justiz-Standard**]( https://xjustiz.justiz.de/ ), da dieser der etablierte Maßstab im elektronischen Rechtsverkehr (ERV) ist und von der Bund-Länder-Kommission (BLK-AG IT-Standards) gepflegt wird.
 
 > [!IMPORTANT]  
-> Wir freuen uns auf Ihre Beteiligung! Ob Fragen, Anregungen oder Mitwirkung am Standard – wir laden alle Nutzer ein, sich aktiv einzubringen. Besuchen Sie unsere Diskussionen:
+> Wir freuen uns auf Ihre Beteiligung! Ob Fragen, Anregungen, Fehlermeldungen oder Mitwirkung am Standard – wir laden alle Nutzer ein, sich aktiv einzubringen. Besuchen Sie unsere Diskussionen:
 > 👉 **[GitHub Discussions](https://github.com/l-pagel/X.Justiz.Core/discussions)**
 
 ## Motivation
