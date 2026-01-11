@@ -30,13 +30,13 @@ public static class SchemeConstants
     /// Enthält Informationen zur neuesten X.Justiz Core-Version.<br/>
     /// <u><b>Latest XJustiz core version:</b></u> Contains information about the latest XJustiz Core version.
     /// </summary>
-    public static class LatestXJustizCoreVersion
+    public static class XJustizVersion
     {
         /// <summary>
         /// Die neueste X.Justiz Core-Version.<br/>
         /// <u><b>Version:</b></u> The latest XJustiz Core version.
         /// </summary>
-        public static XJustizCoreVersion Version => XJustizCoreVersion.V0_2_0;
+        public static XJustizCoreVersion LatestCoreVersion => XJustizCoreVersion.V0_2_0;
 
         /// <summary>
         /// Die Zeichenkettendarstellung der neuesten X.Justiz Core-Version (z.B. '0.2.0').<br/>
@@ -46,7 +46,7 @@ public static class SchemeConstants
         {
             get
             {
-                var name = Version.ToString();   // "V0_2_0"
+                var name = LatestCoreVersion.ToString();   // "V0_2_0"
                 return name.TrimStart('V').Replace('_', '.'); // "0.2.0"
             }
         }
@@ -55,7 +55,7 @@ public static class SchemeConstants
         /// Die referenzierte XJustiz-Version.<br/>
         /// <u><b>XJustiz reference version:</b></u> The referenced XJustiz version.
         /// </summary>
-        public static XJustizVersion XJustizReferenzVersion => XJustizVersion.V3_5_1;
+        public static Util.Versioning.XJustizVersion XJustizReferenzVersion => Util.Versioning.XJustizVersion.V3_5_1;
 
         /// <summary>
         /// Die Zeichenkettendarstellung der referenzierten XJustiz-Version (z.B. '3.5.1').<br/>

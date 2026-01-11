@@ -60,20 +60,6 @@ public class VersicherungCore
     public VersicherungsTyp? Versicherungstyp { get; set; }
 
     /// <summary>
-    /// Der Typ der Rechtsschutzversicherung.<br/>
-    /// <u><b>Legal protection type:</b></u> The type of legal protection insurance.
-    /// </summary>
-    [XmlElement("rechtsschutsversicherungstyp", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public RechtschutzVersicherungsTyp? RechtsschutzTyp { get; set; }
-
-    /// <summary>
-    /// Das versicherte Fahrzeug.<br/>
-    /// <u><b>Vehicle:</b></u> The insured vehicle.
-    /// </summary>
-    [XmlElement("fahrzeug", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public Fahrzeug? Fahrzeug { get; set; }
-
-    /// <summary>
     /// Informationen zur Selbstbeteiligung.<br/>
     /// <u><b>Deductible:</b></u> Information about the deductible.
     /// </summary>
@@ -88,60 +74,13 @@ public class VersicherungCore
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
 }
 
+//TODO: Hier brauchen wir ein enum, ich bin mir nicht sicher welche liste hier sinn macht
+
 /// <summary>
 /// Typ der VersicherungCore.<br/>
 /// <u><b>Insurance type:</b></u> Insurance type.
 /// </summary>
 public class VersicherungsTyp
-{
-    /// <summary>
-    /// Der Code.<br/>
-    /// <u><b>Code:</b></u> The code.
-    /// </summary>
-    [XmlElement("code", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public string? Code { get; set; }
-}
-
-/// <summary>
-/// Typ der Rechtsschutzversicherung.<br/>
-/// <u><b>Legal protection insurance type:</b></u> Legal protection insurance type.
-/// </summary>
-public class RechtschutzVersicherungsTyp
-{
-    /// <summary>
-    /// Der Code.<br/>
-    /// <u><b>Code:</b></u> The code.
-    /// </summary>
-    [XmlElement("code", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public string? Code { get; set; }
-}
-
-/// <summary>
-/// Fahrzeugdaten.<br/>
-/// <u><b>Vehicle:</b></u> Vehicle data.
-/// </summary>
-public class Fahrzeug
-{
-    /// <summary>
-    /// Das Fahrzeugkennzeichen.<br/>
-    /// <u><b>License plate:</b></u> The license plate.
-    /// </summary>
-    [XmlElement("fahrzeugkennzeichen", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public string? Fahrzeugkennzeichen { get; set; }
-
-    /// <summary>
-    /// Der Typ der Fahrzeugversicherung.<br/>
-    /// <u><b>Vehicle insurance type:</b></u> The vehicle insurance type.
-    /// </summary>
-    [XmlElement("fahrzeugversicherungstyp", Namespace = SchemeConstants.XJustizCore_Tns)]
-    public FahrzeugversicherungsTyp? Fahrzeugversicherungstyp { get; set; }
-}
-
-/// <summary>
-/// Typ der Fahrzeugversicherung.<br/>
-/// <u><b>Vehicle insurance type:</b></u> Vehicle insurance type.
-/// </summary>
-public class FahrzeugversicherungsTyp
 {
     /// <summary>
     /// Der Code.<br/>
