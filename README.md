@@ -9,6 +9,8 @@ X.Justiz Core is a lightweight schema for data exchange between software solutio
 - [Background](#background)
 - [Motivation](#motivation)
 - [Goals & Benefits](#goals--benefits)
+- [X.Justiz Compatibility](#xjustiz-compatibility)
+- [Usage of Codes](#usage-of-codes)
 - [Implementation (SDKs)](#implementation-sdks)
 - [Specification & Documentation](#specification--documentation)
 
@@ -34,6 +36,44 @@ The goal of X.Justiz Core is efficient interoperability:
 *   **Open Source:** Provided free of charge to promote a networked ecosystem.
 
 ![X.Justiz Core](./.media/README/xjustizcore-venn_EN.drawio.svg)
+
+## X.Justiz Compatibility
+X.Justiz Core is fully compatible with **X.Justiz 3.2.1 through X.Justiz 3.6.2**.  
+With some compatibility trade-offs, X.Justiz Core data can also be used compatibly with older versions (up to 2.1.0).
+
+## Usage of Codes
+In X.Justiz Core, business data (such as countries, roles, or courts) are identified via standardized **codes / keys**. This ensures machine-readable uniqueness across system boundaries.
+
+### Origin and Management
+Most code lists are provided centrally by [**XRepository**](https://www.xrepository.de/). Each list is identifiable via a unique URI and a specific `versionlistid`. This allows for precise tracking of changes to the catalogs (e.g., new countries or changed role designations). For example:
+
+| Entity | Versionlistid | Source |
+| ----- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Country | 2024-08-01 | [XRepository](https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01:technischerBestandteilGenericode) |
+| Country | 2023-02-24 | [XRepository](https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24:technischerBestandteilGenericode) |
+| ...   | ...        | ...    |
+
+### Application in Data Exchange
+In some code lists, there are multiple definitions for individual codes. For instance, in the "Country" code list, the entry for "Germany" has the following values:
+
+| Property | Value |
+| --- | --- |
+| **Key (Country)** | 000 |
+| **Search term** | Deutschland |
+| **Short name** | Deutschland |
+| **Full name** | die Bundesrepublik Deutschland |
+| **Nationality** | deutsch |
+| **ISO-Alpha-3** | DEU |
+| **ISO-Alpha-2** | DE |
+
+Although the technical code (e.g., `000` for Germany) should primarily be used, X.Justiz also allows the use of alternative representations (e.g., `Deutschland`, `DE`, `DEU`, etc.). X.Justiz Core supports receiving / reading these alternative representations and can map them intelligently to ensure maximum flexibility during implementation.
+
+We still recommend using the codes (e.g., `000` for Germany) primarily. The SDKs automatically use the technical codes when sending / writing data.
+
+### Project Scope
+To facilitate development, we have integrated all relevant catalogs directly into our SDKs. Today, there are 3,397 codes in 26 different version lists across 8 main code types (Country, Role, Court, Document Class, etc.).
+
+We have placed special emphasis on documentation: All codes have been elaborately annotated **bilingually (German and English)** with descriptions and summaries to help international development teams get started with the German legal system.
 
 ## Implementation (SDKs)
 To accelerate integration, the project provides software libraries.
