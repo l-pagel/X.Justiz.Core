@@ -19,6 +19,10 @@ The "Arbeitsgruppe Schnittstellen" (Interfaces Working Group) of the [**LegalTec
 
 The official [**X.Justiz standard**](https://xjustiz.justiz.de/) serves as the basis, as it is the established benchmark for electronic legal transactions (ERV) in Germany and is maintained by the Federal-State Commission (BLK-AG IT-Standards).
 
+> [!IMPORTANT]  
+>We want to hear from you! Whether you have questions, suggestions, or want to contribute, we welcome engagement from everyone. Please join our discussions:
+> 👉 **[GitHub Discussions](https://github.com/l-pagel/X.Justiz.Core/discussions)**
+
 ## Motivation
 The classic X.Justiz standard is feature-rich but often too complex for rapid exchange between private market participants. X.Justiz Core addresses the following points:
 
@@ -101,7 +105,7 @@ The SDKs are available in the following languages:
 ### X.Justiz
 - [Archive of all X.Justiz versions and specifications](/X.Justiz-Versions)
 
-### Quality Assurance
+## Quality Assurance
 The project is regularly checked for quality. You can find the current status on SonarCloud:  
 [![Quality Gate][badge-url]][link-url]
 

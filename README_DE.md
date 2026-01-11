@@ -19,6 +19,10 @@ Die „Arbeitsgruppe Schnittstellen“ des [**LegalTech Verband Deutschland**]( 
 
 Als Basis dient der offizielle [**X.Justiz-Standard**]( https://xjustiz.justiz.de/ ), da dieser der etablierte Maßstab im elektronischen Rechtsverkehr (ERV) ist und von der Bund-Länder-Kommission (BLK-AG IT-Standards) gepflegt wird.
 
+> [!IMPORTANT]  
+> Wir freuen uns auf Ihre Beteiligung! Ob Fragen, Anregungen oder Mitwirkung am Standard – wir laden alle Nutzer ein, sich aktiv einzubringen. Besuchen Sie unsere Diskussionen:
+> 👉 **[GitHub Discussions](https://github.com/l-pagel/X.Justiz.Core/discussions)**
+
 ## Motivation
 Der klassische X.Justiz-Standard ist funktionsreich, jedoch für den schnellen Austausch zwischen privaten Marktteilnehmern oft zu komplex. X.Justiz Core adressiert folgende Punkte:
 
@@ -101,7 +105,7 @@ Die SDKs sind in folgenden Sprachen verfügbar:
 ### X.Justiz
 - [Archiv aller X.Justiz Versionen und Spezifikationen](/X.Justiz-Versions)
 
-### Qualitätssicherung
+## Qualitätssicherung
 Das Projekt wird regelmäßig auf Qualität überprüft. Den aktuellen Status finden Sie auf SonarCloud:  
 [![Quality Gate][badge-url]][link-url]
 
