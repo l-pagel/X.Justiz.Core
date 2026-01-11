@@ -10,6 +10,7 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [Motivation](#motivation)
 - [Ziele & Vorteile](#ziele--vorteile)
 - [X.Justiz Kompatibilität](#xjustiz-kompatibilität)
+- [Nutzung von Codes](#nutzung-von-codes)
 - [Implementierung (SDKs)](#implementierung-sdk)
 - [Spezifikation & Dokumentation](#spezifikation--dokumentation)
 
@@ -39,6 +40,40 @@ Das Ziel von X.Justiz Core ist eine effiziente Interoperabilität:
 ## X.Justiz Kompatibilität
 X.Justiz Core ist vollständig kompatibel mit **X.Justiz 3.2.1 bis X.Justiz 3.6.2**.  
 Mit entsprechenden Kompatibilitätseinbußen können X.Justiz Core-Daten auch mit älteren Versionen (bis 2.1.0) kompatibel verwendet werden.
+
+## Nutzung von Codes
+In X.Justiz Core werden Fachdaten (wie Staaten, Rollen oder Gerichte) über standardisierte **Codes /Schlüssel** identifiziert. Dies gewährleistet eine maschinenlesbare Eindeutigkeit über Systemgrenzen hinweg.
+
+### Herkunft und Verwaltung
+Die meisten Codelisten werden zentral vom [**XRepository**](https://www.xrepository.de/) bereitgestellt. Jede Liste ist über eine eindeutige URI und eine spezifische `versionlistid` identifizierbar. Dies ermöglicht es, Änderungen an den Katalogen (z.B. neue Staaten oder geänderte Rollenbezeichnungen) präzise zu tracken. Bspw.:
+
+| Entität | Versionlistid | Quelle |
+| ----- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Staat | 2024-08-01 | [XRepository](https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2024-08-01:technischerBestandteilGenericode) |
+| Staat | 2023-02-24 | [XRepository](https://www.xrepository.de/api/xrepository/urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat_2023-02-24:technischerBestandteilGenericode) |
+| ...   | ...        | ...        |
+
+### Anwendung im Datenaustausch
+In einigen Code Listen gibt es Mehrfachdefinitionen für die einzelnen Codes. In der Code-Liste "Staat" gibt es bspw. den Eintrag für "Deutschland" mit folgenden Werten:
+
+| Merkmal | Wert |
+| --- | --- |
+| **Schlüssel (Staat)** | 000 |
+| **Suchbegriff** | Deutschland |
+| **Kurzname** | Deutschland |
+| **Vollständiger Name** | die Bundesrepublik Deutschland |
+| **Staatsangehörigkeit** | deutsch |
+| **ISO-Alpha-3** | DEU |
+| **ISO-Alpha-2** | DE |
+
+Obwohl primär der technische Code (z.B. `000` für Deutschland) verwendet werden sollte, ist laut X.Justiz auch die Verwendung der Alternativrepräsentationen (z.B. `Deutschland`, `DE`, `DEU`, usw.) erlaubt. X.Justiz Core unterstützt auch das Empfangen / Lesen der entsprechenden Alternativrepräsentationen und können diese intelligent mappen, um eine maximale Flexibilität bei der Implementierung zu gewährleisten.
+
+Wir legen dennoch nahe, primär die Codes (z.B. `000` für Deutschland) zu verwenden. Die SDKs verwenden beim Senden / Schreiben der Daten automatisch die technische Codes.
+
+### Umfang im Projekt
+Um Entwicklern die Arbeit zu erleichtern, haben wir alle relevanten Kataloge direkt in unsere SDKs integriert. Heute sind es 3.397 Codes in 26 verschiedenen Versionlisten aus 8 Haupt-Codetypen (Staat, Rolle, Gericht, Dokumentklasse, etc.).
+
+Besonderen Wert haben wir auf die Dokumentation gelegt: Alle Codes wurden von uns aufwendig **zweisprachig (Deutsch und Englisch)** mit Beschreibungen und Zusammenfassungen versehen, um auch internationalen Entwicklungsteams den Einstieg in das deutsche Rechtswesen zu erleichtern.
 
 ## Implementierung (SDKs)
 Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit.  
