@@ -131,11 +131,11 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -f X.Justiz-Core-Versions
+          git add -f X.Justiz-Core-Versions schemas
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update generated XSDs [skip ci]"
+            git commit -m "chore: update generated XSDs and schemas [skip ci]"
             if [[ "${{ github.ref_type }}" == "tag" ]]; then
               echo "Pushing to main since we are on a tag"
               git push origin HEAD:main
@@ -144,9 +144,98 @@ jobs:
             fi
           fi
 
+  generate-java-sdk:
+    name: Generate Java SDK
+    needs: [generate-xsd]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Pull latest changes
+        run: git pull origin ${{ github.ref_name }} || true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Generate Java Models from Schema
+        run: |
+          npx jsonschema2pojo \
+            --source schemas/xjustiz-core.schema.json \
+            --target java/src/main/java \
+            --package de.xjustiz.core.models.generated \
+            --annotation-style JACKSON2 \
+            --include-jsr303-annotations \
+            --date-time-type java.time.OffsetDateTime \
+            --use-title-as-classname
+
+      - name: Build and Test Java SDK
+        working-directory: java
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build test
+
+      - name: Commit Generated Models
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add java/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: regenerate Java models from schema [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+  verify-cross-sdk-parity:
+    name: Verify Cross-SDK Parity
+    needs: [generate-java-sdk]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Pull latest changes
+        run: git pull origin ${{ github.ref_name }} || true
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run .NET Parity Tests
+        run: dotnet test dotnet/test/xjustiz.core-dotnet.CrossSdkTests
+
+      - name: Run Java Parity Tests
+        working-directory: java
+        run: |
+          chmod +x ./gradlew
+          ./gradlew test --tests "*SchemaParityTest*"
+
+
   publish:
     name: Version and Publish
-    needs: [build-and-test, generate-xsd, verify-documentation]
+    needs: [build-and-test, generate-xsd, verify-documentation, verify-cross-sdk-parity]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
