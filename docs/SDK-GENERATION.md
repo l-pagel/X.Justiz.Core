@@ -54,19 +54,13 @@ If any discrepancy is found, the pipeline **fails**.
 
 ### Local Development
 
-To regenerate Java models locally:
+To regenerate Java models locally (requires Java 17+):
 
 ```powershell
-# Windows
 ./scripts/generate-java-models.ps1
-
-# Or with npm directly
-npx jsonschema2pojo \
-  --source schemas/xjustiz-core.schema.json \
-  --target java/src/main/java \
-  --package de.xjustiz.core.models.generated \
-  --annotation-style JACKSON2
 ```
+
+The script will automatically download the jsonschema2pojo CLI tool on first run.
 
 ### Running Parity Tests
 

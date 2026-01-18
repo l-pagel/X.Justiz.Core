@@ -166,20 +166,21 @@ jobs:
         if: github.event_name == 'push'
         run: git pull origin ${{ github.ref_name }} || true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Download jsonschema2pojo CLI
+        run: |
+          curl -L -o jsonschema2pojo.tar.gz https://github.com/joelittlejohn/jsonschema2pojo/releases/download/jsonschema2pojo-1.2.2/jsonschema2pojo-1.2.2.tar.gz
+          tar -xzf jsonschema2pojo.tar.gz
+          chmod +x jsonschema2pojo-1.2.2/bin/jsonschema2pojo
+
       - name: Generate Java Models from Schema
         run: |
-          npx jsonschema2pojo \
+          ./jsonschema2pojo-1.2.2/bin/jsonschema2pojo \
             --source schemas/xjustiz-core.schema.json \
             --target java/src/main/java \
             --package de.xjustiz.core.models.generated \

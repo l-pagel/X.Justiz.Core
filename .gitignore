@@ -354,3 +354,6 @@ healthchecksdb
 
 # Generated XSD files
 X.Justiz-Core-Versions/**/X.Justiz Core_*.xsd
+
+# Downloaded CLI tools
+.tools/

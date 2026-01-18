@@ -16,36 +16,58 @@ if (-not $SkipSchemaGeneration) {
     Push-Location $repoRoot
     dotnet run --project dotnet/src/xjustiz.core-dotnet.XsdGenerator -- .
     Pop-Location
-} else {
+}
+else {
     Write-Host "Step 1: Skipping schema generation (using existing schema)" -ForegroundColor Gray
 }
 
-# Step 2: Generate Java models from JSON Schema
-Write-Host "Step 2: Generating Java models from JSON Schema..." -ForegroundColor Yellow
+# Step 2: Download jsonschema2pojo if not present
+$toolDir = Join-Path $repoRoot ".tools"
+$jsonschema2pojoDir = Join-Path $toolDir "jsonschema2pojo-1.2.2"
+$jsonschema2pojoExe = Join-Path $jsonschema2pojoDir "bin\jsonschema2pojo.bat"
 
-$schemaPath = Join-Path $repoRoot "schemas/xjustiz-core.schema.json"
-$outputPath = Join-Path $repoRoot "java/src/main/java"
+if (-not (Test-Path $jsonschema2pojoExe)) {
+    Write-Host "Step 2: Downloading jsonschema2pojo CLI..." -ForegroundColor Yellow
+    
+    New-Item -ItemType Directory -Force -Path $toolDir | Out-Null
+    
+    $zipUrl = "https://github.com/joelittlejohn/jsonschema2pojo/releases/download/jsonschema2pojo-1.2.2/jsonschema2pojo-1.2.2.zip"
+    $zipPath = Join-Path $toolDir "jsonschema2pojo.zip"
+    
+    Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
+    Expand-Archive -Path $zipPath -DestinationPath $toolDir -Force
+    Remove-Item $zipPath
+    
+    Write-Host "Downloaded jsonschema2pojo to: $jsonschema2pojoDir" -ForegroundColor Gray
+}
+else {
+    Write-Host "Step 2: jsonschema2pojo already downloaded" -ForegroundColor Gray
+}
+
+# Step 3: Generate Java models from JSON Schema
+Write-Host "Step 3: Generating Java models from JSON Schema..." -ForegroundColor Yellow
+
+$schemaPath = Join-Path $repoRoot "schemas\xjustiz-core.schema.json"
+$outputPath = Join-Path $repoRoot "java\src\main\java"
 
 if (-not (Test-Path $schemaPath)) {
     Write-Error "JSON Schema not found at: $schemaPath"
     exit 1
 }
 
-# Use npx to run jsonschema2pojo
-npx jsonschema2pojo `
+& $jsonschema2pojoExe `
     --source $schemaPath `
     --target $outputPath `
     --package de.xjustiz.core.models.generated `
     --annotation-style JACKSON2 `
     --include-jsr303-annotations `
     --date-time-type java.time.OffsetDateTime `
-    --use-title-as-classname `
-    --remove-old-output
+    --use-title-as-classname
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "jsonschema2pojo failed"
     exit 1
 }
 
-Write-Host "Step 3: Java models generated successfully!" -ForegroundColor Green
-Write-Host "Output: $outputPath/de/xjustiz/core/models/generated/" -ForegroundColor Gray
+Write-Host "Step 4: Java models generated successfully!" -ForegroundColor Green
+Write-Host "Output: $outputPath\de\xjustiz\core\models\generated\" -ForegroundColor Gray
