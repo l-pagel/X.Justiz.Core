@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Xml.Serialization;
+using NJsonSchema;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -18,9 +19,11 @@ public class Program
 
         var repoRoot = args[0];
         var outputBaseDir = Path.Combine(repoRoot, "X.Justiz-Core-Versions");
+        var schemaDir = Path.Combine(repoRoot, "schemas");
 
         Console.WriteLine($"Repository Root: {repoRoot}");
         Console.WriteLine($"Output Base Dir: {outputBaseDir}");
+        Console.WriteLine($"Schema Dir: {schemaDir}");
 
         var modelAssembly = typeof(UebermittlungSchriftgutobjekteNachricht).Assembly;
         var referencedVersions = GetReferencedVersions(modelAssembly);
@@ -58,6 +61,7 @@ public class Program
         Console.WriteLine("--------------------------------------------------");
         Console.WriteLine(string.Empty);
 
+        // Generate XSD for each version
         foreach (var version in allVersions)
         {
             if (referencedVersions.Contains(version))
@@ -69,6 +73,9 @@ public class Program
                 Console.WriteLine($"Skipping version {version} (No schema changes defined).");
             }
         }
+
+        // Generate JSON Schema for SDK generation (latest version only)
+        GenerateJsonSchema(schemaDir);
     }
 
     private static void GenerateXsdForVersion(XJustizCoreVersion version, string baseDir)
@@ -180,5 +187,75 @@ public class Program
                 versions.Add(attr.Removed);
             }
         }
+    }
+
+    private static void GenerateJsonSchema(string outputDir)
+    {
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine("Generating JSON Schema for SDK generation...");
+        Console.WriteLine("--------------------------------------------------");
+
+        Directory.CreateDirectory(outputDir);
+
+        var schema = JsonSchema.FromType<UebermittlungSchriftgutobjekteNachricht>();
+
+        // Add metadata
+        schema.Title = "X.Justiz Core Schema";
+        schema.Description = "JSON Schema for X.Justiz Core document transmission messages. Generated from .NET project.";
+
+        var versionString = SchemeConstants.XJustizVersion.VersionString;
+        var outputPath = Path.Combine(outputDir, "xjustiz-core.schema.json");
+
+        File.WriteAllText(outputPath, schema.ToJson());
+        Console.WriteLine($"Written JSON Schema: {outputPath}");
+
+        // Also generate a minimal OpenAPI document for openapi-generator compatibility
+        GenerateOpenApiDocument(outputDir, schema, versionString);
+    }
+
+    private static void GenerateOpenApiDocument(string outputDir, JsonSchema rootSchema, string version)
+    {
+        var openApiPath = Path.Combine(outputDir, "openapi.yaml");
+
+        // Generate a minimal OpenAPI 3.0 document that references the JSON Schema
+        var openApiContent = $"""
+            openapi: 3.0.3
+            info:
+              title: X.Justiz Core API
+              description: API for X.Justiz Core document transmission messages
+              version: "{version}"
+              license:
+                name: MIT
+                url: https://opensource.org/licenses/MIT
+            servers:
+              - url: https://api.xjustiz.de
+                description: X.Justiz Core API Server
+            paths:
+              /messages:
+                post:
+                  summary: Submit a document transmission message
+                  operationId: submitMessage
+                  requestBody:
+                    required: true
+                    content:
+                      application/json:
+                        schema:
+                          $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+                      application/xml:
+                        schema:
+                          $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+                  responses:
+                    '200':
+                      description: Message accepted
+                    '400':
+                      description: Invalid message format
+            components:
+              schemas:
+                UebermittlungSchriftgutobjekteNachricht:
+                  $ref: 'xjustiz-core.schema.json'
+            """;
+
+        File.WriteAllText(openApiPath, openApiContent);
+        Console.WriteLine($"Written OpenAPI document: {openApiPath}");
     }
 }

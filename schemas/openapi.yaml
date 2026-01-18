@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: X.Justiz Core API
+  description: API for X.Justiz Core document transmission messages
+  version: "0.2.0"
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: https://api.xjustiz.de
+    description: X.Justiz Core API Server
+paths:
+  /messages:
+    post:
+      summary: Submit a document transmission message
+      operationId: submitMessage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+      responses:
+        '200':
+          description: Message accepted
+        '400':
+          description: Invalid message format
+components:
+  schemas:
+    UebermittlungSchriftgutobjekteNachricht:
+      $ref: 'xjustiz-core.schema.json'
