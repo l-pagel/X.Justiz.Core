@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build-and-test:
-    name: Build, Test and Analyze
+    name: Build, Test .NET SDK
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
@@ -208,7 +208,7 @@ jobs:
 
   build-java-sdk:
     name: Build and Test Java SDK
-    needs: [generate-xsd]
+    needs: [build-and-test, generate-xsd, verify-documentation]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
