@@ -18,6 +18,10 @@ public class XJustizSerializer {
 
     private final Format format;
     private final ObjectMapper mapper;
+    
+    /**
+     * Whether to fail on unknown properties during deserialization.
+     */
     private final boolean failOnUnknownProperties;
 
     private XJustizSerializer(Format format, boolean failOnUnknownProperties) {
