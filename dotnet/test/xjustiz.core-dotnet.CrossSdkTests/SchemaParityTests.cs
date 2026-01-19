@@ -57,16 +57,9 @@ public class SchemaParityTests
             "Schriftgutobjekte"
         };
 
-        var missingClasses = new List<string>();
-
-        foreach (var className in expectedClasses)
-        {
-            var javaFilePath = Path.Combine(JavaModelsPath, $"{className}.java");
-            if (!File.Exists(javaFilePath))
-            {
-                missingClasses.Add(className);
-            }
-        }
+        var missingClasses = expectedClasses
+            .Where(className => !File.Exists(Path.Combine(JavaModelsPath, $"{className}.java")))
+            .ToList();
 
         Assert.True(missingClasses.Count == 0,
             $"Missing Java model classes: {string.Join(", ", missingClasses)}");

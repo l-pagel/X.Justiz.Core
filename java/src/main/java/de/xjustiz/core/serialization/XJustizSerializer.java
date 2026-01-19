@@ -18,10 +18,16 @@ public class XJustizSerializer {
 
     private final Format format;
     private final ObjectMapper mapper;
+    
+    /**
+     * Whether to fail on unknown properties during deserialization.
+     */
+    private final boolean failOnUnknownProperties;
 
-    private XJustizSerializer(Format format) {
+    private XJustizSerializer(Format format, boolean failOnUnknownProperties) {
         this.format = format;
-        this.mapper = createMapper(format);
+        this.failOnUnknownProperties = failOnUnknownProperties;
+        this.mapper = createMapper(format, failOnUnknownProperties);
     }
 
     /**
@@ -107,7 +113,7 @@ public class XJustizSerializer {
         return format;
     }
 
-    private static ObjectMapper createMapper(Format format) {
+    private static ObjectMapper createMapper(Format format, boolean failOnUnknownProperties) {
         ObjectMapper mapper = format == Format.XML
                 ? XmlMapper.builder().build()
                 : new ObjectMapper();
@@ -115,7 +121,7 @@ public class XJustizSerializer {
         // Configure common settings
         mapper.registerModule(new JavaTimeModule());
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, failOnUnknownProperties);
         mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
         return mapper;
@@ -126,6 +132,7 @@ public class XJustizSerializer {
      */
     public static class Builder {
         private Format format = Format.XML;
+        private boolean failOnUnknownProperties = false;
 
         private Builder() {
         }
@@ -142,12 +149,24 @@ public class XJustizSerializer {
         }
 
         /**
+         * Sets whether to fail on unknown properties during deserialization.
+         * Default is false (unknown properties are ignored).
+         *
+         * @param failOnUnknownProperties whether to fail on unknown properties
+         * @return this builder
+         */
+        public Builder failOnUnknownProperties(boolean failOnUnknownProperties) {
+            this.failOnUnknownProperties = failOnUnknownProperties;
+            return this;
+        }
+
+        /**
          * Builds the serializer.
          *
          * @return a new XJustizSerializer instance
          */
         public XJustizSerializer build() {
-            return new XJustizSerializer(format);
+            return new XJustizSerializer(format, failOnUnknownProperties);
         }
     }
 }
