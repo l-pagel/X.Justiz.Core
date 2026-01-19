@@ -4,8 +4,8 @@ plugins {
     `maven-publish`
 }
 
-group = "de.xjustiz"
-version = "0.1.0-SNAPSHOT"
+group = "io.github.l-pagel"
+version = System.getenv("PROJECT_VERSION") ?: "0.1.0-SNAPSHOT"
 
 java {
     toolchain {
@@ -75,6 +75,16 @@ publishing {
                     developerConnection = "scm:git:ssh://github.com/l-pagel/X.Justiz.Core.git"
                     url = "https://github.com/l-pagel/X.Justiz.Core"
                 }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/l-pagel/X.Justiz.Core")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
