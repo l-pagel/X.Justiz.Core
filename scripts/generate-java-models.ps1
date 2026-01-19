@@ -55,17 +55,19 @@ if (-not (Test-Path $schemaPath)) {
     exit 1
 }
 
+# Run jsonschema2pojo with correct flags
 & $jsonschema2pojoExe `
     --source $schemaPath `
     --target $outputPath `
     --package de.xjustiz.core.models.generated `
     --annotation-style JACKSON2 `
-    --include-jsr303-annotations `
-    --date-time-type java.time.OffsetDateTime `
-    --use-title-as-classname
+    --jsr303-annotations `
+    --datetime-class java.time.OffsetDateTime `
+    --use-title-as-classname `
+    --useJakartaValidation
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "jsonschema2pojo failed"
+    Write-Error "jsonschema2pojo failed with exit code: $LASTEXITCODE"
     exit 1
 }
 

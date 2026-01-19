@@ -185,9 +185,10 @@ jobs:
             --target java/src/main/java \
             --package de.xjustiz.core.models.generated \
             --annotation-style JACKSON2 \
-            --include-jsr303-annotations \
-            --date-time-type java.time.OffsetDateTime \
-            --use-title-as-classname
+            --jsr303-annotations \
+            --datetime-class java.time.OffsetDateTime \
+            --use-title-as-classname \
+            --useJakartaValidation
 
       - name: Build and Test Java SDK
         working-directory: java
