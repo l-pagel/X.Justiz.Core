@@ -70,8 +70,10 @@ X.Justiz.Core/
 ├── schemas/
 │   └── xjustiz-core.schema.json        # Generated from .NET
 ├── java/src/main/java/de/xjustiz/core/
-│   ├── models/                          # Manual Java models
+│   ├── models/                          # Manually maintained Java models
 │   └── serialization/                   # Utilities
 └── scripts/
-    └── generate-java-models.ps1         # Optional helper script
+    └── generate-java-models.ps1         # Experimental code generation script (not used in production)
 ```
+
+**Note:** The `generate-java-models.ps1` script is an experimental tool for generating Java models from JSON Schema using jsonschema2pojo. Currently, Java models are manually maintained to ensure high quality and proper annotations. The script is provided for reference but is not part of the standard workflow.
