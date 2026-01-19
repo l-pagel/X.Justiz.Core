@@ -91,6 +91,21 @@ jobs:
           dotnet test $TEST_PROJECT_PATH --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
+      - name: Test Summary
+        uses: test-summary/action@v2
+        if: always()
+        with:
+          paths: "**/*.trx"
+
+      - name: Build Summary
+        if: always()
+        run: |
+          echo "## 🛠️ .NET Build Status" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+          echo "| Build | ${{ job.status == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| SonarCloud | [View Analysis](https://sonarcloud.io/dashboard?id=l-pagel_X.Justiz.Core) 🔍 |" >> $GITHUB_STEP_SUMMARY
+
 
   verify-documentation:
     name: Verify Data Model Documentation
@@ -106,7 +121,32 @@ jobs:
           python-version: '3.x'
 
       - name: Run verification script
-        run: python scripts/verify_documentation.py
+        id: verify
+        run: |
+          python scripts/verify_documentation.py > verification_output.txt
+          cat verification_output.txt
+          
+          # Extract stats
+          TYPES=$(grep "Total documented types:" verification_output.txt | cut -d: -f2 | xargs)
+          PROPS=$(grep "Total documented properties:" verification_output.txt | cut -d: -f2 | xargs)
+          
+          echo "types=$TYPES" >> $GITHUB_OUTPUT
+          echo "props=$PROPS" >> $GITHUB_OUTPUT
+
+      - name: Documentation Summary
+        if: always()
+        run: |
+          echo "## 📚 Documentation Verification" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.verify.outcome }}" == "success" ]; then
+            echo "✅ **Verification Passed**" >> $GITHUB_STEP_SUMMARY
+            echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+            echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+            echo "| Documented Types | ${{ steps.verify.outputs.types }} |" >> $GITHUB_STEP_SUMMARY
+            echo "| Documented Properties | ${{ steps.verify.outputs.props }} |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Verification Failed**" >> $GITHUB_STEP_SUMMARY
+            echo "Please check the job logs for missing types or properties." >> $GITHUB_STEP_SUMMARY
+          fi
 
   generate-xsd:
     name: Generate XSDs
@@ -140,16 +180,30 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add -f X.Justiz-Core-Versions schemas
+
+          echo "## 📄 XSD Generation Results" >> $GITHUB_STEP_SUMMARY
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "✅ **No changes**: Schemas are up to date." >> $GITHUB_STEP_SUMMARY
           else
+            # Capture changed files
+            CHANGED_FILES=$(git diff --staged --name-only | sed 's/^/- /')
+            
             git commit -m "chore: update generated XSDs and schemas [skip ci]"
             if [[ "${{ github.ref_type }}" == "tag" ]]; then
               echo "Pushing to main since we are on a tag"
               git push origin HEAD:main
+              echo "⚠️ **Changes detected**: Updated XSDs have been pushed to \`main\`." >> $GITHUB_STEP_SUMMARY
             else
               git push origin HEAD:${{ github.ref_name }}
+              echo "⚠️ **Changes detected**: Updated XSDs have been pushed to \`${{ github.ref_name }}\`." >> $GITHUB_STEP_SUMMARY
             fi
+
+            echo "<details><summary>View changed files</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "$CHANGED_FILES" >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
           fi
 
   build-java-sdk:
@@ -176,6 +230,12 @@ jobs:
       - name: Build and Test Java SDK
         working-directory: java
         run: gradle build test
+
+      - name: Java Test Summary
+        uses: test-summary/action@v2
+        if: always()
+        with:
+          paths: "**/test-results/**/*.xml"
 
 
   publish:
@@ -226,3 +286,10 @@ jobs:
           --api-key ${{ secrets.NUGET_API_KEY }}
           --source https://api.nuget.org/v3/index.json
           --skip-duplicate
+
+      - name: Publish Summary
+        if: success()
+        run: |
+          echo "## 🚀 Package Published" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Package**: [X.Justiz.Core on NuGet](https://www.nuget.org/packages/X.Justiz.Core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY
