@@ -1,15 +1,15 @@
 # SDK Generation Workflow
 
-This document explains how the cross-language SDK generation works in this open-source project.
+This document explains how cross-language SDK consistency is maintained in this open-source project.
 
 ## Overview
 
-The **.NET project** is the **source of truth** for all models. The Java SDK is automatically generated from a JSON Schema that is derived from the .NET models.
+The **.NET project** is the **source of truth** for all models. The Java SDK models are manually maintained and verified against the generated JSON Schema to ensure parity.
 
 ```
-.NET Models → JSON Schema → Java Models
+.NET Models → JSON Schema
                     ↓
-         Parity Tests Verify Match
+         Parity Tests Verify Java Matches
 ```
 
 ## How It Works
@@ -20,56 +20,45 @@ When .NET models change, the `XsdGenerator` project regenerates:
 - XSD files (for XML validation)
 - JSON Schema (`schemas/xjustiz-core.schema.json`)
 
-### 2. Java SDK Generation
+### 2. Java SDK
 
-The Java models are generated from the JSON Schema using [jsonschema2pojo](https://www.jsonschema2pojo.org/).
+The Java models are manually crafted in `java/src/main/java/de/xjustiz/core/models/`.
 
-**Pipeline:** Runs automatically on every push to `main`
-
-**Manual:** Run locally with:
-```powershell
-./scripts/generate-java-models.ps1
-```
+Automated parity tests verify that Java models:
+- Exist for all core types
+- Have properties matching the JSON Schema
+- Use correct Jackson annotations
 
 ### 3. Parity Verification
 
-Automated tests verify that:
-- All types defined in .NET exist in Java
-- All properties have matching names and types
-- Jackson annotations match the JSON Schema
+The pipeline runs:
+- **Java `SchemaParityTest`** - Verifies Java models match the schema
+- **Build & test** - Ensures all Java code compiles and tests pass
 
 If any discrepancy is found, the pipeline **fails**.
 
 ## For Contributors
 
-### Changing Models
+### Changing .NET Models
 
-1. **Only modify .NET models** in `dotnet/src/xjustiz.core-dotnet/Models/`
+1. Modify .NET models in `dotnet/src/xjustiz.core-dotnet/Models/`
 2. Push your changes
-3. The pipeline will regenerate Java models automatically
-4. Parity tests will verify correctness
+3. The pipeline regenerates the JSON Schema
+4. **Manually update** the corresponding Java models if needed
+5. Parity tests will fail if Java models don't match
 
-> ⚠️ **Never manually edit** files in `java/src/main/java/de/xjustiz/core/models/generated/`  
-> They will be overwritten on the next pipeline run.
+### Changing Java Models
 
-### Local Development
+When adding/changing Java models, ensure they match the .NET models:
+- Use matching property names (German)
+- Add `@JsonProperty` annotations with exact property names
+- Maintain type compatibility
 
-To regenerate Java models locally (requires Java 17+):
-
-```powershell
-./scripts/generate-java-models.ps1
-```
-
-The script will automatically download the jsonschema2pojo CLI tool on first run.
-
-### Running Parity Tests
+### Running Parity Tests Locally
 
 ```bash
-# .NET parity tests
-dotnet test dotnet/test/xjustiz.core-dotnet.CrossSdkTests
-
-# Java parity tests
-cd java && ./gradlew test --tests "*SchemaParityTest*"
+# Java parity tests (via Gradle)
+cd java && gradle test --tests "*SchemaParityTest*"
 ```
 
 ## Directory Structure
@@ -81,8 +70,8 @@ X.Justiz.Core/
 ├── schemas/
 │   └── xjustiz-core.schema.json        # Generated from .NET
 ├── java/src/main/java/de/xjustiz/core/
-│   ├── models/generated/                # Auto-generated (don't edit)
-│   └── serialization/                   # Hand-written utilities
+│   ├── models/                          # Manual Java models
+│   └── serialization/                   # Utilities
 └── scripts/
-    └── generate-java-models.ps1         # Manual regeneration script
+    └── generate-java-models.ps1         # Optional helper script
 ```

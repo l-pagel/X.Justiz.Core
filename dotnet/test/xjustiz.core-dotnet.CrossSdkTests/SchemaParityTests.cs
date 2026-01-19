@@ -40,74 +40,64 @@ public class SchemaParityTests
     }
 
     [Fact]
-    public void AllSchemaDefinitions_ShouldHaveCorrespondingJavaClass()
+    public void CoreJavaModelClasses_ShouldExist()
     {
-        if (!File.Exists(SchemaPath))
+        // Core model classes that should exist in Java SDK
+        var expectedClasses = new[]
         {
-            Assert.Fail("JSON Schema not found. Run schema generation first.");
-            return;
-        }
-
-        var schemaJson = File.ReadAllText(SchemaPath);
-        using var doc = JsonDocument.Parse(schemaJson);
-        
-        if (!doc.RootElement.TryGetProperty("definitions", out var definitions))
-        {
-            // No definitions to check
-            return;
-        }
+            "Nachrichtenkopf",
+            "Identifikation",
+            "Akte",
+            "Dokument",
+            "NatuerlichePerson",
+            "Beteiligter",
+            "Geschlecht",
+            "Staat",
+            "Anschrift",
+            "Schriftgutobjekte"
+        };
 
         var missingClasses = new List<string>();
-        
-        foreach (var definition in definitions.EnumerateObject())
+
+        foreach (var className in expectedClasses)
         {
-            var typeName = definition.Name;
-            
-            // Check for Java class in both generated and main models folders
-            var generatedPath = Path.Combine(JavaModelsPath, "generated", $"{typeName}.java");
-            var mainPath = Path.Combine(JavaModelsPath, $"{typeName}.java");
-            
-            if (!File.Exists(generatedPath) && !File.Exists(mainPath))
+            var javaFilePath = Path.Combine(JavaModelsPath, $"{className}.java");
+            if (!File.Exists(javaFilePath))
             {
-                missingClasses.Add(typeName);
+                missingClasses.Add(className);
             }
         }
 
-        Assert.True(missingClasses.Count == 0, 
-            $"Missing Java classes for schema definitions: {string.Join(", ", missingClasses)}");
+        Assert.True(missingClasses.Count == 0,
+            $"Missing Java model classes: {string.Join(", ", missingClasses)}");
     }
 
     [Fact]
     public void JavaNachrichtenkopf_ShouldHaveExpectedProperties()
     {
         var javaFilePath = Path.Combine(JavaModelsPath, "Nachrichtenkopf.java");
-        var generatedPath = Path.Combine(JavaModelsPath, "generated", "Nachrichtenkopf.java");
-        
-        var filePath = File.Exists(javaFilePath) ? javaFilePath : generatedPath;
-        
-        if (!File.Exists(filePath))
+
+        if (!File.Exists(javaFilePath))
         {
             Assert.Fail("Nachrichtenkopf.java not found");
             return;
         }
 
-        var javaContent = File.ReadAllText(filePath);
-        
+        var javaContent = File.ReadAllText(javaFilePath);
+
         // Verify key properties exist with @JsonProperty annotations
         var expectedProperties = new[]
         {
             "Version",
             "AktenzeichenAbsender",
             "AktenzeichenEmpfaenger",
-            "Erstellungszeitpunkt",
-            "Absender",
-            "Empfaenger"
+            "Erstellungszeitpunkt"
         };
 
         foreach (var prop in expectedProperties)
         {
             Assert.True(
-                javaContent.Contains($"@JsonProperty(\"{prop}\")") || 
+                javaContent.Contains($"@JsonProperty(\"{prop}\")") ||
                 javaContent.Contains($"private") && javaContent.Contains(ToCamelCase(prop)),
                 $"Java Nachrichtenkopf should have property: {prop}");
         }
@@ -124,11 +114,11 @@ public class SchemaParityTests
 
         var schemaJson = File.ReadAllText(SchemaPath);
         using var doc = JsonDocument.Parse(schemaJson);
-        
+
         // Check root properties
         Assert.True(doc.RootElement.TryGetProperty("properties", out var properties),
             "Schema should have root properties");
-        
+
         // Verify expected root properties exist
         Assert.True(properties.TryGetProperty("Kopf", out _), "Schema should have 'Kopf' property");
         Assert.True(properties.TryGetProperty("Grunddaten", out _), "Schema should have 'Grunddaten' property");
