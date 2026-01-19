@@ -190,11 +190,12 @@ jobs:
             --use-title-as-classname \
             --useJakartaValidation
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
       - name: Build and Test Java SDK
         working-directory: java
-        run: |
-          chmod +x ./gradlew
-          ./gradlew build test
+        run: gradle build test
 
       - name: Commit Generated Models
         if: github.event_name == 'push'
@@ -235,11 +236,12 @@ jobs:
       - name: Run .NET Parity Tests
         run: dotnet test dotnet/test/xjustiz.core-dotnet.CrossSdkTests
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
       - name: Run Java Parity Tests
         working-directory: java
-        run: |
-          chmod +x ./gradlew
-          ./gradlew test --tests "*SchemaParityTest*"
+        run: gradle test --tests "*SchemaParityTest*"
 
 
   publish:
