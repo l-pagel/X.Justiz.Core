@@ -92,7 +92,7 @@ jobs:
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
       - name: Test Summary
-        uses: test-summary/action@v2
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
         if: always()
         with:
           paths: "**/test-results.xml"
@@ -228,14 +228,14 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
 
       - name: Build and Test Java SDK
         working-directory: java
         run: gradle build test
 
       - name: Java Test Summary
-        uses: test-summary/action@v2
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
         if: always()
         with:
           paths: "**/test-results/**/*.xml"
@@ -316,7 +316,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
 
       - name: Get version from tag
         id: get_version
