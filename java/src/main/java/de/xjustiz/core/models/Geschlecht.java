@@ -16,10 +16,11 @@ public class Geschlecht {
     @XmlElement(name = "listVersionId", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionId", namespace = "http://www.xjustiz.de")
     @JsonProperty("ListVersionId")
+    @Nullable
     private String listVersionId;
 
-    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
     @JsonProperty("code")
     @Nullable
     private Integer code;
@@ -27,11 +28,12 @@ public class Geschlecht {
     public Geschlecht() {
     }
 
+    @Nullable
     public String getListVersionId() {
         return listVersionId;
     }
 
-    public void setListVersionId(String listVersionId) {
+    public void setListVersionId(@Nullable String listVersionId) {
         this.listVersionId = listVersionId;
     }
 

@@ -30,7 +30,6 @@ class SerializerTest {
         assertNotNull(json);
         assertTrue(json.contains("Kopf"));
         assertTrue(json.contains("AktenzeichenAbsender"));
-        System.out.println("JSON Output:\n" + json);
     }
 
     @Test
@@ -46,7 +45,9 @@ class SerializerTest {
 
         // Assert
         assertNotNull(xml);
-        System.out.println("XML Output:\n" + xml);
+        assertTrue(xml.contains("<nachrichtenkopf"));
+        assertTrue(xml.contains("xjustizVersion"));
+        assertTrue(xml.contains("<aktenzeichen.absender"));
     }
 
     @Test

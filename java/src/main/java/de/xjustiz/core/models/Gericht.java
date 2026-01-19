@@ -16,6 +16,7 @@ public class Gericht {
     @XmlElement(name = "listVersionId", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionId", namespace = "http://www.xjustiz.de")
     @JsonProperty("ListVersionId")
+    @Nullable
     private String listVersionId;
 
     @XmlElement(name = "listUri", namespace = "http://www.xjustiz.de")
@@ -24,19 +25,21 @@ public class Gericht {
     @Nullable
     private String listUri;
 
-    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
     @JsonProperty("code")
+    @Nullable
     private Integer code;
 
     public Gericht() {
     }
 
+    @Nullable
     public String getListVersionId() {
         return listVersionId;
     }
 
-    public void setListVersionId(String listVersionId) {
+    public void setListVersionId(@Nullable String listVersionId) {
         this.listVersionId = listVersionId;
     }
 
@@ -49,11 +52,12 @@ public class Gericht {
         this.listUri = listUri;
     }
 
+    @Nullable
     public Integer getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(@Nullable Integer code) {
         this.code = code;
     }
 }
