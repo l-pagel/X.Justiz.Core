@@ -13,12 +13,17 @@ using System.Reflection;
 /// </summary>
 public class MessageComparer(params string[] ignoredPaths)
 {
-    private readonly List<string> differences = new();
-    private readonly HashSet<string> ignoredPaths = new HashSet<string>(ignoredPaths, StringComparer.OrdinalIgnoreCase);
+    private readonly List<string> differences = [];
+    private readonly HashSet<string> ignoredPaths = new(ignoredPaths, StringComparer.OrdinalIgnoreCase);
 
     /// <summary>
     /// Compares two objects deeply and returns a list of differences.
     /// </summary>
+    /// <typeparam name="T">The type of the objects being compared.</typeparam>
+    /// <param name="expected">The expected object instance (the baseline).</param>
+    /// <param name="actual">The actual object instance to check for deviations.</param>
+    /// <param name="path">The breadcrumb path used for tracking nested properties during recursion. Defaults to "root".</param>
+    /// <returns>A read-only list of strings, where each string describes a specific difference found.</returns>
     public IReadOnlyList<string> Compare<T>(T? expected, T? actual, string path = "root")
     {
         differences.Clear();
@@ -29,10 +34,42 @@ public class MessageComparer(params string[] ignoredPaths)
     /// <summary>
     /// Compares two objects and returns true if they are equivalent.
     /// </summary>
+    /// <typeparam name="T">The type of the objects to compare.</typeparam>
+    /// <param name="expected">The expected object instance.</param>
+    /// <param name="actual">The actual object instance to be compared against the expected one.</param>
+    /// <param name="foundDifferences">When this method returns, contains a list of strings describing the differences found, if any.</param>
+    /// <returns>True if the objects are equivalent (no differences found); otherwise, false.</returns>
     public bool AreEqual<T>(T? expected, T? actual, out IReadOnlyList<string> foundDifferences)
     {
         foundDifferences = Compare(expected, actual);
         return foundDifferences.Count == 0;
+    }
+
+    /// <summary>
+    /// Creates a detailed comparison report.
+    /// </summary>
+    public static string CreateReport(IReadOnlyList<string> differences, string testName)
+    {
+        if (differences.Count == 0)
+        {
+            return $"[{testName}] ✓ All data matched successfully";
+        }
+
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine($"[{testName}] ✗ Found {differences.Count} difference(s):");
+        sb.AppendLine(new string('-', 60));
+
+        foreach (var diff in differences.Take(50)) // Limit to first 50 differences
+        {
+            sb.AppendLine($"  • {diff}");
+        }
+
+        if (differences.Count > 50)
+        {
+            sb.AppendLine($"  ... and {differences.Count - 50} more differences");
+        }
+
+        return sb.ToString();
     }
 
     private void CompareObjects(object? expected, object? actual, string path)
@@ -227,32 +264,5 @@ public class MessageComparer(params string[] ignoredPaths)
             || type == typeof(DateTimeOffset)
             || type == typeof(TimeSpan)
             || type == typeof(Guid);
-    }
-
-    /// <summary>
-    /// Creates a detailed comparison report.
-    /// </summary>
-    public static string CreateReport(IReadOnlyList<string> differences, string testName)
-    {
-        if (differences.Count == 0)
-        {
-            return $"[{testName}] ✓ All data matched successfully";
-        }
-
-        var sb = new System.Text.StringBuilder();
-        sb.AppendLine($"[{testName}] ✗ Found {differences.Count} difference(s):");
-        sb.AppendLine(new string('-', 60));
-
-        foreach (var diff in differences.Take(50)) // Limit to first 50 differences
-        {
-            sb.AppendLine($"  • {diff}");
-        }
-
-        if (differences.Count > 50)
-        {
-            sb.AppendLine($"  ... and {differences.Count - 50} more differences");
-        }
-
-        return sb.ToString();
     }
 }

@@ -24,12 +24,12 @@ public class IntegrationTestFixture : IAsyncLifetime, IDisposable
     /// <summary>
     /// Gets the base URL for the .NET API.
     /// </summary>
-    public string DotNetApiUrl => ApiProcessManager.DotNetApiBaseUrl;
+    public static string DotNetApiUrl => ApiProcessManager.DotNetApiBaseUrl;
 
     /// <summary>
     /// Gets the base URL for the Java API.
     /// </summary>
-    public string JavaApiUrl => ApiProcessManager.JavaApiBaseUrl;
+    public static string JavaApiUrl => ApiProcessManager.JavaApiBaseUrl;
 
     /// <summary>
     /// Gets the cross-API HTTP client.

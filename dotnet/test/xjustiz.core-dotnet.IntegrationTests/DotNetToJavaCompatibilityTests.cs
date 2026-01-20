@@ -23,10 +23,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var original = await TestDataProvider.LoadDatasetFromJsonAsync(dataset);
 
         // Act - Send from .NET API, receive at Java API
-        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(fixture.DotNetApiUrl, original);
+        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
         var messageFromDotNet = fixture.Client.ParseJsonResponse(jsonFromDotNet);
 
-        var jsonFromJava = await fixture.Client.SendJsonHttpAsync(fixture.JavaApiUrl, messageFromDotNet);
+        var jsonFromJava = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.JavaApiUrl, messageFromDotNet);
         var finalMessage = fixture.Client.ParseJsonResponse(jsonFromJava);
 
         // Assert
@@ -45,10 +45,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var original = TestDataProvider.CreateMinimalTestMessage();
 
         // Act
-        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(fixture.DotNetApiUrl, original);
+        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
         var messageFromDotNet = fixture.Client.ParseJsonResponse(jsonFromDotNet);
 
-        var jsonFromJava = await fixture.Client.SendJsonHttpAsync(fixture.JavaApiUrl, messageFromDotNet);
+        var jsonFromJava = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.JavaApiUrl, messageFromDotNet);
         var finalMessage = fixture.Client.ParseJsonResponse(jsonFromJava);
 
         // Assert
@@ -68,10 +68,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var original = TestDataProvider.LoadDatasetFromXml(dataset);
 
         // Act - Send from .NET API, receive at Java API
-        var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(fixture.DotNetApiUrl, original);
+        var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
         var messageFromDotNet = fixture.Client.ParseXmlResponse(xmlFromDotNet);
 
-        var xmlFromJava = await fixture.Client.SendXmlHttpAsync(fixture.JavaApiUrl, messageFromDotNet);
+        var xmlFromJava = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, messageFromDotNet);
         var finalMessage = fixture.Client.ParseXmlResponse(xmlFromJava);
 
         // Assert
@@ -91,10 +91,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var jsonContent = TestDataProvider.LoadDatasetAsJsonString(dataset);
 
         // Act - Upload JSON file to .NET API first
-        var dotNetResponse = await fixture.Client.SendJsonFileAsync(fixture.DotNetApiUrl, jsonContent);
+        var dotNetResponse = await fixture.Client.SendJsonFileAsync(IntegrationTestFixture.DotNetApiUrl, jsonContent);
 
         // Then upload to Java API
-        var javaResponse = await fixture.Client.SendJsonFileAsync(fixture.JavaApiUrl, jsonContent);
+        var javaResponse = await fixture.Client.SendJsonFileAsync(IntegrationTestFixture.JavaApiUrl, jsonContent);
 
         // Assert - Both should process successfully (return compatibility result)
         dotNetResponse.Should().NotBeNullOrEmpty(".NET API should return a response");
@@ -112,10 +112,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var original = await TestDataProvider.LoadDatasetFromJsonAsync(dataset);
 
         // Act - Generate file from .NET API
-        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(fixture.DotNetApiUrl, original);
+        var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
 
         // Send the .NET-generated JSON to Java API via file upload
-        _ = await fixture.Client.SendJsonFileAsync(fixture.JavaApiUrl, jsonFromDotNet);
+        _ = await fixture.Client.SendJsonFileAsync(IntegrationTestFixture.JavaApiUrl, jsonFromDotNet);
 
         // Parse and verify the round-tripped data
         var messageFromDotNet = fixture.Client.ParseJsonResponse(jsonFromDotNet);
@@ -137,10 +137,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var xmlContent = TestDataProvider.LoadDatasetAsXmlString(dataset);
 
         // Act - Upload XML file to .NET API first
-        var dotNetResponse = await fixture.Client.SendXmlFileAsync(fixture.DotNetApiUrl, xmlContent);
+        var dotNetResponse = await fixture.Client.SendXmlFileAsync(IntegrationTestFixture.DotNetApiUrl, xmlContent);
 
         // Then upload to Java API
-        var javaResponse = await fixture.Client.SendXmlFileAsync(fixture.JavaApiUrl, xmlContent);
+        var javaResponse = await fixture.Client.SendXmlFileAsync(IntegrationTestFixture.JavaApiUrl, xmlContent);
 
         // Assert - Both should process successfully
         dotNetResponse.Should().NotBeNullOrEmpty(".NET API should return a response");
@@ -158,10 +158,10 @@ public class DotNetToJavaCompatibilityTests(IntegrationTestFixture fixture)
         var original = TestDataProvider.LoadDatasetFromXml(dataset);
 
         // Act - Generate XML from .NET API
-        var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(fixture.DotNetApiUrl, original);
+        var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
 
         // Send the .NET-generated XML to Java API via file upload
-        _ = await fixture.Client.SendXmlFileAsync(fixture.JavaApiUrl, xmlFromDotNet);
+        _ = await fixture.Client.SendXmlFileAsync(IntegrationTestFixture.JavaApiUrl, xmlFromDotNet);
 
         // Parse and verify the round-tripped data
         var messageFromDotNet = fixture.Client.ParseXmlResponse(xmlFromDotNet);

@@ -45,10 +45,12 @@ public class ApiProcessManager : IAsyncDisposable
     /// </summary>
     public EnvironmentValidationResult ValidateEnvironment()
     {
-        var result = new EnvironmentValidationResult();
+        var result = new EnvironmentValidationResult
+        {
+            // Check .NET SDK,
+            DotNetSdkInstalled = IsDotNetSdkInstalled()
+        };
 
-        // Check .NET SDK
-        result.DotNetSdkInstalled = IsDotNetSdkInstalled();
         if (!result.DotNetSdkInstalled)
         {
             result.Errors.Add("❌ .NET SDK not found. Please install .NET 8.0 SDK or later.");

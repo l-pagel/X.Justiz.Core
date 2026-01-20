@@ -76,11 +76,13 @@ public static class TestDataProvider
     }
 
     /// <summary>
-    /// Gets all available datasets for theory tests.
+    /// Gets all available datasets for theory tests with strong type safety.
     /// </summary>
-    public static IEnumerable<object[]> AllDatasets()
+    public static TheoryData<Dataset> AllDatasets()
     {
-        return Enum.GetValues<Dataset>().Select(d => new object[] { d });
+        var theoryData = new TheoryData<Dataset>();
+        Enum.GetValues<Dataset>().ToList().ForEach(theoryData.Add);
+        return theoryData;
     }
 
     /// <summary>
