@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import java.time.OffsetDateTime;
 import org.jetbrains.annotations.Nullable;
 
@@ -15,6 +19,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Document:</b></u> Represents a document.
  */
+@XmlType(name = "Dokument", propOrder = { "identifikation", "fachspezifischeDaten", "erstellungszeitpunkt" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -28,6 +33,7 @@ public class Dokument {
     @XmlElement(name = "identifikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "identifikation", namespace = "http://www.xjustiz.de")
     @JsonProperty("Identifikation")
+    @JsonAlias({ "identifikation" })
     private Identifikation identifikation;
 
     /**
@@ -38,6 +44,7 @@ public class Dokument {
     @XmlElement(name = "xjustiz.fachspezifischeDaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "xjustiz.fachspezifischeDaten", namespace = "http://www.xjustiz.de")
     @JsonProperty("FachspezifischeDaten")
+    @JsonAlias({ "fachspezifischeDaten" })
     private XjustizFachspezifischeDaten fachspezifischeDaten;
 
     /**
@@ -48,6 +55,7 @@ public class Dokument {
     @XmlElement(name = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JsonProperty("Erstellungszeitpunkt")
+    @JsonAlias({ "erstellungszeitpunkt" })
     @Nullable
     private OffsetDateTime erstellungszeitpunkt;
 

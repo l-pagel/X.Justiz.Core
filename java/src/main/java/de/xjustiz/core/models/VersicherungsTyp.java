@@ -14,31 +14,31 @@ import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Bezeichnung einer Organisation.
+ * Typ der VersicherungCore.
  * <p>
- * <u><b>Designation:</b></u> Designation of an organization.
+ * <u><b>Insurance type:</b></u> Insurance type.
  */
-@XmlType(name = "Bezeichnung", propOrder = { "aktuell" })
+@XmlType(name = "VersicherungsTyp", propOrder = { "code" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class Bezeichnung {
+public class VersicherungsTyp {
 
     /**
-     * Aktueller offizieller Name der RA-Kanzlei.
+     * Der Code.
      * <p>
-     * <u><b>Current designation:</b></u> Current official name of the law firm.
+     * <u><b>Code:</b></u> The code.
      */
-    @XmlElement(name = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
-    @JsonProperty("Aktuell")
-    @JsonAlias({ "aktuell" })
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("Code")
+    @JsonAlias({ "code" })
     @Nullable
-    private String aktuell;
+    private String code;
 
-    public Bezeichnung() {}
+    public VersicherungsTyp() {}
 
-    public String getAktuell() { return aktuell; }
-    public void setAktuell(String aktuell) { this.aktuell = aktuell; }
+    public String getCode() { return code; }
+    public void setCode(String code) { this.code = code; }
 
 }

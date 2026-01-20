@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,6 +10,9 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import java.time.OffsetDateTime;
 import java.util.List;
 import org.jetbrains.annotations.Nullable;
@@ -18,20 +22,11 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Message header:</b></u> The header of the message.
  */
+@XmlType(name = "Nachrichtenkopf", propOrder = { "aktenzeichenAbsender", "aktenzeichenEmpfaenger", "erstellungszeitpunkt", "absender", "empfaenger", "eigeneNachrichtenId", "version" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Nachrichtenkopf {
-
-    /**
-     * Verwendete X.Justiz-Version für diese Nachricht.
-     * <p>
-     * <u><b>XJustiz version:</b></u> Used X.Justiz version for this message.
-     */
-    @XmlAttribute(name = "xjustizVersion")
-    @JacksonXmlProperty(isAttribute = true, localName = "xjustizVersion")
-    @JsonProperty("Version")
-    private String version;
 
     /**
      * Aktenzeichen des Absenders. Der Wert wird aus {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
@@ -42,6 +37,7 @@ public class Nachrichtenkopf {
     @JacksonXmlProperty(localName = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("AktenzeichenAbsender")
+    @JsonAlias({ "aktenzeichenAbsender" })
     @Nullable
     private List<String> aktenzeichenAbsender;
 
@@ -54,6 +50,7 @@ public class Nachrichtenkopf {
     @JacksonXmlProperty(localName = "aktenzeichen.empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("AktenzeichenEmpfaenger")
+    @JsonAlias({ "aktenzeichenEmpfaenger" })
     @Nullable
     private List<String> aktenzeichenEmpfaenger;
 
@@ -65,6 +62,7 @@ public class Nachrichtenkopf {
     @XmlElement(name = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JsonProperty("Erstellungszeitpunkt")
+    @JsonAlias({ "erstellungszeitpunkt" })
     private OffsetDateTime erstellungszeitpunkt;
 
     /**
@@ -75,6 +73,7 @@ public class Nachrichtenkopf {
     @XmlElement(name = "auswahl_absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_absender", namespace = "http://www.xjustiz.de")
     @JsonProperty("Absender")
+    @JsonAlias({ "absender" })
     private AuswahlAdresse absender;
 
     /**
@@ -85,6 +84,7 @@ public class Nachrichtenkopf {
     @XmlElement(name = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JsonProperty("Empfaenger")
+    @JsonAlias({ "empfaenger" })
     private AuswahlAdresse empfaenger;
 
     /**
@@ -95,13 +95,22 @@ public class Nachrichtenkopf {
     @XmlElement(name = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JsonProperty("EigeneNachrichtenId")
+    @JsonAlias({ "eigeneNachrichtenId" })
     @Nullable
     private String eigeneNachrichtenId;
 
-    public Nachrichtenkopf() {}
+    /**
+     * Verwendete X.Justiz-Version für diese Nachricht.
+     * <p>
+     * <u><b>XJustiz version:</b></u> Used X.Justiz version for this message.
+     */
+    @XmlAttribute(name = "xjustizVersion")
+    @JacksonXmlProperty(isAttribute = true, localName = "xjustizVersion")
+    @JsonProperty("Version")
+    @JsonAlias({ "version" })
+    private String version;
 
-    public String getVersion() { return version; }
-    public void setVersion(String version) { this.version = version; }
+    public Nachrichtenkopf() {}
 
     public List<String> getAktenzeichenAbsender() { return aktenzeichenAbsender; }
     public void setAktenzeichenAbsender(List<String> aktenzeichenAbsender) { this.aktenzeichenAbsender = aktenzeichenAbsender; }
@@ -120,5 +129,8 @@ public class Nachrichtenkopf {
 
     public String getEigeneNachrichtenId() { return eigeneNachrichtenId; }
     public void setEigeneNachrichtenId(String eigeneNachrichtenId) { this.eigeneNachrichtenId = eigeneNachrichtenId; }
+
+    public String getVersion() { return version; }
+    public void setVersion(String version) { this.version = version; }
 
 }

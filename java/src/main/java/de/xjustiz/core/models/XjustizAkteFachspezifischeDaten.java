@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Subject-specific data of a file:</b></u> Specialized data of a file/case.
  */
+@XmlType(name = "XjustizAkteFachspezifischeDaten", propOrder = { "aktentyp", "anzeigename", "aktenzeichen" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class XjustizAkteFachspezifischeDaten {
     @XmlElement(name = "aktentyp", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "aktentyp", namespace = "http://www.xjustiz.de")
     @JsonProperty("Aktentyp")
+    @JsonAlias({ "aktentyp" })
     private Aktentyp aktentyp;
 
     /**
@@ -37,6 +43,7 @@ public class XjustizAkteFachspezifischeDaten {
     @XmlElement(name = "anzeigename", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "anzeigename", namespace = "http://www.xjustiz.de")
     @JsonProperty("Anzeigename")
+    @JsonAlias({ "anzeigename" })
     @Nullable
     private String anzeigename;
 
@@ -48,6 +55,7 @@ public class XjustizAkteFachspezifischeDaten {
     @XmlElement(name = "aktenzeichen", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "aktenzeichen", namespace = "http://www.xjustiz.de")
     @JsonProperty("Aktenzeichen")
+    @JsonAlias({ "aktenzeichen" })
     private Aktenzeichen aktenzeichen;
 
     public XjustizAkteFachspezifischeDaten() {}

@@ -11,34 +11,32 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlElements;
 import jakarta.xml.bind.annotation.XmlType;
-import org.jetbrains.annotations.Nullable;
 
 /**
- * Bezeichnung einer Organisation.
+ * Repräsentiert einen Dateipfad innerhalb eines Bundles.
  * <p>
- * <u><b>Designation:</b></u> Designation of an organization.
+ * <u><b>Bundle path artifact:</b></u> Represents a file path within a bundle.
  */
-@XmlType(name = "Bezeichnung", propOrder = { "aktuell" })
+@XmlType(name = "BundlePathArtifactCore", propOrder = { "path" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class Bezeichnung {
+public class BundlePathArtifactCore extends ArtifactCore {
 
     /**
-     * Aktueller offizieller Name der RA-Kanzlei.
+     * Der relative Pfad zur Datei im Bundle.
      * <p>
-     * <u><b>Current designation:</b></u> Current official name of the law firm.
+     * <u><b>Path:</b></u> The relative path to the file in the bundle.
      */
-    @XmlElement(name = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
-    @JsonProperty("Aktuell")
-    @JsonAlias({ "aktuell" })
-    @Nullable
-    private String aktuell;
+    @XmlElement(name = "pfad", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "pfad", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("path")
+    @JsonAlias({ "Path", "path" })
+    private String path;
 
-    public Bezeichnung() {}
+    public BundlePathArtifactCore() {}
 
-    public String getAktuell() { return aktuell; }
-    public void setAktuell(String aktuell) { this.aktuell = aktuell; }
+    public String getPath() { return path; }
+    public void setPath(String path) { this.path = path; }
 
 }

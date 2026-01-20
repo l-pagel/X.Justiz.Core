@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum GeschlechtCode {
 
     /**
-     * Geschlecht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Codeliste GDS.Geschlecht</a>.
+     * <b>Unbekannt / Unknown</b>
      *  * <p>
-     *  *  <u><b>Gender codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Code list GDS.Gender</a>.
+     *  *  Code: 0
+     *  * <p>
+     *  * 
      */
     @JsonProperty("0")
     @XmlEnumValue("0")
     Unbekannt("0"),
 
     /**
-     * Geschlecht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Codeliste GDS.Geschlecht</a>.
+     * <b>M&#228;nnlich / Male</b>
      *  * <p>
-     *  *  <u><b>Gender codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Code list GDS.Gender</a>.
+     *  *  Code: 1
+     *  * <p>
+     *  * 
      */
     @JsonProperty("1")
     @XmlEnumValue("1")
     Maennlich("1"),
 
     /**
-     * Geschlecht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Codeliste GDS.Geschlecht</a>.
+     * <b>Weiblich / Female</b>
      *  * <p>
-     *  *  <u><b>Gender codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.geschlecht">XRepository: Code list GDS.Gender</a>.
+     *  *  Code: 2
+     *  * <p>
+     *  * 
      */
     @JsonProperty("2")
     @XmlEnumValue("2")
     Weiblich("2"),
 
     /**
-     * <b>Unbekannt / Unknown</b>
+     * <b>Divers / Diverse</b>
      *  * <p>
-     *  *  Code: 0
+     *  *  Code: 3
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum GeschlechtCode {
     Divers("3"),
 
     /**
-     * <b>Unbekannt / Unknown</b>
+     * <b>S&#228;chlich / Neuter</b>
      *  * <p>
-     *  *  Code: 0
+     *  *  Code: 4
      *  * <p>
      *  * 
      */
@@ -68,6 +74,16 @@ public enum GeschlechtCode {
     GeschlechtCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static GeschlechtCode fromValue(String value) {
+        for (GeschlechtCode e : GeschlechtCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }

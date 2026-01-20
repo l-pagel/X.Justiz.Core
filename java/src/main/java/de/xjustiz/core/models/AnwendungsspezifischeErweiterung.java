@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,6 +9,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,6 +20,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Application-specific extension:</b></u> Container for application-specific extensions.
  */
+@XmlType(name = "AnwendungsspezifischeErweiterung", propOrder = { "kennung", "name", "beschreibung", "feldgruppen", "felder" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -29,6 +34,7 @@ public class AnwendungsspezifischeErweiterung {
     @XmlElement(name = "kennung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "kennung", namespace = "http://www.xjustiz.de")
     @JsonProperty("Kennung")
+    @JsonAlias({ "kennung" })
     private String kennung;
 
     /**
@@ -39,6 +45,7 @@ public class AnwendungsspezifischeErweiterung {
     @XmlElement(name = "name", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "name", namespace = "http://www.xjustiz.de")
     @JsonProperty("Name")
+    @JsonAlias({ "name" })
     private String name;
 
     /**
@@ -49,6 +56,7 @@ public class AnwendungsspezifischeErweiterung {
     @XmlElement(name = "beschreibung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beschreibung", namespace = "http://www.xjustiz.de")
     @JsonProperty("Beschreibung")
+    @JsonAlias({ "beschreibung" })
     @Nullable
     private String beschreibung;
 
@@ -61,6 +69,7 @@ public class AnwendungsspezifischeErweiterung {
     @JacksonXmlProperty(localName = "feldgruppe", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Feldgruppen")
+    @JsonAlias({ "feldgruppen" })
     @Nullable
     private List<Feldgruppe> feldgruppen;
 
@@ -73,6 +82,7 @@ public class AnwendungsspezifischeErweiterung {
     @JacksonXmlProperty(localName = "feld", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Felder")
+    @JsonAlias({ "felder" })
     @Nullable
     private List<Feld> felder;
 

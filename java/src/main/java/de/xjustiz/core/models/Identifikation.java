@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,12 +8,16 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Identifiziert ein Objekt eindeutig.
  * <p>
  * <u><b>Identification:</b></u> Uniquely identifies an object.
  */
+@XmlType(name = "Identifikation", propOrder = { "id", "nummerImUebergeordnetenContainer" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -26,6 +31,7 @@ public class Identifikation {
     @XmlElement(name = "id", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "id", namespace = "http://www.xjustiz.de")
     @JsonProperty("Id")
+    @JsonAlias({ "id" })
     private String id;
 
     /**
@@ -36,6 +42,7 @@ public class Identifikation {
     @XmlElement(name = "nummerImUebergeordnetenContainer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "nummerImUebergeordnetenContainer", namespace = "http://www.xjustiz.de")
     @JsonProperty("NummerImUebergeordnetenContainer")
+    @JsonAlias({ "nummerImUebergeordnetenContainer" })
     private String nummerImUebergeordnetenContainer;
 
     public Identifikation() {}

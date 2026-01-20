@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum TelekommunikationsartCode {
 
     /**
-     * Telekommunikationsart Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Codeliste GDS.Telekommunikationsart</a>.
+     * <b>E-Mail</b>
      *  * <p>
-     *  *  <u><b>Telecommunication type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Code list GDS.TelecommunicationType</a>.
+     *  *  Code: 001
+     *  * <p>
+     *  * 
      */
     @JsonProperty("001")
     @XmlEnumValue("001")
     Email("001"),
 
     /**
-     * Telekommunikationsart Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Codeliste GDS.Telekommunikationsart</a>.
+     * <b>Fax</b>
      *  * <p>
-     *  *  <u><b>Telecommunication type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Code list GDS.TelecommunicationType</a>.
+     *  *  Code: 002
+     *  * <p>
+     *  * 
      */
     @JsonProperty("002")
     @XmlEnumValue("002")
     Fax("002"),
 
     /**
-     * Telekommunikationsart Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Codeliste GDS.Telekommunikationsart</a>.
+     * <b>Internet</b>
      *  * <p>
-     *  *  <u><b>Telecommunication type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.telekommunikationsart">XRepository: Code list GDS.TelecommunicationType</a>.
+     *  *  Code: 003
+     *  * <p>
+     *  * 
      */
     @JsonProperty("003")
     @XmlEnumValue("003")
     Internet("003"),
 
     /**
-     * <b>E-Mail</b>
+     * <b>Mobiltelefon</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 004
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum TelekommunikationsartCode {
     Mobiltelefon("004"),
 
     /**
-     * <b>E-Mail</b>
+     * <b>Pager</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 005
      *  * <p>
      *  * 
      */
@@ -65,9 +71,9 @@ public enum TelekommunikationsartCode {
     Pager("005"),
 
     /**
-     * <b>E-Mail</b>
+     * <b>Sonstige</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 006
      *  * <p>
      *  * 
      */
@@ -76,9 +82,9 @@ public enum TelekommunikationsartCode {
     Sonstige("006"),
 
     /**
-     * <b>Fax</b>
+     * <b>Telefon</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 007
      *  * <p>
      *  * 
      */
@@ -87,9 +93,9 @@ public enum TelekommunikationsartCode {
     Telefon("007"),
 
     /**
-     * <b>Fax</b>
+     * <b>Rechtsverbindlicher elektronischer Kommunikationsweg</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 008
      *  * <p>
      *  * 
      */
@@ -101,6 +107,16 @@ public enum TelekommunikationsartCode {
     TelekommunikationsartCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static TelekommunikationsartCode fromValue(String value) {
+        for (TelekommunikationsartCode e : TelekommunikationsartCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }

@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,6 +9,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,6 +20,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Organization:</b></u> An organization (legal entity).
  */
+@XmlType(name = "Organisation", propOrder = { "bezeichnung", "anschrift", "telekommunikation", "bankverbindung" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -29,6 +34,7 @@ public class Organisation {
     @XmlElement(name = "bezeichnung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bezeichnung", namespace = "http://www.xjustiz.de")
     @JsonProperty("Bezeichnung")
+    @JsonAlias({ "bezeichnung" })
     @Nullable
     private Bezeichnung bezeichnung;
 
@@ -40,6 +46,7 @@ public class Organisation {
     @XmlElement(name = "anschrift", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "anschrift", namespace = "http://www.xjustiz.de")
     @JsonProperty("Anschrift")
+    @JsonAlias({ "anschrift" })
     @Nullable
     private Anschrift anschrift;
 
@@ -52,6 +59,7 @@ public class Organisation {
     @JacksonXmlProperty(localName = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Telekommunikation")
+    @JsonAlias({ "telekommunikation" })
     @Nullable
     private List<Telekommunikation> telekommunikation;
 
@@ -63,6 +71,7 @@ public class Organisation {
     @XmlElement(name = "bankverbindung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bankverbindung", namespace = "http://www.xjustiz.de")
     @JsonProperty("Bankverbindung")
+    @JsonAlias({ "bankverbindung" })
     @Nullable
     private Bankverbindung bankverbindung;
 

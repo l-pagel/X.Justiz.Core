@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Field:</b></u> Represents a generic field (key-value pair).
  */
+@XmlType(name = "Feld", propOrder = { "name", "beschreibung", "datentyp", "wert" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class Feld {
     @XmlElement(name = "name", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "name", namespace = "http://www.xjustiz.de")
     @JsonProperty("Name")
+    @JsonAlias({ "name" })
     @Nullable
     private String name;
 
@@ -38,6 +44,7 @@ public class Feld {
     @XmlElement(name = "beschreibung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beschreibung", namespace = "http://www.xjustiz.de")
     @JsonProperty("Beschreibung")
+    @JsonAlias({ "beschreibung" })
     @Nullable
     private String beschreibung;
 
@@ -49,6 +56,7 @@ public class Feld {
     @XmlElement(name = "datentyp", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "datentyp", namespace = "http://www.xjustiz.de")
     @JsonProperty("Datentyp")
+    @JsonAlias({ "datentyp" })
     @Nullable
     private String datentyp;
 
@@ -60,6 +68,7 @@ public class Feld {
     @XmlElement(name = "wert", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "wert", namespace = "http://www.xjustiz.de")
     @JsonProperty("Wert")
+    @JsonAlias({ "wert" })
     @Nullable
     private String wert;
 

@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum DokumentklasseCode {
 
     /**
-     * Dokumentklasse Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Codeliste GDS.Dokumentklasse</a>.
+     * <b>Andere / Sonstige / Other / Miscellaneous</b>
      *  * <p>
-     *  *  <u><b>Document class codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Code list GDS.DocumentClass</a>.
+     *  *  Code: 001
+     *  * <p>
+     *  * 
      */
     @JsonProperty("001")
     @XmlEnumValue("001")
     Andere_Sonstige("001"),
 
     /**
-     * Dokumentklasse Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Codeliste GDS.Dokumentklasse</a>.
+     * <b>Klage / Antrag / Complaint / Application</b>
      *  * <p>
-     *  *  <u><b>Document class codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Code list GDS.DocumentClass</a>.
+     *  *  Code: 003
+     *  * <p>
+     *  * 
      */
     @JsonProperty("003")
     @XmlEnumValue("003")
     Klage_Antrag("003"),
 
     /**
-     * Dokumentklasse Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Codeliste GDS.Dokumentklasse</a>.
+     * <b>Anlage</b>
      *  * <p>
-     *  *  <u><b>Document class codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.dokumentklasse">XRepository: Code list GDS.DocumentClass</a>.
+     *  *  Code: 005
+     *  * <p>
+     *  * 
      */
     @JsonProperty("005")
     @XmlEnumValue("005")
     Anlage("005"),
 
     /**
-     * <b>Andere / Sonstige / Other / Miscellaneous</b>
+     * <b>Urteil / Judgment</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 006
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum DokumentklasseCode {
     Urteil("006"),
 
     /**
-     * <b>Andere / Sonstige / Other / Miscellaneous</b>
+     * <b>Beschluss / Resolution / Order</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 007
      *  * <p>
      *  * 
      */
@@ -65,9 +71,9 @@ public enum DokumentklasseCode {
     Beschluss("007"),
 
     /**
-     * <b>Andere / Sonstige / Other / Miscellaneous</b>
+     * <b>Verf&#252;gung / Decree / Disposition</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 008
      *  * <p>
      *  * 
      */
@@ -76,9 +82,9 @@ public enum DokumentklasseCode {
     Verfuegung("008"),
 
     /**
-     * <b>Andere / Sonstige / Other / Miscellaneous</b>
+     * <b>Vermerk / Note / Memo</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 009
      *  * <p>
      *  * 
      */
@@ -87,9 +93,9 @@ public enum DokumentklasseCode {
     Vermerk("009"),
 
     /**
-     * <b>Klage / Antrag / Complaint / Application</b>
+     * <b>Protokoll / Protocol / Minutes</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 010
      *  * <p>
      *  * 
      */
@@ -98,9 +104,9 @@ public enum DokumentklasseCode {
     Protokoll("010"),
 
     /**
-     * <b>Klage / Antrag / Complaint / Application</b>
+     * <b>Fehlblatt / Missing Sheet</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 011
      *  * <p>
      *  * 
      */
@@ -109,9 +115,9 @@ public enum DokumentklasseCode {
     Fehlblatt("011"),
 
     /**
-     * <b>Klage / Antrag / Complaint / Application</b>
+     * <b>Zustellungsdokument / Service Document</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 012
      *  * <p>
      *  * 
      */
@@ -120,9 +126,9 @@ public enum DokumentklasseCode {
     Zustellungsdokument("012"),
 
     /**
-     * <b>Anlage</b>
+     * <b>Gutachten / Expert Opinion</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 013
      *  * <p>
      *  * 
      */
@@ -131,9 +137,9 @@ public enum DokumentklasseCode {
     Gutachten("013"),
 
     /**
-     * <b>Anlage</b>
+     * <b>Technische Information / Technical Information</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 014
      *  * <p>
      *  * 
      */
@@ -142,9 +148,9 @@ public enum DokumentklasseCode {
     Technische_Information("014"),
 
     /**
-     * <b>Anlage</b>
+     * <b>Schreiben / Letter</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 015
      *  * <p>
      *  * 
      */
@@ -153,9 +159,9 @@ public enum DokumentklasseCode {
     Schreiben("015"),
 
     /**
-     * <b>Urteil / Judgment</b>
+     * <b>Antrag (Beh&#246;rde) / Application (Authority)</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 016
      *  * <p>
      *  * 
      */
@@ -164,9 +170,9 @@ public enum DokumentklasseCode {
     Antrag_Behoerde("016"),
 
     /**
-     * <b>Urteil / Judgment</b>
+     * <b>Bescheid / Decision / Notice</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 017
      *  * <p>
      *  * 
      */
@@ -175,9 +181,9 @@ public enum DokumentklasseCode {
     Bescheid("017"),
 
     /**
-     * <b>Urteil / Judgment</b>
+     * <b>Einspruch / Widerspruch (Beh&#246;rde) / Objection / Opposition (Authority)</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 018
      *  * <p>
      *  * 
      */
@@ -186,9 +192,9 @@ public enum DokumentklasseCode {
     Einspruch_Widerspruch_Behoerde("018"),
 
     /**
-     * <b>Beschluss / Resolution / Order</b>
+     * <b>Einspruchs- / Widerspruchsbescheid / Decision on Objection / Opposition</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 019
      *  * <p>
      *  * 
      */
@@ -197,9 +203,9 @@ public enum DokumentklasseCode {
     Einspruchs_Widerspruchsbescheid("019"),
 
     /**
-     * <b>Beschluss / Resolution / Order</b>
+     * <b>Kostendokument / Cost Document</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 020
      *  * <p>
      *  * 
      */
@@ -208,9 +214,9 @@ public enum DokumentklasseCode {
     Kostendokument("020"),
 
     /**
-     * <b>Beschluss / Resolution / Order</b>
+     * <b>Gerichtsbescheid / Court Order</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 021
      *  * <p>
      *  * 
      */
@@ -222,6 +228,16 @@ public enum DokumentklasseCode {
     DokumentklasseCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static DokumentklasseCode fromValue(String value) {
+        for (DokumentklasseCode e : DokumentklasseCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }

@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,12 +8,16 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Verknüpft eine Rolle mit einem Beteiligten.
  * <p>
  * <u><b>Participation:</b></u> Associates a role with a participant.
  */
+@XmlType(name = "Beteiligung", propOrder = { "rolle", "beteiligter" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -26,6 +31,7 @@ public class Beteiligung {
     @XmlElement(name = "rolle", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "rolle", namespace = "http://www.xjustiz.de")
     @JsonProperty("Rolle")
+    @JsonAlias({ "rolle" })
     private Rolle rolle;
 
     /**
@@ -36,6 +42,7 @@ public class Beteiligung {
     @XmlElement(name = "beteiligter", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligter", namespace = "http://www.xjustiz.de")
     @JsonProperty("Beteiligter")
+    @JsonAlias({ "beteiligter" })
     private Beteiligter beteiligter;
 
     public Beteiligung() {}

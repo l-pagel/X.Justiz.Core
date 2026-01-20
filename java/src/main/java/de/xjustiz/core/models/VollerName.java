@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Full name:</b></u> The full name of a natural person.
  */
+@XmlType(name = "VollerName", propOrder = { "vorname", "rufname", "titel", "namensvorsatz", "nachname" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class VollerName {
     @XmlElement(name = "vorname", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "vorname", namespace = "http://www.xjustiz.de")
     @JsonProperty("Vorname")
+    @JsonAlias({ "vorname" })
     @Nullable
     private String vorname;
 
@@ -38,6 +44,7 @@ public class VollerName {
     @XmlElement(name = "rufname", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "rufname", namespace = "http://www.xjustiz.de")
     @JsonProperty("Rufname")
+    @JsonAlias({ "rufname" })
     @Nullable
     private String rufname;
 
@@ -49,6 +56,7 @@ public class VollerName {
     @XmlElement(name = "titel", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "titel", namespace = "http://www.xjustiz.de")
     @JsonProperty("Titel")
+    @JsonAlias({ "titel" })
     @Nullable
     private String titel;
 
@@ -60,6 +68,7 @@ public class VollerName {
     @XmlElement(name = "namensvorsatz", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "namensvorsatz", namespace = "http://www.xjustiz.de")
     @JsonProperty("Namensvorsatz")
+    @JsonAlias({ "namensvorsatz" })
     @Nullable
     private String namensvorsatz;
 
@@ -71,6 +80,7 @@ public class VollerName {
     @XmlElement(name = "nachname", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "nachname", namespace = "http://www.xjustiz.de")
     @JsonProperty("Nachname")
+    @JsonAlias({ "nachname" })
     @Nullable
     private String nachname;
 

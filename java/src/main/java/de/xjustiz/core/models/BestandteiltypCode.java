@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum BestandteiltypCode {
 
     /**
-     * Bestandteil Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codeliste GDS.Bestandteiltyp</a>.
+     * <b>Original / Original</b>
      *  * <p>
-     *  *  <u><b>Component codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code list GDS.Components</a>.
+     *  *  Code: 001
+     *  * <p>
+     *  * 
      */
     @JsonProperty("001")
     @XmlEnumValue("001")
     Original("001"),
 
     /**
-     * Bestandteil Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codeliste GDS.Bestandteiltyp</a>.
+     * <b>Repr&#228;sentat / Representation Copy</b>
      *  * <p>
-     *  *  <u><b>Component codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code list GDS.Components</a>.
+     *  *  Code: 002
+     *  * <p>
+     *  * 
      */
     @JsonProperty("002")
     @XmlEnumValue("002")
     Repraesentat("002"),
 
     /**
-     * Bestandteil Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Codeliste GDS.Bestandteiltyp</a>.
+     * <b>Signaturdatei / Signature File</b>
      *  * <p>
-     *  *  <u><b>Component codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.bestandteiltyp">XRepository: Code list GDS.Components</a>.
+     *  *  Code: 003
+     *  * <p>
+     *  * 
      */
     @JsonProperty("003")
     @XmlEnumValue("003")
     Signaturdatei("003"),
 
     /**
-     * <b>Original / Original</b>
+     * <b>signierte Vorversion / Signed Previous Version</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 004
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum BestandteiltypCode {
     signierte_Vorversion("004"),
 
     /**
-     * <b>Original / Original</b>
+     * <b>Transfervermerk / Transfer Record</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 006
      *  * <p>
      *  * 
      */
@@ -65,9 +71,9 @@ public enum BestandteiltypCode {
     Transfervermerk("006"),
 
     /**
-     * <b>Original / Original</b>
+     * <b>Pr&#252;fvermerk / Verification Record</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 010
      *  * <p>
      *  * 
      */
@@ -76,9 +82,9 @@ public enum BestandteiltypCode {
     Pruefvermerk("010"),
 
     /**
-     * <b>Repr&#228;sentat / Representation Copy</b>
+     * <b>VHN / Trusted Origin Evidence (VHN)</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 011
      *  * <p>
      *  * 
      */
@@ -87,9 +93,9 @@ public enum BestandteiltypCode {
     VHN("011"),
 
     /**
-     * <b>Repr&#228;sentat / Representation Copy</b>
+     * <b>hinlaufendes eEB / Incoming eEB</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 012
      *  * <p>
      *  * 
      */
@@ -101,6 +107,16 @@ public enum BestandteiltypCode {
     BestandteiltypCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static BestandteiltypCode fromValue(String value) {
+        for (BestandteiltypCode e : BestandteiltypCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }

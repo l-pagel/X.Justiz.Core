@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Instance data:</b></u> Data regarding the instance.
  */
+@XmlType(name = "Instanzdaten", propOrder = { "instanznummer", "sachgebietszusatz", "auswahlInstanzbehoerde" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class Instanzdaten {
     @XmlElement(name = "instanznummer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "instanznummer", namespace = "http://www.xjustiz.de")
     @JsonProperty("Instanznummer")
+    @JsonAlias({ "instanznummer" })
     @Nullable
     private String instanznummer;
 
@@ -38,6 +44,7 @@ public class Instanzdaten {
     @XmlElement(name = "sachgebietszusatz", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "sachgebietszusatz", namespace = "http://www.xjustiz.de")
     @JsonProperty("Sachgebietszusatz")
+    @JsonAlias({ "sachgebietszusatz" })
     @Nullable
     private String sachgebietszusatz;
 
@@ -49,6 +56,7 @@ public class Instanzdaten {
     @XmlElement(name = "auswahl_instanzbehoerde", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_instanzbehoerde", namespace = "http://www.xjustiz.de")
     @JsonProperty("AuswahlInstanzbehoerde")
+    @JsonAlias({ "auswahlInstanzbehoerde" })
     @Nullable
     private AuswahlInstanzbehoerde auswahlInstanzbehoerde;
 

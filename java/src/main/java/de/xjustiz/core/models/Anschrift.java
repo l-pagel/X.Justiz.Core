@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Address:</b></u> Represents an address.
  */
+@XmlType(name = "Anschrift", propOrder = { "strasse", "hausnummer", "postleitzahl", "ort", "staat" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class Anschrift {
     @XmlElement(name = "strasse", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "strasse", namespace = "http://www.xjustiz.de")
     @JsonProperty("Strasse")
+    @JsonAlias({ "strasse" })
     @Nullable
     private String strasse;
 
@@ -38,6 +44,7 @@ public class Anschrift {
     @XmlElement(name = "hausnummer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "hausnummer", namespace = "http://www.xjustiz.de")
     @JsonProperty("Hausnummer")
+    @JsonAlias({ "hausnummer" })
     @Nullable
     private String hausnummer;
 
@@ -49,6 +56,7 @@ public class Anschrift {
     @XmlElement(name = "postleitzahl", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "postleitzahl", namespace = "http://www.xjustiz.de")
     @JsonProperty("Postleitzahl")
+    @JsonAlias({ "postleitzahl" })
     @Nullable
     private String postleitzahl;
 
@@ -60,6 +68,7 @@ public class Anschrift {
     @XmlElement(name = "ort", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "ort", namespace = "http://www.xjustiz.de")
     @JsonProperty("Ort")
+    @JsonAlias({ "ort" })
     @Nullable
     private String ort;
 
@@ -71,6 +80,7 @@ public class Anschrift {
     @XmlElement(name = "staat", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "staat", namespace = "http://www.xjustiz.de")
     @JsonProperty("Staat")
+    @JsonAlias({ "staat" })
     @Nullable
     private Staat staat;
 

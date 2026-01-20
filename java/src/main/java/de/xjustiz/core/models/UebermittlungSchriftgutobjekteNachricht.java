@@ -1,12 +1,19 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +21,9 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Document Object Transmission Message:</b></u> Root element for the transmission of data in the X.Justiz format.
  */
+@XmlRootElement(name = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005", namespace = "http://www.xjustiz.de")
+@JacksonXmlRootElement(localName = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005", namespace = "http://www.xjustiz.de")
+@XmlType(name = "UebermittlungSchriftgutobjekteNachricht", propOrder = { "kopf", "grunddaten", "schriftgutobjekte", "schemaLocation" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +37,7 @@ public class UebermittlungSchriftgutobjekteNachricht {
     @XmlElement(name = "nachrichtenkopf", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "nachrichtenkopf", namespace = "http://www.xjustiz.de")
     @JsonProperty("Kopf")
+    @JsonAlias({ "kopf" })
     private Nachrichtenkopf kopf;
 
     /**
@@ -37,6 +48,7 @@ public class UebermittlungSchriftgutobjekteNachricht {
     @XmlElement(name = "grunddaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "grunddaten", namespace = "http://www.xjustiz.de")
     @JsonProperty("Grunddaten")
+    @JsonAlias({ "grunddaten" })
     @Nullable
     private Grunddaten grunddaten;
 
@@ -48,6 +60,7 @@ public class UebermittlungSchriftgutobjekteNachricht {
     @XmlElement(name = "schriftgutobjekte", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "schriftgutobjekte", namespace = "http://www.xjustiz.de")
     @JsonProperty("Schriftgutobjekte")
+    @JsonAlias({ "schriftgutobjekte" })
     @Nullable
     private Schriftgutobjekte schriftgutobjekte;
 
@@ -56,9 +69,10 @@ public class UebermittlungSchriftgutobjekteNachricht {
      * <p>
      * <u><b>Schema location:</b></u> Specifies the association between XML namespaces and the locations of their corresponding XML Schema documents. Provided as namespace–URI / schema‐URL pairs, it acts as a hint to validators and parsers where the schemas can be found.
      */
-    @XmlElement(name = "schemaLocation", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "schemaLocation", namespace = "http://www.xjustiz.de")
+    @XmlAttribute(name = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")
+    @JacksonXmlProperty(isAttribute = true, localName = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")
     @JsonProperty("SchemaLocation")
+    @JsonAlias({ "schemaLocation" })
     private String schemaLocation;
 
     public UebermittlungSchriftgutobjekteNachricht() {}

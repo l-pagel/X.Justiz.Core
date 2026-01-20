@@ -1,7 +1,6 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,7 +9,9 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlTransient;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -18,6 +19,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>State:</b></u> Represents a state as a code.
  */
+@XmlType(name = "Staat", propOrder = { "listVersionId", "listUri", "code" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -31,6 +33,7 @@ public class Staat {
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
     @JsonProperty("ListVersionId")
+    @JsonAlias({ "listVersionId" })
     private String listVersionId;
 
     /**
@@ -41,6 +44,7 @@ public class Staat {
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
     @JsonProperty("ListUri")
+    @JsonAlias({ "listUri" })
     @Nullable
     private String listUri;
 
@@ -49,20 +53,11 @@ public class Staat {
      * <p>
      * <u><b>Code:</b></u> Gets or sets the state code.
      */
-    @XmlTransient
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
     @JsonProperty("code")
     @JsonAlias({ "Code", "code" })
     private StaatCode code;
-
-    /**
-     * Hilfseigenschaft für die XML-Serialisierung.
-     * <p>
-     * <u><b>Code for XML:</b></u> Helper property for XML serialization.
-     */
-    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
-    @JsonIgnore
-    private String codeForXml;
 
     public Staat() {}
 
@@ -74,8 +69,5 @@ public class Staat {
 
     public StaatCode getCode() { return code; }
     public void setCode(StaatCode code) { this.code = code; }
-
-    public String getCodeForXml() { return codeForXml; }
-    public void setCodeForXml(String codeForXml) { this.codeForXml = codeForXml; }
 
 }

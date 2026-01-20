@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum RollenCode {
 
     /**
-     * Rolle Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codeliste GDS.Rollenbezeichnung</a>.
+     * <b>Abwesenheitspfleger(in) / Absentee Curator</b>
      *  * <p>
-     *  *  <u><b>Role codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code list GDS.RoleName</a>.
+     *  *  Code: 001
+     *  * <p>
+     *  * 
      */
     @JsonProperty("001")
     @XmlEnumValue("001")
     Abwesenheitspfleger("001"),
 
     /**
-     * Rolle Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codeliste GDS.Rollenbezeichnung</a>.
+     * <b>Aliasidentit&#228;t / Alias Identity</b>
      *  * <p>
-     *  *  <u><b>Role codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code list GDS.RoleName</a>.
+     *  *  Code: 002
+     *  * <p>
+     *  * 
      */
     @JsonProperty("002")
     @XmlEnumValue("002")
     Aliasidentitaet("002"),
 
     /**
-     * Rolle Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Codeliste GDS.Rollenbezeichnung</a>.
+     * <b>Angeh&#246;rige(r) / Relative</b>
      *  * <p>
-     *  *  <u><b>Role codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung">XRepository: Code list GDS.RoleName</a>.
+     *  *  Code: 003
+     *  * <p>
+     *  * 
      */
     @JsonProperty("003")
     @XmlEnumValue("003")
     Angehoerige("003"),
 
     /**
-     * <b>Abwesenheitspfleger(in) / Absentee Curator</b>
+     * <b>Angeklagte(r) / Accused</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 004
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum RollenCode {
     Angeklagte("004"),
 
     /**
-     * <b>Abwesenheitspfleger(in) / Absentee Curator</b>
+     * <b>Angeschuldigte(r) / Indicted</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 005
      *  * <p>
      *  * 
      */
@@ -65,9 +71,9 @@ public enum RollenCode {
     Angeschuldigte("005"),
 
     /**
-     * <b>Abwesenheitspfleger(in) / Absentee Curator</b>
+     * <b>Annehmende(r) / Adopter</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 006
      *  * <p>
      *  * 
      */
@@ -76,9 +82,9 @@ public enum RollenCode {
     Annehmende("006"),
 
     /**
-     * <b>Abwesenheitspfleger(in) / Absentee Curator</b>
+     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 007
      *  * <p>
      *  * 
      */
@@ -87,9 +93,9 @@ public enum RollenCode {
     Anschlussberufungsbeklagte("007"),
 
     /**
-     * <b>Aliasidentit&#228;t / Alias Identity</b>
+     * <b>Anschlussberufungskl&#228;ger(in) / Anschlussberufungskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 008
      *  * <p>
      *  * 
      */
@@ -98,9 +104,9 @@ public enum RollenCode {
     Anschlussberufungsklaeger("008"),
 
     /**
-     * <b>Aliasidentit&#228;t / Alias Identity</b>
+     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 009
      *  * <p>
      *  * 
      */
@@ -109,9 +115,9 @@ public enum RollenCode {
     Anschlussbeschwerdefuehrer("009"),
 
     /**
-     * <b>Angeh&#246;rige(r) / Relative</b>
+     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 010
      *  * <p>
      *  * 
      */
@@ -120,9 +126,9 @@ public enum RollenCode {
     Anschlussbeschwerdegegner("010"),
 
     /**
-     * <b>Angeh&#246;rige(r) / Relative</b>
+     * <b>Anschlussrechtsbeschwerdef&#252;hrer(in) / Anschlussrechtsbeschwerdef&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 011
      *  * <p>
      *  * 
      */
@@ -131,9 +137,9 @@ public enum RollenCode {
     Anschlussrechtsbeschwerdefuehrer("011"),
 
     /**
-     * <b>Angeh&#246;rige(r) / Relative</b>
+     * <b>Anschlussrechtsbeschwerdegegner(in) / Anschlussrechtsbeschwerdegegner(in)</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 012
      *  * <p>
      *  * 
      */
@@ -142,9 +148,9 @@ public enum RollenCode {
     Anschlussrechtsbeschwerdegegner("012"),
 
     /**
-     * <b>Angeklagte(r) / Accused</b>
+     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 004
+     *  *  Code: 013
      *  * <p>
      *  * 
      */
@@ -153,9 +159,9 @@ public enum RollenCode {
     Anschlussrevisionsbeklagte("013"),
 
     /**
-     * <b>Angeklagte(r) / Accused</b>
+     * <b>Anschlussrevisionskl&#228;ger(in) / Anschlussrevisionskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 004
+     *  *  Code: 014
      *  * <p>
      *  * 
      */
@@ -164,9 +170,9 @@ public enum RollenCode {
     Anschlussrevisionsklaeger("014"),
 
     /**
-     * <b>Angeschuldigte(r) / Indicted</b>
+     * <b>Antragsgegner(in) / Respondent</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 015
      *  * <p>
      *  * 
      */
@@ -175,9 +181,9 @@ public enum RollenCode {
     Antragsgegner("015"),
 
     /**
-     * <b>Angeschuldigte(r) / Indicted</b>
+     * <b>Antragsteller(in) / Applicant</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 016
      *  * <p>
      *  * 
      */
@@ -186,9 +192,9 @@ public enum RollenCode {
     Antragsteller("016"),
 
     /**
-     * <b>Angeschuldigte(r) / Indicted</b>
+     * <b>Anzeigeerstatter(in) / Complainant</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 017
      *  * <p>
      *  * 
      */
@@ -197,9 +203,9 @@ public enum RollenCode {
     Anzeigeerstatter("017"),
 
     /**
-     * <b>Annehmende(r) / Adopter</b>
+     * <b>Anzunehmende(r) / Anzunehmende(r)</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 018
      *  * <p>
      *  * 
      */
@@ -208,9 +214,9 @@ public enum RollenCode {
     Anzunehmende("018"),
 
     /**
-     * <b>Annehmende(r) / Adopter</b>
+     * <b>Arrestgl&#228;ubiger(in) / Arrestgl&#228;ubiger(in)</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 019
      *  * <p>
      *  * 
      */
@@ -219,9 +225,9 @@ public enum RollenCode {
     Arrestglaeubiger("019"),
 
     /**
-     * <b>Annehmende(r) / Adopter</b>
+     * <b>Arrestschuldner(in) / Arrestschuldner(in)</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 020
      *  * <p>
      *  * 
      */
@@ -230,9 +236,9 @@ public enum RollenCode {
     Arrestschuldner("020"),
 
     /**
-     * <b>Annehmende(r) / Adopter</b>
+     * <b>Aufsichtsbeh&#246;rde / Aufsichtsbeh&#246;rde</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 021
      *  * <p>
      *  * 
      */
@@ -241,9 +247,9 @@ public enum RollenCode {
     Aufsichtsbehoerde("021"),
 
     /**
-     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
+     * <b>Ausschlagende(r) / Ausschlagende(r)</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 022
      *  * <p>
      *  * 
      */
@@ -252,9 +258,9 @@ public enum RollenCode {
     Ausschlagende("022"),
 
     /**
-     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
+     * <b>Beamter (Beamtin) / Beamter (Beamtin)</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 023
      *  * <p>
      *  * 
      */
@@ -263,9 +269,9 @@ public enum RollenCode {
     Beamter_Beamtin("023"),
 
     /**
-     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
+     * <b>Beh&#246;rde / Beh&#246;rde</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 024
      *  * <p>
      *  * 
      */
@@ -274,9 +280,9 @@ public enum RollenCode {
     Behoerde("024"),
 
     /**
-     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
+     * <b>Beigeladene(r) / Beigeladene(r)</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 025
      *  * <p>
      *  * 
      */
@@ -285,9 +291,9 @@ public enum RollenCode {
     Beigeladene("025"),
 
     /**
-     * <b>Anschlussberufungsbeklagte(r) / Anschlussberufungsbeklagte(r)</b>
+     * <b>Beistand / Beistand</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 026
      *  * <p>
      *  * 
      */
@@ -296,9 +302,9 @@ public enum RollenCode {
     Beistand("026"),
 
     /**
-     * <b>Anschlussberufungskl&#228;ger(in) / Anschlussberufungskl&#228;ger(in)</b>
+     * <b>Bekannte(r) / Bekannte(r)</b>
      *  * <p>
-     *  *  Code: 008
+     *  *  Code: 027
      *  * <p>
      *  * 
      */
@@ -307,9 +313,9 @@ public enum RollenCode {
     Bekannte("027"),
 
     /**
-     * <b>Anschlussberufungskl&#228;ger(in) / Anschlussberufungskl&#228;ger(in)</b>
+     * <b>Beklagte(r) / Beklagte(r)</b>
      *  * <p>
-     *  *  Code: 008
+     *  *  Code: 028
      *  * <p>
      *  * 
      */
@@ -318,9 +324,9 @@ public enum RollenCode {
     Beklagte("028"),
 
     /**
-     * <b>Anschlussberufungskl&#228;ger(in) / Anschlussberufungskl&#228;ger(in)</b>
+     * <b>Berufungsbeklagte(r) / Berufungsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 008
+     *  *  Code: 029
      *  * <p>
      *  * 
      */
@@ -329,9 +335,9 @@ public enum RollenCode {
     Berufungsbeklagte("029"),
 
     /**
-     * <b>Anschlussberufungskl&#228;ger(in) / Anschlussberufungskl&#228;ger(in)</b>
+     * <b>Berufungskl&#228;ger(in) / Berufungskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 008
+     *  *  Code: 030
      *  * <p>
      *  * 
      */
@@ -340,9 +346,9 @@ public enum RollenCode {
     Berufungsklaeger("030"),
 
     /**
-     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
+     * <b>Beschuldigte(r) / Accused (Prelim.)</b>
      *  * <p>
-     *  *  Code: 009
+     *  *  Code: 031
      *  * <p>
      *  * 
      */
@@ -351,9 +357,9 @@ public enum RollenCode {
     Beschuldigte("031"),
 
     /**
-     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
+     * <b>Beschwerdef&#252;hrer(in) / Beschwerdef&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 009
+     *  *  Code: 032
      *  * <p>
      *  * 
      */
@@ -362,9 +368,9 @@ public enum RollenCode {
     Beschwerdefuehrer("032"),
 
     /**
-     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
+     * <b>Beschwerdegegner(in) / Beschwerdegegner(in)</b>
      *  * <p>
-     *  *  Code: 009
+     *  *  Code: 033
      *  * <p>
      *  * 
      */
@@ -373,9 +379,9 @@ public enum RollenCode {
     Beschwerdegegner("033"),
 
     /**
-     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
+     * <b>Besucher(in) / Besucher(in)</b>
      *  * <p>
-     *  *  Code: 009
+     *  *  Code: 034
      *  * <p>
      *  * 
      */
@@ -384,9 +390,9 @@ public enum RollenCode {
     Besucher("034"),
 
     /**
-     * <b>Anschlussbeschwerdef&#252;hrer(in) / Anschlussbeschwerdef&#252;hrer(in)</b>
+     * <b>Betreibende(r) Gl&#228;ubige(r) / Betreibende(r) Gl&#228;ubige(r)</b>
      *  * <p>
-     *  *  Code: 009
+     *  *  Code: 036
      *  * <p>
      *  * 
      */
@@ -395,9 +401,9 @@ public enum RollenCode {
     Betreibende_Glaeubige("036"),
 
     /**
-     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
+     * <b>Betreuer(in) / Guardian</b>
      *  * <p>
-     *  *  Code: 010
+     *  *  Code: 037
      *  * <p>
      *  * 
      */
@@ -406,9 +412,9 @@ public enum RollenCode {
     Betreuer("037"),
 
     /**
-     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
+     * <b>Betreute(r) / Ward</b>
      *  * <p>
-     *  *  Code: 010
+     *  *  Code: 038
      *  * <p>
      *  * 
      */
@@ -417,9 +423,9 @@ public enum RollenCode {
     Betreute("038"),
 
     /**
-     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
+     * <b>Betreuungsbeh&#246;rde / Betreuungsbeh&#246;rde</b>
      *  * <p>
-     *  *  Code: 010
+     *  *  Code: 039
      *  * <p>
      *  * 
      */
@@ -428,9 +434,9 @@ public enum RollenCode {
     Betreuungsbehoerde("039"),
 
     /**
-     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
+     * <b>Betroffene(r) / Betroffene(r)</b>
      *  * <p>
-     *  *  Code: 010
+     *  *  Code: 040
      *  * <p>
      *  * 
      */
@@ -439,9 +445,9 @@ public enum RollenCode {
     Betroffene("040"),
 
     /**
-     * <b>Anschlussbeschwerdegegner(in) / Anschlussbeschwerdegegner(in)</b>
+     * <b>Bevollm&#228;chtigte(r) / Bevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 010
+     *  *  Code: 041
      *  * <p>
      *  * 
      */
@@ -450,9 +456,9 @@ public enum RollenCode {
     Bevollmaechtigte("041"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdef&#252;hrer(in) / Anschlussrechtsbeschwerdef&#252;hrer(in)</b>
+     * <b>Bew&#228;hrungshelfer(in) / Bew&#228;hrungshelfer(in)</b>
      *  * <p>
-     *  *  Code: 011
+     *  *  Code: 042
      *  * <p>
      *  * 
      */
@@ -461,9 +467,9 @@ public enum RollenCode {
     Bewaehrungshelfer("042"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdef&#252;hrer(in) / Anschlussrechtsbeschwerdef&#252;hrer(in)</b>
+     * <b>Beweisanwalt (-anw&#228;ltin) / Beweisanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 011
+     *  *  Code: 043
      *  * <p>
      *  * 
      */
@@ -472,9 +478,9 @@ public enum RollenCode {
     Beweisanwalt("043"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdef&#252;hrer(in) / Anschlussrechtsbeschwerdef&#252;hrer(in)</b>
+     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
      *  * <p>
-     *  *  Code: 011
+     *  *  Code: 044
      *  * <p>
      *  * 
      */
@@ -483,9 +489,9 @@ public enum RollenCode {
     Bruder_Schwester("044"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdef&#252;hrer(in) / Anschlussrechtsbeschwerdef&#252;hrer(in)</b>
+     * <b>Bundeswehrdisziplinaranwalt (-anw&#228;ltin) / Bundeswehrdisziplinaranwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 011
+     *  *  Code: 045
      *  * <p>
      *  * 
      */
@@ -494,9 +500,9 @@ public enum RollenCode {
     Bundeswehrdisziplinaranwalt("045"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdegegner(in) / Anschlussrechtsbeschwerdegegner(in)</b>
+     * <b>Bu&#223;geldempf&#228;nger(in) / Bu&#223;geldempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 012
+     *  *  Code: 046
      *  * <p>
      *  * 
      */
@@ -505,9 +511,9 @@ public enum RollenCode {
     Bussgeldempfaenger("046"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdegegner(in) / Anschlussrechtsbeschwerdegegner(in)</b>
+     * <b>Cousin(e) / Cousin(e)</b>
      *  * <p>
-     *  *  Code: 012
+     *  *  Code: 047
      *  * <p>
      *  * 
      */
@@ -516,9 +522,9 @@ public enum RollenCode {
     Cousin("047"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdegegner(in) / Anschlussrechtsbeschwerdegegner(in)</b>
+     * <b>Dienstvorgesetzte(r) / Dienstvorgesetzte(r)</b>
      *  * <p>
-     *  *  Code: 012
+     *  *  Code: 048
      *  * <p>
      *  * 
      */
@@ -527,9 +533,9 @@ public enum RollenCode {
     Dienstvorgesetzte("048"),
 
     /**
-     * <b>Anschlussrechtsbeschwerdegegner(in) / Anschlussrechtsbeschwerdegegner(in)</b>
+     * <b>director / director</b>
      *  * <p>
-     *  *  Code: 012
+     *  *  Code: 049
      *  * <p>
      *  * 
      */
@@ -538,9 +544,9 @@ public enum RollenCode {
     director("049"),
 
     /**
-     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
+     * <b>Dolmetscher(in) / Interpreter</b>
      *  * <p>
-     *  *  Code: 013
+     *  *  Code: 050
      *  * <p>
      *  * 
      */
@@ -549,9 +555,9 @@ public enum RollenCode {
     Dolmetscher("050"),
 
     /**
-     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
+     * <b>Dritte(r) / Dritte(r)</b>
      *  * <p>
-     *  *  Code: 013
+     *  *  Code: 051
      *  * <p>
      *  * 
      */
@@ -560,9 +566,9 @@ public enum RollenCode {
     Dritte("051"),
 
     /**
-     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
+     * <b>Drittschuldner(in) / Drittschuldner(in)</b>
      *  * <p>
-     *  *  Code: 013
+     *  *  Code: 052
      *  * <p>
      *  * 
      */
@@ -571,9 +577,9 @@ public enum RollenCode {
     Drittschuldner("052"),
 
     /**
-     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
+     * <b>Drittwiderbeklagte(r) / Drittwiderbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 013
+     *  *  Code: 053
      *  * <p>
      *  * 
      */
@@ -582,9 +588,9 @@ public enum RollenCode {
     Drittwiderbeklagte("053"),
 
     /**
-     * <b>Anschlussrevisionsbeklagte(r) / Anschlussrevisionsbeklagte(r)</b>
+     * <b>Drittwiderkl&#228;ger(in) / Drittwiderkl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 013
+     *  *  Code: 054
      *  * <p>
      *  * 
      */
@@ -593,9 +599,9 @@ public enum RollenCode {
     Drittwiderklaeger("054"),
 
     /**
-     * <b>Anschlussrevisionskl&#228;ger(in) / Anschlussrevisionskl&#228;ger(in)</b>
+     * <b>Ehemann (Ehefrau) / Ehemann (Ehefrau)</b>
      *  * <p>
-     *  *  Code: 014
+     *  *  Code: 056
      *  * <p>
      *  * 
      */
@@ -604,9 +610,9 @@ public enum RollenCode {
     Ehemann_Ehefrau("056"),
 
     /**
-     * <b>Anschlussrevisionskl&#228;ger(in) / Anschlussrevisionskl&#228;ger(in)</b>
+     * <b>Eigent&#252;mer(in) / Eigent&#252;mer(in)</b>
      *  * <p>
-     *  *  Code: 014
+     *  *  Code: 057
      *  * <p>
      *  * 
      */
@@ -615,9 +621,9 @@ public enum RollenCode {
     Eigentuemer("057"),
 
     /**
-     * <b>Anschlussrevisionskl&#228;ger(in) / Anschlussrevisionskl&#228;ger(in)</b>
+     * <b>Eingetragene(r) Lebenspartner(in) / Eingetragene(r) Lebenspartner(in)</b>
      *  * <p>
-     *  *  Code: 014
+     *  *  Code: 058
      *  * <p>
      *  * 
      */
@@ -626,9 +632,9 @@ public enum RollenCode {
     Eingetragene_Lebenspartner("058"),
 
     /**
-     * <b>Antragsgegner(in) / Respondent</b>
+     * <b>Einleitungsbeh&#246;rde / Einleitungsbeh&#246;rde</b>
      *  * <p>
-     *  *  Code: 015
+     *  *  Code: 059
      *  * <p>
      *  * 
      */
@@ -637,9 +643,9 @@ public enum RollenCode {
     Einleitungsbehoerde("059"),
 
     /**
-     * <b>Antragsgegner(in) / Respondent</b>
+     * <b>Eltern / Eltern</b>
      *  * <p>
-     *  *  Code: 015
+     *  *  Code: 060
      *  * <p>
      *  * 
      */
@@ -648,9 +654,9 @@ public enum RollenCode {
     Eltern("060"),
 
     /**
-     * <b>Antragsgegner(in) / Respondent</b>
+     * <b>Elternteil / Elternteil</b>
      *  * <p>
-     *  *  Code: 015
+     *  *  Code: 061
      *  * <p>
      *  * 
      */
@@ -659,9 +665,9 @@ public enum RollenCode {
     Elternteil("061"),
 
     /**
-     * <b>Antragsgegner(in) / Respondent</b>
+     * <b>Enkel(in) / Enkel(in)</b>
      *  * <p>
-     *  *  Code: 015
+     *  *  Code: 062
      *  * <p>
      *  * 
      */
@@ -670,9 +676,9 @@ public enum RollenCode {
     Enkel("062"),
 
     /**
-     * <b>Antragsteller(in) / Applicant</b>
+     * <b>Erbe (Erbin) / Erbe (Erbin)</b>
      *  * <p>
-     *  *  Code: 016
+     *  *  Code: 063
      *  * <p>
      *  * 
      */
@@ -681,9 +687,9 @@ public enum RollenCode {
     Erbe_Erbin("063"),
 
     /**
-     * <b>Antragsteller(in) / Applicant</b>
+     * <b>Erbe (Erbin) (ausschlagend) / Erbe (Erbin) (ausschlagend)</b>
      *  * <p>
-     *  *  Code: 016
+     *  *  Code: 064
      *  * <p>
      *  * 
      */
@@ -692,9 +698,9 @@ public enum RollenCode {
     Erbe_Erbin_ausschlagend("064"),
 
     /**
-     * <b>Antragsteller(in) / Applicant</b>
+     * <b>Erbe (Erbin) (vorverstorben) / Erbe (Erbin) (vorverstorben)</b>
      *  * <p>
-     *  *  Code: 016
+     *  *  Code: 065
      *  * <p>
      *  * 
      */
@@ -703,9 +709,9 @@ public enum RollenCode {
     Erbe_Erbin_vorverstorben("065"),
 
     /**
-     * <b>Anzeigeerstatter(in) / Complainant</b>
+     * <b>Erblasser(in) / Erblasser(in)</b>
      *  * <p>
-     *  *  Code: 017
+     *  *  Code: 066
      *  * <p>
      *  * 
      */
@@ -714,9 +720,9 @@ public enum RollenCode {
     Erblasser("066"),
 
     /**
-     * <b>Anzeigeerstatter(in) / Complainant</b>
+     * <b>Erg&#228;nzungspfleger(in) / Erg&#228;nzungspfleger(in)</b>
      *  * <p>
-     *  *  Code: 017
+     *  *  Code: 067
      *  * <p>
      *  * 
      */
@@ -725,9 +731,9 @@ public enum RollenCode {
     Ergaenzungspfleger("067"),
 
     /**
-     * <b>Anzeigeerstatter(in) / Complainant</b>
+     * <b>Erinnerungsf&#252;hrer(in) / Erinnerungsf&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 017
+     *  *  Code: 068
      *  * <p>
      *  * 
      */
@@ -736,9 +742,9 @@ public enum RollenCode {
     Erinnerungsfuehrer("068"),
 
     /**
-     * <b>Anzunehmende(r) / Anzunehmende(r)</b>
+     * <b>Erinnerungsgegner(in) / Erinnerungsgegner(in)</b>
      *  * <p>
-     *  *  Code: 018
+     *  *  Code: 069
      *  * <p>
      *  * 
      */
@@ -747,9 +753,9 @@ public enum RollenCode {
     Erinnerungsgegner("069"),
 
     /**
-     * <b>Anzunehmende(r) / Anzunehmende(r)</b>
+     * <b>Ersatzbetreuer(in) / Ersatzbetreuer(in)</b>
      *  * <p>
-     *  *  Code: 018
+     *  *  Code: 070
      *  * <p>
      *  * 
      */
@@ -758,9 +764,9 @@ public enum RollenCode {
     Ersatzbetreuer("070"),
 
     /**
-     * <b>Anzunehmende(r) / Anzunehmende(r)</b>
+     * <b>Ersteher(in) / Ersteher(in)</b>
      *  * <p>
-     *  *  Code: 018
+     *  *  Code: 071
      *  * <p>
      *  * 
      */
@@ -769,9 +775,9 @@ public enum RollenCode {
     Ersteher("071"),
 
     /**
-     * <b>Anzunehmende(r) / Anzunehmende(r)</b>
+     * <b>Erwerber(in) / Erwerber(in)</b>
      *  * <p>
-     *  *  Code: 018
+     *  *  Code: 072
      *  * <p>
      *  * 
      */
@@ -780,9 +786,9 @@ public enum RollenCode {
     Erwerber("072"),
 
     /**
-     * <b>Arrestgl&#228;ubiger(in) / Arrestgl&#228;ubiger(in)</b>
+     * <b>Erziehungsberechtigte(r) / Erziehungsberechtigte(r)</b>
      *  * <p>
-     *  *  Code: 019
+     *  *  Code: 073
      *  * <p>
      *  * 
      */
@@ -791,9 +797,9 @@ public enum RollenCode {
     Erziehungsberechtigte("073"),
 
     /**
-     * <b>Arrestgl&#228;ubiger(in) / Arrestgl&#228;ubiger(in)</b>
+     * <b>Fr&#252;here(r) Ehegatte (Ehegattin) / Fr&#252;here(r) Ehegatte (Ehegattin)</b>
      *  * <p>
-     *  *  Code: 019
+     *  *  Code: 074
      *  * <p>
      *  * 
      */
@@ -802,9 +808,9 @@ public enum RollenCode {
     Fruehere_Ehegatte_Ehegattin("074"),
 
     /**
-     * <b>Arrestgl&#228;ubiger(in) / Arrestgl&#228;ubiger(in)</b>
+     * <b>Fr&#252;here(r) Beklagte(r) / Fr&#252;here(r) Beklagte(r)</b>
      *  * <p>
-     *  *  Code: 019
+     *  *  Code: 075
      *  * <p>
      *  * 
      */
@@ -813,9 +819,9 @@ public enum RollenCode {
     Fruehere_Beklagte("075"),
 
     /**
-     * <b>Arrestschuldner(in) / Arrestschuldner(in)</b>
+     * <b>Fr&#252;here(r) Beteiligte(r) / Fr&#252;here(r) Beteiligte(r)</b>
      *  * <p>
-     *  *  Code: 020
+     *  *  Code: 076
      *  * <p>
      *  * 
      */
@@ -824,9 +830,9 @@ public enum RollenCode {
     Fruehere_Beteiligte("076"),
 
     /**
-     * <b>Arrestschuldner(in) / Arrestschuldner(in)</b>
+     * <b>Fr&#252;here(r) Gl&#228;ubiger(in) / Fr&#252;here(r) Gl&#228;ubiger(in)</b>
      *  * <p>
-     *  *  Code: 020
+     *  *  Code: 077
      *  * <p>
      *  * 
      */
@@ -835,9 +841,9 @@ public enum RollenCode {
     Fruehere_Glaeubiger("077"),
 
     /**
-     * <b>Arrestschuldner(in) / Arrestschuldner(in)</b>
+     * <b>Fr&#252;here(r) Kl&#228;ger(in) / Fr&#252;here(r) Kl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 020
+     *  *  Code: 078
      *  * <p>
      *  * 
      */
@@ -846,9 +852,9 @@ public enum RollenCode {
     Fruehere_Klaeger("078"),
 
     /**
-     * <b>Arrestschuldner(in) / Arrestschuldner(in)</b>
+     * <b>Fr&#252;here(r) Soldat(in) / Fr&#252;here(r) Soldat(in)</b>
      *  * <p>
-     *  *  Code: 020
+     *  *  Code: 079
      *  * <p>
      *  * 
      */
@@ -857,9 +863,9 @@ public enum RollenCode {
     Fruehere_Soldat("079"),
 
     /**
-     * <b>Aufsichtsbeh&#246;rde / Aufsichtsbeh&#246;rde</b>
+     * <b>Gegenvormund / Gegenvormund</b>
      *  * <p>
-     *  *  Code: 021
+     *  *  Code: 080
      *  * <p>
      *  * 
      */
@@ -868,9 +874,9 @@ public enum RollenCode {
     Gegenvormund("080"),
 
     /**
-     * <b>Aufsichtsbeh&#246;rde / Aufsichtsbeh&#246;rde</b>
+     * <b>Generalbundesanwalt (-anw&#228;ltin) / Generalbundesanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 021
+     *  *  Code: 081
      *  * <p>
      *  * 
      */
@@ -879,9 +885,9 @@ public enum RollenCode {
     Generalbundesanwalt("081"),
 
     /**
-     * <b>Aufsichtsbeh&#246;rde / Aufsichtsbeh&#246;rde</b>
+     * <b>Gericht / Gericht</b>
      *  * <p>
-     *  *  Code: 021
+     *  *  Code: 082
      *  * <p>
      *  * 
      */
@@ -890,9 +896,9 @@ public enum RollenCode {
     Gericht("082"),
 
     /**
-     * <b>Ausschlagende(r) / Ausschlagende(r)</b>
+     * <b>Gerichtsvollzieher(in) / Gerichtsvollzieher(in)</b>
      *  * <p>
-     *  *  Code: 022
+     *  *  Code: 083
      *  * <p>
      *  * 
      */
@@ -901,9 +907,9 @@ public enum RollenCode {
     Gerichtsvollzieher("083"),
 
     /**
-     * <b>Ausschlagende(r) / Ausschlagende(r)</b>
+     * <b>Gesch&#228;digte(r) / Gesch&#228;digte(r)</b>
      *  * <p>
-     *  *  Code: 022
+     *  *  Code: 084
      *  * <p>
      *  * 
      */
@@ -912,9 +918,9 @@ public enum RollenCode {
     Geschaedigte("084"),
 
     /**
-     * <b>Ausschlagende(r) / Ausschlagende(r)</b>
+     * <b>Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in) / Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in)</b>
      *  * <p>
-     *  *  Code: 022
+     *  *  Code: 085
      *  * <p>
      *  * 
      */
@@ -923,9 +929,9 @@ public enum RollenCode {
     Geschaeftsfuehrende_Gesellschafter("085"),
 
     /**
-     * <b>Beamter (Beamtin) / Beamter (Beamtin)</b>
+     * <b>Gesch&#228;ftsf&#252;hrer(in) / Gesch&#228;ftsf&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 023
+     *  *  Code: 086
      *  * <p>
      *  * 
      */
@@ -934,9 +940,9 @@ public enum RollenCode {
     Geschaeftsfuehrer("086"),
 
     /**
-     * <b>Beamter (Beamtin) / Beamter (Beamtin)</b>
+     * <b>Gesetzliche(r) Erbe (Erbin) / Gesetzliche(r) Erbe (Erbin)</b>
      *  * <p>
-     *  *  Code: 023
+     *  *  Code: 087
      *  * <p>
      *  * 
      */
@@ -945,9 +951,9 @@ public enum RollenCode {
     Gesetzliche_Erbe_Erbin("087"),
 
     /**
-     * <b>Beamter (Beamtin) / Beamter (Beamtin)</b>
+     * <b>Gesetzliche(r) Vertreter(in) / Gesetzliche(r) Vertreter(in)</b>
      *  * <p>
-     *  *  Code: 023
+     *  *  Code: 088
      *  * <p>
      *  * 
      */
@@ -956,9 +962,9 @@ public enum RollenCode {
     Gesetzliche_Vertreter("088"),
 
     /**
-     * <b>Beh&#246;rde / Beh&#246;rde</b>
+     * <b>Gl&#228;ubiger(in) / Creditor</b>
      *  * <p>
-     *  *  Code: 024
+     *  *  Code: 089
      *  * <p>
      *  * 
      */
@@ -967,9 +973,9 @@ public enum RollenCode {
     Glaeubiger("089"),
 
     /**
-     * <b>Beh&#246;rde / Beh&#246;rde</b>
+     * <b>Gro&#223;eltern / Gro&#223;eltern</b>
      *  * <p>
-     *  *  Code: 024
+     *  *  Code: 090
      *  * <p>
      *  * 
      */
@@ -978,9 +984,9 @@ public enum RollenCode {
     Grosseltern("090"),
 
     /**
-     * <b>Beh&#246;rde / Beh&#246;rde</b>
+     * <b>Gro&#223;vater (Gro&#223;mutter) / Gro&#223;vater (Gro&#223;mutter)</b>
      *  * <p>
-     *  *  Code: 024
+     *  *  Code: 092
      *  * <p>
      *  * 
      */
@@ -989,9 +995,9 @@ public enum RollenCode {
     Grossvater_Grossmutter("092"),
 
     /**
-     * <b>Beigeladene(r) / Beigeladene(r)</b>
+     * <b>Hauptbevollm&#228;chtigte(r) / Hauptbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 025
+     *  *  Code: 093
      *  * <p>
      *  * 
      */
@@ -1000,9 +1006,9 @@ public enum RollenCode {
     Hauptbevollmaechtigte("093"),
 
     /**
-     * <b>Beigeladene(r) / Beigeladene(r)</b>
+     * <b>Hoferbe (Hoferbin) / Hoferbe (Hoferbin)</b>
      *  * <p>
-     *  *  Code: 025
+     *  *  Code: 094
      *  * <p>
      *  * 
      */
@@ -1011,9 +1017,9 @@ public enum RollenCode {
     Hoferbe_Hoferbin("094"),
 
     /**
-     * <b>Beigeladene(r) / Beigeladene(r)</b>
+     * <b>Inhaber(in) der Firma / Inhaber(in) der Firma</b>
      *  * <p>
-     *  *  Code: 025
+     *  *  Code: 095
      *  * <p>
      *  * 
      */
@@ -1022,9 +1028,9 @@ public enum RollenCode {
     Inhaber_der_Firma("095"),
 
     /**
-     * <b>Beistand / Beistand</b>
+     * <b>Insolvenzverwalter(in) / Insolvency Administrator</b>
      *  * <p>
-     *  *  Code: 026
+     *  *  Code: 096
      *  * <p>
      *  * 
      */
@@ -1033,9 +1039,9 @@ public enum RollenCode {
     Insolvenzverwalter("096"),
 
     /**
-     * <b>Beistand / Beistand</b>
+     * <b>Jugendamt / Jugendamt</b>
      *  * <p>
-     *  *  Code: 026
+     *  *  Code: 097
      *  * <p>
      *  * 
      */
@@ -1044,9 +1050,9 @@ public enum RollenCode {
     Jugendamt("097"),
 
     /**
-     * <b>Beistand / Beistand</b>
+     * <b>Kammer / Kammer</b>
      *  * <p>
-     *  *  Code: 026
+     *  *  Code: 098
      *  * <p>
      *  * 
      */
@@ -1055,9 +1061,9 @@ public enum RollenCode {
     Kammer("098"),
 
     /**
-     * <b>Bekannte(r) / Bekannte(r)</b>
+     * <b>Kammermitglied / Kammermitglied</b>
      *  * <p>
-     *  *  Code: 027
+     *  *  Code: 099
      *  * <p>
      *  * 
      */
@@ -1066,9 +1072,9 @@ public enum RollenCode {
     Kammermitglied("099"),
 
     /**
-     * <b>Bekannte(r) / Bekannte(r)</b>
+     * <b>Kind / Kind</b>
      *  * <p>
-     *  *  Code: 027
+     *  *  Code: 100
      *  * <p>
      *  * 
      */
@@ -1077,9 +1083,9 @@ public enum RollenCode {
     Kind("100"),
 
     /**
-     * <b>Bekannte(r) / Bekannte(r)</b>
+     * <b>Kl&#228;ger(in) / Plaintiff</b>
      *  * <p>
-     *  *  Code: 027
+     *  *  Code: 101
      *  * <p>
      *  * 
      */
@@ -1088,9 +1094,9 @@ public enum RollenCode {
     Klaeger("101"),
 
     /**
-     * <b>Bekannte(r) / Bekannte(r)</b>
+     * <b>Kontrollbetreuer(in) / Kontrollbetreuer(in)</b>
      *  * <p>
-     *  *  Code: 027
+     *  *  Code: 102
      *  * <p>
      *  * 
      */
@@ -1099,9 +1105,9 @@ public enum RollenCode {
     Kontrollbetreuer("102"),
 
     /**
-     * <b>Beklagte(r) / Beklagte(r)</b>
+     * <b>Korrespondenzanwalt (-anw&#228;ltin) / Korrespondenzanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 028
+     *  *  Code: 103
      *  * <p>
      *  * 
      */
@@ -1110,9 +1116,9 @@ public enum RollenCode {
     Korrespondenzanwalt("103"),
 
     /**
-     * <b>Beklagte(r) / Beklagte(r)</b>
+     * <b>Kostenschuldner(in) / Kostenschuldner(in)</b>
      *  * <p>
-     *  *  Code: 028
+     *  *  Code: 104
      *  * <p>
      *  * 
      */
@@ -1121,9 +1127,9 @@ public enum RollenCode {
     Kostenschuldner("104"),
 
     /**
-     * <b>Beklagte(r) / Beklagte(r)</b>
+     * <b>Landwirtschaftsrichter(in) / Landwirtschaftsrichter(in)</b>
      *  * <p>
-     *  *  Code: 028
+     *  *  Code: 105
      *  * <p>
      *  * 
      */
@@ -1132,9 +1138,9 @@ public enum RollenCode {
     Landwirtschaftsrichter("105"),
 
     /**
-     * <b>Berufungsbeklagte(r) / Berufungsbeklagte(r)</b>
+     * <b>Lebenspartner(in) / Lebenspartner(in)</b>
      *  * <p>
-     *  *  Code: 029
+     *  *  Code: 106
      *  * <p>
      *  * 
      */
@@ -1143,9 +1149,9 @@ public enum RollenCode {
     Lebenspartner("106"),
 
     /**
-     * <b>Berufungsbeklagte(r) / Berufungsbeklagte(r)</b>
+     * <b>Liquidator(in) / Liquidator(in)</b>
      *  * <p>
-     *  *  Code: 029
+     *  *  Code: 107
      *  * <p>
      *  * 
      */
@@ -1154,9 +1160,9 @@ public enum RollenCode {
     Liquidator("107"),
 
     /**
-     * <b>Berufungsbeklagte(r) / Berufungsbeklagte(r)</b>
+     * <b>Minderj&#228;hrige(r) / Minderj&#228;hrige(r)</b>
      *  * <p>
-     *  *  Code: 029
+     *  *  Code: 108
      *  * <p>
      *  * 
      */
@@ -1165,9 +1171,9 @@ public enum RollenCode {
     Minderjaehrige("108"),
 
     /**
-     * <b>Berufungsbeklagte(r) / Berufungsbeklagte(r)</b>
+     * <b>Mitvormund / Mitvormund</b>
      *  * <p>
-     *  *  Code: 029
+     *  *  Code: 109
      *  * <p>
      *  * 
      */
@@ -1176,9 +1182,9 @@ public enum RollenCode {
     Mitvormund("109"),
 
     /**
-     * <b>Berufungskl&#228;ger(in) / Berufungskl&#228;ger(in)</b>
+     * <b>M&#252;ndel / M&#252;ndel</b>
      *  * <p>
-     *  *  Code: 030
+     *  *  Code: 110
      *  * <p>
      *  * 
      */
@@ -1187,9 +1193,9 @@ public enum RollenCode {
     Muendel("110"),
 
     /**
-     * <b>Berufungskl&#228;ger(in) / Berufungskl&#228;ger(in)</b>
+     * <b>Nachbesserungsgl&#228;ubiger(in) / Nachbesserungsgl&#228;ubiger(in)</b>
      *  * <p>
-     *  *  Code: 030
+     *  *  Code: 112
      *  * <p>
      *  * 
      */
@@ -1198,9 +1204,9 @@ public enum RollenCode {
     Nachbesserungsglaeubiger("112"),
 
     /**
-     * <b>Berufungskl&#228;ger(in) / Berufungskl&#228;ger(in)</b>
+     * <b>Nachlasspfleger(in) / Nachlasspfleger(in)</b>
      *  * <p>
-     *  *  Code: 030
+     *  *  Code: 113
      *  * <p>
      *  * 
      */
@@ -1209,9 +1215,9 @@ public enum RollenCode {
     Nachlasspfleger("113"),
 
     /**
-     * <b>Beschuldigte(r) / Accused (Prelim.)</b>
+     * <b>Nachlassverwalter(in) / Nachlassverwalter(in)</b>
      *  * <p>
-     *  *  Code: 031
+     *  *  Code: 114
      *  * <p>
      *  * 
      */
@@ -1220,9 +1226,9 @@ public enum RollenCode {
     Nachlassverwalter("114"),
 
     /**
-     * <b>Beschuldigte(r) / Accused (Prelim.)</b>
+     * <b>Nebenkl&#228;ger(in) / Nebenkl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 031
+     *  *  Code: 115
      *  * <p>
      *  * 
      */
@@ -1231,9 +1237,9 @@ public enum RollenCode {
     Nebenklaeger("115"),
 
     /**
-     * <b>Beschuldigte(r) / Accused (Prelim.)</b>
+     * <b>Neffe (Nichte) / Neffe (Nichte)</b>
      *  * <p>
-     *  *  Code: 031
+     *  *  Code: 116
      *  * <p>
      *  * 
      */
@@ -1242,9 +1248,9 @@ public enum RollenCode {
     Neffe_Nichte("116"),
 
     /**
-     * <b>Beschuldigte(r) / Accused (Prelim.)</b>
+     * <b>Nicht verwandt / Nicht verwandt</b>
      *  * <p>
-     *  *  Code: 031
+     *  *  Code: 117
      *  * <p>
      *  * 
      */
@@ -1253,9 +1259,9 @@ public enum RollenCode {
     Nicht_verwandt("117"),
 
     /**
-     * <b>Beschwerdef&#252;hrer(in) / Beschwerdef&#252;hrer(in)</b>
+     * <b>Onkel (Tante) / Onkel (Tante)</b>
      *  * <p>
-     *  *  Code: 032
+     *  *  Code: 118
      *  * <p>
      *  * 
      */
@@ -1264,9 +1270,9 @@ public enum RollenCode {
     Onkel_Tante("118"),
 
     /**
-     * <b>Beschwerdef&#252;hrer(in) / Beschwerdef&#252;hrer(in)</b>
+     * <b>Opfer / Opfer</b>
      *  * <p>
-     *  *  Code: 032
+     *  *  Code: 119
      *  * <p>
      *  * 
      */
@@ -1275,9 +1281,9 @@ public enum RollenCode {
     Opfer("119"),
 
     /**
-     * <b>Beschwerdef&#252;hrer(in) / Beschwerdef&#252;hrer(in)</b>
+     * <b>P&#228;chter(in) / P&#228;chter(in)</b>
      *  * <p>
-     *  *  Code: 032
+     *  *  Code: 120
      *  * <p>
      *  * 
      */
@@ -1286,9 +1292,9 @@ public enum RollenCode {
     Paechter("120"),
 
     /**
-     * <b>Beschwerdef&#252;hrer(in) / Beschwerdef&#252;hrer(in)</b>
+     * <b>Pflegeeltern / Pflegeeltern</b>
      *  * <p>
-     *  *  Code: 032
+     *  *  Code: 121
      *  * <p>
      *  * 
      */
@@ -1297,9 +1303,9 @@ public enum RollenCode {
     Pflegeeltern("121"),
 
     /**
-     * <b>Beschwerdegegner(in) / Beschwerdegegner(in)</b>
+     * <b>Pfleger(in) / Pfleger(in)</b>
      *  * <p>
-     *  *  Code: 033
+     *  *  Code: 123
      *  * <p>
      *  * 
      */
@@ -1308,9 +1314,9 @@ public enum RollenCode {
     Pfleger("123"),
 
     /**
-     * <b>Beschwerdegegner(in) / Beschwerdegegner(in)</b>
+     * <b>Pfleger(in) f&#252;r das Sammelverm&#246;gen / Pfleger(in) f&#252;r das Sammelverm&#246;gen</b>
      *  * <p>
-     *  *  Code: 033
+     *  *  Code: 124
      *  * <p>
      *  * 
      */
@@ -1319,9 +1325,9 @@ public enum RollenCode {
     Pfleger_fuer_das_Sammelvermoegen("124"),
 
     /**
-     * <b>Beschwerdegegner(in) / Beschwerdegegner(in)</b>
+     * <b>Pfleger(in) f&#252;r die Leibesfrucht / Pfleger(in) f&#252;r die Leibesfrucht</b>
      *  * <p>
-     *  *  Code: 033
+     *  *  Code: 125
      *  * <p>
      *  * 
      */
@@ -1330,9 +1336,9 @@ public enum RollenCode {
     Pfleger_fuer_die_Leibesfrucht("125"),
 
     /**
-     * <b>Besucher(in) / Besucher(in)</b>
+     * <b>Pflegevater (Pflegemutter) des M&#252;ndels / Pflegevater (Pflegemutter) des M&#252;ndels</b>
      *  * <p>
-     *  *  Code: 034
+     *  *  Code: 126
      *  * <p>
      *  * 
      */
@@ -1341,9 +1347,9 @@ public enum RollenCode {
     Pflegevater_Pflegemutter_des_Muendels("126"),
 
     /**
-     * <b>Besucher(in) / Besucher(in)</b>
+     * <b>Pflegling / Pflegling</b>
      *  * <p>
-     *  *  Code: 034
+     *  *  Code: 127
      *  * <p>
      *  * 
      */
@@ -1352,9 +1358,9 @@ public enum RollenCode {
     Pflegling("127"),
 
     /**
-     * <b>Besucher(in) / Besucher(in)</b>
+     * <b>Pflichtverteidiger(in) / Pflichtverteidiger(in)</b>
      *  * <p>
-     *  *  Code: 034
+     *  *  Code: 128
      *  * <p>
      *  * 
      */
@@ -1363,9 +1369,9 @@ public enum RollenCode {
     Pflichtverteidiger("128"),
 
     /**
-     * <b>Besucher(in) / Besucher(in)</b>
+     * <b>Polizei / Polizei</b>
      *  * <p>
-     *  *  Code: 034
+     *  *  Code: 129
      *  * <p>
      *  * 
      */
@@ -1374,9 +1380,9 @@ public enum RollenCode {
     Polizei("129"),
 
     /**
-     * <b>Betreibende(r) Gl&#228;ubige(r) / Betreibende(r) Gl&#228;ubige(r)</b>
+     * <b>Privatbeklagte(r) / Privatbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 036
+     *  *  Code: 130
      *  * <p>
      *  * 
      */
@@ -1385,9 +1391,9 @@ public enum RollenCode {
     Privatbeklagte("130"),
 
     /**
-     * <b>Betreibende(r) Gl&#228;ubige(r) / Betreibende(r) Gl&#228;ubige(r)</b>
+     * <b>Privatkl&#228;ger(in) / Privatkl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 036
+     *  *  Code: 131
      *  * <p>
      *  * 
      */
@@ -1396,9 +1402,9 @@ public enum RollenCode {
     Privatklaeger("131"),
 
     /**
-     * <b>Betreibende(r) Gl&#228;ubige(r) / Betreibende(r) Gl&#228;ubige(r)</b>
+     * <b>Prozessbevollm&#228;chtigte(r) / Prozessbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 036
+     *  *  Code: 132
      *  * <p>
      *  * 
      */
@@ -1407,9 +1413,9 @@ public enum RollenCode {
     Prozessbevollmaechtigte("132"),
 
     /**
-     * <b>Betreuer(in) / Guardian</b>
+     * <b>Prozesskostenhilfe-Anwalt (-Anw&#228;ltin) / Prozesskostenhilfe-Anwalt (-Anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 037
+     *  *  Code: 133
      *  * <p>
      *  * 
      */
@@ -1418,9 +1424,9 @@ public enum RollenCode {
     Prozesskostenhilfe_Anwalt_Anwaeltin("133"),
 
     /**
-     * <b>Betreuer(in) / Guardian</b>
+     * <b>Prozesskostenhilfe-Korrespondenzanwalt (-anw&#228;ltin) / Prozesskostenhilfe-Korrespondenzanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 037
+     *  *  Code: 134
      *  * <p>
      *  * 
      */
@@ -1429,9 +1435,9 @@ public enum RollenCode {
     Prozesskostenhilfe_Korrespondenzanwalt("134"),
 
     /**
-     * <b>Betreute(r) / Ward</b>
+     * <b>Rechtsanwalt (-anw&#228;ltin) / Rechtsanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 038
+     *  *  Code: 135
      *  * <p>
      *  * 
      */
@@ -1440,9 +1446,9 @@ public enum RollenCode {
     Rechtsanwalt("135"),
 
     /**
-     * <b>Betreute(r) / Ward</b>
+     * <b>Rechtsbeistand / Rechtsbeistand</b>
      *  * <p>
-     *  *  Code: 038
+     *  *  Code: 136
      *  * <p>
      *  * 
      */
@@ -1451,9 +1457,9 @@ public enum RollenCode {
     Rechtsbeistand("136"),
 
     /**
-     * <b>Betreute(r) / Ward</b>
+     * <b>Rechtsbeschwerdef&#252;hrer(in) / Rechtsbeschwerdef&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 038
+     *  *  Code: 137
      *  * <p>
      *  * 
      */
@@ -1462,9 +1468,9 @@ public enum RollenCode {
     Rechtsbeschwerdefuehrer("137"),
 
     /**
-     * <b>Betreuungsbeh&#246;rde / Betreuungsbeh&#246;rde</b>
+     * <b>Rechtsbeschwerdegegner(in) / Rechtsbeschwerdegegner(in)</b>
      *  * <p>
-     *  *  Code: 039
+     *  *  Code: 138
      *  * <p>
      *  * 
      */
@@ -1473,9 +1479,9 @@ public enum RollenCode {
     Rechtsbeschwerdegegner("138"),
 
     /**
-     * <b>Betreuungsbeh&#246;rde / Betreuungsbeh&#246;rde</b>
+     * <b>Revisionsbeklagte(r) / Revisionsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 039
+     *  *  Code: 139
      *  * <p>
      *  * 
      */
@@ -1484,9 +1490,9 @@ public enum RollenCode {
     Revisionsbeklagte("139"),
 
     /**
-     * <b>Betreuungsbeh&#246;rde / Betreuungsbeh&#246;rde</b>
+     * <b>Revisionskl&#228;ger(in) / Revisionskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 039
+     *  *  Code: 140
      *  * <p>
      *  * 
      */
@@ -1495,9 +1501,9 @@ public enum RollenCode {
     Revisionsklaeger("140"),
 
     /**
-     * <b>Betroffene(r) / Betroffene(r)</b>
+     * <b>Sachbearbeiter(in) / Sachbearbeiter(in)</b>
      *  * <p>
-     *  *  Code: 040
+     *  *  Code: 141
      *  * <p>
      *  * 
      */
@@ -1506,9 +1512,9 @@ public enum RollenCode {
     Sachbearbeiter("141"),
 
     /**
-     * <b>Betroffene(r) / Betroffene(r)</b>
+     * <b>Sachverst&#228;ndige(r) / Sachverst&#228;ndige(r)</b>
      *  * <p>
-     *  *  Code: 040
+     *  *  Code: 142
      *  * <p>
      *  * 
      */
@@ -1517,9 +1523,9 @@ public enum RollenCode {
     Sachverstaendige("142"),
 
     /**
-     * <b>Betroffene(r) / Betroffene(r)</b>
+     * <b>Schuldner(in) / Debtor</b>
      *  * <p>
-     *  *  Code: 040
+     *  *  Code: 143
      *  * <p>
      *  * 
      */
@@ -1528,9 +1534,9 @@ public enum RollenCode {
     Schuldner("143"),
 
     /**
-     * <b>Betroffene(r) / Betroffene(r)</b>
+     * <b>Schwager (Schw&#228;gerin) / Schwager (Schw&#228;gerin)</b>
      *  * <p>
-     *  *  Code: 040
+     *  *  Code: 144
      *  * <p>
      *  * 
      */
@@ -1539,9 +1545,9 @@ public enum RollenCode {
     Schwager_Schwaegerin("144"),
 
     /**
-     * <b>Bevollm&#228;chtigte(r) / Bevollm&#228;chtigte(r)</b>
+     * <b>Schwiegersohn (Schwiegertochter) / Schwiegersohn (Schwiegertochter)</b>
      *  * <p>
-     *  *  Code: 041
+     *  *  Code: 146
      *  * <p>
      *  * 
      */
@@ -1550,9 +1556,9 @@ public enum RollenCode {
     Schwiegersohn_Schwiegertochter("146"),
 
     /**
-     * <b>Bevollm&#228;chtigte(r) / Bevollm&#228;chtigte(r)</b>
+     * <b>Schwiegervater (Schwiegermutter) / Schwiegervater (Schwiegermutter)</b>
      *  * <p>
-     *  *  Code: 041
+     *  *  Code: 148
      *  * <p>
      *  * 
      */
@@ -1561,9 +1567,9 @@ public enum RollenCode {
     Schwiegervater_Schwiegermutter("148"),
 
     /**
-     * <b>Bevollm&#228;chtigte(r) / Bevollm&#228;chtigte(r)</b>
+     * <b>Sohn (Tochter) / Sohn (Tochter)</b>
      *  * <p>
-     *  *  Code: 041
+     *  *  Code: 149
      *  * <p>
      *  * 
      */
@@ -1572,9 +1578,9 @@ public enum RollenCode {
     Sohn_Tochter("149"),
 
     /**
-     * <b>Bew&#228;hrungshelfer(in) / Bew&#228;hrungshelfer(in)</b>
+     * <b>Soldat(in) / Soldat(in)</b>
      *  * <p>
-     *  *  Code: 042
+     *  *  Code: 150
      *  * <p>
      *  * 
      */
@@ -1583,9 +1589,9 @@ public enum RollenCode {
     Soldat("150"),
 
     /**
-     * <b>Bew&#228;hrungshelfer(in) / Bew&#228;hrungshelfer(in)</b>
+     * <b>Sonstige(r) Beteiligte(r) / Sonstige(r) Beteiligte(r)</b>
      *  * <p>
-     *  *  Code: 042
+     *  *  Code: 151
      *  * <p>
      *  * 
      */
@@ -1594,9 +1600,9 @@ public enum RollenCode {
     Sonstige_Beteiligte("151"),
 
     /**
-     * <b>Bew&#228;hrungshelfer(in) / Bew&#228;hrungshelfer(in)</b>
+     * <b>Sonstige(r) Vertreter(in) / Sonstige(r) Vertreter(in)</b>
      *  * <p>
-     *  *  Code: 042
+     *  *  Code: 152
      *  * <p>
      *  * 
      */
@@ -1605,9 +1611,9 @@ public enum RollenCode {
     Sonstige_Vertreter("152"),
 
     /**
-     * <b>Bew&#228;hrungshelfer(in) / Bew&#228;hrungshelfer(in)</b>
+     * <b>Staatsanwaltschaft / Staatsanwaltschaft</b>
      *  * <p>
-     *  *  Code: 042
+     *  *  Code: 153
      *  * <p>
      *  * 
      */
@@ -1616,9 +1622,9 @@ public enum RollenCode {
     Staatsanwaltschaft("153"),
 
     /**
-     * <b>Beweisanwalt (-anw&#228;ltin) / Beweisanwalt (-anw&#228;ltin)</b>
+     * <b>Stiefeltern / Stiefeltern</b>
      *  * <p>
-     *  *  Code: 043
+     *  *  Code: 154
      *  * <p>
      *  * 
      */
@@ -1627,9 +1633,9 @@ public enum RollenCode {
     Stiefeltern("154"),
 
     /**
-     * <b>Beweisanwalt (-anw&#228;ltin) / Beweisanwalt (-anw&#228;ltin)</b>
+     * <b>Stiefvater (Stiefmutter) / Stiefvater (Stiefmutter)</b>
      *  * <p>
-     *  *  Code: 043
+     *  *  Code: 156
      *  * <p>
      *  * 
      */
@@ -1638,9 +1644,9 @@ public enum RollenCode {
     Stiefvater_Stiefmutter("156"),
 
     /**
-     * <b>Beweisanwalt (-anw&#228;ltin) / Beweisanwalt (-anw&#228;ltin)</b>
+     * <b>Terminsbevollm&#228;chtigte(r) / Terminsbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 043
+     *  *  Code: 161
      *  * <p>
      *  * 
      */
@@ -1649,9 +1655,9 @@ public enum RollenCode {
     Terminsbevollmaechtigte("161"),
 
     /**
-     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
+     * <b>Testamentsvollstrecker(in) / Testamentsvollstrecker(in)</b>
      *  * <p>
-     *  *  Code: 044
+     *  *  Code: 162
      *  * <p>
      *  * 
      */
@@ -1660,9 +1666,9 @@ public enum RollenCode {
     Testamentsvollstrecker("162"),
 
     /**
-     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
+     * <b>Testator(in) / Testator(in)</b>
      *  * <p>
-     *  *  Code: 044
+     *  *  Code: 163
      *  * <p>
      *  * 
      */
@@ -1671,9 +1677,9 @@ public enum RollenCode {
     Testator("163"),
 
     /**
-     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
+     * <b>&#220;bernehmer(in) / &#220;bernehmer(in)</b>
      *  * <p>
-     *  *  Code: 044
+     *  *  Code: 164
      *  * <p>
      *  * 
      */
@@ -1682,9 +1688,9 @@ public enum RollenCode {
     Uebernehmer("164"),
 
     /**
-     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
+     * <b>Unterbevollm&#228;chtigte(r) / Unterbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 044
+     *  *  Code: 165
      *  * <p>
      *  * 
      */
@@ -1693,9 +1699,9 @@ public enum RollenCode {
     Unterbevollmaechtigte("165"),
 
     /**
-     * <b>Bruder (Schwester) / Bruder (Schwester)</b>
+     * <b>Ur-Enkel(in) / Ur-Enkel(in)</b>
      *  * <p>
-     *  *  Code: 044
+     *  *  Code: 166
      *  * <p>
      *  * 
      */
@@ -1704,9 +1710,9 @@ public enum RollenCode {
     Ur_Enkel("166"),
 
     /**
-     * <b>Bundeswehrdisziplinaranwalt (-anw&#228;ltin) / Bundeswehrdisziplinaranwalt (-anw&#228;ltin)</b>
+     * <b>Vater (Mutter) / Vater (Mutter)</b>
      *  * <p>
-     *  *  Code: 045
+     *  *  Code: 167
      *  * <p>
      *  * 
      */
@@ -1715,9 +1721,9 @@ public enum RollenCode {
     Vater_Mutter("167"),
 
     /**
-     * <b>Bundeswehrdisziplinaranwalt (-anw&#228;ltin) / Bundeswehrdisziplinaranwalt (-anw&#228;ltin)</b>
+     * <b>Ver&#228;u&#223;erer (Ver&#228;u&#223;erin) / Ver&#228;u&#223;erer (Ver&#228;u&#223;erin)</b>
      *  * <p>
-     *  *  Code: 045
+     *  *  Code: 168
      *  * <p>
      *  * 
      */
@@ -1726,9 +1732,9 @@ public enum RollenCode {
     Veraeusserer_Veraeusserin("168"),
 
     /**
-     * <b>Bundeswehrdisziplinaranwalt (-anw&#228;ltin) / Bundeswehrdisziplinaranwalt (-anw&#228;ltin)</b>
+     * <b>Verfahrensbevollm&#228;chtigte(r) / Verfahrensbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 045
+     *  *  Code: 169
      *  * <p>
      *  * 
      */
@@ -1737,9 +1743,9 @@ public enum RollenCode {
     Verfahrensbevollmaechtigte("169"),
 
     /**
-     * <b>Bundeswehrdisziplinaranwalt (-anw&#228;ltin) / Bundeswehrdisziplinaranwalt (-anw&#228;ltin)</b>
+     * <b>Verfahrenskostenhilfe-Anwalt(-Anw&#228;ltin) / Verfahrenskostenhilfe-Anwalt(-Anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 045
+     *  *  Code: 170
      *  * <p>
      *  * 
      */
@@ -1748,9 +1754,9 @@ public enum RollenCode {
     Verfahrenskostenhilfe_Anwalt_Anwaeltin("170"),
 
     /**
-     * <b>Bu&#223;geldempf&#228;nger(in) / Bu&#223;geldempf&#228;nger(in)</b>
+     * <b>Verfahrenskostenhilfe-Korrespondenzanwalt (-anw&#228;ltin) / Verfahrenskostenhilfe-Korrespondenzanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 046
+     *  *  Code: 171
      *  * <p>
      *  * 
      */
@@ -1759,9 +1765,9 @@ public enum RollenCode {
     Verfahrenskostenhilfe_Korrespondenzanwalt("171"),
 
     /**
-     * <b>Bu&#223;geldempf&#228;nger(in) / Bu&#223;geldempf&#228;nger(in)</b>
+     * <b>Verfahrenspfleger(in) / Verfahrenspfleger(in)</b>
      *  * <p>
-     *  *  Code: 046
+     *  *  Code: 172
      *  * <p>
      *  * 
      */
@@ -1770,9 +1776,9 @@ public enum RollenCode {
     Verfahrenspfleger("172"),
 
     /**
-     * <b>Cousin(e) / Cousin(e)</b>
+     * <b>Verfahrensvertreter(in) (&#167;787 ZPO) / Verfahrensvertreter(in) (&#167;787 ZPO)</b>
      *  * <p>
-     *  *  Code: 047
+     *  *  Code: 173
      *  * <p>
      *  * 
      */
@@ -1781,9 +1787,9 @@ public enum RollenCode {
     Verfahrensvertreter_787_ZPO("173"),
 
     /**
-     * <b>Cousin(e) / Cousin(e)</b>
+     * <b>Verf&#252;gungsbeklagte(r) / Verf&#252;gungsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 047
+     *  *  Code: 174
      *  * <p>
      *  * 
      */
@@ -1792,9 +1798,9 @@ public enum RollenCode {
     Verfuegungsbeklagte("174"),
 
     /**
-     * <b>Cousin(e) / Cousin(e)</b>
+     * <b>Verf&#252;gungskl&#228;ger(in) / Verf&#252;gungskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 047
+     *  *  Code: 175
      *  * <p>
      *  * 
      */
@@ -1803,9 +1809,9 @@ public enum RollenCode {
     Verfuegungsklaeger("175"),
 
     /**
-     * <b>Dienstvorgesetzte(r) / Dienstvorgesetzte(r)</b>
+     * <b>Verkehrsanwalt (-anw&#228;ltin) / Verkehrsanwalt (-anw&#228;ltin)</b>
      *  * <p>
-     *  *  Code: 048
+     *  *  Code: 176
      *  * <p>
      *  * 
      */
@@ -1814,9 +1820,9 @@ public enum RollenCode {
     Verkehrsanwalt("176"),
 
     /**
-     * <b>Dienstvorgesetzte(r) / Dienstvorgesetzte(r)</b>
+     * <b>Verlobte(r) / Verlobte(r)</b>
      *  * <p>
-     *  *  Code: 048
+     *  *  Code: 177
      *  * <p>
      *  * 
      */
@@ -1825,9 +1831,9 @@ public enum RollenCode {
     Verlobte("177"),
 
     /**
-     * <b>Dienstvorgesetzte(r) / Dienstvorgesetzte(r)</b>
+     * <b>Verm&#228;chtnisnehmer(in) / Verm&#228;chtnisnehmer(in)</b>
      *  * <p>
-     *  *  Code: 048
+     *  *  Code: 178
      *  * <p>
      *  * 
      */
@@ -1836,9 +1842,9 @@ public enum RollenCode {
     Vermaechtnisnehmer("178"),
 
     /**
-     * <b>director / director</b>
+     * <b>Vermieter(in) / Vermieter(in)</b>
      *  * <p>
-     *  *  Code: 049
+     *  *  Code: 179
      *  * <p>
      *  * 
      */
@@ -1847,9 +1853,9 @@ public enum RollenCode {
     Vermieter("179"),
 
     /**
-     * <b>director / director</b>
+     * <b>Verp&#228;chter(in) / Verp&#228;chter(in)</b>
      *  * <p>
-     *  *  Code: 049
+     *  *  Code: 180
      *  * <p>
      *  * 
      */
@@ -1858,9 +1864,9 @@ public enum RollenCode {
     Verpaechter("180"),
 
     /**
-     * <b>director / director</b>
+     * <b>Versorgungstr&#228;ger(in) / Versorgungstr&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 049
+     *  *  Code: 181
      *  * <p>
      *  * 
      */
@@ -1869,9 +1875,9 @@ public enum RollenCode {
     Versorgungstraeger("181"),
 
     /**
-     * <b>Dolmetscher(in) / Interpreter</b>
+     * <b>Verteidiger(in) / Defense Counsel</b>
      *  * <p>
-     *  *  Code: 050
+     *  *  Code: 182
      *  * <p>
      *  * 
      */
@@ -1880,9 +1886,9 @@ public enum RollenCode {
     Verteidiger("182"),
 
     /**
-     * <b>Dolmetscher(in) / Interpreter</b>
+     * <b>Vertreter(in) der Interessen des Ausgleichsfonds / Vertreter(in) der Interessen des Ausgleichsfonds</b>
      *  * <p>
-     *  *  Code: 050
+     *  *  Code: 183
      *  * <p>
      *  * 
      */
@@ -1891,9 +1897,9 @@ public enum RollenCode {
     Vertreter_der_Interessen_des_Ausgleichsfonds("183"),
 
     /**
-     * <b>Dolmetscher(in) / Interpreter</b>
+     * <b>Vertreter(in) der Staatskasse / Vertreter(in) der Staatskasse</b>
      *  * <p>
-     *  *  Code: 050
+     *  *  Code: 184
      *  * <p>
      *  * 
      */
@@ -1902,9 +1908,9 @@ public enum RollenCode {
     Vertreter_der_Staatskasse("184"),
 
     /**
-     * <b>Dritte(r) / Dritte(r)</b>
+     * <b>Vertreter(in) des Bundesinteresses beim Bundesverwaltungsgericht / Vertreter(in) des Bundesinteresses beim Bundesverwaltungsgericht</b>
      *  * <p>
-     *  *  Code: 051
+     *  *  Code: 185
      *  * <p>
      *  * 
      */
@@ -1913,9 +1919,9 @@ public enum RollenCode {
     Vertreter_des_Bundesinteresses_beim_Bundesverwaltungsgericht("185"),
 
     /**
-     * <b>Dritte(r) / Dritte(r)</b>
+     * <b>Vertreter(in) des &#246;ffentlichen Interesses / Vertreter(in) des &#246;ffentlichen Interesses</b>
      *  * <p>
-     *  *  Code: 051
+     *  *  Code: 186
      *  * <p>
      *  * 
      */
@@ -1924,9 +1930,9 @@ public enum RollenCode {
     Vertreter_des_oeffentlichen_Interesses("186"),
 
     /**
-     * <b>Drittschuldner(in) / Drittschuldner(in)</b>
+     * <b>Verurteilte(r) / Verurteilte(r)</b>
      *  * <p>
-     *  *  Code: 052
+     *  *  Code: 187
      *  * <p>
      *  * 
      */
@@ -1935,9 +1941,9 @@ public enum RollenCode {
     Verurteilte("187"),
 
     /**
-     * <b>Drittschuldner(in) / Drittschuldner(in)</b>
+     * <b>Verwalter(in) der Wohnungseigent&#252;mergemeinschaft / Verwalter(in) der Wohnungseigent&#252;mergemeinschaft</b>
      *  * <p>
-     *  *  Code: 052
+     *  *  Code: 188
      *  * <p>
      *  * 
      */
@@ -1946,9 +1952,9 @@ public enum RollenCode {
     Verwalter_der_Wohnungseigentuemergemeinschaft("188"),
 
     /**
-     * <b>Drittwiderbeklagte(r) / Drittwiderbeklagte(r)</b>
+     * <b>Verwaltungsbeh&#246;rde / Verwaltungsbeh&#246;rde</b>
      *  * <p>
-     *  *  Code: 053
+     *  *  Code: 189
      *  * <p>
      *  * 
      */
@@ -1957,9 +1963,9 @@ public enum RollenCode {
     Verwaltungsbehoerde("189"),
 
     /**
-     * <b>Drittwiderbeklagte(r) / Drittwiderbeklagte(r)</b>
+     * <b>Vollstreckungsgl&#228;ubiger(in) / Vollstreckungsgl&#228;ubiger(in)</b>
      *  * <p>
-     *  *  Code: 053
+     *  *  Code: 190
      *  * <p>
      *  * 
      */
@@ -1968,9 +1974,9 @@ public enum RollenCode {
     Vollstreckungsglaeubiger("190"),
 
     /**
-     * <b>Drittwiderbeklagte(r) / Drittwiderbeklagte(r)</b>
+     * <b>Vollstreckungsschuldner(in) / Vollstreckungsschuldner(in)</b>
      *  * <p>
-     *  *  Code: 053
+     *  *  Code: 191
      *  * <p>
      *  * 
      */
@@ -1979,9 +1985,9 @@ public enum RollenCode {
     Vollstreckungsschuldner("191"),
 
     /**
-     * <b>Drittwiderbeklagte(r) / Drittwiderbeklagte(r)</b>
+     * <b>Vorl&#228;ufige(r) Betreuer(in) / Vorl&#228;ufige(r) Betreuer(in)</b>
      *  * <p>
-     *  *  Code: 053
+     *  *  Code: 192
      *  * <p>
      *  * 
      */
@@ -1990,9 +1996,9 @@ public enum RollenCode {
     Vorlaeufige_Betreuer("192"),
 
     /**
-     * <b>Drittwiderkl&#228;ger(in) / Drittwiderkl&#228;ger(in)</b>
+     * <b>Vormund / Vormund</b>
      *  * <p>
-     *  *  Code: 054
+     *  *  Code: 193
      *  * <p>
      *  * 
      */
@@ -2001,9 +2007,9 @@ public enum RollenCode {
     Vormund("193"),
 
     /**
-     * <b>Drittwiderkl&#228;ger(in) / Drittwiderkl&#228;ger(in)</b>
+     * <b>Vorstand / Vorstand</b>
      *  * <p>
-     *  *  Code: 054
+     *  *  Code: 194
      *  * <p>
      *  * 
      */
@@ -2012,9 +2018,9 @@ public enum RollenCode {
     Vorstand("194"),
 
     /**
-     * <b>Drittwiderkl&#228;ger(in) / Drittwiderkl&#228;ger(in)</b>
+     * <b>Vorsorgebevollm&#228;chtigte(r) / Vorsorgebevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 054
+     *  *  Code: 195
      *  * <p>
      *  * 
      */
@@ -2023,9 +2029,9 @@ public enum RollenCode {
     Vorsorgebevollmaechtigte("195"),
 
     /**
-     * <b>Ehemann (Ehefrau) / Ehemann (Ehefrau)</b>
+     * <b>Wahlverteidiger(in) / Wahlverteidiger(in)</b>
      *  * <p>
-     *  *  Code: 056
+     *  *  Code: 196
      *  * <p>
      *  * 
      */
@@ -2034,9 +2040,9 @@ public enum RollenCode {
     Wahlverteidiger("196"),
 
     /**
-     * <b>Ehemann (Ehefrau) / Ehemann (Ehefrau)</b>
+     * <b>Widerbeklagte(r) / Widerbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 056
+     *  *  Code: 197
      *  * <p>
      *  * 
      */
@@ -2045,9 +2051,9 @@ public enum RollenCode {
     Widerbeklagte("197"),
 
     /**
-     * <b>Ehemann (Ehefrau) / Ehemann (Ehefrau)</b>
+     * <b>Widerkl&#228;ger(in) / Widerkl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 056
+     *  *  Code: 198
      *  * <p>
      *  * 
      */
@@ -2056,9 +2062,9 @@ public enum RollenCode {
     Widerklaeger("198"),
 
     /**
-     * <b>Ehemann (Ehefrau) / Ehemann (Ehefrau)</b>
+     * <b>Wiederaufnahmebeklagte(r) / Wiederaufnahmebeklagte(r)</b>
      *  * <p>
-     *  *  Code: 056
+     *  *  Code: 199
      *  * <p>
      *  * 
      */
@@ -2067,9 +2073,9 @@ public enum RollenCode {
     Wiederaufnahmebeklagte("199"),
 
     /**
-     * <b>Eigent&#252;mer(in) / Eigent&#252;mer(in)</b>
+     * <b>Wiederaufnahmekl&#228;ger(in) / Wiederaufnahmekl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 057
+     *  *  Code: 200
      *  * <p>
      *  * 
      */
@@ -2078,9 +2084,9 @@ public enum RollenCode {
     Wiederaufnahmeklaeger("200"),
 
     /**
-     * <b>Eigent&#252;mer(in) / Eigent&#252;mer(in)</b>
+     * <b>Zahlungs- und Auflagenempf&#228;nger(in) / Zahlungs- und Auflagenempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 057
+     *  *  Code: 201
      *  * <p>
      *  * 
      */
@@ -2089,9 +2095,9 @@ public enum RollenCode {
     Zahlungs_und_Auflagenempfaenger("201"),
 
     /**
-     * <b>Eigent&#252;mer(in) / Eigent&#252;mer(in)</b>
+     * <b>Zeuge (Zeugin) / Zeuge (Zeugin)</b>
      *  * <p>
-     *  *  Code: 057
+     *  *  Code: 202
      *  * <p>
      *  * 
      */
@@ -2100,9 +2106,9 @@ public enum RollenCode {
     Zeuge_Zeugin("202"),
 
     /**
-     * <b>Eingetragene(r) Lebenspartner(in) / Eingetragene(r) Lebenspartner(in)</b>
+     * <b>Zeugenbeistand / Zeugenbeistand</b>
      *  * <p>
-     *  *  Code: 058
+     *  *  Code: 203
      *  * <p>
      *  * 
      */
@@ -2111,9 +2117,9 @@ public enum RollenCode {
     Zeugenbeistand("203"),
 
     /**
-     * <b>Eingetragene(r) Lebenspartner(in) / Eingetragene(r) Lebenspartner(in)</b>
+     * <b>Zulassungsantragsgegner(in) / Zulassungsantragsgegner(in)</b>
      *  * <p>
-     *  *  Code: 058
+     *  *  Code: 204
      *  * <p>
      *  * 
      */
@@ -2122,9 +2128,9 @@ public enum RollenCode {
     Zulassungsantragsgegner("204"),
 
     /**
-     * <b>Eingetragene(r) Lebenspartner(in) / Eingetragene(r) Lebenspartner(in)</b>
+     * <b>Zulassungsantragsteller(in) / Zulassungsantragsteller(in)</b>
      *  * <p>
-     *  *  Code: 058
+     *  *  Code: 205
      *  * <p>
      *  * 
      */
@@ -2133,9 +2139,9 @@ public enum RollenCode {
     Zulassungsantragsteller("205"),
 
     /**
-     * <b>Eingetragene(r) Lebenspartner(in) / Eingetragene(r) Lebenspartner(in)</b>
+     * <b>Zustellungsbevollm&#228;chtigte(r) / Zustellungsbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 058
+     *  *  Code: 206
      *  * <p>
      *  * 
      */
@@ -2144,9 +2150,9 @@ public enum RollenCode {
     Zustellungsbevollmaechtigte("206"),
 
     /**
-     * <b>Einleitungsbeh&#246;rde / Einleitungsbeh&#246;rde</b>
+     * <b>Zustellungsvertreter(in) (&#167;6 ZVG) / Zustellungsvertreter(in) (&#167;6 ZVG)</b>
      *  * <p>
-     *  *  Code: 059
+     *  *  Code: 207
      *  * <p>
      *  * 
      */
@@ -2155,9 +2161,9 @@ public enum RollenCode {
     Zustellungsvertreter_6_ZVG("207"),
 
     /**
-     * <b>Einleitungsbeh&#246;rde / Einleitungsbeh&#246;rde</b>
+     * <b>Notar(in) / Notary</b>
      *  * <p>
-     *  *  Code: 059
+     *  *  Code: 208
      *  * <p>
      *  * 
      */
@@ -2166,9 +2172,9 @@ public enum RollenCode {
     Notar("208"),
 
     /**
-     * <b>Einleitungsbeh&#246;rde / Einleitungsbeh&#246;rde</b>
+     * <b>Auskunftsempf&#228;nger(in) / Auskunftsempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 059
+     *  *  Code: 209
      *  * <p>
      *  * 
      */
@@ -2177,9 +2183,9 @@ public enum RollenCode {
     Auskunftsempfaenger("209"),
 
     /**
-     * <b>Eltern / Eltern</b>
+     * <b>Melder(in) / Melder(in)</b>
      *  * <p>
-     *  *  Code: 060
+     *  *  Code: 210
      *  * <p>
      *  * 
      */
@@ -2188,9 +2194,9 @@ public enum RollenCode {
     Melder("210"),
 
     /**
-     * <b>Eltern / Eltern</b>
+     * <b>Verwahrstelle / Verwahrstelle</b>
      *  * <p>
-     *  *  Code: 060
+     *  *  Code: 211
      *  * <p>
      *  * 
      */
@@ -2199,9 +2205,9 @@ public enum RollenCode {
     Verwahrstelle("211"),
 
     /**
-     * <b>Eltern / Eltern</b>
+     * <b>Aussteller(in) / Aussteller(in)</b>
      *  * <p>
-     *  *  Code: 060
+     *  *  Code: 212
      *  * <p>
      *  * 
      */
@@ -2210,9 +2216,9 @@ public enum RollenCode {
     Aussteller("212"),
 
     /**
-     * <b>Elternteil / Elternteil</b>
+     * <b>Berechtigte(r) / Berechtigte(r)</b>
      *  * <p>
-     *  *  Code: 061
+     *  *  Code: 213
      *  * <p>
      *  * 
      */
@@ -2221,9 +2227,9 @@ public enum RollenCode {
     Berechtigte("213"),
 
     /**
-     * <b>Elternteil / Elternteil</b>
+     * <b>Berechtigte(r) an einem Recht / Berechtigte(r) an einem Recht</b>
      *  * <p>
-     *  *  Code: 061
+     *  *  Code: 214
      *  * <p>
      *  * 
      */
@@ -2232,9 +2238,9 @@ public enum RollenCode {
     Berechtigte_an_einem_Recht("214"),
 
     /**
-     * <b>Elternteil / Elternteil</b>
+     * <b>Einreicher(in) / Einreicher(in)</b>
      *  * <p>
-     *  *  Code: 061
+     *  *  Code: 215
      *  * <p>
      *  * 
      */
@@ -2243,9 +2249,9 @@ public enum RollenCode {
     Einreicher("215"),
 
     /**
-     * <b>Enkel(in) / Enkel(in)</b>
+     * <b>Erbbauberechtigte(r) / Erbbauberechtigte(r)</b>
      *  * <p>
-     *  *  Code: 062
+     *  *  Code: 216
      *  * <p>
      *  * 
      */
@@ -2254,9 +2260,9 @@ public enum RollenCode {
     Erbbauberechtigte("216"),
 
     /**
-     * <b>Enkel(in) / Enkel(in)</b>
+     * <b>Finanzamt / Finanzamt</b>
      *  * <p>
-     *  *  Code: 062
+     *  *  Code: 217
      *  * <p>
      *  * 
      */
@@ -2265,9 +2271,9 @@ public enum RollenCode {
     Finanzamt("217"),
 
     /**
-     * <b>Enkel(in) / Enkel(in)</b>
+     * <b>Grundbuchvertreter(in) / Grundbuchvertreter(in)</b>
      *  * <p>
-     *  *  Code: 062
+     *  *  Code: 218
      *  * <p>
      *  * 
      */
@@ -2276,9 +2282,9 @@ public enum RollenCode {
     Grundbuchvertreter("218"),
 
     /**
-     * <b>Erbe (Erbin) / Erbe (Erbin)</b>
+     * <b>Insolvenzgericht / Insolvenzgericht</b>
      *  * <p>
-     *  *  Code: 063
+     *  *  Code: 219
      *  * <p>
      *  * 
      */
@@ -2287,9 +2293,9 @@ public enum RollenCode {
     Insolvenzgericht("219"),
 
     /**
-     * <b>Erbe (Erbin) / Erbe (Erbin)</b>
+     * <b>Mitteilungsempf&#228;nger(in) / Mitteilungsempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 063
+     *  *  Code: 220
      *  * <p>
      *  * 
      */
@@ -2298,9 +2304,9 @@ public enum RollenCode {
     Mitteilungsempfaenger("220"),
 
     /**
-     * <b>Erbe (Erbin) / Erbe (Erbin)</b>
+     * <b>Nacherbe (Nacherbin) / Nacherbe (Nacherbin)</b>
      *  * <p>
-     *  *  Code: 063
+     *  *  Code: 221
      *  * <p>
      *  * 
      */
@@ -2309,9 +2315,9 @@ public enum RollenCode {
     Nacherbe_Nacherbin("221"),
 
     /**
-     * <b>Erbe (Erbin) (ausschlagend) / Erbe (Erbin) (ausschlagend)</b>
+     * <b>Rechnungsempf&#228;nger(in) / Rechnungsempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 064
+     *  *  Code: 222
      *  * <p>
      *  * 
      */
@@ -2320,9 +2326,9 @@ public enum RollenCode {
     Rechnungsempfaenger("222"),
 
     /**
-     * <b>Erbe (Erbin) (ausschlagend) / Erbe (Erbin) (ausschlagend)</b>
+     * <b>Veranlasser(in) / Veranlasser(in)</b>
      *  * <p>
-     *  *  Code: 064
+     *  *  Code: 223
      *  * <p>
      *  * 
      */
@@ -2331,9 +2337,9 @@ public enum RollenCode {
     Veranlasser("223"),
 
     /**
-     * <b>Erbe (Erbin) (ausschlagend) / Erbe (Erbin) (ausschlagend)</b>
+     * <b>Versteigerungsabteilung / Versteigerungsabteilung</b>
      *  * <p>
-     *  *  Code: 064
+     *  *  Code: 224
      *  * <p>
      *  * 
      */
@@ -2342,9 +2348,9 @@ public enum RollenCode {
     Versteigerungsabteilung("224"),
 
     /**
-     * <b>Erbe (Erbin) (ausschlagend) / Erbe (Erbin) (ausschlagend)</b>
+     * <b>Vertretungsberechtigte(r) / Vertretungsberechtigte(r)</b>
      *  * <p>
-     *  *  Code: 064
+     *  *  Code: 225
      *  * <p>
      *  * 
      */
@@ -2353,9 +2359,9 @@ public enum RollenCode {
     Vertretungsberechtigte("225"),
 
     /**
-     * <b>Erbe (Erbin) (vorverstorben) / Erbe (Erbin) (vorverstorben)</b>
+     * <b>Zweitschuldner(in) / Zweitschuldner(in)</b>
      *  * <p>
-     *  *  Code: 065
+     *  *  Code: 226
      *  * <p>
      *  * 
      */
@@ -2364,9 +2370,9 @@ public enum RollenCode {
     Zweitschuldner("226"),
 
     /**
-     * <b>Erbe (Erbin) (vorverstorben) / Erbe (Erbin) (vorverstorben)</b>
+     * <b>Vertreter(in) / Vertreter(in)</b>
      *  * <p>
-     *  *  Code: 065
+     *  *  Code: 227
      *  * <p>
      *  * 
      */
@@ -2375,9 +2381,9 @@ public enum RollenCode {
     Vertreter("227"),
 
     /**
-     * <b>Erbe (Erbin) (vorverstorben) / Erbe (Erbin) (vorverstorben)</b>
+     * <b>Arbeitgeber(in) / Arbeitgeber(in)</b>
      *  * <p>
-     *  *  Code: 065
+     *  *  Code: 228
      *  * <p>
      *  * 
      */
@@ -2386,9 +2392,9 @@ public enum RollenCode {
     Arbeitgeber("228"),
 
     /**
-     * <b>Erbe (Erbin) (vorverstorben) / Erbe (Erbin) (vorverstorben)</b>
+     * <b>RV-Tr&#228;ger(in) / RV-Tr&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 065
+     *  *  Code: 229
      *  * <p>
      *  * 
      */
@@ -2397,9 +2403,9 @@ public enum RollenCode {
     RV_Traeger("229"),
 
     /**
-     * <b>Erblasser(in) / Erblasser(in)</b>
+     * <b>Vollstreckungsstelle / Vollstreckungsstelle</b>
      *  * <p>
-     *  *  Code: 066
+     *  *  Code: 230
      *  * <p>
      *  * 
      */
@@ -2408,9 +2414,9 @@ public enum RollenCode {
     Vollstreckungsstelle("230"),
 
     /**
-     * <b>Erblasser(in) / Erblasser(in)</b>
+     * <b>Abk&#246;mmling / Abk&#246;mmling</b>
      *  * <p>
-     *  *  Code: 066
+     *  *  Code: 231
      *  * <p>
      *  * 
      */
@@ -2419,9 +2425,9 @@ public enum RollenCode {
     Abkoemmling("231"),
 
     /**
-     * <b>Erblasser(in) / Erblasser(in)</b>
+     * <b>Kreditnehmer(in) / Kreditnehmer(in)</b>
      *  * <p>
-     *  *  Code: 066
+     *  *  Code: 232
      *  * <p>
      *  * 
      */
@@ -2430,9 +2436,9 @@ public enum RollenCode {
     Kreditnehmer("232"),
 
     /**
-     * <b>Erblasser(in) / Erblasser(in)</b>
+     * <b>Neu vorzutragende(r) Eigent&#252;mer(in) / Neu vorzutragende(r) Eigent&#252;mer(in)</b>
      *  * <p>
-     *  *  Code: 066
+     *  *  Code: 233
      *  * <p>
      *  * 
      */
@@ -2441,9 +2447,9 @@ public enum RollenCode {
     Neu_vorzutragende_Eigentuemer("233"),
 
     /**
-     * <b>Erg&#228;nzungspfleger(in) / Erg&#228;nzungspfleger(in)</b>
+     * <b>Notariatsverwalter(in) / Notariatsverwalter(in)</b>
      *  * <p>
-     *  *  Code: 067
+     *  *  Code: 234
      *  * <p>
      *  * 
      */
@@ -2452,9 +2458,9 @@ public enum RollenCode {
     Notariatsverwalter("234"),
 
     /**
-     * <b>Erg&#228;nzungspfleger(in) / Erg&#228;nzungspfleger(in)</b>
+     * <b>Notarvertreter(in) / Notarvertreter(in)</b>
      *  * <p>
-     *  *  Code: 067
+     *  *  Code: 235
      *  * <p>
      *  * 
      */
@@ -2463,9 +2469,9 @@ public enum RollenCode {
     Notarvertreter("235"),
 
     /**
-     * <b>Erg&#228;nzungspfleger(in) / Erg&#228;nzungspfleger(in)</b>
+     * <b>Partei kraft Amtes / Partei kraft Amtes</b>
      *  * <p>
-     *  *  Code: 067
+     *  *  Code: 236
      *  * <p>
      *  * 
      */
@@ -2474,9 +2480,9 @@ public enum RollenCode {
     Partei_kraft_Amtes("236"),
 
     /**
-     * <b>Erinnerungsf&#252;hrer(in) / Erinnerungsf&#252;hrer(in)</b>
+     * <b>Sequester / Sequester</b>
      *  * <p>
-     *  *  Code: 068
+     *  *  Code: 237
      *  * <p>
      *  * 
      */
@@ -2485,9 +2491,9 @@ public enum RollenCode {
     Sequester("237"),
 
     /**
-     * <b>Erinnerungsf&#252;hrer(in) / Erinnerungsf&#252;hrer(in)</b>
+     * <b>Treuh&#228;nder(in) / Treuh&#228;nder(in)</b>
      *  * <p>
-     *  *  Code: 068
+     *  *  Code: 238
      *  * <p>
      *  * 
      */
@@ -2496,9 +2502,9 @@ public enum RollenCode {
     Treuhaender("238"),
 
     /**
-     * <b>Erinnerungsf&#252;hrer(in) / Erinnerungsf&#252;hrer(in)</b>
+     * <b>Zustimmende(r) / Zustimmende(r)</b>
      *  * <p>
-     *  *  Code: 068
+     *  *  Code: 239
      *  * <p>
      *  * 
      */
@@ -2507,9 +2513,9 @@ public enum RollenCode {
     Zustimmende("239"),
 
     /**
-     * <b>Erinnerungsf&#252;hrer(in) / Erinnerungsf&#252;hrer(in)</b>
+     * <b>Gl&#228;ubigervertreter(in) / Gl&#228;ubigervertreter(in)</b>
      *  * <p>
-     *  *  Code: 068
+     *  *  Code: 240
      *  * <p>
      *  * 
      */
@@ -2518,9 +2524,9 @@ public enum RollenCode {
     Glaeubigervertreter("240"),
 
     /**
-     * <b>Erinnerungsgegner(in) / Erinnerungsgegner(in)</b>
+     * <b>Schuldnervertreter(in) / Schuldnervertreter(in)</b>
      *  * <p>
-     *  *  Code: 069
+     *  *  Code: 241
      *  * <p>
      *  * 
      */
@@ -2529,9 +2535,9 @@ public enum RollenCode {
     Schuldnervertreter("241"),
 
     /**
-     * <b>Erinnerungsgegner(in) / Erinnerungsgegner(in)</b>
+     * <b>Zahlungsempf&#228;nger(in) / Zahlungsempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 069
+     *  *  Code: 242
      *  * <p>
      *  * 
      */
@@ -2540,9 +2546,9 @@ public enum RollenCode {
     Zahlungsempfaenger("242"),
 
     /**
-     * <b>Erinnerungsgegner(in) / Erinnerungsgegner(in)</b>
+     * <b>Anteilsinhaber(in) / Anteilsinhaber(in)</b>
      *  * <p>
-     *  *  Code: 069
+     *  *  Code: 243
      *  * <p>
      *  * 
      */
@@ -2551,9 +2557,9 @@ public enum RollenCode {
     Anteilsinhaber("243"),
 
     /**
-     * <b>Ersatzbetreuer(in) / Ersatzbetreuer(in)</b>
+     * <b>Antragsteller(in) -Er&#246;ffnung / Antragsteller(in) -Er&#246;ffnung</b>
      *  * <p>
-     *  *  Code: 070
+     *  *  Code: 244
      *  * <p>
      *  * 
      */
@@ -2562,9 +2568,9 @@ public enum RollenCode {
     Antragsteller_Eroeffnung("244"),
 
     /**
-     * <b>Ersatzbetreuer(in) / Ersatzbetreuer(in)</b>
+     * <b>Debitor(in) / Debitor(in)</b>
      *  * <p>
-     *  *  Code: 070
+     *  *  Code: 245
      *  * <p>
      *  * 
      */
@@ -2573,9 +2579,9 @@ public enum RollenCode {
     Debitor("245"),
 
     /**
-     * <b>Ersatzbetreuer(in) / Ersatzbetreuer(in)</b>
+     * <b>Gesellschafter(in) / Gesellschafter(in)</b>
      *  * <p>
-     *  *  Code: 070
+     *  *  Code: 246
      *  * <p>
      *  * 
      */
@@ -2584,9 +2590,9 @@ public enum RollenCode {
     Gesellschafter("246"),
 
     /**
-     * <b>Ersatzbetreuer(in) / Ersatzbetreuer(in)</b>
+     * <b>Handlungsbevollm&#228;chtigte(r) / Handlungsbevollm&#228;chtigte(r)</b>
      *  * <p>
-     *  *  Code: 070
+     *  *  Code: 247
      *  * <p>
      *  * 
      */
@@ -2595,9 +2601,9 @@ public enum RollenCode {
     Handlungsbevollmaechtigte("247"),
 
     /**
-     * <b>Ersteher(in) / Ersteher(in)</b>
+     * <b>Mitglied einer Gesamt-Anteilsinhaberschaft / Mitglied einer Gesamt-Anteilsinhaberschaft</b>
      *  * <p>
-     *  *  Code: 071
+     *  *  Code: 248
      *  * <p>
      *  * 
      */
@@ -2606,9 +2612,9 @@ public enum RollenCode {
     Mitglied_einer_Gesamt_Anteilsinhaberschaft("248"),
 
     /**
-     * <b>Ersteher(in) / Ersteher(in)</b>
+     * <b>Mitglied einer Gl&#228;ubigergemeinschaft / Mitglied einer Gl&#228;ubigergemeinschaft</b>
      *  * <p>
-     *  *  Code: 071
+     *  *  Code: 249
      *  * <p>
      *  * 
      */
@@ -2617,9 +2623,9 @@ public enum RollenCode {
     Mitglied_einer_Glaeubigergemeinschaft("249"),
 
     /**
-     * <b>Erwerber(in) / Erwerber(in)</b>
+     * <b>Mitreeder(in) / Mitreeder(in)</b>
      *  * <p>
-     *  *  Code: 072
+     *  *  Code: 250
      *  * <p>
      *  * 
      */
@@ -2628,9 +2634,9 @@ public enum RollenCode {
     Mitreeder("250"),
 
     /**
-     * <b>Erwerber(in) / Erwerber(in)</b>
+     * <b>Partner(in) / Partner(in)</b>
      *  * <p>
-     *  *  Code: 072
+     *  *  Code: 251
      *  * <p>
      *  * 
      */
@@ -2639,9 +2645,9 @@ public enum RollenCode {
     Partner("251"),
 
     /**
-     * <b>Erwerber(in) / Erwerber(in)</b>
+     * <b>Pers&#246;nlich haftende(r) Gesellschafter(in) / Pers&#246;nlich haftende(r) Gesellschafter(in)</b>
      *  * <p>
-     *  *  Code: 072
+     *  *  Code: 252
      *  * <p>
      *  * 
      */
@@ -2650,9 +2656,9 @@ public enum RollenCode {
     Persoenlich_haftende_Gesellschafter("252"),
 
     /**
-     * <b>Erziehungsberechtigte(r) / Erziehungsberechtigte(r)</b>
+     * <b>Prozesspfleger(in) / Prozesspfleger(in)</b>
      *  * <p>
-     *  *  Code: 073
+     *  *  Code: 253
      *  * <p>
      *  * 
      */
@@ -2661,9 +2667,9 @@ public enum RollenCode {
     Prozesspfleger("253"),
 
     /**
-     * <b>Erziehungsberechtigte(r) / Erziehungsberechtigte(r)</b>
+     * <b>Sachwalter(in) / Sachwalter(in)</b>
      *  * <p>
-     *  *  Code: 073
+     *  *  Code: 254
      *  * <p>
      *  * 
      */
@@ -2672,9 +2678,9 @@ public enum RollenCode {
     Sachwalter("254"),
 
     /**
-     * <b>Erziehungsberechtigte(r) / Erziehungsberechtigte(r)</b>
+     * <b>Treuh&#228;nder(in) (Wohlverhaltensperiode) / Treuh&#228;nder(in) (Wohlverhaltensperiode)</b>
      *  * <p>
-     *  *  Code: 073
+     *  *  Code: 255
      *  * <p>
      *  * 
      */
@@ -2683,9 +2689,9 @@ public enum RollenCode {
     Treuhaender_Wohlverhaltensperiode("255"),
 
     /**
-     * <b>Erziehungsberechtigte(r) / Erziehungsberechtigte(r)</b>
+     * <b>Verm&#246;genstr&#228;ger(in) / Verm&#246;genstr&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 073
+     *  *  Code: 256
      *  * <p>
      *  * 
      */
@@ -2694,9 +2700,9 @@ public enum RollenCode {
     Vermoegenstraeger("256"),
 
     /**
-     * <b>Fr&#252;here(r) Ehegatte (Ehegattin) / Fr&#252;here(r) Ehegatte (Ehegattin)</b>
+     * <b>Vorl&#228;ufige(r) Insolvenzverwalter(in) / Vorl&#228;ufige(r) Insolvenzverwalter(in)</b>
      *  * <p>
-     *  *  Code: 074
+     *  *  Code: 257
      *  * <p>
      *  * 
      */
@@ -2705,9 +2711,9 @@ public enum RollenCode {
     Vorlaeufige_Insolvenzverwalter("257"),
 
     /**
-     * <b>Fr&#252;here(r) Ehegatte (Ehegattin) / Fr&#252;here(r) Ehegatte (Ehegattin)</b>
+     * <b>Vorl&#228;ufige(r) Treuh&#228;nder(in) / Vorl&#228;ufige(r) Treuh&#228;nder(in)</b>
      *  * <p>
-     *  *  Code: 074
+     *  *  Code: 258
      *  * <p>
      *  * 
      */
@@ -2716,9 +2722,9 @@ public enum RollenCode {
     Vorlaeufige_Treuhaender("258"),
 
     /**
-     * <b>Fr&#252;here(r) Ehegatte (Ehegattin) / Fr&#252;here(r) Ehegatte (Ehegattin)</b>
+     * <b>Sondersachwalter(in) / Sondersachwalter(in)</b>
      *  * <p>
-     *  *  Code: 074
+     *  *  Code: 259
      *  * <p>
      *  * 
      */
@@ -2727,9 +2733,9 @@ public enum RollenCode {
     Sondersachwalter("259"),
 
     /**
-     * <b>Fr&#252;here(r) Ehegatte (Ehegattin) / Fr&#252;here(r) Ehegatte (Ehegattin)</b>
+     * <b>Sonderinsolvenzverwalter(in) / Sonderinsolvenzverwalter(in)</b>
      *  * <p>
-     *  *  Code: 074
+     *  *  Code: 260
      *  * <p>
      *  * 
      */
@@ -2738,9 +2744,9 @@ public enum RollenCode {
     Sonderinsolvenzverwalter("260"),
 
     /**
-     * <b>Fr&#252;here(r) Beklagte(r) / Fr&#252;here(r) Beklagte(r)</b>
+     * <b>Vorl&#228;ufige(r) Sachwalter(in) / Vorl&#228;ufige(r) Sachwalter(in)</b>
      *  * <p>
-     *  *  Code: 075
+     *  *  Code: 261
      *  * <p>
      *  * 
      */
@@ -2749,9 +2755,9 @@ public enum RollenCode {
     Vorlaeufige_Sachwalter("261"),
 
     /**
-     * <b>Fr&#252;here(r) Beklagte(r) / Fr&#252;here(r) Beklagte(r)</b>
+     * <b>Abwickler(in) / Abwickler(in)</b>
      *  * <p>
-     *  *  Code: 075
+     *  *  Code: 262
      *  * <p>
      *  * 
      */
@@ -2760,9 +2766,9 @@ public enum RollenCode {
     Abwickler("262"),
 
     /**
-     * <b>Fr&#252;here(r) Beklagte(r) / Fr&#252;here(r) Beklagte(r)</b>
+     * <b>&#220;bernehmender Rechtstr&#228;ger / &#220;bernehmender Rechtstr&#228;ger</b>
      *  * <p>
-     *  *  Code: 075
+     *  *  Code: 263
      *  * <p>
      *  * 
      */
@@ -2771,9 +2777,9 @@ public enum RollenCode {
     Uebernehmender_Rechtstraeger("263"),
 
     /**
-     * <b>Fr&#252;here(r) Beteiligte(r) / Fr&#252;here(r) Beteiligte(r)</b>
+     * <b>Aufsichtsrat (-r&#228;tin) / Aufsichtsrat (-r&#228;tin)</b>
      *  * <p>
-     *  *  Code: 076
+     *  *  Code: 264
      *  * <p>
      *  * 
      */
@@ -2782,9 +2788,9 @@ public enum RollenCode {
     Aufsichtsrat_raetin("264"),
 
     /**
-     * <b>Fr&#252;here(r) Beteiligte(r) / Fr&#252;here(r) Beteiligte(r)</b>
+     * <b>Besondere(r) Vertreter(in) nach &#167; 30 BGB / Besondere(r) Vertreter(in) nach &#167; 30 BGB</b>
      *  * <p>
-     *  *  Code: 076
+     *  *  Code: 265
      *  * <p>
      *  * 
      */
@@ -2793,9 +2799,9 @@ public enum RollenCode {
     Besondere_Vertreter_nach_30_BGB("265"),
 
     /**
-     * <b>Fr&#252;here(r) Beteiligte(r) / Fr&#252;here(r) Beteiligte(r)</b>
+     * <b>Betriebsleiter(in) / Betriebsleiter(in)</b>
      *  * <p>
-     *  *  Code: 076
+     *  *  Code: 266
      *  * <p>
      *  * 
      */
@@ -2804,9 +2810,9 @@ public enum RollenCode {
     Betriebsleiter("266"),
 
     /**
-     * <b>Fr&#252;here(r) Beteiligte(r) / Fr&#252;here(r) Beteiligte(r)</b>
+     * <b>Empfangsberechtigte(r) / Empfangsberechtigte(r)</b>
      *  * <p>
-     *  *  Code: 076
+     *  *  Code: 267
      *  * <p>
      *  * 
      */
@@ -2815,9 +2821,9 @@ public enum RollenCode {
     Empfangsberechtigte("267"),
 
     /**
-     * <b>Fr&#252;here(r) Gl&#228;ubiger(in) / Fr&#252;here(r) Gl&#228;ubiger(in)</b>
+     * <b>Gesch&#228;ftsf&#252;hrende(r) Direktor(in) / Gesch&#228;ftsf&#252;hrende(r) Direktor(in)</b>
      *  * <p>
-     *  *  Code: 077
+     *  *  Code: 268
      *  * <p>
      *  * 
      */
@@ -2826,9 +2832,9 @@ public enum RollenCode {
     Geschaeftsfuehrende_Direktor("268"),
 
     /**
-     * <b>Fr&#252;here(r) Gl&#228;ubiger(in) / Fr&#252;here(r) Gl&#228;ubiger(in)</b>
+     * <b>Gesch&#228;ftsleiter(in) / Gesch&#228;ftsleiter(in)</b>
      *  * <p>
-     *  *  Code: 077
+     *  *  Code: 269
      *  * <p>
      *  * 
      */
@@ -2837,9 +2843,9 @@ public enum RollenCode {
     Geschaeftsleiter("269"),
 
     /**
-     * <b>Fr&#252;here(r) Gl&#228;ubiger(in) / Fr&#252;here(r) Gl&#228;ubiger(in)</b>
+     * <b>Gr&#252;nder(in) / Gr&#252;nder(in)</b>
      *  * <p>
-     *  *  Code: 077
+     *  *  Code: 271
      *  * <p>
      *  * 
      */
@@ -2848,9 +2854,9 @@ public enum RollenCode {
     Gruender("271"),
 
     /**
-     * <b>Fr&#252;here(r) Gl&#228;ubiger(in) / Fr&#252;here(r) Gl&#228;ubiger(in)</b>
+     * <b>Gr&#252;ndungspr&#252;fer(in) / Gr&#252;ndungspr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 077
+     *  *  Code: 272
      *  * <p>
      *  * 
      */
@@ -2859,9 +2865,9 @@ public enum RollenCode {
     Gruendungspruefer("272"),
 
     /**
-     * <b>Fr&#252;here(r) Kl&#228;ger(in) / Fr&#252;here(r) Kl&#228;ger(in)</b>
+     * <b>Hauptniederlassung / Hauptniederlassung</b>
      *  * <p>
-     *  *  Code: 078
+     *  *  Code: 273
      *  * <p>
      *  * 
      */
@@ -2870,9 +2876,9 @@ public enum RollenCode {
     Hauptniederlassung("273"),
 
     /**
-     * <b>Fr&#252;here(r) Kl&#228;ger(in) / Fr&#252;here(r) Kl&#228;ger(in)</b>
+     * <b>Inhaber(in) / Inhaber(in)</b>
      *  * <p>
-     *  *  Code: 078
+     *  *  Code: 274
      *  * <p>
      *  * 
      */
@@ -2881,9 +2887,9 @@ public enum RollenCode {
     Inhaber("274"),
 
     /**
-     * <b>Fr&#252;here(r) Kl&#228;ger(in) / Fr&#252;here(r) Kl&#228;ger(in)</b>
+     * <b>Kommanditist(in) / Kommanditist(in)</b>
      *  * <p>
-     *  *  Code: 078
+     *  *  Code: 275
      *  * <p>
      *  * 
      */
@@ -2892,9 +2898,9 @@ public enum RollenCode {
     Kommanditist("275"),
 
     /**
-     * <b>Fr&#252;here(r) Kl&#228;ger(in) / Fr&#252;here(r) Kl&#228;ger(in)</b>
+     * <b>Konkursverwalter(in) / Konkursverwalter(in)</b>
      *  * <p>
-     *  *  Code: 078
+     *  *  Code: 276
      *  * <p>
      *  * 
      */
@@ -2903,9 +2909,9 @@ public enum RollenCode {
     Konkursverwalter("276"),
 
     /**
-     * <b>Fr&#252;here(r) Soldat(in) / Fr&#252;here(r) Soldat(in)</b>
+     * <b>Mitglied des Leitungsorgans / Mitglied des Leitungsorgans</b>
      *  * <p>
-     *  *  Code: 079
+     *  *  Code: 277
      *  * <p>
      *  * 
      */
@@ -2914,9 +2920,9 @@ public enum RollenCode {
     Mitglied_des_Leitungsorgans("277"),
 
     /**
-     * <b>Fr&#252;here(r) Soldat(in) / Fr&#252;here(r) Soldat(in)</b>
+     * <b>Mitglied EWIV / Mitglied EWIV</b>
      *  * <p>
-     *  *  Code: 079
+     *  *  Code: 278
      *  * <p>
      *  * 
      */
@@ -2925,9 +2931,9 @@ public enum RollenCode {
     Mitglied_EWIV("278"),
 
     /**
-     * <b>Fr&#252;here(r) Soldat(in) / Fr&#252;here(r) Soldat(in)</b>
+     * <b>Nachgr&#252;ndungspr&#252;fer(in) / Nachgr&#252;ndungspr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 079
+     *  *  Code: 279
      *  * <p>
      *  * 
      */
@@ -2936,9 +2942,9 @@ public enum RollenCode {
     Nachgruendungspruefer("279"),
 
     /**
-     * <b>Gegenvormund / Gegenvormund</b>
+     * <b>Nachtragsabwickler(in) / Nachtragsabwickler(in)</b>
      *  * <p>
-     *  *  Code: 080
+     *  *  Code: 280
      *  * <p>
      *  * 
      */
@@ -2947,9 +2953,9 @@ public enum RollenCode {
     Nachtragsabwickler("280"),
 
     /**
-     * <b>Gegenvormund / Gegenvormund</b>
+     * <b>Nachtragsliquidator(in) / Nachtragsliquidator(in)</b>
      *  * <p>
-     *  *  Code: 080
+     *  *  Code: 281
      *  * <p>
      *  * 
      */
@@ -2958,9 +2964,9 @@ public enum RollenCode {
     Nachtragsliquidator("281"),
 
     /**
-     * <b>Gegenvormund / Gegenvormund</b>
+     * <b>Notgesch&#228;ftsf&#252;hrer(in) / Notgesch&#228;ftsf&#252;hrer(in)</b>
      *  * <p>
-     *  *  Code: 080
+     *  *  Code: 282
      *  * <p>
      *  * 
      */
@@ -2969,9 +2975,9 @@ public enum RollenCode {
     Notgeschaeftsfuehrer("282"),
 
     /**
-     * <b>Generalbundesanwalt (-anw&#228;ltin) / Generalbundesanwalt (-anw&#228;ltin)</b>
+     * <b>Notliquidator(in) / Notliquidator(in)</b>
      *  * <p>
-     *  *  Code: 081
+     *  *  Code: 283
      *  * <p>
      *  * 
      */
@@ -2980,9 +2986,9 @@ public enum RollenCode {
     Notliquidator("283"),
 
     /**
-     * <b>Generalbundesanwalt (-anw&#228;ltin) / Generalbundesanwalt (-anw&#228;ltin)</b>
+     * <b>Notvorstand / Notvorstand</b>
      *  * <p>
-     *  *  Code: 081
+     *  *  Code: 284
      *  * <p>
      *  * 
      */
@@ -2991,9 +2997,9 @@ public enum RollenCode {
     Notvorstand("284"),
 
     /**
-     * <b>Generalbundesanwalt (-anw&#228;ltin) / Generalbundesanwalt (-anw&#228;ltin)</b>
+     * <b>Prokurist(in) / Prokurist(in)</b>
      *  * <p>
-     *  *  Code: 081
+     *  *  Code: 285
      *  * <p>
      *  * 
      */
@@ -3002,9 +3008,9 @@ public enum RollenCode {
     Prokurist("285"),
 
     /**
-     * <b>Generalbundesanwalt (-anw&#228;ltin) / Generalbundesanwalt (-anw&#228;ltin)</b>
+     * <b>Rechtstr&#228;ger(in) / Rechtstr&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 081
+     *  *  Code: 287
      *  * <p>
      *  * 
      */
@@ -3013,9 +3019,9 @@ public enum RollenCode {
     Rechtstraeger("287"),
 
     /**
-     * <b>Gericht / Gericht</b>
+     * <b>Registergericht / Registergericht</b>
      *  * <p>
-     *  *  Code: 082
+     *  *  Code: 288
      *  * <p>
      *  * 
      */
@@ -3024,9 +3030,9 @@ public enum RollenCode {
     Registergericht("288"),
 
     /**
-     * <b>Gericht / Gericht</b>
+     * <b>Sacheinlagenpr&#252;fer(in) / Sacheinlagenpr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 082
+     *  *  Code: 289
      *  * <p>
      *  * 
      */
@@ -3035,9 +3041,9 @@ public enum RollenCode {
     Sacheinlagenpruefer("289"),
 
     /**
-     * <b>Gericht / Gericht</b>
+     * <b>St&#228;ndige(r) Vertreter(in) f&#252;r die Zweigniederlassung / St&#228;ndige(r) Vertreter(in) f&#252;r die Zweigniederlassung</b>
      *  * <p>
-     *  *  Code: 082
+     *  *  Code: 290
      *  * <p>
      *  * 
      */
@@ -3046,9 +3052,9 @@ public enum RollenCode {
     Staendige_Vertreter_fuer_die_Zweigniederlassung("290"),
 
     /**
-     * <b>Gerichtsvollzieher(in) / Gerichtsvollzieher(in)</b>
+     * <b>&#220;bertragender Rechtstr&#228;ger / &#220;bertragender Rechtstr&#228;ger</b>
      *  * <p>
-     *  *  Code: 083
+     *  *  Code: 291
      *  * <p>
      *  * 
      */
@@ -3057,9 +3063,9 @@ public enum RollenCode {
     Uebertragender_Rechtstraeger("291"),
 
     /**
-     * <b>Gerichtsvollzieher(in) / Gerichtsvollzieher(in)</b>
+     * <b>Vergleichsverwalter(in) / Vergleichsverwalter(in)</b>
      *  * <p>
-     *  *  Code: 083
+     *  *  Code: 292
      *  * <p>
      *  * 
      */
@@ -3068,9 +3074,9 @@ public enum RollenCode {
     Vergleichsverwalter("292"),
 
     /**
-     * <b>Gerichtsvollzieher(in) / Gerichtsvollzieher(in)</b>
+     * <b>Verwaltungsrat (-r&#228;tin) / Verwaltungsrat (-r&#228;tin)</b>
      *  * <p>
-     *  *  Code: 083
+     *  *  Code: 293
      *  * <p>
      *  * 
      */
@@ -3079,9 +3085,9 @@ public enum RollenCode {
     Verwaltungsrat_raetin("293"),
 
     /**
-     * <b>Gesch&#228;digte(r) / Gesch&#228;digte(r)</b>
+     * <b>Vorstandsvorsitzende(r) / Vorstandsvorsitzende(r)</b>
      *  * <p>
-     *  *  Code: 084
+     *  *  Code: 294
      *  * <p>
      *  * 
      */
@@ -3090,9 +3096,9 @@ public enum RollenCode {
     Vorstandsvorsitzende("294"),
 
     /**
-     * <b>Gesch&#228;digte(r) / Gesch&#228;digte(r)</b>
+     * <b>Zweigniederlassung / Zweigniederlassung</b>
      *  * <p>
-     *  *  Code: 084
+     *  *  Code: 295
      *  * <p>
      *  * 
      */
@@ -3101,9 +3107,9 @@ public enum RollenCode {
     Zweigniederlassung("295"),
 
     /**
-     * <b>Gesch&#228;digte(r) / Gesch&#228;digte(r)</b>
+     * <b>Vertreter(in) des Kl&#228;gers/der Kl&#228;gerin / Vertreter(in) des Kl&#228;gers/der Kl&#228;gerin</b>
      *  * <p>
-     *  *  Code: 084
+     *  *  Code: 296
      *  * <p>
      *  * 
      */
@@ -3112,9 +3118,9 @@ public enum RollenCode {
     Vertreter_des_Klaegers_oder_der_Klaegerin("296"),
 
     /**
-     * <b>Gesch&#228;digte(r) / Gesch&#228;digte(r)</b>
+     * <b>Vertreter(in) des/der Beklagten / Vertreter(in) des/der Beklagten</b>
      *  * <p>
-     *  *  Code: 084
+     *  *  Code: 297
      *  * <p>
      *  * 
      */
@@ -3123,9 +3129,9 @@ public enum RollenCode {
     Vertreter_des_oder_der_Beklagten("297"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in) / Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in)</b>
+     * <b>Bew&#228;hrungshilfe / Bew&#228;hrungshilfe</b>
      *  * <p>
-     *  *  Code: 085
+     *  *  Code: 298
      *  * <p>
      *  * 
      */
@@ -3134,9 +3140,9 @@ public enum RollenCode {
     Bewaehrungshilfe("298"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in) / Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in)</b>
+     * <b>Gerichtshilfe / Gerichtshilfe</b>
      *  * <p>
-     *  *  Code: 085
+     *  *  Code: 299
      *  * <p>
      *  * 
      */
@@ -3145,9 +3151,9 @@ public enum RollenCode {
     Gerichtshilfe("299"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in) / Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in)</b>
+     * <b>Justizvollzug / Justizvollzug</b>
      *  * <p>
-     *  *  Code: 085
+     *  *  Code: 300
      *  * <p>
      *  * 
      */
@@ -3156,9 +3162,9 @@ public enum RollenCode {
     Justizvollzug("300"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in) / Gesch&#228;ftsf&#252;hrende(r) Gesellschafter(in)</b>
+     * <b>Pseudoname / Pseudoname</b>
      *  * <p>
-     *  *  Code: 085
+     *  *  Code: 301
      *  * <p>
      *  * 
      */
@@ -3167,9 +3173,9 @@ public enum RollenCode {
     Pseudoname("301"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrer(in) / Gesch&#228;ftsf&#252;hrer(in)</b>
+     * <b>Gesetzliche(r) Vertreter(in) des Gl&#228;ubigers/der Gl&#228;ubigerin / Gesetzliche(r) Vertreter(in) des Gl&#228;ubigers/der Gl&#228;ubigerin</b>
      *  * <p>
-     *  *  Code: 086
+     *  *  Code: 302
      *  * <p>
      *  * 
      */
@@ -3178,9 +3184,9 @@ public enum RollenCode {
     Gesetzliche_Vertreter_des_Glaeubigers_oder_der_Glaeubigerin("302"),
 
     /**
-     * <b>Gesch&#228;ftsf&#252;hrer(in) / Gesch&#228;ftsf&#252;hrer(in)</b>
+     * <b>Gesetzliche(r) Vertreter(in) des Schuldners/der Schuldnerin / Gesetzliche(r) Vertreter(in) des Schuldners/der Schuldnerin</b>
      *  * <p>
-     *  *  Code: 086
+     *  *  Code: 303
      *  * <p>
      *  * 
      */
@@ -3189,9 +3195,9 @@ public enum RollenCode {
     Gesetzliche_Vertreter_des_Schuldners_oder_der_Schuldnerin("303"),
 
     /**
-     * <b>Gesetzliche(r) Erbe (Erbin) / Gesetzliche(r) Erbe (Erbin)</b>
+     * <b>Bevollm&#228;chtigte(r) des Gl&#228;ubigers/der Gl&#228;ubigerin / Bevollm&#228;chtigte(r) des Gl&#228;ubigers/der Gl&#228;ubigerin</b>
      *  * <p>
-     *  *  Code: 087
+     *  *  Code: 304
      *  * <p>
      *  * 
      */
@@ -3200,9 +3206,9 @@ public enum RollenCode {
     Bevollmaechtigte_des_Glaeubigers_oder_der_Glaeubigerin("304"),
 
     /**
-     * <b>Gesetzliche(r) Erbe (Erbin) / Gesetzliche(r) Erbe (Erbin)</b>
+     * <b>Bevollm&#228;chtigte(r) des Schuldners/der Schuldnerin / Bevollm&#228;chtigte(r) des Schuldners/der Schuldnerin</b>
      *  * <p>
-     *  *  Code: 087
+     *  *  Code: 305
      *  * <p>
      *  * 
      */
@@ -3211,9 +3217,9 @@ public enum RollenCode {
     Bevollmaechtigte_des_Schuldners_oder_der_Schuldnerin("305"),
 
     /**
-     * <b>Gesetzliche(r) Vertreter(in) / Gesetzliche(r) Vertreter(in)</b>
+     * <b>Fahrzeughalter(in) / Fahrzeughalter(in)</b>
      *  * <p>
-     *  *  Code: 088
+     *  *  Code: 306
      *  * <p>
      *  * 
      */
@@ -3222,9 +3228,9 @@ public enum RollenCode {
     Fahrzeughalter("306"),
 
     /**
-     * <b>Gesetzliche(r) Vertreter(in) / Gesetzliche(r) Vertreter(in)</b>
+     * <b>Fr&#252;here(r) Lebenspartner(in) / Fr&#252;here(r) Lebenspartner(in)</b>
      *  * <p>
-     *  *  Code: 088
+     *  *  Code: 307
      *  * <p>
      *  * 
      */
@@ -3233,9 +3239,9 @@ public enum RollenCode {
     Fruehere_Lebenspartner("307"),
 
     /**
-     * <b>Gesetzliche(r) Vertreter(in) / Gesetzliche(r) Vertreter(in)</b>
+     * <b>Sicherungsverwalter(in) / Sicherungsverwalter(in)</b>
      *  * <p>
-     *  *  Code: 088
+     *  *  Code: 308
      *  * <p>
      *  * 
      */
@@ -3244,9 +3250,9 @@ public enum RollenCode {
     Sicherungsverwalter("308"),
 
     /**
-     * <b>Gl&#228;ubiger(in) / Creditor</b>
+     * <b>Zwangsverwalter(in) / Zwangsverwalter(in)</b>
      *  * <p>
-     *  *  Code: 089
+     *  *  Code: 309
      *  * <p>
      *  * 
      */
@@ -3255,9 +3261,9 @@ public enum RollenCode {
     Zwangsverwalter("309"),
 
     /**
-     * <b>Gl&#228;ubiger(in) / Creditor</b>
+     * <b>Mieter(in) / Mieter(in)</b>
      *  * <p>
-     *  *  Code: 089
+     *  *  Code: 310
      *  * <p>
      *  * 
      */
@@ -3266,9 +3272,9 @@ public enum RollenCode {
     Mieter("310"),
 
     /**
-     * <b>Gl&#228;ubiger(in) / Creditor</b>
+     * <b>B&#252;rge (B&#252;rgin) / B&#252;rge (B&#252;rgin)</b>
      *  * <p>
-     *  *  Code: 089
+     *  *  Code: 311
      *  * <p>
      *  * 
      */
@@ -3277,9 +3283,9 @@ public enum RollenCode {
     Buerge_Buergin("311"),
 
     /**
-     * <b>Gl&#228;ubiger(in) / Creditor</b>
+     * <b>Meistbietende(r) / Meistbietende(r)</b>
      *  * <p>
-     *  *  Code: 089
+     *  *  Code: 312
      *  * <p>
      *  * 
      */
@@ -3288,9 +3294,9 @@ public enum RollenCode {
     Meistbietende("312"),
 
     /**
-     * <b>Gro&#223;eltern / Gro&#223;eltern</b>
+     * <b>Abschlusspr&#252;fer(in) / Abschlusspr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 090
+     *  *  Code: 313
      *  * <p>
      *  * 
      */
@@ -3299,9 +3305,9 @@ public enum RollenCode {
     Abschlusspruefer("313"),
 
     /**
-     * <b>Gro&#223;eltern / Gro&#223;eltern</b>
+     * <b>Antragstellervertreter(in) / Antragstellervertreter(in)</b>
      *  * <p>
-     *  *  Code: 090
+     *  *  Code: 314
      *  * <p>
      *  * 
      */
@@ -3310,9 +3316,9 @@ public enum RollenCode {
     Antragstellervertreter("314"),
 
     /**
-     * <b>Gro&#223;eltern / Gro&#223;eltern</b>
+     * <b>Aufsichtsratsvorsitzende(r) / Aufsichtsratsvorsitzende(r)</b>
      *  * <p>
-     *  *  Code: 090
+     *  *  Code: 315
      *  * <p>
      *  * 
      */
@@ -3321,9 +3327,9 @@ public enum RollenCode {
     Aufsichtsratsvorsitzende("315"),
 
     /**
-     * <b>Gro&#223;eltern / Gro&#223;eltern</b>
+     * <b>Berufskammer / Berufskammer</b>
      *  * <p>
-     *  *  Code: 090
+     *  *  Code: 316
      *  * <p>
      *  * 
      */
@@ -3332,9 +3338,9 @@ public enum RollenCode {
     Berufskammer("316"),
 
     /**
-     * <b>Gro&#223;vater (Gro&#223;mutter) / Gro&#223;vater (Gro&#223;mutter)</b>
+     * <b>Betroffenenvertreter(in) / Betroffenenvertreter(in)</b>
      *  * <p>
-     *  *  Code: 092
+     *  *  Code: 317
      *  * <p>
      *  * 
      */
@@ -3343,9 +3349,9 @@ public enum RollenCode {
     Betroffenenvertreter("317"),
 
     /**
-     * <b>Gro&#223;vater (Gro&#223;mutter) / Gro&#223;vater (Gro&#223;mutter)</b>
+     * <b>B&#252;rgermeister(in) / B&#252;rgermeister(in)</b>
      *  * <p>
-     *  *  Code: 092
+     *  *  Code: 318
      *  * <p>
      *  * 
      */
@@ -3354,9 +3360,9 @@ public enum RollenCode {
     Buergermeister("318"),
 
     /**
-     * <b>Gro&#223;vater (Gro&#223;mutter) / Gro&#223;vater (Gro&#223;mutter)</b>
+     * <b>Eingliederungsbeteiligte(r) / Eingliederungsbeteiligte(r)</b>
      *  * <p>
-     *  *  Code: 092
+     *  *  Code: 319
      *  * <p>
      *  * 
      */
@@ -3365,9 +3371,9 @@ public enum RollenCode {
     Eingliederungsbeteiligte("319"),
 
     /**
-     * <b>Hauptbevollm&#228;chtigte(r) / Hauptbevollm&#228;chtigte(r)</b>
+     * <b>Formwechselnder Rechtstr&#228;ger / Formwechselnder Rechtstr&#228;ger</b>
      *  * <p>
-     *  *  Code: 093
+     *  *  Code: 320
      *  * <p>
      *  * 
      */
@@ -3376,9 +3382,9 @@ public enum RollenCode {
     Formwechselnder_Rechtstraeger("320"),
 
     /**
-     * <b>Hauptbevollm&#228;chtigte(r) / Hauptbevollm&#228;chtigte(r)</b>
+     * <b>Gewerbeamt / Gewerbeamt</b>
      *  * <p>
-     *  *  Code: 093
+     *  *  Code: 321
      *  * <p>
      *  * 
      */
@@ -3387,9 +3393,9 @@ public enum RollenCode {
     Gewerbeamt("321"),
 
     /**
-     * <b>Hauptbevollm&#228;chtigte(r) / Hauptbevollm&#228;chtigte(r)</b>
+     * <b>Inhaber(in) (nicht eingetragen) / Inhaber(in) (nicht eingetragen)</b>
      *  * <p>
-     *  *  Code: 093
+     *  *  Code: 322
      *  * <p>
      *  * 
      */
@@ -3398,9 +3404,9 @@ public enum RollenCode {
     Inhaber_nicht_eingetragen("322"),
 
     /**
-     * <b>Hauptbevollm&#228;chtigte(r) / Hauptbevollm&#228;chtigte(r)</b>
+     * <b>Kostenempf&#228;nger(in) / Kostenempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 093
+     *  *  Code: 323
      *  * <p>
      *  * 
      */
@@ -3409,9 +3415,9 @@ public enum RollenCode {
     Kostenempfaenger("323"),
 
     /**
-     * <b>Hoferbe (Hoferbin) / Hoferbe (Hoferbin)</b>
+     * <b>Nachlassgericht / Nachlassgericht</b>
      *  * <p>
-     *  *  Code: 094
+     *  *  Code: 324
      *  * <p>
      *  * 
      */
@@ -3420,9 +3426,9 @@ public enum RollenCode {
     Nachlassgericht("324"),
 
     /**
-     * <b>Hoferbe (Hoferbin) / Hoferbe (Hoferbin)</b>
+     * <b>Sonderpr&#252;fer(in) / Sonderpr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 094
+     *  *  Code: 325
      *  * <p>
      *  * 
      */
@@ -3431,9 +3437,9 @@ public enum RollenCode {
     Sonderpruefer("325"),
 
     /**
-     * <b>Hoferbe (Hoferbin) / Hoferbe (Hoferbin)</b>
+     * <b>Sonstige(r) gerichtlich bestellte(r) Vertreter(in) / Sonstige(r) gerichtlich bestellte(r) Vertreter(in)</b>
      *  * <p>
-     *  *  Code: 094
+     *  *  Code: 326
      *  * <p>
      *  * 
      */
@@ -3442,9 +3448,9 @@ public enum RollenCode {
     Sonstige_gerichtlich_bestellte_Vertreter("326"),
 
     /**
-     * <b>Inhaber(in) der Firma / Inhaber(in) der Firma</b>
+     * <b>Sonstige(r) gesetzliche(r) Vertreter(in) BGB / Sonstige(r) gesetzliche(r) Vertreter(in) BGB</b>
      *  * <p>
-     *  *  Code: 095
+     *  *  Code: 327
      *  * <p>
      *  * 
      */
@@ -3453,9 +3459,9 @@ public enum RollenCode {
     Sonstige_gesetzliche_Vertreter_BGB("327"),
 
     /**
-     * <b>Inhaber(in) der Firma / Inhaber(in) der Firma</b>
+     * <b>Sonstige(r) organschaftliche(r) Vertreter(in) HRB / Sonstige(r) organschaftliche(r) Vertreter(in) HRB</b>
      *  * <p>
-     *  *  Code: 095
+     *  *  Code: 328
      *  * <p>
      *  * 
      */
@@ -3464,9 +3470,9 @@ public enum RollenCode {
     Sonstige_organschaftliche_Vertreter_HRB("328"),
 
     /**
-     * <b>Insolvenzverwalter(in) / Insolvency Administrator</b>
+     * <b>Standardkostenschuldner(in) / Standardkostenschuldner(in)</b>
      *  * <p>
-     *  *  Code: 096
+     *  *  Code: 329
      *  * <p>
      *  * 
      */
@@ -3475,9 +3481,9 @@ public enum RollenCode {
     Standardkostenschuldner("329"),
 
     /**
-     * <b>Insolvenzverwalter(in) / Insolvency Administrator</b>
+     * <b>&#220;bernahmeschuldner(in) / &#220;bernahmeschuldner(in)</b>
      *  * <p>
-     *  *  Code: 096
+     *  *  Code: 330
      *  * <p>
      *  * 
      */
@@ -3486,9 +3492,9 @@ public enum RollenCode {
     Uebernahmeschuldner("330"),
 
     /**
-     * <b>Insolvenzverwalter(in) / Insolvency Administrator</b>
+     * <b>Unternehmensvertragsbeteiligte(r) / Unternehmensvertragsbeteiligte(r)</b>
      *  * <p>
-     *  *  Code: 096
+     *  *  Code: 331
      *  * <p>
      *  * 
      */
@@ -3497,9 +3503,9 @@ public enum RollenCode {
     Unternehmensvertragsbeteiligte("331"),
 
     /**
-     * <b>Jugendamt / Jugendamt</b>
+     * <b>Vertreter(in) des pers&#246;nlich haftenden Gesellschafters / Vertreter(in) des pers&#246;nlich haftenden Gesellschafters</b>
      *  * <p>
-     *  *  Code: 097
+     *  *  Code: 332
      *  * <p>
      *  * 
      */
@@ -3508,9 +3514,9 @@ public enum RollenCode {
     Vertreter_des_persoenlich_haftenden_Gesellschafters("332"),
 
     /**
-     * <b>Jugendamt / Jugendamt</b>
+     * <b>Werkleiter(in) / Werkleiter(in)</b>
      *  * <p>
-     *  *  Code: 097
+     *  *  Code: 333
      *  * <p>
      *  * 
      */
@@ -3519,9 +3525,9 @@ public enum RollenCode {
     Werkleiter("333"),
 
     /**
-     * <b>Kammer / Kammer</b>
+     * <b>Mehrfachsitz / Mehrfachsitz</b>
      *  * <p>
-     *  *  Code: 098
+     *  *  Code: 334
      *  * <p>
      *  * 
      */
@@ -3530,9 +3536,9 @@ public enum RollenCode {
     Mehrfachsitz("334"),
 
     /**
-     * <b>Kammer / Kammer</b>
+     * <b>Mitglied VR / Mitglied VR</b>
      *  * <p>
-     *  *  Code: 098
+     *  *  Code: 335
      *  * <p>
      *  * 
      */
@@ -3541,9 +3547,9 @@ public enum RollenCode {
     Mitglied_VR("335"),
 
     /**
-     * <b>Kammer / Kammer</b>
+     * <b>Mitglied e. BGB-Gesellschaft als Abwicklerin / Mitglied e. BGB-Gesellschaft als Abwicklerin</b>
      *  * <p>
-     *  *  Code: 098
+     *  *  Code: 336
      *  * <p>
      *  * 
      */
@@ -3552,9 +3558,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_Abwicklerin("336"),
 
     /**
-     * <b>Kammermitglied / Kammermitglied</b>
+     * <b>Mitglied e. BGB-Gesellschaft als ges. Vertreterin / Mitglied e. BGB-Gesellschaft als ges. Vertreterin</b>
      *  * <p>
-     *  *  Code: 099
+     *  *  Code: 337
      *  * <p>
      *  * 
      */
@@ -3563,9 +3569,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_ges_Vertreterin("337"),
 
     /**
-     * <b>Kammermitglied / Kammermitglied</b>
+     * <b>Mitglied e. BGB-Gesellschaft als Kommanditistin / Mitglied e. BGB-Gesellschaft als Kommanditistin</b>
      *  * <p>
-     *  *  Code: 099
+     *  *  Code: 338
      *  * <p>
      *  * 
      */
@@ -3574,9 +3580,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_Kommanditistin("338"),
 
     /**
-     * <b>Kind / Kind</b>
+     * <b>Mitglied e. BGB-Gesellschaft als Liquidatorin / Mitglied e. BGB-Gesellschaft als Liquidatorin</b>
      *  * <p>
-     *  *  Code: 100
+     *  *  Code: 339
      *  * <p>
      *  * 
      */
@@ -3585,9 +3591,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_Liquidatorin("339"),
 
     /**
-     * <b>Kind / Kind</b>
+     * <b>Mitglied e. BGB-Gesellschaft als Mitglied e. EWIV / Mitglied e. BGB-Gesellschaft als Mitglied e. EWIV</b>
      *  * <p>
-     *  *  Code: 100
+     *  *  Code: 340
      *  * <p>
      *  * 
      */
@@ -3596,9 +3602,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_Mitglied_e_EWIV("340"),
 
     /**
-     * <b>Kl&#228;ger(in) / Plaintiff</b>
+     * <b>Mitglied e. BGB-Gesellschaft als phG / Mitglied e. BGB-Gesellschaft als phG</b>
      *  * <p>
-     *  *  Code: 101
+     *  *  Code: 341
      *  * <p>
      *  * 
      */
@@ -3607,9 +3613,9 @@ public enum RollenCode {
     Mitglied_e_BGB_Gesellschaft_als_phG("341"),
 
     /**
-     * <b>Kl&#228;ger(in) / Plaintiff</b>
+     * <b>Mitglied e. Erbengemeinschaft als ges. Vertreterin / Mitglied e. Erbengemeinschaft als ges. Vertreterin</b>
      *  * <p>
-     *  *  Code: 101
+     *  *  Code: 342
      *  * <p>
      *  * 
      */
@@ -3618,9 +3624,9 @@ public enum RollenCode {
     Mitglied_e_Erbengemeinschaft_als_ges_Vertreterin("342"),
 
     /**
-     * <b>Kontrollbetreuer(in) / Kontrollbetreuer(in)</b>
+     * <b>Mitglied e. Erbengemeinschaft als Inhaberin / Mitglied e. Erbengemeinschaft als Inhaberin</b>
      *  * <p>
-     *  *  Code: 102
+     *  *  Code: 343
      *  * <p>
      *  * 
      */
@@ -3629,9 +3635,9 @@ public enum RollenCode {
     Mitglied_e_Erbengemeinschaft_als_Inhaberin("343"),
 
     /**
-     * <b>Kontrollbetreuer(in) / Kontrollbetreuer(in)</b>
+     * <b>Mitglied e. Erbengemeinschaft als Kommanditistin / Mitglied e. Erbengemeinschaft als Kommanditistin</b>
      *  * <p>
-     *  *  Code: 102
+     *  *  Code: 344
      *  * <p>
      *  * 
      */
@@ -3640,9 +3646,9 @@ public enum RollenCode {
     Mitglied_e_Erbengemeinschaft_als_Kommanditistin("344"),
 
     /**
-     * <b>Korrespondenzanwalt (-anw&#228;ltin) / Korrespondenzanwalt (-anw&#228;ltin)</b>
+     * <b>Mitglied e. Erbengemeinschaft als Mitglied e. EWIV / Mitglied e. Erbengemeinschaft als Mitglied e. EWIV</b>
      *  * <p>
-     *  *  Code: 103
+     *  *  Code: 345
      *  * <p>
      *  * 
      */
@@ -3651,9 +3657,9 @@ public enum RollenCode {
     Mitglied_e_Erbengemeinschaft_als_Mitglied_e_EWIV("345"),
 
     /**
-     * <b>Korrespondenzanwalt (-anw&#228;ltin) / Korrespondenzanwalt (-anw&#228;ltin)</b>
+     * <b>Nebensitz / Nebensitz</b>
      *  * <p>
-     *  *  Code: 103
+     *  *  Code: 346
      *  * <p>
      *  * 
      */
@@ -3662,9 +3668,9 @@ public enum RollenCode {
     Nebensitz("346"),
 
     /**
-     * <b>Korrespondenzanwalt (-anw&#228;ltin) / Korrespondenzanwalt (-anw&#228;ltin)</b>
+     * <b>Gesamthandsgemeinschaft / Gesamthandsgemeinschaft</b>
      *  * <p>
-     *  *  Code: 103
+     *  *  Code: 347
      *  * <p>
      *  * 
      */
@@ -3673,9 +3679,9 @@ public enum RollenCode {
     Gesamthandsgemeinschaft("347"),
 
     /**
-     * <b>Kostenschuldner(in) / Kostenschuldner(in)</b>
+     * <b>Mitglied einer Gesamthandsgemeinschaft / Mitglied einer Gesamthandsgemeinschaft</b>
      *  * <p>
-     *  *  Code: 104
+     *  *  Code: 348
      *  * <p>
      *  * 
      */
@@ -3684,9 +3690,9 @@ public enum RollenCode {
     Mitglied_einer_Gesamthandsgemeinschaft("348"),
 
     /**
-     * <b>Kostenschuldner(in) / Kostenschuldner(in)</b>
+     * <b>Leitungsperson i.S.v. &#167; 30 Abs. 1 Nr. 1 bis 5 OWiG / Leitungsperson i.S.v. &#167; 30 Abs. 1 Nr. 1 bis 5 OWiG</b>
      *  * <p>
-     *  *  Code: 104
+     *  *  Code: 349
      *  * <p>
      *  * 
      */
@@ -3695,9 +3701,9 @@ public enum RollenCode {
     Leitungsperson_iSv_30_Abs_1_Nr_1_bis_5_OWiG("349"),
 
     /**
-     * <b>Kostenschuldner(in) / Kostenschuldner(in)</b>
+     * <b>Einziehungsbeteiligter / Einziehungsbeteiligter</b>
      *  * <p>
-     *  *  Code: 104
+     *  *  Code: 350
      *  * <p>
      *  * 
      */
@@ -3706,9 +3712,9 @@ public enum RollenCode {
     Einziehungsbeteiligter("350"),
 
     /**
-     * <b>Landwirtschaftsrichter(in) / Landwirtschaftsrichter(in)</b>
+     * <b>Antragsgegnervertreter(in) / Antragsgegnervertreter(in)</b>
      *  * <p>
-     *  *  Code: 105
+     *  *  Code: 351
      *  * <p>
      *  * 
      */
@@ -3717,9 +3723,9 @@ public enum RollenCode {
     Antragsgegnervertreter("351"),
 
     /**
-     * <b>Landwirtschaftsrichter(in) / Landwirtschaftsrichter(in)</b>
+     * <b>Verbraucher(in) / Verbraucher(in)</b>
      *  * <p>
-     *  *  Code: 105
+     *  *  Code: 352
      *  * <p>
      *  * 
      */
@@ -3728,9 +3734,9 @@ public enum RollenCode {
     Verbraucher("352"),
 
     /**
-     * <b>Landwirtschaftsrichter(in) / Landwirtschaftsrichter(in)</b>
+     * <b>Vielmelder(in) / Vielmelder(in)</b>
      *  * <p>
-     *  *  Code: 105
+     *  *  Code: 353
      *  * <p>
      *  * 
      */
@@ -3739,9 +3745,9 @@ public enum RollenCode {
     Vielmelder("353"),
 
     /**
-     * <b>Lebenspartner(in) / Lebenspartner(in)</b>
+     * <b>Vollmachtgeber(in) / Vollmachtgeber(in)</b>
      *  * <p>
-     *  *  Code: 106
+     *  *  Code: 354
      *  * <p>
      *  * 
      */
@@ -3750,9 +3756,9 @@ public enum RollenCode {
     Vollmachtgeber("354"),
 
     /**
-     * <b>Lebenspartner(in) / Lebenspartner(in)</b>
+     * <b>Nebenbeteiligte(r) &#167; 444 StPO / Nebenbeteiligte(r) &#167; 444 StPO</b>
      *  * <p>
-     *  *  Code: 106
+     *  *  Code: 355
      *  * <p>
      *  * 
      */
@@ -3761,9 +3767,9 @@ public enum RollenCode {
     Nebenbeteiligte_444_StPO("355"),
 
     /**
-     * <b>Lebenspartner(in) / Lebenspartner(in)</b>
+     * <b>Verfallsbeteiligte(r) &#167; 442 StPO a.F. / Verfallsbeteiligte(r) &#167; 442 StPO a.F.</b>
      *  * <p>
-     *  *  Code: 106
+     *  *  Code: 356
      *  * <p>
      *  * 
      */
@@ -3772,9 +3778,9 @@ public enum RollenCode {
     Verfallsbeteiligte_442_StPO_aF("356"),
 
     /**
-     * <b>Liquidator(in) / Liquidator(in)</b>
+     * <b>Verfolgte(r) &#167; 34 IRG / Verfolgte(r) &#167; 34 IRG</b>
      *  * <p>
-     *  *  Code: 107
+     *  *  Code: 357
      *  * <p>
      *  * 
      */
@@ -3783,9 +3789,9 @@ public enum RollenCode {
     Verfolgte_34_IRG("357"),
 
     /**
-     * <b>Liquidator(in) / Liquidator(in)</b>
+     * <b>Rechtsnachfolger(in) / Rechtsnachfolger(in)</b>
      *  * <p>
-     *  *  Code: 107
+     *  *  Code: 358
      *  * <p>
      *  * 
      */
@@ -3794,9 +3800,9 @@ public enum RollenCode {
     Rechtsnachfolger("358"),
 
     /**
-     * <b>Liquidator(in) / Liquidator(in)</b>
+     * <b>Statuswechselnde(r) Rechtstr&#228;ger(in) / Statuswechselnde(r) Rechtstr&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 107
+     *  *  Code: 359
      *  * <p>
      *  * 
      */
@@ -3805,9 +3811,9 @@ public enum RollenCode {
     Statuswechselnde_Rechtstraeger("359"),
 
     /**
-     * <b>Minderj&#228;hrige(r) / Minderj&#228;hrige(r)</b>
+     * <b>Haftangeh&#246;rige / Haftangeh&#246;rige</b>
      *  * <p>
-     *  *  Code: 108
+     *  *  Code: 360
      *  * <p>
      *  * 
      */
@@ -3816,9 +3822,9 @@ public enum RollenCode {
     Haftangehoerige("360"),
 
     /**
-     * <b>Minderj&#228;hrige(r) / Minderj&#228;hrige(r)</b>
+     * <b>Restrukturierungsbeauftragte(r) / Restrukturierungsbeauftragte(r)</b>
      *  * <p>
-     *  *  Code: 108
+     *  *  Code: 361
      *  * <p>
      *  * 
      */
@@ -3827,9 +3833,9 @@ public enum RollenCode {
     Restrukturierungsbeauftragte("361"),
 
     /**
-     * <b>Minderj&#228;hrige(r) / Minderj&#228;hrige(r)</b>
+     * <b>Sanierungsmoderator(in) / Sanierungsmoderator(in)</b>
      *  * <p>
-     *  *  Code: 108
+     *  *  Code: 362
      *  * <p>
      *  * 
      */
@@ -3838,9 +3844,9 @@ public enum RollenCode {
     Sanierungsmoderator("362"),
 
     /**
-     * <b>Mitvormund / Mitvormund</b>
+     * <b>Abschriftenempf&#228;nger(in) / Abschriftenempf&#228;nger(in)</b>
      *  * <p>
-     *  *  Code: 109
+     *  *  Code: 363
      *  * <p>
      *  * 
      */
@@ -3849,9 +3855,9 @@ public enum RollenCode {
     Abschriftenempfaenger("363"),
 
     /**
-     * <b>Mitvormund / Mitvormund</b>
+     * <b>Kostenbeamte(r) / Kostenbeamte(r)</b>
      *  * <p>
-     *  *  Code: 109
+     *  *  Code: 364
      *  * <p>
      *  * 
      */
@@ -3860,9 +3866,9 @@ public enum RollenCode {
     Kostenbeamte("364"),
 
     /**
-     * <b>Mitvormund / Mitvormund</b>
+     * <b>Urkundsbeamte(r) der Gesch&#228;ftsstelle / Urkundsbeamte(r) der Gesch&#228;ftsstelle</b>
      *  * <p>
-     *  *  Code: 109
+     *  *  Code: 365
      *  * <p>
      *  * 
      */
@@ -3871,9 +3877,9 @@ public enum RollenCode {
     Urkundsbeamte_der_Geschaeftsstelle("365"),
 
     /**
-     * <b>M&#252;ndel / M&#252;ndel</b>
+     * <b>Anordnungsbefugte(r) / Anordnungsbefugte(r)</b>
      *  * <p>
-     *  *  Code: 110
+     *  *  Code: 366
      *  * <p>
      *  * 
      */
@@ -3882,9 +3888,9 @@ public enum RollenCode {
     Anordnungsbefugte("366"),
 
     /**
-     * <b>M&#252;ndel / M&#252;ndel</b>
+     * <b>Erstschuldner(in) / Erstschuldner(in)</b>
      *  * <p>
-     *  *  Code: 110
+     *  *  Code: 367
      *  * <p>
      *  * 
      */
@@ -3893,9 +3899,9 @@ public enum RollenCode {
     Erstschuldner("367"),
 
     /**
-     * <b>M&#252;ndel / M&#252;ndel</b>
+     * <b>Kasse / Kasse</b>
      *  * <p>
-     *  *  Code: 110
+     *  *  Code: 368
      *  * <p>
      *  * 
      */
@@ -3904,9 +3910,9 @@ public enum RollenCode {
     Kasse("368"),
 
     /**
-     * <b>M&#252;ndel / M&#252;ndel</b>
+     * <b>Arrestbeklagte(r) / Arrestbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 110
+     *  *  Code: 369
      *  * <p>
      *  * 
      */
@@ -3915,9 +3921,9 @@ public enum RollenCode {
     Arrestbeklagte("369"),
 
     /**
-     * <b>Nachbesserungsgl&#228;ubiger(in) / Nachbesserungsgl&#228;ubiger(in)</b>
+     * <b>Arrestkl&#228;ger(in) / Arrestkl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 112
+     *  *  Code: 370
      *  * <p>
      *  * 
      */
@@ -3926,9 +3932,9 @@ public enum RollenCode {
     Arrestklaeger("370"),
 
     /**
-     * <b>Nachbesserungsgl&#228;ubiger(in) / Nachbesserungsgl&#228;ubiger(in)</b>
+     * <b>Bezirksrevisor(in) / Bezirksrevisor(in)</b>
      *  * <p>
-     *  *  Code: 112
+     *  *  Code: 371
      *  * <p>
      *  * 
      */
@@ -3937,9 +3943,9 @@ public enum RollenCode {
     Bezirksrevisor("371"),
 
     /**
-     * <b>Nachbesserungsgl&#228;ubiger(in) / Nachbesserungsgl&#228;ubiger(in)</b>
+     * <b>Nebenintervenient(in) / Nebenintervenient(in)</b>
      *  * <p>
-     *  *  Code: 112
+     *  *  Code: 372
      *  * <p>
      *  * 
      */
@@ -3948,9 +3954,9 @@ public enum RollenCode {
     Nebenintervenient("372"),
 
     /**
-     * <b>Nachlasspfleger(in) / Nachlasspfleger(in)</b>
+     * <b>Restitutionsbeklagte(r) / Restitutionsbeklagte(r)</b>
      *  * <p>
-     *  *  Code: 113
+     *  *  Code: 373
      *  * <p>
      *  * 
      */
@@ -3959,9 +3965,9 @@ public enum RollenCode {
     Restitutionsbeklagte("373"),
 
     /**
-     * <b>Nachlasspfleger(in) / Nachlasspfleger(in)</b>
+     * <b>Restitutionskl&#228;ger(in) / Restitutionskl&#228;ger(in)</b>
      *  * <p>
-     *  *  Code: 113
+     *  *  Code: 374
      *  * <p>
      *  * 
      */
@@ -3970,9 +3976,9 @@ public enum RollenCode {
     Restitutionsklaeger("374"),
 
     /**
-     * <b>Nachlasspfleger(in) / Nachlasspfleger(in)</b>
+     * <b>Streithelfer(in) / Streithelfer(in)</b>
      *  * <p>
-     *  *  Code: 113
+     *  *  Code: 375
      *  * <p>
      *  * 
      */
@@ -3981,9 +3987,9 @@ public enum RollenCode {
     Streithelfer("375"),
 
     /**
-     * <b>Nachlasspfleger(in) / Nachlasspfleger(in)</b>
+     * <b>Streitverk&#252;ndete(r) / Streitverk&#252;ndete(r)</b>
      *  * <p>
-     *  *  Code: 113
+     *  *  Code: 376
      *  * <p>
      *  * 
      */
@@ -3992,9 +3998,9 @@ public enum RollenCode {
     Streitverkuendete("376"),
 
     /**
-     * <b>Nachlassverwalter(in) / Nachlassverwalter(in)</b>
+     * <b>&#220;bersetzer(in) / &#220;bersetzer(in)</b>
      *  * <p>
-     *  *  Code: 114
+     *  *  Code: 377
      *  * <p>
      *  * 
      */
@@ -4003,9 +4009,9 @@ public enum RollenCode {
     Uebersetzer("377"),
 
     /**
-     * <b>Nachlassverwalter(in) / Nachlassverwalter(in)</b>
+     * <b>Unternehmen / Company</b>
      *  * <p>
-     *  *  Code: 114
+     *  *  Code: 378
      *  * <p>
      *  * 
      */
@@ -4014,9 +4020,9 @@ public enum RollenCode {
     Unternehmen_378("378"),
 
     /**
-     * <b>Nachlassverwalter(in) / Nachlassverwalter(in)</b>
+     * <b>Kontaktperson des Unternehmens / Kontaktperson des Unternehmens</b>
      *  * <p>
-     *  *  Code: 114
+     *  *  Code: 379
      *  * <p>
      *  * 
      */
@@ -4025,9 +4031,9 @@ public enum RollenCode {
     Kontaktperson_des_Unternehmens("379"),
 
     /**
-     * <b>Nebenkl&#228;ger(in) / Nebenkl&#228;ger(in)</b>
+     * <b>Beigetretene(r) / Beigetretene(r)</b>
      *  * <p>
-     *  *  Code: 115
+     *  *  Code: 380
      *  * <p>
      *  * 
      */
@@ -4036,9 +4042,9 @@ public enum RollenCode {
     Beigetretene("380"),
 
     /**
-     * <b>Nebenkl&#228;ger(in) / Nebenkl&#228;ger(in)</b>
+     * <b>Erkl&#228;rende(r) / Erkl&#228;rende(r)</b>
      *  * <p>
-     *  *  Code: 115
+     *  *  Code: 381
      *  * <p>
      *  * 
      */
@@ -4047,9 +4053,9 @@ public enum RollenCode {
     Erklaerende("381"),
 
     /**
-     * <b>Nebenkl&#228;ger(in) / Nebenkl&#228;ger(in)</b>
+     * <b>Heim / Heim</b>
      *  * <p>
-     *  *  Code: 115
+     *  *  Code: 382
      *  * <p>
      *  * 
      */
@@ -4058,9 +4064,9 @@ public enum RollenCode {
     Heim("382"),
 
     /**
-     * <b>Nebenkl&#228;ger(in) / Nebenkl&#228;ger(in)</b>
+     * <b>Inhaftierte Person / Inhaftierte Person</b>
      *  * <p>
-     *  *  Code: 115
+     *  *  Code: 383
      *  * <p>
      *  * 
      */
@@ -4069,9 +4075,9 @@ public enum RollenCode {
     Inhaftierte_Person("383"),
 
     /**
-     * <b>Neffe (Nichte) / Neffe (Nichte)</b>
+     * <b>Jugendgerichtshilfe / Jugendgerichtshilfe</b>
      *  * <p>
-     *  *  Code: 116
+     *  *  Code: 384
      *  * <p>
      *  * 
      */
@@ -4080,9 +4086,9 @@ public enum RollenCode {
     Jugendgerichtshilfe("384"),
 
     /**
-     * <b>Neffe (Nichte) / Neffe (Nichte)</b>
+     * <b>Krankenhaus / Krankenhaus</b>
      *  * <p>
-     *  *  Code: 116
+     *  *  Code: 385
      *  * <p>
      *  * 
      */
@@ -4091,9 +4097,9 @@ public enum RollenCode {
     Krankenhaus("385"),
 
     /**
-     * <b>Neffe (Nichte) / Neffe (Nichte)</b>
+     * <b>Nebenbetroffene(r) / Nebenbetroffene(r)</b>
      *  * <p>
-     *  *  Code: 116
+     *  *  Code: 386
      *  * <p>
      *  * 
      */
@@ -4102,9 +4108,9 @@ public enum RollenCode {
     Nebenbetroffene("386"),
 
     /**
-     * <b>Nicht verwandt / Nicht verwandt</b>
+     * <b>Nebenkl&#228;gervertreter(in) / Nebenkl&#228;gervertreter(in)</b>
      *  * <p>
-     *  *  Code: 117
+     *  *  Code: 387
      *  * <p>
      *  * 
      */
@@ -4113,9 +4119,9 @@ public enum RollenCode {
     Nebenklaegervertreter("387"),
 
     /**
-     * <b>Nicht verwandt / Nicht verwandt</b>
+     * <b>Psychosoziale(r) Prozessbegleiter(in) / Psychosoziale(r) Prozessbegleiter(in)</b>
      *  * <p>
-     *  *  Code: 117
+     *  *  Code: 388
      *  * <p>
      *  * 
      */
@@ -4124,9 +4130,9 @@ public enum RollenCode {
     Psychosoziale_Prozessbegleiter("388"),
 
     /**
-     * <b>Nicht verwandt / Nicht verwandt</b>
+     * <b>Rentenberater(in) / Rentenberater(in)</b>
      *  * <p>
-     *  *  Code: 117
+     *  *  Code: 389
      *  * <p>
      *  * 
      */
@@ -4135,9 +4141,9 @@ public enum RollenCode {
     Rentenberater("389"),
 
     /**
-     * <b>Onkel (Tante) / Onkel (Tante)</b>
+     * <b>Sachverst&#228;ndige(n) Zeuge (Zeugin) / Sachverst&#228;ndige(n) Zeuge (Zeugin)</b>
      *  * <p>
-     *  *  Code: 118
+     *  *  Code: 390
      *  * <p>
      *  * 
      */
@@ -4146,9 +4152,9 @@ public enum RollenCode {
     Sachverstaendigen_Zeuge_Zeugin("390"),
 
     /**
-     * <b>Onkel (Tante) / Onkel (Tante)</b>
+     * <b>Steuerberater(in) / Steuerberater(in)</b>
      *  * <p>
-     *  *  Code: 118
+     *  *  Code: 391
      *  * <p>
      *  * 
      */
@@ -4157,9 +4163,9 @@ public enum RollenCode {
     Steuerberater("391"),
 
     /**
-     * <b>Opfer / Opfer</b>
+     * <b>Unternehmen / Company</b>
      *  * <p>
-     *  *  Code: 119
+     *  *  Code: 392
      *  * <p>
      *  * 
      */
@@ -4168,9 +4174,9 @@ public enum RollenCode {
     Unternehmen_392("392"),
 
     /**
-     * <b>Opfer / Opfer</b>
+     * <b>Verfahrensbeistand / Verfahrensbeistand</b>
      *  * <p>
-     *  *  Code: 119
+     *  *  Code: 393
      *  * <p>
      *  * 
      */
@@ -4179,9 +4185,9 @@ public enum RollenCode {
     Verfahrensbeistand("393"),
 
     /**
-     * <b>Opfer / Opfer</b>
+     * <b>Verfahrensbeteiligte(r) / Verfahrensbeteiligte(r)</b>
      *  * <p>
-     *  *  Code: 119
+     *  *  Code: 394
      *  * <p>
      *  * 
      */
@@ -4190,9 +4196,9 @@ public enum RollenCode {
     Verfahrensbeteiligte("394"),
 
     /**
-     * <b>P&#228;chter(in) / P&#228;chter(in)</b>
+     * <b>Verhinderungsbetreuer / Verhinderungsbetreuer</b>
      *  * <p>
-     *  *  Code: 120
+     *  *  Code: 395
      *  * <p>
      *  * 
      */
@@ -4201,9 +4207,9 @@ public enum RollenCode {
     Verhinderungsbetreuer("395"),
 
     /**
-     * <b>P&#228;chter(in) / P&#228;chter(in)</b>
+     * <b>Verletztenbeistand / Verletztenbeistand</b>
      *  * <p>
-     *  *  Code: 120
+     *  *  Code: 396
      *  * <p>
      *  * 
      */
@@ -4212,9 +4218,9 @@ public enum RollenCode {
     Verletztenbeistand("396"),
 
     /**
-     * <b>P&#228;chter(in) / P&#228;chter(in)</b>
+     * <b>Wirtschaftspr&#252;fer(in) / Wirtschaftspr&#252;fer(in)</b>
      *  * <p>
-     *  *  Code: 120
+     *  *  Code: 397
      *  * <p>
      *  * 
      */
@@ -4223,9 +4229,9 @@ public enum RollenCode {
     Wirtschaftspruefer("397"),
 
     /**
-     * <b>Pflegeeltern / Pflegeeltern</b>
+     * <b>Zedent(in) / Zedent(in)</b>
      *  * <p>
-     *  *  Code: 121
+     *  *  Code: 398
      *  * <p>
      *  * 
      */
@@ -4234,9 +4240,9 @@ public enum RollenCode {
     Zedent("398"),
 
     /**
-     * <b>Pflegeeltern / Pflegeeltern</b>
+     * <b>Registerf&#252;hrende Beh&#246;rde/Stelle / Registerf&#252;hrende Beh&#246;rde/Stelle</b>
      *  * <p>
-     *  *  Code: 121
+     *  *  Code: 399
      *  * <p>
      *  * 
      */
@@ -4248,6 +4254,16 @@ public enum RollenCode {
     RollenCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static RollenCode fromValue(String value) {
+        for (RollenCode e : RollenCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }

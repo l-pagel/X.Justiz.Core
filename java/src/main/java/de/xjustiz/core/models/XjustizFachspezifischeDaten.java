@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +8,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
+import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -14,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Subject-specific data:</b></u> Specialized data of a document.
  */
+@XmlType(name = "XjustizFachspezifischeDaten", propOrder = { "dokumentklasse", "datei" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -27,6 +32,7 @@ public class XjustizFachspezifischeDaten {
     @XmlElement(name = "dokumentklasse", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "dokumentklasse", namespace = "http://www.xjustiz.de")
     @JsonProperty("Dokumentklasse")
+    @JsonAlias({ "dokumentklasse" })
     @Nullable
     private Dokumentklasse dokumentklasse;
 
@@ -38,6 +44,7 @@ public class XjustizFachspezifischeDaten {
     @XmlElement(name = "datei", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "datei", namespace = "http://www.xjustiz.de")
     @JsonProperty("Datei")
+    @JsonAlias({ "datei" })
     private Datei datei;
 
     public XjustizFachspezifischeDaten() {}

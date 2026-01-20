@@ -16,36 +16,42 @@ import jakarta.xml.bind.annotation.XmlType;
 public enum AktentypCode {
 
     /**
-     * Aktentyp Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codeliste GDS.Aktentyp</a>.
+     * <b>Zivilakte / Civil Case File</b>
      *  * <p>
-     *  *  <u><b>Case type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code list GDS.CaseFileType</a>.
+     *  *  Code: 001
+     *  * <p>
+     *  * 
      */
     @JsonProperty("001")
     @XmlEnumValue("001")
     Zivilakte("001"),
 
     /**
-     * Aktentyp Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codeliste GDS.Aktentyp</a>.
+     * <b>Betreuungsakte / Guardianship Case File</b>
      *  * <p>
-     *  *  <u><b>Case type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code list GDS.CaseFileType</a>.
+     *  *  Code: 002
+     *  * <p>
+     *  * 
      */
     @JsonProperty("002")
     @XmlEnumValue("002")
     Betreuungsakte("002"),
 
     /**
-     * Aktentyp Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Codeliste GDS.Aktentyp</a>.
+     * <b>Familienakte / Family Case File</b>
      *  * <p>
-     *  *  <u><b>Case type codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp">XRepository: Code list GDS.CaseFileType</a>.
+     *  *  Code: 003
+     *  * <p>
+     *  * 
      */
     @JsonProperty("003")
     @XmlEnumValue("003")
     Familienakte("003"),
 
     /**
-     * <b>Zivilakte / Civil Case File</b>
+     * <b>Nachlassakte / Probate Case File</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 004
      *  * <p>
      *  * 
      */
@@ -54,9 +60,9 @@ public enum AktentypCode {
     Nachlassakte("004"),
 
     /**
-     * <b>Zivilakte / Civil Case File</b>
+     * <b>Insolvenzakte / Insolvency Case File</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 005
      *  * <p>
      *  * 
      */
@@ -65,9 +71,9 @@ public enum AktentypCode {
     Insolvenzakte("005"),
 
     /**
-     * <b>Zivilakte / Civil Case File</b>
+     * <b>Grundakte / Land Registry File</b>
      *  * <p>
-     *  *  Code: 001
+     *  *  Code: 006
      *  * <p>
      *  * 
      */
@@ -76,9 +82,9 @@ public enum AktentypCode {
     Grundakte("006"),
 
     /**
-     * <b>Betreuungsakte / Guardianship Case File</b>
+     * <b>Registerakte / Register File</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 007
      *  * <p>
      *  * 
      */
@@ -87,9 +93,9 @@ public enum AktentypCode {
     Registerakte("007"),
 
     /**
-     * <b>Betreuungsakte / Guardianship Case File</b>
+     * <b>Zwangsvollstreckungsakte / Enforcement Case File</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 008
      *  * <p>
      *  * 
      */
@@ -98,9 +104,9 @@ public enum AktentypCode {
     Zwangsvollstreckungsakte("008"),
 
     /**
-     * <b>Betreuungsakte / Guardianship Case File</b>
+     * <b>Justizverwaltungsakte / Judicial Administration File</b>
      *  * <p>
-     *  *  Code: 002
+     *  *  Code: 009
      *  * <p>
      *  * 
      */
@@ -109,9 +115,9 @@ public enum AktentypCode {
     Justizverwaltungsakte("009"),
 
     /**
-     * <b>Familienakte / Family Case File</b>
+     * <b>Bu&#223;geldakte / Fine Proceedings File</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 010
      *  * <p>
      *  * 
      */
@@ -120,9 +126,9 @@ public enum AktentypCode {
     Bussgeldakte("010"),
 
     /**
-     * <b>Familienakte / Family Case File</b>
+     * <b>Bew&#228;hrungshilfeakte / Probation Service File</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 011
      *  * <p>
      *  * 
      */
@@ -131,9 +137,9 @@ public enum AktentypCode {
     Bewaehrungshilfeakte("011"),
 
     /**
-     * <b>Familienakte / Family Case File</b>
+     * <b>Strafakte / Criminal Case File</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 012
      *  * <p>
      *  * 
      */
@@ -142,9 +148,9 @@ public enum AktentypCode {
     Strafakte("012"),
 
     /**
-     * <b>Familienakte / Family Case File</b>
+     * <b>Arbeitsgerichtsakte / Labor Court File</b>
      *  * <p>
-     *  *  Code: 003
+     *  *  Code: 013
      *  * <p>
      *  * 
      */
@@ -153,9 +159,9 @@ public enum AktentypCode {
     Arbeitsgerichtsakte("013"),
 
     /**
-     * <b>Nachlassakte / Probate Case File</b>
+     * <b>Finanzgerichtsakte / Fiscal Court File</b>
      *  * <p>
-     *  *  Code: 004
+     *  *  Code: 014
      *  * <p>
      *  * 
      */
@@ -164,9 +170,9 @@ public enum AktentypCode {
     Finanzgerichtsakte("014"),
 
     /**
-     * <b>Nachlassakte / Probate Case File</b>
+     * <b>Sozialgerichtsakte / Social Court File</b>
      *  * <p>
-     *  *  Code: 004
+     *  *  Code: 015
      *  * <p>
      *  * 
      */
@@ -175,9 +181,9 @@ public enum AktentypCode {
     Sozialgerichtsakte("015"),
 
     /**
-     * <b>Nachlassakte / Probate Case File</b>
+     * <b>Verwaltungsgerichtsakte / Administrative Court File</b>
      *  * <p>
-     *  *  Code: 004
+     *  *  Code: 016
      *  * <p>
      *  * 
      */
@@ -186,9 +192,9 @@ public enum AktentypCode {
     Verwaltungsgerichtsakte("016"),
 
     /**
-     * <b>Insolvenzakte / Insolvency Case File</b>
+     * <b>Andere / Sonstige / Other/Miscellaneous</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 017
      *  * <p>
      *  * 
      */
@@ -197,9 +203,9 @@ public enum AktentypCode {
     Andere_oder_Sonstige("017"),
 
     /**
-     * <b>Insolvenzakte / Insolvency Case File</b>
+     * <b>Beh&#246;rdenakte / Authority File</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 018
      *  * <p>
      *  * 
      */
@@ -208,9 +214,9 @@ public enum AktentypCode {
     Behoerdenakte("018"),
 
     /**
-     * <b>Insolvenzakte / Insolvency Case File</b>
+     * <b>Hinterlegungsakte / Deposit File</b>
      *  * <p>
-     *  *  Code: 005
+     *  *  Code: 019
      *  * <p>
      *  * 
      */
@@ -219,9 +225,9 @@ public enum AktentypCode {
     Hinterlegungsakte("019"),
 
     /**
-     * <b>Grundakte / Land Registry File</b>
+     * <b>Gerichtsvollzieherverfahrensakte / Bailiff Proceedings File</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 020
      *  * <p>
      *  * 
      */
@@ -230,9 +236,9 @@ public enum AktentypCode {
     Gerichtsvollzieherverfahrensakte("020"),
 
     /**
-     * <b>Grundakte / Land Registry File</b>
+     * <b>Gerichtsvollziehergesch&#228;ftsbuch DR I / Bailiff&#39;s Register DR I</b>
      *  * <p>
-     *  *  Code: 006
+     *  *  Code: 021
      *  * <p>
      *  * 
      */
@@ -241,9 +247,9 @@ public enum AktentypCode {
     Gerichtsvollziehergeschaeftsbuch_DR_I("021"),
 
     /**
-     * <b>Registerakte / Register File</b>
+     * <b>Gerichtsvollziehergesch&#228;ftsbuch DR II / Bailiff&#39;s Register DR II</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 022
      *  * <p>
      *  * 
      */
@@ -252,9 +258,9 @@ public enum AktentypCode {
     Gerichtsvollziehergeschaeftsbuch_DR_II("022"),
 
     /**
-     * <b>Registerakte / Register File</b>
+     * <b>Gerichtsvollziehergesch&#228;ftsbuch KB I / Bailiff&#39;s Register KB I</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 023
      *  * <p>
      *  * 
      */
@@ -263,9 +269,9 @@ public enum AktentypCode {
     Gerichtsvollziehergeschaeftsbuch_KB_I("023"),
 
     /**
-     * <b>Registerakte / Register File</b>
+     * <b>Gerichtsvollziehergesch&#228;ftsbuch KB II / Bailiff&#39;s Register KB II</b>
      *  * <p>
-     *  *  Code: 007
+     *  *  Code: 024
      *  * <p>
      *  * 
      */
@@ -277,6 +283,16 @@ public enum AktentypCode {
     AktentypCode(String value) { this.value = value; }
     @JsonValue
     public String getValue() { return value; }
+
+    @com.fasterxml.jackson.annotation.JsonCreator
+    public static AktentypCode fromValue(String value) {
+        for (AktentypCode e : AktentypCode.values()) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
 
     @Override
     public String toString() { return value; }
