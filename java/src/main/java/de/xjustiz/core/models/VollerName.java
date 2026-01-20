@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Der volle Name einer natürlichen Person.
+ * Der volle Name einer natürlichen Person.<br/>
+/// <u><b>Full name:</b></u> The full name of a natural person.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VollerName {
@@ -90,4 +91,5 @@ public class VollerName {
     public void setNachname(@Nullable String nachname) {
         this.nachname = nachname;
     }
+
 }

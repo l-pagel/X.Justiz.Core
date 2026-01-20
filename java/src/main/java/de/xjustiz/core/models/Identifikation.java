@@ -5,10 +5,10 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import org.jetbrains.annotations.Nullable;
 
 /**
- * Identifikation eines Schriftgutobjekts.
+ * Identifiziert ein Objekt eindeutig.<br/>
+/// <u><b>Identification:</b></u> Uniquely identifies an object.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Identifikation {
@@ -21,7 +21,6 @@ public class Identifikation {
     @XmlElement(name = "nummerImUebergeordnetenContainer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "nummerImUebergeordnetenContainer", namespace = "http://www.xjustiz.de")
     @JsonProperty("NummerImUebergeordnetenContainer")
-    @Nullable
     private String nummerImUebergeordnetenContainer;
 
     public Identifikation() {
@@ -35,12 +34,12 @@ public class Identifikation {
         this.id = id;
     }
 
-    @Nullable
     public String getNummerImUebergeordnetenContainer() {
         return nummerImUebergeordnetenContainer;
     }
 
-    public void setNummerImUebergeordnetenContainer(@Nullable String nummerImUebergeordnetenContainer) {
+    public void setNummerImUebergeordnetenContainer(String nummerImUebergeordnetenContainer) {
         this.nummerImUebergeordnetenContainer = nummerImUebergeordnetenContainer;
     }
+
 }

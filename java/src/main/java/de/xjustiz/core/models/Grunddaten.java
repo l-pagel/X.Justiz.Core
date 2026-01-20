@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Grunddaten der Nachricht.
+ * Grunddaten der Nachricht.<br/>
+/// <u><b>Basic data:</b></u> Basic data of the message.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Grunddaten {
@@ -30,4 +31,5 @@ public class Grunddaten {
     public void setVerfahrensdaten(@Nullable Verfahrensdaten verfahrensdaten) {
         this.verfahrensdaten = verfahrensdaten;
     }
+
 }

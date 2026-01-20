@@ -6,12 +6,12 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
 /**
- * Schriftgutobjekte der Nachricht.
+ * Enthält Listen von Schriftgutobjekten (Akten und Dokumente).<br/>
+/// <u><b>Document objects:</b></u> Contains lists of document objects (files/cases and documents).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Schriftgutobjekte {
@@ -19,9 +19,9 @@ public class Schriftgutobjekte {
     @XmlElement(name = "akte", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "akte", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
-    @JsonProperty("Akten")
+    @JsonProperty("Akte")
     @Nullable
-    private List<Akte> akten;
+    private List<Akte> akte;
 
     @XmlElement(name = "dokument", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "dokument", namespace = "http://www.xjustiz.de")
@@ -34,12 +34,12 @@ public class Schriftgutobjekte {
     }
 
     @Nullable
-    public List<Akte> getAkten() {
-        return akten;
+    public List<Akte> getAkte() {
+        return akte;
     }
 
-    public void setAkten(@Nullable List<Akte> akten) {
-        this.akten = akten;
+    public void setAkte(@Nullable List<Akte> akte) {
+        this.akte = akte;
     }
 
     @Nullable
@@ -50,4 +50,5 @@ public class Schriftgutobjekte {
     public void setDokumente(@Nullable List<Dokument> dokumente) {
         this.dokumente = dokumente;
     }
+
 }

@@ -8,41 +8,54 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Repräsentiert einen Staat als Code.
+ * Repräsentiert einen Staat als Code.<br/>
+/// <u><b>State:</b></u> Represents a state as a code.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Staat {
 
-    @XmlElement(name = "listVersionId", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "listVersionId", namespace = "http://www.xjustiz.de")
+    @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
     @JsonProperty("ListVersionId")
-    @Nullable
     private String listVersionId;
+
+    @XmlElement(name = "listURI", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "listURI", namespace = "http://www.xjustiz.de")
+    @JsonProperty("ListUri")
+    @Nullable
+    private String listUri;
 
     @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("code")
-    @Nullable
-    private String code;
+    @JsonProperty("CodeForXml")
+    private String codeForXml;
 
     public Staat() {
     }
 
-    @Nullable
     public String getListVersionId() {
         return listVersionId;
     }
 
-    public void setListVersionId(@Nullable String listVersionId) {
+    public void setListVersionId(String listVersionId) {
         this.listVersionId = listVersionId;
     }
 
     @Nullable
-    public String getCode() {
-        return code;
+    public String getListUri() {
+        return listUri;
     }
 
-    public void setCode(@Nullable String code) {
-        this.code = code;
+    public void setListUri(@Nullable String listUri) {
+        this.listUri = listUri;
     }
+
+    public String getCodeForXml() {
+        return codeForXml;
+    }
+
+    public void setCodeForXml(String codeForXml) {
+        this.codeForXml = codeForXml;
+    }
+
 }

@@ -47,12 +47,18 @@ If any discrepancy is found, the pipeline **fails**.
 4. **Manually update** the corresponding Java models if needed
 5. Parity tests will fail if Java models don't match
 
-### Changing Java Models
+### Syncing Java Models from .NET
 
-When adding/changing Java models, ensure they match the .NET models:
-- Use matching property names (German)
-- Add `@JsonProperty` annotations with exact property names
-- Maintain type compatibility
+Use the sync script to automatically update Java models based on .NET models:
+
+```powershell
+python scripts/sync-java-models.py
+```
+
+The script will:
+- Parse all C# model files in `dotnet/src/xjustiz.core-dotnet/Models/Entities/`
+- Generate corresponding Java classes with proper annotations
+- Report what was created, updated, or unchanged
 
 ### Running Parity Tests Locally
 
@@ -70,10 +76,8 @@ X.Justiz.Core/
 ├── schemas/
 │   └── xjustiz-core.schema.json        # Generated from .NET
 ├── java/src/main/java/de/xjustiz/core/
-│   ├── models/                          # Manually maintained Java models
-│   └── serialization/                   # Utilities
+│   ├── models/                          # Java models (synced from .NET)
+│   └── serialization/                   # Hand-written utilities
 └── scripts/
-    └── generate-java-models.ps1         # Experimental code generation script (not used in production)
+    └── sync-java-models.py              # Sync Java models from .NET
 ```
-
-**Note:** The `generate-java-models.ps1` script is an experimental tool for generating Java models from JSON Schema using jsonschema2pojo. Currently, Java models are manually maintained to ensure high quality and proper annotations. The script is provided for reference but is not part of the standard workflow.

@@ -6,12 +6,12 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
 /**
- * Daten zum Verfahren.
+ * Daten zum Verfahren.<br/>
+/// <u><b>Procedural data:</b></u> Data regarding the proceeding.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Verfahrensdaten {
@@ -64,4 +64,5 @@ public class Verfahrensdaten {
     public void setBeteiligungen(@Nullable List<Beteiligung> beteiligungen) {
         this.beteiligungen = beteiligungen;
     }
+
 }

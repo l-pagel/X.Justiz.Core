@@ -7,7 +7,8 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 
 /**
- * Repräsentiert einen Beteiligten im Verfahren.
+ * Repräsentiert einen Beteiligten im Verfahren.<br/>
+/// <u><b>Participant:</b></u> Represents a participant in the proceeding.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Beteiligter {
@@ -27,4 +28,5 @@ public class Beteiligter {
     public void setAuswahl(AuswahlBeteiligter auswahl) {
         this.auswahl = auswahl;
     }
+
 }

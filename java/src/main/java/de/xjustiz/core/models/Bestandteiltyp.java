@@ -8,11 +8,11 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Das Geschlecht einer Person.<br/>
-/// <u><b>Gender:</b></u> The gender of a person.
+ * Der Bestandteiltyp definiert die Art eines Dokumentbestandteils (z. B. Original, Signaturdatei).<br/>
+/// <u><b>Component type:</b></u> The component type defines the type of a document component (e.g., original, signature file).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Geschlecht {
+public class Bestandteiltyp {
 
     @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
@@ -30,7 +30,7 @@ public class Geschlecht {
     @JsonProperty("CodeForXml")
     private String codeForXml;
 
-    public Geschlecht() {
+    public Bestandteiltyp() {
     }
 
     public String getListVersionId() {

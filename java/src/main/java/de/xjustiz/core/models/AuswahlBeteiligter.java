@@ -8,41 +8,43 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Auswahlstruktur für einen Beteiligten.
+ * Auswahlstruktur für einen Beteiligten (natürliche Person oder Organisation).<br/>
+/// <u><b>Participant selection:</b></u> Selection structure for a participant (natural person or organization).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AuswahlBeteiligter {
 
     @XmlElement(name = "natuerlichePerson", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "natuerlichePerson", namespace = "http://www.xjustiz.de")
-    @JsonProperty("NatuerlichePerson")
+    @JsonProperty("NP")
     @Nullable
-    private NatuerlichePerson natuerlichePerson;
+    private NatuerlichePerson nP;
 
     @XmlElement(name = "organisation", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "organisation", namespace = "http://www.xjustiz.de")
-    @JsonProperty("Organisation")
+    @JsonProperty("Org")
     @Nullable
-    private Organisation organisation;
+    private Organisation org;
 
     public AuswahlBeteiligter() {
     }
 
     @Nullable
-    public NatuerlichePerson getNatuerlichePerson() {
-        return natuerlichePerson;
+    public NatuerlichePerson getNP() {
+        return nP;
     }
 
-    public void setNatuerlichePerson(@Nullable NatuerlichePerson natuerlichePerson) {
-        this.natuerlichePerson = natuerlichePerson;
+    public void setNP(@Nullable NatuerlichePerson nP) {
+        this.nP = nP;
     }
 
     @Nullable
-    public Organisation getOrganisation() {
-        return organisation;
+    public Organisation getOrg() {
+        return org;
     }
 
-    public void setOrganisation(@Nullable Organisation organisation) {
-        this.organisation = organisation;
+    public void setOrg(@Nullable Organisation org) {
+        this.org = org;
     }
+
 }

@@ -7,10 +7,16 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 
 /**
- * Repräsentiert eine Beteiligung am Verfahren.
+ * Verknüpft eine Rolle mit einem Beteiligten.<br/>
+/// <u><b>Participation:</b></u> Associates a role with a participant.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Beteiligung {
+
+    @XmlElement(name = "rolle", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "rolle", namespace = "http://www.xjustiz.de")
+    @JsonProperty("Rolle")
+    private Rolle rolle;
 
     @XmlElement(name = "beteiligter", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligter", namespace = "http://www.xjustiz.de")
@@ -20,6 +26,14 @@ public class Beteiligung {
     public Beteiligung() {
     }
 
+    public Rolle getRolle() {
+        return rolle;
+    }
+
+    public void setRolle(Rolle rolle) {
+        this.rolle = rolle;
+    }
+
     public Beteiligter getBeteiligter() {
         return beteiligter;
     }
@@ -27,4 +41,5 @@ public class Beteiligung {
     public void setBeteiligter(Beteiligter beteiligter) {
         this.beteiligter = beteiligter;
     }
+
 }

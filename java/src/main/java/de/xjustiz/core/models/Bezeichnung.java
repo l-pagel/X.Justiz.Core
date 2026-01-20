@@ -8,26 +8,28 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Bezeichnung einer Organisation.
+ * Bezeichnung einer Organisation.<br/>
+/// <u><b>Designation:</b></u> Designation of an organization.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bezeichnung {
 
-    @XmlElement(name = "kurzname", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "kurzname", namespace = "http://www.xjustiz.de")
-    @JsonProperty("Kurzname")
+    @XmlElement(name = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
+    @JsonProperty("Aktuell")
     @Nullable
-    private String kurzname;
+    private String aktuell;
 
     public Bezeichnung() {
     }
 
     @Nullable
-    public String getKurzname() {
-        return kurzname;
+    public String getAktuell() {
+        return aktuell;
     }
 
-    public void setKurzname(@Nullable String kurzname) {
-        this.kurzname = kurzname;
+    public void setAktuell(@Nullable String aktuell) {
+        this.aktuell = aktuell;
     }
+
 }

@@ -4,75 +4,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
+import java.time.OffsetDateTime;
 import org.jetbrains.annotations.Nullable;
 
-import java.time.OffsetDateTime;
-import java.util.List;
-
 /**
- * Der Kopf der Nachricht.
- * <p>
- * <b>Message Header:</b> The header of the message.
- * </p>
+ * Der Kopf der Nachricht.<br/>
+/// <u><b>Message header:</b></u> The header of the message.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Nachrichtenkopf {
 
-    /**
-     * Verwendete X.Justiz-Version für diese Nachricht.
-     */
-    @XmlAttribute(name = "xjustizVersion")
-    @JacksonXmlProperty(isAttribute = true, localName = "xjustizVersion")
+    @XmlElement(name = "xjustizVersion", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "xjustizVersion", namespace = "http://www.xjustiz.de")
     @JsonProperty("Version")
-    private String version = "3.5.1";
+    private String version;
 
-    /**
-     * Aktenzeichen des Absenders.
-     */
-    @XmlElement(name = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
-    @JsonProperty("AktenzeichenAbsender")
-    @Nullable
-    private List<String> aktenzeichenAbsender;
-
-    /**
-     * Aktenzeichen des Empfängers.
-     */
-    @XmlElement(name = "aktenzeichen.empfaenger", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "aktenzeichen.empfaenger", namespace = "http://www.xjustiz.de")
-    @JsonProperty("AktenzeichenEmpfaenger")
-    @Nullable
-    private List<String> aktenzeichenEmpfaenger;
-
-    /**
-     * Der Erstellungszeitpunkt der XJustiz-Nachricht.
-     */
     @XmlElement(name = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JsonProperty("Erstellungszeitpunkt")
     private OffsetDateTime erstellungszeitpunkt;
 
-    /**
-     * Auswahlstruktur für den Absender.
-     */
     @XmlElement(name = "auswahl_absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_absender", namespace = "http://www.xjustiz.de")
     @JsonProperty("Absender")
     private AuswahlAdresse absender;
 
-    /**
-     * Auswahlstruktur für den Empfänger.
-     */
     @XmlElement(name = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JsonProperty("Empfaenger")
     private AuswahlAdresse empfaenger;
 
-    /**
-     * Eindeutige Identifikation der Nachricht.
-     */
     @XmlElement(name = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JsonProperty("EigeneNachrichtenId")
@@ -88,24 +50,6 @@ public class Nachrichtenkopf {
 
     public void setVersion(String version) {
         this.version = version;
-    }
-
-    @Nullable
-    public List<String> getAktenzeichenAbsender() {
-        return aktenzeichenAbsender;
-    }
-
-    public void setAktenzeichenAbsender(@Nullable List<String> aktenzeichenAbsender) {
-        this.aktenzeichenAbsender = aktenzeichenAbsender;
-    }
-
-    @Nullable
-    public List<String> getAktenzeichenEmpfaenger() {
-        return aktenzeichenEmpfaenger;
-    }
-
-    public void setAktenzeichenEmpfaenger(@Nullable List<String> aktenzeichenEmpfaenger) {
-        this.aktenzeichenEmpfaenger = aktenzeichenEmpfaenger;
     }
 
     public OffsetDateTime getErstellungszeitpunkt() {
@@ -140,4 +84,5 @@ public class Nachrichtenkopf {
     public void setEigeneNachrichtenId(@Nullable String eigeneNachrichtenId) {
         this.eigeneNachrichtenId = eigeneNachrichtenId;
     }
+
 }

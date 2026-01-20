@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Auswahlstruktur für eine Instanzbehörde.
+ * Auswahlstruktur für eine Instanzbehörde.<br/>
+/// <u><b>Instance authority selection:</b></u> Selection structure for an instance authority.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AuswahlInstanzbehoerde {
@@ -30,4 +31,5 @@ public class AuswahlInstanzbehoerde {
     public void setGericht(@Nullable Gericht gericht) {
         this.gericht = gericht;
     }
+
 }

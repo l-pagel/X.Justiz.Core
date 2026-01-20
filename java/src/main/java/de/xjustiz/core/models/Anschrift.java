@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Eine Anschrift.
+ * Repräsentiert eine Anschrift.<br/>
+/// <u><b>Address:</b></u> Represents an address.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Anschrift {
@@ -90,4 +91,5 @@ public class Anschrift {
     public void setStaat(@Nullable Staat staat) {
         this.staat = staat;
     }
+
 }

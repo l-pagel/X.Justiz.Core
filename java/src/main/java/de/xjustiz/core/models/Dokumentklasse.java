@@ -8,11 +8,11 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Das Geschlecht einer Person.<br/>
-/// <u><b>Gender:</b></u> The gender of a person.
+ * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).<br/>
+/// <u><b>Document class:</b></u> The document class defines the type of a document (e.g., statement of claim, judgment).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Geschlecht {
+public class Dokumentklasse {
 
     @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
@@ -30,7 +30,7 @@ public class Geschlecht {
     @JsonProperty("CodeForXml")
     private String codeForXml;
 
-    public Geschlecht() {
+    public Dokumentklasse() {
     }
 
     public String getListVersionId() {

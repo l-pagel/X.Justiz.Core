@@ -8,38 +8,36 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Repräsentiert ein Gericht als Code.
+ * Repräsentiert ein Gericht als Code.<br/>
+/// <u><b>Court:</b></u> Represents a court as a code.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Gericht {
 
-    @XmlElement(name = "listVersionId", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "listVersionId", namespace = "http://www.xjustiz.de")
+    @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
     @JsonProperty("ListVersionId")
-    @Nullable
     private String listVersionId;
 
-    @XmlElement(name = "listUri", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "listUri", namespace = "http://www.xjustiz.de")
+    @XmlElement(name = "listURI", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "listURI", namespace = "http://www.xjustiz.de")
     @JsonProperty("ListUri")
     @Nullable
     private String listUri;
 
     @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("code")
-    @Nullable
-    private Integer code;
+    @JsonProperty("CodeForXml")
+    private String codeForXml;
 
     public Gericht() {
     }
 
-    @Nullable
     public String getListVersionId() {
         return listVersionId;
     }
 
-    public void setListVersionId(@Nullable String listVersionId) {
+    public void setListVersionId(String listVersionId) {
         this.listVersionId = listVersionId;
     }
 
@@ -52,12 +50,12 @@ public class Gericht {
         this.listUri = listUri;
     }
 
-    @Nullable
-    public Integer getCode() {
-        return code;
+    public String getCodeForXml() {
+        return codeForXml;
     }
 
-    public void setCode(@Nullable Integer code) {
-        this.code = code;
+    public void setCodeForXml(String codeForXml) {
+        this.codeForXml = codeForXml;
     }
+
 }

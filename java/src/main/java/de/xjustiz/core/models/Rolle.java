@@ -8,11 +8,11 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Das Geschlecht einer Person.<br/>
-/// <u><b>Gender:</b></u> The gender of a person.
+ * Der Code für eine Rolle der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>Codeliste "Rollenbezeichnung"</a>.<br/>
+/// <u><b>Role code:</b></u> The code for a role of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.rollenbezeichnung'>code list "RoleName"</a>.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Geschlecht {
+public class Rolle {
 
     @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
@@ -30,7 +30,7 @@ public class Geschlecht {
     @JsonProperty("CodeForXml")
     private String codeForXml;
 
-    public Geschlecht() {
+    public Rolle() {
     }
 
     public String getListVersionId() {

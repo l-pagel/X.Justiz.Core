@@ -8,11 +8,11 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Das Geschlecht einer Person.<br/>
-/// <u><b>Gender:</b></u> The gender of a person.
+ * Die Art der Telekommunikation.<br/>
+/// <u><b>Telecommunication type:</b></u> The type of telecommunication.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Geschlecht {
+public class Telekommunikationsart {
 
     @XmlElement(name = "listVersionID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "listVersionID", namespace = "http://www.xjustiz.de")
@@ -30,7 +30,7 @@ public class Geschlecht {
     @JsonProperty("CodeForXml")
     private String codeForXml;
 
-    public Geschlecht() {
+    public Telekommunikationsart() {
     }
 
     public String getListVersionId() {

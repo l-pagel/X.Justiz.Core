@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Daten zur Instanz.
+ * Daten zur Instanz.<br/>
+/// <u><b>Instance data:</b></u> Data regarding the instance.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Instanzdaten {
@@ -60,4 +61,5 @@ public class Instanzdaten {
     public void setAuswahlInstanzbehoerde(@Nullable AuswahlInstanzbehoerde auswahlInstanzbehoerde) {
         this.auswahlInstanzbehoerde = auswahlInstanzbehoerde;
     }
+
 }

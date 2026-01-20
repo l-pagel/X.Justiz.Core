@@ -8,7 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Auswahlstruktur für Adressen (Absender oder Empfänger).
+ * Auswahlstruktur für Adressen (Absender oder Empfänger).<br/>
+/// <u><b>Address selection:</b></u> Selection structure for addresses (sender or receiver).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AuswahlAdresse {
@@ -37,8 +38,8 @@ public class AuswahlAdresse {
     @Nullable
     private String empfaengerRvTraeger;
 
-    @XmlElement(name = "empfaenger.polizei", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "empfaenger.polizei", namespace = "http://www.xjustiz.de")
+    @XmlElement(name = "empfaenger.polizeibehoerde", namespace = "http://www.xjustiz.de")
+    @JacksonXmlProperty(localName = "empfaenger.polizeibehoerde", namespace = "http://www.xjustiz.de")
     @JsonProperty("EmpfaengerPolizei")
     @Nullable
     private String empfaengerPolizei;
@@ -90,4 +91,5 @@ public class AuswahlAdresse {
     public void setEmpfaengerPolizei(@Nullable String empfaengerPolizei) {
         this.empfaengerPolizei = empfaengerPolizei;
     }
+
 }
