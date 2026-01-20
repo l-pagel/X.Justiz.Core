@@ -10,24 +10,40 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Daten zum Verfahren.<br/>
-/// <u><b>Procedural data:</b></u> Data regarding the proceeding.
+ * Daten zum Verfahren.
+ * <p>
+ *  <u><b>Procedural data:</b></u> Data regarding the proceeding.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Verfahrensdaten {
 
+    /**
+     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
+     * <p>
+     *  <u><b>Proceeding number:</b></u> The proceeding number is a unique identifier that is intended to apply to the proceeding across all stations and can be transmitted alongside the file reference. It can be used, for example, in a specialized procedure for the unique identification of the proceeding.
+     */
     @XmlElement(name = "verfahrensnummer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "verfahrensnummer", namespace = "http://www.xjustiz.de")
     @JsonProperty("Verfahrensnummer")
     @Nullable
     private String verfahrensnummer;
 
+    /**
+     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
+     * <p>
+     *  <u><b>Instance data:</b></u> The instance data contains information about the stations that a process has passed through. This can be a court, a public prosecutor's office, a judicial authority, but also another authority.
+     */
     @XmlElement(name = "instanzdaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "instanzdaten", namespace = "http://www.xjustiz.de")
     @JsonProperty("Instanzdaten")
     @Nullable
     private Instanzdaten instanzdaten;
 
+    /**
+     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
+     * <p>
+     *  <u><b>Participations:</b></u> For each participation, there is exactly one participant. This participant can have multiple roles.
+     */
     @XmlElement(name = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
@@ -35,32 +51,65 @@ public class Verfahrensdaten {
     @Nullable
     private List<Beteiligung> beteiligungen;
 
+    /**
+     * Default constructor.
+     */
     public Verfahrensdaten() {
     }
 
+    /**
+     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
+     *
+     * @return the verfahrensnummer
+     */
     @Nullable
     public String getVerfahrensnummer() {
         return verfahrensnummer;
     }
 
+    /**
+     * Sets the verfahrensnummer.
+     *
+     * @param verfahrensnummer the verfahrensnummer to set
+     */
     public void setVerfahrensnummer(@Nullable String verfahrensnummer) {
         this.verfahrensnummer = verfahrensnummer;
     }
 
+    /**
+     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
+     *
+     * @return the instanzdaten
+     */
     @Nullable
     public Instanzdaten getInstanzdaten() {
         return instanzdaten;
     }
 
+    /**
+     * Sets the instanzdaten.
+     *
+     * @param instanzdaten the instanzdaten to set
+     */
     public void setInstanzdaten(@Nullable Instanzdaten instanzdaten) {
         this.instanzdaten = instanzdaten;
     }
 
+    /**
+     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
+     *
+     * @return the beteiligungen
+     */
     @Nullable
     public List<Beteiligung> getBeteiligungen() {
         return beteiligungen;
     }
 
+    /**
+     * Sets the beteiligungen.
+     *
+     * @param beteiligungen the beteiligungen to set
+     */
     public void setBeteiligungen(@Nullable List<Beteiligung> beteiligungen) {
         this.beteiligungen = beteiligungen;
     }

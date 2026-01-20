@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Sync Java models from .NET models.
-This script reads C# model classes and generates corresponding Java classes.
+This script reads C# model classes and generates corresponding Java classes
+with full Javadoc documentation including links and formatting.
 """
 
 import os
@@ -9,7 +10,7 @@ import re
 import sys
 from pathlib import Path
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, List, Tuple
 
 # Paths relative to repo root
 DOTNET_MODELS_PATH = "dotnet/src/xjustiz.core-dotnet/Models/Entities"
@@ -35,6 +36,59 @@ TYPE_MAPPINGS = {
     "Object": "Object",
 }
 
+
+def convert_csharp_doc_to_javadoc(doc: str) -> str:
+    """
+    Convert C# XML documentation to Javadoc format.
+    """
+    if not doc:
+        return ""
+    
+    result = doc.strip()
+    
+    # Convert <see cref="Type.Member"/> or <see cref="Type.Member"></see> to {@link Type#member}
+    def convert_see_cref(match):
+        cref = match.group(1)
+        if "." in cref:
+            parts = cref.split(".")
+            class_name = parts[0]
+            member = parts[1]
+            # Convert to camelCase for Java
+            member_java = member[0].lower() + member[1:] if member else ""
+            return f"{{@link {class_name}#{member_java}}}"
+        else:
+            return f"{{@link {cref}}}"
+    
+    # Handle all variations of <see cref="...">
+    result = re.sub(r'<see\s+cref="([^"]+)"\s*/>', convert_see_cref, result)  # <see cref="X"/>
+    result = re.sub(r'<see\s+cref="([^"]+)"\s*>\s*</see>', convert_see_cref, result)  # <see cref="X"></see>
+    result = re.sub(r'<see\s+cref="([^"]+)"\s*>[^<]*</see>', convert_see_cref, result)  # <see cref="X">text</see>
+    
+    # Convert <see href="url">text</see> or <see href="url"/> to <a href="url">text</a>
+    def convert_see_href(match):
+        url = match.group(1)
+        text = match.group(2) if match.group(2) else url
+        return f'<a href="{url}">{text}</a>'
+    
+    result = re.sub(r'<see\s+href="([^"]+)"(?:\s*/>|>([^<]*)</see>)', convert_see_href, result)
+    
+    # Convert <c>code</c> to {@code code}
+    result = re.sub(r'<c>([^<]+)</c>', r'{@code \1}', result)
+    
+    # Convert <paramref name="x"/> to {@code x}
+    result = re.sub(r'<paramref\s+name="([^"]+)"(?:\s*/)?>', r'{@code \1}', result)
+    
+    # Convert <br/> to proper line break for Javadoc
+    result = result.replace("<br/>", "\n * <p>\n * ")
+    result = result.replace("<br />", "\n * <p>\n * ")
+    
+    # Clean up any stray XML tags that might have been missed
+    result = re.sub(r'</see>', '', result)
+    result = re.sub(r'<see[^>]*>', '', result)
+    
+    return result
+
+
 @dataclass
 class PropertyInfo:
     name: str
@@ -44,6 +98,8 @@ class PropertyInfo:
     xml_element_name: Optional[str] = None
     json_property_name: Optional[str] = None
     description: Optional[str] = None
+    is_attribute: bool = False
+
 
 @dataclass
 class ClassInfo:
@@ -65,8 +121,47 @@ def find_repo_root() -> Path:
     raise RuntimeError("Could not find repository root")
 
 
+def extract_all_summaries(content: str) -> dict:
+    """
+    Extract all XML summary comments and their positions.
+    Returns a dict mapping end position to the summary text.
+    """
+    summaries = {}
+    pattern = r'///\s*<summary>\s*\n((?:\s*///[^\n]*\n)*?)\s*///\s*</summary>'
+    
+    for match in re.finditer(pattern, content):
+        summary_content = match.group(1)
+        # Remove /// prefix and join lines
+        lines = []
+        for line in summary_content.split('\n'):
+            line = line.strip()
+            if line.startswith('///'):
+                line = line[3:].strip()
+            if line:
+                lines.append(line)
+        
+        summary_text = ' '.join(lines)
+        summaries[match.end()] = summary_text
+    
+    return summaries
+
+
+def find_closest_summary(summaries: dict, target_pos: int, max_distance: int = 300) -> Optional[str]:
+    """Find the summary that is closest to (and before) target_pos."""
+    closest_pos = None
+    closest_distance = float('inf')
+    
+    for end_pos, summary in summaries.items():
+        distance = target_pos - end_pos
+        if 0 < distance < closest_distance and distance < max_distance:
+            closest_distance = distance
+            closest_pos = end_pos
+    
+    return summaries.get(closest_pos)
+
+
 def parse_csharp_file(file_path: Path) -> Optional[ClassInfo]:
-    """Parse a C# file and extract class information."""
+    """Parse a C# file and extract class information with documentation."""
     content = file_path.read_text(encoding="utf-8")
     
     # Skip non-entity files
@@ -84,10 +179,19 @@ def parse_csharp_file(file_path: Path) -> Optional[ClassInfo]:
     if class_name.endswith("Core") or class_name in ["SchemeConstants", "XJustizAvailabilityAttribute"]:
         return None
     
+    # Extract all summaries first
+    summaries = extract_all_summaries(content)
+    
+    # Find class description
+    class_description = find_closest_summary(summaries, class_match.start(), max_distance=500)
+    if class_description:
+        class_description = convert_csharp_doc_to_javadoc(class_description)
+    
     class_info = ClassInfo(
         name=class_name,
         namespace="http://www.xjustiz.de",
-        properties=[]
+        properties=[],
+        description=class_description
     )
     
     # Check for XmlRoot attribute
@@ -96,36 +200,39 @@ def parse_csharp_file(file_path: Path) -> Optional[ClassInfo]:
         class_info.is_root = True
         class_info.xml_root_name = root_match.group(1)
     
-    # Extract class description from XML comments
-    class_desc_match = re.search(r'///\s*<summary>\s*\n\s*///\s*(.+?)\s*\n\s*///\s*</summary>\s*\n[^/]*public\s+(?:partial\s+)?class', content, re.DOTALL)
-    if class_desc_match:
-        class_info.description = class_desc_match.group(1).strip()
-    
-    # Extract properties
+    # Find all property declarations with their annotations
     prop_pattern = re.compile(
-        r'(?:///\s*<summary>\s*\n\s*///\s*(.+?)\s*\n\s*///\s*</summary>\s*\n)?'
-        r'(?:\s*\[[^\]]+\]\s*\n)*'
-        r'\s*\[Xml(?:Element|Attribute)\s*\(\s*"([^"]+)"[^\]]*\)\]'
-        r'(?:\s*\[[^\]]+\]\s*\n)*'
-        r'\s*public\s+(?:required\s+)?(\w+(?:<\w+>)?)\??\s+(\w+)\s*\{',
+        r'\[Xml(Element|Attribute)\s*\(\s*"([^"]+)"[^\]]*\)\]'
+        r'[\s\S]*?'
+        r'public\s+(?:required\s+)?(\w+(?:<\w+>)?(?:\[\])?)\??\s+(\w+)\s*\{[^}]*\}',
         re.MULTILINE
     )
     
     for match in prop_pattern.finditer(content):
-        description = match.group(1)
+        xml_type = match.group(1)  # Element or Attribute
         xml_name = match.group(2)
         type_name = match.group(3)
         prop_name = match.group(4)
         
-        # Determine if nullable
-        is_nullable = "?" in content[match.start():match.end()] or type_name.startswith("List<")
+        # Find the summary for this property
+        prop_description = find_closest_summary(summaries, match.start(), max_distance=400)
+        if prop_description:
+            prop_description = convert_csharp_doc_to_javadoc(prop_description)
         
-        # Check if it's a list
-        is_list = type_name.startswith("List<")
-        if is_list:
+        # Check for nullable
+        prop_context = content[match.start():match.end()]
+        is_nullable = "?" in prop_context
+        
+        # Check if it's a list/array
+        is_list = False
+        if type_name.startswith("List<"):
+            is_list = True
             inner_match = re.match(r"List<(\w+)>", type_name)
             if inner_match:
                 type_name = inner_match.group(1)
+        elif type_name.endswith("[]"):
+            is_list = True
+            type_name = type_name[:-2]
         
         # Map type
         java_type = TYPE_MAPPINGS.get(type_name, type_name)
@@ -133,26 +240,34 @@ def parse_csharp_file(file_path: Path) -> Optional[ClassInfo]:
         prop_info = PropertyInfo(
             name=prop_name,
             type_name=java_type,
-            is_nullable=is_nullable,
+            is_nullable=is_nullable or is_list,  # Lists are always nullable in our model
             is_list=is_list,
             xml_element_name=xml_name,
             json_property_name=prop_name,
-            description=description
+            description=prop_description,
+            is_attribute=(xml_type == "Attribute")
         )
         class_info.properties.append(prop_info)
     
     return class_info if class_info.properties else None
 
 
+def to_camel_case(name: str) -> str:
+    """Convert PascalCase to camelCase."""
+    if not name:
+        return name
+    return name[0].lower() + name[1:]
+
+
 def generate_java_class(class_info: ClassInfo) -> str:
-    """Generate Java class code from class info."""
+    """Generate Java class code from class info with full Javadoc."""
     lines = []
     
     # Package declaration
     lines.append("package de.xjustiz.core.models;")
     lines.append("")
     
-    # Imports
+    # Collect imports
     imports = set([
         "com.fasterxml.jackson.annotation.JsonProperty",
         "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty",
@@ -168,6 +283,7 @@ def generate_java_class(class_info: ClassInfo) -> str:
     has_nullable = any(p.is_nullable for p in class_info.properties)
     has_list = any(p.is_list for p in class_info.properties)
     has_datetime = any(p.type_name == "OffsetDateTime" for p in class_info.properties)
+    has_attribute = any(p.is_attribute for p in class_info.properties)
     
     if has_nullable:
         imports.add("org.jetbrains.annotations.Nullable")
@@ -176,6 +292,8 @@ def generate_java_class(class_info: ClassInfo) -> str:
         imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper")
     if has_datetime:
         imports.add("java.time.OffsetDateTime")
+    if has_attribute:
+        imports.add("jakarta.xml.bind.annotation.XmlAttribute")
     
     for imp in sorted(imports):
         lines.append(f"import {imp};")
@@ -184,7 +302,12 @@ def generate_java_class(class_info: ClassInfo) -> str:
     # Class Javadoc
     if class_info.description:
         lines.append("/**")
-        lines.append(f" * {class_info.description}")
+        for line in class_info.description.split("\n"):
+            line = line.strip()
+            if line.startswith("*"):
+                lines.append(f" {line}")
+            else:
+                lines.append(f" * {line}")
         lines.append(" */")
     
     # Class annotations
@@ -196,14 +319,29 @@ def generate_java_class(class_info: ClassInfo) -> str:
     lines.append(f"public class {class_info.name} {{")
     lines.append("")
     
-    # Fields
+    # Fields with documentation
     for prop in class_info.properties:
         xml_name = prop.xml_element_name or to_camel_case(prop.name)
         json_name = prop.json_property_name or prop.name
         
+        # Property Javadoc
+        if prop.description:
+            lines.append("    /**")
+            for line in prop.description.split("\n"):
+                line = line.strip()
+                if line.startswith("*"):
+                    lines.append(f"     {line}")
+                else:
+                    lines.append(f"     * {line}")
+            lines.append("     */")
+        
         # Field annotations
-        lines.append(f'    @XmlElement(name = "{xml_name}", namespace = "{class_info.namespace}")')
-        lines.append(f'    @JacksonXmlProperty(localName = "{xml_name}", namespace = "{class_info.namespace}")')
+        if prop.is_attribute:
+            lines.append(f'    @XmlAttribute(name = "{xml_name}")')
+            lines.append(f'    @JacksonXmlProperty(isAttribute = true, localName = "{xml_name}")')
+        else:
+            lines.append(f'    @XmlElement(name = "{xml_name}", namespace = "{class_info.namespace}")')
+            lines.append(f'    @JacksonXmlProperty(localName = "{xml_name}", namespace = "{class_info.namespace}")')
         
         if prop.is_list:
             lines.append("    @JacksonXmlElementWrapper(useWrapping = false)")
@@ -218,17 +356,37 @@ def generate_java_class(class_info: ClassInfo) -> str:
         lines.append(f"    private {type_str} {to_camel_case(prop.name)};")
         lines.append("")
     
-    # Constructor
+    # Default constructor
+    lines.append("    /**")
+    lines.append("     * Default constructor.")
+    lines.append("     */")
     lines.append(f"    public {class_info.name}() {{")
     lines.append("    }")
     lines.append("")
     
-    # Getters and setters
+    # Getters and setters with Javadoc
     for prop in class_info.properties:
         field_name = to_camel_case(prop.name)
         type_str = f"List<{prop.type_name}>" if prop.is_list else prop.type_name
         
-        # Getter
+        # Extract first sentence for getter summary
+        first_line = ""
+        if prop.description:
+            first_line = prop.description.split("\n")[0].strip()
+            # Remove leading "* " if present
+            if first_line.startswith("* "):
+                first_line = first_line[2:]
+        
+        # Getter Javadoc
+        lines.append("    /**")
+        if first_line:
+            lines.append(f"     * {first_line}")
+        else:
+            lines.append(f"     * Gets the {field_name}.")
+        lines.append("     *")
+        lines.append(f"     * @return the {field_name}")
+        lines.append("     */")
+        
         if prop.is_nullable:
             lines.append("    @Nullable")
         lines.append(f"    public {type_str} get{prop.name}() {{")
@@ -236,7 +394,13 @@ def generate_java_class(class_info: ClassInfo) -> str:
         lines.append("    }")
         lines.append("")
         
-        # Setter
+        # Setter Javadoc
+        lines.append("    /**")
+        lines.append(f"     * Sets the {field_name}.")
+        lines.append("     *")
+        lines.append(f"     * @param {field_name} the {field_name} to set")
+        lines.append("     */")
+        
         nullable_param = "@Nullable " if prop.is_nullable else ""
         lines.append(f"    public void set{prop.name}({nullable_param}{type_str} {field_name}) {{")
         lines.append(f"        this.{field_name} = {field_name};")
@@ -247,13 +411,6 @@ def generate_java_class(class_info: ClassInfo) -> str:
     lines.append("")
     
     return "\n".join(lines)
-
-
-def to_camel_case(name: str) -> str:
-    """Convert PascalCase to camelCase."""
-    if not name:
-        return name
-    return name[0].lower() + name[1:]
 
 
 def sync_models(repo_root: Path) -> dict:
@@ -271,13 +428,8 @@ def sync_models(repo_root: Path) -> dict:
         "created": [],
         "updated": [],
         "unchanged": [],
-        "removed": [],
         "errors": []
     }
-    
-    # Get existing Java files
-    existing_java_files = {f.stem: f for f in java_path.glob("*.java")}
-    generated_classes = set()
     
     # Process .NET files
     for cs_file in dotnet_path.glob("*.cs"):
@@ -286,7 +438,6 @@ def sync_models(repo_root: Path) -> dict:
             if not class_info:
                 continue
             
-            generated_classes.add(class_info.name)
             java_file = java_path / f"{class_info.name}.java"
             java_code = generate_java_class(class_info)
             
@@ -302,10 +453,8 @@ def sync_models(repo_root: Path) -> dict:
                 results["created"].append(class_info.name)
                 
         except Exception as e:
-            results["errors"].append(f"{cs_file.name}: {str(e)}")
-    
-    # Note: We don't remove files that don't have a .NET counterpart
-    # as some Java files (like serializers) are hand-written
+            import traceback
+            results["errors"].append(f"{cs_file.name}: {str(e)}\n{traceback.format_exc()}")
     
     return results
 

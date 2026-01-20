@@ -8,26 +8,45 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Bezeichnung einer Organisation.<br/>
-/// <u><b>Designation:</b></u> Designation of an organization.
+ * Bezeichnung einer Organisation.
+ * <p>
+ *  <u><b>Designation:</b></u> Designation of an organization.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bezeichnung {
 
+    /**
+     * Aktueller offizieller Name der RA-Kanzlei.
+     * <p>
+     *  <u><b>Current designation:</b></u> Current official name of the law firm.
+     */
     @XmlElement(name = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
     @JsonProperty("Aktuell")
     @Nullable
     private String aktuell;
 
+    /**
+     * Default constructor.
+     */
     public Bezeichnung() {
     }
 
+    /**
+     * Aktueller offizieller Name der RA-Kanzlei.
+     *
+     * @return the aktuell
+     */
     @Nullable
     public String getAktuell() {
         return aktuell;
     }
 
+    /**
+     * Sets the aktuell.
+     *
+     * @param aktuell the aktuell to set
+     */
     public void setAktuell(@Nullable String aktuell) {
         this.aktuell = aktuell;
     }
