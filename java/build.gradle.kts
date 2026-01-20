@@ -5,7 +5,8 @@ plugins {
 }
 
 group = "io.github.l-pagel"
-version = System.getenv("PROJECT_VERSION") ?: "0.1.0-SNAPSHOT"
+// Prioritize PROJECT_VERSION env var, otherwise keep existing (e.g. from -Pversion), otherwise default
+version = System.getenv("PROJECT_VERSION") ?: if (version == "unspecified") "0.0.1-SNAPSHOT" else version
 
 java {
     toolchain {
@@ -50,6 +51,9 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             from(components["java"])
+            
+            groupId = "io.github.l-pagel"
+            artifactId = "xjustiz-core"
             
             pom {
                 name = "X.Justiz Core"
