@@ -22,7 +22,7 @@ public class ApiProcessManager : IAsyncDisposable
     private const int HealthCheckIntervalMs = 1000;
 
     private readonly string repoRoot;
-    private readonly List<string> startupErrors = new();
+    private readonly List<string> startupErrors = [];
     private Process? dotNetProcess;
     private Process? javaProcess;
 
@@ -48,7 +48,7 @@ public class ApiProcessManager : IAsyncDisposable
         var result = new EnvironmentValidationResult
         {
             // Check .NET SDK,
-            DotNetSdkInstalled = IsDotNetSdkInstalled()
+            DotNetSdkInstalled = IsDotNetSdkInstalled(),
         };
 
         if (!result.DotNetSdkInstalled)

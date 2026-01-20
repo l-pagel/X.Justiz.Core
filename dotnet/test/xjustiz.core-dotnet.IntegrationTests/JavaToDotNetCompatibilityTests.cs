@@ -69,10 +69,10 @@ public class JavaToDotNetCompatibilityTests(IntegrationTestFixture fixture)
 
         // Act - Send from Java API, receive at .NET API
         var xmlFromJava = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, original);
-        var messageFromJava = fixture.Client.ParseXmlResponse(xmlFromJava);
+        var messageFromJava = CrossApiClient.ParseXmlResponse(xmlFromJava);
 
         var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, messageFromJava);
-        var finalMessage = fixture.Client.ParseXmlResponse(xmlFromDotNet);
+        var finalMessage = CrossApiClient.ParseXmlResponse(xmlFromDotNet);
 
         // Assert
         var isEqual = fixture.Comparer.AreEqual(original, finalMessage, out var differences);
@@ -166,7 +166,7 @@ public class JavaToDotNetCompatibilityTests(IntegrationTestFixture fixture)
         _ = await fixture.Client.SendXmlFileAsync(IntegrationTestFixture.DotNetApiUrl, xmlFromJava);
 
         // Parse and verify the round-tripped data
-        var messageFromJava = fixture.Client.ParseXmlResponse(xmlFromJava);
+        var messageFromJava = CrossApiClient.ParseXmlResponse(xmlFromJava);
 
         // Assert
         var isEqual = fixture.Comparer.AreEqual(original, messageFromJava, out var differences);

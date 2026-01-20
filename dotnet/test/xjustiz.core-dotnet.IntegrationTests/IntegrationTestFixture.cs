@@ -10,15 +10,16 @@ using xjustiz.core_dotnet.IntegrationTests.Infrastructure;
 /// Shared fixture that manages API lifecycle across all integration tests.
 /// Both APIs are started once and shared across all tests in the collection.
 /// </summary>
-public class IntegrationTestFixture : IAsyncLifetime, IDisposable
+public sealed class IntegrationTestFixture : IAsyncLifetime, IDisposable
 {
     private readonly ApiProcessManager apiManager;
+    private bool disposed;
 
     public IntegrationTestFixture()
     {
         apiManager = new ApiProcessManager();
         Client = new CrossApiClient();
-        Comparer = new MessageComparer("SchemaLocation"); // Schema location may have minor formatting differences
+        Comparer = new MessageComparer("SchemaLocation");
     }
 
     /// <summary>
@@ -109,13 +110,26 @@ public class IntegrationTestFixture : IAsyncLifetime, IDisposable
         Console.WriteLine("Shutting down Integration Test APIs...");
         Console.WriteLine("=".PadRight(60, '='));
 
-        Client.Dispose();
         await apiManager.DisposeAsync();
     }
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    private void Dispose(bool disposing)
+    {
+        if (!disposed)
+        {
+            if (disposing)
+            {
+                Client.Dispose();
+            }
+
+            disposed = true;
+        }
     }
 }
 

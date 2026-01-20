@@ -28,9 +28,24 @@ public static class TestDataProvider
     /// </summary>
     public enum Dataset
     {
+        /// <summary>
+        /// Arbeitsrecht
+        /// </summary>
         Arbeitsrecht,
+
+        /// <summary>
+        /// Erbrecht
+        /// </summary>
         Erbrecht,
+
+        /// <summary>
+        /// Fluggastrecht
+        /// </summary>
         Fluggastrecht,
+
+        /// <summary>
+        /// Mietrecht
+        /// </summary>
         Mietrecht,
     }
 

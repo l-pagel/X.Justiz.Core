@@ -82,13 +82,13 @@ public class FullRoundTripCompatibilityTests(IntegrationTestFixture fixture)
 
         // Act - Java → .NET → Java (XML)
         var xmlFromJava1 = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, original);
-        var afterJava1 = fixture.Client.ParseXmlResponse(xmlFromJava1);
+        var afterJava1 = CrossApiClient.ParseXmlResponse(xmlFromJava1);
 
         var xmlFromDotNet = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, afterJava1);
-        var afterDotNet = fixture.Client.ParseXmlResponse(xmlFromDotNet);
+        var afterDotNet = CrossApiClient.ParseXmlResponse(xmlFromDotNet);
 
         var xmlFromJava2 = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, afterDotNet);
-        var finalMessage = fixture.Client.ParseXmlResponse(xmlFromJava2);
+        var finalMessage = CrossApiClient.ParseXmlResponse(xmlFromJava2);
 
         // Assert
         var isEqual = fixture.Comparer.AreEqual(original, finalMessage, out var differences);
@@ -108,13 +108,13 @@ public class FullRoundTripCompatibilityTests(IntegrationTestFixture fixture)
 
         // Act - .NET → Java → .NET (XML)
         var xmlFromDotNet1 = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, original);
-        var afterDotNet1 = fixture.Client.ParseXmlResponse(xmlFromDotNet1);
+        var afterDotNet1 = CrossApiClient.ParseXmlResponse(xmlFromDotNet1);
 
         var xmlFromJava = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, afterDotNet1);
-        var afterJava = fixture.Client.ParseXmlResponse(xmlFromJava);
+        var afterJava = CrossApiClient.ParseXmlResponse(xmlFromJava);
 
         var xmlFromDotNet2 = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.DotNetApiUrl, afterJava);
-        var finalMessage = fixture.Client.ParseXmlResponse(xmlFromDotNet2);
+        var finalMessage = CrossApiClient.ParseXmlResponse(xmlFromDotNet2);
 
         // Assert
         var isEqual = fixture.Comparer.AreEqual(original, finalMessage, out var differences);
@@ -139,7 +139,7 @@ public class FullRoundTripCompatibilityTests(IntegrationTestFixture fixture)
 
         // Step 2: Convert to XML via Java API
         var xmlFromJava = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, afterDotNetJson);
-        var afterJavaXml = fixture.Client.ParseXmlResponse(xmlFromJava);
+        var afterJavaXml = CrossApiClient.ParseXmlResponse(xmlFromJava);
 
         // Step 3: Convert back to JSON via .NET API
         var jsonFromDotNet2 = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.DotNetApiUrl, afterJavaXml);
@@ -164,7 +164,7 @@ public class FullRoundTripCompatibilityTests(IntegrationTestFixture fixture)
         // Act
         // Step 1: Send as XML to Java, receive
         var xmlFromJava = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, original);
-        var afterJavaXml = fixture.Client.ParseXmlResponse(xmlFromJava);
+        var afterJavaXml = CrossApiClient.ParseXmlResponse(xmlFromJava);
 
         // Step 2: Convert to JSON via .NET API
         var jsonFromDotNet = await fixture.Client.SendJsonHttpAsync(IntegrationTestFixture.DotNetApiUrl, afterJavaXml);
@@ -172,7 +172,7 @@ public class FullRoundTripCompatibilityTests(IntegrationTestFixture fixture)
 
         // Step 3: Convert back to XML via Java API
         var xmlFromJava2 = await fixture.Client.SendXmlHttpAsync(IntegrationTestFixture.JavaApiUrl, afterDotNetJson);
-        var finalMessage = fixture.Client.ParseXmlResponse(xmlFromJava2);
+        var finalMessage = CrossApiClient.ParseXmlResponse(xmlFromJava2);
 
         // Assert
         var isEqual = fixture.Comparer.AreEqual(original, finalMessage, out var differences);

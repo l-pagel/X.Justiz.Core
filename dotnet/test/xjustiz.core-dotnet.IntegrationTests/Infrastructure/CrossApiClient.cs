@@ -18,8 +18,8 @@ using xjustiz.core_dotnet.Models.Helpers;
 /// </summary>
 public class FlexibleDateTimeConverter : JsonConverter<DateTime>
 {
-    private static readonly string[] SupportedFormats = new[]
-    {
+    private static readonly string[] SupportedFormats =
+    [
         "yyyy-MM-ddTHH:mm:ss.fffffffZ",
         "yyyy-MM-ddTHH:mm:ss.ffffffZ",
         "yyyy-MM-ddTHH:mm:ss.fffffZ",
@@ -38,9 +38,8 @@ public class FlexibleDateTimeConverter : JsonConverter<DateTime>
         "yyyy-MM-ddTHH:mm:sszzz",
         "yyyy-MM-ddTHH:mm:ss",
         "yyyy-MM-dd",
-        // Jackson's default format with [+-]HH:MM offset
         "yyyy-MM-ddTHH:mm:ss.SSSSSSSXXX",
-    };
+    ];
 
     public override DateTime Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
@@ -120,10 +119,11 @@ public class FlexibleDateTimeConverter : JsonConverter<DateTime>
 /// <summary>
 /// HTTP client for sending data between Java and .NET APIs.
 /// </summary>
-public class CrossApiClient : IDisposable
+public sealed class CrossApiClient : IDisposable
 {
     private readonly HttpClient httpClient;
     private readonly JsonSerializerOptions jsonOptions;
+    private bool disposed;
 
     public CrossApiClient()
     {
@@ -132,10 +132,10 @@ public class CrossApiClient : IDisposable
         {
             PropertyNameCaseInsensitive = true,
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            PropertyNamingPolicy = null, // Keep PascalCase
+            PropertyNamingPolicy = null,
             Converters =
             {
-                new FlexibleDateTimeConverter(), // Handle different DateTime formats from Java
+                new FlexibleDateTimeConverter(),
             },
         };
     }
@@ -180,7 +180,7 @@ public class CrossApiClient : IDisposable
     /// <summary>
     /// Parses XML response into a message object.
     /// </summary>
-    public UebermittlungSchriftgutobjekteNachricht ParseXmlResponse(string xml)
+    public static UebermittlungSchriftgutobjekteNachricht ParseXmlResponse(string xml)
     {
         var serializer = new XmlSerializer(typeof(UebermittlungSchriftgutobjekteNachricht));
         using var reader = new StringReader(xml);
@@ -273,7 +273,20 @@ public class CrossApiClient : IDisposable
 
     public void Dispose()
     {
-        httpClient.Dispose();
+        Dispose(true);
         GC.SuppressFinalize(this);
+    }
+
+    private void Dispose(bool disposing)
+    {
+        if (!disposed)
+        {
+            if (disposing)
+            {
+                httpClient.Dispose();
+            }
+
+            disposed = true;
+        }
     }
 }
