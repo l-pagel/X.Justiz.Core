@@ -1,6 +1,8 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -12,15 +14,17 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Eine Organisation (juristische Person).
  * <p>
- *  <u><b>Organization:</b></u> An organization (legal entity).
+ * <u><b>Organization:</b></u> An organization (legal entity).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Organisation {
 
     /**
      * Bezeichnung / Name der Organisation.
      * <p>
-     *  <u><b>Designation:</b></u> Name of the organization.
+     * <u><b>Designation:</b></u> Name of the organization.
      */
     @XmlElement(name = "bezeichnung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bezeichnung", namespace = "http://www.xjustiz.de")
@@ -31,7 +35,7 @@ public class Organisation {
     /**
      * Auch Postfach-Anschriften fallen hierunter.
      * <p>
-     *  <u><b>Address:</b></u> Post office box addresses also fall under this.
+     * <u><b>Address:</b></u> Post office box addresses also fall under this.
      */
     @XmlElement(name = "anschrift", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "anschrift", namespace = "http://www.xjustiz.de")
@@ -42,19 +46,21 @@ public class Organisation {
     /**
      * Informationen zur Telekommunikation (Telefon, Email, etc.).
      * <p>
-     *  <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
+     * <u><b>Telecommunication:</b></u> Information on telecommunication (phone,
+     * email, etc.).
      */
     @XmlElement(name = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Telekommunikation")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Telekommunikation> telekommunikation;
 
     /**
      * Hier steht die allgemeine Bankverbindung.
      * <p>
-     *  <u><b>Bank details:</b></u> Here is the general bank connection.
+     * <u><b>Bank details:</b></u> Here is the general bank connection.
      */
     @XmlElement(name = "bankverbindung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bankverbindung", namespace = "http://www.xjustiz.de")

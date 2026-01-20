@@ -1,6 +1,7 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -9,17 +10,21 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).
+ * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift,
+ * Urteil).
  * <p>
- *  <u><b>Document class:</b></u> The document class defines the type of a document (e.g., statement of claim, judgment).
+ * <u><b>Document class:</b></u> The document class defines the type of a
+ * document (e.g., statement of claim, judgment).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Dokumentklasse {
 
     /**
-     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).
+     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift,
+     * Urteil).
      * <p>
-     *  <u><b>Document class:</b></u> The document class defines the type of a document (e.g., statement of claim, judgment).
+     * <u><b>Document class:</b></u> The document class defines the type of a
+     * document (e.g., statement of claim, judgment).
      */
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
@@ -27,9 +32,11 @@ public class Dokumentklasse {
     private String listVersionId;
 
     /**
-     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).
+     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift,
+     * Urteil).
      * <p>
-     *  <u><b>Document class:</b></u> The document class defines the type of a document (e.g., statement of claim, judgment).
+     * <u><b>Document class:</b></u> The document class defines the type of a
+     * document (e.g., statement of claim, judgment).
      */
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
@@ -40,11 +47,12 @@ public class Dokumentklasse {
     /**
      * Hilfseigenschaft für die XML-Serialisierung.
      * <p>
-     *  <u><b>Code for XML:</b></u> Helper property for XML serialization.
+     * <u><b>Code for XML:</b></u> Helper property for XML serialization.
      */
-    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("CodeForXml")
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("code")
+    @JsonAlias("Code")
     @Nullable
     private String codeForXml;
 
@@ -55,7 +63,8 @@ public class Dokumentklasse {
     }
 
     /**
-     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).
+     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift,
+     * Urteil).
      *
      * @return the listVersionId
      */
@@ -73,7 +82,8 @@ public class Dokumentklasse {
     }
 
     /**
-     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift, Urteil).
+     * Die Dokumentklasse definiert den Typ eines Dokuments (z. B. Klageschrift,
+     * Urteil).
      *
      * @return the listUri
      */

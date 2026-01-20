@@ -15,6 +15,8 @@
     <File Path=".editorconfig" />
   </Folder>
   <Project Path="../example-api/example-api.csproj" />
+  <Project Path="../test/xjustiz.core-dotnet.CrossSdkTests/xjustiz.core-dotnet.CrossSdkTests.csproj" />
+  <Project Path="../test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj" />
   <Project Path="xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj" Id="79950a8c-4dbd-44e0-9590-56456ce0520a" />
   <Project Path="xjustiz.core-dotnet.XsdGenerator/xjustiz.core-dotnet.XsdGenerator.csproj" />
   <Project Path="xjustiz.core-dotnet/xjustiz.core-dotnet.csproj" />

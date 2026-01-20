@@ -1,5 +1,7 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -14,15 +16,17 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Der Kopf der Nachricht.
  * <p>
- *  <u><b>Message header:</b></u> The header of the message.
+ * <u><b>Message header:</b></u> The header of the message.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Nachrichtenkopf {
 
     /**
      * Verwendete X.Justiz-Version für diese Nachricht.
      * <p>
-     *  <u><b>XJustiz version:</b></u> Used X.Justiz version for this message.
+     * <u><b>XJustiz version:</b></u> Used X.Justiz version for this message.
      */
     @XmlAttribute(name = "xjustizVersion")
     @JacksonXmlProperty(isAttribute = true, localName = "xjustizVersion")
@@ -30,9 +34,11 @@ public class Nachrichtenkopf {
     private String version;
 
     /**
-     * Aktenzeichen des Absenders. Der Wert wird aus {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
+     * Aktenzeichen des Absenders. Der Wert wird aus
+     * {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
      * <p>
-     *  <u><b>Sender file reference:</b></u> File reference of the sender. The value of {@link Nachrichtenkopf#aktenzeichenAbsender} will be taken.
+     * <u><b>Sender file reference:</b></u> File reference of the sender. The value
+     * of {@link Nachrichtenkopf#aktenzeichenAbsender} will be taken.
      */
     @XmlElement(name = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
@@ -44,7 +50,7 @@ public class Nachrichtenkopf {
     /**
      * Aktenzeichen des Empfängers.
      * <p>
-     *  <u><b>Recipient file reference:</b></u> File reference of the recipient.
+     * <u><b>Recipient file reference:</b></u> File reference of the recipient.
      */
     @XmlElement(name = "aktenzeichen.empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "aktenzeichen.empfaenger", namespace = "http://www.xjustiz.de")
@@ -56,7 +62,8 @@ public class Nachrichtenkopf {
     /**
      * Hier ist der Erstellungszeitpunkt der XJustiz-Nachricht einzutragen.
      * <p>
-     *  <u><b>Creation time:</b></u> The creation time of the XJustiz message must be entered here.
+     * <u><b>Creation time:</b></u> The creation time of the XJustiz message must be
+     * entered here.
      */
     @XmlElement(name = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
@@ -66,7 +73,7 @@ public class Nachrichtenkopf {
     /**
      * Auswahlstruktur für Adressen (Absender oder Empfänger).
      * <p>
-     *  <u><b>Sender:</b></u> Selection structure for addresses (sender or receiver).
+     * <u><b>Sender:</b></u> Selection structure for addresses (sender or receiver).
      */
     @XmlElement(name = "auswahl_absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_absender", namespace = "http://www.xjustiz.de")
@@ -76,7 +83,8 @@ public class Nachrichtenkopf {
     /**
      * Auswahlstruktur für Adressen (Absender oder Empfänger).
      * <p>
-     *  <u><b>Recipient:</b></u> Selection structure for addresses (sender or receiver).
+     * <u><b>Recipient:</b></u> Selection structure for addresses (sender or
+     * receiver).
      */
     @XmlElement(name = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
@@ -84,9 +92,12 @@ public class Nachrichtenkopf {
     private AuswahlAdresse empfaenger;
 
     /**
-     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
+     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang
+     * erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
      * <p>
-     *  <u><b>Own message ID:</b></u> A unique identification of the message created during this transmission process must be specified here to enable later references.
+     * <u><b>Own message ID:</b></u> A unique identification of the message created
+     * during this transmission process must be specified here to enable later
+     * references.
      */
     @XmlElement(name = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
@@ -119,7 +130,8 @@ public class Nachrichtenkopf {
     }
 
     /**
-     * Aktenzeichen des Absenders. Der Wert wird aus {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
+     * Aktenzeichen des Absenders. Der Wert wird aus
+     * {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
      *
      * @return the aktenzeichenAbsender
      */
@@ -211,7 +223,8 @@ public class Nachrichtenkopf {
     }
 
     /**
-     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
+     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang
+     * erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
      *
      * @return the eigeneNachrichtenId
      */

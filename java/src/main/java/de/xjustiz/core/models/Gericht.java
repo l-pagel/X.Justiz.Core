@@ -1,6 +1,7 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -11,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Repräsentiert ein Gericht als Code.
  * <p>
- *  <u><b>Court:</b></u> Represents a court as a code.
+ * <u><b>Court:</b></u> Represents a court as a code.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Gericht {
@@ -19,7 +20,7 @@ public class Gericht {
     /**
      * Repräsentiert ein Gericht als Code.
      * <p>
-     *  <u><b>Court:</b></u> Represents a court as a code.
+     * <u><b>Court:</b></u> Represents a court as a code.
      */
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
@@ -29,7 +30,7 @@ public class Gericht {
     /**
      * Repräsentiert ein Gericht als Code.
      * <p>
-     *  <u><b>Court:</b></u> Represents a court as a code.
+     * <u><b>Court:</b></u> Represents a court as a code.
      */
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
@@ -40,11 +41,12 @@ public class Gericht {
     /**
      * Hilfseigenschaft für die XML-Serialisierung.
      * <p>
-     *  <u><b>Code for XML:</b></u> Helper property for XML serialization.
+     * <u><b>Code for XML:</b></u> Helper property for XML serialization.
      */
-    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("CodeForXml")
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("code") // Maps to .NET 'code' property
+    @JsonAlias("Code")
     @Nullable
     private String codeForXml;
 

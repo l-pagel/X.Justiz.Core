@@ -1,6 +1,8 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -12,15 +14,19 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Container für anwendungsspezifische Erweiterungen.
  * <p>
- *  <u><b>Application-specific extension:</b></u> Container for application-specific extensions.
+ * <u><b>Application-specific extension:</b></u> Container for
+ * application-specific extensions.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AnwendungsspezifischeErweiterung {
 
     /**
      * Das Identifikationskennzeichen der anwendungsspezifischen Erweiterung.
      * <p>
-     *  <u><b>Identifier:</b></u> The identification tag of the application-specific extension.
+     * <u><b>Identifier:</b></u> The identification tag of the application-specific
+     * extension.
      */
     @XmlElement(name = "kennung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "kennung", namespace = "http://www.xjustiz.de")
@@ -30,7 +36,7 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Der Name der anwendungsspezifischen Erweiterung.
      * <p>
-     *  <u><b>Name:</b></u> The name of the application-specific extension.
+     * <u><b>Name:</b></u> The name of the application-specific extension.
      */
     @XmlElement(name = "name", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "name", namespace = "http://www.xjustiz.de")
@@ -40,7 +46,8 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Die textuelle Erläuterung zu einer anwendungsspezifischen Erweiterung.
      * <p>
-     *  <u><b>Description:</b></u> The textual explanation of an application-specific extension.
+     * <u><b>Description:</b></u> The textual explanation of an application-specific
+     * extension.
      */
     @XmlElement(name = "beschreibung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beschreibung", namespace = "http://www.xjustiz.de")
@@ -51,24 +58,27 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.
      * <p>
-     *  <u><b>Field groups:</b></u> A field group assigned to the application-specific extension.
+     * <u><b>Field groups:</b></u> A field group assigned to the
+     * application-specific extension.
      */
     @XmlElement(name = "feldgruppe", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "feldgruppe", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Feldgruppen")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Feldgruppe> feldgruppen;
 
     /**
      * Ein Feld, das der anwendungsspezifischen Erweiterung zugeordnet ist.
      * <p>
-     *  <u><b>Fields:</b></u> A field assigned to the application-specific extension.
+     * <u><b>Fields:</b></u> A field assigned to the application-specific extension.
      */
     @XmlElement(name = "feld", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "feld", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Felder")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Feld> felder;
 

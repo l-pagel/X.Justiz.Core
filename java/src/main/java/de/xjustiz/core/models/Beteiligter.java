@@ -1,5 +1,6 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -9,15 +10,17 @@ import jakarta.xml.bind.annotation.XmlElement;
 /**
  * Repräsentiert einen Beteiligten im Verfahren.
  * <p>
- *  <u><b>Participant:</b></u> Represents a participant in the proceeding.
+ * <u><b>Participant:</b></u> Represents a participant in the proceeding.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Beteiligter {
 
     /**
      * Auswahlstruktur für einen Beteiligten (natürliche Person oder Organisation).
      * <p>
-     *  <u><b>Participant selection:</b></u> Selection structure for a participant (natural person or organization).
+     * <u><b>Participant selection:</b></u> Selection structure for a participant
+     * (natural person or organization).
      */
     @XmlElement(name = "auswahl_beteiligter", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_beteiligter", namespace = "http://www.xjustiz.de")

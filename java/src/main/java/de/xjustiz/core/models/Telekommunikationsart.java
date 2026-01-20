@@ -1,6 +1,7 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -11,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Die Art der Telekommunikation.
  * <p>
- *  <u><b>Telecommunication type:</b></u> The type of telecommunication.
+ * <u><b>Telecommunication type:</b></u> The type of telecommunication.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Telekommunikationsart {
@@ -19,7 +20,7 @@ public class Telekommunikationsart {
     /**
      * Die Art der Telekommunikation.
      * <p>
-     *  <u><b>Telecommunication type:</b></u> The type of telecommunication.
+     * <u><b>Telecommunication type:</b></u> The type of telecommunication.
      */
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
@@ -29,7 +30,7 @@ public class Telekommunikationsart {
     /**
      * Die Art der Telekommunikation.
      * <p>
-     *  <u><b>Telecommunication type:</b></u> The type of telecommunication.
+     * <u><b>Telecommunication type:</b></u> The type of telecommunication.
      */
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
@@ -40,11 +41,12 @@ public class Telekommunikationsart {
     /**
      * Hilfseigenschaft für die XML-Serialisierung.
      * <p>
-     *  <u><b>Code for XML:</b></u> Helper property for XML serialization.
+     * <u><b>Code for XML:</b></u> Helper property for XML serialization.
      */
-    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("CodeForXml")
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("code")
+    @JsonAlias("Code")
     private String codeForXml;
 
     /**

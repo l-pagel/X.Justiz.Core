@@ -1,6 +1,7 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -9,17 +10,25 @@ import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.
+ * Der Code für einen Aktentyp der <a href=
+ * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste
+ * "Aktentyp"</a>.
  * <p>
- *  <u><b>Case type code:</b></u> The code for a case type of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code list "Aktentyp"</a>.
+ * <u><b>Case type code:</b></u> The code for a case type of the <a href=
+ * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code
+ * list "Aktentyp"</a>.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Aktentyp {
 
     /**
-     * Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.
+     * Der Code für einen Aktentyp der <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste
+     * "Aktentyp"</a>.
      * <p>
-     *  <u><b>Case type code:</b></u> The code for a case type of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code list "Aktentyp"</a>.
+     * <u><b>Case type code:</b></u> The code for a case type of the <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code
+     * list "Aktentyp"</a>.
      */
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
@@ -27,9 +36,13 @@ public class Aktentyp {
     private String listVersionId;
 
     /**
-     * Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.
+     * Der Code für einen Aktentyp der <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste
+     * "Aktentyp"</a>.
      * <p>
-     *  <u><b>Case type code:</b></u> The code for a case type of the <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code list "Aktentyp"</a>.
+     * <u><b>Case type code:</b></u> The code for a case type of the <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>code
+     * list "Aktentyp"</a>.
      */
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
@@ -40,11 +53,12 @@ public class Aktentyp {
     /**
      * Hilfseigenschaft für die XML-Serialisierung.
      * <p>
-     *  <u><b>Code for XML:</b></u> Helper property for XML serialization.
+     * <u><b>Code for XML:</b></u> Helper property for XML serialization.
      */
-    @XmlElement(name = "code", namespace = "http://www.xjustiz.de")
-    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustiz.de")
-    @JsonProperty("CodeForXml")
+    @XmlElement(name = "code", namespace = "http://www.xjustizcore.de")
+    @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
+    @JsonProperty("code")
+    @JsonAlias("Code")
     @Nullable
     private String codeForXml;
 
@@ -55,7 +69,9 @@ public class Aktentyp {
     }
 
     /**
-     * Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.
+     * Der Code für einen Aktentyp der <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste
+     * "Aktentyp"</a>.
      *
      * @return the listVersionId
      */
@@ -73,7 +89,9 @@ public class Aktentyp {
     }
 
     /**
-     * Der Code für einen Aktentyp der <a href='https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste "Aktentyp"</a>.
+     * Der Code für einen Aktentyp der <a href=
+     * 'https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.aktentyp'>Codeliste
+     * "Aktentyp"</a>.
      *
      * @return the listUri
      */

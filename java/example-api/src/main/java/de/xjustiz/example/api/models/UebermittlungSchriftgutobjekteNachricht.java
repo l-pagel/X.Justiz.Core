@@ -1,5 +1,8 @@
 package de.xjustiz.example.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -12,32 +15,37 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 import org.jetbrains.annotations.Nullable;
 
 @XmlRootElement(name = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005", namespace = "http://www.xjustiz.de")
 @JacksonXmlRootElement(localName = "nachricht.gds.uebermittlungSchriftgutobjekte.0005005", namespace = "http://www.xjustiz.de")
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class UebermittlungSchriftgutobjekteNachricht {
 
     @XmlElement(name = "nachrichtenkopf", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "nachrichtenkopf", namespace = "http://www.xjustiz.de")
-    @JsonProperty("nachrichtenkopf")
+    @JsonProperty("Kopf") // Match .NET property name for JSON interoperability
     private Nachrichtenkopf kopf;
 
     @XmlElement(name = "grunddaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "grunddaten", namespace = "http://www.xjustiz.de")
-    @JsonProperty("grunddaten")
+    @JsonProperty("Grunddaten") // Match .NET property name for JSON interoperability
     @Nullable
     private Grunddaten grunddaten;
 
     @XmlElement(name = "schriftgutobjekte", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "schriftgutobjekte", namespace = "http://www.xjustiz.de")
-    @JsonProperty("schriftgutobjekte")
+    @JsonProperty("Schriftgutobjekte") // Match .NET property name for JSON interoperability
     @Nullable
     private Schriftgutobjekte schriftgutobjekte;
 
     @XmlAttribute(name = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")
     @JacksonXmlProperty(isAttribute = true, localName = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")
+    @JsonProperty("schemaLocation")
+    @com.fasterxml.jackson.annotation.JsonAlias("SchemaLocation")
     private String schemaLocation = "http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd";
 
     public Nachrichtenkopf getKopf() {
@@ -74,6 +82,8 @@ public class UebermittlungSchriftgutobjekteNachricht {
         this.schemaLocation = schemaLocation;
     }
 
+    @JsonIgnore
+    @XmlTransient
     public CompatibilityResult getCompatibility() {
         return CompatibilityChecker.check(this);
     }

@@ -1,6 +1,8 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -12,15 +14,17 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Eine natürliche Person.
  * <p>
- *  <u><b>Natural person:</b></u> A natural person.
+ * <u><b>Natural person:</b></u> A natural person.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class NatuerlichePerson {
 
     /**
      * Der volle Name einer natürlichen Person.
      * <p>
-     *  <u><b>Full name:</b></u> The full name of a natural person.
+     * <u><b>Full name:</b></u> The full name of a natural person.
      */
     @XmlElement(name = "vollerName", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "vollerName", namespace = "http://www.xjustiz.de")
@@ -28,9 +32,11 @@ public class NatuerlichePerson {
     private VollerName vollerName;
 
     /**
-     * Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.
+     * Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben
+     * werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.
      * <p>
-     *  <u><b>Gender:</b></u> A biological or grammatical gender can be specified here. This allows specialized systems to generate a salutation.
+     * <u><b>Gender:</b></u> A biological or grammatical gender can be specified
+     * here. This allows specialized systems to generate a salutation.
      */
     @XmlElement(name = "geschlecht", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "geschlecht", namespace = "http://www.xjustiz.de")
@@ -40,7 +46,7 @@ public class NatuerlichePerson {
     /**
      * Auch Postfach-Anschriften fallen hierunter.
      * <p>
-     *  <u><b>Address:</b></u> Post office box addresses also fall under this.
+     * <u><b>Address:</b></u> Post office box addresses also fall under this.
      */
     @XmlElement(name = "anschrift", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "anschrift", namespace = "http://www.xjustiz.de")
@@ -51,19 +57,21 @@ public class NatuerlichePerson {
     /**
      * Informationen zur Telekommunikation (Telefon, Email, etc.).
      * <p>
-     *  <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
+     * <u><b>Telecommunication:</b></u> Information on telecommunication (phone,
+     * email, etc.).
      */
     @XmlElement(name = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Telekommunikation")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Telekommunikation> telekommunikation;
 
     /**
      * Hier steht die allgemeine Bankverbindung.
      * <p>
-     *  <u><b>Bank details:</b></u> Here is the general bank connection.
+     * <u><b>Bank details:</b></u> Here is the general bank connection.
      */
     @XmlElement(name = "bankverbindung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bankverbindung", namespace = "http://www.xjustiz.de")
@@ -96,7 +104,8 @@ public class NatuerlichePerson {
     }
 
     /**
-     * Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.
+     * Hier kann ein biologisches oder grammatikalisches Geschlecht angegeben
+     * werden. So wird den Fachsystemen ermöglicht eine Anrede zu generieren.
      *
      * @return the geschlecht
      */

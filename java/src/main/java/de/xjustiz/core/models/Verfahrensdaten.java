@@ -1,5 +1,7 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -12,15 +14,23 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Daten zum Verfahren.
  * <p>
- *  <u><b>Procedural data:</b></u> Data regarding the proceeding.
+ * <u><b>Procedural data:</b></u> Data regarding the proceeding.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Verfahrensdaten {
 
     /**
-     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
+     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren
+     * über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt
+     * werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen
+     * Identifikation des Verfahrens verwendet werden.
      * <p>
-     *  <u><b>Proceeding number:</b></u> The proceeding number is a unique identifier that is intended to apply to the proceeding across all stations and can be transmitted alongside the file reference. It can be used, for example, in a specialized procedure for the unique identification of the proceeding.
+     * <u><b>Proceeding number:</b></u> The proceeding number is a unique identifier
+     * that is intended to apply to the proceeding across all stations and can be
+     * transmitted alongside the file reference. It can be used, for example, in a
+     * specialized procedure for the unique identification of the proceeding.
      */
     @XmlElement(name = "verfahrensnummer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "verfahrensnummer", namespace = "http://www.xjustiz.de")
@@ -29,9 +39,13 @@ public class Verfahrensdaten {
     private String verfahrensnummer;
 
     /**
-     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
+     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang
+     * durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine
+     * Justizbehörde, aber auch eine andere Behörde sein.
      * <p>
-     *  <u><b>Instance data:</b></u> The instance data contains information about the stations that a process has passed through. This can be a court, a public prosecutor's office, a judicial authority, but also another authority.
+     * <u><b>Instance data:</b></u> The instance data contains information about the
+     * stations that a process has passed through. This can be a court, a public
+     * prosecutor's office, a judicial authority, but also another authority.
      */
     @XmlElement(name = "instanzdaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "instanzdaten", namespace = "http://www.xjustiz.de")
@@ -40,14 +54,17 @@ public class Verfahrensdaten {
     private Instanzdaten instanzdaten;
 
     /**
-     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
+     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere
+     * Rollen haben.
      * <p>
-     *  <u><b>Participations:</b></u> For each participation, there is exactly one participant. This participant can have multiple roles.
+     * <u><b>Participations:</b></u> For each participation, there is exactly one
+     * participant. This participant can have multiple roles.
      */
     @XmlElement(name = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Beteiligungen")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Beteiligung> beteiligungen;
 
@@ -58,7 +75,10 @@ public class Verfahrensdaten {
     }
 
     /**
-     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
+     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren
+     * über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt
+     * werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen
+     * Identifikation des Verfahrens verwendet werden.
      *
      * @return the verfahrensnummer
      */
@@ -77,7 +97,9 @@ public class Verfahrensdaten {
     }
 
     /**
-     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
+     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang
+     * durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine
+     * Justizbehörde, aber auch eine andere Behörde sein.
      *
      * @return the instanzdaten
      */
@@ -96,7 +118,8 @@ public class Verfahrensdaten {
     }
 
     /**
-     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
+     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere
+     * Rollen haben.
      *
      * @return the beteiligungen
      */

@@ -1,6 +1,8 @@
 package de.xjustiz.example.api.controller;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.xjustiz.example.api.models.CompatibilityResult;
 import de.xjustiz.example.api.models.DatasetType;
@@ -33,7 +35,11 @@ public class XJustizCoreController {
 
     public XJustizCoreController() {
         jsonMapper.findAndRegisterModules();
+        jsonMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
         xmlMapper.findAndRegisterModules();
+        xmlMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        xmlMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
     }
 
     @PostMapping(value = "/json", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
