@@ -1,7 +1,8 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -11,10 +12,11 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Informationen zur Telekommunikation (Telefon, Email, etc.).
  * <p>
- * <u><b>Telecommunication:</b></u> Information on telecommunication (phone,
- * email, etc.).
+ * <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Telekommunikation {
 
     /**
@@ -29,62 +31,22 @@ public class Telekommunikation {
     private Telekommunikationsart telekommunikationsart;
 
     /**
-     * Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder
-     * dergleichen mitgeteilt.
+     * Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder dergleichen mitgeteilt.
      * <p>
-     * <u><b>Connection:</b></u> The telephone number, fax number, e-mail address,
-     * Safe-ID, or similar is communicated here.
+     * <u><b>Connection:</b></u> The telephone number, fax number, e-mail address, Safe-ID, or similar is communicated here.
      */
     @XmlElement(name = "verbindung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "verbindung", namespace = "http://www.xjustiz.de")
-    @JsonProperty("verbindung")
-    @JsonAlias("Verbindung")
+    @JsonProperty("Verbindung")
     @Nullable
     private String verbindung;
 
-    /**
-     * Default constructor.
-     */
-    public Telekommunikation() {
-    }
+    public Telekommunikation() {}
 
-    /**
-     * Art der Telekommunikation als CodeValue.
-     *
-     * @return the telekommunikationsart
-     */
-    @Nullable
-    public Telekommunikationsart getTelekommunikationsart() {
-        return telekommunikationsart;
-    }
+    public Telekommunikationsart getTelekommunikationsart() { return telekommunikationsart; }
+    public void setTelekommunikationsart(Telekommunikationsart telekommunikationsart) { this.telekommunikationsart = telekommunikationsart; }
 
-    /**
-     * Sets the telekommunikationsart.
-     *
-     * @param telekommunikationsart the telekommunikationsart to set
-     */
-    public void setTelekommunikationsart(@Nullable Telekommunikationsart telekommunikationsart) {
-        this.telekommunikationsart = telekommunikationsart;
-    }
-
-    /**
-     * Hier wird die Telefonnummer, Faxnummer, E-Mail-Adresse, Safe-ID oder
-     * dergleichen mitgeteilt.
-     *
-     * @return the verbindung
-     */
-    @Nullable
-    public String getVerbindung() {
-        return verbindung;
-    }
-
-    /**
-     * Sets the verbindung.
-     *
-     * @param verbindung the verbindung to set
-     */
-    public void setVerbindung(@Nullable String verbindung) {
-        this.verbindung = verbindung;
-    }
+    public String getVerbindung() { return verbindung; }
+    public void setVerbindung(String verbindung) { this.verbindung = verbindung; }
 
 }

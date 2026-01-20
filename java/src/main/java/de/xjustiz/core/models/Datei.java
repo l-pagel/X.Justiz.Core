@@ -1,16 +1,13 @@
 package de.xjustiz.core.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import org.jetbrains.annotations.Nullable;
-import java.util.List;
 
 /**
  * Repräsentiert eine Datei.
@@ -23,10 +20,9 @@ import java.util.List;
 public class Datei {
 
     /**
-     * Der Dateiname soll nach der Syntax "Dokumentname_UUID.Dateiformat" gebildet
-     * werden. Die Länge von Dateinamen darf nur 90 Zeichen inkl. der Dateiendungen
-     * betragen. In Dateinamen dürfen nur noch alle Buchstaben des deutschen
-     * Alphabetes einschließlich der Umlaute Ä, ä, Ö, ö, Ü, ü and ß genutzt werden.
+     * Der Dateiname soll nach der Syntax "Dokumentname_UUID.Dateiformat" gebildet werden. Die Länge von Dateinamen darf nur 90 Zeichen inkl. der Dateiendungen betragen. In Dateinamen dürfen nur noch alle Buchstaben des deutschen Alphabetes einschließlich der Umlaute Ä, ä, Ö, ö, Ü, ü und ß genutzt werden. Zudem dürfen alle Ziffern und die Zeichen "Unterstrich" und "Minus" genutzt werden. Punkte sind nur als Trenner zwischen dem Dateinamen und der Dateinamenserweiterung zulässig. Nur bei konkatenierten Dateinamensendungen, z.B. bei abgesetzten Signaturdateien, dürfen Punkte auch im Dateinamen genutzt werden (z.B. Dokument1.pdf.pkcs7). Soweit eine signierte Datei gemeinsam mit einer zugehörigen Signaturdatei übersandt wird, hat die Signaturdatei exakt denselben Dateinamen wie die signierte Datei zu erhalten, mit Ausnahme des Dateiformats, welches das Format der Signaturdatei wiedergibt (Identität bei UUID und Dokumentname, z.B. Klage_UUID.pdf und Klage_UUID.pdf.pkcs7). Dies gilt nur für die erste Signaturdatei, die zu einer Datei erstellt wird. Jede weitere Signaturdatei muss einen abweichenden Dateinamen erhalten (z.B. Ergänzung einer Ziffer), da andernfalls komplett identische Dateinamen entstehen. Die Länge von Dateinamen von Signaturdateien darf ebenfalls nur 90 Zeichen inkl. der Signaturdateiendungen betragen. Die XJustiz-Nachricht, die einer EGVP-Nachricht beigefügt wird, beschreibt den Inhalt der Nachricht und muss immer den Dateinamen xjustiz_nachricht.xml tragen. Sofern der EGVP-Nachricht weitere XJustiz-Nachrichten, z.B. bei der Weiterleitung von Nachrichten anderer Beteiligter oder als Bestandteil von Akten, beigefügt werden müssen, so muss dem Dateinamen dieser XJustiz-Datensätze eine UUID angestellt werden (xjustiz_nachricht_UUID.xml).
+     * <p>
+     * <u><b>Filename:</b></u> The filename should be formed according to the syntax 'DocumentName_UUID.FileFormat'. The length of filenames must not exceed 90 characters including file extensions. Only letters of the German alphabet including umlauts Ä, ä, Ö, ö, Ü, ü and ß may be used in filenames. In addition, all digits and the characters 'underscore' and 'minus' may be used. Dots are only permitted as separators between the filename and the file extension. Dots may only be used in the filename for concatenated file extensions, e.g., for detached signature files (e.g., Document1.pdf.pkcs7). If a signed file is sent together with an associated signature file, the signature file must have exactly the same filename as the signed file, with the exception of the file format, which reflects the format of the signature file (identity of UUID and document name, e.g., Klage_UUID.pdf and Klage_UUID.pdf.pkcs7). This only applies to the first signature file created for a file. Any further signature file must have a different filename (e.g., addition of a digit), otherwise completely identical filenames will result. The length of filenames of signature files must also not exceed 90 characters including the signature file extensions. The XJustiz message attached to an EGVP message describes the content of the message and must always bear the filename xjustiz_nachricht.xml. If further XJustiz messages must be attached to the EGVP message, e.g., when forwarding messages from other participants or as part of files, a UUID must be prefixed to the filename of these XJustiz data sets (xjustiz_nachricht_UUID.xml).
      */
     @XmlElement(name = "dateiname", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "dateiname", namespace = "http://www.xjustiz.de")
@@ -35,129 +31,21 @@ public class Datei {
     private String dateiname;
 
     /**
-     * Bestandteil des Dokuments.
+     * Ein Dokument kann aus mehreren Dateien bestehen. So kann bspw. in einer Datei der Schriftsatz und in einer weiteren Datei die zugehörige Signatur übermittelt werden. Fachlich bilden beide Dateien gemeinsam das Dokument. Entsprechendes gilt, wenn zu einer eingereichten Originaldatei weitere Dateien erstellt werden (Repräsentate, Versionen, Transfervermerke, Signaturprüfprotokolle). Die Werteliste dient dazu, den Bestandteiltyp für die einzelnen Dateien anzugeben. Dabei darf der Bestandteiltyp "Original" für ein und dasselbe Dokument nur einmal vorkommen.
+     * <p>
+     * <u><b>Components:</b></u> A document can consist of several files. For example, the pleading can be transmitted in one file and the associated signature in another file. Technically, both files together form the document. The same applies if further files are created for a submitted original file (representatives, versions, transfer notes, signature verification logs). The value list serves to specify the component type for the individual files. The component type 'Original' may only occur once for the same document.
      */
     @XmlElement(name = "bestandteil", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bestandteil", namespace = "http://www.xjustiz.de")
     @JsonProperty("Bestandteil")
     private Bestandteiltyp bestandteil;
 
-    /**
-     * Dateiendung.
-     */
-    @XmlElement(name = "dateiendung", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "dateiendung", namespace = "http://www.xjustizcore.de")
-    @JsonProperty("fileExtension")
-    @JsonAlias({ "dateiendung", "Dateiendung" })
-    @Nullable
-    private String dateiendung;
+    public Datei() {}
 
-    /**
-     * Content Type / Mime Type.
-     */
-    @XmlElement(name = "contentType", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "contentType", namespace = "http://www.xjustizcore.de")
-    @JsonProperty("contentType")
-    @JsonAlias("ContentType")
-    @Nullable
-    private String contentType;
+    public String getDateiname() { return dateiname; }
+    public void setDateiname(String dateiname) { this.dateiname = dateiname; }
 
-    /**
-     * Dateigroesse in Bytes.
-     */
-    @XmlElement(name = "groesse", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "groesse", namespace = "http://www.xjustizcore.de")
-    @JsonProperty("size")
-    @JsonAlias({ "groesse", "Groesse", "Size" })
-    @Nullable
-    private Long groesse;
+    public Bestandteiltyp getBestandteil() { return bestandteil; }
+    public void setBestandteil(Bestandteiltyp bestandteil) { this.bestandteil = bestandteil; }
 
-    /**
-     * Hash info.
-     */
-    @XmlElement(name = "hash", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "hash", namespace = "http://www.xjustizcore.de")
-    @JsonProperty("hash")
-    @JsonAlias("Hash")
-    @Nullable
-    private HashInfo hash;
-
-    /**
-     * Artifacts.
-     */
-    @XmlElement(name = "https", type = Artifact.class, namespace = "http://www.xjustizcore.de")
-    @JacksonXmlElementWrapper(localName = "artefaktListe", namespace = "http://www.xjustizcore.de")
-    @JacksonXmlProperty(localName = "https", namespace = "http://www.xjustizcore.de")
-    @JsonProperty("artifacts")
-    @JsonAlias({ "Artifacts", "artefakte" })
-    @Nullable
-    private List<Artifact> artifacts;
-
-    /**
-     * Default constructor.
-     */
-    public Datei() {
-    }
-
-    @Nullable
-    public String getDateiname() {
-        return dateiname;
-    }
-
-    public void setDateiname(@Nullable String dateiname) {
-        this.dateiname = dateiname;
-    }
-
-    public Bestandteiltyp getBestandteil() {
-        return bestandteil;
-    }
-
-    public void setBestandteil(Bestandteiltyp bestandteil) {
-        this.bestandteil = bestandteil;
-    }
-
-    @Nullable
-    public String getDateiendung() {
-        return dateiendung;
-    }
-
-    public void setDateiendung(@Nullable String dateiendung) {
-        this.dateiendung = dateiendung;
-    }
-
-    @Nullable
-    public String getContentType() {
-        return contentType;
-    }
-
-    public void setContentType(@Nullable String contentType) {
-        this.contentType = contentType;
-    }
-
-    @Nullable
-    public Long getGroesse() {
-        return groesse;
-    }
-
-    public void setGroesse(@Nullable Long groesse) {
-        this.groesse = groesse;
-    }
-
-    @Nullable
-    public HashInfo getHash() {
-        return hash;
-    }
-
-    public void setHash(@Nullable HashInfo hash) {
-        this.hash = hash;
-    }
-
-    @Nullable
-    public List<Artifact> getArtifacts() {
-        return artifacts;
-    }
-
-    public void setArtifacts(@Nullable List<Artifact> artifacts) {
-        this.artifacts = artifacts;
-    }
 }

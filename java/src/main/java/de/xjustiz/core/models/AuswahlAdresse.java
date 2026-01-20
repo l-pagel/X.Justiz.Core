@@ -12,8 +12,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Auswahlstruktur für Adressen (Absender oder Empfänger).
  * <p>
- * <u><b>Address selection:</b></u> Selection structure for addresses (sender or
- * receiver).
+ * <u><b>Address selection:</b></u> Selection structure for addresses (sender or receiver).
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -43,17 +42,9 @@ public class AuswahlAdresse {
     private String empfaengerSonstige;
 
     /**
-     * Anschrift oder CodeValue des empfangenden Gerichts. Die Verwendung des Codes
-     * sollte der Anschrift bevorzugt werden. Der CodeValue des Gerichts. Diese
-     * Codeliste enthält Name und Anschrift des Gerichts.Die Werte einer Codeliste
-     * vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details
-     * sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
+     * Anschrift oder CodeValue des empfangenden Gerichts. Die Verwendung des Codes sollte der Anschrift bevorzugt werden. Der CodeValue des Gerichts. Diese Codeliste enthält Name und Anschrift des Gerichts.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
      * <p>
-     * <u><b>Recipient court:</b></u> Address or code of the receiving court. The
-     * use of the code should be preferred over the address. The code of the court.
-     * This code list contains the name and address of the court. The values of a
-     * code list of code type 3 can be viewed in the XRepository. Further details
-     * are described in the chapter 'CodeValue lists of code type 3'.
+     * <u><b>Recipient court:</b></u> Address or code of the receiving court. The use of the code should be preferred over the address. The code of the court. This code list contains the name and address of the court. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
      */
     @XmlElement(name = "empfaenger.gericht", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "empfaenger.gericht", namespace = "http://www.xjustiz.de")
@@ -62,19 +53,9 @@ public class AuswahlAdresse {
     private String empfaengerGericht;
 
     /**
-     * Anschrift oder CodeValue des empfangenden Rentenversicherungsträgers. Die
-     * Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue des
-     * Rentenversicherungsträgers. Diese Codeliste enthält Name und Anschrift des
-     * Rentenversicherungsträgers.Die Werte einer Codeliste vom CodeValue-Typ 3
-     * können im XRepository eingesehen werden. Nähere Details sind im Kapitel
-     * "Codelisten vom CodeValue-Typ 3" beschrieben.
+     * Anschrift oder CodeValue des empfangenden Rentenversicherungsträgers. Die Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue des Rentenversicherungsträgers. Diese Codeliste enthält Name und Anschrift des Rentenversicherungsträgers.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
      * <p>
-     * <u><b>Recipient pension insurance carrier:</b></u> Address or code of the
-     * receiving pension insurance carrier. The use of the code should be preferred
-     * over the address. The code of the pension insurance carrier. This code list
-     * contains the name and address of the pension insurance carrier. The values of
-     * a code list of code type 3 can be viewed in the XRepository. Further details
-     * are described in the chapter 'CodeValue lists of code type 3'.
+     * <u><b>Recipient pension insurance carrier:</b></u> Address or code of the receiving pension insurance carrier. The use of the code should be preferred over the address. The code of the pension insurance carrier. This code list contains the name and address of the pension insurance carrier. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
      */
     @XmlElement(name = "empfaenger.rvTraeger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "empfaenger.rvTraeger", namespace = "http://www.xjustiz.de")
@@ -83,18 +64,9 @@ public class AuswahlAdresse {
     private String empfaengerRvTraeger;
 
     /**
-     * Anschrift oder CodeValue der empfangenden Polizeibehörde. Die Verwendung des
-     * Codes sollte der Anschrift bevorzugt werden.Der CodeValue der Polizeibehörde.
-     * Diese Codeliste enthält Name und Anschrift der Polizeibehörden.Die Werte
-     * einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden.
-     * Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
+     * Anschrift oder CodeValue der empfangenden Polizeibehörde. Die Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue der Polizeibehörde. Diese Codeliste enthält Name und Anschrift der Polizeibehörden.Die Werte einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
      * <p>
-     * <u><b>Recipient police authority:</b></u> Address or code of the receiving
-     * police authority. The use of the code should be preferred over the address.
-     * The code of the police authority. This code list contains the name and
-     * address of the police authorities. The values of a code list of code type 3
-     * can be viewed in the XRepository. Further details are described in the
-     * chapter 'CodeValue lists of code type 3'.
+     * <u><b>Recipient police authority:</b></u> Address or code of the receiving police authority. The use of the code should be preferred over the address. The code of the police authority. This code list contains the name and address of the police authorities. The values of a code list of code type 3 can be viewed in the XRepository. Further details are described in the chapter 'CodeValue lists of code type 3'.
      */
     @XmlElement(name = "empfaenger.polizeibehoerde", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "empfaenger.polizeibehoerde", namespace = "http://www.xjustiz.de")
@@ -102,118 +74,21 @@ public class AuswahlAdresse {
     @Nullable
     private String empfaengerPolizei;
 
-    /**
-     * Default constructor.
-     */
-    public AuswahlAdresse() {
-    }
+    public AuswahlAdresse() {}
 
-    /**
-     * Anschrift oder Beschreibung des Absenders.
-     *
-     * @return the absenderSonstige
-     */
-    @Nullable
-    public String getAbsenderSonstige() {
-        return absenderSonstige;
-    }
+    public String getAbsenderSonstige() { return absenderSonstige; }
+    public void setAbsenderSonstige(String absenderSonstige) { this.absenderSonstige = absenderSonstige; }
 
-    /**
-     * Sets the absenderSonstige.
-     *
-     * @param absenderSonstige the absenderSonstige to set
-     */
-    public void setAbsenderSonstige(@Nullable String absenderSonstige) {
-        this.absenderSonstige = absenderSonstige;
-    }
+    public String getEmpfaengerSonstige() { return empfaengerSonstige; }
+    public void setEmpfaengerSonstige(String empfaengerSonstige) { this.empfaengerSonstige = empfaengerSonstige; }
 
-    /**
-     * Anschrift oder Beschreibung des Empfängers.
-     *
-     * @return the empfaengerSonstige
-     */
-    @Nullable
-    public String getEmpfaengerSonstige() {
-        return empfaengerSonstige;
-    }
+    public String getEmpfaengerGericht() { return empfaengerGericht; }
+    public void setEmpfaengerGericht(String empfaengerGericht) { this.empfaengerGericht = empfaengerGericht; }
 
-    /**
-     * Sets the empfaengerSonstige.
-     *
-     * @param empfaengerSonstige the empfaengerSonstige to set
-     */
-    public void setEmpfaengerSonstige(@Nullable String empfaengerSonstige) {
-        this.empfaengerSonstige = empfaengerSonstige;
-    }
+    public String getEmpfaengerRvTraeger() { return empfaengerRvTraeger; }
+    public void setEmpfaengerRvTraeger(String empfaengerRvTraeger) { this.empfaengerRvTraeger = empfaengerRvTraeger; }
 
-    /**
-     * Anschrift oder CodeValue des empfangenden Gerichts. Die Verwendung des Codes
-     * sollte der Anschrift bevorzugt werden. Der CodeValue des Gerichts. Diese
-     * Codeliste enthält Name und Anschrift des Gerichts.Die Werte einer Codeliste
-     * vom CodeValue-Typ 3 können im XRepository eingesehen werden. Nähere Details
-     * sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
-     *
-     * @return the empfaengerGericht
-     */
-    @Nullable
-    public String getEmpfaengerGericht() {
-        return empfaengerGericht;
-    }
-
-    /**
-     * Sets the empfaengerGericht.
-     *
-     * @param empfaengerGericht the empfaengerGericht to set
-     */
-    public void setEmpfaengerGericht(@Nullable String empfaengerGericht) {
-        this.empfaengerGericht = empfaengerGericht;
-    }
-
-    /**
-     * Anschrift oder CodeValue des empfangenden Rentenversicherungsträgers. Die
-     * Verwendung des Codes sollte der Anschrift bevorzugt werden.Der CodeValue des
-     * Rentenversicherungsträgers. Diese Codeliste enthält Name und Anschrift des
-     * Rentenversicherungsträgers.Die Werte einer Codeliste vom CodeValue-Typ 3
-     * können im XRepository eingesehen werden. Nähere Details sind im Kapitel
-     * "Codelisten vom CodeValue-Typ 3" beschrieben.
-     *
-     * @return the empfaengerRvTraeger
-     */
-    @Nullable
-    public String getEmpfaengerRvTraeger() {
-        return empfaengerRvTraeger;
-    }
-
-    /**
-     * Sets the empfaengerRvTraeger.
-     *
-     * @param empfaengerRvTraeger the empfaengerRvTraeger to set
-     */
-    public void setEmpfaengerRvTraeger(@Nullable String empfaengerRvTraeger) {
-        this.empfaengerRvTraeger = empfaengerRvTraeger;
-    }
-
-    /**
-     * Anschrift oder CodeValue der empfangenden Polizeibehörde. Die Verwendung des
-     * Codes sollte der Anschrift bevorzugt werden.Der CodeValue der Polizeibehörde.
-     * Diese Codeliste enthält Name und Anschrift der Polizeibehörden.Die Werte
-     * einer Codeliste vom CodeValue-Typ 3 können im XRepository eingesehen werden.
-     * Nähere Details sind im Kapitel "Codelisten vom CodeValue-Typ 3" beschrieben.
-     *
-     * @return the empfaengerPolizei
-     */
-    @Nullable
-    public String getEmpfaengerPolizei() {
-        return empfaengerPolizei;
-    }
-
-    /**
-     * Sets the empfaengerPolizei.
-     *
-     * @param empfaengerPolizei the empfaengerPolizei to set
-     */
-    public void setEmpfaengerPolizei(@Nullable String empfaengerPolizei) {
-        this.empfaengerPolizei = empfaengerPolizei;
-    }
+    public String getEmpfaengerPolizei() { return empfaengerPolizei; }
+    public void setEmpfaengerPolizei(String empfaengerPolizei) { this.empfaengerPolizei = empfaengerPolizei; }
 
 }

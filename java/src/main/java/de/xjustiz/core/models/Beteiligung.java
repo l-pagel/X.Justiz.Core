@@ -19,11 +19,9 @@ import jakarta.xml.bind.annotation.XmlElement;
 public class Beteiligung {
 
     /**
-     * Jeder Beteiligte kann eine oder mehrere Rollen haben, z.B. Kläger, Beklagter,
-     * Zeuge, Dolmetscher, Rechtsanwalt.
+     * Jeder Beteiligte kann eine oder mehrere Rollen haben, z.B. Kläger, Beklagter, Zeuge, Dolmetscher, Rechtsanwalt.
      * <p>
-     * <u><b>Role:</b></u> Each participant can have one or more roles, e.g.,
-     * plaintiff, defendant, witness, interpreter, lawyer.
+     * <u><b>Role:</b></u> Each participant can have one or more roles, e.g., plaintiff, defendant, witness, interpreter, lawyer.
      */
     @XmlElement(name = "rolle", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "rolle", namespace = "http://www.xjustiz.de")
@@ -31,59 +29,21 @@ public class Beteiligung {
     private Rolle rolle;
 
     /**
-     * Ein Beteiligter kann eine natürliche Person, eine Rechtsanwaltskanzlei oder
-     * eine Organisation sein.
+     * Ein Beteiligter kann eine natürliche Person, eine Rechtsanwaltskanzlei oder eine Organisation sein.
      * <p>
-     * <u><b>Participant:</b></u> A participant can be a natural person, a law firm,
-     * or an organization.
+     * <u><b>Participant:</b></u> A participant can be a natural person, a law firm, or an organization.
      */
     @XmlElement(name = "beteiligter", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligter", namespace = "http://www.xjustiz.de")
     @JsonProperty("Beteiligter")
     private Beteiligter beteiligter;
 
-    /**
-     * Default constructor.
-     */
-    public Beteiligung() {
-    }
+    public Beteiligung() {}
 
-    /**
-     * Jeder Beteiligte kann eine oder mehrere Rollen haben, z.B. Kläger, Beklagter,
-     * Zeuge, Dolmetscher, Rechtsanwalt.
-     *
-     * @return the rolle
-     */
-    public Rolle getRolle() {
-        return rolle;
-    }
+    public Rolle getRolle() { return rolle; }
+    public void setRolle(Rolle rolle) { this.rolle = rolle; }
 
-    /**
-     * Sets the rolle.
-     *
-     * @param rolle the rolle to set
-     */
-    public void setRolle(Rolle rolle) {
-        this.rolle = rolle;
-    }
-
-    /**
-     * Ein Beteiligter kann eine natürliche Person, eine Rechtsanwaltskanzlei oder
-     * eine Organisation sein.
-     *
-     * @return the beteiligter
-     */
-    public Beteiligter getBeteiligter() {
-        return beteiligter;
-    }
-
-    /**
-     * Sets the beteiligter.
-     *
-     * @param beteiligter the beteiligter to set
-     */
-    public void setBeteiligter(Beteiligter beteiligter) {
-        this.beteiligter = beteiligter;
-    }
+    public Beteiligter getBeteiligter() { return beteiligter; }
+    public void setBeteiligter(Beteiligter beteiligter) { this.beteiligter = beteiligter; }
 
 }

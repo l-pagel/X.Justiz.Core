@@ -34,11 +34,9 @@ public class Nachrichtenkopf {
     private String version;
 
     /**
-     * Aktenzeichen des Absenders. Der Wert wird aus
-     * {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
+     * Aktenzeichen des Absenders. Der Wert wird aus {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
      * <p>
-     * <u><b>Sender file reference:</b></u> File reference of the sender. The value
-     * of {@link Nachrichtenkopf#aktenzeichenAbsender} will be taken.
+     * <u><b>Sender file reference:</b></u> File reference of the sender. The value of {@link Nachrichtenkopf#aktenzeichenAbsender} will be taken.
      */
     @XmlElement(name = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "aktenzeichen.absender", namespace = "http://www.xjustiz.de")
@@ -62,8 +60,7 @@ public class Nachrichtenkopf {
     /**
      * Hier ist der Erstellungszeitpunkt der XJustiz-Nachricht einzutragen.
      * <p>
-     * <u><b>Creation time:</b></u> The creation time of the XJustiz message must be
-     * entered here.
+     * <u><b>Creation time:</b></u> The creation time of the XJustiz message must be entered here.
      */
     @XmlElement(name = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "erstellungszeitpunkt", namespace = "http://www.xjustiz.de")
@@ -83,8 +80,7 @@ public class Nachrichtenkopf {
     /**
      * Auswahlstruktur für Adressen (Absender oder Empfänger).
      * <p>
-     * <u><b>Recipient:</b></u> Selection structure for addresses (sender or
-     * receiver).
+     * <u><b>Recipient:</b></u> Selection structure for addresses (sender or receiver).
      */
     @XmlElement(name = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "auswahl_empfaenger", namespace = "http://www.xjustiz.de")
@@ -92,12 +88,9 @@ public class Nachrichtenkopf {
     private AuswahlAdresse empfaenger;
 
     /**
-     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang
-     * erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
+     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
      * <p>
-     * <u><b>Own message ID:</b></u> A unique identification of the message created
-     * during this transmission process must be specified here to enable later
-     * references.
+     * <u><b>Own message ID:</b></u> A unique identification of the message created during this transmission process must be specified here to enable later references.
      */
     @XmlElement(name = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "eigeneNachrichtenID", namespace = "http://www.xjustiz.de")
@@ -105,141 +98,27 @@ public class Nachrichtenkopf {
     @Nullable
     private String eigeneNachrichtenId;
 
-    /**
-     * Default constructor.
-     */
-    public Nachrichtenkopf() {
-    }
+    public Nachrichtenkopf() {}
 
-    /**
-     * Verwendete X.Justiz-Version für diese Nachricht.
-     *
-     * @return the version
-     */
-    public String getVersion() {
-        return version;
-    }
+    public String getVersion() { return version; }
+    public void setVersion(String version) { this.version = version; }
 
-    /**
-     * Sets the version.
-     *
-     * @param version the version to set
-     */
-    public void setVersion(String version) {
-        this.version = version;
-    }
+    public List<String> getAktenzeichenAbsender() { return aktenzeichenAbsender; }
+    public void setAktenzeichenAbsender(List<String> aktenzeichenAbsender) { this.aktenzeichenAbsender = aktenzeichenAbsender; }
 
-    /**
-     * Aktenzeichen des Absenders. Der Wert wird aus
-     * {@link Nachrichtenkopf#aktenzeichenAbsender} übernommen
-     *
-     * @return the aktenzeichenAbsender
-     */
-    @Nullable
-    public List<String> getAktenzeichenAbsender() {
-        return aktenzeichenAbsender;
-    }
+    public List<String> getAktenzeichenEmpfaenger() { return aktenzeichenEmpfaenger; }
+    public void setAktenzeichenEmpfaenger(List<String> aktenzeichenEmpfaenger) { this.aktenzeichenEmpfaenger = aktenzeichenEmpfaenger; }
 
-    /**
-     * Sets the aktenzeichenAbsender.
-     *
-     * @param aktenzeichenAbsender the aktenzeichenAbsender to set
-     */
-    public void setAktenzeichenAbsender(@Nullable List<String> aktenzeichenAbsender) {
-        this.aktenzeichenAbsender = aktenzeichenAbsender;
-    }
+    public OffsetDateTime getErstellungszeitpunkt() { return erstellungszeitpunkt; }
+    public void setErstellungszeitpunkt(OffsetDateTime erstellungszeitpunkt) { this.erstellungszeitpunkt = erstellungszeitpunkt; }
 
-    /**
-     * Aktenzeichen des Empfängers.
-     *
-     * @return the aktenzeichenEmpfaenger
-     */
-    @Nullable
-    public List<String> getAktenzeichenEmpfaenger() {
-        return aktenzeichenEmpfaenger;
-    }
+    public AuswahlAdresse getAbsender() { return absender; }
+    public void setAbsender(AuswahlAdresse absender) { this.absender = absender; }
 
-    /**
-     * Sets the aktenzeichenEmpfaenger.
-     *
-     * @param aktenzeichenEmpfaenger the aktenzeichenEmpfaenger to set
-     */
-    public void setAktenzeichenEmpfaenger(@Nullable List<String> aktenzeichenEmpfaenger) {
-        this.aktenzeichenEmpfaenger = aktenzeichenEmpfaenger;
-    }
+    public AuswahlAdresse getEmpfaenger() { return empfaenger; }
+    public void setEmpfaenger(AuswahlAdresse empfaenger) { this.empfaenger = empfaenger; }
 
-    /**
-     * Hier ist der Erstellungszeitpunkt der XJustiz-Nachricht einzutragen.
-     *
-     * @return the erstellungszeitpunkt
-     */
-    public OffsetDateTime getErstellungszeitpunkt() {
-        return erstellungszeitpunkt;
-    }
-
-    /**
-     * Sets the erstellungszeitpunkt.
-     *
-     * @param erstellungszeitpunkt the erstellungszeitpunkt to set
-     */
-    public void setErstellungszeitpunkt(OffsetDateTime erstellungszeitpunkt) {
-        this.erstellungszeitpunkt = erstellungszeitpunkt;
-    }
-
-    /**
-     * Auswahlstruktur für Adressen (Absender oder Empfänger).
-     *
-     * @return the absender
-     */
-    public AuswahlAdresse getAbsender() {
-        return absender;
-    }
-
-    /**
-     * Sets the absender.
-     *
-     * @param absender the absender to set
-     */
-    public void setAbsender(AuswahlAdresse absender) {
-        this.absender = absender;
-    }
-
-    /**
-     * Auswahlstruktur für Adressen (Absender oder Empfänger).
-     *
-     * @return the empfaenger
-     */
-    public AuswahlAdresse getEmpfaenger() {
-        return empfaenger;
-    }
-
-    /**
-     * Sets the empfaenger.
-     *
-     * @param empfaenger the empfaenger to set
-     */
-    public void setEmpfaenger(AuswahlAdresse empfaenger) {
-        this.empfaenger = empfaenger;
-    }
-
-    /**
-     * Hier ist eine eindeutige Identifikation der bei diesem Übermittlungsvorgang
-     * erstellten Nachricht anzugeben, um spätere Referenzen zu ermöglichen.
-     *
-     * @return the eigeneNachrichtenId
-     */
-    @Nullable
-    public String getEigeneNachrichtenId() {
-        return eigeneNachrichtenId;
-    }
-
-    /**
-     * Sets the eigeneNachrichtenId.
-     *
-     * @param eigeneNachrichtenId the eigeneNachrichtenId to set
-     */
-    public void setEigeneNachrichtenId(@Nullable String eigeneNachrichtenId) {
-        this.eigeneNachrichtenId = eigeneNachrichtenId;
-    }
+    public String getEigeneNachrichtenId() { return eigeneNachrichtenId; }
+    public void setEigeneNachrichtenId(String eigeneNachrichtenId) { this.eigeneNachrichtenId = eigeneNachrichtenId; }
 
 }

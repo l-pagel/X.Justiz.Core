@@ -1,8 +1,8 @@
 package de.xjustiz.core.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -14,8 +14,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Container für anwendungsspezifische Erweiterungen.
  * <p>
- * <u><b>Application-specific extension:</b></u> Container for
- * application-specific extensions.
+ * <u><b>Application-specific extension:</b></u> Container for application-specific extensions.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -25,8 +24,7 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Das Identifikationskennzeichen der anwendungsspezifischen Erweiterung.
      * <p>
-     * <u><b>Identifier:</b></u> The identification tag of the application-specific
-     * extension.
+     * <u><b>Identifier:</b></u> The identification tag of the application-specific extension.
      */
     @XmlElement(name = "kennung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "kennung", namespace = "http://www.xjustiz.de")
@@ -46,8 +44,7 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Die textuelle Erläuterung zu einer anwendungsspezifischen Erweiterung.
      * <p>
-     * <u><b>Description:</b></u> The textual explanation of an application-specific
-     * extension.
+     * <u><b>Description:</b></u> The textual explanation of an application-specific extension.
      */
     @XmlElement(name = "beschreibung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beschreibung", namespace = "http://www.xjustiz.de")
@@ -58,14 +55,12 @@ public class AnwendungsspezifischeErweiterung {
     /**
      * Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.
      * <p>
-     * <u><b>Field groups:</b></u> A field group assigned to the
-     * application-specific extension.
+     * <u><b>Field groups:</b></u> A field group assigned to the application-specific extension.
      */
     @XmlElement(name = "feldgruppe", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "feldgruppe", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Feldgruppen")
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Feldgruppe> feldgruppen;
 
@@ -78,107 +73,24 @@ public class AnwendungsspezifischeErweiterung {
     @JacksonXmlProperty(localName = "feld", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Felder")
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Feld> felder;
 
-    /**
-     * Default constructor.
-     */
-    public AnwendungsspezifischeErweiterung() {
-    }
+    public AnwendungsspezifischeErweiterung() {}
 
-    /**
-     * Das Identifikationskennzeichen der anwendungsspezifischen Erweiterung.
-     *
-     * @return the kennung
-     */
-    public String getKennung() {
-        return kennung;
-    }
+    public String getKennung() { return kennung; }
+    public void setKennung(String kennung) { this.kennung = kennung; }
 
-    /**
-     * Sets the kennung.
-     *
-     * @param kennung the kennung to set
-     */
-    public void setKennung(String kennung) {
-        this.kennung = kennung;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    /**
-     * Der Name der anwendungsspezifischen Erweiterung.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
+    public String getBeschreibung() { return beschreibung; }
+    public void setBeschreibung(String beschreibung) { this.beschreibung = beschreibung; }
 
-    /**
-     * Sets the name.
-     *
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
+    public List<Feldgruppe> getFeldgruppen() { return feldgruppen; }
+    public void setFeldgruppen(List<Feldgruppe> feldgruppen) { this.feldgruppen = feldgruppen; }
 
-    /**
-     * Die textuelle Erläuterung zu einer anwendungsspezifischen Erweiterung.
-     *
-     * @return the beschreibung
-     */
-    @Nullable
-    public String getBeschreibung() {
-        return beschreibung;
-    }
-
-    /**
-     * Sets the beschreibung.
-     *
-     * @param beschreibung the beschreibung to set
-     */
-    public void setBeschreibung(@Nullable String beschreibung) {
-        this.beschreibung = beschreibung;
-    }
-
-    /**
-     * Eine Feldgruppe, die der anwendungsspezifischen Erweiterung zugeordnet ist.
-     *
-     * @return the feldgruppen
-     */
-    @Nullable
-    public List<Feldgruppe> getFeldgruppen() {
-        return feldgruppen;
-    }
-
-    /**
-     * Sets the feldgruppen.
-     *
-     * @param feldgruppen the feldgruppen to set
-     */
-    public void setFeldgruppen(@Nullable List<Feldgruppe> feldgruppen) {
-        this.feldgruppen = feldgruppen;
-    }
-
-    /**
-     * Ein Feld, das der anwendungsspezifischen Erweiterung zugeordnet ist.
-     *
-     * @return the felder
-     */
-    @Nullable
-    public List<Feld> getFelder() {
-        return felder;
-    }
-
-    /**
-     * Sets the felder.
-     *
-     * @param felder the felder to set
-     */
-    public void setFelder(@Nullable List<Feld> felder) {
-        this.felder = felder;
-    }
+    public List<Feld> getFelder() { return felder; }
+    public void setFelder(List<Feld> felder) { this.felder = felder; }
 
 }

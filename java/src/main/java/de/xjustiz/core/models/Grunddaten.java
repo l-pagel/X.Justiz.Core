@@ -1,6 +1,7 @@
 package de.xjustiz.core.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -15,14 +16,13 @@ import org.jetbrains.annotations.Nullable;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Grunddaten {
 
     /**
-     * Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren
-     * mit sich bringt.
+     * Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren mit sich bringt.
      * <p>
-     * <u><b>Procedural data:</b></u> Procedures data captures all information that
-     * the respective procedure entails.
+     * <u><b>Procedural data:</b></u> Procedures data captures all information that the respective procedure entails.
      */
     @XmlElement(name = "verfahrensdaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "verfahrensdaten", namespace = "http://www.xjustiz.de")
@@ -30,30 +30,9 @@ public class Grunddaten {
     @Nullable
     private Verfahrensdaten verfahrensdaten;
 
-    /**
-     * Default constructor.
-     */
-    public Grunddaten() {
-    }
+    public Grunddaten() {}
 
-    /**
-     * Verfahrensdaten nehmen alle Informationen auf, die das jeweilige Verfahren
-     * mit sich bringt.
-     *
-     * @return the verfahrensdaten
-     */
-    @Nullable
-    public Verfahrensdaten getVerfahrensdaten() {
-        return verfahrensdaten;
-    }
-
-    /**
-     * Sets the verfahrensdaten.
-     *
-     * @param verfahrensdaten the verfahrensdaten to set
-     */
-    public void setVerfahrensdaten(@Nullable Verfahrensdaten verfahrensdaten) {
-        this.verfahrensdaten = verfahrensdaten;
-    }
+    public Verfahrensdaten getVerfahrensdaten() { return verfahrensdaten; }
+    public void setVerfahrensdaten(Verfahrensdaten verfahrensdaten) { this.verfahrensdaten = verfahrensdaten; }
 
 }

@@ -1,8 +1,8 @@
 package de.xjustiz.core.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -46,14 +46,12 @@ public class Organisation {
     /**
      * Informationen zur Telekommunikation (Telefon, Email, etc.).
      * <p>
-     * <u><b>Telecommunication:</b></u> Information on telecommunication (phone,
-     * email, etc.).
+     * <u><b>Telecommunication:</b></u> Information on telecommunication (phone, email, etc.).
      */
     @XmlElement(name = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "telekommunikation", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Telekommunikation")
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Telekommunikation> telekommunikation;
 
@@ -68,86 +66,18 @@ public class Organisation {
     @Nullable
     private Bankverbindung bankverbindung;
 
-    /**
-     * Default constructor.
-     */
-    public Organisation() {
-    }
+    public Organisation() {}
 
-    /**
-     * Bezeichnung / Name der Organisation.
-     *
-     * @return the bezeichnung
-     */
-    @Nullable
-    public Bezeichnung getBezeichnung() {
-        return bezeichnung;
-    }
+    public Bezeichnung getBezeichnung() { return bezeichnung; }
+    public void setBezeichnung(Bezeichnung bezeichnung) { this.bezeichnung = bezeichnung; }
 
-    /**
-     * Sets the bezeichnung.
-     *
-     * @param bezeichnung the bezeichnung to set
-     */
-    public void setBezeichnung(@Nullable Bezeichnung bezeichnung) {
-        this.bezeichnung = bezeichnung;
-    }
+    public Anschrift getAnschrift() { return anschrift; }
+    public void setAnschrift(Anschrift anschrift) { this.anschrift = anschrift; }
 
-    /**
-     * Auch Postfach-Anschriften fallen hierunter.
-     *
-     * @return the anschrift
-     */
-    @Nullable
-    public Anschrift getAnschrift() {
-        return anschrift;
-    }
+    public List<Telekommunikation> getTelekommunikation() { return telekommunikation; }
+    public void setTelekommunikation(List<Telekommunikation> telekommunikation) { this.telekommunikation = telekommunikation; }
 
-    /**
-     * Sets the anschrift.
-     *
-     * @param anschrift the anschrift to set
-     */
-    public void setAnschrift(@Nullable Anschrift anschrift) {
-        this.anschrift = anschrift;
-    }
-
-    /**
-     * Informationen zur Telekommunikation (Telefon, Email, etc.).
-     *
-     * @return the telekommunikation
-     */
-    @Nullable
-    public List<Telekommunikation> getTelekommunikation() {
-        return telekommunikation;
-    }
-
-    /**
-     * Sets the telekommunikation.
-     *
-     * @param telekommunikation the telekommunikation to set
-     */
-    public void setTelekommunikation(@Nullable List<Telekommunikation> telekommunikation) {
-        this.telekommunikation = telekommunikation;
-    }
-
-    /**
-     * Hier steht die allgemeine Bankverbindung.
-     *
-     * @return the bankverbindung
-     */
-    @Nullable
-    public Bankverbindung getBankverbindung() {
-        return bankverbindung;
-    }
-
-    /**
-     * Sets the bankverbindung.
-     *
-     * @param bankverbindung the bankverbindung to set
-     */
-    public void setBankverbindung(@Nullable Bankverbindung bankverbindung) {
-        this.bankverbindung = bankverbindung;
-    }
+    public Bankverbindung getBankverbindung() { return bankverbindung; }
+    public void setBankverbindung(Bankverbindung bankverbindung) { this.bankverbindung = bankverbindung; }
 
 }

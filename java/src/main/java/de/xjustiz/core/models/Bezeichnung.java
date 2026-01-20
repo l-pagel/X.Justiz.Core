@@ -1,5 +1,7 @@
 package de.xjustiz.core.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -10,15 +12,17 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Bezeichnung einer Organisation.
  * <p>
- *  <u><b>Designation:</b></u> Designation of an organization.
+ * <u><b>Designation:</b></u> Designation of an organization.
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Bezeichnung {
 
     /**
      * Aktueller offizieller Name der RA-Kanzlei.
      * <p>
-     *  <u><b>Current designation:</b></u> Current official name of the law firm.
+     * <u><b>Current designation:</b></u> Current official name of the law firm.
      */
     @XmlElement(name = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "bezeichnung.aktuell", namespace = "http://www.xjustiz.de")
@@ -26,29 +30,9 @@ public class Bezeichnung {
     @Nullable
     private String aktuell;
 
-    /**
-     * Default constructor.
-     */
-    public Bezeichnung() {
-    }
+    public Bezeichnung() {}
 
-    /**
-     * Aktueller offizieller Name der RA-Kanzlei.
-     *
-     * @return the aktuell
-     */
-    @Nullable
-    public String getAktuell() {
-        return aktuell;
-    }
-
-    /**
-     * Sets the aktuell.
-     *
-     * @param aktuell the aktuell to set
-     */
-    public void setAktuell(@Nullable String aktuell) {
-        this.aktuell = aktuell;
-    }
+    public String getAktuell() { return aktuell; }
+    public void setAktuell(String aktuell) { this.aktuell = aktuell; }
 
 }

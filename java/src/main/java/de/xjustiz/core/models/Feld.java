@@ -44,8 +44,7 @@ public class Feld {
     /**
      * Der Datentyp des Feldwertes. Gültige Angaben sind die W3C-Datentypen.
      * <p>
-     * <u><b>Data type:</b></u> The data type of the field value. Valid entries are
-     * the W3C data types.
+     * <u><b>Data type:</b></u> The data type of the field value. Valid entries are the W3C data types.
      */
     @XmlElement(name = "datentyp", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "datentyp", namespace = "http://www.xjustiz.de")
@@ -64,86 +63,18 @@ public class Feld {
     @Nullable
     private String wert;
 
-    /**
-     * Default constructor.
-     */
-    public Feld() {
-    }
+    public Feld() {}
 
-    /**
-     * Der Name des Feldes.
-     *
-     * @return the name
-     */
-    @Nullable
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    /**
-     * Sets the name.
-     *
-     * @param name the name to set
-     */
-    public void setName(@Nullable String name) {
-        this.name = name;
-    }
+    public String getBeschreibung() { return beschreibung; }
+    public void setBeschreibung(String beschreibung) { this.beschreibung = beschreibung; }
 
-    /**
-     * Die Hinweise und Erläuterungen zu einem Feld.
-     *
-     * @return the beschreibung
-     */
-    @Nullable
-    public String getBeschreibung() {
-        return beschreibung;
-    }
+    public String getDatentyp() { return datentyp; }
+    public void setDatentyp(String datentyp) { this.datentyp = datentyp; }
 
-    /**
-     * Sets the beschreibung.
-     *
-     * @param beschreibung the beschreibung to set
-     */
-    public void setBeschreibung(@Nullable String beschreibung) {
-        this.beschreibung = beschreibung;
-    }
-
-    /**
-     * Der Datentyp des Feldwertes. Gültige Angaben sind die W3C-Datentypen.
-     *
-     * @return the datentyp
-     */
-    @Nullable
-    public String getDatentyp() {
-        return datentyp;
-    }
-
-    /**
-     * Sets the datentyp.
-     *
-     * @param datentyp the datentyp to set
-     */
-    public void setDatentyp(@Nullable String datentyp) {
-        this.datentyp = datentyp;
-    }
-
-    /**
-     * Der Wert des Feldes.
-     *
-     * @return the wert
-     */
-    @Nullable
-    public String getWert() {
-        return wert;
-    }
-
-    /**
-     * Sets the wert.
-     *
-     * @param wert the wert to set
-     */
-    public void setWert(@Nullable String wert) {
-        this.wert = wert;
-    }
+    public String getWert() { return wert; }
+    public void setWert(String wert) { this.wert = wert; }
 
 }

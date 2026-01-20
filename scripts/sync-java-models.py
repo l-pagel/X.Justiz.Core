@@ -269,6 +269,8 @@ def generate_java_class(class_info: ClassInfo) -> str:
     
     # Collect imports
     imports = set([
+        "com.fasterxml.jackson.annotation.JsonIgnoreProperties",
+        "com.fasterxml.jackson.annotation.JsonInclude",
         "com.fasterxml.jackson.annotation.JsonProperty",
         "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty",
         "jakarta.xml.bind.annotation.XmlAccessType",
@@ -316,6 +318,8 @@ def generate_java_class(class_info: ClassInfo) -> str:
         lines.append(f'@JacksonXmlRootElement(localName = "{class_info.xml_root_name}", namespace = "{class_info.namespace}")')
     
     lines.append("@XmlAccessorType(XmlAccessType.FIELD)")
+    lines.append("@JsonIgnoreProperties(ignoreUnknown = true)")
+    lines.append("@JsonInclude(JsonInclude.Include.NON_EMPTY)")
     lines.append(f"public class {class_info.name} {{")
     lines.append("")
     

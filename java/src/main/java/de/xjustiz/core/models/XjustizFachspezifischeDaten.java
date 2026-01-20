@@ -20,15 +20,9 @@ import org.jetbrains.annotations.Nullable;
 public class XjustizFachspezifischeDaten {
 
     /**
-     * Bezeichnet die Dokumentklasse anhand der vorgegebenen Werteliste. Diese ist
-     * für einen reibungslosen, systemübergreifenden Austausch bewusst
-     * knappgehalten. Für eine spezifischere Bezeichnung kann das Element
-     * 'dokumententyp' verwendet werden.
+     * Bezeichnet die Dokumentklasse anhand der vorgegebenen Werteliste. Diese ist für einen reibungslosen, systemübergreifenden Austausch bewusst knappgehalten. Für eine spezifischere Bezeichnung kann das Element 'dokumententyp' verwendet werden.
      * <p>
-     * <u><b>Document class:</b></u> Designates the document class based on the
-     * predefined value list. This is deliberately kept concise for smooth,
-     * cross-system exchange. For a more specific designation, the element
-     * 'dokumententyp' (document type) can be used.
+     * <u><b>Document class:</b></u> Designates the document class based on the predefined value list. This is deliberately kept concise for smooth, cross-system exchange. For a more specific designation, the element 'dokumententyp' (document type) can be used.
      */
     @XmlElement(name = "dokumentklasse", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "dokumentklasse", namespace = "http://www.xjustiz.de")
@@ -46,50 +40,12 @@ public class XjustizFachspezifischeDaten {
     @JsonProperty("Datei")
     private Datei datei;
 
-    /**
-     * Default constructor.
-     */
-    public XjustizFachspezifischeDaten() {
-    }
+    public XjustizFachspezifischeDaten() {}
 
-    /**
-     * Bezeichnet die Dokumentklasse anhand der vorgegebenen Werteliste. Diese ist
-     * für einen reibungslosen, systemübergreifenden Austausch bewusst
-     * knappgehalten. Für eine spezifischere Bezeichnung kann das Element
-     * 'dokumententyp' verwendet werden.
-     *
-     * @return the dokumentklasse
-     */
-    @Nullable
-    public Dokumentklasse getDokumentklasse() {
-        return dokumentklasse;
-    }
+    public Dokumentklasse getDokumentklasse() { return dokumentklasse; }
+    public void setDokumentklasse(Dokumentklasse dokumentklasse) { this.dokumentklasse = dokumentklasse; }
 
-    /**
-     * Sets the dokumentklasse.
-     *
-     * @param dokumentklasse the dokumentklasse to set
-     */
-    public void setDokumentklasse(@Nullable Dokumentklasse dokumentklasse) {
-        this.dokumentklasse = dokumentklasse;
-    }
-
-    /**
-     * Repräsentiert eine Datei.
-     *
-     * @return the datei
-     */
-    public Datei getDatei() {
-        return datei;
-    }
-
-    /**
-     * Sets the datei.
-     *
-     * @param datei the datei to set
-     */
-    public void setDatei(Datei datei) {
-        this.datei = datei;
-    }
+    public Datei getDatei() { return datei; }
+    public void setDatei(Datei datei) { this.datei = datei; }
 
 }

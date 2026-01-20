@@ -22,15 +22,9 @@ import org.jetbrains.annotations.Nullable;
 public class Verfahrensdaten {
 
     /**
-     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren
-     * über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt
-     * werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen
-     * Identifikation des Verfahrens verwendet werden.
+     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen Identifikation des Verfahrens verwendet werden.
      * <p>
-     * <u><b>Proceeding number:</b></u> The proceeding number is a unique identifier
-     * that is intended to apply to the proceeding across all stations and can be
-     * transmitted alongside the file reference. It can be used, for example, in a
-     * specialized procedure for the unique identification of the proceeding.
+     * <u><b>Proceeding number:</b></u> The proceeding number is a unique identifier that is intended to apply to the proceeding across all stations and can be transmitted alongside the file reference. It can be used, for example, in a specialized procedure for the unique identification of the proceeding.
      */
     @XmlElement(name = "verfahrensnummer", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "verfahrensnummer", namespace = "http://www.xjustiz.de")
@@ -39,13 +33,9 @@ public class Verfahrensdaten {
     private String verfahrensnummer;
 
     /**
-     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang
-     * durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine
-     * Justizbehörde, aber auch eine andere Behörde sein.
+     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine Justizbehörde, aber auch eine andere Behörde sein.
      * <p>
-     * <u><b>Instance data:</b></u> The instance data contains information about the
-     * stations that a process has passed through. This can be a court, a public
-     * prosecutor's office, a judicial authority, but also another authority.
+     * <u><b>Instance data:</b></u> The instance data contains information about the stations that a process has passed through. This can be a court, a public prosecutor's office, a judicial authority, but also another authority.
      */
     @XmlElement(name = "instanzdaten", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "instanzdaten", namespace = "http://www.xjustiz.de")
@@ -54,87 +44,26 @@ public class Verfahrensdaten {
     private Instanzdaten instanzdaten;
 
     /**
-     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere
-     * Rollen haben.
+     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere Rollen haben.
      * <p>
-     * <u><b>Participations:</b></u> For each participation, there is exactly one
-     * participant. This participant can have multiple roles.
+     * <u><b>Participations:</b></u> For each participation, there is exactly one participant. This participant can have multiple roles.
      */
     @XmlElement(name = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlProperty(localName = "beteiligung", namespace = "http://www.xjustiz.de")
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("Beteiligungen")
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Nullable
     private List<Beteiligung> beteiligungen;
 
-    /**
-     * Default constructor.
-     */
-    public Verfahrensdaten() {
-    }
+    public Verfahrensdaten() {}
 
-    /**
-     * Die Verfahrensnummer ist eine eindeutige Kennzeichnung, die für das Verfahren
-     * über alle Stationen hinweg gelten soll und neben dem Aktenzeichen übermittelt
-     * werden kann. Sie kann beispielsweise in einem Fachverfahren zur eindeutigen
-     * Identifikation des Verfahrens verwendet werden.
-     *
-     * @return the verfahrensnummer
-     */
-    @Nullable
-    public String getVerfahrensnummer() {
-        return verfahrensnummer;
-    }
+    public String getVerfahrensnummer() { return verfahrensnummer; }
+    public void setVerfahrensnummer(String verfahrensnummer) { this.verfahrensnummer = verfahrensnummer; }
 
-    /**
-     * Sets the verfahrensnummer.
-     *
-     * @param verfahrensnummer the verfahrensnummer to set
-     */
-    public void setVerfahrensnummer(@Nullable String verfahrensnummer) {
-        this.verfahrensnummer = verfahrensnummer;
-    }
+    public Instanzdaten getInstanzdaten() { return instanzdaten; }
+    public void setInstanzdaten(Instanzdaten instanzdaten) { this.instanzdaten = instanzdaten; }
 
-    /**
-     * Die Instanzdaten enthalten Informationen zu den Stationen, die ein Vorgang
-     * durchlaufen hat. Dies kann ein Gericht, eine Staatsanwaltschaft, eine
-     * Justizbehörde, aber auch eine andere Behörde sein.
-     *
-     * @return the instanzdaten
-     */
-    @Nullable
-    public Instanzdaten getInstanzdaten() {
-        return instanzdaten;
-    }
-
-    /**
-     * Sets the instanzdaten.
-     *
-     * @param instanzdaten the instanzdaten to set
-     */
-    public void setInstanzdaten(@Nullable Instanzdaten instanzdaten) {
-        this.instanzdaten = instanzdaten;
-    }
-
-    /**
-     * Für jede Beteiligung gibt es genau einen Beteiligten. Dieser kann mehrere
-     * Rollen haben.
-     *
-     * @return the beteiligungen
-     */
-    @Nullable
-    public List<Beteiligung> getBeteiligungen() {
-        return beteiligungen;
-    }
-
-    /**
-     * Sets the beteiligungen.
-     *
-     * @param beteiligungen the beteiligungen to set
-     */
-    public void setBeteiligungen(@Nullable List<Beteiligung> beteiligungen) {
-        this.beteiligungen = beteiligungen;
-    }
+    public List<Beteiligung> getBeteiligungen() { return beteiligungen; }
+    public void setBeteiligungen(List<Beteiligung> beteiligungen) { this.beteiligungen = beteiligungen; }
 
 }
