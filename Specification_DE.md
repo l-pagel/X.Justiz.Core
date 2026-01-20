@@ -1,21 +1,20 @@
-# X.Justiz-Core Data Model Specification
+# X.Justiz-Core Datenmodell Spezifikation
 
 > [!TIP]  
-> **🌐 [Deutsche Version hier verfügbar](Specification_DE.md) 👈**
+> **🌐 [English version available here](Specification.md) 👈**
 
+Dieses Dokument bietet einen umfassenden Überblick über das X.Justiz-Core-Datenmodell, einschließlich seiner Klassen, Eigenschaften und Versionierung.
 
-This document provides a comprehensive overview of the X.Justiz-Core data model, detailing its classes, properties, and versioning.
+### Verwendung der Tabelle
+Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
+- **Class**: Die fettgedruckte Container-Klasse für eine Gruppe von Eigenschaften.
+- **Property / Type**: Der Name des Feldes und der zugehörige Datentyp. Komplexe Typen (verknüpfte Klassen) sind **fett** gedruckt.
+- **Core Only**: Markiert mit einem `x`, wenn diese spezifische Klasse oder Eigenschaft eine Erweiterung ist, die exklusiv durch X.Justiz-Core eingeführt wurde.
+- **Release X.Justiz**: Die ursprüngliche X.Justiz-Version, in der dieses Element erstmals eingeführt wurde (markiert mit `-` bei Core-only Erweiterungen).
+- **Release Core**: Die X.Justiz-Core-Version, ab der dieses Element verfügbar ist.
 
-### Using the Table
-The table below describes the hierarchy and evolution of the data model:
-- **Class**: The bolded container class for a group of properties.
-- **Property / Type**: The name of the field and its associated data type. Complex types (linked classes) are **bolded**.
-- **Core Only**: Marked with an `x` if this specific class or property is a unique extension introduced by X.Justiz-Core.
-- **Release X.Justiz**: The original X.Justiz version where this element was first introduced (marked as `-` for Core-only extensions).
-- **Release Core**: The X.Justiz-Core version in which this element became available.  
-  
 &nbsp;
-  
+
 | Class | Property / Type | Core Only | Release X.Justiz | Release Core |
 | :--- | :--- | :---: | :--- | :--- |
 | **Akte** | | | 2.2.1 | 0.2.0 |

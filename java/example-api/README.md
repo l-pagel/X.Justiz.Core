@@ -1,5 +1,9 @@
 # X.Justiz Core Java Example API
 
+> [!TIP]  
+> **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
+
+
 This project demonstrates the usage of the X.Justiz Core Java library in a Spring Boot application, mirroring the functionality of the .NET example API.
 
 ## Endpoints

@@ -1,5 +1,9 @@
 # X.Justiz Core - Java SDK
 
+> [!TIP]  
+> **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
+
+
 Java SDK for X.Justiz Core document transmission messages.
 
 ## Features

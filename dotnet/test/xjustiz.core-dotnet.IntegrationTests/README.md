@@ -1,5 +1,9 @@
 # X.Justiz Core SDK Cross-Platform Integration Tests
 
+> [!TIP]  
+> **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
+
+
 This project contains integration tests that validate **full compatibility** between the Java and .NET implementations of the X.Justiz Core SDK. The tests ensure that data serialized by one SDK can be correctly deserialized by the other, with no data loss or mapping errors.
 
 ## 🎯 Purpose

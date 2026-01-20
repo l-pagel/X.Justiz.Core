@@ -1,5 +1,9 @@
 # SDK Generation Workflow
 
+> [!TIP]  
+> **🌐 [Deutsche Version hier verfügbar](SDK-GENERATION_DE.md) 👈**
+
+
 This document explains how cross-language SDK consistency is maintained in this open-source project.
 
 ## Overview
