@@ -1,5 +1,5 @@
-// <copyright file="ApiProcessManager.cs" company="X.Justiz Core">
-// Copyright (c) X.Justiz Core. All rights reserved.
+// <copyright file="ApiProcessManager.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace xjustiz.core_dotnet.IntegrationTests.Infrastructure;
@@ -31,8 +31,9 @@ public class ApiProcessManager : IAsyncDisposable
         repoRoot = FindRepoRoot();
     }
 
-    public string DotNetApiBaseUrl => $"http://localhost:{DotNetPort}";
-    public string JavaApiBaseUrl => $"http://localhost:{JavaPort}";
+    public static string DotNetApiBaseUrl => $"http://localhost:{DotNetPort}";
+
+    public static string JavaApiBaseUrl => $"http://localhost:{JavaPort}";
 
     /// <summary>
     /// Gets any startup errors that occurred.
@@ -101,7 +102,7 @@ public class ApiProcessManager : IAsyncDisposable
 
         // Check example datasets
         var datasetsPath = Path.Combine(repoRoot, "example-datasets");
-        result.ExampleDatasetsExist = Directory.Exists(datasetsPath) && 
+        result.ExampleDatasetsExist = Directory.Exists(datasetsPath) &&
             Directory.GetFiles(datasetsPath, "*.json").Length > 0;
         if (!result.ExampleDatasetsExist)
         {
@@ -119,7 +120,7 @@ public class ApiProcessManager : IAsyncDisposable
     public async Task StartApisAsync()
     {
         var validation = ValidateEnvironment();
-        
+
         if (!validation.IsValid)
         {
             var errorMessage = "Environment validation failed:\n" + string.Join("\n", validation.Errors);
@@ -142,15 +143,15 @@ public class ApiProcessManager : IAsyncDisposable
     {
         if (!IsPortAvailable(DotNetPort))
         {
-             Log($"[INFO] Port {DotNetPort} is in use. Skipping .NET API startup and attaching to existing process.");
-             await WaitForApiHealthAsync(DotNetApiBaseUrl, ".NET API");
-             return;
+            Log($"[INFO] Port {DotNetPort} is in use. Skipping .NET API startup and attaching to existing process.");
+            await WaitForApiHealthAsync(DotNetApiBaseUrl, ".NET API");
+            return;
         }
 
         Log("[INFO] Starting .NET API...");
-        
+
         var dotNetApiPath = Path.Combine(repoRoot, "dotnet", "example-api");
-        
+
         var startInfo = new ProcessStartInfo
         {
             FileName = "dotnet",
@@ -159,14 +160,20 @@ public class ApiProcessManager : IAsyncDisposable
             UseShellExecute = false,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
-            CreateNoWindow = true
+            CreateNoWindow = true,
         };
 
         dotNetProcess = new Process { StartInfo = startInfo };
-        dotNetProcess.OutputDataReceived += (s, e) => { if (!string.IsNullOrEmpty(e.Data)) Log($"[.NET] {e.Data}"); };
-        dotNetProcess.ErrorDataReceived += (s, e) => 
-        { 
-            if (!string.IsNullOrEmpty(e.Data)) 
+        dotNetProcess.OutputDataReceived += (s, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                Log($"[.NET] {e.Data}");
+            }
+        };
+        dotNetProcess.ErrorDataReceived += (s, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
             {
                 Log($"[.NET ERR] {e.Data}");
                 startupErrors.Add($".NET: {e.Data}");
@@ -194,17 +201,17 @@ public class ApiProcessManager : IAsyncDisposable
     {
         if (!IsPortAvailable(JavaPort))
         {
-             Log($"[INFO] Port {JavaPort} is in use. Skipping Java API startup and attaching to existing process.");
-             await WaitForApiHealthAsync(JavaApiBaseUrl, "Java API");
-             return;
+            Log($"[INFO] Port {JavaPort} is in use. Skipping Java API startup and attaching to existing process.");
+            await WaitForApiHealthAsync(JavaApiBaseUrl, "Java API");
+            return;
         }
 
         Log("[INFO] Starting Java API...");
-        
+
         var javaPath = Path.Combine(repoRoot, "java");
-        
+
         ProcessStartInfo startInfo;
-        
+
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
             // On Windows, use cmd.exe to run the batch file
@@ -217,7 +224,7 @@ public class ApiProcessManager : IAsyncDisposable
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
-                CreateNoWindow = true
+                CreateNoWindow = true,
             };
         }
         else
@@ -232,15 +239,21 @@ public class ApiProcessManager : IAsyncDisposable
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
-                CreateNoWindow = true
+                CreateNoWindow = true,
             };
         }
 
         javaProcess = new Process { StartInfo = startInfo };
-        javaProcess.OutputDataReceived += (s, e) => { if (!string.IsNullOrEmpty(e.Data)) Log($"[Java] {e.Data}"); };
-        javaProcess.ErrorDataReceived += (s, e) => 
-        { 
-            if (!string.IsNullOrEmpty(e.Data)) 
+        javaProcess.OutputDataReceived += (s, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                Log($"[Java] {e.Data}");
+            }
+        };
+        javaProcess.ErrorDataReceived += (s, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
             {
                 Log($"[Java ERR] {e.Data}");
                 startupErrors.Add($"Java: {e.Data}");
@@ -261,15 +274,24 @@ public class ApiProcessManager : IAsyncDisposable
         await WaitForApiHealthAsync(JavaApiBaseUrl, "Java API");
     }
 
+    public async ValueTask DisposeAsync()
+    {
+        Log("[INFO] Shutting down APIs...");
+        await StopProcessAsync(dotNetProcess, ".NET API");
+        await StopProcessAsync(javaProcess, "Java API");
+        Log("[INFO] All APIs stopped.");
+        GC.SuppressFinalize(this);
+    }
+
     private async Task WaitForApiHealthAsync(string baseUrl, string apiName)
     {
         using var httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
         var startTime = DateTime.UtcNow;
-        var lastError = "";
+        var lastError = string.Empty;
 
         // Different Swagger URLs for each API
-        var swaggerUrl = apiName.Contains("Java") 
-            ? $"{baseUrl}/swagger-ui.html"  // Spring Boot with springdoc
+        var swaggerUrl = apiName.Contains("Java")
+            ? $"{baseUrl}/swagger-ui.html" // Spring Boot with springdoc
             : $"{baseUrl}/swagger/index.html";  // ASP.NET Core
 
         Log($"[INFO] Waiting for {apiName} to become ready at {baseUrl}...");
@@ -287,6 +309,7 @@ public class ApiProcessManager : IAsyncDisposable
                 {
                     errorMsg += $"\nRecent errors:\n{string.Join("\n", startupErrors.TakeLast(10))}";
                 }
+
                 throw new InvalidOperationException(errorMsg);
             }
 
@@ -299,6 +322,7 @@ public class ApiProcessManager : IAsyncDisposable
                     Log($"[INFO] ✓ {apiName} is ready at {baseUrl}");
                     return;
                 }
+
                 lastError = $"HTTP {(int)response.StatusCode}";
             }
             catch (HttpRequestException ex)
@@ -324,27 +348,21 @@ public class ApiProcessManager : IAsyncDisposable
         {
             timeoutMessage += $"\nRecent errors:\n{string.Join("\n", startupErrors.TakeLast(10))}";
         }
-        throw new TimeoutException(timeoutMessage);
-    }
 
-    public async ValueTask DisposeAsync()
-    {
-        Log("[INFO] Shutting down APIs...");
-        await StopProcessAsync(dotNetProcess, ".NET API");
-        await StopProcessAsync(javaProcess, "Java API");
-        Log("[INFO] All APIs stopped.");
-        GC.SuppressFinalize(this);
+        throw new TimeoutException(timeoutMessage);
     }
 
     private static async Task StopProcessAsync(Process? process, string name)
     {
         if (process == null || process.HasExited)
+        {
             return;
+        }
 
         try
         {
             Log($"[INFO] Stopping {name}...");
-            
+
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 // On Windows, use taskkill to kill process tree
@@ -355,7 +373,7 @@ public class ApiProcessManager : IAsyncDisposable
                     CreateNoWindow = true,
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
-                    RedirectStandardError = true
+                    RedirectStandardError = true,
                 });
                 if (killProcess != null)
                 {
@@ -378,7 +396,7 @@ public class ApiProcessManager : IAsyncDisposable
                 Log($"[WARN] {name} did not exit gracefully, forcing termination.");
                 process.Kill();
             }
-            
+
             Log($"[INFO] ✓ {name} stopped.");
         }
         catch (Exception ex)
@@ -391,8 +409,6 @@ public class ApiProcessManager : IAsyncDisposable
         }
     }
 
-    #region Environment Validation Helpers
-
     private static bool IsDotNetSdkInstalled()
     {
         try
@@ -403,7 +419,7 @@ public class ApiProcessManager : IAsyncDisposable
                 Arguments = "--version",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                CreateNoWindow = true
+                CreateNoWindow = true,
             });
             process?.WaitForExit(5000);
             return process?.ExitCode == 0;
@@ -428,14 +444,14 @@ public class ApiProcessManager : IAsyncDisposable
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
-                    CreateNoWindow = true
-                }
+                    CreateNoWindow = true,
+                },
             };
             process.Start();
             // Java outputs version to stderr, not stdout
             var output = process.StandardError.ReadToEnd();
             process.WaitForExit(5000);
-            
+
             if (process.ExitCode == 0 && !string.IsNullOrEmpty(output))
             {
                 // Parse version from output like: openjdk version "17.0.1" 2021-10-19
@@ -444,8 +460,10 @@ public class ApiProcessManager : IAsyncDisposable
                 {
                     version = lines[0].Trim();
                 }
+
                 return true;
             }
+
             return false;
         }
         catch
@@ -478,6 +496,7 @@ public class ApiProcessManager : IAsyncDisposable
             {
                 return dir;
             }
+
             dir = Directory.GetParent(dir)?.FullName;
         }
 
@@ -490,14 +509,13 @@ public class ApiProcessManager : IAsyncDisposable
             {
                 return dir;
             }
+
             dir = Directory.GetParent(dir)?.FullName;
         }
 
         throw new InvalidOperationException(
             "Could not find repository root. Make sure you're running tests from within the X.Justiz.Core repository.");
     }
-
-    #endregion
 
     private static void Log(string message)
     {
@@ -511,16 +529,26 @@ public class ApiProcessManager : IAsyncDisposable
 public class EnvironmentValidationResult
 {
     public bool IsValid { get; set; }
+
     public bool DotNetSdkInstalled { get; set; }
+
     public bool JavaInstalled { get; set; }
-    public string JavaVersion { get; set; } = "";
+
+    public string JavaVersion { get; set; } = string.Empty;
+
     public bool GradleWrapperExists { get; set; }
+
     public bool DotNetPortAvailable { get; set; }
+
     public bool JavaPortAvailable { get; set; }
+
     public bool DotNetApiExists { get; set; }
+
     public bool JavaApiExists { get; set; }
+
     public bool ExampleDatasetsExist { get; set; }
-    public List<string> Errors { get; } = new();
+
+    public List<string> Errors { get; } = [];
 
     public override string ToString()
     {

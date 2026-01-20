@@ -1,5 +1,5 @@
-// <copyright file="CrossApiClient.cs" company="X.Justiz Core">
-// Copyright (c) X.Justiz Core. All rights reserved.
+// <copyright file="CrossApiClient.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace xjustiz.core_dotnet.IntegrationTests.Infrastructure;
@@ -57,7 +57,7 @@ public class FlexibleDateTimeConverter : JsonConverter<DateTime>
             {
                 return DateTimeOffset.FromUnixTimeMilliseconds(unixTimeMs).UtcDateTime;
             }
-            
+
             // Try reading as double (may have fractional seconds)
             if (reader.TryGetDouble(out var unixTimeDouble))
             {
@@ -135,12 +135,10 @@ public class CrossApiClient : IDisposable
             PropertyNamingPolicy = null, // Keep PascalCase
             Converters =
             {
-                new FlexibleDateTimeConverter() // Handle different DateTime formats from Java
-            }
+                new FlexibleDateTimeConverter(), // Handle different DateTime formats from Java
+            },
         };
     }
-
-    #region HTTP JSON Operations
 
     /// <summary>
     /// Sends a message as JSON via HTTP POST and receives the serialized message back.
@@ -164,10 +162,6 @@ public class CrossApiClient : IDisposable
         return JsonSerializer.Deserialize<UebermittlungSchriftgutobjekteNachricht>(json, jsonOptions)
             ?? throw new InvalidOperationException("Failed to parse JSON response");
     }
-
-    #endregion
-
-    #region HTTP XML Operations
 
     /// <summary>
     /// Sends a message as XML via HTTP POST and receives the serialized message back.
@@ -193,10 +187,6 @@ public class CrossApiClient : IDisposable
         return (UebermittlungSchriftgutobjekteNachricht)(serializer.Deserialize(reader)
             ?? throw new InvalidOperationException("Failed to parse XML response"));
     }
-
-    #endregion
-
-    #region File Upload Operations
 
     /// <summary>
     /// Uploads a JSON file and receives the compatibility result back.
@@ -230,10 +220,6 @@ public class CrossApiClient : IDisposable
         return await response.Content.ReadAsStringAsync();
     }
 
-    #endregion
-
-    #region Round-Trip Operations
-
     /// <summary>
     /// Sends a message from one API to another and parses the response.
     /// </summary>
@@ -244,10 +230,10 @@ public class CrossApiClient : IDisposable
     {
         // Source API serializes the message
         var jsonFromSource = await SendJsonHttpAsync(sourceApiUrl, original);
-        
+
         // Target API deserializes and re-serializes
         var jsonFromTarget = await SendJsonHttpAsync(targetApiUrl, ParseJsonResponse(jsonFromSource));
-        
+
         return ParseJsonResponse(jsonFromTarget);
     }
 
@@ -261,23 +247,19 @@ public class CrossApiClient : IDisposable
     {
         // Source API serializes the message
         var xmlFromSource = await SendXmlHttpAsync(sourceApiUrl, original);
-        
+
         // Target API deserializes and re-serializes
         var xmlFromTarget = await SendXmlHttpAsync(targetApiUrl, ParseXmlResponse(xmlFromSource));
-        
+
         return ParseXmlResponse(xmlFromTarget);
     }
-
-    #endregion
-
-    #region Serialization Helpers
 
     public string SerializeToJson(UebermittlungSchriftgutobjekteNachricht message)
     {
         return JsonSerializer.Serialize(message, jsonOptions);
     }
 
-    public string SerializeToXml(UebermittlungSchriftgutobjekteNachricht message)
+    public static string SerializeToXml(UebermittlungSchriftgutobjekteNachricht message)
     {
         var serializer = new XmlSerializer(typeof(UebermittlungSchriftgutobjekteNachricht));
         var ns = new XmlSerializerNamespaces();
@@ -288,8 +270,6 @@ public class CrossApiClient : IDisposable
         serializer.Serialize(writer, message, ns);
         return writer.ToString().Replace("encoding=\"utf-16\"", "encoding=\"utf-8\"");
     }
-
-    #endregion
 
     public void Dispose()
     {

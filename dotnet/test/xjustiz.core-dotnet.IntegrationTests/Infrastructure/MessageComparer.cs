@@ -1,26 +1,20 @@
-// <copyright file="MessageComparer.cs" company="X.Justiz Core">
-// Copyright (c) X.Justiz Core. All rights reserved.
+// <copyright file="MessageComparer.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace xjustiz.core_dotnet.IntegrationTests.Infrastructure;
 
 using System.Collections;
 using System.Reflection;
-using System.Text.Json;
 
 /// <summary>
 /// Deep comparison utility for UebermittlungSchriftgutobjekteNachricht and nested models.
 /// Provides detailed reports of any differences found between two object graphs.
 /// </summary>
-public class MessageComparer
+public class MessageComparer(params string[] ignoredPaths)
 {
     private readonly List<string> differences = new();
-    private readonly HashSet<string> ignoredPaths;
-
-    public MessageComparer(params string[] ignoredPaths)
-    {
-        this.ignoredPaths = new HashSet<string>(ignoredPaths, StringComparer.OrdinalIgnoreCase);
-    }
+    private readonly HashSet<string> ignoredPaths = new HashSet<string>(ignoredPaths, StringComparer.OrdinalIgnoreCase);
 
     /// <summary>
     /// Compares two objects deeply and returns a list of differences.
@@ -45,18 +39,26 @@ public class MessageComparer
     {
         // Check if path should be ignored
         if (ignoredPaths.Any(p => path.Contains(p, StringComparison.OrdinalIgnoreCase)))
+        {
             return;
+        }
 
         // Handle nulls
         if (expected == null && actual == null)
+        {
             return;
+        }
 
         // Handle null vs empty collection equivalence
         if (expected == null && actual is IEnumerable en && !en.Cast<object>().Any())
+        {
             return;
+        }
 
         if (actual == null && expected is IEnumerable en2 && !en2.Cast<object>().Any())
+        {
             return;
+        }
 
         if (expected == null)
         {
@@ -86,6 +88,7 @@ public class MessageComparer
             {
                 differences.Add($"{path}: String mismatch - Expected '{expected}', Actual '{actual}'");
             }
+
             return;
         }
 
@@ -110,6 +113,7 @@ public class MessageComparer
             {
                 differences.Add($"{path}: DateTime mismatch - Expected '{expectedDate:O}', Actual '{actualDate:O}'");
             }
+
             return;
         }
 
@@ -120,6 +124,7 @@ public class MessageComparer
             {
                 differences.Add($"{path}: DateTimeOffset mismatch - Expected '{expectedOffset:O}', Actual '{actualOffset:O}'");
             }
+
             return;
         }
 
@@ -130,6 +135,7 @@ public class MessageComparer
             {
                 differences.Add($"{path}: Decimal mismatch - Expected '{expected}', Actual '{actual}'");
             }
+
             return;
         }
 
@@ -140,6 +146,7 @@ public class MessageComparer
             {
                 differences.Add($"{path}: Double mismatch - Expected '{expected}', Actual '{actual}'");
             }
+
             return;
         }
 
@@ -162,19 +169,19 @@ public class MessageComparer
         }
 
         var minCount = Math.Min(expectedList.Count, actualList.Count);
-        for (int i = 0; i < minCount; i++)
+        for (var i = 0; i < minCount; i++)
         {
             CompareObjects(expectedList[i], actualList[i], $"{path}[{i}]");
         }
 
         // Report missing items
-        for (int i = minCount; i < expectedList.Count; i++)
+        for (var i = minCount; i < expectedList.Count; i++)
         {
             differences.Add($"{path}[{i}]: Missing expected item '{expectedList[i]}'");
         }
 
         // Report extra items
-        for (int i = minCount; i < actualList.Count; i++)
+        for (var i = minCount; i < actualList.Count; i++)
         {
             differences.Add($"{path}[{i}]: Unexpected extra item '{actualList[i]}'");
         }
@@ -213,8 +220,8 @@ public class MessageComparer
 
     private static bool IsSimpleType(Type type)
     {
-        return type.IsPrimitive 
-            || type.IsEnum 
+        return type.IsPrimitive
+            || type.IsEnum
             || type == typeof(decimal)
             || type == typeof(DateTime)
             || type == typeof(DateTimeOffset)
@@ -228,12 +235,14 @@ public class MessageComparer
     public static string CreateReport(IReadOnlyList<string> differences, string testName)
     {
         if (differences.Count == 0)
+        {
             return $"[{testName}] ✓ All data matched successfully";
+        }
 
         var sb = new System.Text.StringBuilder();
         sb.AppendLine($"[{testName}] ✗ Found {differences.Count} difference(s):");
         sb.AppendLine(new string('-', 60));
-        
+
         foreach (var diff in differences.Take(50)) // Limit to first 50 differences
         {
             sb.AppendLine($"  • {diff}");

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -30,11 +30,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Using Include="Xunit" />
+	  <ProjectReference Include="..\..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
+		<Using Include="Xunit" />
 	</ItemGroup>
 
 	<ItemGroup>

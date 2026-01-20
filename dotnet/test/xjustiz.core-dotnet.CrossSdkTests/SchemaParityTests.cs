@@ -11,31 +11,19 @@ public class SchemaParityTests
     private static readonly string SchemaPath = Path.Combine(RepoRoot, "schemas", "xjustiz-core.schema.json");
     private static readonly string JavaModelsPath = Path.Combine(RepoRoot, "java", "src", "main", "java", "de", "xjustiz", "core", "models");
 
-    private static string FindRepoRoot()
-    {
-        var dir = Directory.GetCurrentDirectory();
-        while (dir != null)
-        {
-            if (Directory.Exists(Path.Combine(dir, ".git")))
-            {
-                return dir;
-            }
-            dir = Directory.GetParent(dir)?.FullName;
-        }
-        throw new InvalidOperationException("Could not find repository root");
-    }
-
     [Fact]
     public void JsonSchema_ShouldExist()
     {
-        Assert.True(File.Exists(SchemaPath), 
+        Assert.True(
+            File.Exists(SchemaPath),
             $"JSON Schema not found at: {SchemaPath}");
     }
 
     [Fact]
     public void JavaModelsDirectory_ShouldExist()
     {
-        Assert.True(Directory.Exists(JavaModelsPath), 
+        Assert.True(
+            Directory.Exists(JavaModelsPath),
             $"Java models directory not found at: {JavaModelsPath}");
     }
 
@@ -54,14 +42,15 @@ public class SchemaParityTests
             "Geschlecht",
             "Staat",
             "Anschrift",
-            "Schriftgutobjekte"
+            "Schriftgutobjekte",
         };
 
         var missingClasses = expectedClasses
             .Where(className => !File.Exists(Path.Combine(JavaModelsPath, $"{className}.java")))
             .ToList();
 
-        Assert.True(missingClasses.Count == 0,
+        Assert.True(
+            missingClasses.Count == 0,
             $"Missing Java model classes: {string.Join(", ", missingClasses)}");
     }
 
@@ -84,14 +73,14 @@ public class SchemaParityTests
             "Version",
             "AktenzeichenAbsender",
             "AktenzeichenEmpfaenger",
-            "Erstellungszeitpunkt"
+            "Erstellungszeitpunkt",
         };
 
         foreach (var prop in expectedProperties)
         {
             Assert.True(
                 javaContent.Contains($"@JsonProperty(\"{prop}\")") ||
-                javaContent.Contains($"private") && javaContent.Contains(ToCamelCase(prop)),
+                (javaContent.Contains($"private") && javaContent.Contains(ToCamelCase(prop))),
                 $"Java Nachrichtenkopf should have property: {prop}");
         }
     }
@@ -109,7 +98,8 @@ public class SchemaParityTests
         using var doc = JsonDocument.Parse(schemaJson);
 
         // Check root properties
-        Assert.True(doc.RootElement.TryGetProperty("properties", out var properties),
+        Assert.True(
+            doc.RootElement.TryGetProperty("properties", out var properties),
             "Schema should have root properties");
 
         // Verify expected root properties exist
@@ -121,7 +111,26 @@ public class SchemaParityTests
     private static string ToCamelCase(string pascalCase)
     {
         if (string.IsNullOrEmpty(pascalCase))
+        {
             return pascalCase;
+        }
+
         return char.ToLowerInvariant(pascalCase[0]) + pascalCase[1..];
+    }
+
+    private static string FindRepoRoot()
+    {
+        var dir = Directory.GetCurrentDirectory();
+        while (dir != null)
+        {
+            if (Directory.Exists(Path.Combine(dir, ".git")))
+            {
+                return dir;
+            }
+
+            dir = Directory.GetParent(dir)?.FullName;
+        }
+
+        throw new InvalidOperationException("Could not find repository root");
     }
 }

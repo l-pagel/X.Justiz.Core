@@ -1,5 +1,5 @@
-// <copyright file="TestDataProvider.cs" company="X.Justiz Core">
-// Copyright (c) X.Justiz Core. All rights reserved.
+// <copyright file="TestDataProvider.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace xjustiz.core_dotnet.IntegrationTests.Infrastructure;
@@ -20,7 +20,7 @@ public static class TestDataProvider
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     };
 
     /// <summary>
@@ -31,7 +31,7 @@ public static class TestDataProvider
         Arbeitsrecht,
         Erbrecht,
         Fluggastrecht,
-        Mietrecht
+        Mietrecht,
     }
 
     /// <summary>
@@ -90,14 +90,14 @@ public static class TestDataProvider
     {
         return new UebermittlungSchriftgutobjekteNachricht
         {
-            Kopf = new xjustiz.core_dotnet.Models.Entities.Nachrichtenkopf
+            Kopf = new Models.Entities.Nachrichtenkopf
             {
                 Version = "3.5.1",
                 AktenzeichenAbsender = ["TEST-AZ-001"],
                 AktenzeichenEmpfaenger = ["TEST-AZ-002"],
                 Erstellungszeitpunkt = DateTime.UtcNow,
-                EigeneNachrichtenId = "MSG-TEST-001"
-            }
+                EigeneNachrichtenId = "MSG-TEST-001",
+            },
         };
     }
 
@@ -105,7 +105,7 @@ public static class TestDataProvider
     {
         var fileName = $"{dataset.ToString().ToLowerInvariant()}.{extension}";
         var filePath = Path.Combine(ExampleDatasetsPath, fileName);
-        
+
         if (!File.Exists(filePath))
         {
             throw new FileNotFoundException($"Dataset file not found: {filePath}");
@@ -123,8 +123,10 @@ public static class TestDataProvider
             {
                 return dir;
             }
+
             dir = Directory.GetParent(dir)?.FullName;
         }
+
         throw new InvalidOperationException("Could not find repository root");
     }
 }

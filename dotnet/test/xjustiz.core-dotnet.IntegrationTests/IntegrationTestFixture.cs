@@ -1,5 +1,5 @@
-// <copyright file="IntegrationTestFixture.cs" company="X.Justiz Core">
-// Copyright (c) X.Justiz Core. All rights reserved.
+// <copyright file="IntegrationTestFixture.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace xjustiz.core_dotnet.IntegrationTests;
@@ -10,7 +10,7 @@ using xjustiz.core_dotnet.IntegrationTests.Infrastructure;
 /// Shared fixture that manages API lifecycle across all integration tests.
 /// Both APIs are started once and shared across all tests in the collection.
 /// </summary>
-public class IntegrationTestFixture : IAsyncLifetime
+public class IntegrationTestFixture : IAsyncLifetime, IDisposable
 {
     private readonly ApiProcessManager apiManager;
 
@@ -18,21 +18,18 @@ public class IntegrationTestFixture : IAsyncLifetime
     {
         apiManager = new ApiProcessManager();
         Client = new CrossApiClient();
-        Comparer = new MessageComparer(
-            // Paths that may differ and should be ignored
-            "SchemaLocation" // Schema location may have minor formatting differences
-        );
+        Comparer = new MessageComparer("SchemaLocation"); // Schema location may have minor formatting differences
     }
 
     /// <summary>
     /// Gets the base URL for the .NET API.
     /// </summary>
-    public string DotNetApiUrl => apiManager.DotNetApiBaseUrl;
+    public string DotNetApiUrl => ApiProcessManager.DotNetApiBaseUrl;
 
     /// <summary>
     /// Gets the base URL for the Java API.
     /// </summary>
-    public string JavaApiUrl => apiManager.JavaApiBaseUrl;
+    public string JavaApiUrl => ApiProcessManager.JavaApiBaseUrl;
 
     /// <summary>
     /// Gets the cross-API HTTP client.
@@ -88,7 +85,7 @@ public class IntegrationTestFixture : IAsyncLifetime
             Console.WriteLine(new string('!', 70));
             Console.WriteLine($"  FAILED TO START APIs");
             Console.WriteLine($"  Error: {ex.Message}");
-            
+
             if (apiManager.StartupErrors.Count > 0)
             {
                 Console.WriteLine();
@@ -98,7 +95,7 @@ public class IntegrationTestFixture : IAsyncLifetime
                     Console.WriteLine($"    - {error}");
                 }
             }
-            
+
             Console.WriteLine();
             Console.WriteLine("  See README.md for troubleshooting tips.");
             Console.WriteLine(new string('!', 70));
@@ -114,6 +111,11 @@ public class IntegrationTestFixture : IAsyncLifetime
 
         Client.Dispose();
         await apiManager.DisposeAsync();
+    }
+
+    public void Dispose()
+    {
+        throw new NotImplementedException();
     }
 }
 
