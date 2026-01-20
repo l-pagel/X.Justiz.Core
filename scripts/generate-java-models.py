@@ -505,8 +505,109 @@ def parse_csharp_enum(file_path: Path) -> Optional[EnumInfo]:
         
     return enum_info if enum_info.values else None
 
+def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
+    """Generate Java class code for large enums to avoid code size limits."""
+    lines = [f"package {package};", ""]
+    lines.append("import com.fasterxml.jackson.annotation.JsonCreator;")
+    lines.append("import com.fasterxml.jackson.annotation.JsonValue;")
+    lines.append("import jakarta.xml.bind.annotation.adapters.XmlAdapter;")
+    lines.append("import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;")
+    lines.append("import java.util.ArrayList;")
+    lines.append("import java.util.Collections;")
+    lines.append("import java.util.List;")
+    lines.append("")
+    
+    if enum_info.description:
+        lines.append("/**")
+        for line in enum_info.description.split("\n"): lines.append(f" * {line}")
+        lines.append(" */")
+    
+    lines.append(f"@XmlJavaTypeAdapter({enum_info.name}.Adapter.class)")
+    lines.append(f"public class {enum_info.name} {{")
+    lines.append("")
+    
+    # Fields
+    for val in enum_info.values:
+        if val.description:
+            lines.append("    /**")
+            for line in val.description.split("\n"): lines.append(f"     * {line}")
+            lines.append("     */")
+        lines.append(f"    public static {enum_info.name} {val.name};")
+    lines.append("")
+    
+    lines.append("    private final String value;")
+    lines.append("    private final String name;")
+    lines.append(f"    private static final List<{enum_info.name}> $VALUES = new ArrayList<>();")
+    lines.append("")
+    lines.append(f"    private {enum_info.name}(String name, String value) {{ this.name = name; this.value = value; }}")
+    lines.append("")
+    lines.append("    @JsonValue")
+    lines.append("    public String getValue() { return value; }")
+    lines.append("")
+    lines.append("    public String name() { return name; }")
+    lines.append("")
+    lines.append(f"    public static List<{enum_info.name}> values() {{ return Collections.unmodifiableList($VALUES); }}")
+    lines.append("")
+    
+    # Split initialization
+    chunk_size = 500
+    values = enum_info.values
+    chunks = [values[i:i + chunk_size] for i in range(0, len(values), chunk_size)]
+    
+    lines.append("    static {")
+    for i in range(len(chunks)):
+        lines.append(f"        init{i}();")
+    lines.append("    }")
+    lines.append("")
+
+    for i, chunk in enumerate(chunks):
+        lines.append(f"    private static void init{i}() {{")
+        for val in chunk:
+             lines.append(f'        {val.name} = new {enum_info.name}("{val.name}", "{val.xml_value}");')
+             lines.append(f'        $VALUES.add({val.name});')
+        lines.append("    }")
+        lines.append("")
+    
+    # fromValue
+    lines.append("    @JsonCreator")
+    lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
+    lines.append(f"        for ({enum_info.name} e : $VALUES) {{")
+    
+    conditions = ["e.value.equals(value)", "e.name().equalsIgnoreCase(value)"]
+    for val in enum_info.values:
+        if val.aliases:
+            alias_list = ", ".join([f'"{a}"' for a in val.aliases])
+            lines.append(f'            if (e.name().equals("{val.name}")) {{')
+            lines.append(f'                for (String alias : new String[]{{ {alias_list} }}) {{')
+            lines.append('                    if (alias.equalsIgnoreCase(value)) return e;')
+            lines.append('                }')
+            lines.append('            }')
+            
+    lines.append(f"            if ({' || '.join(conditions)}) {{")
+    lines.append("                return e;")
+    lines.append("            }")
+    lines.append("        }")
+    lines.append("        throw new IllegalArgumentException(value);")
+    lines.append("    }")
+    lines.append("")
+    
+    lines.append("    @Override")
+    lines.append("    public String toString() { return value; }")
+    lines.append("")
+    
+    lines.append(f"    public static class Adapter extends XmlAdapter<String, {enum_info.name}> {{")
+    lines.append(f"        public {enum_info.name} unmarshal(String v) {{ return fromValue(v); }}")
+    lines.append(f"        public String marshal({enum_info.name} v) {{ return v != null ? v.getValue() : null; }}")
+    lines.append("    }")
+    
+    lines.append("}")
+    return "\n".join(lines)
+
 def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     """Generate Java enum code."""
+    if len(enum_info.values) > 1000:
+        return generate_large_enum_class(enum_info, package)
+
     lines = [f"package {package};", ""]
     lines.append("import com.fasterxml.jackson.annotation.JsonProperty;")
     lines.append("import com.fasterxml.jackson.annotation.JsonValue;")
