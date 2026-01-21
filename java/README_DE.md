@@ -23,6 +23,16 @@ Java SDK für X.Justiz Core Dokumentenübermittlungsnachrichten.
 ./gradlew build
 ```
 
+## Tests ausführen
+
+Alle Tests ausführen mit:
+
+```bash
+./gradlew test
+```
+
+Testberichte werden in `build/reports/tests/test/index.html` generiert.
+
 ## Verwendung
 
 ### Einfache Serialisierung
@@ -65,6 +75,65 @@ var message = serializer.deserialize(json, UebermittlungSchriftgutobjekteNachric
 ```java
 var xmlSerializer = XJustizSerializer.createDefault(); // XML ist der Standard
 String xml = xmlSerializer.serializePretty(message);
+```
+
+## Hilfsklassen
+
+Das SDK enthält verschiedene Hilfsklassen in `de.xjustiz.core.util`:
+
+### XmlValidator
+
+Validiert XML-Dateien gegen X.Justiz XSD-Schemata:
+
+```java
+import de.xjustiz.core.util.XmlValidator;
+import de.xjustiz.core.util.versioning.XJustizVersion;
+
+List<String> errors = XmlValidator.validate("/pfad/zur/datei.xml", XJustizVersion.V3_5_1);
+if (errors.isEmpty()) {
+    System.out.println("XML ist gültig");
+}
+```
+
+### Zipper
+
+Erstellt XJustiz-ZIP-Archive mit XML und Anhängen:
+
+```java
+import de.xjustiz.core.util.Zipper;
+
+// ZIP-Datei erstellen
+Path zipPath = Zipper.archiveToZipFile(message, Path.of("ausgabe.zip"), List.of(anhang1, anhang2));
+
+// Oder als Byte-Array erhalten
+byte[] zipBytes = Zipper.archiveToZipBytes(message, anhaenge);
+```
+
+### Versionskompatibilität
+
+Prüft die Versionskompatibilität von Nachrichten:
+
+```java
+import de.xjustiz.core.util.versioning.CompatibilityChecker;
+
+var result = CompatibilityChecker.check(message);
+System.out.println("Kompatible X.Justiz-Versionen: " + result.getCompatibleXJustizVersions());
+System.out.println("Kompatible X.Justiz Core-Versionen: " + result.getCompatibleXJustizCoreVersions());
+```
+
+### Versionskonvertierung
+
+Konvertiert Nachrichten in eine bestimmte Version:
+
+```java
+import de.xjustiz.core.util.converter.XJustizConverter;
+import de.xjustiz.core.util.versioning.XJustizVersion;
+
+var conversionResult = XJustizConverter.convert(message, XJustizVersion.V3_4_1);
+var convertedMessage = conversionResult.getResult();
+if (conversionResult.hasLostData()) {
+    System.out.println("Während der Konvertierung verlorene Daten: " + conversionResult.getLostData());
+}
 ```
 
 ## Lizenz
