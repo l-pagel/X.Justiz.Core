@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-    tags:
-      - 'v*'   # e.g. v1.2.3
-  pull_request:
     branches:
       - main
 
@@ -37,21 +34,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Skip branch run if tag exists
-        if: github.event_name == 'push' && github.ref_type == 'branch' && github.ref_name == 'main'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Wait a few seconds to ensure tag is registered in the local git environment after checkout
-          sleep 2
-          # Check if any tag starting with 'v' points to the current commit
-          TAG=$(git tag --points-at HEAD | grep "^v" | head -n 1)
-          if [ -n "$TAG" ]; then
-            echo "A version tag ($TAG) exists for this commit. Cancelling redundant branch run."
-            gh run cancel ${{ github.run_id }}
-            # Wait for cancellation to take effect
-            sleep 10
-          fi
+
 
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
@@ -314,7 +297,6 @@ jobs:
   publish-dotnet:
     name: Publish .NET SDK
     needs: [run-integration-tests]
-    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
@@ -334,10 +316,15 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Get version from tag
+      - name: Get version from file
         id: get_version
+        shell: bash
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
+          if [ ! -f "versions.json" ]; then
+            echo "versions.json not found!"
+            exit 1
+          fi
+          VERSION=$(jq -r '.[0].version' versions.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Update csproj version
@@ -360,6 +347,7 @@ jobs:
         run: dotnet pack $CSPROJ_PATH --configuration Release --no-build -o ./artifacts
 
       - name: Push to NuGet
+        if: github.ref == 'refs/heads/main'
         run: >
           dotnet nuget push "./artifacts/*.nupkg"
           --api-key ${{ secrets.NUGET_API_KEY }}
@@ -367,7 +355,7 @@ jobs:
           --skip-duplicate
 
       - name: Publish Summary
-        if: success()
+        if: success() && github.ref == 'refs/heads/main'
         run: |
           echo "## 🚀 .NET Package Published" >> $GITHUB_STEP_SUMMARY
           echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
@@ -376,7 +364,6 @@ jobs:
   publish-java:
     name: Publish Java SDK
     needs: [run-integration-tests]
-    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -400,13 +387,19 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Get version from tag
+      - name: Get version from file
         id: get_version
+        shell: bash
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
+          if [ ! -f "versions.json" ]; then
+            echo "versions.json not found!"
+            exit 1
+          fi
+          VERSION=$(jq -r '.[0].version' versions.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Publish to Maven Central
+        if: github.ref == 'refs/heads/main'
         working-directory: java
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
@@ -416,7 +409,7 @@ jobs:
         run: gradle publish -Pversion=${{ steps.get_version.outputs.version }}
 
       - name: Java Publish Summary
-        if: success()
+        if: success() && github.ref == 'refs/heads/main'
         run: |
           echo "## 🚀 Java SDK Published" >> $GITHUB_STEP_SUMMARY
           echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
