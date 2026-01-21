@@ -34,9 +34,20 @@ public class Beteiligter {
     @JsonAlias({ "auswahl" })
     private AuswahlBeteiligter auswahl;
 
+    /**
+     * Default constructor.
+     */
     public Beteiligter() {}
 
+    /**
+     * Gets the value of the Auswahl property.
+     * @return the value of the Auswahl property
+     */
     public AuswahlBeteiligter getAuswahl() { return auswahl; }
+    /**
+     * Sets the value of the Auswahl property.
+     * @param auswahl the value to set
+     */
     public void setAuswahl(AuswahlBeteiligter auswahl) { this.auswahl = auswahl; }
 
 }

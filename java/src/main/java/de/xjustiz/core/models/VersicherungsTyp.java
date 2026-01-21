@@ -36,9 +36,20 @@ public class VersicherungsTyp {
     @Nullable
     private String code;
 
+    /**
+     * Default constructor.
+     */
     public VersicherungsTyp() {}
 
+    /**
+     * Gets the value of the Code property.
+     * @return the value of the Code property
+     */
     public String getCode() { return code; }
+    /**
+     * Sets the value of the Code property.
+     * @param code the value to set
+     */
     public void setCode(String code) { this.code = code; }
 
 }

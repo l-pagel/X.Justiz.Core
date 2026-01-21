@@ -36,9 +36,20 @@ public class Grunddaten {
     @Nullable
     private Verfahrensdaten verfahrensdaten;
 
+    /**
+     * Default constructor.
+     */
     public Grunddaten() {}
 
+    /**
+     * Gets the value of the Verfahrensdaten property.
+     * @return the value of the Verfahrensdaten property
+     */
     public Verfahrensdaten getVerfahrensdaten() { return verfahrensdaten; }
+    /**
+     * Sets the value of the Verfahrensdaten property.
+     * @param verfahrensdaten the value to set
+     */
     public void setVerfahrensdaten(Verfahrensdaten verfahrensdaten) { this.verfahrensdaten = verfahrensdaten; }
 
 }

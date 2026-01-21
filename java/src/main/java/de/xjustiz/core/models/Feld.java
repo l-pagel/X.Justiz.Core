@@ -72,18 +72,53 @@ public class Feld {
     @Nullable
     private String wert;
 
+    /**
+     * Default constructor.
+     */
     public Feld() {}
 
+    /**
+     * Gets the value of the Name property.
+     * @return the value of the Name property
+     */
     public String getName() { return name; }
+    /**
+     * Sets the value of the Name property.
+     * @param name the value to set
+     */
     public void setName(String name) { this.name = name; }
 
+    /**
+     * Gets the value of the Beschreibung property.
+     * @return the value of the Beschreibung property
+     */
     public String getBeschreibung() { return beschreibung; }
+    /**
+     * Sets the value of the Beschreibung property.
+     * @param beschreibung the value to set
+     */
     public void setBeschreibung(String beschreibung) { this.beschreibung = beschreibung; }
 
+    /**
+     * Gets the value of the Datentyp property.
+     * @return the value of the Datentyp property
+     */
     public String getDatentyp() { return datentyp; }
+    /**
+     * Sets the value of the Datentyp property.
+     * @param datentyp the value to set
+     */
     public void setDatentyp(String datentyp) { this.datentyp = datentyp; }
 
+    /**
+     * Gets the value of the Wert property.
+     * @return the value of the Wert property
+     */
     public String getWert() { return wert; }
+    /**
+     * Sets the value of the Wert property.
+     * @param wert the value to set
+     */
     public void setWert(String wert) { this.wert = wert; }
 
 }

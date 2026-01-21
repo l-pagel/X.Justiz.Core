@@ -45,12 +45,31 @@ public class HashInfoCore {
     @JsonAlias({ "Value", "value" })
     private String value;
 
+    /**
+     * Default constructor.
+     */
     public HashInfoCore() {}
 
+    /**
+     * Gets the value of the Algorithm property.
+     * @return the value of the Algorithm property
+     */
     public String getAlgorithm() { return algorithm; }
+    /**
+     * Sets the value of the Algorithm property.
+     * @param algorithm the value to set
+     */
     public void setAlgorithm(String algorithm) { this.algorithm = algorithm; }
 
+    /**
+     * Gets the value of the Value property.
+     * @return the value of the Value property
+     */
     public String getValue() { return value; }
+    /**
+     * Sets the value of the Value property.
+     * @param value the value to set
+     */
     public void setValue(String value) { this.value = value; }
 
 }

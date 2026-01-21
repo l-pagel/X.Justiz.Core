@@ -226,9 +226,18 @@ public enum DokumentklasseCode {
 
     private final String value;
     DokumentklasseCode(String value) { this.value = value; }
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
     @JsonValue
     public String getValue() { return value; }
 
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static DokumentklasseCode fromValue(String value) {
         for (DokumentklasseCode e : DokumentklasseCode.values()) {

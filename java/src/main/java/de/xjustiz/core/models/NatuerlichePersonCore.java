@@ -36,9 +36,20 @@ public class NatuerlichePersonCore extends NatuerlichePerson {
     @Nullable
     private AnwendungsspezifischeErweiterung anwendungsspezifischeErweiterung;
 
+    /**
+     * Default constructor.
+     */
     public NatuerlichePersonCore() {}
 
+    /**
+     * Gets the value of the AnwendungsspezifischeErweiterung property.
+     * @return the value of the AnwendungsspezifischeErweiterung property
+     */
     public AnwendungsspezifischeErweiterung getAnwendungsspezifischeErweiterung() { return anwendungsspezifischeErweiterung; }
+    /**
+     * Sets the value of the AnwendungsspezifischeErweiterung property.
+     * @param anwendungsspezifischeErweiterung the value to set
+     */
     public void setAnwendungsspezifischeErweiterung(AnwendungsspezifischeErweiterung anwendungsspezifischeErweiterung) { this.anwendungsspezifischeErweiterung = anwendungsspezifischeErweiterung; }
 
 }

@@ -58,15 +58,42 @@ public class XjustizAkteFachspezifischeDaten {
     @JsonAlias({ "aktenzeichen" })
     private Aktenzeichen aktenzeichen;
 
+    /**
+     * Default constructor.
+     */
     public XjustizAkteFachspezifischeDaten() {}
 
+    /**
+     * Gets the value of the Aktentyp property.
+     * @return the value of the Aktentyp property
+     */
     public Aktentyp getAktentyp() { return aktentyp; }
+    /**
+     * Sets the value of the Aktentyp property.
+     * @param aktentyp the value to set
+     */
     public void setAktentyp(Aktentyp aktentyp) { this.aktentyp = aktentyp; }
 
+    /**
+     * Gets the value of the Anzeigename property.
+     * @return the value of the Anzeigename property
+     */
     public String getAnzeigename() { return anzeigename; }
+    /**
+     * Sets the value of the Anzeigename property.
+     * @param anzeigename the value to set
+     */
     public void setAnzeigename(String anzeigename) { this.anzeigename = anzeigename; }
 
+    /**
+     * Gets the value of the Aktenzeichen property.
+     * @return the value of the Aktenzeichen property
+     */
     public Aktenzeichen getAktenzeichen() { return aktenzeichen; }
+    /**
+     * Sets the value of the Aktenzeichen property.
+     * @param aktenzeichen the value to set
+     */
     public void setAktenzeichen(Aktenzeichen aktenzeichen) { this.aktenzeichen = aktenzeichen; }
 
 }

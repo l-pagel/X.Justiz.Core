@@ -75,18 +75,53 @@ public class Organisation {
     @Nullable
     private Bankverbindung bankverbindung;
 
+    /**
+     * Default constructor.
+     */
     public Organisation() {}
 
+    /**
+     * Gets the value of the Bezeichnung property.
+     * @return the value of the Bezeichnung property
+     */
     public Bezeichnung getBezeichnung() { return bezeichnung; }
+    /**
+     * Sets the value of the Bezeichnung property.
+     * @param bezeichnung the value to set
+     */
     public void setBezeichnung(Bezeichnung bezeichnung) { this.bezeichnung = bezeichnung; }
 
+    /**
+     * Gets the value of the Anschrift property.
+     * @return the value of the Anschrift property
+     */
     public Anschrift getAnschrift() { return anschrift; }
+    /**
+     * Sets the value of the Anschrift property.
+     * @param anschrift the value to set
+     */
     public void setAnschrift(Anschrift anschrift) { this.anschrift = anschrift; }
 
+    /**
+     * Gets the value of the Telekommunikation property.
+     * @return the value of the Telekommunikation property
+     */
     public List<Telekommunikation> getTelekommunikation() { return telekommunikation; }
+    /**
+     * Sets the value of the Telekommunikation property.
+     * @param telekommunikation the value to set
+     */
     public void setTelekommunikation(List<Telekommunikation> telekommunikation) { this.telekommunikation = telekommunikation; }
 
+    /**
+     * Gets the value of the Bankverbindung property.
+     * @return the value of the Bankverbindung property
+     */
     public Bankverbindung getBankverbindung() { return bankverbindung; }
+    /**
+     * Sets the value of the Bankverbindung property.
+     * @param bankverbindung the value to set
+     */
     public void setBankverbindung(Bankverbindung bankverbindung) { this.bankverbindung = bankverbindung; }
 
 }

@@ -72,9 +72,18 @@ public enum GeschlechtCode {
 
     private final String value;
     GeschlechtCode(String value) { this.value = value; }
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
     @JsonValue
     public String getValue() { return value; }
 
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static GeschlechtCode fromValue(String value) {
         for (GeschlechtCode e : GeschlechtCode.values()) {

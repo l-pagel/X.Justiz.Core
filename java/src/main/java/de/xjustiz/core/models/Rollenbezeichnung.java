@@ -59,15 +59,42 @@ public class Rollenbezeichnung {
     @JsonAlias({ "Code", "code" })
     private RollenCode code;
 
+    /**
+     * Default constructor.
+     */
     public Rollenbezeichnung() {}
 
+    /**
+     * Gets the value of the ListVersionId property.
+     * @return the value of the ListVersionId property
+     */
     public String getListVersionId() { return listVersionId; }
+    /**
+     * Sets the value of the ListVersionId property.
+     * @param listVersionId the value to set
+     */
     public void setListVersionId(String listVersionId) { this.listVersionId = listVersionId; }
 
+    /**
+     * Gets the value of the ListUri property.
+     * @return the value of the ListUri property
+     */
     public String getListUri() { return listUri; }
+    /**
+     * Sets the value of the ListUri property.
+     * @param listUri the value to set
+     */
     public void setListUri(String listUri) { this.listUri = listUri; }
 
+    /**
+     * Gets the value of the Code property.
+     * @return the value of the Code property
+     */
     public RollenCode getCode() { return code; }
+    /**
+     * Sets the value of the Code property.
+     * @param code the value to set
+     */
     public void setCode(RollenCode code) { this.code = code; }
 
 }

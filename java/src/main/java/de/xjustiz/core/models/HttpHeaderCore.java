@@ -45,12 +45,31 @@ public class HttpHeaderCore {
     @JsonAlias({ "Value", "value" })
     private String value;
 
+    /**
+     * Default constructor.
+     */
     public HttpHeaderCore() {}
 
+    /**
+     * Gets the value of the Name property.
+     * @return the value of the Name property
+     */
     public String getName() { return name; }
+    /**
+     * Sets the value of the Name property.
+     * @param name the value to set
+     */
     public void setName(String name) { this.name = name; }
 
+    /**
+     * Gets the value of the Value property.
+     * @return the value of the Value property
+     */
     public String getValue() { return value; }
+    /**
+     * Sets the value of the Value property.
+     * @param value the value to set
+     */
     public void setValue(String value) { this.value = value; }
 
 }

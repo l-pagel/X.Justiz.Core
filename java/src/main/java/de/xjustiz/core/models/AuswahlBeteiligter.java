@@ -48,12 +48,31 @@ public class AuswahlBeteiligter {
     @Nullable
     private Organisation org;
 
+    /**
+     * Default constructor.
+     */
     public AuswahlBeteiligter() {}
 
+    /**
+     * Gets the value of the NP property.
+     * @return the value of the NP property
+     */
     public NatuerlichePerson getNP() { return nP; }
+    /**
+     * Sets the value of the NP property.
+     * @param nP the value to set
+     */
     public void setNP(NatuerlichePerson nP) { this.nP = nP; }
 
+    /**
+     * Gets the value of the Org property.
+     * @return the value of the Org property
+     */
     public Organisation getOrg() { return org; }
+    /**
+     * Sets the value of the Org property.
+     * @param org the value to set
+     */
     public void setOrg(Organisation org) { this.org = org; }
 
 }

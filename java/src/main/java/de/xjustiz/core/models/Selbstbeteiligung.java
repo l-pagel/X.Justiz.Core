@@ -60,15 +60,42 @@ public class Selbstbeteiligung {
     @Nullable
     private String umfassendeSelbstbeteiligung;
 
+    /**
+     * Default constructor.
+     */
     public Selbstbeteiligung() {}
 
+    /**
+     * Gets the value of the SelbstbehaltBeteiligung property.
+     * @return the value of the SelbstbehaltBeteiligung property
+     */
     public String getSelbstbehaltBeteiligung() { return selbstbehaltBeteiligung; }
+    /**
+     * Sets the value of the SelbstbehaltBeteiligung property.
+     * @param selbstbehaltBeteiligung the value to set
+     */
     public void setSelbstbehaltBeteiligung(String selbstbehaltBeteiligung) { this.selbstbehaltBeteiligung = selbstbehaltBeteiligung; }
 
+    /**
+     * Gets the value of the TeilweiseUmfassendeSelbstbeteiligung property.
+     * @return the value of the TeilweiseUmfassendeSelbstbeteiligung property
+     */
     public String getTeilweiseUmfassendeSelbstbeteiligung() { return teilweiseUmfassendeSelbstbeteiligung; }
+    /**
+     * Sets the value of the TeilweiseUmfassendeSelbstbeteiligung property.
+     * @param teilweiseUmfassendeSelbstbeteiligung the value to set
+     */
     public void setTeilweiseUmfassendeSelbstbeteiligung(String teilweiseUmfassendeSelbstbeteiligung) { this.teilweiseUmfassendeSelbstbeteiligung = teilweiseUmfassendeSelbstbeteiligung; }
 
+    /**
+     * Gets the value of the UmfassendeSelbstbeteiligung property.
+     * @return the value of the UmfassendeSelbstbeteiligung property
+     */
     public String getUmfassendeSelbstbeteiligung() { return umfassendeSelbstbeteiligung; }
+    /**
+     * Sets the value of the UmfassendeSelbstbeteiligung property.
+     * @param umfassendeSelbstbeteiligung the value to set
+     */
     public void setUmfassendeSelbstbeteiligung(String umfassendeSelbstbeteiligung) { this.umfassendeSelbstbeteiligung = umfassendeSelbstbeteiligung; }
 
 }

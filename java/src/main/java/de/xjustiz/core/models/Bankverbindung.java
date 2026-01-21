@@ -60,15 +60,42 @@ public class Bankverbindung {
     @Nullable
     private String bic;
 
+    /**
+     * Default constructor.
+     */
     public Bankverbindung() {}
 
+    /**
+     * Gets the value of the Kontoinhaber property.
+     * @return the value of the Kontoinhaber property
+     */
     public String getKontoinhaber() { return kontoinhaber; }
+    /**
+     * Sets the value of the Kontoinhaber property.
+     * @param kontoinhaber the value to set
+     */
     public void setKontoinhaber(String kontoinhaber) { this.kontoinhaber = kontoinhaber; }
 
+    /**
+     * Gets the value of the Iban property.
+     * @return the value of the Iban property
+     */
     public String getIban() { return iban; }
+    /**
+     * Sets the value of the Iban property.
+     * @param iban the value to set
+     */
     public void setIban(String iban) { this.iban = iban; }
 
+    /**
+     * Gets the value of the Bic property.
+     * @return the value of the Bic property
+     */
     public String getBic() { return bic; }
+    /**
+     * Sets the value of the Bic property.
+     * @param bic the value to set
+     */
     public void setBic(String bic) { this.bic = bic; }
 
 }

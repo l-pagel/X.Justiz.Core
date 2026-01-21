@@ -136,33 +136,108 @@ public class VersicherungCore {
     @Nullable
     private AnwendungsspezifischeErweiterung anwendungsspezifischeErweiterung;
 
+    /**
+     * Default constructor.
+     */
     public VersicherungCore() {}
 
+    /**
+     * Gets the value of the Versicherungsnummer property.
+     * @return the value of the Versicherungsnummer property
+     */
     public String getVersicherungsnummer() { return versicherungsnummer; }
+    /**
+     * Sets the value of the Versicherungsnummer property.
+     * @param versicherungsnummer the value to set
+     */
     public void setVersicherungsnummer(String versicherungsnummer) { this.versicherungsnummer = versicherungsnummer; }
 
+    /**
+     * Gets the value of the Versicherungsunternehmen property.
+     * @return the value of the Versicherungsunternehmen property
+     */
     public List<Organisation> getVersicherungsunternehmen() { return versicherungsunternehmen; }
+    /**
+     * Sets the value of the Versicherungsunternehmen property.
+     * @param versicherungsunternehmen the value to set
+     */
     public void setVersicherungsunternehmen(List<Organisation> versicherungsunternehmen) { this.versicherungsunternehmen = versicherungsunternehmen; }
 
+    /**
+     * Gets the value of the Anschrift property.
+     * @return the value of the Anschrift property
+     */
     public Anschrift getAnschrift() { return anschrift; }
+    /**
+     * Sets the value of the Anschrift property.
+     * @param anschrift the value to set
+     */
     public void setAnschrift(Anschrift anschrift) { this.anschrift = anschrift; }
 
+    /**
+     * Gets the value of the ReferenzId property.
+     * @return the value of the ReferenzId property
+     */
     public UUID getReferenzId() { return referenzId; }
+    /**
+     * Sets the value of the ReferenzId property.
+     * @param referenzId the value to set
+     */
     public void setReferenzId(UUID referenzId) { this.referenzId = referenzId; }
 
+    /**
+     * Gets the value of the Versicherter property.
+     * @return the value of the Versicherter property
+     */
     public AuswahlBeteiligter getVersicherter() { return versicherter; }
+    /**
+     * Sets the value of the Versicherter property.
+     * @param versicherter the value to set
+     */
     public void setVersicherter(AuswahlBeteiligter versicherter) { this.versicherter = versicherter; }
 
+    /**
+     * Gets the value of the Schadensnummer property.
+     * @return the value of the Schadensnummer property
+     */
     public String getSchadensnummer() { return schadensnummer; }
+    /**
+     * Sets the value of the Schadensnummer property.
+     * @param schadensnummer the value to set
+     */
     public void setSchadensnummer(String schadensnummer) { this.schadensnummer = schadensnummer; }
 
+    /**
+     * Gets the value of the Versicherungstyp property.
+     * @return the value of the Versicherungstyp property
+     */
     public VersicherungsTyp getVersicherungstyp() { return versicherungstyp; }
+    /**
+     * Sets the value of the Versicherungstyp property.
+     * @param versicherungstyp the value to set
+     */
     public void setVersicherungstyp(VersicherungsTyp versicherungstyp) { this.versicherungstyp = versicherungstyp; }
 
+    /**
+     * Gets the value of the Selbstbeteiligung property.
+     * @return the value of the Selbstbeteiligung property
+     */
     public Selbstbeteiligung getSelbstbeteiligung() { return selbstbeteiligung; }
+    /**
+     * Sets the value of the Selbstbeteiligung property.
+     * @param selbstbeteiligung the value to set
+     */
     public void setSelbstbeteiligung(Selbstbeteiligung selbstbeteiligung) { this.selbstbeteiligung = selbstbeteiligung; }
 
+    /**
+     * Gets the value of the AnwendungsspezifischeErweiterung property.
+     * @return the value of the AnwendungsspezifischeErweiterung property
+     */
     public AnwendungsspezifischeErweiterung getAnwendungsspezifischeErweiterung() { return anwendungsspezifischeErweiterung; }
+    /**
+     * Sets the value of the AnwendungsspezifischeErweiterung property.
+     * @param anwendungsspezifischeErweiterung the value to set
+     */
     public void setAnwendungsspezifischeErweiterung(AnwendungsspezifischeErweiterung anwendungsspezifischeErweiterung) { this.anwendungsspezifischeErweiterung = anwendungsspezifischeErweiterung; }
 
 }

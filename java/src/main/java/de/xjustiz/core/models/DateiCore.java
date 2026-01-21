@@ -90,21 +90,64 @@ public class DateiCore extends Datei {
     @Nullable
     private List<ArtifactCore> artefakte;
 
+    /**
+     * Default constructor.
+     */
     public DateiCore() {}
 
+    /**
+     * Gets the value of the Dateiendung property.
+     * @return the value of the Dateiendung property
+     */
     public String getDateiendung() { return dateiendung; }
+    /**
+     * Sets the value of the Dateiendung property.
+     * @param dateiendung the value to set
+     */
     public void setDateiendung(String dateiendung) { this.dateiendung = dateiendung; }
 
+    /**
+     * Gets the value of the ContentType property.
+     * @return the value of the ContentType property
+     */
     public String getContentType() { return contentType; }
+    /**
+     * Sets the value of the ContentType property.
+     * @param contentType the value to set
+     */
     public void setContentType(String contentType) { this.contentType = contentType; }
 
+    /**
+     * Gets the value of the Groesse property.
+     * @return the value of the Groesse property
+     */
     public Long getGroesse() { return groesse; }
+    /**
+     * Sets the value of the Groesse property.
+     * @param groesse the value to set
+     */
     public void setGroesse(Long groesse) { this.groesse = groesse; }
 
+    /**
+     * Gets the value of the Hash property.
+     * @return the value of the Hash property
+     */
     public HashInfoCore getHash() { return hash; }
+    /**
+     * Sets the value of the Hash property.
+     * @param hash the value to set
+     */
     public void setHash(HashInfoCore hash) { this.hash = hash; }
 
+    /**
+     * Gets the value of the Artefakte property.
+     * @return the value of the Artefakte property
+     */
     public List<ArtifactCore> getArtefakte() { return artefakte; }
+    /**
+     * Sets the value of the Artefakte property.
+     * @param artefakte the value to set
+     */
     public void setArtefakte(List<ArtifactCore> artefakte) { this.artefakte = artefakte; }
 
 }

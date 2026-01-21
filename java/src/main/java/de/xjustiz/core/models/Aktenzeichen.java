@@ -34,9 +34,20 @@ public class Aktenzeichen {
     @JsonAlias({ "auswahl" })
     private AuswahlAktenzeichen auswahl;
 
+    /**
+     * Default constructor.
+     */
     public Aktenzeichen() {}
 
+    /**
+     * Gets the value of the Auswahl property.
+     * @return the value of the Auswahl property
+     */
     public AuswahlAktenzeichen getAuswahl() { return auswahl; }
+    /**
+     * Sets the value of the Auswahl property.
+     * @param auswahl the value to set
+     */
     public void setAuswahl(AuswahlAktenzeichen auswahl) { this.auswahl = auswahl; }
 
 }

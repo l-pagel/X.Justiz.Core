@@ -86,21 +86,64 @@ public class AnwendungsspezifischeErweiterung {
     @Nullable
     private List<Feld> felder;
 
+    /**
+     * Default constructor.
+     */
     public AnwendungsspezifischeErweiterung() {}
 
+    /**
+     * Gets the value of the Kennung property.
+     * @return the value of the Kennung property
+     */
     public String getKennung() { return kennung; }
+    /**
+     * Sets the value of the Kennung property.
+     * @param kennung the value to set
+     */
     public void setKennung(String kennung) { this.kennung = kennung; }
 
+    /**
+     * Gets the value of the Name property.
+     * @return the value of the Name property
+     */
     public String getName() { return name; }
+    /**
+     * Sets the value of the Name property.
+     * @param name the value to set
+     */
     public void setName(String name) { this.name = name; }
 
+    /**
+     * Gets the value of the Beschreibung property.
+     * @return the value of the Beschreibung property
+     */
     public String getBeschreibung() { return beschreibung; }
+    /**
+     * Sets the value of the Beschreibung property.
+     * @param beschreibung the value to set
+     */
     public void setBeschreibung(String beschreibung) { this.beschreibung = beschreibung; }
 
+    /**
+     * Gets the value of the Feldgruppen property.
+     * @return the value of the Feldgruppen property
+     */
     public List<Feldgruppe> getFeldgruppen() { return feldgruppen; }
+    /**
+     * Sets the value of the Feldgruppen property.
+     * @param feldgruppen the value to set
+     */
     public void setFeldgruppen(List<Feldgruppe> feldgruppen) { this.feldgruppen = feldgruppen; }
 
+    /**
+     * Gets the value of the Felder property.
+     * @return the value of the Felder property
+     */
     public List<Feld> getFelder() { return felder; }
+    /**
+     * Sets the value of the Felder property.
+     * @param felder the value to set
+     */
     public void setFelder(List<Feld> felder) { this.felder = felder; }
 
 }

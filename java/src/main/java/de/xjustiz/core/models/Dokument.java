@@ -59,15 +59,42 @@ public class Dokument {
     @Nullable
     private OffsetDateTime erstellungszeitpunkt;
 
+    /**
+     * Default constructor.
+     */
     public Dokument() {}
 
+    /**
+     * Gets the value of the Identifikation property.
+     * @return the value of the Identifikation property
+     */
     public Identifikation getIdentifikation() { return identifikation; }
+    /**
+     * Sets the value of the Identifikation property.
+     * @param identifikation the value to set
+     */
     public void setIdentifikation(Identifikation identifikation) { this.identifikation = identifikation; }
 
+    /**
+     * Gets the value of the FachspezifischeDaten property.
+     * @return the value of the FachspezifischeDaten property
+     */
     public XjustizFachspezifischeDaten getFachspezifischeDaten() { return fachspezifischeDaten; }
+    /**
+     * Sets the value of the FachspezifischeDaten property.
+     * @param fachspezifischeDaten the value to set
+     */
     public void setFachspezifischeDaten(XjustizFachspezifischeDaten fachspezifischeDaten) { this.fachspezifischeDaten = fachspezifischeDaten; }
 
+    /**
+     * Gets the value of the Erstellungszeitpunkt property.
+     * @return the value of the Erstellungszeitpunkt property
+     */
     public OffsetDateTime getErstellungszeitpunkt() { return erstellungszeitpunkt; }
+    /**
+     * Sets the value of the Erstellungszeitpunkt property.
+     * @param erstellungszeitpunkt the value to set
+     */
     public void setErstellungszeitpunkt(OffsetDateTime erstellungszeitpunkt) { this.erstellungszeitpunkt = erstellungszeitpunkt; }
 
 }

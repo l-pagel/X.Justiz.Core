@@ -63,15 +63,42 @@ public class Verfahrensdaten {
     @Nullable
     private List<Beteiligung> beteiligungen;
 
+    /**
+     * Default constructor.
+     */
     public Verfahrensdaten() {}
 
+    /**
+     * Gets the value of the Verfahrensnummer property.
+     * @return the value of the Verfahrensnummer property
+     */
     public String getVerfahrensnummer() { return verfahrensnummer; }
+    /**
+     * Sets the value of the Verfahrensnummer property.
+     * @param verfahrensnummer the value to set
+     */
     public void setVerfahrensnummer(String verfahrensnummer) { this.verfahrensnummer = verfahrensnummer; }
 
+    /**
+     * Gets the value of the Instanzdaten property.
+     * @return the value of the Instanzdaten property
+     */
     public Instanzdaten getInstanzdaten() { return instanzdaten; }
+    /**
+     * Sets the value of the Instanzdaten property.
+     * @param instanzdaten the value to set
+     */
     public void setInstanzdaten(Instanzdaten instanzdaten) { this.instanzdaten = instanzdaten; }
 
+    /**
+     * Gets the value of the Beteiligungen property.
+     * @return the value of the Beteiligungen property
+     */
     public List<Beteiligung> getBeteiligungen() { return beteiligungen; }
+    /**
+     * Sets the value of the Beteiligungen property.
+     * @param beteiligungen the value to set
+     */
     public void setBeteiligungen(List<Beteiligung> beteiligungen) { this.beteiligungen = beteiligungen; }
 
 }

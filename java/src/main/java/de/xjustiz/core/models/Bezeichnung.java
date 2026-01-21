@@ -36,9 +36,20 @@ public class Bezeichnung {
     @Nullable
     private String aktuell;
 
+    /**
+     * Default constructor.
+     */
     public Bezeichnung() {}
 
+    /**
+     * Gets the value of the Aktuell property.
+     * @return the value of the Aktuell property
+     */
     public String getAktuell() { return aktuell; }
+    /**
+     * Sets the value of the Aktuell property.
+     * @param aktuell the value to set
+     */
     public void setAktuell(String aktuell) { this.aktuell = aktuell; }
 
 }

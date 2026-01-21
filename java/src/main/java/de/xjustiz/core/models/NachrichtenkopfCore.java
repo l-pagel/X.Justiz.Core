@@ -45,12 +45,31 @@ public class NachrichtenkopfCore extends Nachrichtenkopf {
     @JsonAlias({ "version_XJustizReferenz" })
     private String version_XJustizReferenz;
 
+    /**
+     * Default constructor.
+     */
     public NachrichtenkopfCore() {}
 
+    /**
+     * Gets the value of the Version_XJustizCore property.
+     * @return the value of the Version_XJustizCore property
+     */
     public String getVersion_XJustizCore() { return version_XJustizCore; }
+    /**
+     * Sets the value of the Version_XJustizCore property.
+     * @param version_XJustizCore the value to set
+     */
     public void setVersion_XJustizCore(String version_XJustizCore) { this.version_XJustizCore = version_XJustizCore; }
 
+    /**
+     * Gets the value of the Version_XJustizReferenz property.
+     * @return the value of the Version_XJustizReferenz property
+     */
     public String getVersion_XJustizReferenz() { return version_XJustizReferenz; }
+    /**
+     * Sets the value of the Version_XJustizReferenz property.
+     * @param version_XJustizReferenz the value to set
+     */
     public void setVersion_XJustizReferenz(String version_XJustizReferenz) { this.version_XJustizReferenz = version_XJustizReferenz; }
 
 }

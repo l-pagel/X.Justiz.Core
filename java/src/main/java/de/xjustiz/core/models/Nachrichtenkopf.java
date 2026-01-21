@@ -110,27 +110,86 @@ public class Nachrichtenkopf {
     @JsonAlias({ "version" })
     private String version;
 
+    /**
+     * Default constructor.
+     */
     public Nachrichtenkopf() {}
 
+    /**
+     * Gets the value of the AktenzeichenAbsender property.
+     * @return the value of the AktenzeichenAbsender property
+     */
     public List<String> getAktenzeichenAbsender() { return aktenzeichenAbsender; }
+    /**
+     * Sets the value of the AktenzeichenAbsender property.
+     * @param aktenzeichenAbsender the value to set
+     */
     public void setAktenzeichenAbsender(List<String> aktenzeichenAbsender) { this.aktenzeichenAbsender = aktenzeichenAbsender; }
 
+    /**
+     * Gets the value of the AktenzeichenEmpfaenger property.
+     * @return the value of the AktenzeichenEmpfaenger property
+     */
     public List<String> getAktenzeichenEmpfaenger() { return aktenzeichenEmpfaenger; }
+    /**
+     * Sets the value of the AktenzeichenEmpfaenger property.
+     * @param aktenzeichenEmpfaenger the value to set
+     */
     public void setAktenzeichenEmpfaenger(List<String> aktenzeichenEmpfaenger) { this.aktenzeichenEmpfaenger = aktenzeichenEmpfaenger; }
 
+    /**
+     * Gets the value of the Erstellungszeitpunkt property.
+     * @return the value of the Erstellungszeitpunkt property
+     */
     public OffsetDateTime getErstellungszeitpunkt() { return erstellungszeitpunkt; }
+    /**
+     * Sets the value of the Erstellungszeitpunkt property.
+     * @param erstellungszeitpunkt the value to set
+     */
     public void setErstellungszeitpunkt(OffsetDateTime erstellungszeitpunkt) { this.erstellungszeitpunkt = erstellungszeitpunkt; }
 
+    /**
+     * Gets the value of the Absender property.
+     * @return the value of the Absender property
+     */
     public AuswahlAdresse getAbsender() { return absender; }
+    /**
+     * Sets the value of the Absender property.
+     * @param absender the value to set
+     */
     public void setAbsender(AuswahlAdresse absender) { this.absender = absender; }
 
+    /**
+     * Gets the value of the Empfaenger property.
+     * @return the value of the Empfaenger property
+     */
     public AuswahlAdresse getEmpfaenger() { return empfaenger; }
+    /**
+     * Sets the value of the Empfaenger property.
+     * @param empfaenger the value to set
+     */
     public void setEmpfaenger(AuswahlAdresse empfaenger) { this.empfaenger = empfaenger; }
 
+    /**
+     * Gets the value of the EigeneNachrichtenId property.
+     * @return the value of the EigeneNachrichtenId property
+     */
     public String getEigeneNachrichtenId() { return eigeneNachrichtenId; }
+    /**
+     * Sets the value of the EigeneNachrichtenId property.
+     * @param eigeneNachrichtenId the value to set
+     */
     public void setEigeneNachrichtenId(String eigeneNachrichtenId) { this.eigeneNachrichtenId = eigeneNachrichtenId; }
 
+    /**
+     * Gets the value of the Version property.
+     * @return the value of the Version property
+     */
     public String getVersion() { return version; }
+    /**
+     * Sets the value of the Version property.
+     * @param version the value to set
+     */
     public void setVersion(String version) { this.version = version; }
 
 }

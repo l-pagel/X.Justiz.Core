@@ -58,15 +58,42 @@ public class Akte {
     @JsonAlias({ "fachspezifischeDaten" })
     private XjustizAkteFachspezifischeDaten fachspezifischeDaten;
 
+    /**
+     * Default constructor.
+     */
     public Akte() {}
 
+    /**
+     * Gets the value of the Identifikation property.
+     * @return the value of the Identifikation property
+     */
     public Identifikation getIdentifikation() { return identifikation; }
+    /**
+     * Sets the value of the Identifikation property.
+     * @param identifikation the value to set
+     */
     public void setIdentifikation(Identifikation identifikation) { this.identifikation = identifikation; }
 
+    /**
+     * Gets the value of the AnwendungsspezifischeErweiterung property.
+     * @return the value of the AnwendungsspezifischeErweiterung property
+     */
     public AnwendungsspezifischeErweiterung getAnwendungsspezifischeErweiterung() { return anwendungsspezifischeErweiterung; }
+    /**
+     * Sets the value of the AnwendungsspezifischeErweiterung property.
+     * @param anwendungsspezifischeErweiterung the value to set
+     */
     public void setAnwendungsspezifischeErweiterung(AnwendungsspezifischeErweiterung anwendungsspezifischeErweiterung) { this.anwendungsspezifischeErweiterung = anwendungsspezifischeErweiterung; }
 
+    /**
+     * Gets the value of the FachspezifischeDaten property.
+     * @return the value of the FachspezifischeDaten property
+     */
     public XjustizAkteFachspezifischeDaten getFachspezifischeDaten() { return fachspezifischeDaten; }
+    /**
+     * Sets the value of the FachspezifischeDaten property.
+     * @param fachspezifischeDaten the value to set
+     */
     public void setFachspezifischeDaten(XjustizAkteFachspezifischeDaten fachspezifischeDaten) { this.fachspezifischeDaten = fachspezifischeDaten; }
 
 }

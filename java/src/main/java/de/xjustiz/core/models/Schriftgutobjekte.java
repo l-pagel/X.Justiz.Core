@@ -52,12 +52,31 @@ public class Schriftgutobjekte {
     @Nullable
     private List<Dokument> dokumente;
 
+    /**
+     * Default constructor.
+     */
     public Schriftgutobjekte() {}
 
+    /**
+     * Gets the value of the Akte property.
+     * @return the value of the Akte property
+     */
     public List<Akte> getAkte() { return akte; }
+    /**
+     * Sets the value of the Akte property.
+     * @param akte the value to set
+     */
     public void setAkte(List<Akte> akte) { this.akte = akte; }
 
+    /**
+     * Gets the value of the Dokumente property.
+     * @return the value of the Dokumente property
+     */
     public List<Dokument> getDokumente() { return dokumente; }
+    /**
+     * Sets the value of the Dokumente property.
+     * @param dokumente the value to set
+     */
     public void setDokumente(List<Dokument> dokumente) { this.dokumente = dokumente; }
 
 }

@@ -22031,6 +22031,10 @@ public class GerichtCode {
 
     private GerichtCode(String name, String value) { this.name = name; this.value = value; }
 
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
     @JsonValue
     public String getValue() { return value; }
 
@@ -27567,6 +27571,11 @@ public class GerichtCode {
         $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90);
     }
 
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
     @JsonCreator
     public static GerichtCode fromValue(String value) {
         for (GerichtCode e : $VALUES) {

@@ -48,12 +48,31 @@ public class Telekommunikation {
     @Nullable
     private String verbindung;
 
+    /**
+     * Default constructor.
+     */
     public Telekommunikation() {}
 
+    /**
+     * Gets the value of the Telekommunikationsart property.
+     * @return the value of the Telekommunikationsart property
+     */
     public Telekommunikationsart getTelekommunikationsart() { return telekommunikationsart; }
+    /**
+     * Sets the value of the Telekommunikationsart property.
+     * @param telekommunikationsart the value to set
+     */
     public void setTelekommunikationsart(Telekommunikationsart telekommunikationsart) { this.telekommunikationsart = telekommunikationsart; }
 
+    /**
+     * Gets the value of the Verbindung property.
+     * @return the value of the Verbindung property
+     */
     public String getVerbindung() { return verbindung; }
+    /**
+     * Sets the value of the Verbindung property.
+     * @param verbindung the value to set
+     */
     public void setVerbindung(String verbindung) { this.verbindung = verbindung; }
 
 }

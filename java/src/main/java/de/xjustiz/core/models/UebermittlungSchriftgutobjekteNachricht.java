@@ -75,18 +75,53 @@ public class UebermittlungSchriftgutobjekteNachricht {
     @JsonAlias({ "schemaLocation" })
     private String schemaLocation;
 
+    /**
+     * Default constructor.
+     */
     public UebermittlungSchriftgutobjekteNachricht() {}
 
+    /**
+     * Gets the value of the Kopf property.
+     * @return the value of the Kopf property
+     */
     public Nachrichtenkopf getKopf() { return kopf; }
+    /**
+     * Sets the value of the Kopf property.
+     * @param kopf the value to set
+     */
     public void setKopf(Nachrichtenkopf kopf) { this.kopf = kopf; }
 
+    /**
+     * Gets the value of the Grunddaten property.
+     * @return the value of the Grunddaten property
+     */
     public Grunddaten getGrunddaten() { return grunddaten; }
+    /**
+     * Sets the value of the Grunddaten property.
+     * @param grunddaten the value to set
+     */
     public void setGrunddaten(Grunddaten grunddaten) { this.grunddaten = grunddaten; }
 
+    /**
+     * Gets the value of the Schriftgutobjekte property.
+     * @return the value of the Schriftgutobjekte property
+     */
     public Schriftgutobjekte getSchriftgutobjekte() { return schriftgutobjekte; }
+    /**
+     * Sets the value of the Schriftgutobjekte property.
+     * @param schriftgutobjekte the value to set
+     */
     public void setSchriftgutobjekte(Schriftgutobjekte schriftgutobjekte) { this.schriftgutobjekte = schriftgutobjekte; }
 
+    /**
+     * Gets the value of the SchemaLocation property.
+     * @return the value of the SchemaLocation property
+     */
     public String getSchemaLocation() { return schemaLocation; }
+    /**
+     * Sets the value of the SchemaLocation property.
+     * @param schemaLocation the value to set
+     */
     public void setSchemaLocation(String schemaLocation) { this.schemaLocation = schemaLocation; }
 
 }

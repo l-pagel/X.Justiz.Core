@@ -281,9 +281,18 @@ public enum AktentypCode {
 
     private final String value;
     AktentypCode(String value) { this.value = value; }
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
     @JsonValue
     public String getValue() { return value; }
 
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static AktentypCode fromValue(String value) {
         for (AktentypCode e : AktentypCode.values()) {

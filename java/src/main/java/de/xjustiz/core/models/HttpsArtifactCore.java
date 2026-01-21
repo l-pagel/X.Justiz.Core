@@ -64,15 +64,42 @@ public class HttpsArtifactCore extends ArtifactCore {
     @Nullable
     private List<HttpHeaderCore> headers;
 
+    /**
+     * Default constructor.
+     */
     public HttpsArtifactCore() {}
 
+    /**
+     * Gets the value of the Url property.
+     * @return the value of the Url property
+     */
     public String getUrl() { return url; }
+    /**
+     * Sets the value of the Url property.
+     * @param url the value to set
+     */
     public void setUrl(String url) { this.url = url; }
 
+    /**
+     * Gets the value of the ExpiresAtUtc property.
+     * @return the value of the ExpiresAtUtc property
+     */
     public OffsetDateTime getExpiresAtUtc() { return expiresAtUtc; }
+    /**
+     * Sets the value of the ExpiresAtUtc property.
+     * @param expiresAtUtc the value to set
+     */
     public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) { this.expiresAtUtc = expiresAtUtc; }
 
+    /**
+     * Gets the value of the Headers property.
+     * @return the value of the Headers property
+     */
     public List<HttpHeaderCore> getHeaders() { return headers; }
+    /**
+     * Sets the value of the Headers property.
+     * @param headers the value to set
+     */
     public void setHeaders(List<HttpHeaderCore> headers) { this.headers = headers; }
 
 }

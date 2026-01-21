@@ -22,6 +22,9 @@ import jakarta.xml.bind.annotation.XmlType;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class XjustizFachspezifischeDatenCore extends XjustizFachspezifischeDaten {
 
+    /**
+     * Default constructor.
+     */
     public XjustizFachspezifischeDatenCore() {}
 
 }

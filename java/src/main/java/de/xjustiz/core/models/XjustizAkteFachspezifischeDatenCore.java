@@ -106,30 +106,97 @@ public class XjustizAkteFachspezifischeDatenCore extends XjustizAkteFachspezifis
     @Nullable
     private String terminpraeferenz;
 
+    /**
+     * Default constructor.
+     */
     public XjustizAkteFachspezifischeDatenCore() {}
 
+    /**
+     * Gets the value of the Ziel property.
+     * @return the value of the Ziel property
+     */
     public String getZiel() { return ziel; }
+    /**
+     * Sets the value of the Ziel property.
+     * @param ziel the value to set
+     */
     public void setZiel(String ziel) { this.ziel = ziel; }
 
+    /**
+     * Gets the value of the Nachricht property.
+     * @return the value of the Nachricht property
+     */
     public String getNachricht() { return nachricht; }
+    /**
+     * Sets the value of the Nachricht property.
+     * @param nachricht the value to set
+     */
     public void setNachricht(String nachricht) { this.nachricht = nachricht; }
 
+    /**
+     * Gets the value of the Sendungsmitteilung property.
+     * @return the value of the Sendungsmitteilung property
+     */
     public String getSendungsmitteilung() { return sendungsmitteilung; }
+    /**
+     * Sets the value of the Sendungsmitteilung property.
+     * @param sendungsmitteilung the value to set
+     */
     public void setSendungsmitteilung(String sendungsmitteilung) { this.sendungsmitteilung = sendungsmitteilung; }
 
+    /**
+     * Gets the value of the Notizen property.
+     * @return the value of the Notizen property
+     */
     public String getNotizen() { return notizen; }
+    /**
+     * Sets the value of the Notizen property.
+     * @param notizen the value to set
+     */
     public void setNotizen(String notizen) { this.notizen = notizen; }
 
+    /**
+     * Gets the value of the Anliegen property.
+     * @return the value of the Anliegen property
+     */
     public String getAnliegen() { return anliegen; }
+    /**
+     * Sets the value of the Anliegen property.
+     * @param anliegen the value to set
+     */
     public void setAnliegen(String anliegen) { this.anliegen = anliegen; }
 
+    /**
+     * Gets the value of the Sachverhalt property.
+     * @return the value of the Sachverhalt property
+     */
     public String getSachverhalt() { return sachverhalt; }
+    /**
+     * Sets the value of the Sachverhalt property.
+     * @param sachverhalt the value to set
+     */
     public void setSachverhalt(String sachverhalt) { this.sachverhalt = sachverhalt; }
 
+    /**
+     * Gets the value of the Notarpraeferenz property.
+     * @return the value of the Notarpraeferenz property
+     */
     public String getNotarpraeferenz() { return notarpraeferenz; }
+    /**
+     * Sets the value of the Notarpraeferenz property.
+     * @param notarpraeferenz the value to set
+     */
     public void setNotarpraeferenz(String notarpraeferenz) { this.notarpraeferenz = notarpraeferenz; }
 
+    /**
+     * Gets the value of the Terminpraeferenz property.
+     * @return the value of the Terminpraeferenz property
+     */
     public String getTerminpraeferenz() { return terminpraeferenz; }
+    /**
+     * Sets the value of the Terminpraeferenz property.
+     * @param terminpraeferenz the value to set
+     */
     public void setTerminpraeferenz(String terminpraeferenz) { this.terminpraeferenz = terminpraeferenz; }
 
 }

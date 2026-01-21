@@ -36,9 +36,20 @@ public class AuswahlAktenzeichen {
     @Nullable
     private String freitext;
 
+    /**
+     * Default constructor.
+     */
     public AuswahlAktenzeichen() {}
 
+    /**
+     * Gets the value of the Freitext property.
+     * @return the value of the Freitext property
+     */
     public String getFreitext() { return freitext; }
+    /**
+     * Sets the value of the Freitext property.
+     * @param freitext the value to set
+     */
     public void setFreitext(String freitext) { this.freitext = freitext; }
 
 }

@@ -547,6 +547,10 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
     lines.append("")
     lines.append(f"    private {enum_info.name}(String name, String value) {{ this.name = name; this.value = value; }}")
     lines.append("")
+    lines.append("    /**")
+    lines.append("     * Gets the xml value.")
+    lines.append("     * @return the xml value")
+    lines.append("     */")
     lines.append("    @JsonValue")
     lines.append("    public String getValue() { return value; }")
     lines.append("")
@@ -575,6 +579,11 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
         lines.append("")
     
     # fromValue
+    lines.append("    /**")
+    lines.append("     * Creates an enum from a string value.")
+    lines.append("     * @param value the string value")
+    lines.append(f"     * @return the enum value")
+    lines.append("     */")
     lines.append("    @JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
     lines.append(f"        for ({enum_info.name} e : $VALUES) {{")
@@ -646,9 +655,18 @@ def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     
     lines.append("    private final String value;")
     lines.append(f"    {enum_info.name}(String value) {{ this.value = value; }}")
+    lines.append("    /**")
+    lines.append("     * Gets the xml value.")
+    lines.append("     * @return the xml value")
+    lines.append("     */")
     lines.append("    @JsonValue")
     lines.append("    public String getValue() { return value; }")
     lines.append("")
+    lines.append("    /**")
+    lines.append("     * Creates an enum from a string value.")
+    lines.append("     * @param value the string value")
+    lines.append(f"     * @return the enum value")
+    lines.append("     */")
     lines.append("    @com.fasterxml.jackson.annotation.JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
     lines.append(f"        for ({enum_info.name} e : {enum_info.name}.values()) {{")
@@ -813,13 +831,26 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
         lines.append(f"    private {type_str} {field_name};")
         lines.append("")
     
+    lines.append("    /**")
+    lines.append(f"     * Default constructor.")
+    lines.append("     */")
     lines.append(f"    public {class_info.name}() {{}}")
     lines.append("")
     
     for prop in class_info.properties:
         field_name = prop.name[0].lower() + prop.name[1:]
         type_str = f"List<{prop.type_name}>" if prop.is_list else prop.type_name
+        
+        lines.append("    /**")
+        lines.append(f"     * Gets the value of the {prop.name} property.")
+        lines.append(f"     * @return the value of the {prop.name} property")
+        lines.append("     */")
         lines.append(f"    public {type_str} get{prop.name}() {{ return {field_name}; }}")
+        
+        lines.append("    /**")
+        lines.append(f"     * Sets the value of the {prop.name} property.")
+        lines.append(f"     * @param {field_name} the value to set")
+        lines.append("     */")
         lines.append(f"    public void set{prop.name}({type_str} {field_name}) {{ this.{field_name} = {field_name}; }}")
         lines.append("")
     

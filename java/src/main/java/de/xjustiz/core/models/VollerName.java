@@ -84,21 +84,64 @@ public class VollerName {
     @Nullable
     private String nachname;
 
+    /**
+     * Default constructor.
+     */
     public VollerName() {}
 
+    /**
+     * Gets the value of the Vorname property.
+     * @return the value of the Vorname property
+     */
     public String getVorname() { return vorname; }
+    /**
+     * Sets the value of the Vorname property.
+     * @param vorname the value to set
+     */
     public void setVorname(String vorname) { this.vorname = vorname; }
 
+    /**
+     * Gets the value of the Rufname property.
+     * @return the value of the Rufname property
+     */
     public String getRufname() { return rufname; }
+    /**
+     * Sets the value of the Rufname property.
+     * @param rufname the value to set
+     */
     public void setRufname(String rufname) { this.rufname = rufname; }
 
+    /**
+     * Gets the value of the Titel property.
+     * @return the value of the Titel property
+     */
     public String getTitel() { return titel; }
+    /**
+     * Sets the value of the Titel property.
+     * @param titel the value to set
+     */
     public void setTitel(String titel) { this.titel = titel; }
 
+    /**
+     * Gets the value of the Namensvorsatz property.
+     * @return the value of the Namensvorsatz property
+     */
     public String getNamensvorsatz() { return namensvorsatz; }
+    /**
+     * Sets the value of the Namensvorsatz property.
+     * @param namensvorsatz the value to set
+     */
     public void setNamensvorsatz(String namensvorsatz) { this.namensvorsatz = namensvorsatz; }
 
+    /**
+     * Gets the value of the Nachname property.
+     * @return the value of the Nachname property
+     */
     public String getNachname() { return nachname; }
+    /**
+     * Sets the value of the Nachname property.
+     * @param nachname the value to set
+     */
     public void setNachname(String nachname) { this.nachname = nachname; }
 
 }

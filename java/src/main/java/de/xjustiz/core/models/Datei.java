@@ -47,12 +47,31 @@ public class Datei {
     @JsonAlias({ "bestandteil" })
     private Bestandteiltyp bestandteil;
 
+    /**
+     * Default constructor.
+     */
     public Datei() {}
 
+    /**
+     * Gets the value of the Dateiname property.
+     * @return the value of the Dateiname property
+     */
     public String getDateiname() { return dateiname; }
+    /**
+     * Sets the value of the Dateiname property.
+     * @param dateiname the value to set
+     */
     public void setDateiname(String dateiname) { this.dateiname = dateiname; }
 
+    /**
+     * Gets the value of the Bestandteil property.
+     * @return the value of the Bestandteil property
+     */
     public Bestandteiltyp getBestandteil() { return bestandteil; }
+    /**
+     * Sets the value of the Bestandteil property.
+     * @param bestandteil the value to set
+     */
     public void setBestandteil(Bestandteiltyp bestandteil) { this.bestandteil = bestandteil; }
 
 }

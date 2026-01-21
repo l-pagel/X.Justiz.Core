@@ -84,21 +84,64 @@ public class AuswahlAdresse {
     @Nullable
     private String empfaengerPolizei;
 
+    /**
+     * Default constructor.
+     */
     public AuswahlAdresse() {}
 
+    /**
+     * Gets the value of the AbsenderSonstige property.
+     * @return the value of the AbsenderSonstige property
+     */
     public String getAbsenderSonstige() { return absenderSonstige; }
+    /**
+     * Sets the value of the AbsenderSonstige property.
+     * @param absenderSonstige the value to set
+     */
     public void setAbsenderSonstige(String absenderSonstige) { this.absenderSonstige = absenderSonstige; }
 
+    /**
+     * Gets the value of the EmpfaengerSonstige property.
+     * @return the value of the EmpfaengerSonstige property
+     */
     public String getEmpfaengerSonstige() { return empfaengerSonstige; }
+    /**
+     * Sets the value of the EmpfaengerSonstige property.
+     * @param empfaengerSonstige the value to set
+     */
     public void setEmpfaengerSonstige(String empfaengerSonstige) { this.empfaengerSonstige = empfaengerSonstige; }
 
+    /**
+     * Gets the value of the EmpfaengerGericht property.
+     * @return the value of the EmpfaengerGericht property
+     */
     public String getEmpfaengerGericht() { return empfaengerGericht; }
+    /**
+     * Sets the value of the EmpfaengerGericht property.
+     * @param empfaengerGericht the value to set
+     */
     public void setEmpfaengerGericht(String empfaengerGericht) { this.empfaengerGericht = empfaengerGericht; }
 
+    /**
+     * Gets the value of the EmpfaengerRvTraeger property.
+     * @return the value of the EmpfaengerRvTraeger property
+     */
     public String getEmpfaengerRvTraeger() { return empfaengerRvTraeger; }
+    /**
+     * Sets the value of the EmpfaengerRvTraeger property.
+     * @param empfaengerRvTraeger the value to set
+     */
     public void setEmpfaengerRvTraeger(String empfaengerRvTraeger) { this.empfaengerRvTraeger = empfaengerRvTraeger; }
 
+    /**
+     * Gets the value of the EmpfaengerPolizei property.
+     * @return the value of the EmpfaengerPolizei property
+     */
     public String getEmpfaengerPolizei() { return empfaengerPolizei; }
+    /**
+     * Sets the value of the EmpfaengerPolizei property.
+     * @param empfaengerPolizei the value to set
+     */
     public void setEmpfaengerPolizei(String empfaengerPolizei) { this.empfaengerPolizei = empfaengerPolizei; }
 
 }

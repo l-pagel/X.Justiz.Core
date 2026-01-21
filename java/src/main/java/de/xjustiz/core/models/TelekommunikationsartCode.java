@@ -105,9 +105,18 @@ public enum TelekommunikationsartCode {
 
     private final String value;
     TelekommunikationsartCode(String value) { this.value = value; }
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
     @JsonValue
     public String getValue() { return value; }
 
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static TelekommunikationsartCode fromValue(String value) {
         for (TelekommunikationsartCode e : TelekommunikationsartCode.values()) {

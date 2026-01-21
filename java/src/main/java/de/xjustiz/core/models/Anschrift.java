@@ -84,21 +84,64 @@ public class Anschrift {
     @Nullable
     private Staat staat;
 
+    /**
+     * Default constructor.
+     */
     public Anschrift() {}
 
+    /**
+     * Gets the value of the Strasse property.
+     * @return the value of the Strasse property
+     */
     public String getStrasse() { return strasse; }
+    /**
+     * Sets the value of the Strasse property.
+     * @param strasse the value to set
+     */
     public void setStrasse(String strasse) { this.strasse = strasse; }
 
+    /**
+     * Gets the value of the Hausnummer property.
+     * @return the value of the Hausnummer property
+     */
     public String getHausnummer() { return hausnummer; }
+    /**
+     * Sets the value of the Hausnummer property.
+     * @param hausnummer the value to set
+     */
     public void setHausnummer(String hausnummer) { this.hausnummer = hausnummer; }
 
+    /**
+     * Gets the value of the Postleitzahl property.
+     * @return the value of the Postleitzahl property
+     */
     public String getPostleitzahl() { return postleitzahl; }
+    /**
+     * Sets the value of the Postleitzahl property.
+     * @param postleitzahl the value to set
+     */
     public void setPostleitzahl(String postleitzahl) { this.postleitzahl = postleitzahl; }
 
+    /**
+     * Gets the value of the Ort property.
+     * @return the value of the Ort property
+     */
     public String getOrt() { return ort; }
+    /**
+     * Sets the value of the Ort property.
+     * @param ort the value to set
+     */
     public void setOrt(String ort) { this.ort = ort; }
 
+    /**
+     * Gets the value of the Staat property.
+     * @return the value of the Staat property
+     */
     public Staat getStaat() { return staat; }
+    /**
+     * Sets the value of the Staat property.
+     * @param staat the value to set
+     */
     public void setStaat(Staat staat) { this.staat = staat; }
 
 }

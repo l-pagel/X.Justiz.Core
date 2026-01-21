@@ -47,12 +47,31 @@ public class XjustizFachspezifischeDaten {
     @JsonAlias({ "datei" })
     private Datei datei;
 
+    /**
+     * Default constructor.
+     */
     public XjustizFachspezifischeDaten() {}
 
+    /**
+     * Gets the value of the Dokumentklasse property.
+     * @return the value of the Dokumentklasse property
+     */
     public Dokumentklasse getDokumentklasse() { return dokumentklasse; }
+    /**
+     * Sets the value of the Dokumentklasse property.
+     * @param dokumentklasse the value to set
+     */
     public void setDokumentklasse(Dokumentklasse dokumentklasse) { this.dokumentklasse = dokumentklasse; }
 
+    /**
+     * Gets the value of the Datei property.
+     * @return the value of the Datei property
+     */
     public Datei getDatei() { return datei; }
+    /**
+     * Sets the value of the Datei property.
+     * @param datei the value to set
+     */
     public void setDatei(Datei datei) { this.datei = datei; }
 
 }

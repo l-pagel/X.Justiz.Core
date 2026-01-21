@@ -60,15 +60,42 @@ public class Instanzdaten {
     @Nullable
     private AuswahlInstanzbehoerde auswahlInstanzbehoerde;
 
+    /**
+     * Default constructor.
+     */
     public Instanzdaten() {}
 
+    /**
+     * Gets the value of the Instanznummer property.
+     * @return the value of the Instanznummer property
+     */
     public String getInstanznummer() { return instanznummer; }
+    /**
+     * Sets the value of the Instanznummer property.
+     * @param instanznummer the value to set
+     */
     public void setInstanznummer(String instanznummer) { this.instanznummer = instanznummer; }
 
+    /**
+     * Gets the value of the Sachgebietszusatz property.
+     * @return the value of the Sachgebietszusatz property
+     */
     public String getSachgebietszusatz() { return sachgebietszusatz; }
+    /**
+     * Sets the value of the Sachgebietszusatz property.
+     * @param sachgebietszusatz the value to set
+     */
     public void setSachgebietszusatz(String sachgebietszusatz) { this.sachgebietszusatz = sachgebietszusatz; }
 
+    /**
+     * Gets the value of the AuswahlInstanzbehoerde property.
+     * @return the value of the AuswahlInstanzbehoerde property
+     */
     public AuswahlInstanzbehoerde getAuswahlInstanzbehoerde() { return auswahlInstanzbehoerde; }
+    /**
+     * Sets the value of the AuswahlInstanzbehoerde property.
+     * @param auswahlInstanzbehoerde the value to set
+     */
     public void setAuswahlInstanzbehoerde(AuswahlInstanzbehoerde auswahlInstanzbehoerde) { this.auswahlInstanzbehoerde = auswahlInstanzbehoerde; }
 
 }

@@ -45,12 +45,31 @@ public class Identifikation {
     @JsonAlias({ "nummerImUebergeordnetenContainer" })
     private String nummerImUebergeordnetenContainer;
 
+    /**
+     * Default constructor.
+     */
     public Identifikation() {}
 
+    /**
+     * Gets the value of the Id property.
+     * @return the value of the Id property
+     */
     public String getId() { return id; }
+    /**
+     * Sets the value of the Id property.
+     * @param id the value to set
+     */
     public void setId(String id) { this.id = id; }
 
+    /**
+     * Gets the value of the NummerImUebergeordnetenContainer property.
+     * @return the value of the NummerImUebergeordnetenContainer property
+     */
     public String getNummerImUebergeordnetenContainer() { return nummerImUebergeordnetenContainer; }
+    /**
+     * Sets the value of the NummerImUebergeordnetenContainer property.
+     * @param nummerImUebergeordnetenContainer the value to set
+     */
     public void setNummerImUebergeordnetenContainer(String nummerImUebergeordnetenContainer) { this.nummerImUebergeordnetenContainer = nummerImUebergeordnetenContainer; }
 
 }

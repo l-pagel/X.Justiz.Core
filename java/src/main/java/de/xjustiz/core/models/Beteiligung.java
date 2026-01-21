@@ -45,12 +45,31 @@ public class Beteiligung {
     @JsonAlias({ "beteiligter" })
     private Beteiligter beteiligter;
 
+    /**
+     * Default constructor.
+     */
     public Beteiligung() {}
 
+    /**
+     * Gets the value of the Rolle property.
+     * @return the value of the Rolle property
+     */
     public Rolle getRolle() { return rolle; }
+    /**
+     * Sets the value of the Rolle property.
+     * @param rolle the value to set
+     */
     public void setRolle(Rolle rolle) { this.rolle = rolle; }
 
+    /**
+     * Gets the value of the Beteiligter property.
+     * @return the value of the Beteiligter property
+     */
     public Beteiligter getBeteiligter() { return beteiligter; }
+    /**
+     * Sets the value of the Beteiligter property.
+     * @param beteiligter the value to set
+     */
     public void setBeteiligter(Beteiligter beteiligter) { this.beteiligter = beteiligter; }
 
 }

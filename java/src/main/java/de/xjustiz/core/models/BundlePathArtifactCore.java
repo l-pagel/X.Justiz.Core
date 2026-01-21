@@ -34,9 +34,20 @@ public class BundlePathArtifactCore extends ArtifactCore {
     @JsonAlias({ "Path", "path" })
     private String path;
 
+    /**
+     * Default constructor.
+     */
     public BundlePathArtifactCore() {}
 
+    /**
+     * Gets the value of the Path property.
+     * @return the value of the Path property
+     */
     public String getPath() { return path; }
+    /**
+     * Sets the value of the Path property.
+     * @param path the value to set
+     */
     public void setPath(String path) { this.path = path; }
 
 }

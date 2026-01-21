@@ -36,9 +36,20 @@ public class AuswahlInstanzbehoerde {
     @Nullable
     private Gericht gericht;
 
+    /**
+     * Default constructor.
+     */
     public AuswahlInstanzbehoerde() {}
 
+    /**
+     * Gets the value of the Gericht property.
+     * @return the value of the Gericht property
+     */
     public Gericht getGericht() { return gericht; }
+    /**
+     * Sets the value of the Gericht property.
+     * @param gericht the value to set
+     */
     public void setGericht(Gericht gericht) { this.gericht = gericht; }
 
 }
