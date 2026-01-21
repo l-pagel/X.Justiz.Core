@@ -323,7 +323,7 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@e89d40939c28e39f97cf32126055eeae86ba74ec # v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
@@ -358,6 +358,7 @@ jobs:
           # Note: 'dotnet nuget sign' typically requires a certificate (pfx). 
           # Assuming the environment is prepared or the specific GPG setup works as implied.
           # If a specific certificate file is needed, add --certificate-path <path>.
+          # Using http for timestamping as https is not supported by digicert timestamp service. Integrity is guaranteed by the signed timestamp.
           dotnet nuget sign "./artifacts/*.nupkg" --timestamper http://timestamp.digicert.com
 
       - name: Push to NuGet
@@ -396,7 +397,7 @@ jobs:
         uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@e89d40939c28e39f97cf32126055eeae86ba74ec # v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
