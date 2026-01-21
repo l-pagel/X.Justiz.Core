@@ -182,7 +182,7 @@ jobs:
 
   generate-xsd:
     name: Generate XSDs
-    needs: [build-and-test, sync-changelogs]
+    needs: [build-and-test]
     runs-on: ubuntu-latest
     permissions:
       contents: write
