@@ -1061,11 +1061,11 @@ public enum StaatCode {
     Dschibuti("230"),
 
     /**
-     * <b>C&#244;te d’Ivoire</b>
+     * <b>C&#244;te d'Ivoire</b>
      *  * <p>
-     *  *  Staatenname-kurz: C&#244;te d’Ivoire
+     *  *  Staatenname-kurz: C&#244;te d'Ivoire
      *  * <p>
-     *  *  Staatenname-voll: die Republik C&#244;te d’Ivoire
+     *  *  Staatenname-voll: die Republik C&#244;te d'Ivoire
      *  * <p>
      *  *  Schluessel-Staat: 231
      *  * <p>

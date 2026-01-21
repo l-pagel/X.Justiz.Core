@@ -67,7 +67,7 @@ public class UebermittlungSchriftgutobjekteNachricht {
     /**
      * Gibt die Zuordnung zwischen XML-Namespaces und den Speicherorten der zugehörigen XML-Schemadateien an. Die Angabe erfolgt als Paare aus Namespace-URI und Schema-URL und dient Parsern/Validatoren als Hinweis, wo das Schema zu finden ist.
      * <p>
-     * <u><b>Schema location:</b></u> Specifies the association between XML namespaces and the locations of their corresponding XML Schema documents. Provided as namespace–URI / schema‐URL pairs, it acts as a hint to validators and parsers where the schemas can be found.
+     * <u><b>Schema location:</b></u> Specifies the association between XML namespaces and the locations of their corresponding XML Schema documents. Provided as namespace-URI / schema-URL pairs, it acts as a hint to validators and parsers where the schemas can be found.
      */
     @XmlAttribute(name = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")
     @JacksonXmlProperty(isAttribute = true, localName = "schemaLocation", namespace = "http://www.w3.org/2001/XMLSchema-instance")

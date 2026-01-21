@@ -93,6 +93,12 @@ def convert_csharp_doc_to_javadoc(doc: str) -> str:
     if not doc:
         return ""
     result = doc.strip()
+
+    # Sanitize special characters to prevent Mojibake / encoding issues
+    result = result.replace("\u2013", "-").replace("\u2014", "--")  # Dashes
+    result = result.replace("\u2010", "-")                          # Hyphen (U+2010) - causes 0x90 error in 1252
+    result = result.replace("\u2018", "'").replace("\u2019", "'")   # Smart single quotes
+    result = result.replace("\u201C", '"').replace("\u201D", '"')   # Smart double quotes
     
     def convert_see_cref(match):
         cref = match.group(1)
