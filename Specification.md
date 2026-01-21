@@ -1,16 +1,8 @@
 # X.Justiz-Core Data Model Specification
 
-Dieses Dokument bietet einen umfassenden Überblick über das X.Justiz-Core-Datenmodell, einschließlich seiner Klassen, Eigenschaften und Versionierung.
+> [!TIP]  
+> **🌐 [Deutsche Version hier verfügbar](Specification_DE.md) 👈**
 
-### Verwendung der Tabelle
-Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
-- **Class**: Die fettgedruckte Container-Klasse für eine Gruppe von Eigenschaften.
-- **Property / Type**: Der Name des Feldes und der zugehörige Datentyp. Komplexe Typen (verknüpfte Klassen) sind **fett** gedruckt.
-- **Core Only**: Markiert mit einem `x`, wenn diese spezifische Klasse oder Eigenschaft eine Erweiterung ist, die exklusiv durch X.Justiz-Core eingeführt wurde.
-- **Release X.Justiz**: Die ursprüngliche X.Justiz-Version, in der dieses Element erstmals eingeführt wurde (markiert mit `-` bei Core-only Erweiterungen).
-- **Release Core**: Die X.Justiz-Core-Version, ab der dieses Element verfügbar ist.
-
----
 
 This document provides a comprehensive overview of the X.Justiz-Core data model, detailing its classes, properties, and versioning.
 

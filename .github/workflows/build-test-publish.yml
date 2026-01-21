@@ -3,24 +3,22 @@ name: Build, Test and Publish
 on:
   push:
     branches:
-      - main
-    tags:
-      - 'v*'   # e.g. v1.2.3
+      - '**'
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.sha }}
-  cancel-in-progress: ${{ github.ref_type == 'tag' }}
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
+
   build-and-test:
-    name: Build, Test and Analyze
+    name: Build, Test .NET SDK
     runs-on: ubuntu-latest
-    if: |
-      github.ref_type == 'tag' || 
-      (github.ref_name == 'main' && !startsWith(github.ref, 'refs/tags/'))
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
-      TEST_PROJECT_PATH: dotnet/src/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
+      TEST_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
     permissions:
       actions: write  # This is the required permission for 'gh run cancel'
       contents: write # Required to checkout code/read tags
@@ -36,21 +34,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Skip branch run if tag exists
-        if: github.ref_type == 'branch' && github.ref_name == 'main'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Wait a few seconds to ensure tag is registered in the local git environment after checkout
-          sleep 2
-          # Check if any tag starting with 'v' points to the current commit
-          TAG=$(git tag --points-at HEAD | grep "^v" | head -n 1)
-          if [ -n "$TAG" ]; then
-            echo "A version tag ($TAG) exists for this commit. Cancelling redundant branch run."
-            gh run cancel ${{ github.run_id }}
-            # Wait for cancellation to take effect
-            sleep 10
-          fi
+
 
       - name: Cache SonarQube Cloud packages
         uses: actions/cache@v4
@@ -88,9 +72,55 @@ jobs:
         run: |
           ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*,scripts/**/*" /d:sonar.cpd.exclusions="**/StaatCodeLists.cs,**/GerichtCodeLists.cs,**/DokumentklasseCodeLists.cs" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
           dotnet build $CSPROJ_PATH
-          dotnet test $TEST_PROJECT_PATH --logger trx --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+          dotnet test $TEST_PROJECT_PATH --logger "trx;LogFileName=test-results.trx" --logger "junit;LogFileName=test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
+      - name: Test Summary
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
+        if: always()
+        with:
+          paths: "**/*test-results.xml"
+
+      - name: Build Summary
+        if: always()
+        run: |
+          echo "## 🛠️ .NET Build Status" >> $GITHUB_STEP_SUMMARY
+          echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+          echo "| Build | ${{ job.status == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| SonarCloud | [View Analysis](https://sonarcloud.io/dashboard?id=l-pagel_X.Justiz.Core) 🔍 |" >> $GITHUB_STEP_SUMMARY
+
+  sync-changelogs:
+    name: Sync Changelogs
+    needs: [build-and-test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Sync Changelog Files
+        run: python scripts/sync_versions.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add Changelog.md Changelog_DE.md
+          
+          if git diff --staged --quiet; then
+            echo "No changes to changelogs."
+          else
+            git commit -m "chore: sync changelogs from versions.json [skip ci]"
+            git push
+            echo "::notice ::Changelogs updated and pushed."
+          fi
 
   verify-documentation:
     name: Verify Data Model Documentation
@@ -106,18 +136,44 @@ jobs:
           python-version: '3.x'
 
       - name: Run verification script
-        run: python scripts/verify_documentation.py
+        id: verify
+        run: |
+          python scripts/verify_documentation.py > verification_output.txt
+          cat verification_output.txt
+          
+          # Extract stats
+          TYPES=$(grep "Total documented types:" verification_output.txt | cut -d: -f2 | xargs)
+          PROPS=$(grep "Total documented properties:" verification_output.txt | cut -d: -f2 | xargs)
+          
+          echo "types=$TYPES" >> $GITHUB_OUTPUT
+          echo "props=$PROPS" >> $GITHUB_OUTPUT
+
+      - name: Documentation Summary
+        if: always()
+        run: |
+          echo "## 📚 Documentation Verification" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.verify.outcome }}" == "success" ]; then
+            echo "✅ **Verification Passed**" >> $GITHUB_STEP_SUMMARY
+            echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+            echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+            echo "| Documented Types | ${{ steps.verify.outputs.types }} |" >> $GITHUB_STEP_SUMMARY
+            echo "| Documented Properties | ${{ steps.verify.outputs.props }} |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Verification Failed**" >> $GITHUB_STEP_SUMMARY
+            echo "Please check the job logs for missing types or properties." >> $GITHUB_STEP_SUMMARY
+          fi
 
   generate-xsd:
-    name: Generate and Push XSDs
+    name: Generate XSDs
     needs: [build-and-test]
     runs-on: ubuntu-latest
     permissions:
-      actions: write  # This is the required permission for 'gh run cancel'
-      contents: write # Required to checkout code/read tags
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -127,27 +183,120 @@ jobs:
       - name: Generate XSDs
         run: dotnet run --project dotnet/src/xjustiz.core-dotnet.XsdGenerator/xjustiz.core-dotnet.XsdGenerator.csproj -- "${{ github.workspace }}"
 
+      - name: Verify XSDs generated successfully
+        run: |
+          if [ ! -d "X.Justiz-Core-Versions" ] || [ ! -d "schemas" ]; then
+            echo "ERROR: XSD generation failed - expected directories not found"
+            exit 1
+          fi
+          echo "XSD generation successful"
+
       - name: Commit and Push generated XSDs
+        if: github.event_name == 'push'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -f X.Justiz-Core-Versions
+          git add -f X.Justiz-Core-Versions schemas
+
+          echo "## 📄 XSD Generation Results" >> $GITHUB_STEP_SUMMARY
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "✅ **No changes**: Schemas are up to date." >> $GITHUB_STEP_SUMMARY
           else
-            git commit -m "chore: update generated XSDs [skip ci]"
+            # Capture changed files
+            CHANGED_FILES=$(git diff --staged --name-only | sed 's/^/- /')
+            
+            git commit -m "chore: update generated XSDs and schemas [skip ci]"
+
+            # Pull latest changes to avoid conflicts (e.g. from sync-changelogs)
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+
             if [[ "${{ github.ref_type }}" == "tag" ]]; then
               echo "Pushing to main since we are on a tag"
               git push origin HEAD:main
+              echo "⚠️ **Changes detected**: Updated XSDs have been pushed to \`main\`." >> $GITHUB_STEP_SUMMARY
             else
               git push origin HEAD:${{ github.ref_name }}
+              echo "⚠️ **Changes detected**: Updated XSDs have been pushed to \`${{ github.ref_name }}\`." >> $GITHUB_STEP_SUMMARY
             fi
+
+            echo "<details><summary>View changed files</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "$CHANGED_FILES" >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
           fi
 
-  publish:
-    name: Version and Publish
-    needs: [build-and-test, generate-xsd, verify-documentation]
-    if: startsWith(github.ref, 'refs/tags/v')
+  build-java-sdk:
+    name: Build and Test Java SDK
+    needs: [build-and-test, generate-xsd, verify-documentation, sync-changelogs]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull latest changes (push events only)
+        if: github.event_name == 'push'
+        run: |
+          if ! git pull origin ${{ github.ref_name }}; then
+            echo "Warning: git pull from origin '${{ github.ref_name }}' failed; continuing without pulled changes." >&2
+          fi
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
+
+      - name: Build and Test Java SDK
+        working-directory: java
+        run: gradle build test
+
+      - name: Java Test Summary
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
+        if: always()
+        with:
+          paths: "**/test-results/**/*.xml"
+
+
+  run-integration-tests:
+    name: Run Integration & Cross-SDK Tests
+    needs: [build-and-test, build-java-sdk]
+    runs-on: ubuntu-latest
+    env:
+      TEST_INTEGRATION_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj
+      TEST_CROSS_PARITY_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.CrossSdkTests/xjustiz.core-dotnet.CrossSdkTests.csproj
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Make gradlew executable
+        run: chmod +x java/gradlew
+
+      - name: Test Integration
+        run: dotnet test $TEST_INTEGRATION_PROJECT_PATH --logger "trx;LogFileName=integration-test-results.trx" --logger "junit;LogFileName=integration-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+
+      - name: Test Cross-SDK Parity
+        run: dotnet test $TEST_CROSS_PARITY_PROJECT_PATH --logger "trx;LogFileName=cross-sdk-test-results.trx" --logger "junit;LogFileName=cross-sdk-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+
+      - name: Test Summary
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
+        if: always()
+        with:
+          paths: "**/*test-results.xml"
+
+
+  publish-dotnet:
+    name: Publish .NET SDK
+    needs: [run-integration-tests]
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
@@ -161,10 +310,21 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Get version from tag
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@e89d40939c28e39f97cf32126055eeae86ba74ec # v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Get version from file
         id: get_version
+        shell: bash
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
+          if [ ! -f "versions.json" ]; then
+            echo "versions.json not found!"
+            exit 1
+          fi
+          VERSION=$(jq -r '.[0].version' versions.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Update csproj version
@@ -187,8 +347,70 @@ jobs:
         run: dotnet pack $CSPROJ_PATH --configuration Release --no-build -o ./artifacts
 
       - name: Push to NuGet
+        if: github.ref == 'refs/heads/main'
         run: >
           dotnet nuget push "./artifacts/*.nupkg"
           --api-key ${{ secrets.NUGET_API_KEY }}
           --source https://api.nuget.org/v3/index.json
           --skip-duplicate
+
+      - name: Publish Summary
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          echo "## 🚀 .NET Package Published" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Package**: [X.Justiz.Core on NuGet](https://www.nuget.org/packages/X.Justiz.Core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY
+
+  publish-java:
+    name: Publish Java SDK
+    needs: [run-integration-tests]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@e89d40939c28e39f97cf32126055eeae86ba74ec # v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Get version from file
+        id: get_version
+        shell: bash
+        run: |
+          if [ ! -f "versions.json" ]; then
+            echo "versions.json not found!"
+            exit 1
+          fi
+          VERSION=$(jq -r '.[0].version' versions.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Publish to Maven Central
+        if: github.ref == 'refs/heads/main'
+        working-directory: java
+        env:
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: gradle publish -Pversion=${{ steps.get_version.outputs.version }}
+
+      - name: Java Publish Summary
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          echo "## 🚀 Java SDK Published" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Repository**: [Maven Central](https://central.sonatype.co/artifact/io.github.l-pagel/xjustiz-core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,27607 @@
+package de.xjustiz.core.models;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Gericht Codes aus <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Codeliste GDS.Gerichte</a>.
+ *  * <p>
+ *  *  <u><b>Court codes:</b></u> from <a href="https://www.xrepository.de/details/urn:xoev-de:xjustiz:codeliste:gds.gerichte">XRepository: Code list GDS.Courts</a>.
+ */
+@XmlJavaTypeAdapter(GerichtCode.Adapter.class)
+public class GerichtCode {
+
+    /**
+     * <b>ZZ Test-Bund</b>
+     *  * <p>
+     *  *  Code: 9A0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Bund;
+    /**
+     * <b>ZZ Test-Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: 9B0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Baden_Wuerttemberg;
+    /**
+     * <b>ZZ Test-Bayern</b>
+     *  * <p>
+     *  *  Code: 9D0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Bayern;
+    /**
+     * <b>ZZ Test-Berlin</b>
+     *  * <p>
+     *  *  Code: 9F0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Berlin;
+    /**
+     * <b>ZZ Test-Brandenburg</b>
+     *  * <p>
+     *  *  Code: 9G0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Brandenburg;
+    /**
+     * <b>ZZ Test-Bremen</b>
+     *  * <p>
+     *  *  Code: 9H0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Bremen;
+    /**
+     * <b>ZZ Test-Hamburg</b>
+     *  * <p>
+     *  *  Code: 9K0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Hamburg;
+    /**
+     * <b>ZZ Test-Hessen</b>
+     *  * <p>
+     *  *  Code: 9M0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Hessen;
+    /**
+     * <b>ZZ Test-Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: 9N0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Mecklenburg_Vorpommern;
+    /**
+     * <b>ZZ Test-Niedersachsen</b>
+     *  * <p>
+     *  *  Code: 9P0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Niedersachsen;
+    /**
+     * <b>ZZ Test-Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: 9R0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Nordrhein_Westfalen;
+    /**
+     * <b>ZZ Test-Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: 9T0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Rheinland_Pfalz;
+    /**
+     * <b>ZZ Test-Sachsen</b>
+     *  * <p>
+     *  *  Code: 9U0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Sachsen;
+    /**
+     * <b>ZZ Test-Saarland</b>
+     *  * <p>
+     *  *  Code: 9V0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Saarland;
+    /**
+     * <b>ZZ Test-Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: 9W0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Sachsen_Anhalt;
+    /**
+     * <b>ZZ Test-Schleswig-Holstein</b>
+     *  * <p>
+     *  *  Code: 9X0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Schleswig_Holstein;
+    /**
+     * <b>ZZ Test-Th&#252;ringen</b>
+     *  * <p>
+     *  *  Code: 9Y0000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode ZZ_Test_Thueringen;
+    /**
+     * <b>Bundesgerichtshof Karlsruhe</b>
+     *  * <p>
+     *  *  Code: A1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesgerichtshof_Karlsruhe;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof</b>
+     *  * <p>
+     *  *  Code: A1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof 5. Strafsenat</b>
+     *  * <p>
+     *  *  Code: A1001S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof_5_Strafsenat;
+    /**
+     * <b>Oberlandesgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Karlsruhe;
+    /**
+     * <b>Staatsanwaltschaften beim Oberlandesgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaften_beim_Oberlandesgericht_Karlsruhe;
+    /**
+     * <b>Oberlandesgericht Karlsruhe Au&#223;enstelle Freiburg</b>
+     *  * <p>
+     *  *  Code: B1001
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Karlsruhe_Aussenstelle_Freiburg;
+    /**
+     * <b>Landgericht Baden-Baden</b>
+     *  * <p>
+     *  *  Code: B1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Baden_Baden;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Baden-Baden</b>
+     *  * <p>
+     *  *  Code: B1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Baden_Baden;
+    /**
+     * <b>Amtsgericht Achern</b>
+     *  * <p>
+     *  *  Code: B1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Achern;
+    /**
+     * <b>Grundbuchamt Achern</b>
+     *  * <p>
+     *  *  Code: B1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Achern;
+    /**
+     * <b>Amtsgericht Baden-Baden</b>
+     *  * <p>
+     *  *  Code: B1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Baden_Baden;
+    /**
+     * <b>Amtsgericht B&#252;hl</b>
+     *  * <p>
+     *  *  Code: B1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Buehl;
+    /**
+     * <b>Amtsgericht Gernsbach</b>
+     *  * <p>
+     *  *  Code: B1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gernsbach;
+    /**
+     * <b>Amtsgericht Rastatt</b>
+     *  * <p>
+     *  *  Code: B1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rastatt;
+    /**
+     * <b>Landgericht Freiburg i. Br.</b>
+     *  * <p>
+     *  *  Code: B1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Freiburg_i_Br;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Freiburg im Breisgau</b>
+     *  * <p>
+     *  *  Code: B1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Freiburg_im_Breisgau;
+    /**
+     * <b>Amtsgericht Breisach</b>
+     *  * <p>
+     *  *  Code: B1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Breisach;
+    /**
+     * <b>Amtsgericht Emmendingen</b>
+     *  * <p>
+     *  *  Code: B1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Emmendingen;
+    /**
+     * <b>Grundbuchamt Emmendingen</b>
+     *  * <p>
+     *  *  Code: B1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Emmendingen;
+    /**
+     * <b>Amtsgericht Ettenheim</b>
+     *  * <p>
+     *  *  Code: B1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ettenheim;
+    /**
+     * <b>Amtsgericht Freiburg</b>
+     *  * <p>
+     *  *  Code: B1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Freiburg;
+    /**
+     * <b>Amtsgericht Kenzingen</b>
+     *  * <p>
+     *  *  Code: B1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kenzingen;
+    /**
+     * <b>Amtsgericht L&#246;rrach</b>
+     *  * <p>
+     *  *  Code: B1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Loerrach;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht L&#246;rrach, Zwst. der StA Freiburg im Breisgau</b>
+     *  * <p>
+     *  *  Code: B1206S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Loerrach_Zwst_der_StA_Freiburg_im_Breisgau;
+    /**
+     * <b>Amtsgericht M&#252;llheim</b>
+     *  * <p>
+     *  *  Code: B1207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muellheim;
+    /**
+     * <b>Amtsgericht Titisee-Neustadt</b>
+     *  * <p>
+     *  *  Code: B1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Titisee_Neustadt;
+    /**
+     * <b>Amtsgericht Staufen</b>
+     *  * <p>
+     *  *  Code: B1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Staufen;
+    /**
+     * <b>Amtsgericht Waldkirch</b>
+     *  * <p>
+     *  *  Code: B1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waldkirch;
+    /**
+     * <b>Landgericht Heidelberg</b>
+     *  * <p>
+     *  *  Code: B1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Heidelberg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Heidelberg</b>
+     *  * <p>
+     *  *  Code: B1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Heidelberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eppingen</b>
+     *  * <p>
+     *  *  Code: B1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eppingen;
+    /**
+     * <b>Amtsgericht Heidelberg</b>
+     *  * <p>
+     *  *  Code: B1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Heidelberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sinsheim, Zwst. Neckarbischofsheim</b>
+     *  * <p>
+     *  *  Code: B1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Sinsheim_Zwst_Neckarbischofsheim;
+    /**
+     * <b>Amtsgericht Sinsheim</b>
+     *  * <p>
+     *  *  Code: B1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sinsheim;
+    /**
+     * <b>Amtsgericht Wiesloch</b>
+     *  * <p>
+     *  *  Code: B1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wiesloch;
+    /**
+     * <b>Landgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Karlsruhe;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Karlsruhe;
+    /**
+     * <b>Amtsgericht Bretten</b>
+     *  * <p>
+     *  *  Code: B1401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bretten;
+    /**
+     * <b>Amtsgericht Bruchsal</b>
+     *  * <p>
+     *  *  Code: B1402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bruchsal;
+    /**
+     * <b>Amtsgericht Ettlingen</b>
+     *  * <p>
+     *  *  Code: B1403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ettlingen;
+    /**
+     * <b>Amtsgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Karlsruhe;
+    /**
+     * <b>Amtsgericht Karlsruhe, Zentrales Vollstreckungsgericht Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B1404R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Karlsruhe_Zentrales_Vollstreckungsgericht_Baden_Wuerttemberg;
+    /**
+     * <b>Amtsgericht Karlsruhe-Durlach</b>
+     *  * <p>
+     *  *  Code: B1405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Karlsruhe_Durlach;
+    /**
+     * <b>Amtsgericht Pforzheim</b>
+     *  * <p>
+     *  *  Code: B1406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pforzheim;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Pforzheim, Zwst. der StA Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B1406S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Pforzheim_Zwst_der_StA_Karlsruhe;
+    /**
+     * <b>Amtsgericht Philippsburg</b>
+     *  * <p>
+     *  *  Code: B1407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Philippsburg;
+    /**
+     * <b>Amtsgericht Pforzheim Zweigstelle Neuenb&#252;rg</b>
+     *  * <p>
+     *  *  Code: B1408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pforzheim_Zweigstelle_Neuenbuerg;
+    /**
+     * <b>Landgericht Konstanz</b>
+     *  * <p>
+     *  *  Code: B1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Konstanz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Konstanz</b>
+     *  * <p>
+     *  *  Code: B1500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Konstanz;
+    /**
+     * <b>Amtsgericht Donaueschingen</b>
+     *  * <p>
+     *  *  Code: B1501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Donaueschingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Engen</b>
+     *  * <p>
+     *  *  Code: B1502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Engen;
+    /**
+     * <b>Amtsgericht Konstanz</b>
+     *  * <p>
+     *  *  Code: B1503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Konstanz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Me&#223;kirch</b>
+     *  * <p>
+     *  *  Code: B1504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Messkirch;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sigmaringen, Zwst. Pfullendorf</b>
+     *  * <p>
+     *  *  Code: B1505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Sigmaringen_Zwst_Pfullendorf;
+    /**
+     * <b>Amtsgericht Radolfzell</b>
+     *  * <p>
+     *  *  Code: B1506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Radolfzell;
+    /**
+     * <b>Amtsgericht Singen</b>
+     *  * <p>
+     *  *  Code: B1507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Singen;
+    /**
+     * <b>Amtsgericht Stockach</b>
+     *  * <p>
+     *  *  Code: B1508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stockach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Triberg im Schwarzwald</b>
+     *  * <p>
+     *  *  Code: B1509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Triberg_im_Schwarzwald;
+    /**
+     * <b>Amtsgericht &#220;berlingen</b>
+     *  * <p>
+     *  *  Code: B1510
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ueberlingen;
+    /**
+     * <b>Amtsgericht Villingen-Schwenningen</b>
+     *  * <p>
+     *  *  Code: B1511
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Villingen_Schwenningen;
+    /**
+     * <b>Grundbuchamt Villingen-Schwenningen</b>
+     *  * <p>
+     *  *  Code: B1511G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Villingen_Schwenningen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Villingen-Schwenningen, Zwst. der StA Konstanz</b>
+     *  * <p>
+     *  *  Code: B1511S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Villingen_Schwenningen_Zwst_der_StA_Konstanz;
+    /**
+     * <b>Landgericht Konstanz Au&#223;enstelle Villingen-Schwenningen</b>
+     *  * <p>
+     *  *  Code: B1512
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Konstanz_Aussenstelle_Villingen_Schwenningen;
+    /**
+     * <b>Landgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B1600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Mannheim;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B1600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Mannheim;
+    /**
+     * <b>Amtsgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B1601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mannheim;
+    /**
+     * <b>Grundbuchamt Mannheim</b>
+     *  * <p>
+     *  *  Code: B1601G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Mannheim;
+    /**
+     * <b>Amtsgericht Schwetzingen</b>
+     *  * <p>
+     *  *  Code: B1602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwetzingen;
+    /**
+     * <b>Amtsgericht Weinheim</b>
+     *  * <p>
+     *  *  Code: B1603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weinheim;
+    /**
+     * <b>Landgericht Mosbach</b>
+     *  * <p>
+     *  *  Code: B1700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Mosbach;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Mosbach</b>
+     *  * <p>
+     *  *  Code: B1700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Mosbach;
+    /**
+     * <b>Amtsgericht Adelsheim</b>
+     *  * <p>
+     *  *  Code: B1701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Adelsheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Boxberg</b>
+     *  * <p>
+     *  *  Code: B1702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Boxberg;
+    /**
+     * <b>Amtsgericht Buchen</b>
+     *  * <p>
+     *  *  Code: B1703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Buchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eberbach</b>
+     *  * <p>
+     *  *  Code: B1704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eberbach;
+    /**
+     * <b>Amtsgericht Mosbach</b>
+     *  * <p>
+     *  *  Code: B1705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mosbach;
+    /**
+     * <b>Amtsgericht Tauberbischofsheim</b>
+     *  * <p>
+     *  *  Code: B1706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tauberbischofsheim;
+    /**
+     * <b>Grundbuchamt Tauberbischofsheim</b>
+     *  * <p>
+     *  *  Code: B1706G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Tauberbischofsheim;
+    /**
+     * <b>Amtsgericht Wertheim</b>
+     *  * <p>
+     *  *  Code: B1707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wertheim;
+    /**
+     * <b>Landgericht Offenburg</b>
+     *  * <p>
+     *  *  Code: B1800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Offenburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Offenburg</b>
+     *  * <p>
+     *  *  Code: B1800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Offenburg;
+    /**
+     * <b>Amtsgericht Gengenbach</b>
+     *  * <p>
+     *  *  Code: B1801
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gengenbach;
+    /**
+     * <b>Amtsgericht Kehl</b>
+     *  * <p>
+     *  *  Code: B1802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kehl;
+    /**
+     * <b>Amtsgericht Lahr</b>
+     *  * <p>
+     *  *  Code: B1803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lahr;
+    /**
+     * <b>Amtsgericht Oberkirch</b>
+     *  * <p>
+     *  *  Code: B1804
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oberkirch;
+    /**
+     * <b>Amtsgericht Offenburg</b>
+     *  * <p>
+     *  *  Code: B1805
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Offenburg;
+    /**
+     * <b>Amtsgericht Wolfach</b>
+     *  * <p>
+     *  *  Code: B1806
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wolfach;
+    /**
+     * <b>Landgericht Waldshut-Tiengen</b>
+     *  * <p>
+     *  *  Code: B1900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Waldshut_Tiengen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Waldshut-Tiengen (fr&#252;her: Waldshut)</b>
+     *  * <p>
+     *  *  Code: B1900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Waldshut_Tiengen_frueher_Waldshut;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bonndorf im Schwarzwald</b>
+     *  * <p>
+     *  *  Code: B1901
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bonndorf_im_Schwarzwald;
+    /**
+     * <b>Amtsgericht Bad S&#228;ckingen</b>
+     *  * <p>
+     *  *  Code: B1902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Saeckingen;
+    /**
+     * <b>Amtsgericht St. Blasien</b>
+     *  * <p>
+     *  *  Code: B1903
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Blasien;
+    /**
+     * <b>Amtsgericht Sch&#246;nau</b>
+     *  * <p>
+     *  *  Code: B1904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schoenau;
+    /**
+     * <b>Amtsgericht Schopfheim</b>
+     *  * <p>
+     *  *  Code: B1905
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schopfheim;
+    /**
+     * <b>Amtsgericht Waldshut-Tiengen</b>
+     *  * <p>
+     *  *  Code: B1906
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waldshut_Tiengen;
+    /**
+     * <b>Oberlandesgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B2000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Stuttgart;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B2000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Stuttgart;
+    /**
+     * <b>Landgericht Ellwangen</b>
+     *  * <p>
+     *  *  Code: B2100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ellwangen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Ellwangen (Jagst)</b>
+     *  * <p>
+     *  *  Code: B2100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Ellwangen_Jagst;
+    /**
+     * <b>Amtsgericht Aalen</b>
+     *  * <p>
+     *  *  Code: B2101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aalen;
+    /**
+     * <b>Amtsgericht Bad Mergentheim</b>
+     *  * <p>
+     *  *  Code: B2102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Mergentheim;
+    /**
+     * <b>Amtsgericht Crailsheim</b>
+     *  * <p>
+     *  *  Code: B2103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Crailsheim;
+    /**
+     * <b>Amtsgericht Ellwangen</b>
+     *  * <p>
+     *  *  Code: B2104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ellwangen;
+    /**
+     * <b>Amtsgericht Heidenheim</b>
+     *  * <p>
+     *  *  Code: B2105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Heidenheim;
+    /**
+     * <b>Amtsgericht Langenburg</b>
+     *  * <p>
+     *  *  Code: B2106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Langenburg;
+    /**
+     * <b>Amtsgericht Neresheim</b>
+     *  * <p>
+     *  *  Code: B2107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neresheim;
+    /**
+     * <b>Amtsgericht Schw&#228;bisch Gm&#252;nd</b>
+     *  * <p>
+     *  *  Code: B2108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwaebisch_Gmuend;
+    /**
+     * <b>Grundbuchamt Schw&#228;bisch-Gm&#252;nd</b>
+     *  * <p>
+     *  *  Code: B2108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwaebisch_Gmuend;
+    /**
+     * <b>Landgericht Hechingen</b>
+     *  * <p>
+     *  *  Code: B2200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hechingen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hechingen</b>
+     *  * <p>
+     *  *  Code: B2200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hechingen;
+    /**
+     * <b>Amtsgericht Balingen</b>
+     *  * <p>
+     *  *  Code: B2201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Balingen;
+    /**
+     * <b>Amtsgericht Albstadt</b>
+     *  * <p>
+     *  *  Code: B2202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Albstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Haigerloch</b>
+     *  * <p>
+     *  *  Code: B2203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Haigerloch;
+    /**
+     * <b>Amtsgericht Hechingen</b>
+     *  * <p>
+     *  *  Code: B2204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hechingen;
+    /**
+     * <b>Amtsgericht Sigmaringen</b>
+     *  * <p>
+     *  *  Code: B2205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sigmaringen;
+    /**
+     * <b>Grundbuchamt Sigmaringen</b>
+     *  * <p>
+     *  *  Code: B2205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sigmaringen;
+    /**
+     * <b>Landgericht Heilbronn</b>
+     *  * <p>
+     *  *  Code: B2300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Heilbronn;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Heilbronn</b>
+     *  * <p>
+     *  *  Code: B2300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Heilbronn;
+    /**
+     * <b>Amtsgericht Besigheim</b>
+     *  * <p>
+     *  *  Code: B2301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Besigheim;
+    /**
+     * <b>Amtsgericht Brackenheim</b>
+     *  * <p>
+     *  *  Code: B2302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brackenheim;
+    /**
+     * <b>Amtsgericht Heilbronn</b>
+     *  * <p>
+     *  *  Code: B2303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Heilbronn;
+    /**
+     * <b>Grundbuchamt Heilbronn</b>
+     *  * <p>
+     *  *  Code: B2303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Heilbronn;
+    /**
+     * <b>Amtsgericht K&#252;nzelsau</b>
+     *  * <p>
+     *  *  Code: B2304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kuenzelsau;
+    /**
+     * <b>Amtsgericht Marbach a. N.</b>
+     *  * <p>
+     *  *  Code: B2305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marbach_a_N;
+    /**
+     * <b>Amtsgericht Maulbronn</b>
+     *  * <p>
+     *  *  Code: B2306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Maulbronn;
+    /**
+     * <b>Grundbuchamt Maulbronn</b>
+     *  * <p>
+     *  *  Code: B2306G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Maulbronn;
+    /**
+     * <b>Amtsgericht &#214;hringen</b>
+     *  * <p>
+     *  *  Code: B2307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oehringen;
+    /**
+     * <b>Amtsgericht Schw&#228;bisch Hall</b>
+     *  * <p>
+     *  *  Code: B2308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwaebisch_Hall;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Schw&#228;bisch Hall, Zwst. der StA Heilbronn</b>
+     *  * <p>
+     *  *  Code: B2308S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Schwaebisch_Hall_Zwst_der_StA_Heilbronn;
+    /**
+     * <b>Amtsgericht Vaihingen</b>
+     *  * <p>
+     *  *  Code: B2309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Vaihingen;
+    /**
+     * <b>Landgericht Ravensburg</b>
+     *  * <p>
+     *  *  Code: B2400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ravensburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Ravensburg</b>
+     *  * <p>
+     *  *  Code: B2400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Ravensburg;
+    /**
+     * <b>Amtsgericht Bad Waldsee</b>
+     *  * <p>
+     *  *  Code: B2401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Waldsee;
+    /**
+     * <b>Amtsgericht Biberach</b>
+     *  * <p>
+     *  *  Code: B2402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Biberach;
+    /**
+     * <b>Amtsgericht Leutkirch</b>
+     *  * <p>
+     *  *  Code: B2403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Leutkirch;
+    /**
+     * <b>Amtsgericht Ravensburg</b>
+     *  * <p>
+     *  *  Code: B2404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ravensburg;
+    /**
+     * <b>Grundbuchamt Ravensburg</b>
+     *  * <p>
+     *  *  Code: B2404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ravensburg;
+    /**
+     * <b>Amtsgericht Riedlingen</b>
+     *  * <p>
+     *  *  Code: B2405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Riedlingen;
+    /**
+     * <b>Amtsgericht Bad Saulgau</b>
+     *  * <p>
+     *  *  Code: B2406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Saulgau;
+    /**
+     * <b>Amtsgericht Tettnang</b>
+     *  * <p>
+     *  *  Code: B2407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tettnang;
+    /**
+     * <b>Amtsgericht Wangen</b>
+     *  * <p>
+     *  *  Code: B2408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wangen;
+    /**
+     * <b>Landgericht Rottweil</b>
+     *  * <p>
+     *  *  Code: B2500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Rottweil;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Rottweil</b>
+     *  * <p>
+     *  *  Code: B2500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Rottweil;
+    /**
+     * <b>Amtsgericht Freudenstadt</b>
+     *  * <p>
+     *  *  Code: B2501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Freudenstadt;
+    /**
+     * <b>Amtsgericht Horb</b>
+     *  * <p>
+     *  *  Code: B2502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Horb;
+    /**
+     * <b>Amtsgericht Oberndorf</b>
+     *  * <p>
+     *  *  Code: B2503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oberndorf;
+    /**
+     * <b>Amtsgericht Rottweil</b>
+     *  * <p>
+     *  *  Code: B2504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rottweil;
+    /**
+     * <b>Amtsgericht Spaichingen</b>
+     *  * <p>
+     *  *  Code: B2505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Spaichingen;
+    /**
+     * <b>Amtsgericht Tuttlingen</b>
+     *  * <p>
+     *  *  Code: B2506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tuttlingen;
+    /**
+     * <b>Landgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B2600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Stuttgart;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B2600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Stuttgart;
+    /**
+     * <b>Amtsgericht Backnang</b>
+     *  * <p>
+     *  *  Code: B2601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Backnang;
+    /**
+     * <b>Amtsgericht B&#246;blingen</b>
+     *  * <p>
+     *  *  Code: B2602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Boeblingen;
+    /**
+     * <b>Grundbuchamt B&#246;blingen</b>
+     *  * <p>
+     *  *  Code: B2602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Boeblingen;
+    /**
+     * <b>Amtsgericht Esslingen</b>
+     *  * <p>
+     *  *  Code: B2603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Esslingen;
+    /**
+     * <b>Amtsgericht Kirchheim</b>
+     *  * <p>
+     *  *  Code: B2604
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kirchheim;
+    /**
+     * <b>Amtsgericht Leonberg</b>
+     *  * <p>
+     *  *  Code: B2605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Leonberg;
+    /**
+     * <b>Amtsgericht Ludwigsburg</b>
+     *  * <p>
+     *  *  Code: B2606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ludwigsburg;
+    /**
+     * <b>Amtsgericht N&#252;rtingen</b>
+     *  * <p>
+     *  *  Code: B2607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nuertingen;
+    /**
+     * <b>Amtsgericht Schorndorf</b>
+     *  * <p>
+     *  *  Code: B2608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schorndorf;
+    /**
+     * <b>Amtsgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B2609
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stuttgart;
+    /**
+     * <b>Amtsgericht Stuttgart, Zentrales Mahngericht f&#252;r Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B2609M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stuttgart_Zentrales_Mahngericht_fuer_Baden_Wuerttemberg;
+    /**
+     * <b>Amtsgericht Stuttgart-Bad Cannstatt</b>
+     *  * <p>
+     *  *  Code: B2610
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stuttgart_Bad_Cannstatt;
+    /**
+     * <b>Amtsgericht Waiblingen</b>
+     *  * <p>
+     *  *  Code: B2611
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waiblingen;
+    /**
+     * <b>Grundbuchamt Waiblingen</b>
+     *  * <p>
+     *  *  Code: B2611G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Waiblingen;
+    /**
+     * <b>Landgericht T&#252;bingen</b>
+     *  * <p>
+     *  *  Code: B2700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Tuebingen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht T&#252;bingen</b>
+     *  * <p>
+     *  *  Code: B2700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Tuebingen;
+    /**
+     * <b>Amtsgericht Calw</b>
+     *  * <p>
+     *  *  Code: B2701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Calw;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Calw, Au&#223;enstelle der StA T&#252;bingen</b>
+     *  * <p>
+     *  *  Code: B2701S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Calw_Aussenstelle_der_StA_Tuebingen;
+    /**
+     * <b>Amtsgericht M&#252;nsingen</b>
+     *  * <p>
+     *  *  Code: B2702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muensingen;
+    /**
+     * <b>Amtsgericht Nagold</b>
+     *  * <p>
+     *  *  Code: B2703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nagold;
+    /**
+     * <b>Amtsgericht Reutlingen</b>
+     *  * <p>
+     *  *  Code: B2705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Reutlingen;
+    /**
+     * <b>Amtsgericht Rottenburg</b>
+     *  * <p>
+     *  *  Code: B2706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rottenburg;
+    /**
+     * <b>Amtsgericht T&#252;bingen</b>
+     *  * <p>
+     *  *  Code: B2707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tuebingen;
+    /**
+     * <b>Amtsgericht Bad Urach</b>
+     *  * <p>
+     *  *  Code: B2708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Urach;
+    /**
+     * <b>Landgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B2800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ulm;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B2800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Ulm;
+    /**
+     * <b>Amtsgericht Ehingen</b>
+     *  * <p>
+     *  *  Code: B2801
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ehingen;
+    /**
+     * <b>Amtsgericht Geislingen</b>
+     *  * <p>
+     *  *  Code: B2802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Geislingen;
+    /**
+     * <b>Amtsgericht G&#246;ppingen</b>
+     *  * <p>
+     *  *  Code: B2803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Goeppingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Laupheim</b>
+     *  * <p>
+     *  *  Code: B2804
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Laupheim;
+    /**
+     * <b>Amtsgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B2805
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ulm;
+    /**
+     * <b>Grundbuchamt Ulm</b>
+     *  * <p>
+     *  *  Code: B2805G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ulm;
+    /**
+     * <b>Landgericht Karlsruhe Ausw&#228;rtige Strafkammer Pforzheim</b>
+     *  * <p>
+     *  *  Code: B2900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Karlsruhe_Auswaertige_Strafkammer_Pforzheim;
+    /**
+     * <b>Justizvollzugsanstalt Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6099
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Stuttgart;
+    /**
+     * <b>Finanzgericht Baden-W&#252;rttemberg, Senate in Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Baden_Wuerttemberg_Senate_in_Stuttgart;
+    /**
+     * <b>Justizvollzugskrankenhaus Hohenasperg</b>
+     *  * <p>
+     *  *  Code: B6149
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugskrankenhaus_Hohenasperg;
+    /**
+     * <b>Finanzgericht Baden-W&#252;rttemberg, Au&#223;ensenate in Freiburg</b>
+     *  * <p>
+     *  *  Code: B6155
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Baden_Wuerttemberg_Aussensenate_in_Freiburg;
+    /**
+     * <b>Justizvollzugsanstalt Adelsheim</b>
+     *  * <p>
+     *  *  Code: B6183
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Adelsheim;
+    /**
+     * <b>Sozialgericht Freiburg</b>
+     *  * <p>
+     *  *  Code: B6225
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Freiburg;
+    /**
+     * <b>Verwaltungsgericht Freiburg</b>
+     *  * <p>
+     *  *  Code: B6226
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Freiburg;
+    /**
+     * <b>Arbeitsgericht Freiburg -Kammern Freiburg-</b>
+     *  * <p>
+     *  *  Code: B6227
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Freiburg_Kammern_Freiburg;
+    /**
+     * <b>Arbeitsgericht Heilbronn</b>
+     *  * <p>
+     *  *  Code: B6228
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Heilbronn;
+    /**
+     * <b>Sozialgericht Heilbronn</b>
+     *  * <p>
+     *  *  Code: B6229
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Heilbronn;
+    /**
+     * <b>Verwaltungsgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B6230
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Karlsruhe;
+    /**
+     * <b>Verwaltungsgericht Karlsruhe Au&#223;enstelle</b>
+     *  * <p>
+     *  *  Code: B6231
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Karlsruhe_Aussenstelle;
+    /**
+     * <b>Bundesverfassungsgericht</b>
+     *  * <p>
+     *  *  Code: B6232
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesverfassungsgericht;
+    /**
+     * <b>aufgel&#246;st-Finanzgericht Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6233
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Finanzgericht_Baden_Wuerttemberg;
+    /**
+     * <b>Sozialgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B6234
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Karlsruhe;
+    /**
+     * <b>Sozialgericht Konstanz</b>
+     *  * <p>
+     *  *  Code: B6235
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Konstanz;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht L&#246;rrach</b>
+     *  * <p>
+     *  *  Code: B6236
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Loerrach;
+    /**
+     * <b>Arbeitsgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B6237
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Mannheim;
+    /**
+     * <b>Verwaltungsgerichtshof Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6238
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgerichtshof_Baden_Wuerttemberg;
+    /**
+     * <b>Arbeitsgericht Pforzheim</b>
+     *  * <p>
+     *  *  Code: B6239
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Pforzheim;
+    /**
+     * <b>Sozialgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6240
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Stuttgart;
+    /**
+     * <b>Arbeitsgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6241
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stuttgart;
+    /**
+     * <b>Verwaltungsgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6242
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Stuttgart;
+    /**
+     * <b>Verfassungsgerichtshof f&#252;r das Land Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6243
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_fuer_das_Land_Baden_Wuerttemberg;
+    /**
+     * <b>Landesarbeitsgericht Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6244
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Baden_Wuerttemberg;
+    /**
+     * <b>Arbeitsgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B6245
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Ulm;
+    /**
+     * <b>Landessozialgericht Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6246
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Baden_Wuerttemberg;
+    /**
+     * <b>Sozialgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B6250
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Ulm;
+    /**
+     * <b>Arbeitsgericht Reutlingen</b>
+     *  * <p>
+     *  *  Code: B6461
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Reutlingen;
+    /**
+     * <b>Sozialgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B6518
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Mannheim;
+    /**
+     * <b>Sozialgericht Reutlingen</b>
+     *  * <p>
+     *  *  Code: B6519
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Reutlingen;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Freiburg</b>
+     *  * <p>
+     *  *  Code: B6547
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Freiburg;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B6550
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Karlsruhe;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Stuttgart</b>
+     *  * <p>
+     *  *  Code: B6551
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Stuttgart;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer T&#252;bingen</b>
+     *  * <p>
+     *  *  Code: B6577
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Tuebingen;
+    /**
+     * <b>Anwaltsgerichtshof Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B6579
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_Baden_Wuerttemberg;
+    /**
+     * <b>Sozialtherapeutische Anstalt Baden-W&#252;rttemberg Asperg</b>
+     *  * <p>
+     *  *  Code: B6704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialtherapeutische_Anstalt_Baden_Wuerttemberg_Asperg;
+    /**
+     * <b>Jugendarrestanstalt G&#246;ppingen</b>
+     *  * <p>
+     *  *  Code: B7423
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Goeppingen;
+    /**
+     * <b>Notariat VII Mannheim -Nachlassgericht-</b>
+     *  * <p>
+     *  *  Code: B7554
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Notariat_VII_Mannheim_Nachlassgericht;
+    /**
+     * <b>Justizvollzugsanstalt Bruchsal</b>
+     *  * <p>
+     *  *  Code: B7645
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bruchsal;
+    /**
+     * <b>Landesarbeitsgericht Baden-W&#252;rttemberg Kammern Freiburg</b>
+     *  * <p>
+     *  *  Code: B7691
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Freiburg;
+    /**
+     * <b>Landesarbeitsgericht Baden-W&#252;rttemberg Kammern Mannheim</b>
+     *  * <p>
+     *  *  Code: B7692
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Mannheim;
+    /**
+     * <b>Arbeitsgericht Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B7696
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Karlsruhe;
+    /**
+     * <b>Justizvollzugsanstalt Schw&#228;bisch Gm&#252;nd</b>
+     *  * <p>
+     *  *  Code: B7761
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Schwaebisch_Gmuend;
+    /**
+     * <b>Verwaltungsgericht Sigmaringen</b>
+     *  * <p>
+     *  *  Code: B7820
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Sigmaringen;
+    /**
+     * <b>Justizvollzugsanstalt Freiburg</b>
+     *  * <p>
+     *  *  Code: B7841
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Freiburg;
+    /**
+     * <b>Justizvollzugsanstalt Ulm</b>
+     *  * <p>
+     *  *  Code: B7846
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ulm;
+    /**
+     * <b>Justizvollzugsanstalt Mannheim</b>
+     *  * <p>
+     *  *  Code: B8322
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Mannheim;
+    /**
+     * <b>Justizvollzugsanstalt Heilbronn</b>
+     *  * <p>
+     *  *  Code: B8375
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Heilbronn;
+    /**
+     * <b>Justizvollzugsanstalt Heimsheim</b>
+     *  * <p>
+     *  *  Code: B8376
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Heimsheim;
+    /**
+     * <b>Justizvollzugsanstalt Karlsruhe</b>
+     *  * <p>
+     *  *  Code: B8377
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Karlsruhe;
+    /**
+     * <b>Justizvollzugsanstalt Konstanz</b>
+     *  * <p>
+     *  *  Code: B8378
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Konstanz;
+    /**
+     * <b>Justizvollzugsanstalt Ravensburg</b>
+     *  * <p>
+     *  *  Code: B8379
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ravensburg;
+    /**
+     * <b>Justizvollzugsanstalt Rottweil</b>
+     *  * <p>
+     *  *  Code: B8380
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rottweil;
+    /**
+     * <b>Justizvollzugsanstalt Waldshut-Tiengen</b>
+     *  * <p>
+     *  *  Code: B8381
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Waldshut_Tiengen;
+    /**
+     * <b>Justizvollzugsanstalt Schw&#228;bisch-Hall</b>
+     *  * <p>
+     *  *  Code: B8392
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Schwaebisch_Hall;
+    /**
+     * <b>Registergericht Amtsgericht Stuttgart</b>
+     *  * <p>
+     *  *  Code: B8534
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Stuttgart;
+    /**
+     * <b>Registergericht Amtsgericht Mannheim</b>
+     *  * <p>
+     *  *  Code: B8535
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Mannheim;
+    /**
+     * <b>Registergericht Amtsgericht Freiburg i. Br.</b>
+     *  * <p>
+     *  *  Code: B8536
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Freiburg_i_Br;
+    /**
+     * <b>Registergericht Amtsgericht Ulm</b>
+     *  * <p>
+     *  *  Code: B8537
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Ulm;
+    /**
+     * <b>Justizvollzugsanstalt Offenburg</b>
+     *  * <p>
+     *  *  Code: B8559
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Offenburg;
+    /**
+     * <b>Grundbuchzentralarchiv Baden-W&#252;rttemberg</b>
+     *  * <p>
+     *  *  Code: B8721G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchzentralarchiv_Baden_Wuerttemberg;
+    /**
+     * <b>Arbeitsgericht Stuttgart, Au&#223;enstelle Aalen</b>
+     *  * <p>
+     *  *  Code: B8940
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stuttgart_Aussenstelle_Aalen;
+    /**
+     * <b>Arbeitsgericht Stuttgart, Au&#223;enstelle Ludwigsburg</b>
+     *  * <p>
+     *  *  Code: B8941
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stuttgart_Aussenstelle_Ludwigsburg;
+    /**
+     * <b>Arbeitsgericht Freiburg, Kammern Offenburg, Offenburg</b>
+     *  * <p>
+     *  *  Code: B9023
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Freiburg_Kammern_Offenburg_Offenburg;
+    /**
+     * <b>Arbeitsgericht Heilbronn, Kammern Crailsheim, Crailsheim</b>
+     *  * <p>
+     *  *  Code: B9024
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Heilbronn_Kammern_Crailsheim_Crailsheim;
+    /**
+     * <b>Arbeitsgericht Ulm, Kammern Ravensburg, Ravensburg</b>
+     *  * <p>
+     *  *  Code: B9025
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Ulm_Kammern_Ravensburg_Ravensburg;
+    /**
+     * <b>Arbeitsgericht Villingen-Schwenningen,Villingen-Schwenningen</b>
+     *  * <p>
+     *  *  Code: B9026
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Villingen_Schwenningen_Villingen_Schwenningen;
+    /**
+     * <b>Arbeitsgericht Villingen-Schwenningen, Kammern Radolfzell, Radolfzell</b>
+     *  * <p>
+     *  *  Code: B9027
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Villingen_Schwenningen_Kammern_Radolfzell_Radolfzell;
+    /**
+     * <b>Arbeitsgericht Mannheim, Kammern Heidelberg, Heidelberg</b>
+     *  * <p>
+     *  *  Code: B9028
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Mannheim_Kammern_Heidelberg_Heidelberg;
+    /**
+     * <b>Arbeitsgericht Freiburg, Kammern L&#246;rrach</b>
+     *  * <p>
+     *  *  Code: B9029
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Freiburg_Kammern_Loerrach;
+    /**
+     * <b>Justizvollzugsanstalt Rottenburg</b>
+     *  * <p>
+     *  *  Code: B9162
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rottenburg;
+    /**
+     * <b>Europ&#228;ische Staatsanwaltschaft (EPPO/EUStA)</b>
+     *  * <p>
+     *  *  Code: C6087
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Europaeische_Staatsanwaltschaft_EPPO_EUStA;
+    /**
+     * <b>Bayerisches Oberstes Landesgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerisches_Oberstes_Landesgericht_Muenchen;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft bei dem Bayerischen Obersten Landesgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_bei_dem_Bayerischen_Obersten_Landesgericht_Muenchen;
+    /**
+     * <b>Oberlandesgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Muenchen;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Muenchen;
+    /**
+     * <b>Landgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D2100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Augsburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D2100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Augsburg;
+    /**
+     * <b>Amtsgericht Aichach</b>
+     *  * <p>
+     *  *  Code: D2101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aichach;
+    /**
+     * <b>Grundbuchamt Aichach</b>
+     *  * <p>
+     *  *  Code: D2101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aichach;
+    /**
+     * <b>Amtsgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D2102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Augsburg;
+    /**
+     * <b>Grundbuchamt Augsburg</b>
+     *  * <p>
+     *  *  Code: D2102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Augsburg;
+    /**
+     * <b>Registergericht Amtsgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D2102V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Augsburg;
+    /**
+     * <b>Amtsgericht Dillingen</b>
+     *  * <p>
+     *  *  Code: D2103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dillingen;
+    /**
+     * <b>Grundbuchamt Dillingen</b>
+     *  * <p>
+     *  *  Code: D2103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dillingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht N&#246;rdlingen, Zweigstelle Donauw&#246;rth</b>
+     *  * <p>
+     *  *  Code: D2104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Noerdlingen_Zweigstelle_Donauwoerth;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Friedberg (Bayern)</b>
+     *  * <p>
+     *  *  Code: D2105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Friedberg_Bayern;
+    /**
+     * <b>Amtsgericht Landsberg</b>
+     *  * <p>
+     *  *  Code: D2106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landsberg;
+    /**
+     * <b>Grundbuchamt Landsberg</b>
+     *  * <p>
+     *  *  Code: D2106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Landsberg;
+    /**
+     * <b>Amtsgericht N&#246;rdlingen</b>
+     *  * <p>
+     *  *  Code: D2108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Noerdlingen;
+    /**
+     * <b>Grundbuchamt N&#246;rdlingen</b>
+     *  * <p>
+     *  *  Code: D2108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Noerdlingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schrobenhausen</b>
+     *  * <p>
+     *  *  Code: D2109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schrobenhausen;
+    /**
+     * <b>Amtsgericht Augsburg Zweigstelle Schwabm&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Augsburg_Zweigstelle_Schwabmuenchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wertingen</b>
+     *  * <p>
+     *  *  Code: D2111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wertingen;
+    /**
+     * <b>Landgericht Augsburg Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Aichach</b>
+     *  * <p>
+     *  *  Code: D2120
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Aichach;
+    /**
+     * <b>Landgericht Augsburg Strafvollstreckungskammer N&#246;rdlingen</b>
+     *  * <p>
+     *  *  Code: D2130
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Augsburg_Strafvollstreckungskammer_Noerdlingen;
+    /**
+     * <b>Landgericht Augsburg Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Landsberg</b>
+     *  * <p>
+     *  *  Code: D2140
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Landsberg;
+    /**
+     * <b>Landgericht Deggendorf</b>
+     *  * <p>
+     *  *  Code: D2200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Deggendorf;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Deggendorf</b>
+     *  * <p>
+     *  *  Code: D2200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Deggendorf;
+    /**
+     * <b>Amtsgericht Deggendorf</b>
+     *  * <p>
+     *  *  Code: D2201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Deggendorf;
+    /**
+     * <b>Grundbuchamt Deggendorf</b>
+     *  * <p>
+     *  *  Code: D2201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Deggendorf;
+    /**
+     * <b>Registergericht Amtsgericht Deggendorf</b>
+     *  * <p>
+     *  *  Code: D2201V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Deggendorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Grafenau</b>
+     *  * <p>
+     *  *  Code: D2202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Grafenau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hengersberg</b>
+     *  * <p>
+     *  *  Code: D2203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hengersberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Regen</b>
+     *  * <p>
+     *  *  Code: D2204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Regen;
+    /**
+     * <b>Amtsgericht Viechtach</b>
+     *  * <p>
+     *  *  Code: D2205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Viechtach;
+    /**
+     * <b>Grundbuchamt Viechtach</b>
+     *  * <p>
+     *  *  Code: D2205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Viechtach;
+    /**
+     * <b>Landgericht Kempten</b>
+     *  * <p>
+     *  *  Code: D2300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Kempten;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Kempten (Allg&#228;u)</b>
+     *  * <p>
+     *  *  Code: D2300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Kempten_Allgaeu;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kaufbeuren, Zweigstelle F&#252;ssen</b>
+     *  * <p>
+     *  *  Code: D2301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kaufbeuren_Zweigstelle_Fuessen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Immenstadt i. Allg&#228;u</b>
+     *  * <p>
+     *  *  Code: D2302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Immenstadt_i_Allgaeu;
+    /**
+     * <b>Amtsgericht Kaufbeuren</b>
+     *  * <p>
+     *  *  Code: D2303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kaufbeuren;
+    /**
+     * <b>Grundbuchamt Kaufbeuren</b>
+     *  * <p>
+     *  *  Code: D2303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kaufbeuren;
+    /**
+     * <b>Amtsgericht Kempten</b>
+     *  * <p>
+     *  *  Code: D2304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kempten;
+    /**
+     * <b>Grundbuchamt Kempten</b>
+     *  * <p>
+     *  *  Code: D2304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kempten;
+    /**
+     * <b>Registergericht Amtsgericht Kempten</b>
+     *  * <p>
+     *  *  Code: D2304V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Kempten;
+    /**
+     * <b>Amtsgericht Lindau</b>
+     *  * <p>
+     *  *  Code: D2305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lindau;
+    /**
+     * <b>Grundbuchamt Lindau</b>
+     *  * <p>
+     *  *  Code: D2305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lindau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kaufbeuren, Zwst. Marktoberdorf</b>
+     *  * <p>
+     *  *  Code: D2306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kaufbeuren_Zwst_Marktoberdorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Weilheim Zweigstelle Schongau</b>
+     *  * <p>
+     *  *  Code: D2307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weilheim_Zweigstelle_Schongau;
+    /**
+     * <b>Amtsgericht Sonthofen</b>
+     *  * <p>
+     *  *  Code: D2308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sonthofen;
+    /**
+     * <b>Grundbuchamt Sonthofen</b>
+     *  * <p>
+     *  *  Code: D2308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sonthofen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Weiler-Lindenberg</b>
+     *  * <p>
+     *  *  Code: D2309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weiler_Lindenberg;
+    /**
+     * <b>Landgericht Landshut</b>
+     *  * <p>
+     *  *  Code: D2400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Landshut;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Landshut</b>
+     *  * <p>
+     *  *  Code: D2400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Landshut;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dingolfing</b>
+     *  * <p>
+     *  *  Code: D2401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dingolfing;
+    /**
+     * <b>Amtsgericht Eggenfelden</b>
+     *  * <p>
+     *  *  Code: D2402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eggenfelden;
+    /**
+     * <b>Grundbuchamt Eggenfelden</b>
+     *  * <p>
+     *  *  Code: D2402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eggenfelden;
+    /**
+     * <b>Amtsgericht Landau (Bay)</b>
+     *  * <p>
+     *  *  Code: D2403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landau_Bay;
+    /**
+     * <b>Grundbuchamt Landau</b>
+     *  * <p>
+     *  *  Code: D2403G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Landau;
+    /**
+     * <b>Amtsgericht Landshut</b>
+     *  * <p>
+     *  *  Code: D2404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landshut;
+    /**
+     * <b>Grundbuchamt Landshut</b>
+     *  * <p>
+     *  *  Code: D2404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Landshut;
+    /**
+     * <b>Registergericht Amtsgericht Landshut</b>
+     *  * <p>
+     *  *  Code: D2404V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Landshut;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kelheim Zweigstelle Mainburg</b>
+     *  * <p>
+     *  *  Code: D2405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kelheim_Zweigstelle_Mainburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Mallersdorf</b>
+     *  * <p>
+     *  *  Code: D2406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Mallersdorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freising Zweigstelle Moosburg</b>
+     *  * <p>
+     *  *  Code: D2407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freising_Zweigstelle_Moosburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neumarkt-St. Veit</b>
+     *  * <p>
+     *  *  Code: D2408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neumarkt_St_Veit;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rottenburg a. d. Laaber</b>
+     *  * <p>
+     *  *  Code: D2409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rottenburg_a_d_Laaber;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Vilsbiburg</b>
+     *  * <p>
+     *  *  Code: D2410
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Vilsbiburg;
+    /**
+     * <b>Amtsgericht Erding</b>
+     *  * <p>
+     *  *  Code: D2411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Erding;
+    /**
+     * <b>Grundbuchamt Erding</b>
+     *  * <p>
+     *  *  Code: D2411G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Erding;
+    /**
+     * <b>Amtsgericht Freising</b>
+     *  * <p>
+     *  *  Code: D2412
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Freising;
+    /**
+     * <b>Grundbuchamt Freising</b>
+     *  * <p>
+     *  *  Code: D2412G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Freising;
+    /**
+     * <b>Landgericht Landshut Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Erding</b>
+     *  * <p>
+     *  *  Code: D2420
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Landshut_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Erding;
+    /**
+     * <b>Landgericht Memmingen</b>
+     *  * <p>
+     *  *  Code: D2500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Memmingen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Memmingen</b>
+     *  * <p>
+     *  *  Code: D2500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Memmingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Buchloe</b>
+     *  * <p>
+     *  *  Code: D2501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Buchloe;
+    /**
+     * <b>Amtsgericht G&#252;nzburg</b>
+     *  * <p>
+     *  *  Code: D2502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Guenzburg;
+    /**
+     * <b>Grundbuchamt G&#252;nzburg</b>
+     *  * <p>
+     *  *  Code: D2502G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Guenzburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neu-Ulm Zweigstelle Illertissen</b>
+     *  * <p>
+     *  *  Code: D2503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neu_Ulm_Zweigstelle_Illertissen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Krumbach (Schwaben)</b>
+     *  * <p>
+     *  *  Code: D2504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Krumbach_Schwaben;
+    /**
+     * <b>Amtsgericht Memmingen</b>
+     *  * <p>
+     *  *  Code: D2505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Memmingen;
+    /**
+     * <b>Grundbuchamt Memmingen</b>
+     *  * <p>
+     *  *  Code: D2505G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Memmingen;
+    /**
+     * <b>Registergericht Amtsgericht Memmingen</b>
+     *  * <p>
+     *  *  Code: D2505V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Memmingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Mindelheim</b>
+     *  * <p>
+     *  *  Code: D2506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Mindelheim;
+    /**
+     * <b>Amtsgericht Neu-Ulm</b>
+     *  * <p>
+     *  *  Code: D2507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neu_Ulm;
+    /**
+     * <b>Grundbuchamt Neu-Ulm</b>
+     *  * <p>
+     *  *  Code: D2507G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neu_Ulm;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht T&#252;rkheim</b>
+     *  * <p>
+     *  *  Code: D2508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Tuerkheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wei&#223;enhorn</b>
+     *  * <p>
+     *  *  Code: D2509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weissenhorn;
+    /**
+     * <b>Landgericht Memmingen Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Neu-Ulm</b>
+     *  * <p>
+     *  *  Code: D2520
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Memmingen_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neu_Ulm;
+    /**
+     * <b>Landgericht M&#252;nchen I</b>
+     *  * <p>
+     *  *  Code: D2600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Muenchen_I;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht M&#252;nchen I</b>
+     *  * <p>
+     *  *  Code: D2600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Muenchen_I;
+    /**
+     * <b>Amtsgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muenchen;
+    /**
+     * <b>Grundbuchamt M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2601G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Muenchen;
+    /**
+     * <b>Registergericht Amtsgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D2601V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Muenchen;
+    /**
+     * <b>Landgericht M&#252;nchen II</b>
+     *  * <p>
+     *  *  Code: D2700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Muenchen_II;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht M&#252;nchen II</b>
+     *  * <p>
+     *  *  Code: D2700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Muenchen_II;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wolfratshausen, Zwst. Bad T&#246;lz</b>
+     *  * <p>
+     *  *  Code: D2701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wolfratshausen_Zwst_Bad_Toelz;
+    /**
+     * <b>Amtsgericht Dachau</b>
+     *  * <p>
+     *  *  Code: D2702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dachau;
+    /**
+     * <b>Grundbuchamt Dachau</b>
+     *  * <p>
+     *  *  Code: D2702G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dachau;
+    /**
+     * <b>Amtsgericht Ebersberg</b>
+     *  * <p>
+     *  *  Code: D2703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ebersberg;
+    /**
+     * <b>Grundbuchamt Ebersberg</b>
+     *  * <p>
+     *  *  Code: D2703G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ebersberg;
+    /**
+     * <b>Amtsgericht F&#252;rstenfeldbruck</b>
+     *  * <p>
+     *  *  Code: D2706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fuerstenfeldbruck;
+    /**
+     * <b>Grundbuchamt F&#252;rstenfeldbruck</b>
+     *  * <p>
+     *  *  Code: D2706G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fuerstenfeldbruck;
+    /**
+     * <b>Amtsgericht Garmisch-Partenkirchen</b>
+     *  * <p>
+     *  *  Code: D2707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Garmisch_Partenkirchen;
+    /**
+     * <b>Grundbuchamt Garmisch-Partenkirchen</b>
+     *  * <p>
+     *  *  Code: D2707G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Garmisch_Partenkirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Geisenfeld</b>
+     *  * <p>
+     *  *  Code: D2708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Geisenfeld;
+    /**
+     * <b>Amtsgericht Miesbach</b>
+     *  * <p>
+     *  *  Code: D2710
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Miesbach;
+    /**
+     * <b>Grundbuchamt Miesbach</b>
+     *  * <p>
+     *  *  Code: D2710G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Miesbach;
+    /**
+     * <b>Amtsgericht Starnberg</b>
+     *  * <p>
+     *  *  Code: D2712
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Starnberg;
+    /**
+     * <b>Grundbuchamt Starnberg</b>
+     *  * <p>
+     *  *  Code: D2712G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Starnberg;
+    /**
+     * <b>Amtsgericht Weilheim</b>
+     *  * <p>
+     *  *  Code: D2713
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weilheim;
+    /**
+     * <b>Grundbuchamt Weilheim</b>
+     *  * <p>
+     *  *  Code: D2713G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weilheim;
+    /**
+     * <b>Amtsgericht Wolfratshausen</b>
+     *  * <p>
+     *  *  Code: D2714
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wolfratshausen;
+    /**
+     * <b>Grundbuchamt Wolfratshausen</b>
+     *  * <p>
+     *  *  Code: D2714G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wolfratshausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Miesbach, Zwst. Tegernsee</b>
+     *  * <p>
+     *  *  Code: D2715
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Miesbach_Zwst_Tegernsee;
+    /**
+     * <b>Landgericht M&#252;nchen II Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsger. Garmisch-Partenkirchen</b>
+     *  * <p>
+     *  *  Code: D2720
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Muenchen_II_Auswaertige_Strafvollstreckungskammer_b_d_Amtsger_Garmisch_Partenkirchen;
+    /**
+     * <b>Landgericht Passau</b>
+     *  * <p>
+     *  *  Code: D2800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Passau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Passau</b>
+     *  * <p>
+     *  *  Code: D2800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Passau;
+    /**
+     * <b>Amtsgericht Freyung</b>
+     *  * <p>
+     *  *  Code: D2801
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Freyung;
+    /**
+     * <b>Grundbuchamt Freyung</b>
+     *  * <p>
+     *  *  Code: D2801G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Freyung;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Passau, Zwst. Griesbach i. Rottal</b>
+     *  * <p>
+     *  *  Code: D2802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Passau_Zwst_Griesbach_i_Rottal;
+    /**
+     * <b>Amtsgericht Passau</b>
+     *  * <p>
+     *  *  Code: D2803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Passau;
+    /**
+     * <b>Grundbuchamt Passau</b>
+     *  * <p>
+     *  *  Code: D2803G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Passau;
+    /**
+     * <b>Registergericht Amtsgericht Passau</b>
+     *  * <p>
+     *  *  Code: D2803V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Passau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Pfarrkirchen</b>
+     *  * <p>
+     *  *  Code: D2804
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Pfarrkirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Passau Zweigstelle Rotthalm&#252;nster</b>
+     *  * <p>
+     *  *  Code: D2805
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Passau_Zweigstelle_Rotthalmuenster;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Simbach a. Inn</b>
+     *  * <p>
+     *  *  Code: D2806
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Simbach_a_Inn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Passau, Zweigstelle Vilshofen</b>
+     *  * <p>
+     *  *  Code: D2807
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Passau_Zweigstelle_Vilshofen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freyung, Zwst. Waldkirchen</b>
+     *  * <p>
+     *  *  Code: D2808
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freyung_Zwst_Waldkirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Passau, Zwst. Wegscheid</b>
+     *  * <p>
+     *  *  Code: D2809
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Passau_Zwst_Wegscheid;
+    /**
+     * <b>Landgericht Traunstein</b>
+     *  * <p>
+     *  *  Code: D2900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Traunstein;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Traunstein</b>
+     *  * <p>
+     *  *  Code: D2900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Traunstein;
+    /**
+     * <b>Amtsgericht Alt&#246;tting</b>
+     *  * <p>
+     *  *  Code: D2901
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Altoetting;
+    /**
+     * <b>Grundbuchamt Alt&#246;tting</b>
+     *  * <p>
+     *  *  Code: D2901G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Altoetting;
+    /**
+     * <b>Amtsgericht Rosenheim Zweigstelle Bad Aibling</b>
+     *  * <p>
+     *  *  Code: D2902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rosenheim_Zweigstelle_Bad_Aibling;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Reichenhall</b>
+     *  * <p>
+     *  *  Code: D2903
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Reichenhall;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Berchtesgaden</b>
+     *  * <p>
+     *  *  Code: D2904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Berchtesgaden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Alt&#246;tting Zweigstelle Burghausen/Obb.</b>
+     *  * <p>
+     *  *  Code: D2905
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Altoetting_Zweigstelle_Burghausen_Obb;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Haag i. OB</b>
+     *  * <p>
+     *  *  Code: D2906
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Haag_i_OB;
+    /**
+     * <b>Amtsgericht Laufen</b>
+     *  * <p>
+     *  *  Code: D2907
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Laufen;
+    /**
+     * <b>Grundbuchamt Laufen</b>
+     *  * <p>
+     *  *  Code: D2907G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Laufen;
+    /**
+     * <b>Amtsgericht M&#252;hldorf</b>
+     *  * <p>
+     *  *  Code: D2908
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muehldorf;
+    /**
+     * <b>Grundbuchamt M&#252;hldorf</b>
+     *  * <p>
+     *  *  Code: D2908G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Muehldorf;
+    /**
+     * <b>Amtsgericht Rosenheim</b>
+     *  * <p>
+     *  *  Code: D2909
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rosenheim;
+    /**
+     * <b>Grundbuchamt Rosenheim</b>
+     *  * <p>
+     *  *  Code: D2909G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rosenheim;
+    /**
+     * <b>Amtsgericht Traunstein</b>
+     *  * <p>
+     *  *  Code: D2910
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Traunstein;
+    /**
+     * <b>Grundbuchamt Traunstein</b>
+     *  * <p>
+     *  *  Code: D2910G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Traunstein;
+    /**
+     * <b>Registergericht Amtsgericht Traunstein</b>
+     *  * <p>
+     *  *  Code: D2910V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Traunstein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Trostberg</b>
+     *  * <p>
+     *  *  Code: D2911
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Trostberg;
+    /**
+     * <b>Amtsgericht Rosenheim Zweigstelle Wasserburg a. Inn</b>
+     *  * <p>
+     *  *  Code: D2912
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rosenheim_Zweigstelle_Wasserburg_a_Inn;
+    /**
+     * <b>Landgericht Traunstein Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht M&#252;hldorf</b>
+     *  * <p>
+     *  *  Code: D2920
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Traunstein_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Muehldorf;
+    /**
+     * <b>Oberlandesgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D3000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Nuernberg;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D3000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Nuernberg;
+    /**
+     * <b>Landgericht Amberg</b>
+     *  * <p>
+     *  *  Code: D3100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Amberg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Amberg</b>
+     *  * <p>
+     *  *  Code: D3100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Amberg;
+    /**
+     * <b>Amtsgericht Amberg</b>
+     *  * <p>
+     *  *  Code: D3101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Amberg;
+    /**
+     * <b>Grundbuchamt Amberg</b>
+     *  * <p>
+     *  *  Code: D3101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Amberg;
+    /**
+     * <b>Registergericht Amtsgericht Amberg</b>
+     *  * <p>
+     *  *  Code: D3101V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Amberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Cham Zweigstelle Furth i. Wald</b>
+     *  * <p>
+     *  *  Code: D3103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Cham_Zweigstelle_Furth_i_Wald;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schwandorf, Zweigstelle Nabburg</b>
+     *  * <p>
+     *  *  Code: D3104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Nabburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neunburg vorm Wald</b>
+     *  * <p>
+     *  *  Code: D3105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neunburg_vorm_Wald;
+    /**
+     * <b>Amtsgericht Schwandorf</b>
+     *  * <p>
+     *  *  Code: D3106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwandorf;
+    /**
+     * <b>Grundbuchamt Schwandorf</b>
+     *  * <p>
+     *  *  Code: D3106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwandorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sulzbach-Rosenberg</b>
+     *  * <p>
+     *  *  Code: D3107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Sulzbach_Rosenberg;
+    /**
+     * <b>Amtsgericht Cham Zweigstelle Waldm&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D3108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cham_Zweigstelle_Waldmuenchen;
+    /**
+     * <b>Landgericht Ansbach</b>
+     *  * <p>
+     *  *  Code: D3200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ansbach;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Ansbach</b>
+     *  * <p>
+     *  *  Code: D3200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Ansbach;
+    /**
+     * <b>Amtsgericht Ansbach</b>
+     *  * <p>
+     *  *  Code: D3201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ansbach;
+    /**
+     * <b>Grundbuchamt Ansbach</b>
+     *  * <p>
+     *  *  Code: D3201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ansbach;
+    /**
+     * <b>Registergericht Amtsgericht Ansbach</b>
+     *  * <p>
+     *  *  Code: D3201V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Ansbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ansbach Zweigstelle Dinkelsb&#252;hl</b>
+     *  * <p>
+     *  *  Code: D3202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Dinkelsbuehl;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wei&#223;enburg i. Bay., Zwst. Gunzenhausen</b>
+     *  * <p>
+     *  *  Code: D3203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weissenburg_i_Bay_Zwst_Gunzenhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ansbach Zweigstelle Rothenburg o.d. Tauber</b>
+     *  * <p>
+     *  *  Code: D3204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Rothenburg_o_d_Tauber;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Uffenheim</b>
+     *  * <p>
+     *  *  Code: D3205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Uffenheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dinkelsb&#252;hl, Zwst. Feuchtwangen</b>
+     *  * <p>
+     *  *  Code: D3206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dinkelsbuehl_Zwst_Feuchtwangen;
+    /**
+     * <b>Amtsgericht Wei&#223;enburg i. Bay.</b>
+     *  * <p>
+     *  *  Code: D3208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weissenburg_i_Bay;
+    /**
+     * <b>Grundbuchamt Wei&#223;enburg</b>
+     *  * <p>
+     *  *  Code: D3208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weissenburg;
+    /**
+     * <b>Landgericht N&#252;rnberg-F&#252;rth</b>
+     *  * <p>
+     *  *  Code: D3300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Nuernberg_Fuerth;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht N&#252;rnberg-F&#252;rth</b>
+     *  * <p>
+     *  *  Code: D3300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Nuernberg_Fuerth;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Beilngries</b>
+     *  * <p>
+     *  *  Code: D3301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Beilngries;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ingolstadt, Zwst. Eichst&#228;tt</b>
+     *  * <p>
+     *  *  Code: D3302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ingolstadt_Zwst_Eichstaett;
+    /**
+     * <b>Amtsgericht Erlangen</b>
+     *  * <p>
+     *  *  Code: D3303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Erlangen;
+    /**
+     * <b>Grundbuchamt Erlangen</b>
+     *  * <p>
+     *  *  Code: D3303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Erlangen;
+    /**
+     * <b>Amtsgericht F&#252;rth (Bayern)</b>
+     *  * <p>
+     *  *  Code: D3304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fuerth_Bayern;
+    /**
+     * <b>Grundbuchamt F&#252;rth (Bayern)</b>
+     *  * <p>
+     *  *  Code: D3304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fuerth_Bayern;
+    /**
+     * <b>Registergericht Amtsgericht F&#252;rth</b>
+     *  * <p>
+     *  *  Code: D3304V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Fuerth;
+    /**
+     * <b>Amtsgericht Hersbruck</b>
+     *  * <p>
+     *  *  Code: D3305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hersbruck;
+    /**
+     * <b>Grundbuchamt Hersbruck</b>
+     *  * <p>
+     *  *  Code: D3305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hersbruck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schwabach Zweigstelle Hilpoltstein</b>
+     *  * <p>
+     *  *  Code: D3306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schwabach_Zweigstelle_Hilpoltstein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hersbruck, Zwst. Lauf (Pegnitz)</b>
+     *  * <p>
+     *  *  Code: D3307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hersbruck_Zwst_Lauf_Pegnitz;
+    /**
+     * <b>Amtsgericht Neumarkt</b>
+     *  * <p>
+     *  *  Code: D3308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neumarkt;
+    /**
+     * <b>Grundbuchamt Neumarkt</b>
+     *  * <p>
+     *  *  Code: D3308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neumarkt;
+    /**
+     * <b>Amtsgericht Neustadt (an der Aisch)</b>
+     *  * <p>
+     *  *  Code: D3309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neustadt_an_der_Aisch;
+    /**
+     * <b>Grundbuchamt Neustadt</b>
+     *  * <p>
+     *  *  Code: D3309G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neustadt;
+    /**
+     * <b>Amtsgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D3310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nuernberg;
+    /**
+     * <b>Grundbuchamt N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D3310G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nuernberg;
+    /**
+     * <b>Registergericht Amtsgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D3310V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Nuernberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Roth</b>
+     *  * <p>
+     *  *  Code: D3311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Roth;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neustadt a. d. Aisch, Zwst. Scheinfeld</b>
+     *  * <p>
+     *  *  Code: D3312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neustadt_a_d_Aisch_Zwst_Scheinfeld;
+    /**
+     * <b>Amtsgericht Schwabach</b>
+     *  * <p>
+     *  *  Code: D3313
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwabach;
+    /**
+     * <b>Grundbuchamt Schwabach</b>
+     *  * <p>
+     *  *  Code: D3313G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwabach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Windsheim</b>
+     *  * <p>
+     *  *  Code: D3315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Windsheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht N&#252;rnberg, Zwst. Altdorf</b>
+     *  * <p>
+     *  *  Code: D3316
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Nuernberg_Zwst_Altdorf;
+    /**
+     * <b>Landgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D3400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Regensburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D3400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Regensburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Abensberg</b>
+     *  * <p>
+     *  *  Code: D3401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Abensberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Straubing, Zwst. Bogen</b>
+     *  * <p>
+     *  *  Code: D3402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Straubing_Zwst_Bogen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schwandorf Zweigstelle Burglengenfeld</b>
+     *  * <p>
+     *  *  Code: D3403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Burglengenfeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hemau</b>
+     *  * <p>
+     *  *  Code: D3404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hemau;
+    /**
+     * <b>Amtsgericht Kelheim</b>
+     *  * <p>
+     *  *  Code: D3405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kelheim;
+    /**
+     * <b>Grundbuchamt Kelheim</b>
+     *  * <p>
+     *  *  Code: D3405G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kelheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Cham Zweigstelle K&#246;tzting</b>
+     *  * <p>
+     *  *  Code: D3406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Cham_Zweigstelle_Koetzting;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Mitterfels</b>
+     *  * <p>
+     *  *  Code: D3407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Mitterfels;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neukirchen b. Hl. Blut</b>
+     *  * <p>
+     *  *  Code: D3408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neukirchen_b_Hl_Blut;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Parsberg</b>
+     *  * <p>
+     *  *  Code: D3409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Parsberg;
+    /**
+     * <b>Amtsgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D3410
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Regensburg;
+    /**
+     * <b>Grundbuchamt Regensburg</b>
+     *  * <p>
+     *  *  Code: D3410G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Regensburg;
+    /**
+     * <b>Registergericht Amtsgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D3410V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Regensburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Riedenburg</b>
+     *  * <p>
+     *  *  Code: D3411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Riedenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Cham Zweigstelle Roding</b>
+     *  * <p>
+     *  *  Code: D3412
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Cham_Zweigstelle_Roding;
+    /**
+     * <b>Amtsgericht Straubing</b>
+     *  * <p>
+     *  *  Code: D3413
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Straubing;
+    /**
+     * <b>Grundbuchamt Straubing</b>
+     *  * <p>
+     *  *  Code: D3413G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Straubing;
+    /**
+     * <b>Registergericht Amtsgericht Straubing</b>
+     *  * <p>
+     *  *  Code: D3413V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Straubing;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Roding, Zwst. Nittenau</b>
+     *  * <p>
+     *  *  Code: D3414
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Roding_Zwst_Nittenau;
+    /**
+     * <b>Amtsgericht Cham</b>
+     *  * <p>
+     *  *  Code: D3415
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cham;
+    /**
+     * <b>Grundbuchamt Cham</b>
+     *  * <p>
+     *  *  Code: D3415G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Cham;
+    /**
+     * <b>Landgericht Regensburg Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Straubing</b>
+     *  * <p>
+     *  *  Code: D3420
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Regensburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Straubing;
+    /**
+     * <b>Landgericht Weiden i. d. OPf.</b>
+     *  * <p>
+     *  *  Code: D3500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Weiden_i_d_OPf;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Weiden i. d. Opf.</b>
+     *  * <p>
+     *  *  Code: D3500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Weiden_i_d_Opf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Weiden i. d. OPf., Zwst. Eschenbach i. d. OPf.</b>
+     *  * <p>
+     *  *  Code: D3501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weiden_i_d_OPf_Zwst_Eschenbach_i_d_OPf;
+    /**
+     * <b>Amtsgericht Tirschenreuth Zweigstelle Kemnath</b>
+     *  * <p>
+     *  *  Code: D3502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tirschenreuth_Zweigstelle_Kemnath;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neustadt a. d. Waldnaab</b>
+     *  * <p>
+     *  *  Code: D3503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neustadt_a_d_Waldnaab;
+    /**
+     * <b>Amtsgericht Schwandorf Zweigstelle Oberviechtach</b>
+     *  * <p>
+     *  *  Code: D3504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwandorf_Zweigstelle_Oberviechtach;
+    /**
+     * <b>Amtsgericht Tirschenreuth</b>
+     *  * <p>
+     *  *  Code: D3505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tirschenreuth;
+    /**
+     * <b>Grundbuchamt Tirschenreuth</b>
+     *  * <p>
+     *  *  Code: D3505G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Tirschenreuth;
+    /**
+     * <b>Amtsgericht Weiden Zweigstelle Vohenstrau&#223;</b>
+     *  * <p>
+     *  *  Code: D3506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weiden_Zweigstelle_Vohenstrauss;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Waldsassen</b>
+     *  * <p>
+     *  *  Code: D3507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Waldsassen;
+    /**
+     * <b>Amtsgericht Weiden i. d. OPf</b>
+     *  * <p>
+     *  *  Code: D3508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weiden_i_d_OPf;
+    /**
+     * <b>Grundbuchamt Weiden</b>
+     *  * <p>
+     *  *  Code: D3508G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weiden;
+    /**
+     * <b>Registergericht Amtsgericht Weiden</b>
+     *  * <p>
+     *  *  Code: D3508V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Weiden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eschenbach/Opf., Au&#223;enstelle Auerbach</b>
+     *  * <p>
+     *  *  Code: D3509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eschenbach_Opf_Aussenstelle_Auerbach;
+    /**
+     * <b>Oberlandesgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Bamberg;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Bamberg;
+    /**
+     * <b>Landgericht Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D4100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Aschaffenburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D4100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Aschaffenburg;
+    /**
+     * <b>Amtsgericht Aschaffenburg Zweigstelle Alzenau i.Ufr.</b>
+     *  * <p>
+     *  *  Code: D4101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aschaffenburg_Zweigstelle_Alzenau_i_Ufr;
+    /**
+     * <b>Amtsgericht Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D4102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aschaffenburg;
+    /**
+     * <b>Grundbuchamt Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D4102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aschaffenburg;
+    /**
+     * <b>Registergericht Amtsgericht Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D4102V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Aschaffenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gem&#252;nden a. Main, Zwst. Lohr a. Main</b>
+     *  * <p>
+     *  *  Code: D4103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Lohr_a_Main;
+    /**
+     * <b>Amtsgericht Obernburg Zweigstelle Miltenberg</b>
+     *  * <p>
+     *  *  Code: D4104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Obernburg_Zweigstelle_Miltenberg;
+    /**
+     * <b>Amtsgericht Obernburg</b>
+     *  * <p>
+     *  *  Code: D4105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Obernburg;
+    /**
+     * <b>Grundbuchamt Obernburg</b>
+     *  * <p>
+     *  *  Code: D4105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Obernburg;
+    /**
+     * <b>Landgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bamberg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bamberg;
+    /**
+     * <b>Amtsgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bamberg;
+    /**
+     * <b>Grundbuchamt Bamberg</b>
+     *  * <p>
+     *  *  Code: D4201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bamberg;
+    /**
+     * <b>Registergericht Amtsgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D4201V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Bamberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ha&#223;furt, Zweigstelle Ebern</b>
+     *  * <p>
+     *  *  Code: D4202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hassfurt_Zweigstelle_Ebern;
+    /**
+     * <b>Amtsgericht Forchheim</b>
+     *  * <p>
+     *  *  Code: D4203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Forchheim;
+    /**
+     * <b>Grundbuchamt Forchheim</b>
+     *  * <p>
+     *  *  Code: D4203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Forchheim;
+    /**
+     * <b>Amtsgericht Ha&#223;furt</b>
+     *  * <p>
+     *  *  Code: D4204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hassfurt;
+    /**
+     * <b>Grundbuchamt Ha&#223;furt</b>
+     *  * <p>
+     *  *  Code: D4204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hassfurt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hofheim i. Ufr.</b>
+     *  * <p>
+     *  *  Code: D4205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hofheim_i_Ufr;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Forchheim, Zwst. H&#246;chstadt a. d. Aisch</b>
+     *  * <p>
+     *  *  Code: D4206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Forchheim_Zwst_Hoechstadt_a_d_Aisch;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Forchheim, Au&#223;enstelle Ebermannstadt</b>
+     *  * <p>
+     *  *  Code: D4207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Forchheim_Aussenstelle_Ebermannstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ha&#223;furt, Au&#223;enstelle Eltmann</b>
+     *  * <p>
+     *  *  Code: D4208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hassfurt_Aussenstelle_Eltmann;
+    /**
+     * <b>Landgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D4300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bayreuth;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D4300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bayreuth;
+    /**
+     * <b>Amtsgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D4301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bayreuth;
+    /**
+     * <b>Grundbuchamt Bayreuth</b>
+     *  * <p>
+     *  *  Code: D4301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bayreuth;
+    /**
+     * <b>Registergericht Amtsgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D4301V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Bayreuth;
+    /**
+     * <b>Amtsgericht Kulmbach</b>
+     *  * <p>
+     *  *  Code: D4302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kulmbach;
+    /**
+     * <b>Grundbuchamt Kulmbach</b>
+     *  * <p>
+     *  *  Code: D4302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kulmbach;
+    /**
+     * <b>Amtsgericht Bayreuth Zweigstelle Pegnitz</b>
+     *  * <p>
+     *  *  Code: D4303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bayreuth_Zweigstelle_Pegnitz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stadtsteinach</b>
+     *  * <p>
+     *  *  Code: D4304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stadtsteinach;
+    /**
+     * <b>Landgericht Coburg</b>
+     *  * <p>
+     *  *  Code: D4400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Coburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Coburg</b>
+     *  * <p>
+     *  *  Code: D4400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Coburg;
+    /**
+     * <b>Amtsgericht Coburg</b>
+     *  * <p>
+     *  *  Code: D4401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Coburg;
+    /**
+     * <b>Grundbuchamt Coburg</b>
+     *  * <p>
+     *  *  Code: D4401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Coburg;
+    /**
+     * <b>Amtsgericht Coburg, Zentrales Mahngericht</b>
+     *  * <p>
+     *  *  Code: D4401M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Coburg_Zentrales_Mahngericht;
+    /**
+     * <b>Registergericht Amtsgericht Coburg</b>
+     *  * <p>
+     *  *  Code: D4401V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Coburg;
+    /**
+     * <b>Amtsgericht Kronach</b>
+     *  * <p>
+     *  *  Code: D4402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kronach;
+    /**
+     * <b>Grundbuchamt Kronach</b>
+     *  * <p>
+     *  *  Code: D4402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kronach;
+    /**
+     * <b>Amtsgericht Lichtenfels</b>
+     *  * <p>
+     *  *  Code: D4403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lichtenfels;
+    /**
+     * <b>Grundbuchamt Lichtenfels</b>
+     *  * <p>
+     *  *  Code: D4403G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lichtenfels;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kronach, Zwst. Ludwigsstadt</b>
+     *  * <p>
+     *  *  Code: D4404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kronach_Zwst_Ludwigsstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Coburg, Zwst. Neustadt b. Coburg</b>
+     *  * <p>
+     *  *  Code: D4405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Coburg_Zwst_Neustadt_b_Coburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lichtenfels, Au&#223;enstelle Staffelstein</b>
+     *  * <p>
+     *  *  Code: D4406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lichtenfels_Aussenstelle_Staffelstein;
+    /**
+     * <b>Landgericht Coburg Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Kronach</b>
+     *  * <p>
+     *  *  Code: D4420
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Coburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Kronach;
+    /**
+     * <b>Landgericht Hof</b>
+     *  * <p>
+     *  *  Code: D4500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hof;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hof</b>
+     *  * <p>
+     *  *  Code: D4500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hof;
+    /**
+     * <b>Amtsgericht Hof</b>
+     *  * <p>
+     *  *  Code: D4501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hof;
+    /**
+     * <b>Grundbuchamt Hof</b>
+     *  * <p>
+     *  *  Code: D4501G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hof;
+    /**
+     * <b>Amtsgericht Hof, Zentrales Vollstreckungsgericht Bayern</b>
+     *  * <p>
+     *  *  Code: D4501R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hof_Zentrales_Vollstreckungsgericht_Bayern;
+    /**
+     * <b>Registergericht Amtsgericht Hof</b>
+     *  * <p>
+     *  *  Code: D4501V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Hof;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht M&#252;nchberg</b>
+     *  * <p>
+     *  *  Code: D4502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Muenchberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Naila</b>
+     *  * <p>
+     *  *  Code: D4503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Naila;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Selb</b>
+     *  * <p>
+     *  *  Code: D4504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Selb;
+    /**
+     * <b>Amtsgericht Wunsiedel</b>
+     *  * <p>
+     *  *  Code: D4505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wunsiedel;
+    /**
+     * <b>Grundbuchamt Wunsiedel</b>
+     *  * <p>
+     *  *  Code: D4505G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wunsiedel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hof, Zwst. Rehau</b>
+     *  * <p>
+     *  *  Code: D4506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hof_Zwst_Rehau;
+    /**
+     * <b>Landgericht Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D4600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Schweinfurt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D4600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Schweinfurt;
+    /**
+     * <b>Amtsgericht Bad Kissingen</b>
+     *  * <p>
+     *  *  Code: D4601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Kissingen;
+    /**
+     * <b>Grundbuchamt Bad Kissingen</b>
+     *  * <p>
+     *  *  Code: D4601G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Kissingen;
+    /**
+     * <b>Amtsgericht Bad Neustadt</b>
+     *  * <p>
+     *  *  Code: D4602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Neustadt;
+    /**
+     * <b>Grundbuchamt Bad Neustadt</b>
+     *  * <p>
+     *  *  Code: D4602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Neustadt;
+    /**
+     * <b>Amtsgericht Schweinfurt Zweigstelle Gerolzhofen</b>
+     *  * <p>
+     *  *  Code: D4603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schweinfurt_Zweigstelle_Gerolzhofen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Kissingen Zweigstelle Hammelburg</b>
+     *  * <p>
+     *  *  Code: D4604
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Kissingen_Zweigstelle_Hammelburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht K&#246;nigshofen i. Grabfeld</b>
+     *  * <p>
+     *  *  Code: D4605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Koenigshofen_i_Grabfeld;
+    /**
+     * <b>Amtsgericht Bad Neustadt Zweigstelle Mellrichstadt</b>
+     *  * <p>
+     *  *  Code: D4606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Neustadt_Zweigstelle_Mellrichstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht M&#252;nnerstadt</b>
+     *  * <p>
+     *  *  Code: D4607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Muennerstadt;
+    /**
+     * <b>Amtsgericht Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D4608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schweinfurt;
+    /**
+     * <b>Grundbuchamt Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D4608G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schweinfurt;
+    /**
+     * <b>Registergericht Amtsgericht Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D4608V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Schweinfurt;
+    /**
+     * <b>Landgericht Schweinfurt Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Bad Neustadt</b>
+     *  * <p>
+     *  *  Code: D4620
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Schweinfurt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Bad_Neustadt;
+    /**
+     * <b>Landgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D4700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Wuerzburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D4700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Wuerzburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Arnstein</b>
+     *  * <p>
+     *  *  Code: D4701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Arnstein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Br&#252;ckenau</b>
+     *  * <p>
+     *  *  Code: D4702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Brueckenau;
+    /**
+     * <b>Amtsgericht Gem&#252;nden</b>
+     *  * <p>
+     *  *  Code: D4703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gemuenden;
+    /**
+     * <b>Grundbuchamt Gem&#252;nden</b>
+     *  * <p>
+     *  *  Code: D4703G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gemuenden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Karlstadt</b>
+     *  * <p>
+     *  *  Code: D4704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Karlstadt;
+    /**
+     * <b>Amtsgericht Kitzingen</b>
+     *  * <p>
+     *  *  Code: D4705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kitzingen;
+    /**
+     * <b>Grundbuchamt Kitzingen</b>
+     *  * <p>
+     *  *  Code: D4705G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kitzingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gem&#252;nden a. Main, Zwst. Marktheidenfeld</b>
+     *  * <p>
+     *  *  Code: D4706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Marktheidenfeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht W&#252;rzburg, Zweigstelle Ochsenfurt</b>
+     *  * <p>
+     *  *  Code: D4707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wuerzburg_Zweigstelle_Ochsenfurt;
+    /**
+     * <b>Amtsgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D4708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wuerzburg;
+    /**
+     * <b>Grundbuchamt W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D4708G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wuerzburg;
+    /**
+     * <b>Registergericht Amtsgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D4708V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Wuerzburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Erlangen, Zwst. der StA N&#252;rnberg-F&#252;rth</b>
+     *  * <p>
+     *  *  Code: D5200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Erlangen_Zwst_der_StA_Nuernberg_Fuerth;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht F&#252;rth, Zwst. der StA N&#252;rnberg-F&#252;rth</b>
+     *  * <p>
+     *  *  Code: D5300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Fuerth_Zwst_der_StA_Nuernberg_Fuerth;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Straubing, Zwst. der StA Regensburg</b>
+     *  * <p>
+     *  *  Code: D5400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Straubing_Zwst_der_StA_Regensburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Neu-Ulm, Zwst. der StA Memmingen</b>
+     *  * <p>
+     *  *  Code: D5500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Neu_Ulm_Zwst_der_StA_Memmingen;
+    /**
+     * <b>Landgericht Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D5700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ingolstadt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D5700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Ingolstadt;
+    /**
+     * <b>Amtsgericht Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D5701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ingolstadt;
+    /**
+     * <b>Grundbuchamt Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D5701G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ingolstadt;
+    /**
+     * <b>Registergericht Amtsgericht Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D5701V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Ingolstadt;
+    /**
+     * <b>Amtsgericht Neuburg an der Donau</b>
+     *  * <p>
+     *  *  Code: D5702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuburg_an_der_Donau;
+    /**
+     * <b>Grundbuchamt Neuburg</b>
+     *  * <p>
+     *  *  Code: D5702G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neuburg;
+    /**
+     * <b>Amtsgericht Pfaffenhofen a. d. Ilm</b>
+     *  * <p>
+     *  *  Code: D5703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pfaffenhofen_a_d_Ilm;
+    /**
+     * <b>Grundbuchamt Pfaffenhofen</b>
+     *  * <p>
+     *  *  Code: D5703G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pfaffenhofen;
+    /**
+     * <b>Landgericht Ingolstadt Ausw&#228;rtige Strafvollstreckungskammer b.d. Amtsgericht Neuburg a.d. Donau</b>
+     *  * <p>
+     *  *  Code: D5720
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Ingolstadt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neuburg_a_d_Donau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Rosenheim, Zwst. der StA Traunstein</b>
+     *  * <p>
+     *  *  Code: D5900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Rosenheim_Zwst_der_StA_Traunstein;
+    /**
+     * <b>Justizvollzugsanstalt Erlangen Sozialtherapeutische Anstalt</b>
+     *  * <p>
+     *  *  Code: D6082
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Erlangen_Sozialtherapeutische_Anstalt;
+    /**
+     * <b>Bayerischer Verwaltungsgerichtshof</b>
+     *  * <p>
+     *  *  Code: D6122
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerischer_Verwaltungsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Bernau</b>
+     *  * <p>
+     *  *  Code: D6190
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bernau;
+    /**
+     * <b>Verwaltungsgericht Ansbach</b>
+     *  * <p>
+     *  *  Code: D6248
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Ansbach;
+    /**
+     * <b>Sozialgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D6249
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Augsburg;
+    /**
+     * <b>Arbeitsgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D6250
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Augsburg;
+    /**
+     * <b>Arbeitsgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D6251
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bamberg;
+    /**
+     * <b>Arbeitsgericht Kempten/Allg&#228;u</b>
+     *  * <p>
+     *  *  Code: D6252
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Kempten_Allgaeu;
+    /**
+     * <b>Sozialgericht Landshut</b>
+     *  * <p>
+     *  *  Code: D6253
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Landshut;
+    /**
+     * <b>Bayerisches Landessozialgericht</b>
+     *  * <p>
+     *  *  Code: D6255
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerisches_Landessozialgericht;
+    /**
+     * <b>Landesarbeitsgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6256
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Muenchen;
+    /**
+     * <b>Arbeitsgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6257
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Muenchen;
+    /**
+     * <b>Finanzgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6258
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Muenchen;
+    /**
+     * <b>Bayerischer Verfassungsgerichtshof</b>
+     *  * <p>
+     *  *  Code: D6259
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerischer_Verfassungsgerichtshof;
+    /**
+     * <b>Sozialgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6260
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Muenchen;
+    /**
+     * <b>Bundespatentgericht</b>
+     *  * <p>
+     *  *  Code: D6261
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundespatentgericht;
+    /**
+     * <b>Verwaltungsgericht M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6262
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Muenchen;
+    /**
+     * <b>Bundesfinanzhof</b>
+     *  * <p>
+     *  *  Code: D6263
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesfinanzhof;
+    /**
+     * <b>Finanzgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D6264
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Nuernberg;
+    /**
+     * <b>Sozialgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D6265
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Nuernberg;
+    /**
+     * <b>Landesarbeitsgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D6266
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Nuernberg;
+    /**
+     * <b>Arbeitsgericht N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D6267
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Nuernberg;
+    /**
+     * <b>Sozialgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D6268
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Regensburg;
+    /**
+     * <b>Arbeitsgericht Rosenheim</b>
+     *  * <p>
+     *  *  Code: D6269
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Rosenheim;
+    /**
+     * <b>Arbeitsgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D6270
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wuerzburg;
+    /**
+     * <b>Sozialgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D6271
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Wuerzburg;
+    /**
+     * <b>Verwaltungsgericht W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D6272
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Wuerzburg;
+    /**
+     * <b>Justizvollzugsanstalt M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D6463
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Muenchen;
+    /**
+     * <b>Arbeitsgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D6539
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bayreuth;
+    /**
+     * <b>Arbeitsgericht Passau</b>
+     *  * <p>
+     *  *  Code: D6540
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Passau;
+    /**
+     * <b>Arbeitsgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D6541
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Regensburg;
+    /**
+     * <b>Arbeitsgericht Weiden</b>
+     *  * <p>
+     *  *  Code: D6542
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Weiden;
+    /**
+     * <b>Sozialgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D6575
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Bayreuth;
+    /**
+     * <b>Verwaltungsgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D6577
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Augsburg;
+    /**
+     * <b>Verwaltungsgericht Bayreuth</b>
+     *  * <p>
+     *  *  Code: D6578
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Bayreuth;
+    /**
+     * <b>Verwaltungsgericht Regensburg</b>
+     *  * <p>
+     *  *  Code: D6579
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Regensburg;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D6657
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Nuernberg;
+    /**
+     * <b>Bayerischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: D6658
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerischer_Anwaltsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Memmingen</b>
+     *  * <p>
+     *  *  Code: D7607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Memmingen;
+    /**
+     * <b>Justizvollzugsanstalt N&#252;rnberg</b>
+     *  * <p>
+     *  *  Code: D7870
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Nuernberg;
+    /**
+     * <b>Justizvollzugsanstalt Kaisheim</b>
+     *  * <p>
+     *  *  Code: D7871
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kaisheim;
+    /**
+     * <b>Bayerisches Landessozialgericht Zweigstelle Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D8047
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bayerisches_Landessozialgericht_Zweigstelle_Schweinfurt;
+    /**
+     * <b>Justizvollzugsanstalt Landsberg</b>
+     *  * <p>
+     *  *  Code: D8419
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Landsberg;
+    /**
+     * <b>Justizvollzugsanstalt W&#252;rzburg</b>
+     *  * <p>
+     *  *  Code: D8445
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wuerzburg;
+    /**
+     * <b>Justizvollzugsanstalt Neuburg an der Donau</b>
+     *  * <p>
+     *  *  Code: D8485
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Neuburg_an_der_Donau;
+    /**
+     * <b>Justizvollzugsanstalt Kempten</b>
+     *  * <p>
+     *  *  Code: D8491
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kempten;
+    /**
+     * <b>Justizvollzugsanstalt Straubing</b>
+     *  * <p>
+     *  *  Code: D8517
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Straubing;
+    /**
+     * <b>Justizvollzugsanstalt Aichach</b>
+     *  * <p>
+     *  *  Code: D8551
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Aichach;
+    /**
+     * <b>Justizvollzugsanstalt Amberg</b>
+     *  * <p>
+     *  *  Code: D8552
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Amberg;
+    /**
+     * <b>Justizvollzugsanstalt Ansbach</b>
+     *  * <p>
+     *  *  Code: D8553
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ansbach;
+    /**
+     * <b>Justizvollzugsanstalt Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D8554
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Aschaffenburg;
+    /**
+     * <b>Justizvollzugsanstalt Bad Reichenhall</b>
+     *  * <p>
+     *  *  Code: D8555
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bad_Reichenhall;
+    /**
+     * <b>Justizvollzugsanstalt Bamberg</b>
+     *  * <p>
+     *  *  Code: D8556
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bamberg;
+    /**
+     * <b>Justizvollzugsanstalt St. Georgen-Bayreuth</b>
+     *  * <p>
+     *  *  Code: D8557
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_St_Georgen_Bayreuth;
+    /**
+     * <b>Justizvollzugsanstalt Ebrach</b>
+     *  * <p>
+     *  *  Code: D8558
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ebrach;
+    /**
+     * <b>Justizvollzugsanstalt Eichst&#228;tt</b>
+     *  * <p>
+     *  *  Code: D8559
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Eichstaett;
+    /**
+     * <b>Justizvollzugsanstalt Erding</b>
+     *  * <p>
+     *  *  Code: D8560
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Erding;
+    /**
+     * <b>Justizvollzugsanstalt Garmisch-Partenkirchen</b>
+     *  * <p>
+     *  *  Code: D8561
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Garmisch_Partenkirchen;
+    /**
+     * <b>Justizvollzugsanstalt Hof</b>
+     *  * <p>
+     *  *  Code: D8562
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hof;
+    /**
+     * <b>Justizvollzugsanstalt Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D8563
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ingolstadt;
+    /**
+     * <b>Justizvollzugsanstalt Kronach</b>
+     *  * <p>
+     *  *  Code: D8564
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kronach;
+    /**
+     * <b>Justizvollzugsanstalt Landshut</b>
+     *  * <p>
+     *  *  Code: D8566
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Landshut;
+    /**
+     * <b>Justizvollzugsanstalt Passau</b>
+     *  * <p>
+     *  *  Code: D8567
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Passau;
+    /**
+     * <b>Justizvollzugsanstalt Regensburg</b>
+     *  * <p>
+     *  *  Code: D8568
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Regensburg;
+    /**
+     * <b>Justizvollzugsanstalt Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D8569
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Schweinfurt;
+    /**
+     * <b>Justizvollzugsanstalt Traunstein</b>
+     *  * <p>
+     *  *  Code: D8570
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Traunstein;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer M&#252;nchen</b>
+     *  * <p>
+     *  *  Code: D8642
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Muenchen;
+    /**
+     * <b>Anwaltsgericht Bamberg</b>
+     *  * <p>
+     *  *  Code: D8686
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_Bamberg;
+    /**
+     * <b>Justizvollzugsanstalt Niedersch&#246;nenfeld</b>
+     *  * <p>
+     *  *  Code: D8699
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Niederschoenenfeld;
+    /**
+     * <b>Justizvollzugsanstalt M&#252;hldorf a.Inn</b>
+     *  * <p>
+     *  *  Code: D8793
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Muehldorf_a_Inn;
+    /**
+     * <b>Justizvollzugsanstalt Laufen-Lebenau</b>
+     *  * <p>
+     *  *  Code: D8794
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Laufen_Lebenau;
+    /**
+     * <b>Justizvollzugsanstalt Weiden</b>
+     *  * <p>
+     *  *  Code: D8821
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Weiden;
+    /**
+     * <b>Finanzgericht Augsburg</b>
+     *  * <p>
+     *  *  Code: D8902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Augsburg;
+    /**
+     * <b>Justizvollzugsanstalt Augsburg-Gablingen</b>
+     *  * <p>
+     *  *  Code: D9372
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Augsburg_Gablingen;
+    /**
+     * <b>Arbeitsgericht Augsburg Kammer Neu-Ulm</b>
+     *  * <p>
+     *  *  Code: D9395
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Augsburg_Kammer_Neu_Ulm;
+    /**
+     * <b>Arbeitsgericht Bamberg Kammer Coburg</b>
+     *  * <p>
+     *  *  Code: D9396
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bamberg_Kammer_Coburg;
+    /**
+     * <b>Arbeitsgericht Bayreuth Kammer Hof</b>
+     *  * <p>
+     *  *  Code: D9397
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bayreuth_Kammer_Hof;
+    /**
+     * <b>Arbeitsgericht M&#252;nchen Kammer Ingolstadt</b>
+     *  * <p>
+     *  *  Code: D9398
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Muenchen_Kammer_Ingolstadt;
+    /**
+     * <b>Arbeitsgericht M&#252;nchen Kammer Weilheim</b>
+     *  * <p>
+     *  *  Code: D9399
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Muenchen_Kammer_Weilheim;
+    /**
+     * <b>Arbeitsgericht Passau Kammer Deggendorf</b>
+     *  * <p>
+     *  *  Code: D9400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Passau_Kammer_Deggendorf;
+    /**
+     * <b>Arbeitsgericht Regensburg Kammer Landshut</b>
+     *  * <p>
+     *  *  Code: D9401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Regensburg_Kammer_Landshut;
+    /**
+     * <b>Arbeitsgericht Rosenheim Kammer Traunstein</b>
+     *  * <p>
+     *  *  Code: D9402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Rosenheim_Kammer_Traunstein;
+    /**
+     * <b>Arbeitsgericht Weiden Kammer Schwandorf</b>
+     *  * <p>
+     *  *  Code: D9403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Weiden_Kammer_Schwandorf;
+    /**
+     * <b>Arbeitsgericht W&#252;rzburg Kammer Aschaffenburg</b>
+     *  * <p>
+     *  *  Code: D9404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wuerzburg_Kammer_Aschaffenburg;
+    /**
+     * <b>Arbeitsgericht W&#252;rzburg Kammer Schweinfurt</b>
+     *  * <p>
+     *  *  Code: D9405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wuerzburg_Kammer_Schweinfurt;
+    /**
+     * <b>Kammergericht Berlin</b>
+     *  * <p>
+     *  *  Code: F1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Kammergericht_Berlin;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Berlin (Kammergericht)</b>
+     *  * <p>
+     *  *  Code: F1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Berlin_Kammergericht;
+    /**
+     * <b>Staatsanwaltschaft bei dem Kammergericht -Dezernat Ausl. Einl.-</b>
+     *  * <p>
+     *  *  Code: F1001S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Kammergericht_Dezernat_Ausl_Einl;
+    /**
+     * <b>Landgericht Berlin Strafgerichtsbarkeit</b>
+     *  * <p>
+     *  *  Code: F1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Berlin_Strafgerichtsbarkeit;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Berlin;
+    /**
+     * <b>Amtsgericht Tiergarten</b>
+     *  * <p>
+     *  *  Code: F1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tiergarten;
+    /**
+     * <b>Amtsgericht Tiergarten Zivilsachen</b>
+     *  * <p>
+     *  *  Code: F1101R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tiergarten_Zivilsachen;
+    /**
+     * <b>Amtsgericht Wedding</b>
+     *  * <p>
+     *  *  Code: F1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wedding;
+    /**
+     * <b>Amtsgericht Wedding, Mahngericht</b>
+     *  * <p>
+     *  *  Code: F1102M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wedding_Mahngericht;
+    /**
+     * <b>Amtsgericht Charlottenburg</b>
+     *  * <p>
+     *  *  Code: F1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Charlottenburg;
+    /**
+     * <b>Amtsgericht Charlottenburg, Handels- und Genossenschaftsregister</b>
+     *  * <p>
+     *  *  Code: F1103R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Charlottenburg_Handels_und_Genossenschaftsregister;
+    /**
+     * <b>Amtsgericht Spandau</b>
+     *  * <p>
+     *  *  Code: F1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Spandau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Berlin-Zehlendorf</b>
+     *  * <p>
+     *  *  Code: F1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Berlin_Zehlendorf;
+    /**
+     * <b>Amtsgericht Sch&#246;neberg</b>
+     *  * <p>
+     *  *  Code: F1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schoeneberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Berlin-Lichterfelde</b>
+     *  * <p>
+     *  *  Code: F1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Berlin_Lichterfelde;
+    /**
+     * <b>Amtsgericht Kreuzberg</b>
+     *  * <p>
+     *  *  Code: F1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kreuzberg;
+    /**
+     * <b>Amtsgericht Neuk&#246;lln</b>
+     *  * <p>
+     *  *  Code: F1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neukoelln;
+    /**
+     * <b>Amtsgericht Pankow</b>
+     *  * <p>
+     *  *  Code: F1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pankow;
+    /**
+     * <b>Amtsanwaltschaft Berlin</b>
+     *  * <p>
+     *  *  Code: F1110S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsanwaltschaft_Berlin;
+    /**
+     * <b>Amtsgericht Lichtenberg</b>
+     *  * <p>
+     *  *  Code: F1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lichtenberg;
+    /**
+     * <b>Amtsgericht Berlin Mitte</b>
+     *  * <p>
+     *  *  Code: F1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Berlin_Mitte;
+    /**
+     * <b>Amtsgericht Berlin Mitte, Zentrales Vollstreckungsgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F1112R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Berlin_Mitte_Zentrales_Vollstreckungsgericht_Berlin;
+    /**
+     * <b>Amtsgericht K&#246;penick</b>
+     *  * <p>
+     *  *  Code: F1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koepenick;
+    /**
+     * <b>Amtsgericht Hohensch&#246;nhausen</b>
+     *  * <p>
+     *  *  Code: F1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hohenschoenhausen;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Berlin II</b>
+     *  * <p>
+     *  *  Code: F1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Berlin_II;
+    /**
+     * <b>Bereitschaftsgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6053
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bereitschaftsgericht_Berlin;
+    /**
+     * <b>Sozialgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6061
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Berlin;
+    /**
+     * <b>Finanzgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6080
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Berlin;
+    /**
+     * <b>Landessozialgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6081
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Berlin;
+    /**
+     * <b>Arbeitsgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6082
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Berlin;
+    /**
+     * <b>Landesarbeitsgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6083
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Berlin;
+    /**
+     * <b>Verwaltungsgericht Berlin</b>
+     *  * <p>
+     *  *  Code: F6084
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Berlin;
+    /**
+     * <b>Justizbeitreibungsstelle des Bundesverwaltungsgerichts</b>
+     *  * <p>
+     *  *  Code: F6085
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizbeitreibungsstelle_des_Bundesverwaltungsgerichts;
+    /**
+     * <b>aufgel&#246;st-Bundesverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: F6087
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Bundesverwaltungsgericht;
+    /**
+     * <b>Die Pr&#228;sidentin des Kammergerichts</b>
+     *  * <p>
+     *  *  Code: F6104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Die_Praesidentin_des_Kammergerichts;
+    /**
+     * <b>Oberverwaltungsgericht Berlin-Brandenburg</b>
+     *  * <p>
+     *  *  Code: F6145
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_Berlin_Brandenburg;
+    /**
+     * <b>Anwaltsgericht im Bezirk der Rechtsanwaltskammer Berlin</b>
+     *  * <p>
+     *  *  Code: F6149
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_Berlin;
+    /**
+     * <b>Anwaltsgerichtshof Berlin</b>
+     *  * <p>
+     *  *  Code: F6185
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_Berlin;
+    /**
+     * <b>Jugendarrestanstalt Berlin-Brandenburg</b>
+     *  * <p>
+     *  *  Code: F6374
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Berlin_Brandenburg;
+    /**
+     * <b>Jugendstrafanstalt Berlin</b>
+     *  * <p>
+     *  *  Code: F6399
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendstrafanstalt_Berlin;
+    /**
+     * <b>aufgel&#246;st-Landgericht Berlin Zivilgerichtsbarkeit 1. Instanz</b>
+     *  * <p>
+     *  *  Code: F6402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Landgericht_Berlin_Zivilgerichtsbarkeit_1_Instanz;
+    /**
+     * <b>Justizvollzugsanstalt Tegel</b>
+     *  * <p>
+     *  *  Code: F6491
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Tegel;
+    /**
+     * <b>Die Pr&#228;sidentin des Verwaltungsgerichts Berlin</b>
+     *  * <p>
+     *  *  Code: F6496
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Die_Praesidentin_des_Verwaltungsgerichts_Berlin;
+    /**
+     * <b>Justizvollzugsanstalt Moabit</b>
+     *  * <p>
+     *  *  Code: F6525
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Moabit;
+    /**
+     * <b>Landgericht Berlin Zivilgerichtsbarkeit</b>
+     *  * <p>
+     *  *  Code: F6529
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Berlin_Zivilgerichtsbarkeit;
+    /**
+     * <b>Verfassungsgerichtshof Berlin</b>
+     *  * <p>
+     *  *  Code: F6544
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_Berlin;
+    /**
+     * <b>Europ&#228;isches Mahngericht Deutschland</b>
+     *  * <p>
+     *  *  Code: F6545
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Europaeisches_Mahngericht_Deutschland;
+    /**
+     * <b>Amtsgericht Tiergarten, Verkehrs- und Wirtschaftsstrafsachen</b>
+     *  * <p>
+     *  *  Code: F6552
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tiergarten_Verkehrs_und_Wirtschaftsstrafsachen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Pankow-Wei&#223;ensee, Familiengericht</b>
+     *  * <p>
+     *  *  Code: F6553
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Pankow_Weissensee_Familiengericht;
+    /**
+     * <b>Justizvollzugsanstalt f&#252;r Frauen Berlin</b>
+     *  * <p>
+     *  *  Code: F7460
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_fuer_Frauen_Berlin;
+    /**
+     * <b>Justizvollzugsanstalt Pl&#246;tzensee</b>
+     *  * <p>
+     *  *  Code: F7464
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ploetzensee;
+    /**
+     * <b>Justizvollzugsanstalt des Offenen Vollzuges Berlin</b>
+     *  * <p>
+     *  *  Code: F7599
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_des_Offenen_Vollzuges_Berlin;
+    /**
+     * <b>Brandenburgisches Oberlandesgericht</b>
+     *  * <p>
+     *  *  Code: G1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Brandenburgisches_Oberlandesgericht;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Brandenburg a. d. Havel</b>
+     *  * <p>
+     *  *  Code: G1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Brandenburg_a_d_Havel;
+    /**
+     * <b>Generalstaatsanwaltschaft des Landes Brandenburg, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: G1001S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Generalstaatsanwaltschaft_des_Landes_Brandenburg_Rechtshilfe;
+    /**
+     * <b>Landgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Cottbus;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Cottbus;
+    /**
+     * <b>Amtsgericht Bad Liebenwerda</b>
+     *  * <p>
+     *  *  Code: G1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Liebenwerda;
+    /**
+     * <b>Grundbuchamt Bad Liebenwerda</b>
+     *  * <p>
+     *  *  Code: G1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Liebenwerda;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Calau (in L&#252;bbenau)</b>
+     *  * <p>
+     *  *  Code: G1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Calau_in_Luebbenau;
+    /**
+     * <b>Amtsgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cottbus;
+    /**
+     * <b>Grundbuchamt Cottbus</b>
+     *  * <p>
+     *  *  Code: G1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Cottbus;
+    /**
+     * <b>Amtsgericht Bad Liebenwerda Zweigstelle Finsterwalde</b>
+     *  * <p>
+     *  *  Code: G1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Liebenwerda_Zweigstelle_Finsterwalde;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Forst/Lausitz</b>
+     *  * <p>
+     *  *  Code: G1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Forst_Lausitz;
+    /**
+     * <b>Amtsgericht Guben</b>
+     *  * <p>
+     *  *  Code: G1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Guben;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Herzberg/Elster</b>
+     *  * <p>
+     *  *  Code: G1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Herzberg_Elster;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Luckau</b>
+     *  * <p>
+     *  *  Code: G1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Luckau;
+    /**
+     * <b>Amtsgericht L&#252;bben</b>
+     *  * <p>
+     *  *  Code: G1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luebben;
+    /**
+     * <b>Grundbuchamt L&#252;bben (Spreewald)</b>
+     *  * <p>
+     *  *  Code: G1110G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luebben_Spreewald;
+    /**
+     * <b>Amtsgericht Senftenberg</b>
+     *  * <p>
+     *  *  Code: G1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Senftenberg;
+    /**
+     * <b>Grundbuchamt Senftenberg</b>
+     *  * <p>
+     *  *  Code: G1111G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Senftenberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Spremberg</b>
+     *  * <p>
+     *  *  Code: G1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Spremberg;
+    /**
+     * <b>Staatsanwaltschaft bei dem Landgericht Cottbus, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: G1113S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Landgericht_Cottbus_Rechtshilfe;
+    /**
+     * <b>Landgericht Frankfurt/Oder</b>
+     *  * <p>
+     *  *  Code: G1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Frankfurt_Oder;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Frankfurt/Oder</b>
+     *  * <p>
+     *  *  Code: G1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schwedt, Zwst. Angerm&#252;nde</b>
+     *  * <p>
+     *  *  Code: G1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schwedt_Zwst_Angermuende;
+    /**
+     * <b>Amtsgericht Bad Freienwalde</b>
+     *  * <p>
+     *  *  Code: G1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Freienwalde;
+    /**
+     * <b>Grundbuchamt Bad Freienwalde (Oder)</b>
+     *  * <p>
+     *  *  Code: G1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Freienwalde_Oder;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Beeskow</b>
+     *  * <p>
+     *  *  Code: G1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Beeskow;
+    /**
+     * <b>Amtsgericht Bernau</b>
+     *  * <p>
+     *  *  Code: G1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bernau;
+    /**
+     * <b>Grundbuchamt Bernau bei Berlin</b>
+     *  * <p>
+     *  *  Code: G1204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bernau_bei_Berlin;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Frankfurt/Oder, Zwst. Bernau</b>
+     *  * <p>
+     *  *  Code: G1204S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Bernau;
+    /**
+     * <b>Amtsgericht Eberswalde</b>
+     *  * <p>
+     *  *  Code: G1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eberswalde;
+    /**
+     * <b>Grundbuchamt Eberswalde</b>
+     *  * <p>
+     *  *  Code: G1205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eberswalde;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Eberswalde, Zwst. der StA Frankfurt/Oder</b>
+     *  * <p>
+     *  *  Code: G1205S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Eberswalde_Zwst_der_StA_Frankfurt_Oder;
+    /**
+     * <b>Amtsgericht Eisenh&#252;ttenstadt</b>
+     *  * <p>
+     *  *  Code: G1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eisenhuettenstadt;
+    /**
+     * <b>Grundbuchamt Eisenh&#252;ttenstadt</b>
+     *  * <p>
+     *  *  Code: G1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eisenhuettenstadt;
+    /**
+     * <b>Amtsgericht Frankfurt/Oder</b>
+     *  * <p>
+     *  *  Code: G1207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Frankfurt_Oder;
+    /**
+     * <b>Grundbuchamt Frankfurt/Oder</b>
+     *  * <p>
+     *  *  Code: G1207G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Frankfurt_Oder;
+    /**
+     * <b>Amtsgericht F&#252;rstenwalde</b>
+     *  * <p>
+     *  *  Code: G1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fuerstenwalde;
+    /**
+     * <b>Grundbuchamt F&#252;rstenwalde/Spree</b>
+     *  * <p>
+     *  *  Code: G1208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fuerstenwalde_Spree;
+    /**
+     * <b>Amtsgericht Prenzlau</b>
+     *  * <p>
+     *  *  Code: G1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Prenzlau;
+    /**
+     * <b>Grundbuchamt Prenzlau</b>
+     *  * <p>
+     *  *  Code: G1209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Prenzlau;
+    /**
+     * <b>Amtsgericht Schwedt</b>
+     *  * <p>
+     *  *  Code: G1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwedt;
+    /**
+     * <b>Grundbuchamt Schwedt/Oder</b>
+     *  * <p>
+     *  *  Code: G1210G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwedt_Oder;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Frankfurt/Oder, Zwst. Schwedt</b>
+     *  * <p>
+     *  *  Code: G1210S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Schwedt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Seelow</b>
+     *  * <p>
+     *  *  Code: G1211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Seelow;
+    /**
+     * <b>Amtsgericht Strausberg</b>
+     *  * <p>
+     *  *  Code: G1212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Strausberg;
+    /**
+     * <b>Grundbuchamt Strausberg</b>
+     *  * <p>
+     *  *  Code: G1212G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Strausberg;
+    /**
+     * <b>Amtsgericht Prenzlau Zweigstelle Templin</b>
+     *  * <p>
+     *  *  Code: G1213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Prenzlau_Zweigstelle_Templin;
+    /**
+     * <b>Staatsanwaltschaft bei dem Landgericht Frankfurt/Oder, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: G1214S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Landgericht_Frankfurt_Oder_Rechtshilfe;
+    /**
+     * <b>Landgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Potsdam;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Potsdam;
+    /**
+     * <b>Amtsgericht Brandenburg Zweigstelle Belzig</b>
+     *  * <p>
+     *  *  Code: G1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brandenburg_Zweigstelle_Belzig;
+    /**
+     * <b>Amtsgericht Brandenburg an der Havel</b>
+     *  * <p>
+     *  *  Code: G1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brandenburg_an_der_Havel;
+    /**
+     * <b>Grundbuchamt Brandenburg an der Havel</b>
+     *  * <p>
+     *  *  Code: G1302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Brandenburg_an_der_Havel;
+    /**
+     * <b>Amtsgericht Zehdenick</b>
+     *  * <p>
+     *  *  Code: G1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zehdenick;
+    /**
+     * <b>Grundbuchamt Zehdenick</b>
+     *  * <p>
+     *  *  Code: G1303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zehdenick;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht J&#252;terbog</b>
+     *  * <p>
+     *  *  Code: G1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Jueterbog;
+    /**
+     * <b>Amtsgericht K&#246;nigs Wusterhausen</b>
+     *  * <p>
+     *  *  Code: G1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koenigs_Wusterhausen;
+    /**
+     * <b>Grundbuchamt K&#246;nigs Wusterhausen</b>
+     *  * <p>
+     *  *  Code: G1305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Koenigs_Wusterhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kyritz</b>
+     *  * <p>
+     *  *  Code: G1306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kyritz;
+    /**
+     * <b>Amtsgericht Luckenwalde</b>
+     *  * <p>
+     *  *  Code: G1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luckenwalde;
+    /**
+     * <b>Grundbuchamt Luckenwalde</b>
+     *  * <p>
+     *  *  Code: G1307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luckenwalde;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Luckenwalde, Zwst. der StA Potsdam</b>
+     *  * <p>
+     *  *  Code: G1307S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Luckenwalde_Zwst_der_StA_Potsdam;
+    /**
+     * <b>Amtsgericht Nauen</b>
+     *  * <p>
+     *  *  Code: G1308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nauen;
+    /**
+     * <b>Grundbuchamt Nauen</b>
+     *  * <p>
+     *  *  Code: G1308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nauen;
+    /**
+     * <b>Amtsgericht Nauen, Zentrales Vollstreckungsgericht Brandenburg</b>
+     *  * <p>
+     *  *  Code: G1308R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nauen_Zentrales_Vollstreckungsgericht_Brandenburg;
+    /**
+     * <b>Amtsgericht Neuruppin</b>
+     *  * <p>
+     *  *  Code: G1309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuruppin;
+    /**
+     * <b>Grundbuchamt Neuruppin</b>
+     *  * <p>
+     *  *  Code: G1309G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neuruppin;
+    /**
+     * <b>Amtsgericht Oranienburg</b>
+     *  * <p>
+     *  *  Code: G1310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oranienburg;
+    /**
+     * <b>Grundbuchamt Oranienburg</b>
+     *  * <p>
+     *  *  Code: G1310G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Oranienburg;
+    /**
+     * <b>Amtsgericht Perleberg</b>
+     *  * <p>
+     *  *  Code: G1311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Perleberg;
+    /**
+     * <b>Grundbuchamt Perleberg</b>
+     *  * <p>
+     *  *  Code: G1311G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Perleberg;
+    /**
+     * <b>Amtsgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G1312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Potsdam;
+    /**
+     * <b>Grundbuchamt Potsdam</b>
+     *  * <p>
+     *  *  Code: G1312G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Potsdam;
+    /**
+     * <b>Amtsgericht Perleberg Zweigstelle Pritzwalk</b>
+     *  * <p>
+     *  *  Code: G1314
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Perleberg_Zweigstelle_Pritzwalk;
+    /**
+     * <b>Amtsgericht Rathenow</b>
+     *  * <p>
+     *  *  Code: G1315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rathenow;
+    /**
+     * <b>Grundbuchamt Rathenow</b>
+     *  * <p>
+     *  *  Code: G1315G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rathenow;
+    /**
+     * <b>Amtsgericht Neuruppin Zweigstelle Wittstock</b>
+     *  * <p>
+     *  *  Code: G1316
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuruppin_Zweigstelle_Wittstock;
+    /**
+     * <b>Amtsgericht Zossen</b>
+     *  * <p>
+     *  *  Code: G1317
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zossen;
+    /**
+     * <b>Grundbuchamt Zossen</b>
+     *  * <p>
+     *  *  Code: G1317G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zossen;
+    /**
+     * <b>Amtsgericht Zehdenick Zweigstelle Gransee</b>
+     *  * <p>
+     *  *  Code: G1318
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zehdenick_Zweigstelle_Gransee;
+    /**
+     * <b>Staatsanwaltschaft bei dem Landgericht Potsdam, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: G1319S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Landgericht_Potsdam_Rechtshilfe;
+    /**
+     * <b>Landgericht Neuruppin</b>
+     *  * <p>
+     *  *  Code: G1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Neuruppin;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Neuruppin</b>
+     *  * <p>
+     *  *  Code: G1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Neuruppin;
+    /**
+     * <b>Staatsanwaltschaft bei dem Landgericht Neuruppin, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: G1401S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Landgericht_Neuruppin_Rechtshilfe;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer des Landes Brandenburg</b>
+     *  * <p>
+     *  *  Code: G6002
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Landes_Brandenburg;
+    /**
+     * <b>Brandenburgischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: G6008
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Brandenburgischer_Anwaltsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Brandenburg an der Havel</b>
+     *  * <p>
+     *  *  Code: G6017
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Brandenburg_an_der_Havel;
+    /**
+     * <b>Verwaltungsgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G6076
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Potsdam;
+    /**
+     * <b>Verwaltungsgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G6590
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Cottbus;
+    /**
+     * <b>Justizvollzugsanstalt Cottbus-Dissenchen</b>
+     *  * <p>
+     *  *  Code: G6630
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Cottbus_Dissenchen;
+    /**
+     * <b>Finanzgericht Berlin-Brandenburg</b>
+     *  * <p>
+     *  *  Code: G6657
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Berlin_Brandenburg;
+    /**
+     * <b>Landessozialgericht Berlin-Brandenburg</b>
+     *  * <p>
+     *  *  Code: G6664
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Berlin_Brandenburg;
+    /**
+     * <b>Verwaltungsgericht Frankfurt//Oder</b>
+     *  * <p>
+     *  *  Code: G6669
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Frankfurt_Oder;
+    /**
+     * <b>Justizvollzugsanstalt Luckau-Duben</b>
+     *  * <p>
+     *  *  Code: G6671
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Luckau_Duben;
+    /**
+     * <b>Sozialgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G6672
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Cottbus;
+    /**
+     * <b>Sozialgericht Frankfurt (Oder)</b>
+     *  * <p>
+     *  *  Code: G6673
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Frankfurt_Oder;
+    /**
+     * <b>Sozialgericht Neuruppin</b>
+     *  * <p>
+     *  *  Code: G6674
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Neuruppin;
+    /**
+     * <b>Sozialgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G6675
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Potsdam;
+    /**
+     * <b>Arbeitsgericht Brandenburg an der Havel</b>
+     *  * <p>
+     *  *  Code: G6676
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Brandenburg_an_der_Havel;
+    /**
+     * <b>Arbeitsgericht Cottbus</b>
+     *  * <p>
+     *  *  Code: G6677
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Cottbus;
+    /**
+     * <b>Arbeitsgericht Eberswalde</b>
+     *  * <p>
+     *  *  Code: G6678
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Eberswalde;
+    /**
+     * <b>Arbeitsgericht Frankfurt (Oder)</b>
+     *  * <p>
+     *  *  Code: G6679
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Frankfurt_Oder;
+    /**
+     * <b>Arbeitsgericht Neuruppin</b>
+     *  * <p>
+     *  *  Code: G6680
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Neuruppin;
+    /**
+     * <b>Arbeitsgericht Potsdam</b>
+     *  * <p>
+     *  *  Code: G6681
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Potsdam;
+    /**
+     * <b>Arbeitsgericht Senftenberg</b>
+     *  * <p>
+     *  *  Code: G6682
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Senftenberg;
+    /**
+     * <b>Verfassungsgericht Brandenburg</b>
+     *  * <p>
+     *  *  Code: G6696
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgericht_Brandenburg;
+    /**
+     * <b>Justizvollzugsanstalt Heidering</b>
+     *  * <p>
+     *  *  Code: G6726
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Heidering;
+    /**
+     * <b>Hanseatisches Oberlandesgericht in Bremen</b>
+     *  * <p>
+     *  *  Code: H1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hanseatisches_Oberlandesgericht_in_Bremen;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Bremen;
+    /**
+     * <b>Landgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bremen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bremen;
+    /**
+     * <b>Amtsgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bremen;
+    /**
+     * <b>Grundbuchamt Bremen</b>
+     *  * <p>
+     *  *  Code: H1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bremen;
+    /**
+     * <b>Amtsgericht Bremerhaven</b>
+     *  * <p>
+     *  *  Code: H1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bremerhaven;
+    /**
+     * <b>Grundbuchamt Bremerhaven</b>
+     *  * <p>
+     *  *  Code: H1102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bremerhaven;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bremerhaven, Zwst. der StA Bremen</b>
+     *  * <p>
+     *  *  Code: H1102S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bremerhaven_Zwst_der_StA_Bremen;
+    /**
+     * <b>Amtsgericht Bremerhaven, zentrales Vollstreckungsgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H1102V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bremerhaven_zentrales_Vollstreckungsgericht_Bremen;
+    /**
+     * <b>Amtsgericht Bremen-Blumenthal</b>
+     *  * <p>
+     *  *  Code: H1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bremen_Blumenthal;
+    /**
+     * <b>Grundbuchamt Bremen-Blumenthal</b>
+     *  * <p>
+     *  *  Code: H1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bremen_Blumenthal;
+    /**
+     * <b>Anwaltsgerichtshof der Freien und Hansestadt Bremen</b>
+     *  * <p>
+     *  *  Code: H6026
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_der_Freien_und_Hansestadt_Bremen;
+    /**
+     * <b>Sozialgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H6032
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Bremen;
+    /**
+     * <b>Landessozialgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H6033
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Bremen;
+    /**
+     * <b>Arbeitsgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H6034
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bremen;
+    /**
+     * <b>Landesarbeitsgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H6035
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Bremen;
+    /**
+     * <b>Oberverwaltungsgericht der Freien Hansestadt Bremen</b>
+     *  * <p>
+     *  *  Code: H6036
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_der_Freien_Hansestadt_Bremen;
+    /**
+     * <b>Verwaltungsgericht der Freien Hansestadt Bremen</b>
+     *  * <p>
+     *  *  Code: H6037
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_der_Freien_Hansestadt_Bremen;
+    /**
+     * <b>Staatsgerichtshof der Freien Hansestadt Bremen</b>
+     *  * <p>
+     *  *  Code: H6038
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsgerichtshof_der_Freien_Hansestadt_Bremen;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Bremerhaven</b>
+     *  * <p>
+     *  *  Code: H6039
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Bremerhaven;
+    /**
+     * <b>Finanzgericht Bremen</b>
+     *  * <p>
+     *  *  Code: H6040
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Bremen;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Hanseatischen Rechtsanwaltskammer Bremen</b>
+     *  * <p>
+     *  *  Code: H6184
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Bremen;
+    /**
+     * <b>Justizvollzugsanstalt Bremen</b>
+     *  * <p>
+     *  *  Code: H6220
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bremen;
+    /**
+     * <b>Justizvollzugsanstalt Bremen, Offener Vollzug/Frauenvollzug</b>
+     *  * <p>
+     *  *  Code: H6233
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bremen_Offener_Vollzug_Frauenvollzug;
+    /**
+     * <b>Soziale Dienste der Justiz im Lande Bremen</b>
+     *  * <p>
+     *  *  Code: H6234
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Soziale_Dienste_der_Justiz_im_Lande_Bremen;
+    /**
+     * <b>Hanseatisches Oberlandesgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hanseatisches_Oberlandesgericht_Hamburg;
+    /**
+     * <b>Generalstaatsanwaltschaft Hamburg</b>
+     *  * <p>
+     *  *  Code: K1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Generalstaatsanwaltschaft_Hamburg;
+    /**
+     * <b>Landgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hamburg;
+    /**
+     * <b>Staatsanwaltschaft Hamburg</b>
+     *  * <p>
+     *  *  Code: K1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_Hamburg;
+    /**
+     * <b>Amtsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg;
+    /**
+     * <b>Grundbuchamt Hamburg</b>
+     *  * <p>
+     *  *  Code: K1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg;
+    /**
+     * <b>Amtsgericht Hamburg, Zentralisierter Bereich Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: K1101I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Zentralisierter_Bereich_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Hamburg, Zentralisierter Bereich Mahnverfahren</b>
+     *  * <p>
+     *  *  Code: K1101M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Zentralisierter_Bereich_Mahnverfahren;
+    /**
+     * <b>Amtsgericht Hamburg, Zentralisierter Bereich Handelsregister</b>
+     *  * <p>
+     *  *  Code: K1101R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Zentralisierter_Bereich_Handelsregister;
+    /**
+     * <b>Amtsgericht Hamburg, Zentrales Vollstreckungsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K1101V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Zentrales_Vollstreckungsgericht_Hamburg;
+    /**
+     * <b>Amtsgericht Hamburg, Schiffsregister</b>
+     *  * <p>
+     *  *  Code: K1101Z
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Schiffsregister;
+    /**
+     * <b>Amtsgericht Hamburg-Altona</b>
+     *  * <p>
+     *  *  Code: K1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Altona;
+    /**
+     * <b>Grundbuchamt Hamburg-Altona</b>
+     *  * <p>
+     *  *  Code: K1102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Altona;
+    /**
+     * <b>Amtsgericht Hamburg-Bergedorf</b>
+     *  * <p>
+     *  *  Code: K1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Bergedorf;
+    /**
+     * <b>Grundbuchamt Hamburg-Bergedorf</b>
+     *  * <p>
+     *  *  Code: K1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Bergedorf;
+    /**
+     * <b>Amtsgericht Hamburg-Blankenese</b>
+     *  * <p>
+     *  *  Code: K1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Blankenese;
+    /**
+     * <b>Grundbuchamt Hamburg-Blankenese</b>
+     *  * <p>
+     *  *  Code: K1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Blankenese;
+    /**
+     * <b>Amtsgericht Hamburg-Harburg</b>
+     *  * <p>
+     *  *  Code: K1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Harburg;
+    /**
+     * <b>Grundbuchamt Hamburg-Harburg</b>
+     *  * <p>
+     *  *  Code: K1105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Harburg;
+    /**
+     * <b>Amtsgericht Hamburg-Wandsbek</b>
+     *  * <p>
+     *  *  Code: K1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Wandsbek;
+    /**
+     * <b>Grundbuchamt Hamburg-Wandsbek</b>
+     *  * <p>
+     *  *  Code: K1106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Wandsbek;
+    /**
+     * <b>Amtsgericht Hamburg-Barmbek</b>
+     *  * <p>
+     *  *  Code: K1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_Barmbek;
+    /**
+     * <b>Grundbuchamt Hamburg-Barmbek</b>
+     *  * <p>
+     *  *  Code: K1107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_Barmbek;
+    /**
+     * <b>Amtsgericht Hamburg-St. Georg</b>
+     *  * <p>
+     *  *  Code: K1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamburg_St_Georg;
+    /**
+     * <b>Grundbuchamt Hamburg-St. Georg</b>
+     *  * <p>
+     *  *  Code: K1108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamburg_St_Georg;
+    /**
+     * <b>aufgel&#246;st-Verwaltungsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6046
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Verwaltungsgericht_Hamburg;
+    /**
+     * <b>Hamburgisches Oberverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: K6051
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hamburgisches_Oberverwaltungsgericht;
+    /**
+     * <b>Verwaltungsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6052
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Hamburg;
+    /**
+     * <b>Hamburgisches Verfassungsgericht</b>
+     *  * <p>
+     *  *  Code: K6053
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hamburgisches_Verfassungsgericht;
+    /**
+     * <b>Landesarbeitsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6054
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Hamburg;
+    /**
+     * <b>Arbeitsgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6055
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hamburg;
+    /**
+     * <b>Landessozialgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6078
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Hamburg;
+    /**
+     * <b>Finanzgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6079
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Hamburg;
+    /**
+     * <b>Sozialgericht Hamburg</b>
+     *  * <p>
+     *  *  Code: K6083
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Hamburg;
+    /**
+     * <b>Anwaltsgericht im Bezirk der Hanseatischen Rechtsanwaltskammer Hamburg</b>
+     *  * <p>
+     *  *  Code: K6165
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_im_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Hamburg;
+    /**
+     * <b>Anwaltsgerichtshof in der Freien und Hansestadt Hamburg</b>
+     *  * <p>
+     *  *  Code: K6209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_in_der_Freien_und_Hansestadt_Hamburg;
+    /**
+     * <b>Justizvollzugsanstalt Billwerder</b>
+     *  * <p>
+     *  *  Code: K6274
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Billwerder;
+    /**
+     * <b>Justizvollzugsanstalt Fuhlsb&#252;ttel</b>
+     *  * <p>
+     *  *  Code: K6411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Fuhlsbuettel;
+    /**
+     * <b>Oberlandesgericht Frankfurt</b>
+     *  * <p>
+     *  *  Code: M1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Frankfurt;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Frankfurt am Main</b>
+     *  * <p>
+     *  *  Code: M1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Frankfurt_am_Main;
+    /**
+     * <b>Generalstaatsanwaltschaft Frankfurt am Main, -Rechtshilfe-</b>
+     *  * <p>
+     *  *  Code: M1001S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Generalstaatsanwaltschaft_Frankfurt_am_Main_Rechtshilfe;
+    /**
+     * <b>Landgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Darmstadt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Darmstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Beerfelden</b>
+     *  * <p>
+     *  *  Code: M1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Beerfelden;
+    /**
+     * <b>Amtsgericht Bensheim</b>
+     *  * <p>
+     *  *  Code: M1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bensheim;
+    /**
+     * <b>Grundbuchamt Bensheim</b>
+     *  * <p>
+     *  *  Code: M1102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bensheim;
+    /**
+     * <b>Amtsgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Darmstadt;
+    /**
+     * <b>Grundbuchamt Darmstadt</b>
+     *  * <p>
+     *  *  Code: M1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Darmstadt;
+    /**
+     * <b>Amtsgericht Dieburg</b>
+     *  * <p>
+     *  *  Code: M1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dieburg;
+    /**
+     * <b>Grundbuchamt Dieburg</b>
+     *  * <p>
+     *  *  Code: M1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dieburg;
+    /**
+     * <b>Amtsgericht F&#252;rth (Hessen)</b>
+     *  * <p>
+     *  *  Code: M1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fuerth_Hessen;
+    /**
+     * <b>Grundbuchamt F&#252;rth (Hessen)</b>
+     *  * <p>
+     *  *  Code: M1105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fuerth_Hessen;
+    /**
+     * <b>Amtsgericht Gro&#223;-Gerau</b>
+     *  * <p>
+     *  *  Code: M1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gross_Gerau;
+    /**
+     * <b>Grundbuchamt Gro&#223;-Gerau</b>
+     *  * <p>
+     *  *  Code: M1106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gross_Gerau;
+    /**
+     * <b>Amtsgericht R&#252;sselsheim</b>
+     *  * <p>
+     *  *  Code: M1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ruesselsheim;
+    /**
+     * <b>Grundbuchamt R&#252;sselsheim</b>
+     *  * <p>
+     *  *  Code: M1107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ruesselsheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gro&#223;-Umstadt</b>
+     *  * <p>
+     *  *  Code: M1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gross_Umstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht F&#252;rth, Zwst. Hirschhorn (Neckar)</b>
+     *  * <p>
+     *  *  Code: M1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fuerth_Zwst_Hirschhorn_Neckar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Michelstadt, Zwst. H&#246;chst i. Odw.</b>
+     *  * <p>
+     *  *  Code: M1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Michelstadt_Zwst_Hoechst_i_Odw;
+    /**
+     * <b>Amtsgericht Lampertheim</b>
+     *  * <p>
+     *  *  Code: M1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lampertheim;
+    /**
+     * <b>Grundbuchamt Lampertheim</b>
+     *  * <p>
+     *  *  Code: M1111G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lampertheim;
+    /**
+     * <b>Amtsgericht Langen</b>
+     *  * <p>
+     *  *  Code: M1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Langen;
+    /**
+     * <b>Grundbuchamt Langen</b>
+     *  * <p>
+     *  *  Code: M1112G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Langen;
+    /**
+     * <b>Amtsgericht Michelstadt</b>
+     *  * <p>
+     *  *  Code: M1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Michelstadt;
+    /**
+     * <b>Grundbuchamt Michelstadt</b>
+     *  * <p>
+     *  *  Code: M1113G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Michelstadt;
+    /**
+     * <b>Amtsgericht Offenbach am Main</b>
+     *  * <p>
+     *  *  Code: M1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Offenbach_am_Main;
+    /**
+     * <b>Grundbuchamt Offenbach am Main</b>
+     *  * <p>
+     *  *  Code: M1114G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Offenbach_am_Main;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Offenbach am Main, Zwst. der StA Darmstadt</b>
+     *  * <p>
+     *  *  Code: M1114S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Offenbach_am_Main_Zwst_der_StA_Darmstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Reichelsheim (Odenwald)</b>
+     *  * <p>
+     *  *  Code: M1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Reichelsheim_Odenwald;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Reinheim</b>
+     *  * <p>
+     *  *  Code: M1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Reinheim;
+    /**
+     * <b>Amtsgericht Seligenstadt</b>
+     *  * <p>
+     *  *  Code: M1117
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Seligenstadt;
+    /**
+     * <b>Grundbuchamt Seligenstadt</b>
+     *  * <p>
+     *  *  Code: M1117G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Seligenstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wald-Michelbach</b>
+     *  * <p>
+     *  *  Code: M1118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wald_Michelbach;
+    /**
+     * <b>Landgericht Frankfurt</b>
+     *  * <p>
+     *  *  Code: M1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Frankfurt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Frankfurt am Main</b>
+     *  * <p>
+     *  *  Code: M1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Frankfurt_am_Main;
+    /**
+     * <b>Amtsgericht Frankfurt</b>
+     *  * <p>
+     *  *  Code: M1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Frankfurt;
+    /**
+     * <b>Grundbuchamt Frankfurt am Main</b>
+     *  * <p>
+     *  *  Code: M1201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Frankfurt_am_Main;
+    /**
+     * <b>Amtsanwaltschaft Frankfurt am Main</b>
+     *  * <p>
+     *  *  Code: M1201S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsanwaltschaft_Frankfurt_am_Main;
+    /**
+     * <b>Amtsgericht Bad Homburg</b>
+     *  * <p>
+     *  *  Code: M1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Homburg;
+    /**
+     * <b>Grundbuchamt Bad Homburg</b>
+     *  * <p>
+     *  *  Code: M1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Homburg;
+    /**
+     * <b>Amtsgericht K&#246;nigstein</b>
+     *  * <p>
+     *  *  Code: M1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koenigstein;
+    /**
+     * <b>Grundbuchamt K&#246;nigstein</b>
+     *  * <p>
+     *  *  Code: M1203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Koenigstein;
+    /**
+     * <b>Amtsgericht Usingen</b>
+     *  * <p>
+     *  *  Code: M1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Usingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Vilbel</b>
+     *  * <p>
+     *  *  Code: M1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Vilbel;
+    /**
+     * <b>Amtsgericht Frankfurt am Main Au&#223;enstelle H&#246;chst</b>
+     *  * <p>
+     *  *  Code: M1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Frankfurt_am_Main_Aussenstelle_Hoechst;
+    /**
+     * <b>Grundbuchamt Frankfurt am Main Au&#223;enstelle H&#246;chst</b>
+     *  * <p>
+     *  *  Code: M1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Frankfurt_am_Main_Aussenstelle_Hoechst;
+    /**
+     * <b>Landgericht Fulda</b>
+     *  * <p>
+     *  *  Code: M1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Fulda;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Fulda</b>
+     *  * <p>
+     *  *  Code: M1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Fulda;
+    /**
+     * <b>Amtsgericht Fulda</b>
+     *  * <p>
+     *  *  Code: M1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fulda;
+    /**
+     * <b>Grundbuchamt Fulda</b>
+     *  * <p>
+     *  *  Code: M1301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fulda;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Fulda, Zwst. Gersfeld</b>
+     *  * <p>
+     *  *  Code: M1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fulda_Zwst_Gersfeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Fulda, Zwst. Hilders</b>
+     *  * <p>
+     *  *  Code: M1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fulda_Zwst_Hilders;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Fulda, Zwst. Neuhof</b>
+     *  * <p>
+     *  *  Code: M1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fulda_Zwst_Neuhof;
+    /**
+     * <b>Amtsgericht Bad Hersfeld</b>
+     *  * <p>
+     *  *  Code: M1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Hersfeld;
+    /**
+     * <b>Grundbuchamt Bad Hersfeld</b>
+     *  * <p>
+     *  *  Code: M1305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Hersfeld;
+    /**
+     * <b>Amtsgericht H&#252;nfeld</b>
+     *  * <p>
+     *  *  Code: M1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Huenfeld;
+    /**
+     * <b>Grundbuchamt H&#252;nfeld</b>
+     *  * <p>
+     *  *  Code: M1307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Huenfeld;
+    /**
+     * <b>Amtsgericht H&#252;nfeld, Zentrales Vollstreckungsgericht Hessen</b>
+     *  * <p>
+     *  *  Code: M1307R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Huenfeld_Zentrales_Vollstreckungsgericht_Hessen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lauterbach</b>
+     *  * <p>
+     *  *  Code: M1308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lauterbach;
+    /**
+     * <b>Amtsgericht Rotenburg a.d. Fulda</b>
+     *  * <p>
+     *  *  Code: M1310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rotenburg_a_d_Fulda;
+    /**
+     * <b>Landgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Giessen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Giessen;
+    /**
+     * <b>Amtsgericht Alsfeld</b>
+     *  * <p>
+     *  *  Code: M1401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Alsfeld;
+    /**
+     * <b>Grundbuchamt Alsfeld</b>
+     *  * <p>
+     *  *  Code: M1401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Alsfeld;
+    /**
+     * <b>Amtsgericht B&#252;dingen</b>
+     *  * <p>
+     *  *  Code: M1402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Buedingen;
+    /**
+     * <b>Grundbuchamt B&#252;dingen</b>
+     *  * <p>
+     *  *  Code: M1402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Buedingen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Butzbach</b>
+     *  * <p>
+     *  *  Code: M1404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Butzbach;
+    /**
+     * <b>Amtsgericht Friedberg</b>
+     *  * <p>
+     *  *  Code: M1405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Friedberg;
+    /**
+     * <b>Grundbuchamt Friedberg</b>
+     *  * <p>
+     *  *  Code: M1405G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Friedberg;
+    /**
+     * <b>Amtsgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M1406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Giessen;
+    /**
+     * <b>Grundbuchamt Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M1406G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Giessen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gr&#252;nberg</b>
+     *  * <p>
+     *  *  Code: M1407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gruenberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Homberg (Ohm)</b>
+     *  * <p>
+     *  *  Code: M1408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Homberg_Ohm;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Laubach</b>
+     *  * <p>
+     *  *  Code: M1409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Laubach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Nauheim</b>
+     *  * <p>
+     *  *  Code: M1410
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Nauheim;
+    /**
+     * <b>Amtsgericht Nidda</b>
+     *  * <p>
+     *  *  Code: M1411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nidda;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ortenberg</b>
+     *  * <p>
+     *  *  Code: M1412
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ortenberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schotten</b>
+     *  * <p>
+     *  *  Code: M1413
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schotten;
+    /**
+     * <b>Amtsgericht Alsfeld Zweigstelle Lauterbach</b>
+     *  * <p>
+     *  *  Code: M1420
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Alsfeld_Zweigstelle_Lauterbach;
+    /**
+     * <b>Landgericht Hanau</b>
+     *  * <p>
+     *  *  Code: M1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hanau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hanau</b>
+     *  * <p>
+     *  *  Code: M1500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hanau;
+    /**
+     * <b>Amtsgericht Gelnhausen</b>
+     *  * <p>
+     *  *  Code: M1501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gelnhausen;
+    /**
+     * <b>Grundbuchamt Gelnhausen</b>
+     *  * <p>
+     *  *  Code: M1501G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gelnhausen;
+    /**
+     * <b>Amtsgericht Hanau</b>
+     *  * <p>
+     *  *  Code: M1502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hanau;
+    /**
+     * <b>Grundbuchamt Hanau</b>
+     *  * <p>
+     *  *  Code: M1502G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hanau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Langenselbold</b>
+     *  * <p>
+     *  *  Code: M1504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Langenselbold;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Orb</b>
+     *  * <p>
+     *  *  Code: M1505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Orb;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schl&#252;chtern, Zwst. Bad Soden-Salm&#252;nster</b>
+     *  * <p>
+     *  *  Code: M1506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schluechtern_Zwst_Bad_Soden_Salmuenster;
+    /**
+     * <b>Amtsgericht Schl&#252;chtern</b>
+     *  * <p>
+     *  *  Code: M1507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schluechtern;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schl&#252;chtern, Zwst. Steinau</b>
+     *  * <p>
+     *  *  Code: M1508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schluechtern_Zwst_Steinau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gelnhausen, Zwst. W&#228;chtersbach</b>
+     *  * <p>
+     *  *  Code: M1509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gelnhausen_Zwst_Waechtersbach;
+    /**
+     * <b>Landgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M1600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Kassel;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M1600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Kassel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Arolsen</b>
+     *  * <p>
+     *  *  Code: M1601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Arolsen;
+    /**
+     * <b>Amtsgericht Eschwege</b>
+     *  * <p>
+     *  *  Code: M1602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eschwege;
+    /**
+     * <b>Grundbuchamt Eschwege</b>
+     *  * <p>
+     *  *  Code: M1602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eschwege;
+    /**
+     * <b>Amtsgericht Fritzlar</b>
+     *  * <p>
+     *  *  Code: M1603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Fritzlar;
+    /**
+     * <b>Grundbuchamt Fritzlar</b>
+     *  * <p>
+     *  *  Code: M1603G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Fritzlar;
+    /**
+     * <b>Amtsgericht Kassel Zweigstelle Hofgeismar</b>
+     *  * <p>
+     *  *  Code: M1605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kassel_Zweigstelle_Hofgeismar;
+    /**
+     * <b>Grundbuchamt Kassel Zweigstelle Hofgeismar</b>
+     *  * <p>
+     *  *  Code: M1605G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kassel_Zweigstelle_Hofgeismar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Karlshafen</b>
+     *  * <p>
+     *  *  Code: M1606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Karlshafen;
+    /**
+     * <b>Amtsgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M1607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kassel;
+    /**
+     * <b>Grundbuchamt Kassel</b>
+     *  * <p>
+     *  *  Code: M1607G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kassel;
+    /**
+     * <b>Amtsgericht Korbach</b>
+     *  * <p>
+     *  *  Code: M1608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Korbach;
+    /**
+     * <b>Grundbuchamt Korbach</b>
+     *  * <p>
+     *  *  Code: M1608G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Korbach;
+    /**
+     * <b>Amtsgericht Melsungen</b>
+     *  * <p>
+     *  *  Code: M1609
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Melsungen;
+    /**
+     * <b>Grundbuchamt Melsungen</b>
+     *  * <p>
+     *  *  Code: M1609G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Melsungen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rotenburg a. d. Fulda</b>
+     *  * <p>
+     *  *  Code: M1612
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rotenburg_a_d_Fulda;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eschwege, Zwst. Sontra</b>
+     *  * <p>
+     *  *  Code: M1613
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eschwege_Zwst_Sontra;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Wildungen</b>
+     *  * <p>
+     *  *  Code: M1614
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Wildungen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Witzenhausen</b>
+     *  * <p>
+     *  *  Code: M1615
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Witzenhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wolfhagen</b>
+     *  * <p>
+     *  *  Code: M1616
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wolfhagen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Homberg (Efze)</b>
+     *  * <p>
+     *  *  Code: M1619
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Homberg_Efze;
+    /**
+     * <b>Landgericht Limburg</b>
+     *  * <p>
+     *  *  Code: M1700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Limburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Limburg a. d. Lahn</b>
+     *  * <p>
+     *  *  Code: M1700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Limburg_a_d_Lahn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wetzlar, Zwst. Braunfels</b>
+     *  * <p>
+     *  *  Code: M1701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wetzlar_Zwst_Braunfels;
+    /**
+     * <b>Amtsgericht Dillenburg</b>
+     *  * <p>
+     *  *  Code: M1702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dillenburg;
+    /**
+     * <b>Grundbuchamt Dillenburg</b>
+     *  * <p>
+     *  *  Code: M1702G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dillenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ehringshausen</b>
+     *  * <p>
+     *  *  Code: M1703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ehringshausen;
+    /**
+     * <b>Amtsgericht Limburg/Lahn Zweigstelle Hadamar</b>
+     *  * <p>
+     *  *  Code: M1704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Limburg_Lahn_Zweigstelle_Hadamar;
+    /**
+     * <b>Grundbuchamt Limburg Zweigstelle Hadamar</b>
+     *  * <p>
+     *  *  Code: M1704G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Limburg_Zweigstelle_Hadamar;
+    /**
+     * <b>Amtsgericht Dillenburg Zweigstelle Herborn</b>
+     *  * <p>
+     *  *  Code: M1705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dillenburg_Zweigstelle_Herborn;
+    /**
+     * <b>Grundbuchamt Dillenburg Zweigstelle Herborn</b>
+     *  * <p>
+     *  *  Code: M1705G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dillenburg_Zweigstelle_Herborn;
+    /**
+     * <b>Amtsgericht Limburg</b>
+     *  * <p>
+     *  *  Code: M1706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Limburg;
+    /**
+     * <b>Grundbuchamt Limburg</b>
+     *  * <p>
+     *  *  Code: M1706G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Limburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Runkel</b>
+     *  * <p>
+     *  *  Code: M1708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Runkel;
+    /**
+     * <b>Amtsgericht Weilburg</b>
+     *  * <p>
+     *  *  Code: M1709
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weilburg;
+    /**
+     * <b>Grundbuchamt Weilburg</b>
+     *  * <p>
+     *  *  Code: M1709G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weilburg;
+    /**
+     * <b>Amtsgericht Wetzlar</b>
+     *  * <p>
+     *  *  Code: M1710
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wetzlar;
+    /**
+     * <b>Grundbuchamt Wetzlar</b>
+     *  * <p>
+     *  *  Code: M1710G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wetzlar;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Wetzlar, Zwst. der StA Limburg a. d. Lahn</b>
+     *  * <p>
+     *  *  Code: M1710S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Wetzlar_Zwst_der_StA_Limburg_a_d_Lahn;
+    /**
+     * <b>Landgericht Marburg</b>
+     *  * <p>
+     *  *  Code: M1800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Marburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Marburg</b>
+     *  * <p>
+     *  *  Code: M1800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Marburg;
+    /**
+     * <b>Amtsgericht Biedenkopf</b>
+     *  * <p>
+     *  *  Code: M1801
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Biedenkopf;
+    /**
+     * <b>Grundbuchamt Biedenkopf</b>
+     *  * <p>
+     *  *  Code: M1801G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Biedenkopf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Borken (Hessen)</b>
+     *  * <p>
+     *  *  Code: M1802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Borken_Hessen;
+    /**
+     * <b>Amtsgericht Frankenberg-Eder</b>
+     *  * <p>
+     *  *  Code: M1803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Frankenberg_Eder;
+    /**
+     * <b>Grundbuchamt Frankenberg-Eder</b>
+     *  * <p>
+     *  *  Code: M1803G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Frankenberg_Eder;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Biedenkopf, Zwst. Gladenbach</b>
+     *  * <p>
+     *  *  Code: M1805
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Biedenkopf_Zwst_Gladenbach;
+    /**
+     * <b>Amtsgericht Kirchhain</b>
+     *  * <p>
+     *  *  Code: M1807
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kirchhain;
+    /**
+     * <b>Grundbuchamt Kirchhain</b>
+     *  * <p>
+     *  *  Code: M1807G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kirchhain;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Frankenberg (Eder), Zwst. Gem&#252;nden (Wohra)</b>
+     *  * <p>
+     *  *  Code: M1808
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Frankenberg_Eder_Zwst_Gemuenden_Wohra;
+    /**
+     * <b>Amtsgericht Marburg</b>
+     *  * <p>
+     *  *  Code: M1809
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marburg;
+    /**
+     * <b>Grundbuchamt Marburg</b>
+     *  * <p>
+     *  *  Code: M1809G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Marburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neukirchen (Kreis Ziegenhain)</b>
+     *  * <p>
+     *  *  Code: M1810
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neukirchen_Kreis_Ziegenhain;
+    /**
+     * <b>Amtsgericht Schwalmstadt</b>
+     *  * <p>
+     *  *  Code: M1812
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwalmstadt;
+    /**
+     * <b>Grundbuchamt Schwalmstadt</b>
+     *  * <p>
+     *  *  Code: M1812G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwalmstadt;
+    /**
+     * <b>Landgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M1900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Wiesbaden;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M1900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Wiesbaden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eltville am Rhein</b>
+     *  * <p>
+     *  *  Code: M1901
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eltville_am_Rhein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hochheim am Main</b>
+     *  * <p>
+     *  *  Code: M1902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hochheim_am_Main;
+    /**
+     * <b>Amtsgericht Idstein</b>
+     *  * <p>
+     *  *  Code: M1903
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Idstein;
+    /**
+     * <b>Grundbuchamt Idstein</b>
+     *  * <p>
+     *  *  Code: M1903G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Idstein;
+    /**
+     * <b>Amtsgericht R&#252;desheim</b>
+     *  * <p>
+     *  *  Code: M1904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ruedesheim;
+    /**
+     * <b>Grundbuchamt R&#252;desheim</b>
+     *  * <p>
+     *  *  Code: M1904G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ruedesheim;
+    /**
+     * <b>Amtsgericht Bad Schwalbach</b>
+     *  * <p>
+     *  *  Code: M1905
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Schwalbach;
+    /**
+     * <b>Grundbuchamt Bad Schwalbach</b>
+     *  * <p>
+     *  *  Code: M1905G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Schwalbach;
+    /**
+     * <b>Amtsgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M1906
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wiesbaden;
+    /**
+     * <b>Grundbuchamt Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M1906G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wiesbaden;
+    /**
+     * <b>Staatsanwaltschaft bei dem Landgericht Darmstadt Zweigstelle Offenbach a.Main</b>
+     *  * <p>
+     *  *  Code: M6036S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_bei_dem_Landgericht_Darmstadt_Zweigstelle_Offenbach_a_Main;
+    /**
+     * <b>Sozialgericht Frankfurt</b>
+     *  * <p>
+     *  *  Code: M6057
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Frankfurt;
+    /**
+     * <b>Arbeitsgericht Bad Hersfeld</b>
+     *  * <p>
+     *  *  Code: M6086
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bad_Hersfeld;
+    /**
+     * <b>Sozialgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M6087
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Darmstadt;
+    /**
+     * <b>Arbeitsgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M6088
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Darmstadt;
+    /**
+     * <b>Hessisches Landessozialgericht</b>
+     *  * <p>
+     *  *  Code: M6089
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hessisches_Landessozialgericht;
+    /**
+     * <b>Verwaltungsgericht Darmstadt</b>
+     *  * <p>
+     *  *  Code: M6090
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Darmstadt;
+    /**
+     * <b>Bundesdisziplinargericht</b>
+     *  * <p>
+     *  *  Code: M6091
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesdisziplinargericht;
+    /**
+     * <b>Verwaltungsgericht Frankfurt am Main</b>
+     *  * <p>
+     *  *  Code: M6093
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Frankfurt_am_Main;
+    /**
+     * <b>Landesarbeitsgericht Frankfurt a.M.</b>
+     *  * <p>
+     *  *  Code: M6094
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Frankfurt_a_M;
+    /**
+     * <b>Arbeitsgericht Frankfurt a.M.</b>
+     *  * <p>
+     *  *  Code: M6095
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Frankfurt_a_M;
+    /**
+     * <b>Arbeitsgericht Fulda</b>
+     *  * <p>
+     *  *  Code: M6096
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Fulda;
+    /**
+     * <b>Sozialgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M6097
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Giessen;
+    /**
+     * <b>Arbeitsgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M6098
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Giessen;
+    /**
+     * <b>Arbeitsgericht Hanau</b>
+     *  * <p>
+     *  *  Code: M6099
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hanau;
+    /**
+     * <b>Sozialgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M6100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Kassel;
+    /**
+     * <b>Hessischer Verwaltungsgerichtshof</b>
+     *  * <p>
+     *  *  Code: M6102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hessischer_Verwaltungsgerichtshof;
+    /**
+     * <b>Hessisches Finanzgericht</b>
+     *  * <p>
+     *  *  Code: M6103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hessisches_Finanzgericht;
+    /**
+     * <b>Arbeitsgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M6104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Kassel;
+    /**
+     * <b>Verwaltungsgericht Kassel</b>
+     *  * <p>
+     *  *  Code: M6105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Kassel;
+    /**
+     * <b>Arbeitsgericht Limburg a. d. Lahn</b>
+     *  * <p>
+     *  *  Code: M6106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Limburg_a_d_Lahn;
+    /**
+     * <b>Sozialgericht Marburg</b>
+     *  * <p>
+     *  *  Code: M6107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Marburg;
+    /**
+     * <b>Arbeitsgericht Marburg</b>
+     *  * <p>
+     *  *  Code: M6108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Marburg;
+    /**
+     * <b>Arbeitsgericht Offenbach a.M.</b>
+     *  * <p>
+     *  *  Code: M6230
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Offenbach_a_M;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Wetzlar</b>
+     *  * <p>
+     *  *  Code: M6231
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Wetzlar;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Wetzlar</b>
+     *  * <p>
+     *  *  Code: M6232
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Wetzlar_M6232;
+    /**
+     * <b>Arbeitsgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M6233
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wiesbaden;
+    /**
+     * <b>Bundessozialgericht</b>
+     *  * <p>
+     *  *  Code: M6246
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundessozialgericht;
+    /**
+     * <b>Sozialgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M6265
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Wiesbaden;
+    /**
+     * <b>Verwaltungsgericht Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M6276
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Wiesbaden;
+    /**
+     * <b>Staatsgerichtshof des Landes Hessen</b>
+     *  * <p>
+     *  *  Code: M6279
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsgerichtshof_des_Landes_Hessen;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Frankfurt/Main</b>
+     *  * <p>
+     *  *  Code: M6300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Frankfurt_Main;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Kassel</b>
+     *  * <p>
+     *  *  Code: M6318
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Kassel;
+    /**
+     * <b>Hessischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: M6320
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Hessischer_Anwaltsgerichtshof;
+    /**
+     * <b>Sozialgericht Fulda</b>
+     *  * <p>
+     *  *  Code: M6361
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Fulda;
+    /**
+     * <b>Justizvollzugsanstalt Kassel II Sozialtherapeutische Anstalt</b>
+     *  * <p>
+     *  *  Code: M6516
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kassel_II_Sozialtherapeutische_Anstalt;
+    /**
+     * <b>Justizvollzugsanstalt Frankfurt am Main IV</b>
+     *  * <p>
+     *  *  Code: M6864
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Frankfurt_am_Main_IV;
+    /**
+     * <b>Verwaltungsgericht Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M7095
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Giessen;
+    /**
+     * <b>Justizvollzugsanstalt Frankfurt am Main III</b>
+     *  * <p>
+     *  *  Code: M7131
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Frankfurt_am_Main_III;
+    /**
+     * <b>Zentrales elektronisches Schutzschriftenregister</b>
+     *  * <p>
+     *  *  Code: M7333
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Zentrales_elektronisches_Schutzschriftenregister;
+    /**
+     * <b>Jugendarresteinrichtung Gelnhausen</b>
+     *  * <p>
+     *  *  Code: M7348
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarresteinrichtung_Gelnhausen;
+    /**
+     * <b>Justizvollzugsanstalt Weiterstadt</b>
+     *  * <p>
+     *  *  Code: M8403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Weiterstadt;
+    /**
+     * <b>Justizvollzugsanstalt Frankfurt am Main I</b>
+     *  * <p>
+     *  *  Code: M8408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Frankfurt_am_Main_I;
+    /**
+     * <b>Justizvollzugsanstalt Schwalmstadt</b>
+     *  * <p>
+     *  *  Code: M8435
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Schwalmstadt;
+    /**
+     * <b>Justizvollzugsanstalt Gie&#223;en</b>
+     *  * <p>
+     *  *  Code: M8440
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Giessen;
+    /**
+     * <b>Justizvollzugsanstalt Butzbach</b>
+     *  * <p>
+     *  *  Code: M8447
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Butzbach;
+    /**
+     * <b>Justizvollzugsanstalt Darmstadt</b>
+     *  * <p>
+     *  *  Code: M8448
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Darmstadt;
+    /**
+     * <b>Justizvollzugsanstalt Dieburg</b>
+     *  * <p>
+     *  *  Code: M8449
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Dieburg;
+    /**
+     * <b>Justizvollzugsanstalt Fulda</b>
+     *  * <p>
+     *  *  Code: M8450
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Fulda;
+    /**
+     * <b>Justizvollzugsanstalt Kassel I</b>
+     *  * <p>
+     *  *  Code: M8451
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kassel_I;
+    /**
+     * <b>Justizvollzugsanstalt Wiesbaden</b>
+     *  * <p>
+     *  *  Code: M8500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wiesbaden;
+    /**
+     * <b>Justizvollzugsanstalt Rockenberg</b>
+     *  * <p>
+     *  *  Code: M8611
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rockenberg;
+    /**
+     * <b>Justizvollzugsanstalt Limburg a. d. Lahn</b>
+     *  * <p>
+     *  *  Code: M8612
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Limburg_a_d_Lahn;
+    /**
+     * <b>Justizvollzugsanstalt H&#252;nfeld</b>
+     *  * <p>
+     *  *  Code: M8668
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Huenfeld;
+    /**
+     * <b>Oberlandesgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Rostock;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Rostock;
+    /**
+     * <b>Landgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Neubrandenburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Neubrandenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Altentreptow</b>
+     *  * <p>
+     *  *  Code: N1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Altentreptow;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Anklam</b>
+     *  * <p>
+     *  *  Code: N1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Anklam;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Demmin</b>
+     *  * <p>
+     *  *  Code: N1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Demmin;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Demmin Zweigstelle Malchin</b>
+     *  * <p>
+     *  *  Code: N1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Demmin_Zweigstelle_Malchin;
+    /**
+     * <b>Amtsgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neubrandenburg;
+    /**
+     * <b>Amtsgericht Neubrandenburg, Zentrales Vollstreckungsgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N1105R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neubrandenburg_Zentrales_Vollstreckungsgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Registergericht Amtsgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N1105V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Neubrandenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neustrelitz</b>
+     *  * <p>
+     *  *  Code: N1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neustrelitz;
+    /**
+     * <b>Amtsgericht Pasewalk</b>
+     *  * <p>
+     *  *  Code: N1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pasewalk;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht R&#246;bel/M&#252;ritz</b>
+     *  * <p>
+     *  *  Code: N1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Roebel_Mueritz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Strasburg</b>
+     *  * <p>
+     *  *  Code: N1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Strasburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Teterow</b>
+     *  * <p>
+     *  *  Code: N1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Teterow;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ueckerm&#252;nde</b>
+     *  * <p>
+     *  *  Code: N1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ueckermuende;
+    /**
+     * <b>Amtsgericht Waren (M&#252;ritz)</b>
+     *  * <p>
+     *  *  Code: N1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waren_Mueritz;
+    /**
+     * <b>Grundbuchamt Waren (M&#252;ritz)</b>
+     *  * <p>
+     *  *  Code: N1112G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Waren_Mueritz;
+    /**
+     * <b>Amtsgericht Pasewalk Zweigstelle Anklam</b>
+     *  * <p>
+     *  *  Code: N1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pasewalk_Zweigstelle_Anklam;
+    /**
+     * <b>Grundbuchamt Pasewalk Zweigstelle Anklam</b>
+     *  * <p>
+     *  *  Code: N1113G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pasewalk_Zweigstelle_Anklam;
+    /**
+     * <b>Amtsgericht Waren (M&#252;ritz) Zweigstelle Neustrelitz</b>
+     *  * <p>
+     *  *  Code: N1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waren_Mueritz_Zweigstelle_Neustrelitz;
+    /**
+     * <b>Amtsgericht Neubrandenburg Zweigstelle Demmin</b>
+     *  * <p>
+     *  *  Code: N1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neubrandenburg_Zweigstelle_Demmin;
+    /**
+     * <b>Grundbuchamt Neubrandenburg Zweigstelle Demmin</b>
+     *  * <p>
+     *  *  Code: N1115G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neubrandenburg_Zweigstelle_Demmin;
+    /**
+     * <b>Landgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Rostock;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Rostock;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Doberan</b>
+     *  * <p>
+     *  *  Code: N1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Doberan;
+    /**
+     * <b>Amtsgericht Greifswald</b>
+     *  * <p>
+     *  *  Code: N1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Greifswald;
+    /**
+     * <b>Grundbuchamt Greifswald</b>
+     *  * <p>
+     *  *  Code: N1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Greifswald;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Grevesm&#252;hlen</b>
+     *  * <p>
+     *  *  Code: N1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Grevesmuehlen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stralsund Zweigstelle Grimmen</b>
+     *  * <p>
+     *  *  Code: N1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stralsund_Zweigstelle_Grimmen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ribnitz-Damgarten</b>
+     *  * <p>
+     *  *  Code: N1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ribnitz_Damgarten;
+    /**
+     * <b>aufgel&#246;st-Grundbuchamt Ribnitz-Damgarten</b>
+     *  * <p>
+     *  *  Code: N1205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Grundbuchamt_Ribnitz_Damgarten;
+    /**
+     * <b>Amtsgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rostock;
+    /**
+     * <b>Grundbuchamt Rostock</b>
+     *  * <p>
+     *  *  Code: N1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rostock;
+    /**
+     * <b>Registergericht Amtsgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N1206V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Rostock;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bergen</b>
+     *  * <p>
+     *  *  Code: N1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bergen;
+    /**
+     * <b>Amtsgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stralsund;
+    /**
+     * <b>Grundbuchamt Stralsund</b>
+     *  * <p>
+     *  *  Code: N1209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Stralsund;
+    /**
+     * <b>Registergericht Amtsgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N1209V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Stralsund;
+    /**
+     * <b>Amtsgericht Wismar</b>
+     *  * <p>
+     *  *  Code: N1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wismar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wolgast</b>
+     *  * <p>
+     *  *  Code: N1211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wolgast;
+    /**
+     * <b>Landgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Schwerin;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Schwerin;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht B&#252;tzow</b>
+     *  * <p>
+     *  *  Code: N1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Buetzow;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gadebusch</b>
+     *  * <p>
+     *  *  Code: N1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gadebusch;
+    /**
+     * <b>Amtsgericht G&#252;strow</b>
+     *  * <p>
+     *  *  Code: N1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Guestrow;
+    /**
+     * <b>Grundbuchamt G&#252;strow</b>
+     *  * <p>
+     *  *  Code: N1303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Guestrow;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hagenow</b>
+     *  * <p>
+     *  *  Code: N1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hagenow;
+    /**
+     * <b>Amtsgericht Ludwigslust</b>
+     *  * <p>
+     *  *  Code: N1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ludwigslust;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Plau am See</b>
+     *  * <p>
+     *  *  Code: N1306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Plau_am_See;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Parchim</b>
+     *  * <p>
+     *  *  Code: N1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Parchim;
+    /**
+     * <b>Amtsgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N1308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwerin;
+    /**
+     * <b>Grundbuchamt Schwerin</b>
+     *  * <p>
+     *  *  Code: N1308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwerin;
+    /**
+     * <b>Registergericht Amtsgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N1308V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Schwerin;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sternberg</b>
+     *  * <p>
+     *  *  Code: N1309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Sternberg;
+    /**
+     * <b>Amtsgericht Ludwigslust Zweigstelle Parchim</b>
+     *  * <p>
+     *  *  Code: N1310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ludwigslust_Zweigstelle_Parchim;
+    /**
+     * <b>Grundbuchamt Ludwigslust Zweigstelle Parchim</b>
+     *  * <p>
+     *  *  Code: N1310G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ludwigslust_Zweigstelle_Parchim;
+    /**
+     * <b>Amtsgericht Wismar Zweigstelle Grevesm&#252;hlen</b>
+     *  * <p>
+     *  *  Code: N1311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wismar_Zweigstelle_Grevesmuehlen;
+    /**
+     * <b>Grundbuchamt Wismar Zweigstelle Grevesm&#252;hlen</b>
+     *  * <p>
+     *  *  Code: N1311G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wismar_Zweigstelle_Grevesmuehlen;
+    /**
+     * <b>Landgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Stralsund;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Stralsund;
+    /**
+     * <b>Amtsgericht Stralsund Zweigstelle Bergen auf R&#252;gen</b>
+     *  * <p>
+     *  *  Code: N1401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stralsund_Zweigstelle_Bergen_auf_Ruegen;
+    /**
+     * <b>Anwaltsgerichtshof Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6001
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_Mecklenburg_Vorpommern;
+    /**
+     * <b>Justizvollzugsanstalt B&#252;tzow</b>
+     *  * <p>
+     *  *  Code: N6059
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Buetzow;
+    /**
+     * <b>Justizvollzugsanstalt Stralsund</b>
+     *  * <p>
+     *  *  Code: N6061
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Stralsund;
+    /**
+     * <b>Justizvollzugsanstalt Neustrelitz</b>
+     *  * <p>
+     *  *  Code: N6062
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Neustrelitz;
+    /**
+     * <b>Justizvollzugsanstalt Waldeck</b>
+     *  * <p>
+     *  *  Code: N6068
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Waldeck;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N6206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Neubrandenburg;
+    /**
+     * <b>Sozialgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N6208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Schwerin;
+    /**
+     * <b>Oberverwaltungsgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Arbeitsgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N6212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Schwerin;
+    /**
+     * <b>Arbeitsgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N6224
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Rostock;
+    /**
+     * <b>Landesarbeitsgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6235
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Arbeitsgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N6247
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stralsund;
+    /**
+     * <b>Finanzgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6269
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Landesverfassungsgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6298
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesverfassungsgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Landessozialgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Sozialgericht Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N6313
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Neubrandenburg;
+    /**
+     * <b>Sozialgericht Stralsund</b>
+     *  * <p>
+     *  *  Code: N6325
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Stralsund;
+    /**
+     * <b>Sozialgericht Rostock</b>
+     *  * <p>
+     *  *  Code: N6326
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Rostock;
+    /**
+     * <b>Verwaltungsgericht Greifswald</b>
+     *  * <p>
+     *  *  Code: N6339
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Greifswald;
+    /**
+     * <b>Verwaltungsgericht Schwerin</b>
+     *  * <p>
+     *  *  Code: N6441
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Schwerin;
+    /**
+     * <b>Anwaltsgericht Mecklenburg-Vorpommern</b>
+     *  * <p>
+     *  *  Code: N6473
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_Mecklenburg_Vorpommern;
+    /**
+     * <b>Arbeitsgericht Stralsund Kammer Neubrandenburg</b>
+     *  * <p>
+     *  *  Code: N6511
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stralsund_Kammer_Neubrandenburg;
+    /**
+     * <b>Richterdienstgericht</b>
+     *  * <p>
+     *  *  Code: N6516
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Richterdienstgericht;
+    /**
+     * <b>Dienstgerichtshof</b>
+     *  * <p>
+     *  *  Code: N6517
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Dienstgerichtshof;
+    /**
+     * <b>Oberlandesgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Braunschweig;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Braunschweig;
+    /**
+     * <b>Landgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Braunschweig;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Braunschweig;
+    /**
+     * <b>Amtsgericht Bad Gandersheim</b>
+     *  * <p>
+     *  *  Code: P1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Gandersheim;
+    /**
+     * <b>Grundbuchamt Bad Gandersheim</b>
+     *  * <p>
+     *  *  Code: P1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Gandersheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Harzburg</b>
+     *  * <p>
+     *  *  Code: P1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Harzburg;
+    /**
+     * <b>Amtsgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Braunschweig;
+    /**
+     * <b>Grundbuchamt Braunschweig</b>
+     *  * <p>
+     *  *  Code: P1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Braunschweig;
+    /**
+     * <b>Amtsgericht Goslar</b>
+     *  * <p>
+     *  *  Code: P1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Goslar;
+    /**
+     * <b>Grundbuchamt Goslar</b>
+     *  * <p>
+     *  *  Code: P1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Goslar;
+    /**
+     * <b>Amtsgericht Goslar, Zentrales Vollstreckungsgericht Niedersachsen</b>
+     *  * <p>
+     *  *  Code: P1104R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Goslar_Zentrales_Vollstreckungsgericht_Niedersachsen;
+    /**
+     * <b>Amtsgericht Helmstedt</b>
+     *  * <p>
+     *  *  Code: P1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Helmstedt;
+    /**
+     * <b>Grundbuchamt Helmstedt</b>
+     *  * <p>
+     *  *  Code: P1105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Helmstedt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht K&#246;nigslutter</b>
+     *  * <p>
+     *  *  Code: P1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Koenigslutter;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Salzgitter-Bad</b>
+     *  * <p>
+     *  *  Code: P1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Salzgitter_Bad;
+    /**
+     * <b>Amtsgericht Salzgitter</b>
+     *  * <p>
+     *  *  Code: P1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Salzgitter;
+    /**
+     * <b>Grundbuchamt Salzgitter</b>
+     *  * <p>
+     *  *  Code: P1108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Salzgitter;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sch&#246;ningen</b>
+     *  * <p>
+     *  *  Code: P1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schoeningen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sch&#246;ppenstedt</b>
+     *  * <p>
+     *  *  Code: P1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schoeppenstedt;
+    /**
+     * <b>Amtsgericht Seesen</b>
+     *  * <p>
+     *  *  Code: P1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Seesen;
+    /**
+     * <b>Grundbuchamt Seesen</b>
+     *  * <p>
+     *  *  Code: P1111G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Seesen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Vechelde</b>
+     *  * <p>
+     *  *  Code: P1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Vechelde;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Vorsfelde</b>
+     *  * <p>
+     *  *  Code: P1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Vorsfelde;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Walkenried</b>
+     *  * <p>
+     *  *  Code: P1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Walkenried;
+    /**
+     * <b>Amtsgericht Wolfenb&#252;ttel</b>
+     *  * <p>
+     *  *  Code: P1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wolfenbuettel;
+    /**
+     * <b>Grundbuchamt Wolfenb&#252;ttel</b>
+     *  * <p>
+     *  *  Code: P1115G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wolfenbuettel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Greene</b>
+     *  * <p>
+     *  *  Code: P1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Greene;
+    /**
+     * <b>Oberlandesgericht Celle</b>
+     *  * <p>
+     *  *  Code: P2000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Celle;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Celle</b>
+     *  * <p>
+     *  *  Code: P2000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Celle;
+    /**
+     * <b>Landgericht B&#252;ckeburg</b>
+     *  * <p>
+     *  *  Code: P2100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bueckeburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht B&#252;ckeburg</b>
+     *  * <p>
+     *  *  Code: P2100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bueckeburg;
+    /**
+     * <b>Amtsgericht B&#252;ckeburg</b>
+     *  * <p>
+     *  *  Code: P2101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bueckeburg;
+    /**
+     * <b>Grundbuchamt B&#252;ckeburg</b>
+     *  * <p>
+     *  *  Code: P2101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bueckeburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hess. Oldendorf</b>
+     *  * <p>
+     *  *  Code: P2102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hess_Oldendorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Obernkirchen</b>
+     *  * <p>
+     *  *  Code: P2103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Obernkirchen;
+    /**
+     * <b>Amtsgericht Rinteln</b>
+     *  * <p>
+     *  *  Code: P2104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rinteln;
+    /**
+     * <b>Grundbuchamt Rinteln</b>
+     *  * <p>
+     *  *  Code: P2104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rinteln;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rodenberg</b>
+     *  * <p>
+     *  *  Code: P2105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rodenberg;
+    /**
+     * <b>Amtsgericht Stadthagen</b>
+     *  * <p>
+     *  *  Code: P2106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stadthagen;
+    /**
+     * <b>Grundbuchamt Stadthagen</b>
+     *  * <p>
+     *  *  Code: P2106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Stadthagen;
+    /**
+     * <b>Landgericht G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P2200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Goettingen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P2200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Goettingen;
+    /**
+     * <b>Amtsgericht Clausthal-Zellerfeld</b>
+     *  * <p>
+     *  *  Code: P2201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Clausthal_Zellerfeld;
+    /**
+     * <b>Grundbuchamt Clausthal-Zellerfeld</b>
+     *  * <p>
+     *  *  Code: P2201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Clausthal_Zellerfeld;
+    /**
+     * <b>Amtsgericht Duderstadt</b>
+     *  * <p>
+     *  *  Code: P2202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duderstadt;
+    /**
+     * <b>Grundbuchamt Duderstadt</b>
+     *  * <p>
+     *  *  Code: P2202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duderstadt;
+    /**
+     * <b>Amtsgericht Einbeck</b>
+     *  * <p>
+     *  *  Code: P2203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Einbeck;
+    /**
+     * <b>Grundbuchamt Einbeck</b>
+     *  * <p>
+     *  *  Code: P2203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Einbeck;
+    /**
+     * <b>Amtsgericht G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P2204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Goettingen;
+    /**
+     * <b>Grundbuchamt G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P2204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Goettingen;
+    /**
+     * <b>Amtsgericht Hann. M&#252;nden</b>
+     *  * <p>
+     *  *  Code: P2205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hann_Muenden;
+    /**
+     * <b>Grundbuchamt Hann. M&#252;nden</b>
+     *  * <p>
+     *  *  Code: P2205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hann_Muenden;
+    /**
+     * <b>Amtsgericht Herzberg am Harz</b>
+     *  * <p>
+     *  *  Code: P2206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Herzberg_am_Harz;
+    /**
+     * <b>Grundbuchamt Herzberg am Harz</b>
+     *  * <p>
+     *  *  Code: P2206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Herzberg_am_Harz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Moringen</b>
+     *  * <p>
+     *  *  Code: P2207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Moringen;
+    /**
+     * <b>Amtsgericht Northeim</b>
+     *  * <p>
+     *  *  Code: P2208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Northeim;
+    /**
+     * <b>Grundbuchamt Northeim</b>
+     *  * <p>
+     *  *  Code: P2208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Northeim;
+    /**
+     * <b>Amtsgericht Osterode</b>
+     *  * <p>
+     *  *  Code: P2209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Osterode;
+    /**
+     * <b>Grundbuchamt Osterode</b>
+     *  * <p>
+     *  *  Code: P2209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Osterode;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Reinhausen</b>
+     *  * <p>
+     *  *  Code: P2210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Reinhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Uslar</b>
+     *  * <p>
+     *  *  Code: P2211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Uslar;
+    /**
+     * <b>Landgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P2300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hannover;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P2300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hannover;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad M&#252;nder am Deister</b>
+     *  * <p>
+     *  *  Code: P2301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Muender_am_Deister;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Pyrmont</b>
+     *  * <p>
+     *  *  Code: P2302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Pyrmont;
+    /**
+     * <b>Amtsgericht Burgwedel</b>
+     *  * <p>
+     *  *  Code: P2303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Burgwedel;
+    /**
+     * <b>Grundbuchamt Burgwedel</b>
+     *  * <p>
+     *  *  Code: P2303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Burgwedel;
+    /**
+     * <b>Amtsgericht Hameln</b>
+     *  * <p>
+     *  *  Code: P2304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hameln;
+    /**
+     * <b>Grundbuchamt Hameln</b>
+     *  * <p>
+     *  *  Code: P2304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hameln;
+    /**
+     * <b>Amtsgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P2305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hannover;
+    /**
+     * <b>Grundbuchamt Hannover</b>
+     *  * <p>
+     *  *  Code: P2305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hannover;
+    /**
+     * <b>Amtsgericht Neustadt a. Rbge.</b>
+     *  * <p>
+     *  *  Code: P2306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neustadt_a_Rbge;
+    /**
+     * <b>Grundbuchamt Neustadt a. Rbge.</b>
+     *  * <p>
+     *  *  Code: P2306G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neustadt_a_Rbge;
+    /**
+     * <b>Amtsgericht Springe</b>
+     *  * <p>
+     *  *  Code: P2307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Springe;
+    /**
+     * <b>Grundbuchamt Springe</b>
+     *  * <p>
+     *  *  Code: P2307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Springe;
+    /**
+     * <b>Amtsgericht Wennigsen (Deister)</b>
+     *  * <p>
+     *  *  Code: P2308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wennigsen_Deister;
+    /**
+     * <b>Grundbuchamt Wennigsen (Deister)</b>
+     *  * <p>
+     *  *  Code: P2308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wennigsen_Deister;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lauenstein</b>
+     *  * <p>
+     *  *  Code: P2309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lauenstein;
+    /**
+     * <b>Landgericht Hildesheim</b>
+     *  * <p>
+     *  *  Code: P2400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hildesheim;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hildesheim</b>
+     *  * <p>
+     *  *  Code: P2400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hildesheim;
+    /**
+     * <b>Amtsgericht Alfeld</b>
+     *  * <p>
+     *  *  Code: P2401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Alfeld;
+    /**
+     * <b>Grundbuchamt Alfeld</b>
+     *  * <p>
+     *  *  Code: P2401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Alfeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bockenem</b>
+     *  * <p>
+     *  *  Code: P2402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bockenem;
+    /**
+     * <b>Amtsgericht Burgdorf</b>
+     *  * <p>
+     *  *  Code: P2403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Burgdorf;
+    /**
+     * <b>Grundbuchamt Burgdorf</b>
+     *  * <p>
+     *  *  Code: P2403G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Burgdorf;
+    /**
+     * <b>Amtsgericht Elze</b>
+     *  * <p>
+     *  *  Code: P2404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Elze;
+    /**
+     * <b>Grundbuchamt Elze</b>
+     *  * <p>
+     *  *  Code: P2404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Elze;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eschershausen</b>
+     *  * <p>
+     *  *  Code: P2405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eschershausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Fallersleben</b>
+     *  * <p>
+     *  *  Code: P2406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fallersleben;
+    /**
+     * <b>Amtsgericht Gifhorn</b>
+     *  * <p>
+     *  *  Code: P2407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gifhorn;
+    /**
+     * <b>Grundbuchamt Gifhorn</b>
+     *  * <p>
+     *  *  Code: P2407G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gifhorn;
+    /**
+     * <b>Amtsgericht Hildesheim</b>
+     *  * <p>
+     *  *  Code: P2408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hildesheim;
+    /**
+     * <b>Grundbuchamt Hildesheim</b>
+     *  * <p>
+     *  *  Code: P2408G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hildesheim;
+    /**
+     * <b>Amtsgericht Holzminden</b>
+     *  * <p>
+     *  *  Code: P2409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Holzminden;
+    /**
+     * <b>Grundbuchamt Holzminden</b>
+     *  * <p>
+     *  *  Code: P2409G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Holzminden;
+    /**
+     * <b>Amtsgericht Lehrte</b>
+     *  * <p>
+     *  *  Code: P2410
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lehrte;
+    /**
+     * <b>Grundbuchamt Lehrte</b>
+     *  * <p>
+     *  *  Code: P2410G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lehrte;
+    /**
+     * <b>Amtsgericht Peine</b>
+     *  * <p>
+     *  *  Code: P2411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Peine;
+    /**
+     * <b>Grundbuchamt Peine</b>
+     *  * <p>
+     *  *  Code: P2411G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Peine;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stadtoldendorf</b>
+     *  * <p>
+     *  *  Code: P2412
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stadtoldendorf;
+    /**
+     * <b>Amtsgericht Wolfsburg</b>
+     *  * <p>
+     *  *  Code: P2413
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wolfsburg;
+    /**
+     * <b>Grundbuchamt Wolfsburg</b>
+     *  * <p>
+     *  *  Code: P2413G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wolfsburg;
+    /**
+     * <b>Landgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P2500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Lueneburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P2500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Lueneburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bergen</b>
+     *  * <p>
+     *  *  Code: P2501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bergen_P2501;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bleckede</b>
+     *  * <p>
+     *  *  Code: P2502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bleckede;
+    /**
+     * <b>Amtsgericht Celle</b>
+     *  * <p>
+     *  *  Code: P2503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Celle;
+    /**
+     * <b>Grundbuchamt Celle</b>
+     *  * <p>
+     *  *  Code: P2503G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Celle;
+    /**
+     * <b>Amtsgericht Dannenberg (Elbe)</b>
+     *  * <p>
+     *  *  Code: P2504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dannenberg_Elbe;
+    /**
+     * <b>Grundbuchamt Dannenberg (Elbe)</b>
+     *  * <p>
+     *  *  Code: P2504G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dannenberg_Elbe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hankensb&#252;ttel</b>
+     *  * <p>
+     *  *  Code: P2505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hankensbuettel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht L&#252;chow</b>
+     *  * <p>
+     *  *  Code: P2506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Luechow;
+    /**
+     * <b>Amtsgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P2507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lueneburg;
+    /**
+     * <b>Grundbuchamt L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P2507G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lueneburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Medingen</b>
+     *  * <p>
+     *  *  Code: P2508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Medingen;
+    /**
+     * <b>Amtsgericht Soltau</b>
+     *  * <p>
+     *  *  Code: P2509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Soltau;
+    /**
+     * <b>Grundbuchamt Soltau</b>
+     *  * <p>
+     *  *  Code: P2509G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Soltau;
+    /**
+     * <b>Amtsgericht Uelzen</b>
+     *  * <p>
+     *  *  Code: P2510
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Uelzen;
+    /**
+     * <b>Grundbuchamt Uelzen</b>
+     *  * <p>
+     *  *  Code: P2510G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Uelzen;
+    /**
+     * <b>Amtsgericht Uelzen, Zentrales Mahngericht</b>
+     *  * <p>
+     *  *  Code: P2510M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Uelzen_Zentrales_Mahngericht;
+    /**
+     * <b>Amtsgericht Winsen</b>
+     *  * <p>
+     *  *  Code: P2511
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Winsen;
+    /**
+     * <b>Grundbuchamt Winsen</b>
+     *  * <p>
+     *  *  Code: P2511G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Winsen;
+    /**
+     * <b>Landgericht Stade</b>
+     *  * <p>
+     *  *  Code: P2600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Stade;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Stade</b>
+     *  * <p>
+     *  *  Code: P2600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Stade;
+    /**
+     * <b>Amtsgericht Bremerv&#246;rde</b>
+     *  * <p>
+     *  *  Code: P2601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bremervoerde;
+    /**
+     * <b>Grundbuchamt Bremerv&#246;rde</b>
+     *  * <p>
+     *  *  Code: P2601G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bremervoerde;
+    /**
+     * <b>Amtsgericht Buxtehude</b>
+     *  * <p>
+     *  *  Code: P2602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Buxtehude;
+    /**
+     * <b>Grundbuchamt Buxtehude</b>
+     *  * <p>
+     *  *  Code: P2602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Buxtehude;
+    /**
+     * <b>Amtsgericht Cuxhaven</b>
+     *  * <p>
+     *  *  Code: P2603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cuxhaven;
+    /**
+     * <b>Grundbuchamt Cuxhaven</b>
+     *  * <p>
+     *  *  Code: P2603G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Cuxhaven;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dorum</b>
+     *  * <p>
+     *  *  Code: P2604
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dorum;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freiburg (Elbe)</b>
+     *  * <p>
+     *  *  Code: P2605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freiburg_Elbe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hagen im Bremischen</b>
+     *  * <p>
+     *  *  Code: P2606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hagen_im_Bremischen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Jork</b>
+     *  * <p>
+     *  *  Code: P2607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Jork;
+    /**
+     * <b>Amtsgericht Geestland</b>
+     *  * <p>
+     *  *  Code: P2608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Geestland;
+    /**
+     * <b>Grundbuchamt Geestland</b>
+     *  * <p>
+     *  *  Code: P2608G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Geestland;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neuhaus (Oste)</b>
+     *  * <p>
+     *  *  Code: P2609
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neuhaus_Oste;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Osten</b>
+     *  * <p>
+     *  *  Code: P2610
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Osten;
+    /**
+     * <b>Amtsgericht Otterndorf</b>
+     *  * <p>
+     *  *  Code: P2611
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Otterndorf;
+    /**
+     * <b>Grundbuchamt Otterndorf</b>
+     *  * <p>
+     *  *  Code: P2611G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Otterndorf;
+    /**
+     * <b>Amtsgericht Stade</b>
+     *  * <p>
+     *  *  Code: P2612
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stade;
+    /**
+     * <b>Grundbuchamt Stade</b>
+     *  * <p>
+     *  *  Code: P2612G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Stade;
+    /**
+     * <b>Amtsgericht Tostedt</b>
+     *  * <p>
+     *  *  Code: P2613
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tostedt;
+    /**
+     * <b>Grundbuchamt Tostedt</b>
+     *  * <p>
+     *  *  Code: P2613G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Tostedt;
+    /**
+     * <b>Amtsgericht Zeven</b>
+     *  * <p>
+     *  *  Code: P2614
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zeven;
+    /**
+     * <b>Grundbuchamt Zeven</b>
+     *  * <p>
+     *  *  Code: P2614G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zeven;
+    /**
+     * <b>F&#252;hrungsaufsichtsstelle beim Landgericht Stade</b>
+     *  * <p>
+     *  *  Code: P2620
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Fuehrungsaufsichtsstelle_beim_Landgericht_Stade;
+    /**
+     * <b>Landgericht Verden</b>
+     *  * <p>
+     *  *  Code: P2700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Verden;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Verden</b>
+     *  * <p>
+     *  *  Code: P2700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Verden;
+    /**
+     * <b>Amtsgericht Achim</b>
+     *  * <p>
+     *  *  Code: P2701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Achim;
+    /**
+     * <b>Grundbuchamt Achim</b>
+     *  * <p>
+     *  *  Code: P2701G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Achim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ahlden</b>
+     *  * <p>
+     *  *  Code: P2702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ahlden;
+    /**
+     * <b>Amtsgericht Syke Zweigstelle Bassum</b>
+     *  * <p>
+     *  *  Code: P2703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Syke_Zweigstelle_Bassum;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bruchhausen-Vilsen</b>
+     *  * <p>
+     *  *  Code: P2704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bruchhausen_Vilsen;
+    /**
+     * <b>Amtsgericht Diepholz</b>
+     *  * <p>
+     *  *  Code: P2705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Diepholz;
+    /**
+     * <b>Grundbuchamt Diepholz</b>
+     *  * <p>
+     *  *  Code: P2705G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Diepholz;
+    /**
+     * <b>Amtsgericht Nienburg Zweigstelle Hoya</b>
+     *  * <p>
+     *  *  Code: P2706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nienburg_Zweigstelle_Hoya;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lilienthal</b>
+     *  * <p>
+     *  *  Code: P2707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lilienthal;
+    /**
+     * <b>Amtsgericht Nienburg (Weser)</b>
+     *  * <p>
+     *  *  Code: P2708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nienburg_Weser;
+    /**
+     * <b>Grundbuchamt Nienburg (Weser)</b>
+     *  * <p>
+     *  *  Code: P2708G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nienburg_Weser;
+    /**
+     * <b>Amtsgericht Osterholz-Scharmbeck</b>
+     *  * <p>
+     *  *  Code: P2709
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Osterholz_Scharmbeck;
+    /**
+     * <b>Grundbuchamt Osterholz-Scharmbeck</b>
+     *  * <p>
+     *  *  Code: P2709G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Osterholz_Scharmbeck;
+    /**
+     * <b>Amtsgericht Rotenburg (W&#252;mme)</b>
+     *  * <p>
+     *  *  Code: P2710
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rotenburg_Wuemme;
+    /**
+     * <b>Grundbuchamt Rotenburg (W&#252;mme)</b>
+     *  * <p>
+     *  *  Code: P2710G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rotenburg_Wuemme;
+    /**
+     * <b>Amtsgericht Stolzenau</b>
+     *  * <p>
+     *  *  Code: P2711
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stolzenau;
+    /**
+     * <b>Grundbuchamt Stolzenau</b>
+     *  * <p>
+     *  *  Code: P2711G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Stolzenau;
+    /**
+     * <b>Amtsgericht Sulingen</b>
+     *  * <p>
+     *  *  Code: P2712
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sulingen;
+    /**
+     * <b>Grundbuchamt Sulingen</b>
+     *  * <p>
+     *  *  Code: P2712G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sulingen;
+    /**
+     * <b>Amtsgericht Syke</b>
+     *  * <p>
+     *  *  Code: P2713
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Syke;
+    /**
+     * <b>Grundbuchamt Syke</b>
+     *  * <p>
+     *  *  Code: P2713G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Syke;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Uchte</b>
+     *  * <p>
+     *  *  Code: P2714
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Uchte;
+    /**
+     * <b>Amtsgericht Verden (Aller)</b>
+     *  * <p>
+     *  *  Code: P2715
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Verden_Aller;
+    /**
+     * <b>Grundbuchamt Verden (Aller)</b>
+     *  * <p>
+     *  *  Code: P2715G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Verden_Aller;
+    /**
+     * <b>Amtsgericht Walsrode</b>
+     *  * <p>
+     *  *  Code: P2716
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Walsrode;
+    /**
+     * <b>Grundbuchamt Walsrode</b>
+     *  * <p>
+     *  *  Code: P2716G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Walsrode;
+    /**
+     * <b>Landgericht L&#252;neburg Zweigstelle Celle</b>
+     *  * <p>
+     *  *  Code: P2800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Lueneburg_Zweigstelle_Celle;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Celle, Zwst. der StA L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P2800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Celle_Zwst_der_StA_Lueneburg;
+    /**
+     * <b>Oberlandesgericht Oldenburg</b>
+     *  * <p>
+     *  *  Code: P3000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Oldenburg;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Oldenburg (Oldenburg)</b>
+     *  * <p>
+     *  *  Code: P3000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Oldenburg_Oldenburg;
+    /**
+     * <b>Landgericht Aurich</b>
+     *  * <p>
+     *  *  Code: P3100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Aurich;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Aurich</b>
+     *  * <p>
+     *  *  Code: P3100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Aurich;
+    /**
+     * <b>Amtsgericht Aurich</b>
+     *  * <p>
+     *  *  Code: P3101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aurich;
+    /**
+     * <b>Grundbuchamt Aurich</b>
+     *  * <p>
+     *  *  Code: P3101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aurich;
+    /**
+     * <b>Amtsgericht Emden</b>
+     *  * <p>
+     *  *  Code: P3102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Emden;
+    /**
+     * <b>Grundbuchamt Emden</b>
+     *  * <p>
+     *  *  Code: P3102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Emden;
+    /**
+     * <b>Amtsgericht Wittmund Zweigstelle Esens</b>
+     *  * <p>
+     *  *  Code: P3103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wittmund_Zweigstelle_Esens;
+    /**
+     * <b>Amtsgericht Leer</b>
+     *  * <p>
+     *  *  Code: P3104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Leer;
+    /**
+     * <b>Grundbuchamt Leer</b>
+     *  * <p>
+     *  *  Code: P3104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Leer;
+    /**
+     * <b>Amtsgericht Norden</b>
+     *  * <p>
+     *  *  Code: P3105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Norden;
+    /**
+     * <b>Grundbuchamt Norden</b>
+     *  * <p>
+     *  *  Code: P3105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Norden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Weener</b>
+     *  * <p>
+     *  *  Code: P3106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weener;
+    /**
+     * <b>Amtsgericht Wittmund</b>
+     *  * <p>
+     *  *  Code: P3107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wittmund;
+    /**
+     * <b>Grundbuchamt Wittmund</b>
+     *  * <p>
+     *  *  Code: P3107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wittmund;
+    /**
+     * <b>F&#252;hrungsaufsichtsstelle beim Landgericht Aurich</b>
+     *  * <p>
+     *  *  Code: P3110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Fuehrungsaufsichtsstelle_beim_Landgericht_Aurich;
+    /**
+     * <b>Landgericht Oldenburg</b>
+     *  * <p>
+     *  *  Code: P3200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Oldenburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Oldenburg (Oldenburg)</b>
+     *  * <p>
+     *  *  Code: P3200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Oldenburg_Oldenburg;
+    /**
+     * <b>Amtsgericht Brake</b>
+     *  * <p>
+     *  *  Code: P3201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brake;
+    /**
+     * <b>Grundbuchamt Brake</b>
+     *  * <p>
+     *  *  Code: P3201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Brake;
+    /**
+     * <b>Amtsgericht Cloppenburg</b>
+     *  * <p>
+     *  *  Code: P3202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cloppenburg;
+    /**
+     * <b>Grundbuchamt Cloppenburg</b>
+     *  * <p>
+     *  *  Code: P3202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Cloppenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Damme</b>
+     *  * <p>
+     *  *  Code: P3203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Damme;
+    /**
+     * <b>Amtsgericht Delmenhorst</b>
+     *  * <p>
+     *  *  Code: P3204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Delmenhorst;
+    /**
+     * <b>Grundbuchamt Delmenhorst</b>
+     *  * <p>
+     *  *  Code: P3204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Delmenhorst;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Elsfleth</b>
+     *  * <p>
+     *  *  Code: P3205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Elsfleth;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Friesoythe</b>
+     *  * <p>
+     *  *  Code: P3206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Friesoythe;
+    /**
+     * <b>Amtsgericht Jever</b>
+     *  * <p>
+     *  *  Code: P3207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Jever;
+    /**
+     * <b>Grundbuchamt Jever</b>
+     *  * <p>
+     *  *  Code: P3207G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Jever;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht L&#246;ningen</b>
+     *  * <p>
+     *  *  Code: P3208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Loeningen;
+    /**
+     * <b>Amtsgericht Nordenham</b>
+     *  * <p>
+     *  *  Code: P3209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nordenham;
+    /**
+     * <b>Grundbuchamt Nordenham</b>
+     *  * <p>
+     *  *  Code: P3209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nordenham;
+    /**
+     * <b>Amtsgericht Oldenburg (Oldenburg)</b>
+     *  * <p>
+     *  *  Code: P3210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oldenburg_Oldenburg;
+    /**
+     * <b>Grundbuchamt Oldenburg (Oldenburg)</b>
+     *  * <p>
+     *  *  Code: P3210G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Oldenburg_Oldenburg;
+    /**
+     * <b>Amtsgericht Varel</b>
+     *  * <p>
+     *  *  Code: P3211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Varel;
+    /**
+     * <b>Grundbuchamt Varel</b>
+     *  * <p>
+     *  *  Code: P3211G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Varel;
+    /**
+     * <b>Amtsgericht Vechta</b>
+     *  * <p>
+     *  *  Code: P3212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Vechta;
+    /**
+     * <b>Grundbuchamt Vechta</b>
+     *  * <p>
+     *  *  Code: P3212G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Vechta;
+    /**
+     * <b>Amtsgericht Westerstede</b>
+     *  * <p>
+     *  *  Code: P3213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Westerstede;
+    /**
+     * <b>Grundbuchamt Westerstede</b>
+     *  * <p>
+     *  *  Code: P3213G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Westerstede;
+    /**
+     * <b>Amtsgericht Wildeshausen</b>
+     *  * <p>
+     *  *  Code: P3214
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wildeshausen;
+    /**
+     * <b>Grundbuchamt Wildeshausen</b>
+     *  * <p>
+     *  *  Code: P3214G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wildeshausen;
+    /**
+     * <b>Amtsgericht Wilhelmshaven</b>
+     *  * <p>
+     *  *  Code: P3215
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wilhelmshaven;
+    /**
+     * <b>Grundbuchamt Wilhelmshaven</b>
+     *  * <p>
+     *  *  Code: P3215G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wilhelmshaven;
+    /**
+     * <b>Landgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Osnabrueck;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Osnabrueck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bentheim</b>
+     *  * <p>
+     *  *  Code: P3301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bentheim;
+    /**
+     * <b>Amtsgericht Bersenbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bersenbrueck;
+    /**
+     * <b>Grundbuchamt Bersenbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bersenbrueck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bramsche</b>
+     *  * <p>
+     *  *  Code: P3303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bramsche;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Essen</b>
+     *  * <p>
+     *  *  Code: P3304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Essen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freren</b>
+     *  * <p>
+     *  *  Code: P3305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freren;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht F&#252;rstenau</b>
+     *  * <p>
+     *  *  Code: P3306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Fuerstenau;
+    /**
+     * <b>Amtsgericht Bad Iburg</b>
+     *  * <p>
+     *  *  Code: P3307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Iburg;
+    /**
+     * <b>Grundbuchamt Bad Iburg</b>
+     *  * <p>
+     *  *  Code: P3307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Iburg;
+    /**
+     * <b>Amtsgericht Lingen (Ems)</b>
+     *  * <p>
+     *  *  Code: P3308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lingen_Ems;
+    /**
+     * <b>Grundbuchamt Lingen (Ems)</b>
+     *  * <p>
+     *  *  Code: P3308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lingen_Ems;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Melle</b>
+     *  * <p>
+     *  *  Code: P3309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Melle;
+    /**
+     * <b>Amtsgericht Meppen</b>
+     *  * <p>
+     *  *  Code: P3310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meppen;
+    /**
+     * <b>Grundbuchamt Meppen</b>
+     *  * <p>
+     *  *  Code: P3310G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meppen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neuenhaus</b>
+     *  * <p>
+     *  *  Code: P3311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neuenhaus;
+    /**
+     * <b>Amtsgericht Nordhorn</b>
+     *  * <p>
+     *  *  Code: P3312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nordhorn;
+    /**
+     * <b>Grundbuchamt Nordhorn</b>
+     *  * <p>
+     *  *  Code: P3312G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nordhorn;
+    /**
+     * <b>Amtsgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3313
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Osnabrueck;
+    /**
+     * <b>Grundbuchamt Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3313G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Osnabrueck;
+    /**
+     * <b>Amtsgericht Papenburg</b>
+     *  * <p>
+     *  *  Code: P3314
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Papenburg;
+    /**
+     * <b>Grundbuchamt Papenburg</b>
+     *  * <p>
+     *  *  Code: P3314G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Papenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Quakenbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P3315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Quakenbrueck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht S&#246;gel</b>
+     *  * <p>
+     *  *  Code: P3316
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Soegel;
+    /**
+     * <b>Landgericht Oldenburg (Oldbg.) Strafvollstreckungskammer b.d. Amtsgericht Vechta</b>
+     *  * <p>
+     *  *  Code: P3400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Vechta;
+    /**
+     * <b>Landgericht Oldenburg (Oldbg.) Strafvollstreckungskammer b.d. Amtsgericht Nordenham</b>
+     *  * <p>
+     *  *  Code: P3500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Nordenham;
+    /**
+     * <b>Landgericht Oldenburg (Oldbg.) Strafvollstreckungskammer b.d. Amtsgericht Wilhelmshaven</b>
+     *  * <p>
+     *  *  Code: P3600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Wilhelmshaven;
+    /**
+     * <b>Landgericht Osnabr&#252;ck Strafvollstreckungskammer b.d. Amtsgericht Lingen</b>
+     *  * <p>
+     *  *  Code: P3700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Osnabrueck_Strafvollstreckungskammer_b_d_Amtsgericht_Lingen;
+    /**
+     * <b>Verwaltungsgericht Stade</b>
+     *  * <p>
+     *  *  Code: P6098
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Stade;
+    /**
+     * <b>Sozialgericht Aurich</b>
+     *  * <p>
+     *  *  Code: P6117
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Aurich;
+    /**
+     * <b>Sozialgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P6118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Braunschweig;
+    /**
+     * <b>Arbeitsgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P6119
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Braunschweig;
+    /**
+     * <b>Nieders&#228;chsischer Staatsgerichtshof</b>
+     *  * <p>
+     *  *  Code: P6120
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Niedersaechsischer_Staatsgerichtshof;
+    /**
+     * <b>Arbeitsgericht Celle</b>
+     *  * <p>
+     *  *  Code: P6121
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Celle;
+    /**
+     * <b>Landessozialgericht Niedersachsen-Bremen</b>
+     *  * <p>
+     *  *  Code: P6122
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Niedersachsen_Bremen;
+    /**
+     * <b>Arbeitsgericht Emden</b>
+     *  * <p>
+     *  *  Code: P6123
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Emden;
+    /**
+     * <b>Arbeitsgericht G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P6124
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Goettingen;
+    /**
+     * <b>Arbeitsgericht Hameln</b>
+     *  * <p>
+     *  *  Code: P6125
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hameln;
+    /**
+     * <b>Verwaltungsgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P6126
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Hannover;
+    /**
+     * <b>Nieders&#228;chsisches Finanzgericht</b>
+     *  * <p>
+     *  *  Code: P6127
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Niedersaechsisches_Finanzgericht;
+    /**
+     * <b>Sozialgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P6128
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Hannover;
+    /**
+     * <b>Arbeitsgericht Hannover</b>
+     *  * <p>
+     *  *  Code: P6129
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hannover;
+    /**
+     * <b>Landesarbeitsgericht Niedersachsen</b>
+     *  * <p>
+     *  *  Code: P6130
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Niedersachsen;
+    /**
+     * <b>Sozialgericht Hildesheim</b>
+     *  * <p>
+     *  *  Code: P6131
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Hildesheim;
+    /**
+     * <b>Arbeitsgericht Hildesheim</b>
+     *  * <p>
+     *  *  Code: P6132
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hildesheim;
+    /**
+     * <b>Arbeitsgericht Lingen (Ems)</b>
+     *  * <p>
+     *  *  Code: P6133
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Lingen_Ems;
+    /**
+     * <b>Sozialgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P6134
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Lueneburg;
+    /**
+     * <b>Arbeitsgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P6135
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Lueneburg;
+    /**
+     * <b>Nieders&#228;chsisches Oberverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: P6136
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Niedersaechsisches_Oberverwaltungsgericht;
+    /**
+     * <b>Arbeitsgericht Nienburg</b>
+     *  * <p>
+     *  *  Code: P6137
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Nienburg;
+    /**
+     * <b>Sozialgericht Oldenburg</b>
+     *  * <p>
+     *  *  Code: P6138
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Oldenburg;
+    /**
+     * <b>Arbeitsgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P6139
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Osnabrueck;
+    /**
+     * <b>Sozialgericht Stade</b>
+     *  * <p>
+     *  *  Code: P6140
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Stade;
+    /**
+     * <b>Arbeitsgericht Stade</b>
+     *  * <p>
+     *  *  Code: P6141
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stade;
+    /**
+     * <b>Arbeitsgericht Verden</b>
+     *  * <p>
+     *  *  Code: P6142
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Verden;
+    /**
+     * <b>Arbeitsgericht Wilhelmshaven</b>
+     *  * <p>
+     *  *  Code: P6143
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wilhelmshaven;
+    /**
+     * <b>Arbeitsgericht Oldenburg</b>
+     *  * <p>
+     *  *  Code: P6296
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Oldenburg;
+    /**
+     * <b>Sozialgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P6330
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Osnabrueck;
+    /**
+     * <b>Verwaltungsgericht Oldenburg</b>
+     *  * <p>
+     *  *  Code: P6348
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Oldenburg;
+    /**
+     * <b>Verwaltungsgericht Osnabr&#252;ck</b>
+     *  * <p>
+     *  *  Code: P6395
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Osnabrueck;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Braunschweig</b>
+     *  * <p>
+     *  *  Code: P6436
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Braunschweig;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Celle</b>
+     *  * <p>
+     *  *  Code: P6442
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Celle;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Oldenburg</b>
+     *  * <p>
+     *  *  Code: P6445
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Oldenburg;
+    /**
+     * <b>Nieders&#228;chsischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: P6447
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Niedersaechsischer_Anwaltsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt f&#252;r Frauen Vechta</b>
+     *  * <p>
+     *  *  Code: P6496
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_fuer_Frauen_Vechta;
+    /**
+     * <b>Justizvollzugsanstalt Wolfenb&#252;ttel</b>
+     *  * <p>
+     *  *  Code: P6717
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wolfenbuettel;
+    /**
+     * <b>Jugendanstalt Hameln</b>
+     *  * <p>
+     *  *  Code: P6951
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendanstalt_Hameln;
+    /**
+     * <b>Justizvollzugsanstalt Vechta</b>
+     *  * <p>
+     *  *  Code: P7153
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Vechta;
+    /**
+     * <b>Justizvollzugsanstalt Celle</b>
+     *  * <p>
+     *  *  Code: P7181
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Celle;
+    /**
+     * <b>Justizvollzugsanstalt Hannover</b>
+     *  * <p>
+     *  *  Code: P7404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hannover;
+    /**
+     * <b>Justizvollzugsanstalt Meppen</b>
+     *  * <p>
+     *  *  Code: P7480
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Meppen;
+    /**
+     * <b>Justizvollzugsanstalt Uelzen</b>
+     *  * <p>
+     *  *  Code: P7575
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Uelzen;
+    /**
+     * <b>Jugendarrestanstalt Verden</b>
+     *  * <p>
+     *  *  Code: P7581
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Verden;
+    /**
+     * <b>Justizvollzugsanstalt Rosdorf</b>
+     *  * <p>
+     *  *  Code: P7607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rosdorf;
+    /**
+     * <b>Berufsgerichtshof der Ingenieurkammer Niedersachsen</b>
+     *  * <p>
+     *  *  Code: P7626
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Berufsgerichtshof_der_Ingenieurkammer_Niedersachsen;
+    /**
+     * <b>Justizvollzugsanstalt Sehnde</b>
+     *  * <p>
+     *  *  Code: P7683
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Sehnde;
+    /**
+     * <b>Justizvollzugsanstalt Oldenburg</b>
+     *  * <p>
+     *  *  Code: P7698
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Oldenburg;
+    /**
+     * <b>Justizvollzugsanstalt Lingen</b>
+     *  * <p>
+     *  *  Code: P7744
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Lingen;
+    /**
+     * <b>Verwaltungsgericht Braunschweig</b>
+     *  * <p>
+     *  *  Code: P7771
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Braunschweig;
+    /**
+     * <b>Verwaltungsgericht G&#246;ttingen</b>
+     *  * <p>
+     *  *  Code: P7772
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Goettingen;
+    /**
+     * <b>Verwaltungsgericht L&#252;neburg</b>
+     *  * <p>
+     *  *  Code: P7773
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Lueneburg;
+    /**
+     * <b>Justizvollzugsanstalt Hahn&#246;fersand</b>
+     *  * <p>
+     *  *  Code: P7904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hahnoefersand;
+    /**
+     * <b>Ambulanter Justizsozialdienst Niedersachsen</b>
+     *  * <p>
+     *  *  Code: P7920
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Ambulanter_Justizsozialdienst_Niedersachsen;
+    /**
+     * <b>Justizvollzugsanstalt Bremerv&#246;rde</b>
+     *  * <p>
+     *  *  Code: P8050
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bremervoerde;
+    /**
+     * <b>Oberlandesgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Duesseldorf;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Duesseldorf;
+    /**
+     * <b>Strafkammer des LG M&#252;nster bei dem AG Bocholt</b>
+     *  * <p>
+     *  *  Code: R1001
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Strafkammer_des_LG_Muenster_bei_dem_AG_Bocholt;
+    /**
+     * <b>Landgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Duesseldorf;
+    /**
+     * <b>aufgel&#246;st-Landgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1100Q
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Landgericht_Duesseldorf;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Duesseldorf;
+    /**
+     * <b>Amtsgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duesseldorf;
+    /**
+     * <b>Grundbuchamt D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duesseldorf;
+    /**
+     * <b>Amtsgericht Neuss</b>
+     *  * <p>
+     *  *  Code: R1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuss;
+    /**
+     * <b>Grundbuchamt Neuss</b>
+     *  * <p>
+     *  *  Code: R1102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neuss;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Opladen</b>
+     *  * <p>
+     *  *  Code: R1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Opladen;
+    /**
+     * <b>Amtsgericht Ratingen</b>
+     *  * <p>
+     *  *  Code: R1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ratingen;
+    /**
+     * <b>Grundbuchamt Ratingen</b>
+     *  * <p>
+     *  *  Code: R1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ratingen;
+    /**
+     * <b>Amtsgericht Langenfeld</b>
+     *  * <p>
+     *  *  Code: R1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Langenfeld;
+    /**
+     * <b>Grundbuchamt Langenfeld</b>
+     *  * <p>
+     *  *  Code: R1105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Langenfeld;
+    /**
+     * <b>Landgericht Duisburg</b>
+     *  * <p>
+     *  *  Code: R1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Duisburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Duisburg</b>
+     *  * <p>
+     *  *  Code: R1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Duisburg;
+    /**
+     * <b>Amtsgericht Dinslaken</b>
+     *  * <p>
+     *  *  Code: R1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dinslaken;
+    /**
+     * <b>Grundbuchamt Dinslaken</b>
+     *  * <p>
+     *  *  Code: R1201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dinslaken;
+    /**
+     * <b>Amtsgericht Duisburg</b>
+     *  * <p>
+     *  *  Code: R1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duisburg;
+    /**
+     * <b>Grundbuchamt Duisburg</b>
+     *  * <p>
+     *  *  Code: R1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duisburg;
+    /**
+     * <b>Amtsgericht Duisburg-Hamborn</b>
+     *  * <p>
+     *  *  Code: R1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duisburg_Hamborn;
+    /**
+     * <b>Grundbuchamt Duisburg-Hamborn</b>
+     *  * <p>
+     *  *  Code: R1203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duisburg_Hamborn;
+    /**
+     * <b>Amtsgericht Duisburg-Ruhrort</b>
+     *  * <p>
+     *  *  Code: R1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duisburg_Ruhrort;
+    /**
+     * <b>Grundbuchamt Duisburg-Ruhrort</b>
+     *  * <p>
+     *  *  Code: R1204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duisburg_Ruhrort;
+    /**
+     * <b>Amtsgericht M&#252;lheim</b>
+     *  * <p>
+     *  *  Code: R1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muelheim;
+    /**
+     * <b>Grundbuchamt M&#252;lheim an der Ruhr</b>
+     *  * <p>
+     *  *  Code: R1205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Muelheim_an_der_Ruhr;
+    /**
+     * <b>Amtsgericht Oberhausen</b>
+     *  * <p>
+     *  *  Code: R1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oberhausen;
+    /**
+     * <b>Grundbuchamt Oberhausen</b>
+     *  * <p>
+     *  *  Code: R1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Oberhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rees</b>
+     *  * <p>
+     *  *  Code: R1207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rees;
+    /**
+     * <b>Amtsgericht Wesel</b>
+     *  * <p>
+     *  *  Code: R1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wesel;
+    /**
+     * <b>Grundbuchamt Wesel</b>
+     *  * <p>
+     *  *  Code: R1208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wesel;
+    /**
+     * <b>Landgericht Kleve</b>
+     *  * <p>
+     *  *  Code: R1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Kleve;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Kleve</b>
+     *  * <p>
+     *  *  Code: R1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Kleve;
+    /**
+     * <b>Amtsgericht Emmerich</b>
+     *  * <p>
+     *  *  Code: R1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Emmerich;
+    /**
+     * <b>Grundbuchamt Emmerich am Rhein</b>
+     *  * <p>
+     *  *  Code: R1301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Emmerich_am_Rhein;
+    /**
+     * <b>Amtsgericht Geldern</b>
+     *  * <p>
+     *  *  Code: R1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Geldern;
+    /**
+     * <b>Grundbuchamt Geldern</b>
+     *  * <p>
+     *  *  Code: R1302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Geldern;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Goch</b>
+     *  * <p>
+     *  *  Code: R1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Goch;
+    /**
+     * <b>Amtsgericht Kleve</b>
+     *  * <p>
+     *  *  Code: R1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kleve;
+    /**
+     * <b>Grundbuchamt Kleve</b>
+     *  * <p>
+     *  *  Code: R1304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kleve;
+    /**
+     * <b>Amtsgericht Moers</b>
+     *  * <p>
+     *  *  Code: R1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Moers;
+    /**
+     * <b>Grundbuchamt Moers</b>
+     *  * <p>
+     *  *  Code: R1305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Moers;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Moers, Zwst. der StA Kleve</b>
+     *  * <p>
+     *  *  Code: R1305S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Moers_Zwst_der_StA_Kleve;
+    /**
+     * <b>Amtsgericht Rheinberg</b>
+     *  * <p>
+     *  *  Code: R1306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rheinberg;
+    /**
+     * <b>Grundbuchamt Rheinberg</b>
+     *  * <p>
+     *  *  Code: R1306G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rheinberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rheinberg, Zwst. Xanten</b>
+     *  * <p>
+     *  *  Code: R1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rheinberg_Zwst_Xanten;
+    /**
+     * <b>Ausw&#228;rtige Strafkammer des Landgerichts Kleve in Moers</b>
+     *  * <p>
+     *  *  Code: R1310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Auswaertige_Strafkammer_des_Landgerichts_Kleve_in_Moers;
+    /**
+     * <b>Landgericht Krefeld</b>
+     *  * <p>
+     *  *  Code: R1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Krefeld;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Krefeld</b>
+     *  * <p>
+     *  *  Code: R1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Krefeld;
+    /**
+     * <b>Amtsgericht Kempen</b>
+     *  * <p>
+     *  *  Code: R1401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kempen;
+    /**
+     * <b>Grundbuchamt Kempen</b>
+     *  * <p>
+     *  *  Code: R1401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kempen;
+    /**
+     * <b>Amtsgericht Krefeld</b>
+     *  * <p>
+     *  *  Code: R1402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Krefeld;
+    /**
+     * <b>Grundbuchamt Krefeld</b>
+     *  * <p>
+     *  *  Code: R1402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Krefeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Krefeld-Uerdingen</b>
+     *  * <p>
+     *  *  Code: R1403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Krefeld_Uerdingen;
+    /**
+     * <b>Amtsgericht Nettetal</b>
+     *  * <p>
+     *  *  Code: R1404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nettetal;
+    /**
+     * <b>Grundbuchamt Nettetal</b>
+     *  * <p>
+     *  *  Code: R1404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nettetal;
+    /**
+     * <b>Landgericht M&#246;nchengladbach</b>
+     *  * <p>
+     *  *  Code: R1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Moenchengladbach;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht M&#246;nchengladbach</b>
+     *  * <p>
+     *  *  Code: R1500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Moenchengladbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht D&#252;lken</b>
+     *  * <p>
+     *  *  Code: R1501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Duelken;
+    /**
+     * <b>Amtsgericht Erkelenz</b>
+     *  * <p>
+     *  *  Code: R1502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Erkelenz;
+    /**
+     * <b>Grundbuchamt Erkelenz</b>
+     *  * <p>
+     *  *  Code: R1502G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Erkelenz;
+    /**
+     * <b>Amtsgericht Grevenbroich</b>
+     *  * <p>
+     *  *  Code: R1503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Grevenbroich;
+    /**
+     * <b>Grundbuchamt Grevenbroich</b>
+     *  * <p>
+     *  *  Code: R1503G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Grevenbroich;
+    /**
+     * <b>Amtsgericht M&#246;nchengladbach</b>
+     *  * <p>
+     *  *  Code: R1504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Moenchengladbach;
+    /**
+     * <b>Grundbuchamt M&#246;nchengladbach</b>
+     *  * <p>
+     *  *  Code: R1504G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Moenchengladbach;
+    /**
+     * <b>Amtsgericht M&#246;nchengladbach-Rheydt</b>
+     *  * <p>
+     *  *  Code: R1505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Moenchengladbach_Rheydt;
+    /**
+     * <b>Grundbuchamt M&#246;nchengladbach-Rheydt</b>
+     *  * <p>
+     *  *  Code: R1505G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Moenchengladbach_Rheydt;
+    /**
+     * <b>Amtsgericht Viersen</b>
+     *  * <p>
+     *  *  Code: R1506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Viersen;
+    /**
+     * <b>Grundbuchamt Viersen</b>
+     *  * <p>
+     *  *  Code: R1506G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Viersen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Erkelenz, Zwst. Wegberg</b>
+     *  * <p>
+     *  *  Code: R1507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Erkelenz_Zwst_Wegberg;
+    /**
+     * <b>Landgericht Wuppertal</b>
+     *  * <p>
+     *  *  Code: R1600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Wuppertal;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Wuppertal</b>
+     *  * <p>
+     *  *  Code: R1600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Wuppertal;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Langenberg</b>
+     *  * <p>
+     *  *  Code: R1601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Langenberg;
+    /**
+     * <b>Amtsgericht Mettmann</b>
+     *  * <p>
+     *  *  Code: R1602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mettmann;
+    /**
+     * <b>Grundbuchamt Mettmann</b>
+     *  * <p>
+     *  *  Code: R1602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Mettmann;
+    /**
+     * <b>Amtsgericht Remscheid</b>
+     *  * <p>
+     *  *  Code: R1603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Remscheid;
+    /**
+     * <b>Grundbuchamt Remscheid</b>
+     *  * <p>
+     *  *  Code: R1603G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Remscheid;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Remscheid-Lennep</b>
+     *  * <p>
+     *  *  Code: R1604
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Remscheid_Lennep;
+    /**
+     * <b>Amtsgericht Solingen</b>
+     *  * <p>
+     *  *  Code: R1605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Solingen;
+    /**
+     * <b>Grundbuchamt Solingen</b>
+     *  * <p>
+     *  *  Code: R1605G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Solingen;
+    /**
+     * <b>Amtsgericht Velbert</b>
+     *  * <p>
+     *  *  Code: R1606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Velbert;
+    /**
+     * <b>Grundbuchamt Velbert</b>
+     *  * <p>
+     *  *  Code: R1606G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Velbert;
+    /**
+     * <b>Amtsgericht Wuppertal</b>
+     *  * <p>
+     *  *  Code: R1608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wuppertal;
+    /**
+     * <b>Grundbuchamt Wuppertal</b>
+     *  * <p>
+     *  *  Code: R1608G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wuppertal;
+    /**
+     * <b>Landgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R1900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Arnsberg;
+    /**
+     * <b>aufgel&#246;st-Landgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R1900Q
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Landgericht_Arnsberg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R1900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Arnsberg;
+    /**
+     * <b>Amtsgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R1901
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Arnsberg;
+    /**
+     * <b>Grundbuchamt Arnsberg</b>
+     *  * <p>
+     *  *  Code: R1901G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Arnsberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Balve</b>
+     *  * <p>
+     *  *  Code: R1902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Balve;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bigge</b>
+     *  * <p>
+     *  *  Code: R1903
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bigge;
+    /**
+     * <b>Amtsgericht Brilon</b>
+     *  * <p>
+     *  *  Code: R1904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brilon;
+    /**
+     * <b>Grundbuchamt Brilon</b>
+     *  * <p>
+     *  *  Code: R1904G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Brilon;
+    /**
+     * <b>Amtsgericht Schmallenberg</b>
+     *  * <p>
+     *  *  Code: R1905
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schmallenberg;
+    /**
+     * <b>Grundbuchamt Schmallenberg</b>
+     *  * <p>
+     *  *  Code: R1905G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schmallenberg;
+    /**
+     * <b>Amtsgericht Marsberg</b>
+     *  * <p>
+     *  *  Code: R1906
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marsberg;
+    /**
+     * <b>Grundbuchamt Marsberg</b>
+     *  * <p>
+     *  *  Code: R1906G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Marsberg;
+    /**
+     * <b>Amtsgericht Medebach</b>
+     *  * <p>
+     *  *  Code: R1907
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Medebach;
+    /**
+     * <b>Grundbuchamt Medebach</b>
+     *  * <p>
+     *  *  Code: R1907G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Medebach;
+    /**
+     * <b>Amtsgericht Menden</b>
+     *  * <p>
+     *  *  Code: R1908
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Menden;
+    /**
+     * <b>Grundbuchamt Menden</b>
+     *  * <p>
+     *  *  Code: R1908G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Menden;
+    /**
+     * <b>Amtsgericht Meschede</b>
+     *  * <p>
+     *  *  Code: R1909
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meschede;
+    /**
+     * <b>Grundbuchamt Meschede</b>
+     *  * <p>
+     *  *  Code: R1909G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meschede;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neheim-H&#252;sten</b>
+     *  * <p>
+     *  *  Code: R1910
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neheim_Huesten;
+    /**
+     * <b>Amtsgericht Soest</b>
+     *  * <p>
+     *  *  Code: R1911
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Soest;
+    /**
+     * <b>Grundbuchamt Soest</b>
+     *  * <p>
+     *  *  Code: R1911G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Soest;
+    /**
+     * <b>Amtsgericht Warstein</b>
+     *  * <p>
+     *  *  Code: R1912
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Warstein;
+    /**
+     * <b>Grundbuchamt Warstein</b>
+     *  * <p>
+     *  *  Code: R1912G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Warstein;
+    /**
+     * <b>Amtsgericht Werl</b>
+     *  * <p>
+     *  *  Code: R1913
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Werl;
+    /**
+     * <b>Grundbuchamt Werl</b>
+     *  * <p>
+     *  *  Code: R1913G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Werl;
+    /**
+     * <b>Oberlandesgericht Hamm</b>
+     *  * <p>
+     *  *  Code: R2000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Hamm;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Hamm</b>
+     *  * <p>
+     *  *  Code: R2000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Hamm;
+    /**
+     * <b>Landgericht Bielefeld</b>
+     *  * <p>
+     *  *  Code: R2100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bielefeld;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bielefeld</b>
+     *  * <p>
+     *  *  Code: R2100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bielefeld;
+    /**
+     * <b>Amtsgericht Bielefeld</b>
+     *  * <p>
+     *  *  Code: R2101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bielefeld;
+    /**
+     * <b>Grundbuchamt Bielefeld</b>
+     *  * <p>
+     *  *  Code: R2101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bielefeld;
+    /**
+     * <b>Amtsgericht B&#252;nde</b>
+     *  * <p>
+     *  *  Code: R2102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Buende;
+    /**
+     * <b>Grundbuchamt B&#252;nde</b>
+     *  * <p>
+     *  *  Code: R2102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Buende;
+    /**
+     * <b>Amtsgericht G&#252;tersloh</b>
+     *  * <p>
+     *  *  Code: R2103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Guetersloh;
+    /**
+     * <b>Grundbuchamt G&#252;tersloh</b>
+     *  * <p>
+     *  *  Code: R2103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Guetersloh;
+    /**
+     * <b>Amtsgericht Halle</b>
+     *  * <p>
+     *  *  Code: R2104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Halle;
+    /**
+     * <b>Grundbuchamt Halle (Westf.)</b>
+     *  * <p>
+     *  *  Code: R2104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Halle_Westf;
+    /**
+     * <b>Amtsgericht Herford</b>
+     *  * <p>
+     *  *  Code: R2105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Herford;
+    /**
+     * <b>Grundbuchamt Herford</b>
+     *  * <p>
+     *  *  Code: R2105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Herford;
+    /**
+     * <b>Amtsgericht L&#252;bbecke</b>
+     *  * <p>
+     *  *  Code: R2106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luebbecke;
+    /**
+     * <b>Grundbuchamt L&#252;bbecke</b>
+     *  * <p>
+     *  *  Code: R2106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luebbecke;
+    /**
+     * <b>Amtsgericht Minden</b>
+     *  * <p>
+     *  *  Code: R2107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Minden;
+    /**
+     * <b>Grundbuchamt Minden</b>
+     *  * <p>
+     *  *  Code: R2107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Minden;
+    /**
+     * <b>Amtsgericht Bad Oeynhausen</b>
+     *  * <p>
+     *  *  Code: R2108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Oeynhausen;
+    /**
+     * <b>Grundbuchamt Bad Oeynhausen</b>
+     *  * <p>
+     *  *  Code: R2108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Oeynhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Petershagen</b>
+     *  * <p>
+     *  *  Code: R2109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Petershagen;
+    /**
+     * <b>Amtsgericht Rahden</b>
+     *  * <p>
+     *  *  Code: R2110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rahden;
+    /**
+     * <b>Grundbuchamt Rahden</b>
+     *  * <p>
+     *  *  Code: R2110G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rahden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rietberg</b>
+     *  * <p>
+     *  *  Code: R2111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rietberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Oeynhausen, Zwst. Vlotho</b>
+     *  * <p>
+     *  *  Code: R2112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Oeynhausen_Zwst_Vlotho;
+    /**
+     * <b>Amtsgericht Rheda-Wiedenbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: R2113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rheda_Wiedenbrueck;
+    /**
+     * <b>Grundbuchamt Rheda-Wiedenbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: R2113G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rheda_Wiedenbrueck;
+    /**
+     * <b>Landgericht Bochum</b>
+     *  * <p>
+     *  *  Code: R2200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bochum;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bochum</b>
+     *  * <p>
+     *  *  Code: R2200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bochum;
+    /**
+     * <b>Amtsgericht Bochum</b>
+     *  * <p>
+     *  *  Code: R2201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bochum;
+    /**
+     * <b>Grundbuchamt Bochum</b>
+     *  * <p>
+     *  *  Code: R2201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bochum;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bochum-Langendreer</b>
+     *  * <p>
+     *  *  Code: R2202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bochum_Langendreer;
+    /**
+     * <b>Amtsgericht Herne</b>
+     *  * <p>
+     *  *  Code: R2203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Herne;
+    /**
+     * <b>Grundbuchamt Herne</b>
+     *  * <p>
+     *  *  Code: R2203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Herne;
+    /**
+     * <b>Amtsgericht Recklinghausen</b>
+     *  * <p>
+     *  *  Code: R2204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Recklinghausen;
+    /**
+     * <b>Grundbuchamt Recklinghausen</b>
+     *  * <p>
+     *  *  Code: R2204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Recklinghausen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Recklinghausen, Zwst. der StA Bochum</b>
+     *  * <p>
+     *  *  Code: R2204S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Recklinghausen_Zwst_der_StA_Bochum;
+    /**
+     * <b>Amtsgericht Herne-Wanne</b>
+     *  * <p>
+     *  *  Code: R2205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Herne_Wanne;
+    /**
+     * <b>Grundbuchamt Herne-Wanne</b>
+     *  * <p>
+     *  *  Code: R2205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Herne_Wanne;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wattenscheid</b>
+     *  * <p>
+     *  *  Code: R2206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wattenscheid;
+    /**
+     * <b>Amtsgericht Witten</b>
+     *  * <p>
+     *  *  Code: R2207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Witten;
+    /**
+     * <b>Grundbuchamt Witten</b>
+     *  * <p>
+     *  *  Code: R2207G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Witten;
+    /**
+     * <b>Landgericht Bochum Ausw&#228;rtige Strafkammer Recklinghsn.</b>
+     *  * <p>
+     *  *  Code: R2210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bochum_Auswaertige_Strafkammer_Recklinghsn;
+    /**
+     * <b>Landgericht Detmold</b>
+     *  * <p>
+     *  *  Code: R2300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Detmold;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Detmold</b>
+     *  * <p>
+     *  *  Code: R2300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Detmold;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Alverdissen</b>
+     *  * <p>
+     *  *  Code: R2301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Alverdissen;
+    /**
+     * <b>Amtsgericht Blomberg</b>
+     *  * <p>
+     *  *  Code: R2302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Blomberg;
+    /**
+     * <b>Grundbuchamt Blomberg</b>
+     *  * <p>
+     *  *  Code: R2302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Blomberg;
+    /**
+     * <b>Amtsgericht Detmold</b>
+     *  * <p>
+     *  *  Code: R2303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Detmold;
+    /**
+     * <b>Grundbuchamt Detmold</b>
+     *  * <p>
+     *  *  Code: R2303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Detmold;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hohenhausen</b>
+     *  * <p>
+     *  *  Code: R2304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hohenhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Horn</b>
+     *  * <p>
+     *  *  Code: R2305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Horn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lage</b>
+     *  * <p>
+     *  *  Code: R2306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lage;
+    /**
+     * <b>Amtsgericht Lemgo</b>
+     *  * <p>
+     *  *  Code: R2307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lemgo;
+    /**
+     * <b>Grundbuchamt Lemgo</b>
+     *  * <p>
+     *  *  Code: R2307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lemgo;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Oerlinghausen</b>
+     *  * <p>
+     *  *  Code: R2308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Oerlinghausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Salzuflen</b>
+     *  * <p>
+     *  *  Code: R2309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Salzuflen;
+    /**
+     * <b>Landgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R2400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Dortmund;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R2400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Dortmund;
+    /**
+     * <b>Amtsgericht Castrop-Rauxel</b>
+     *  * <p>
+     *  *  Code: R2401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Castrop_Rauxel;
+    /**
+     * <b>Grundbuchamt Castrop-Rauxel</b>
+     *  * <p>
+     *  *  Code: R2401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Castrop_Rauxel;
+    /**
+     * <b>Amtsgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R2402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dortmund;
+    /**
+     * <b>Grundbuchamt Dortmund</b>
+     *  * <p>
+     *  *  Code: R2402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dortmund;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dortmund-H&#246;rde</b>
+     *  * <p>
+     *  *  Code: R2403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dortmund_Hoerde;
+    /**
+     * <b>Amtsgericht Hamm</b>
+     *  * <p>
+     *  *  Code: R2404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hamm;
+    /**
+     * <b>Grundbuchamt Hamm</b>
+     *  * <p>
+     *  *  Code: R2404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hamm;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hamm, Zwst. der StA Dortmund</b>
+     *  * <p>
+     *  *  Code: R2404S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hamm_Zwst_der_StA_Dortmund;
+    /**
+     * <b>Amtsgericht Kamen</b>
+     *  * <p>
+     *  *  Code: R2405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kamen;
+    /**
+     * <b>Grundbuchamt Kamen</b>
+     *  * <p>
+     *  *  Code: R2405G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kamen;
+    /**
+     * <b>Amtsgericht L&#252;nen</b>
+     *  * <p>
+     *  *  Code: R2406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luenen;
+    /**
+     * <b>Grundbuchamt L&#252;nen</b>
+     *  * <p>
+     *  *  Code: R2406G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luenen;
+    /**
+     * <b>Amtsgericht Unna</b>
+     *  * <p>
+     *  *  Code: R2407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Unna;
+    /**
+     * <b>Grundbuchamt Unna</b>
+     *  * <p>
+     *  *  Code: R2407G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Unna;
+    /**
+     * <b>Amtsgericht L&#252;nen Zweigstelle Werne</b>
+     *  * <p>
+     *  *  Code: R2408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luenen_Zweigstelle_Werne;
+    /**
+     * <b>Landgericht Essen</b>
+     *  * <p>
+     *  *  Code: R2500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Essen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Essen</b>
+     *  * <p>
+     *  *  Code: R2500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Essen;
+    /**
+     * <b>Amtsgericht Bottrop</b>
+     *  * <p>
+     *  *  Code: R2501
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bottrop;
+    /**
+     * <b>Grundbuchamt Bottrop</b>
+     *  * <p>
+     *  *  Code: R2501G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bottrop;
+    /**
+     * <b>Amtsgericht Dorsten</b>
+     *  * <p>
+     *  *  Code: R2502
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dorsten;
+    /**
+     * <b>Grundbuchamt Dorsten</b>
+     *  * <p>
+     *  *  Code: R2502G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dorsten;
+    /**
+     * <b>Amtsgericht Essen</b>
+     *  * <p>
+     *  *  Code: R2503
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Essen;
+    /**
+     * <b>Grundbuchamt Essen</b>
+     *  * <p>
+     *  *  Code: R2503G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Essen;
+    /**
+     * <b>Amtsgericht Essen-Borbeck</b>
+     *  * <p>
+     *  *  Code: R2504
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Essen_Borbeck;
+    /**
+     * <b>Grundbuchamt Essen-Borbeck</b>
+     *  * <p>
+     *  *  Code: R2504G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Essen_Borbeck;
+    /**
+     * <b>Amtsgericht Essen-Steele</b>
+     *  * <p>
+     *  *  Code: R2505
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Essen_Steele;
+    /**
+     * <b>Grundbuchamt Essen-Steele</b>
+     *  * <p>
+     *  *  Code: R2505G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Essen_Steele;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Essen-Werden</b>
+     *  * <p>
+     *  *  Code: R2506
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Essen_Werden;
+    /**
+     * <b>Amtsgericht Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R2507
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gelsenkirchen;
+    /**
+     * <b>Grundbuchamt Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R2507G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gelsenkirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gelsenkirchen-Buer</b>
+     *  * <p>
+     *  *  Code: R2508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gelsenkirchen_Buer;
+    /**
+     * <b>aufgel&#246;st-Grundbuchamt Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R2508G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Grundbuchamt_Gelsenkirchen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Gelsenkirchen, Zwst. der StA Essen</b>
+     *  * <p>
+     *  *  Code: R2508S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Gelsenkirchen_Zwst_der_StA_Essen;
+    /**
+     * <b>Amtsgericht Gladbeck</b>
+     *  * <p>
+     *  *  Code: R2509
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gladbeck;
+    /**
+     * <b>Grundbuchamt Gladbeck</b>
+     *  * <p>
+     *  *  Code: R2509G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gladbeck;
+    /**
+     * <b>Amtsgericht Hattingen</b>
+     *  * <p>
+     *  *  Code: R2510
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hattingen;
+    /**
+     * <b>Grundbuchamt Hattingen</b>
+     *  * <p>
+     *  *  Code: R2510G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hattingen;
+    /**
+     * <b>Amtsgericht Marl</b>
+     *  * <p>
+     *  *  Code: R2511
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marl;
+    /**
+     * <b>Grundbuchamt Marl</b>
+     *  * <p>
+     *  *  Code: R2511G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Marl;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Haltern</b>
+     *  * <p>
+     *  *  Code: R2512
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Haltern;
+    /**
+     * <b>Landgericht Hagen</b>
+     *  * <p>
+     *  *  Code: R2600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Hagen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hagen</b>
+     *  * <p>
+     *  *  Code: R2600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hagen;
+    /**
+     * <b>Amtsgericht Altena</b>
+     *  * <p>
+     *  *  Code: R2601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Altena;
+    /**
+     * <b>Grundbuchamt Altena</b>
+     *  * <p>
+     *  *  Code: R2601G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Altena;
+    /**
+     * <b>Amtsgericht Hagen</b>
+     *  * <p>
+     *  *  Code: R2602
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hagen;
+    /**
+     * <b>Grundbuchamt Hagen</b>
+     *  * <p>
+     *  *  Code: R2602G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hagen;
+    /**
+     * <b>Amtsgericht Hagen -Zentrale Mahnabteilung-</b>
+     *  * <p>
+     *  *  Code: R2602M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hagen_Zentrale_Mahnabteilung;
+    /**
+     * <b>Amtsgericht Hagen, Zentrales Vollstreckungsgericht Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: R2602R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hagen_Zentrales_Vollstreckungsgericht_Nordrhein_Westfalen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hohenlimburg</b>
+     *  * <p>
+     *  *  Code: R2603
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hohenlimburg;
+    /**
+     * <b>Amtsgericht Iserlohn</b>
+     *  * <p>
+     *  *  Code: R2604
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Iserlohn;
+    /**
+     * <b>Grundbuchamt Iserlohn</b>
+     *  * <p>
+     *  *  Code: R2604G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Iserlohn;
+    /**
+     * <b>Amtsgericht L&#252;denscheid</b>
+     *  * <p>
+     *  *  Code: R2605
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luedenscheid;
+    /**
+     * <b>Grundbuchamt L&#252;denscheid</b>
+     *  * <p>
+     *  *  Code: R2605G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luedenscheid;
+    /**
+     * <b>Amtsgericht Meinerzhagen</b>
+     *  * <p>
+     *  *  Code: R2606
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meinerzhagen;
+    /**
+     * <b>Grundbuchamt Meinerzhagen</b>
+     *  * <p>
+     *  *  Code: R2606G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meinerzhagen;
+    /**
+     * <b>Amtsgericht Plettenberg</b>
+     *  * <p>
+     *  *  Code: R2607
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Plettenberg;
+    /**
+     * <b>Grundbuchamt Plettenberg</b>
+     *  * <p>
+     *  *  Code: R2607G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Plettenberg;
+    /**
+     * <b>Amtsgericht Schwelm</b>
+     *  * <p>
+     *  *  Code: R2608
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwelm;
+    /**
+     * <b>Grundbuchamt Schwelm</b>
+     *  * <p>
+     *  *  Code: R2608G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwelm;
+    /**
+     * <b>Amtsgericht Schwerte</b>
+     *  * <p>
+     *  *  Code: R2609
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwerte;
+    /**
+     * <b>Grundbuchamt Schwerte</b>
+     *  * <p>
+     *  *  Code: R2609G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwerte;
+    /**
+     * <b>Amtsgericht Wetter</b>
+     *  * <p>
+     *  *  Code: R2610
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wetter;
+    /**
+     * <b>Grundbuchamt Wetter-Ruhr</b>
+     *  * <p>
+     *  *  Code: R2610G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wetter_Ruhr;
+    /**
+     * <b>Landgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R2700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Muenster;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R2700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Muenster;
+    /**
+     * <b>Amtsgericht Ahaus</b>
+     *  * <p>
+     *  *  Code: R2701
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ahaus;
+    /**
+     * <b>Grundbuchamt Ahaus</b>
+     *  * <p>
+     *  *  Code: R2701G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ahaus;
+    /**
+     * <b>Amtsgericht Ahlen</b>
+     *  * <p>
+     *  *  Code: R2702
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ahlen;
+    /**
+     * <b>Grundbuchamt Ahlen</b>
+     *  * <p>
+     *  *  Code: R2702G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ahlen;
+    /**
+     * <b>Amtsgericht Beckum</b>
+     *  * <p>
+     *  *  Code: R2703
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Beckum;
+    /**
+     * <b>Grundbuchamt Beckum</b>
+     *  * <p>
+     *  *  Code: R2703G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Beckum;
+    /**
+     * <b>Amtsgericht Bocholt</b>
+     *  * <p>
+     *  *  Code: R2704
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bocholt;
+    /**
+     * <b>Grundbuchamt Bocholt</b>
+     *  * <p>
+     *  *  Code: R2704G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bocholt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bocholt, Zwst. der StA M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R2704S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bocholt_Zwst_der_StA_Muenster;
+    /**
+     * <b>Amtsgericht Borken</b>
+     *  * <p>
+     *  *  Code: R2705
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Borken;
+    /**
+     * <b>Grundbuchamt Borken</b>
+     *  * <p>
+     *  *  Code: R2705G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Borken;
+    /**
+     * <b>Amtsgericht Steinfurt</b>
+     *  * <p>
+     *  *  Code: R2706
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Steinfurt;
+    /**
+     * <b>Grundbuchamt Steinfurt</b>
+     *  * <p>
+     *  *  Code: R2706G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Steinfurt;
+    /**
+     * <b>Amtsgericht Coesfeld</b>
+     *  * <p>
+     *  *  Code: R2707
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Coesfeld;
+    /**
+     * <b>Grundbuchamt Coesfeld</b>
+     *  * <p>
+     *  *  Code: R2707G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Coesfeld;
+    /**
+     * <b>Amtsgericht D&#252;lmen</b>
+     *  * <p>
+     *  *  Code: R2708
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Duelmen;
+    /**
+     * <b>Grundbuchamt D&#252;lmen</b>
+     *  * <p>
+     *  *  Code: R2708G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Duelmen;
+    /**
+     * <b>Amtsgericht Gronau</b>
+     *  * <p>
+     *  *  Code: R2709
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gronau;
+    /**
+     * <b>Grundbuchamt Gronau</b>
+     *  * <p>
+     *  *  Code: R2709G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gronau;
+    /**
+     * <b>Amtsgericht Haltern</b>
+     *  * <p>
+     *  *  Code: R2710
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Haltern;
+    /**
+     * <b>Amtsgericht Ibbenb&#252;ren</b>
+     *  * <p>
+     *  *  Code: R2711
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ibbenbueren;
+    /**
+     * <b>Grundbuchamt Ibbenb&#252;ren</b>
+     *  * <p>
+     *  *  Code: R2711G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ibbenbueren;
+    /**
+     * <b>Amtsgericht L&#252;dinghausen</b>
+     *  * <p>
+     *  *  Code: R2712
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luedinghausen;
+    /**
+     * <b>Grundbuchamt L&#252;dinghausen</b>
+     *  * <p>
+     *  *  Code: R2712G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luedinghausen;
+    /**
+     * <b>Amtsgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R2713
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muenster;
+    /**
+     * <b>Grundbuchamt M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R2713G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Muenster;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Oelde</b>
+     *  * <p>
+     *  *  Code: R2714
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Oelde;
+    /**
+     * <b>Amtsgericht Rheine</b>
+     *  * <p>
+     *  *  Code: R2715
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rheine;
+    /**
+     * <b>Grundbuchamt Rheine</b>
+     *  * <p>
+     *  *  Code: R2715G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rheine;
+    /**
+     * <b>Amtsgericht Tecklenburg</b>
+     *  * <p>
+     *  *  Code: R2716
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Tecklenburg;
+    /**
+     * <b>Grundbuchamt Tecklenburg</b>
+     *  * <p>
+     *  *  Code: R2716G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Tecklenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Vreden</b>
+     *  * <p>
+     *  *  Code: R2717
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Vreden;
+    /**
+     * <b>Amtsgericht Warendorf</b>
+     *  * <p>
+     *  *  Code: R2718
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Warendorf;
+    /**
+     * <b>Grundbuchamt Warendorf</b>
+     *  * <p>
+     *  *  Code: R2718G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Warendorf;
+    /**
+     * <b>Landgericht Paderborn</b>
+     *  * <p>
+     *  *  Code: R2800
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Paderborn;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Paderborn</b>
+     *  * <p>
+     *  *  Code: R2800S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Paderborn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Beverungen</b>
+     *  * <p>
+     *  *  Code: R2801
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Beverungen;
+    /**
+     * <b>Amtsgericht Brakel</b>
+     *  * <p>
+     *  *  Code: R2802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Brakel;
+    /**
+     * <b>Grundbuchamt Brakel</b>
+     *  * <p>
+     *  *  Code: R2802G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Brakel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht B&#252;ren</b>
+     *  * <p>
+     *  *  Code: R2803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bueren;
+    /**
+     * <b>Amtsgericht Delbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: R2804
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Delbrueck;
+    /**
+     * <b>Grundbuchamt Delbr&#252;ck</b>
+     *  * <p>
+     *  *  Code: R2804G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Delbrueck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Erwitte</b>
+     *  * <p>
+     *  *  Code: R2805
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Erwitte;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Geseke</b>
+     *  * <p>
+     *  *  Code: R2806
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Geseke;
+    /**
+     * <b>Amtsgericht H&#246;xter</b>
+     *  * <p>
+     *  *  Code: R2807
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hoexter;
+    /**
+     * <b>Grundbuchamt H&#246;xter</b>
+     *  * <p>
+     *  *  Code: R2807G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hoexter;
+    /**
+     * <b>Amtsgericht Lippstadt</b>
+     *  * <p>
+     *  *  Code: R2808
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lippstadt;
+    /**
+     * <b>Grundbuchamt Lippstadt</b>
+     *  * <p>
+     *  *  Code: R2808G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lippstadt;
+    /**
+     * <b>Amtsgericht Paderborn</b>
+     *  * <p>
+     *  *  Code: R2809
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Paderborn;
+    /**
+     * <b>Grundbuchamt Paderborn</b>
+     *  * <p>
+     *  *  Code: R2809G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Paderborn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht R&#252;then</b>
+     *  * <p>
+     *  *  Code: R2810
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Ruethen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Salzkotten</b>
+     *  * <p>
+     *  *  Code: R2811
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Salzkotten;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Steinheim</b>
+     *  * <p>
+     *  *  Code: R2812
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Steinheim;
+    /**
+     * <b>Amtsgericht Warburg</b>
+     *  * <p>
+     *  *  Code: R2813
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Warburg;
+    /**
+     * <b>Grundbuchamt Warburg</b>
+     *  * <p>
+     *  *  Code: R2813G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Warburg;
+    /**
+     * <b>Landgericht Siegen</b>
+     *  * <p>
+     *  *  Code: R2900
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Siegen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Siegen</b>
+     *  * <p>
+     *  *  Code: R2900S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Siegen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Olpe, Zwst. Attendorn</b>
+     *  * <p>
+     *  *  Code: R2901
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Olpe_Zwst_Attendorn;
+    /**
+     * <b>Amtsgericht Bad Berleburg</b>
+     *  * <p>
+     *  *  Code: R2902
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Berleburg;
+    /**
+     * <b>Grundbuchamt Bad Berleburg</b>
+     *  * <p>
+     *  *  Code: R2902G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Berleburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Burbach</b>
+     *  * <p>
+     *  *  Code: R2903
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Burbach;
+    /**
+     * <b>Amtsgericht Lennestadt</b>
+     *  * <p>
+     *  *  Code: R2904
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lennestadt;
+    /**
+     * <b>Grundbuchamt Lennestadt</b>
+     *  * <p>
+     *  *  Code: R2904G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lennestadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hilchenbach</b>
+     *  * <p>
+     *  *  Code: R2905
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hilchenbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kirchhundem</b>
+     *  * <p>
+     *  *  Code: R2906
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kirchhundem;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Laasphe</b>
+     *  * <p>
+     *  *  Code: R2907
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Laasphe;
+    /**
+     * <b>Amtsgericht Olpe</b>
+     *  * <p>
+     *  *  Code: R2908
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Olpe;
+    /**
+     * <b>Grundbuchamt Olpe</b>
+     *  * <p>
+     *  *  Code: R2908G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Olpe;
+    /**
+     * <b>Amtsgericht Siegen</b>
+     *  * <p>
+     *  *  Code: R2909
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Siegen;
+    /**
+     * <b>Grundbuchamt Siegen</b>
+     *  * <p>
+     *  *  Code: R2909G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Siegen;
+    /**
+     * <b>Oberlandesgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Koeln;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Koeln;
+    /**
+     * <b>Landgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R3100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Aachen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R3100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Aachen;
+    /**
+     * <b>Amtsgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R3101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aachen;
+    /**
+     * <b>Grundbuchamt Aachen</b>
+     *  * <p>
+     *  *  Code: R3101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aachen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Blankenheim</b>
+     *  * <p>
+     *  *  Code: R3102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Blankenheim;
+    /**
+     * <b>Amtsgericht D&#252;ren</b>
+     *  * <p>
+     *  *  Code: R3103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dueren;
+    /**
+     * <b>Grundbuchamt D&#252;ren</b>
+     *  * <p>
+     *  *  Code: R3103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dueren;
+    /**
+     * <b>Amtsgericht Eschweiler</b>
+     *  * <p>
+     *  *  Code: R3104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eschweiler;
+    /**
+     * <b>Grundbuchamt Eschweiler</b>
+     *  * <p>
+     *  *  Code: R3104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eschweiler;
+    /**
+     * <b>Amtsgericht Geilenkirchen</b>
+     *  * <p>
+     *  *  Code: R3105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Geilenkirchen;
+    /**
+     * <b>Grundbuchamt Geilenkirchen</b>
+     *  * <p>
+     *  *  Code: R3105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Geilenkirchen;
+    /**
+     * <b>Amtsgericht Schleiden</b>
+     *  * <p>
+     *  *  Code: R3106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schleiden;
+    /**
+     * <b>Grundbuchamt Schleiden</b>
+     *  * <p>
+     *  *  Code: R3106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schleiden;
+    /**
+     * <b>Amtsgericht Heinsberg</b>
+     *  * <p>
+     *  *  Code: R3107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Heinsberg;
+    /**
+     * <b>Grundbuchamt Heinsberg</b>
+     *  * <p>
+     *  *  Code: R3107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Heinsberg;
+    /**
+     * <b>Amtsgericht J&#252;lich</b>
+     *  * <p>
+     *  *  Code: R3108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Juelich;
+    /**
+     * <b>Grundbuchamt J&#252;lich</b>
+     *  * <p>
+     *  *  Code: R3108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Juelich;
+    /**
+     * <b>Amtsgericht Monschau</b>
+     *  * <p>
+     *  *  Code: R3109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Monschau;
+    /**
+     * <b>Grundbuchamt Monschau</b>
+     *  * <p>
+     *  *  Code: R3109G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Monschau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stolberg</b>
+     *  * <p>
+     *  *  Code: R3110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stolberg;
+    /**
+     * <b>Landgericht Bonn</b>
+     *  * <p>
+     *  *  Code: R3200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bonn;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bonn</b>
+     *  * <p>
+     *  *  Code: R3200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bonn;
+    /**
+     * <b>Amtsgericht Bonn</b>
+     *  * <p>
+     *  *  Code: R3201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bonn;
+    /**
+     * <b>Grundbuchamt Bonn</b>
+     *  * <p>
+     *  *  Code: R3201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bonn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eitorf</b>
+     *  * <p>
+     *  *  Code: R3202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eitorf;
+    /**
+     * <b>Amtsgericht Euskirchen</b>
+     *  * <p>
+     *  *  Code: R3203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Euskirchen;
+    /**
+     * <b>Grundbuchamt Euskirchen</b>
+     *  * <p>
+     *  *  Code: R3203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Euskirchen;
+    /**
+     * <b>Amtsgericht Euskirchen -Zentrale Mahnabteilung-</b>
+     *  * <p>
+     *  *  Code: R3203M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Euskirchen_Zentrale_Mahnabteilung;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Siegburg, Zwst. Hennef</b>
+     *  * <p>
+     *  *  Code: R3204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Siegburg_Zwst_Hennef;
+    /**
+     * <b>Amtsgericht K&#246;nigswinter</b>
+     *  * <p>
+     *  *  Code: R3205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koenigswinter;
+    /**
+     * <b>Grundbuchamt K&#246;nigswinter</b>
+     *  * <p>
+     *  *  Code: R3205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Koenigswinter;
+    /**
+     * <b>Amtsgericht Rheinbach</b>
+     *  * <p>
+     *  *  Code: R3207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rheinbach;
+    /**
+     * <b>Grundbuchamt Rheinbach</b>
+     *  * <p>
+     *  *  Code: R3207G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rheinbach;
+    /**
+     * <b>Amtsgericht Siegburg</b>
+     *  * <p>
+     *  *  Code: R3208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Siegburg;
+    /**
+     * <b>Grundbuchamt Siegburg</b>
+     *  * <p>
+     *  *  Code: R3208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Siegburg;
+    /**
+     * <b>Amtsgericht Waldbr&#246;l</b>
+     *  * <p>
+     *  *  Code: R3209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Waldbroel;
+    /**
+     * <b>Grundbuchamt Waldbr&#246;l</b>
+     *  * <p>
+     *  *  Code: R3209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Waldbroel;
+    /**
+     * <b>aufgel&#246;st-Landgericht Bonn</b>
+     *  * <p>
+     *  *  Code: R3299
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Landgericht_Bonn;
+    /**
+     * <b>Landgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Koeln;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Koeln;
+    /**
+     * <b>Amtsgericht Bergisch Gladbach</b>
+     *  * <p>
+     *  *  Code: R3301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bergisch_Gladbach;
+    /**
+     * <b>Grundbuchamt Bergisch Gladbach</b>
+     *  * <p>
+     *  *  Code: R3301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bergisch_Gladbach;
+    /**
+     * <b>Amtsgericht Bergheim</b>
+     *  * <p>
+     *  *  Code: R3302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bergheim;
+    /**
+     * <b>Grundbuchamt Bergheim</b>
+     *  * <p>
+     *  *  Code: R3302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bergheim;
+    /**
+     * <b>Amtsgericht Br&#252;hl</b>
+     *  * <p>
+     *  *  Code: R3303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bruehl;
+    /**
+     * <b>Grundbuchamt Br&#252;hl</b>
+     *  * <p>
+     *  *  Code: R3303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bruehl;
+    /**
+     * <b>Amtsgericht Gummersbach</b>
+     *  * <p>
+     *  *  Code: R3304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gummersbach;
+    /**
+     * <b>Grundbuchamt Gummersbach</b>
+     *  * <p>
+     *  *  Code: R3304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gummersbach;
+    /**
+     * <b>Amtsgericht Kerpen</b>
+     *  * <p>
+     *  *  Code: R3305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kerpen;
+    /**
+     * <b>Grundbuchamt Kerpen</b>
+     *  * <p>
+     *  *  Code: R3305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kerpen;
+    /**
+     * <b>Amtsgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koeln;
+    /**
+     * <b>Grundbuchamt K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R3306G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Koeln;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lindlar</b>
+     *  * <p>
+     *  *  Code: R3307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lindlar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wiehl</b>
+     *  * <p>
+     *  *  Code: R3308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wiehl;
+    /**
+     * <b>Amtsgericht Wipperf&#252;rth</b>
+     *  * <p>
+     *  *  Code: R3309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wipperfuerth;
+    /**
+     * <b>Grundbuchamt Wipperf&#252;rth</b>
+     *  * <p>
+     *  *  Code: R3309G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wipperfuerth;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Br&#252;hl, Zwst. Lechenich in Erftstadt</b>
+     *  * <p>
+     *  *  Code: R3310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bruehl_Zwst_Lechenich_in_Erftstadt;
+    /**
+     * <b>Amtsgericht Leverkusen</b>
+     *  * <p>
+     *  *  Code: R3311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Leverkusen;
+    /**
+     * <b>Grundbuchamt Leverkusen</b>
+     *  * <p>
+     *  *  Code: R3311G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Leverkusen;
+    /**
+     * <b>Amtsgericht Wermelskirchen</b>
+     *  * <p>
+     *  *  Code: R3312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wermelskirchen;
+    /**
+     * <b>Grundbuchamt Wermelskirchen</b>
+     *  * <p>
+     *  *  Code: R3312G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wermelskirchen;
+    /**
+     * <b>Justizvollzugsanstalt Siegburg</b>
+     *  * <p>
+     *  *  Code: R6109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Siegburg;
+    /**
+     * <b>Sozialgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R6205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Dortmund;
+    /**
+     * <b>Finanzgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R6254
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Duesseldorf;
+    /**
+     * <b>Arbeitsgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R6293
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Aachen;
+    /**
+     * <b>Sozialgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R6294
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Aachen;
+    /**
+     * <b>Verwaltungsgericht Aachen</b>
+     *  * <p>
+     *  *  Code: R6295
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Aachen;
+    /**
+     * <b>Arbeitsgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R6296
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Arnsberg;
+    /**
+     * <b>Arbeitsgericht Bocholt</b>
+     *  * <p>
+     *  *  Code: R6297
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bocholt;
+    /**
+     * <b>Sozialgericht Detmold</b>
+     *  * <p>
+     *  *  Code: R6298
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Detmold;
+    /**
+     * <b>Arbeitsgericht Detmold</b>
+     *  * <p>
+     *  *  Code: R6299
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Detmold;
+    /**
+     * <b>Landesarbeitsgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R6300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Duesseldorf;
+    /**
+     * <b>Verwaltungsgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R6301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Duesseldorf;
+    /**
+     * <b>Arbeitsgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R6302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Duesseldorf;
+    /**
+     * <b>Arbeitsgericht Duisburg</b>
+     *  * <p>
+     *  *  Code: R6303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Duisburg;
+    /**
+     * <b>Sozialgericht Duisburg</b>
+     *  * <p>
+     *  *  Code: R6304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Duisburg;
+    /**
+     * <b>Arbeitsgericht Essen</b>
+     *  * <p>
+     *  *  Code: R6305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Essen;
+    /**
+     * <b>Landessozialgericht f&#252;r das Land Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: R6306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_fuer_das_Land_Nordrhein_Westfalen;
+    /**
+     * <b>Arbeitsgericht Herford</b>
+     *  * <p>
+     *  *  Code: R6307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Herford;
+    /**
+     * <b>Arbeitsgericht Iserlohn</b>
+     *  * <p>
+     *  *  Code: R6308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Iserlohn;
+    /**
+     * <b>Verwaltungsgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Koeln;
+    /**
+     * <b>Sozialgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Koeln;
+    /**
+     * <b>Finanzgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Koeln;
+    /**
+     * <b>Arbeitsgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Koeln;
+    /**
+     * <b>Landesarbeitsgericht K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6313
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Koeln;
+    /**
+     * <b>Verwaltungsgericht Minden</b>
+     *  * <p>
+     *  *  Code: R6314
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Minden;
+    /**
+     * <b>Arbeitsgericht Minden</b>
+     *  * <p>
+     *  *  Code: R6315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Minden;
+    /**
+     * <b>Arbeitsgericht M&#246;nchengladbach</b>
+     *  * <p>
+     *  *  Code: R6316
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Moenchengladbach;
+    /**
+     * <b>Arbeitsgericht Bonn</b>
+     *  * <p>
+     *  *  Code: R6317
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bonn;
+    /**
+     * <b>Finanzgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R6318
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Muenster;
+    /**
+     * <b>Verwaltungsgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R6319
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Muenster;
+    /**
+     * <b>Arbeitsgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R6320
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Muenster;
+    /**
+     * <b>Oberverwaltungsgericht f&#252;r das Land Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: R6321
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_fuer_das_Land_Nordrhein_Westfalen;
+    /**
+     * <b>Verfassungsgerichtshof f&#252;r das Land Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: R6322
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_fuer_das_Land_Nordrhein_Westfalen;
+    /**
+     * <b>Sozialgericht M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R6323
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Muenster;
+    /**
+     * <b>Arbeitsgericht Oberhausen</b>
+     *  * <p>
+     *  *  Code: R6324
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Oberhausen;
+    /**
+     * <b>Arbeitsgericht Siegburg</b>
+     *  * <p>
+     *  *  Code: R6325
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Siegburg;
+    /**
+     * <b>Arbeitsgericht Siegen</b>
+     *  * <p>
+     *  *  Code: R6326
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Siegen;
+    /**
+     * <b>Arbeitsgericht Solingen</b>
+     *  * <p>
+     *  *  Code: R6327
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Solingen;
+    /**
+     * <b>Arbeitsgericht Wesel</b>
+     *  * <p>
+     *  *  Code: R6328
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wesel;
+    /**
+     * <b>Arbeitsgericht Wuppertal</b>
+     *  * <p>
+     *  *  Code: R6329
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Wuppertal;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R6568
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Duesseldorf;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Hamm</b>
+     *  * <p>
+     *  *  Code: R6578
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Hamm;
+    /**
+     * <b>Justizvollzugsanstalt M&#252;nster</b>
+     *  * <p>
+     *  *  Code: R6636
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Muenster;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R6657
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koeln;
+    /**
+     * <b>Anwaltsgerichtshof des Landes Nordrhein-Westfalen</b>
+     *  * <p>
+     *  *  Code: R6675
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_des_Landes_Nordrhein_Westfalen;
+    /**
+     * <b>Arbeitsgericht Bielefeld</b>
+     *  * <p>
+     *  *  Code: R6725
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bielefeld;
+    /**
+     * <b>Arbeitsgericht Bochum</b>
+     *  * <p>
+     *  *  Code: R6726
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bochum;
+    /**
+     * <b>Arbeitsgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R6727
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Dortmund;
+    /**
+     * <b>Arbeitsgericht Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R6728
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Gelsenkirchen;
+    /**
+     * <b>Arbeitsgericht Hagen</b>
+     *  * <p>
+     *  *  Code: R6729
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hagen;
+    /**
+     * <b>Arbeitsgericht Hamm</b>
+     *  * <p>
+     *  *  Code: R6730
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Hamm;
+    /**
+     * <b>Arbeitsgericht Herne</b>
+     *  * <p>
+     *  *  Code: R6731
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Herne;
+    /**
+     * <b>Arbeitsgericht Krefeld</b>
+     *  * <p>
+     *  *  Code: R6732
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Krefeld;
+    /**
+     * <b>Arbeitsgericht Paderborn</b>
+     *  * <p>
+     *  *  Code: R6733
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Paderborn;
+    /**
+     * <b>Arbeitsgericht Rheine</b>
+     *  * <p>
+     *  *  Code: R6734
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Rheine;
+    /**
+     * <b>Landesarbeitsgericht Hamm</b>
+     *  * <p>
+     *  *  Code: R6757
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Hamm;
+    /**
+     * <b>Justizvollzugsanstalt Attendorn</b>
+     *  * <p>
+     *  *  Code: R6767
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Attendorn;
+    /**
+     * <b>Justizvollzugskrankenhaus NRW</b>
+     *  * <p>
+     *  *  Code: R6781
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugskrankenhaus_NRW;
+    /**
+     * <b>aufgel&#246;st-Sozialgericht Dortmund</b>
+     *  * <p>
+     *  *  Code: R6802
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Sozialgericht_Dortmund;
+    /**
+     * <b>Sozialgericht D&#252;sseldorf Der Pr&#228;sident o.V.i.A. pers.</b>
+     *  * <p>
+     *  *  Code: R6803
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Duesseldorf_Der_Praesident_o_V_i_A_pers;
+    /**
+     * <b>Sozialgericht Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R6804
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Gelsenkirchen;
+    /**
+     * <b>Verwaltungsgericht Arnsberg</b>
+     *  * <p>
+     *  *  Code: R6835
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Arnsberg;
+    /**
+     * <b>Verwaltungsgericht Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R6836
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Gelsenkirchen;
+    /**
+     * <b>Justizvollzugsanstalt Willich II</b>
+     *  * <p>
+     *  *  Code: R6913
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Willich_II;
+    /**
+     * <b>Justizvollzugsanstalt Bielefeld-Senne</b>
+     *  * <p>
+     *  *  Code: R7093
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bielefeld_Senne;
+    /**
+     * <b>Justizvollzugsanstalt Bochum-Langendreer</b>
+     *  * <p>
+     *  *  Code: R7156
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bochum_Langendreer;
+    /**
+     * <b>Jugendarrestanstalt Remscheid</b>
+     *  * <p>
+     *  *  Code: R7725
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Remscheid;
+    /**
+     * <b>Jugendarrestanstalt Bottrop</b>
+     *  * <p>
+     *  *  Code: R7728
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Bottrop;
+    /**
+     * <b>Justizvollzugsanstalt Bielefeld-Brackwede</b>
+     *  * <p>
+     *  *  Code: R7738
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bielefeld_Brackwede;
+    /**
+     * <b>Justizvollzugsanstalt Hamm</b>
+     *  * <p>
+     *  *  Code: R7763
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hamm;
+    /**
+     * <b>Jugendarrestanstalt Wetter</b>
+     *  * <p>
+     *  *  Code: R7787
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Wetter;
+    /**
+     * <b>Justizvollzugsanstalt Duisburg-Hamborn</b>
+     *  * <p>
+     *  *  Code: R8080
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Duisburg_Hamborn;
+    /**
+     * <b>Justizvollzugsanstalt K&#246;ln</b>
+     *  * <p>
+     *  *  Code: R8088
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Koeln;
+    /**
+     * <b>Justizvollzugsanstalt Rheinbach</b>
+     *  * <p>
+     *  *  Code: R8367
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rheinbach;
+    /**
+     * <b>Justizvollzugsanstalt Euskirchen</b>
+     *  * <p>
+     *  *  Code: R8371
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Euskirchen;
+    /**
+     * <b>Sozialtherapeutische Anstalt Bochum</b>
+     *  * <p>
+     *  *  Code: R8998
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialtherapeutische_Anstalt_Bochum;
+    /**
+     * <b>Justizvollzugsanstalt D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R9071
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Duesseldorf;
+    /**
+     * <b>Justizvollzugsanstalt Moers-Kapellen</b>
+     *  * <p>
+     *  *  Code: R9090
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Moers_Kapellen;
+    /**
+     * <b>Justizvollzugsanstalt Aachen</b>
+     *  * <p>
+     *  *  Code: R9099
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Aachen;
+    /**
+     * <b>Justizvollzugsanstalt Werl</b>
+     *  * <p>
+     *  *  Code: R9162
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Werl;
+    /**
+     * <b>Justizvollzugsanstalt Hagen</b>
+     *  * <p>
+     *  *  Code: R9165
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hagen;
+    /**
+     * <b>Justizvollzugsanstalt Bochum</b>
+     *  * <p>
+     *  *  Code: R9167
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bochum;
+    /**
+     * <b>Justizvollzugsanstalt Castrop-Rauxel</b>
+     *  * <p>
+     *  *  Code: R9169
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Castrop_Rauxel;
+    /**
+     * <b>Justizvollzugsanstalt Detmold</b>
+     *  * <p>
+     *  *  Code: R9170
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Detmold;
+    /**
+     * <b>Justizvollzugsanstalt Dortmund</b>
+     *  * <p>
+     *  *  Code: R9171
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Dortmund;
+    /**
+     * <b>Justizvollzugsanstalt Essen</b>
+     *  * <p>
+     *  *  Code: R9172
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Essen;
+    /**
+     * <b>Justizvollzugsanstalt Geldern</b>
+     *  * <p>
+     *  *  Code: R9173
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Geldern;
+    /**
+     * <b>Justizvollzugsanstalt Gelsenkirchen</b>
+     *  * <p>
+     *  *  Code: R9174
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Gelsenkirchen;
+    /**
+     * <b>Justizvollzugsanstalt Heinsberg</b>
+     *  * <p>
+     *  *  Code: R9175
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Heinsberg;
+    /**
+     * <b>Justizvollzugsanstalt Herford</b>
+     *  * <p>
+     *  *  Code: R9176
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Herford;
+    /**
+     * <b>Justizvollzugsanstalt H&#246;velhof</b>
+     *  * <p>
+     *  *  Code: R9177
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hoevelhof;
+    /**
+     * <b>Justizvollzugsanstalt Iserlohn</b>
+     *  * <p>
+     *  *  Code: R9178
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Iserlohn;
+    /**
+     * <b>Justizvollzugsanstalt Kleve</b>
+     *  * <p>
+     *  *  Code: R9179
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kleve;
+    /**
+     * <b>Justizvollzugsanstalt Remscheid</b>
+     *  * <p>
+     *  *  Code: R9180
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Remscheid;
+    /**
+     * <b>Justizvollzugsanstalt Schwerte</b>
+     *  * <p>
+     *  *  Code: R9181
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Schwerte;
+    /**
+     * <b>Justizvollzugsanstalt Wuppertal-Vohwinkel</b>
+     *  * <p>
+     *  *  Code: R9182
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wuppertal_Vohwinkel;
+    /**
+     * <b>Justizvollzugsanstalt Willich I</b>
+     *  * <p>
+     *  *  Code: R9288
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Willich_I;
+    /**
+     * <b>Justizvollzugsanstalt Wuppertal-Ronsdorf</b>
+     *  * <p>
+     *  *  Code: R9483
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wuppertal_Ronsdorf;
+    /**
+     * <b>Jugendarrestanstalt D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R9565
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Duesseldorf;
+    /**
+     * <b>Test-Amtsgericht D&#252;sseldorf</b>
+     *  * <p>
+     *  *  Code: R9999
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Test_Amtsgericht_Duesseldorf;
+    /**
+     * <b>Oberlandesgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Koblenz;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Koblenz;
+    /**
+     * <b>Landgericht Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T2100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bad_Kreuznach;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T2100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Bad_Kreuznach;
+    /**
+     * <b>Amtsgericht Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T2101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Kreuznach;
+    /**
+     * <b>Grundbuchamt Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T2101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Kreuznach;
+    /**
+     * <b>Amtsgericht Bad Kreuznach, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2101I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Kreuznach_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T2101V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Bad_Kreuznach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Birkenfeld</b>
+     *  * <p>
+     *  *  Code: T2102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Birkenfeld;
+    /**
+     * <b>Amtsgericht Idar-Oberstein</b>
+     *  * <p>
+     *  *  Code: T2103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Idar_Oberstein;
+    /**
+     * <b>Grundbuchamt Idar-Oberstein</b>
+     *  * <p>
+     *  *  Code: T2103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Idar_Oberstein;
+    /**
+     * <b>Amtsgericht Idar-Oberstein, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2103I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Idar_Oberstein_Insolvenzgericht;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kirn</b>
+     *  * <p>
+     *  *  Code: T2104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kirn;
+    /**
+     * <b>Amtsgericht Simmern</b>
+     *  * <p>
+     *  *  Code: T2105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Simmern;
+    /**
+     * <b>Grundbuchamt Simmern/Hunsr&#252;ck</b>
+     *  * <p>
+     *  *  Code: T2105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Simmern_Hunsrueck;
+    /**
+     * <b>Amtsgericht Bad Sobernheim</b>
+     *  * <p>
+     *  *  Code: T2106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Sobernheim;
+    /**
+     * <b>Grundbuchamt Bad Sobernheim</b>
+     *  * <p>
+     *  *  Code: T2106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Sobernheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Baumholder</b>
+     *  * <p>
+     *  *  Code: T2107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Baumholder;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kirchberg</b>
+     *  * <p>
+     *  *  Code: T2108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kirchberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Meisenheim</b>
+     *  * <p>
+     *  *  Code: T2109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Meisenheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stromberg</b>
+     *  * <p>
+     *  *  Code: T2110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stromberg;
+    /**
+     * <b>Landgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Koblenz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Koblenz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Neuenahr-Ahrweiler, Zwst. Adenau</b>
+     *  * <p>
+     *  *  Code: T2201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Neuenahr_Ahrweiler_Zwst_Adenau;
+    /**
+     * <b>Amtsgericht Altenkirchen</b>
+     *  * <p>
+     *  *  Code: T2202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Altenkirchen;
+    /**
+     * <b>Grundbuchamt Altenkirchen (Westerwald)</b>
+     *  * <p>
+     *  *  Code: T2202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Altenkirchen_Westerwald;
+    /**
+     * <b>Amtsgericht Andernach</b>
+     *  * <p>
+     *  *  Code: T2203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Andernach;
+    /**
+     * <b>Grundbuchamt Andernach</b>
+     *  * <p>
+     *  *  Code: T2203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Andernach;
+    /**
+     * <b>Amtsgericht Bad Neuenahr-Ahrweiler</b>
+     *  * <p>
+     *  *  Code: T2204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Neuenahr_Ahrweiler;
+    /**
+     * <b>Grundbuchamt Bad Neuenahr-Ahrweiler</b>
+     *  * <p>
+     *  *  Code: T2204G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Neuenahr_Ahrweiler;
+    /**
+     * <b>Amtsgericht Bad Neuenahr-Ahrweiler, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2204I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Neuenahr_Ahrweiler_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Betzdorf</b>
+     *  * <p>
+     *  *  Code: T2205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Betzdorf;
+    /**
+     * <b>Grundbuchamt Betzdorf</b>
+     *  * <p>
+     *  *  Code: T2205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Betzdorf;
+    /**
+     * <b>Amtsgericht Betzdorf, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2205I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Betzdorf_Insolvenzgericht;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Boppard</b>
+     *  * <p>
+     *  *  Code: T2206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Boppard;
+    /**
+     * <b>Amtsgericht Cochem</b>
+     *  * <p>
+     *  *  Code: T2207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cochem;
+    /**
+     * <b>Grundbuchamt Cochem</b>
+     *  * <p>
+     *  *  Code: T2207G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Cochem;
+    /**
+     * <b>Amtsgericht Cochem, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2207I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Cochem_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Diez</b>
+     *  * <p>
+     *  *  Code: T2208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Diez;
+    /**
+     * <b>Grundbuchamt Diez</b>
+     *  * <p>
+     *  *  Code: T2208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Diez;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hachenburg</b>
+     *  * <p>
+     *  *  Code: T2209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hachenburg;
+    /**
+     * <b>Amtsgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koblenz;
+    /**
+     * <b>Grundbuchamt Koblenz</b>
+     *  * <p>
+     *  *  Code: T2210G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Koblenz;
+    /**
+     * <b>Amtsgericht Koblenz, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2210I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koblenz_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T2210V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Koblenz;
+    /**
+     * <b>Amtsgericht Lahnstein</b>
+     *  * <p>
+     *  *  Code: T2211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lahnstein;
+    /**
+     * <b>Grundbuchamt Lahnstein</b>
+     *  * <p>
+     *  *  Code: T2211G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Lahnstein;
+    /**
+     * <b>Amtsgericht Linz am Rhein</b>
+     *  * <p>
+     *  *  Code: T2212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Linz_am_Rhein;
+    /**
+     * <b>Grundbuchamt Linz am Rhein</b>
+     *  * <p>
+     *  *  Code: T2212G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Linz_am_Rhein;
+    /**
+     * <b>Amtsgericht Mayen</b>
+     *  * <p>
+     *  *  Code: T2213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mayen;
+    /**
+     * <b>Grundbuchamt Mayen</b>
+     *  * <p>
+     *  *  Code: T2213G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Mayen;
+    /**
+     * <b>Amtsgericht Mayen, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2213I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mayen_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Mayen, Gemeinsames Mahngericht der L&#228;nder Rheinland-Pfalz und Saarland</b>
+     *  * <p>
+     *  *  Code: T2213M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mayen_Gemeinsames_Mahngericht_der_Laender_Rheinland_Pfalz_und_Saarland;
+    /**
+     * <b>Amtsgericht Montabaur</b>
+     *  * <p>
+     *  *  Code: T2214
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Montabaur;
+    /**
+     * <b>Grundbuchamt Montabaur</b>
+     *  * <p>
+     *  *  Code: T2214G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Montabaur;
+    /**
+     * <b>Amtsgericht Montabaur, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2214I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Montabaur_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Montabaur</b>
+     *  * <p>
+     *  *  Code: T2214V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Montabaur;
+    /**
+     * <b>Amtsgericht Neuwied</b>
+     *  * <p>
+     *  *  Code: T2215
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuwied;
+    /**
+     * <b>Grundbuchamt Neuwied</b>
+     *  * <p>
+     *  *  Code: T2215G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neuwied;
+    /**
+     * <b>Amtsgericht Neuwied, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2215I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neuwied_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht St. Goar</b>
+     *  * <p>
+     *  *  Code: T2216
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Goar;
+    /**
+     * <b>Grundbuchamt Sankt Goar</b>
+     *  * <p>
+     *  *  Code: T2216G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sankt_Goar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht St. Goarshausen</b>
+     *  * <p>
+     *  *  Code: T2217
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_St_Goarshausen;
+    /**
+     * <b>Amtsgericht Sinzig</b>
+     *  * <p>
+     *  *  Code: T2218
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sinzig;
+    /**
+     * <b>Grundbuchamt Sinzig</b>
+     *  * <p>
+     *  *  Code: T2218G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sinzig;
+    /**
+     * <b>Amtsgericht Westerburg</b>
+     *  * <p>
+     *  *  Code: T2219
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Westerburg;
+    /**
+     * <b>Grundbuchamt Westerburg</b>
+     *  * <p>
+     *  *  Code: T2219G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Westerburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Asbach</b>
+     *  * <p>
+     *  *  Code: T2220
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Asbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Ems</b>
+     *  * <p>
+     *  *  Code: T2221
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Ems;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Daaden</b>
+     *  * <p>
+     *  *  Code: T2222
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Daaden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dierdorf</b>
+     *  * <p>
+     *  *  Code: T2223
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dierdorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht H&#246;hr-Grenzhausen</b>
+     *  * <p>
+     *  *  Code: T2224
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hoehr_Grenzhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kastellaun</b>
+     *  * <p>
+     *  *  Code: T2225
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kastellaun;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kirchen</b>
+     *  * <p>
+     *  *  Code: T2226
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Marienberg</b>
+     *  * <p>
+     *  *  Code: T2227
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Marienberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht M&#252;nstermaifeld</b>
+     *  * <p>
+     *  *  Code: T2228
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Muenstermaifeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Nassau</b>
+     *  * <p>
+     *  *  Code: T2229
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Nassau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Nast&#228;tten</b>
+     *  * <p>
+     *  *  Code: T2230
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Nastaetten;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rennerod</b>
+     *  * <p>
+     *  *  Code: T2231
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rennerod;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Selters</b>
+     *  * <p>
+     *  *  Code: T2232
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Selters;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Traben-Trarbach</b>
+     *  * <p>
+     *  *  Code: T2233
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Traben_Trarbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wallmerod</b>
+     *  * <p>
+     *  *  Code: T2234
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wallmerod;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wissen</b>
+     *  * <p>
+     *  *  Code: T2235
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wissen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Zell</b>
+     *  * <p>
+     *  *  Code: T2236
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Zell;
+    /**
+     * <b>Landgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T2300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Mainz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T2300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Mainz;
+    /**
+     * <b>Amtsgericht Alzey</b>
+     *  * <p>
+     *  *  Code: T2301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Alzey;
+    /**
+     * <b>Grundbuchamt Alzey</b>
+     *  * <p>
+     *  *  Code: T2301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Alzey;
+    /**
+     * <b>Amtsgericht Alzey, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2301I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Alzey_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Bingen</b>
+     *  * <p>
+     *  *  Code: T2302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bingen;
+    /**
+     * <b>Grundbuchamt Bingen am Rhein</b>
+     *  * <p>
+     *  *  Code: T2302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bingen_am_Rhein;
+    /**
+     * <b>Amtsgericht Bingen am Rhein, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2302I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bingen_am_Rhein_Insolvenzgericht;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bingen, Zwst. Ingelheim am Rhein</b>
+     *  * <p>
+     *  *  Code: T2303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bingen_Zwst_Ingelheim_am_Rhein;
+    /**
+     * <b>Amtsgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T2304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mainz;
+    /**
+     * <b>Grundbuchamt Mainz</b>
+     *  * <p>
+     *  *  Code: T2304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Mainz;
+    /**
+     * <b>Amtsgericht Mainz, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2304I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Mainz_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T2304V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Mainz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Oppenheim</b>
+     *  * <p>
+     *  *  Code: T2305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Oppenheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht W&#246;llstein</b>
+     *  * <p>
+     *  *  Code: T2306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Woellstein;
+    /**
+     * <b>Amtsgericht Worms</b>
+     *  * <p>
+     *  *  Code: T2307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Worms;
+    /**
+     * <b>Grundbuchamt Worms</b>
+     *  * <p>
+     *  *  Code: T2307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Worms;
+    /**
+     * <b>Amtsgericht Worms, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2307I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Worms_Insolvenzgericht;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Mainz, Zwst. Worms</b>
+     *  * <p>
+     *  *  Code: T2307S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Mainz_Zwst_Worms;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht W&#246;rrstadt</b>
+     *  * <p>
+     *  *  Code: T2308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Woerrstadt;
+    /**
+     * <b>Landgericht Trier</b>
+     *  * <p>
+     *  *  Code: T2400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Trier;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Trier</b>
+     *  * <p>
+     *  *  Code: T2400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Trier;
+    /**
+     * <b>Amtsgericht Bernkastel-Kues</b>
+     *  * <p>
+     *  *  Code: T2401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bernkastel_Kues;
+    /**
+     * <b>Grundbuchamt Bernkastel-Kues</b>
+     *  * <p>
+     *  *  Code: T2401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bernkastel_Kues;
+    /**
+     * <b>Amtsgericht Bitburg</b>
+     *  * <p>
+     *  *  Code: T2402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bitburg;
+    /**
+     * <b>Grundbuchamt Bitburg</b>
+     *  * <p>
+     *  *  Code: T2402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bitburg;
+    /**
+     * <b>Amtsgericht Bitburg, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2402I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bitburg_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Daun</b>
+     *  * <p>
+     *  *  Code: T2403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Daun;
+    /**
+     * <b>Grundbuchamt Daun</b>
+     *  * <p>
+     *  *  Code: T2403G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Daun;
+    /**
+     * <b>Amtsgericht Hermeskeil</b>
+     *  * <p>
+     *  *  Code: T2404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hermeskeil;
+    /**
+     * <b>Grundbuchamt Hermeskeil</b>
+     *  * <p>
+     *  *  Code: T2404G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hermeskeil;
+    /**
+     * <b>Amtsgericht Pr&#252;m</b>
+     *  * <p>
+     *  *  Code: T2405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pruem;
+    /**
+     * <b>Grundbuchamt Pr&#252;m</b>
+     *  * <p>
+     *  *  Code: T2405G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pruem;
+    /**
+     * <b>Amtsgericht Saarburg</b>
+     *  * <p>
+     *  *  Code: T2406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarburg;
+    /**
+     * <b>Grundbuchamt Saarburg</b>
+     *  * <p>
+     *  *  Code: T2406G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Saarburg;
+    /**
+     * <b>Amtsgericht Trier</b>
+     *  * <p>
+     *  *  Code: T2407
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Trier;
+    /**
+     * <b>Grundbuchamt Trier</b>
+     *  * <p>
+     *  *  Code: T2407G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Trier;
+    /**
+     * <b>Amtsgericht Trier, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2407I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Trier_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Wittlich</b>
+     *  * <p>
+     *  *  Code: T2408
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wittlich;
+    /**
+     * <b>Grundbuchamt Wittlich</b>
+     *  * <p>
+     *  *  Code: T2408G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Wittlich;
+    /**
+     * <b>Amtsgericht Wittlich, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T2408I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wittlich_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Wittlich</b>
+     *  * <p>
+     *  *  Code: T2408V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Wittlich;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hillesheim</b>
+     *  * <p>
+     *  *  Code: T2409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hillesheim;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neuerburg</b>
+     *  * <p>
+     *  *  Code: T2410
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neuerburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neumagen</b>
+     *  * <p>
+     *  *  Code: T2411
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neumagen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rhaunen</b>
+     *  * <p>
+     *  *  Code: T2412
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rhaunen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Waxweiler</b>
+     *  * <p>
+     *  *  Code: T2413
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Waxweiler;
+    /**
+     * <b>Oberlandesgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Zweibruecken;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Zweibruecken;
+    /**
+     * <b>Landgericht Frankenthal</b>
+     *  * <p>
+     *  *  Code: T3100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Frankenthal;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Frankenthal (Pfalz)</b>
+     *  * <p>
+     *  *  Code: T3100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz;
+    /**
+     * <b>Amtsgericht Bad D&#252;rkheim</b>
+     *  * <p>
+     *  *  Code: T3101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Duerkheim;
+    /**
+     * <b>Grundbuchamt Bad D&#252;rkheim</b>
+     *  * <p>
+     *  *  Code: T3101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Duerkheim;
+    /**
+     * <b>Amtsgericht Frankenthal</b>
+     *  * <p>
+     *  *  Code: T3102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Frankenthal;
+    /**
+     * <b>Grundbuchamt Frankenthal (Pfalz)</b>
+     *  * <p>
+     *  *  Code: T3102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Frankenthal_Pfalz;
+    /**
+     * <b>Amtsgericht Gr&#252;nstadt</b>
+     *  * <p>
+     *  *  Code: T3103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gruenstadt;
+    /**
+     * <b>Grundbuchamt Gr&#252;nstadt</b>
+     *  * <p>
+     *  *  Code: T3103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gruenstadt;
+    /**
+     * <b>Amtsgericht Ludwigshafen a.Rhein</b>
+     *  * <p>
+     *  *  Code: T3104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ludwigshafen_a_Rhein;
+    /**
+     * <b>Grundbuchamt Ludwigshafen am Rhein</b>
+     *  * <p>
+     *  *  Code: T3104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ludwigshafen_am_Rhein;
+    /**
+     * <b>Amtsgericht Ludwigshafen am Rhein, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3104I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ludwigshafen_am_Rhein_Insolvenzgericht;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Frankenthal (Pfalz), Zwst. Ludwigshafen/Rhein</b>
+     *  * <p>
+     *  *  Code: T3104S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz_Zwst_Ludwigshafen_Rhein;
+    /**
+     * <b>Registergericht Amtsgericht Ludwigshafen am Rhein</b>
+     *  * <p>
+     *  *  Code: T3104V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Ludwigshafen_am_Rhein;
+    /**
+     * <b>Amtsgericht Neustadt (an der Weinstra&#223;e)</b>
+     *  * <p>
+     *  *  Code: T3105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neustadt_an_der_Weinstrasse;
+    /**
+     * <b>Grundbuchamt Neustadt an der Weinstra&#223;e</b>
+     *  * <p>
+     *  *  Code: T3105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neustadt_an_der_Weinstrasse;
+    /**
+     * <b>Amtsgericht Neustadt an der Weinstra&#223;e, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3105I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neustadt_an_der_Weinstrasse_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Speyer</b>
+     *  * <p>
+     *  *  Code: T3106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Speyer;
+    /**
+     * <b>Grundbuchamt Speyer</b>
+     *  * <p>
+     *  *  Code: T3106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Speyer;
+    /**
+     * <b>Landgericht Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T3200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Kaiserslautern;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T3200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Kaiserslautern;
+    /**
+     * <b>Amtsgericht Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T3201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kaiserslautern;
+    /**
+     * <b>Grundbuchamt Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T3201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kaiserslautern;
+    /**
+     * <b>Amtsgericht Kaiserslautern, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3201I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kaiserslautern_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Kaiserslautern, Zentrales Vollstreckungsgericht Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T3201R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kaiserslautern_Zentrales_Vollstreckungsgericht_Rheinland_Pfalz;
+    /**
+     * <b>Registergericht Amtsgericht Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T3201V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Kaiserslautern;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kirchheimbolanden</b>
+     *  * <p>
+     *  *  Code: T3202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kirchheimbolanden;
+    /**
+     * <b>Amtsgericht Kusel</b>
+     *  * <p>
+     *  *  Code: T3203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kusel;
+    /**
+     * <b>Grundbuchamt Kusel</b>
+     *  * <p>
+     *  *  Code: T3203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kusel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lauterecken</b>
+     *  * <p>
+     *  *  Code: T3204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lauterecken;
+    /**
+     * <b>Amtsgericht Rockenhausen</b>
+     *  * <p>
+     *  *  Code: T3205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rockenhausen;
+    /**
+     * <b>Grundbuchamt Rockenhausen</b>
+     *  * <p>
+     *  *  Code: T3205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rockenhausen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Obermoschel</b>
+     *  * <p>
+     *  *  Code: T3206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Obermoschel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Winnweiler</b>
+     *  * <p>
+     *  *  Code: T3207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Winnweiler;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wolfstein</b>
+     *  * <p>
+     *  *  Code: T3208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wolfstein;
+    /**
+     * <b>Landgericht Landau (Pfalz)</b>
+     *  * <p>
+     *  *  Code: T3300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Landau_Pfalz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Landau in der Pfalz</b>
+     *  * <p>
+     *  *  Code: T3300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Landau_in_der_Pfalz;
+    /**
+     * <b>Amtsgericht Landau Zweigstelle Bad Bergzabern</b>
+     *  * <p>
+     *  *  Code: T3301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landau_Zweigstelle_Bad_Bergzabern;
+    /**
+     * <b>Grundbuchamt Bad Bergzabern</b>
+     *  * <p>
+     *  *  Code: T3301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Bergzabern;
+    /**
+     * <b>Amtsgericht Germersheim</b>
+     *  * <p>
+     *  *  Code: T3302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Germersheim;
+    /**
+     * <b>Grundbuchamt Germersheim</b>
+     *  * <p>
+     *  *  Code: T3302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Germersheim;
+    /**
+     * <b>Amtsgericht Kandel</b>
+     *  * <p>
+     *  *  Code: T3303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kandel;
+    /**
+     * <b>Grundbuchamt Kandel</b>
+     *  * <p>
+     *  *  Code: T3303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kandel;
+    /**
+     * <b>Amtsgericht Landau (Pfalz)</b>
+     *  * <p>
+     *  *  Code: T3304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landau_Pfalz;
+    /**
+     * <b>Grundbuchamt Landau in der Pfalz</b>
+     *  * <p>
+     *  *  Code: T3304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Landau_in_der_Pfalz;
+    /**
+     * <b>Amtsgericht Landau in der Pfalz, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3304I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landau_in_der_Pfalz_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Landau in der Pfalz</b>
+     *  * <p>
+     *  *  Code: T3304V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Landau_in_der_Pfalz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Annweiler</b>
+     *  * <p>
+     *  *  Code: T3305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Annweiler;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Edenkoben</b>
+     *  * <p>
+     *  *  Code: T3306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Edenkoben;
+    /**
+     * <b>Landgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Zweibruecken;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Zweibruecken;
+    /**
+     * <b>Amtsgericht Landstuhl</b>
+     *  * <p>
+     *  *  Code: T3401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Landstuhl;
+    /**
+     * <b>Grundbuchamt Landstuhl</b>
+     *  * <p>
+     *  *  Code: T3401G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Landstuhl;
+    /**
+     * <b>Amtsgericht Pirmasens</b>
+     *  * <p>
+     *  *  Code: T3402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pirmasens;
+    /**
+     * <b>Grundbuchamt Pirmasens</b>
+     *  * <p>
+     *  *  Code: T3402G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pirmasens;
+    /**
+     * <b>Amtsgericht Pirmasens, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3402I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pirmasens_Insolvenzgericht;
+    /**
+     * <b>Amtsgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zweibruecken;
+    /**
+     * <b>Grundbuchamt Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3403G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zweibruecken;
+    /**
+     * <b>Amtsgericht Zweibr&#252;cken, Insolvenzgericht</b>
+     *  * <p>
+     *  *  Code: T3403I
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zweibruecken_Insolvenzgericht;
+    /**
+     * <b>Registergericht Amtsgericht Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T3403V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Zweibruecken;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dahn</b>
+     *  * <p>
+     *  *  Code: T3404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dahn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Waldfischbach</b>
+     *  * <p>
+     *  *  Code: T3405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Waldfischbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Waldmohr</b>
+     *  * <p>
+     *  *  Code: T3406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Waldmohr;
+    /**
+     * <b>Arbeitsgericht Kaiserslautern</b>
+     *  * <p>
+     *  *  Code: T6072
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Kaiserslautern;
+    /**
+     * <b>Sozialgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T6073
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Koblenz;
+    /**
+     * <b>Oberverwaltungsgericht Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6074
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_Rheinland_Pfalz;
+    /**
+     * <b>Verfassungsgerichtshof Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6075
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_Rheinland_Pfalz;
+    /**
+     * <b>Verwaltungsgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T6076
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Koblenz;
+    /**
+     * <b>Arbeitsgericht Koblenz</b>
+     *  * <p>
+     *  *  Code: T6077
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Koblenz;
+    /**
+     * <b>Arbeitsgericht Ludwigshafen</b>
+     *  * <p>
+     *  *  Code: T6078
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Ludwigshafen;
+    /**
+     * <b>Landessozialgericht Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6079
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Rheinland_Pfalz;
+    /**
+     * <b>Arbeitsgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T6080
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Mainz;
+    /**
+     * <b>Landesarbeitsgericht Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6081
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Rheinland_Pfalz;
+    /**
+     * <b>Verwaltungsgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T6082
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Mainz;
+    /**
+     * <b>Verwaltungsgericht Neustadt an der Weinstra&#223;e</b>
+     *  * <p>
+     *  *  Code: T6083
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Neustadt_an_der_Weinstrasse;
+    /**
+     * <b>Finanzgericht Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6084
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_Rheinland_Pfalz;
+    /**
+     * <b>Verwaltungsgericht Trier</b>
+     *  * <p>
+     *  *  Code: T6085
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Trier;
+    /**
+     * <b>Sozialgericht Trier</b>
+     *  * <p>
+     *  *  Code: T6086
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Trier;
+    /**
+     * <b>Arbeitsgericht Trier</b>
+     *  * <p>
+     *  *  Code: T6121
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Trier;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer Koblenz</b>
+     *  * <p>
+     *  *  Code: T6176
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koblenz;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Pf&#228;lzischen Rechtsanwaltskammer</b>
+     *  * <p>
+     *  *  Code: T6182
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Pfaelzischen_Rechtsanwaltskammer;
+    /**
+     * <b>Anwaltsgerichtshof Rheinland-Pfalz</b>
+     *  * <p>
+     *  *  Code: T6183
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_Rheinland_Pfalz;
+    /**
+     * <b>Sozialgericht Mainz</b>
+     *  * <p>
+     *  *  Code: T6221
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Mainz;
+    /**
+     * <b>Sozialgericht Speyer</b>
+     *  * <p>
+     *  *  Code: T6252
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Speyer;
+    /**
+     * <b>Jugendstrafanstalt Schifferstadt</b>
+     *  * <p>
+     *  *  Code: T6311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendstrafanstalt_Schifferstadt;
+    /**
+     * <b>Jugendarrestanstalt Worms</b>
+     *  * <p>
+     *  *  Code: T6347
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Worms;
+    /**
+     * <b>Arbeitsgericht Kaiserslautern - Ausw&#228;rtige Kammern Pirmasens</b>
+     *  * <p>
+     *  *  Code: T6840
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Kaiserslautern_Auswaertige_Kammern_Pirmasens;
+    /**
+     * <b>Arbeitsgericht Ludwigshafen am Rhein - Ausw&#228;rtige Kammern Landau i. d. Pfalz</b>
+     *  * <p>
+     *  *  Code: T6841
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Ludwigshafen_am_Rhein_Auswaertige_Kammern_Landau_i_d_Pfalz;
+    /**
+     * <b>Arbeitsgericht Mainz - Ausw&#228;rtige Kammern Bad Kreuznach</b>
+     *  * <p>
+     *  *  Code: T6842
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Mainz_Auswaertige_Kammern_Bad_Kreuznach;
+    /**
+     * <b>Justizvollzugsanstalt Frankenthal</b>
+     *  * <p>
+     *  *  Code: T7894
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Frankenthal;
+    /**
+     * <b>Justizvollzugsanstalt Koblenz</b>
+     *  * <p>
+     *  *  Code: T7895
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Koblenz;
+    /**
+     * <b>Justizvollzugsanstalt Wittlich</b>
+     *  * <p>
+     *  *  Code: T7913
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Wittlich;
+    /**
+     * <b>Justizvollzugsanstalt Diez</b>
+     *  * <p>
+     *  *  Code: T7929
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Diez;
+    /**
+     * <b>Justizvollzugsanstalt Trier</b>
+     *  * <p>
+     *  *  Code: T7945
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Trier;
+    /**
+     * <b>Justizvollzugsanstalt Ludwigshafen -Sozialtherapeutische Anstalt-</b>
+     *  * <p>
+     *  *  Code: T7946
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ludwigshafen_Sozialtherapeutische_Anstalt;
+    /**
+     * <b>Justizvollzugsanstalt Rohrbach</b>
+     *  * <p>
+     *  *  Code: T7947
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Rohrbach;
+    /**
+     * <b>Justizvollzugsanstalt Zweibr&#252;cken</b>
+     *  * <p>
+     *  *  Code: T7948
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Zweibruecken;
+    /**
+     * <b>Jugendstrafanstalt Wittlich</b>
+     *  * <p>
+     *  *  Code: T7966
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendstrafanstalt_Wittlich;
+    /**
+     * <b>Oberlandesgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Dresden;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Dresden;
+    /**
+     * <b>Justizvollzugsanstalt Zwickau</b>
+     *  * <p>
+     *  *  Code: U1001
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Zwickau;
+    /**
+     * <b>Landgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Dresden;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Dresden;
+    /**
+     * <b>Amtsgericht Bautzen</b>
+     *  * <p>
+     *  *  Code: U1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bautzen;
+    /**
+     * <b>Grundbuchamt Bautzen</b>
+     *  * <p>
+     *  *  Code: U1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bautzen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bischofswerda</b>
+     *  * <p>
+     *  *  Code: U1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bischofswerda;
+    /**
+     * <b>Amtsgericht Dippoldiswalde</b>
+     *  * <p>
+     *  *  Code: U1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dippoldiswalde;
+    /**
+     * <b>Grundbuchamt Dippoldiswalde</b>
+     *  * <p>
+     *  *  Code: U1103G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dippoldiswalde;
+    /**
+     * <b>Amtsgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dresden;
+    /**
+     * <b>Grundbuchamt Dresden</b>
+     *  * <p>
+     *  *  Code: U1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Dresden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dresden (Land)</b>
+     *  * <p>
+     *  *  Code: U1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dresden_Land;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Dippoldiswalde, Zwst. Freital</b>
+     *  * <p>
+     *  *  Code: U1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Dippoldiswalde_Zwst_Freital;
+    /**
+     * <b>Amtsgericht G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Goerlitz;
+    /**
+     * <b>Grundbuchamt G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1107G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Goerlitz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gro&#223;enhain</b>
+     *  * <p>
+     *  *  Code: U1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Grossenhain;
+    /**
+     * <b>Amtsgericht Hoyerswerda</b>
+     *  * <p>
+     *  *  Code: U1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hoyerswerda;
+    /**
+     * <b>Grundbuchamt Hoyerswerda</b>
+     *  * <p>
+     *  *  Code: U1109G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hoyerswerda;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Hoyerswerda (Zwst. der StA Bautzen)</b>
+     *  * <p>
+     *  *  Code: U1109S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Hoyerswerda_Zwst_der_StA_Bautzen;
+    /**
+     * <b>Amtsgericht Kamenz</b>
+     *  * <p>
+     *  *  Code: U1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kamenz;
+    /**
+     * <b>Grundbuchamt Kamenz</b>
+     *  * <p>
+     *  *  Code: U1110G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kamenz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Zittau Zweigstelle L&#246;bau</b>
+     *  * <p>
+     *  *  Code: U1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Zittau_Zweigstelle_Loebau;
+    /**
+     * <b>Amtsgericht Mei&#223;en</b>
+     *  * <p>
+     *  *  Code: U1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meissen;
+    /**
+     * <b>Grundbuchamt Mei&#223;en</b>
+     *  * <p>
+     *  *  Code: U1112G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meissen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Mei&#223;en, Zwst. der StA Dresden</b>
+     *  * <p>
+     *  *  Code: U1112S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Meissen_Zwst_der_StA_Dresden;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wei&#223;wasser, Zwst. Niesky</b>
+     *  * <p>
+     *  *  Code: U1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Weisswasser_Zwst_Niesky;
+    /**
+     * <b>Amtsgericht Pirna</b>
+     *  * <p>
+     *  *  Code: U1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pirna;
+    /**
+     * <b>Grundbuchamt Pirna</b>
+     *  * <p>
+     *  *  Code: U1114G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pirna;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Pirna, Zwst. der StA Dresden</b>
+     *  * <p>
+     *  *  Code: U1114S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Pirna_Zwst_der_StA_Dresden;
+    /**
+     * <b>Amtsgericht Riesa</b>
+     *  * <p>
+     *  *  Code: U1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Riesa;
+    /**
+     * <b>Grundbuchamt Riesa</b>
+     *  * <p>
+     *  *  Code: U1115G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Riesa;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Pirna, Zwst. Neustadt (in Sachsen)</b>
+     *  * <p>
+     *  *  Code: U1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Pirna_Zwst_Neustadt_in_Sachsen;
+    /**
+     * <b>Amtsgericht Wei&#223;wasser</b>
+     *  * <p>
+     *  *  Code: U1117
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weisswasser;
+    /**
+     * <b>Grundbuchamt Wei&#223;wasser</b>
+     *  * <p>
+     *  *  Code: U1117G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weisswasser;
+    /**
+     * <b>Amtsgericht Zittau</b>
+     *  * <p>
+     *  *  Code: U1118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zittau;
+    /**
+     * <b>Grundbuchamt Zittau</b>
+     *  * <p>
+     *  *  Code: U1118G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zittau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Zittau, Zwst. der StA G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1118S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Zittau_Zwst_der_StA_Goerlitz;
+    /**
+     * <b>Amtsgericht Zittau, Zweigstelle L&#246;bau</b>
+     *  * <p>
+     *  *  Code: U1119
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zittau_Zweigstelle_Loebau;
+    /**
+     * <b>Landgericht Dresden Ausw&#228;rtige Strafvollstreckungskammer</b>
+     *  * <p>
+     *  *  Code: U1130
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Dresden_Auswaertige_Strafvollstreckungskammer;
+    /**
+     * <b>Landgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Chemnitz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Chemnitz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Marienberg Zweigstelle Annaberg-Buchholz</b>
+     *  * <p>
+     *  *  Code: U1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz;
+    /**
+     * <b>Amtsgericht Aue-Bad Schlema</b>
+     *  * <p>
+     *  *  Code: U1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aue_Bad_Schlema;
+    /**
+     * <b>Grundbuchamt Aue-Bad Schlema</b>
+     *  * <p>
+     *  *  Code: U1202G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aue_Bad_Schlema;
+    /**
+     * <b>Amtsgericht Auerbach</b>
+     *  * <p>
+     *  *  Code: U1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Auerbach;
+    /**
+     * <b>Grundbuchamt Auerbach</b>
+     *  * <p>
+     *  *  Code: U1203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Auerbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freiberg, Zwst. Brand-Erbisdorf</b>
+     *  * <p>
+     *  *  Code: U1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freiberg_Zwst_Brand_Erbisdorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Chemnitz/Stadt</b>
+     *  * <p>
+     *  *  Code: U1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Chemnitz_Stadt;
+    /**
+     * <b>Amtsgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Chemnitz;
+    /**
+     * <b>Grundbuchamt Chemnitz</b>
+     *  * <p>
+     *  *  Code: U1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Chemnitz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Freiberg Zweigstelle Oederan</b>
+     *  * <p>
+     *  *  Code: U1207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Freiberg_Zweigstelle_Oederan;
+    /**
+     * <b>Amtsgericht Freiberg</b>
+     *  * <p>
+     *  *  Code: U1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Freiberg;
+    /**
+     * <b>Grundbuchamt Freiberg</b>
+     *  * <p>
+     *  *  Code: U1208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Freiberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hohenstein-Ernstthal, Zwst. des AG Glauchau</b>
+     *  * <p>
+     *  *  Code: U1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hohenstein_Ernstthal_Zwst_des_AG_Glauchau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht D&#246;beln Zweigstelle Hainichen</b>
+     *  * <p>
+     *  *  Code: U1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Doebeln_Zweigstelle_Hainichen;
+    /**
+     * <b>Amtsgericht Hohenstein-Ernstthal</b>
+     *  * <p>
+     *  *  Code: U1211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hohenstein_Ernstthal;
+    /**
+     * <b>Grundbuchamt Hohenstein-Ernstthal</b>
+     *  * <p>
+     *  *  Code: U1211G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hohenstein_Ernstthal;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Auerbach, Zwst. Klingenthal</b>
+     *  * <p>
+     *  *  Code: U1212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Auerbach_Zwst_Klingenthal;
+    /**
+     * <b>Amtsgericht Marienberg</b>
+     *  * <p>
+     *  *  Code: U1213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marienberg;
+    /**
+     * <b>Grundbuchamt Marienberg</b>
+     *  * <p>
+     *  *  Code: U1213G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Marienberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Plauen, Zwst. Oelsnitz</b>
+     *  * <p>
+     *  *  Code: U1214
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Plauen_Zwst_Oelsnitz;
+    /**
+     * <b>Amtsgericht Plauen</b>
+     *  * <p>
+     *  *  Code: U1215
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Plauen;
+    /**
+     * <b>Grundbuchamt Plauen</b>
+     *  * <p>
+     *  *  Code: U1215G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Plauen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Reichenbach</b>
+     *  * <p>
+     *  *  Code: U1216
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Reichenbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rochlitz</b>
+     *  * <p>
+     *  *  Code: U1217
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rochlitz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schwarzenberg/Erzgebirge</b>
+     *  * <p>
+     *  *  Code: U1218
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schwarzenberg_Erzgebirge;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Aue Zweigstelle Stollberg</b>
+     *  * <p>
+     *  *  Code: U1219
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Aue_Zweigstelle_Stollberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Zwickau, Zwst. Werdau</b>
+     *  * <p>
+     *  *  Code: U1220
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Zwickau_Zwst_Werdau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Zschopau</b>
+     *  * <p>
+     *  *  Code: U1221
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Zschopau;
+    /**
+     * <b>Amtsgericht Zwickau</b>
+     *  * <p>
+     *  *  Code: U1222
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zwickau;
+    /**
+     * <b>Grundbuchamt Zwickau</b>
+     *  * <p>
+     *  *  Code: U1222G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Zwickau;
+    /**
+     * <b>Amtsgericht Zwickau, Zentrales Vollstreckungsgericht Sachsen</b>
+     *  * <p>
+     *  *  Code: U1222R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zwickau_Zentrales_Vollstreckungsgericht_Sachsen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Zwickau-Land</b>
+     *  * <p>
+     *  *  Code: U1223
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Zwickau_Land;
+    /**
+     * <b>Amtsgericht Aue-Bad Schlema, Zweigstelle Stollberg</b>
+     *  * <p>
+     *  *  Code: U1225
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aue_Bad_Schlema_Zweigstelle_Stollberg;
+    /**
+     * <b>Grundbuchamt Aue-Bad Schlema, Zweigstelle Stollberg</b>
+     *  * <p>
+     *  *  Code: U1225G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Aue_Bad_Schlema_Zweigstelle_Stollberg;
+    /**
+     * <b>Amtsgericht D&#246;beln, Zweigstelle Hainichen</b>
+     *  * <p>
+     *  *  Code: U1226
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Doebeln_Zweigstelle_Hainichen;
+    /**
+     * <b>Amtsgericht Marienberg, Zweigstelle Annaberg-Buchholz</b>
+     *  * <p>
+     *  *  Code: U1227
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Stollberg Ausw. Strafvollstreckungskammer des Landgerichts Chemnitz</b>
+     *  * <p>
+     *  *  Code: U1230
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stollberg_Ausw_Strafvollstreckungskammer_des_Landgerichts_Chemnitz;
+    /**
+     * <b>Landgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Leipzig;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Leipzig;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Geithain (in Bad Lausick)</b>
+     *  * <p>
+     *  *  Code: U1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Geithain_in_Bad_Lausick;
+    /**
+     * <b>Amtsgericht Borna</b>
+     *  * <p>
+     *  *  Code: U1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Borna;
+    /**
+     * <b>Grundbuchamt Borna</b>
+     *  * <p>
+     *  *  Code: U1302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Borna;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eilenburg Zweigstelle Delitzsch</b>
+     *  * <p>
+     *  *  Code: U1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eilenburg_Zweigstelle_Delitzsch;
+    /**
+     * <b>Amtsgericht D&#246;beln</b>
+     *  * <p>
+     *  *  Code: U1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Doebeln;
+    /**
+     * <b>Grundbuchamt D&#246;beln</b>
+     *  * <p>
+     *  *  Code: U1304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Doebeln;
+    /**
+     * <b>Amtsgericht Eilenburg</b>
+     *  * <p>
+     *  *  Code: U1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eilenburg;
+    /**
+     * <b>Grundbuchamt Eilenburg</b>
+     *  * <p>
+     *  *  Code: U1305G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eilenburg;
+    /**
+     * <b>Amtsgericht Grimma</b>
+     *  * <p>
+     *  *  Code: U1306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Grimma;
+    /**
+     * <b>Grundbuchamt Grimma</b>
+     *  * <p>
+     *  *  Code: U1306G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Grimma;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Grimma (Zwst. der StA Leipzig)</b>
+     *  * <p>
+     *  *  Code: U1306S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Grimma_Zwst_der_StA_Leipzig;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht der Stadt Leipzig</b>
+     *  * <p>
+     *  *  Code: U1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_der_Stadt_Leipzig;
+    /**
+     * <b>Amtsgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U1308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Leipzig;
+    /**
+     * <b>Grundbuchamt Leipzig</b>
+     *  * <p>
+     *  *  Code: U1308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Leipzig;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Torgau Zweigstelle Oschatz</b>
+     *  * <p>
+     *  *  Code: U1309
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Torgau_Zweigstelle_Oschatz;
+    /**
+     * <b>Amtsgericht Torgau</b>
+     *  * <p>
+     *  *  Code: U1310
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Torgau;
+    /**
+     * <b>Grundbuchamt Torgau</b>
+     *  * <p>
+     *  *  Code: U1310G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Torgau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Torgau, Zwst. der StA Leipzig</b>
+     *  * <p>
+     *  *  Code: U1310S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Torgau_Zwst_der_StA_Leipzig;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Grimma Zweigstelle Wurzen</b>
+     *  * <p>
+     *  *  Code: U1311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Grimma_Zweigstelle_Wurzen;
+    /**
+     * <b>Amtsgericht Torgau, Zweigstelle Oschatz</b>
+     *  * <p>
+     *  *  Code: U1312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Torgau_Zweigstelle_Oschatz;
+    /**
+     * <b>Landgericht Leipzig Strafvollstreckungskammer in Torgau</b>
+     *  * <p>
+     *  *  Code: U1330
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Leipzig_Strafvollstreckungskammer_in_Torgau;
+    /**
+     * <b>Landgericht Leipzig Strafvollstreckungskammer in D&#246;beln</b>
+     *  * <p>
+     *  *  Code: U1340
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Leipzig_Strafvollstreckungskammer_in_Doebeln;
+    /**
+     * <b>Landgericht Leipzig Strafvollstreckungskammer in Borna</b>
+     *  * <p>
+     *  *  Code: U1350
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Leipzig_Strafvollstreckungskammer_in_Borna;
+    /**
+     * <b>aufgel&#246;st-Landgericht Bautzen Au&#223;enstelle des Landgerichts G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Landgericht_Bautzen_Aussenstelle_des_Landgerichts_Goerlitz;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft G&#246;rlitz, Zweigstelle Bautzen</b>
+     *  * <p>
+     *  *  Code: U1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen;
+    /**
+     * <b>Landgericht G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Goerlitz;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Goerlitz;
+    /**
+     * <b>Landgericht Bautzen, Au&#223;enstelle Landgericht G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U1510
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Bautzen_Aussenstelle_Landgericht_Goerlitz;
+    /**
+     * <b>Staatsanwaltschaft G&#246;rlitz, Zweigstelle Bautzen</b>
+     *  * <p>
+     *  *  Code: U1510S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen;
+    /**
+     * <b>Landgericht Zwickau</b>
+     *  * <p>
+     *  *  Code: U1600
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Zwickau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Zwickau</b>
+     *  * <p>
+     *  *  Code: U1600S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Zwickau;
+    /**
+     * <b>Landgericht Zwickau Zweigstelle Plauen</b>
+     *  * <p>
+     *  *  Code: U1601
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Zwickau_Zweigstelle_Plauen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Plauen (Zwst. der StA Zwickau)</b>
+     *  * <p>
+     *  *  Code: U1601S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Plauen_Zwst_der_StA_Zwickau;
+    /**
+     * <b>Justizvollzugsanstalt Leipzig mit Krankenhaus</b>
+     *  * <p>
+     *  *  Code: U6001
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Leipzig_mit_Krankenhaus;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer des Freistaates Sachsen</b>
+     *  * <p>
+     *  *  Code: U6008
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Freistaates_Sachsen;
+    /**
+     * <b>Sozialgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U6027
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Dresden;
+    /**
+     * <b>Jugendstrafvollzugsanstalt Regis-Breitingen</b>
+     *  * <p>
+     *  *  Code: U6269
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendstrafvollzugsanstalt_Regis_Breitingen;
+    /**
+     * <b>Justizvollzugsanstalt Zeithain</b>
+     *  * <p>
+     *  *  Code: U6346
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Zeithain;
+    /**
+     * <b>Justizvollzugsanstalt G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U6348
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Goerlitz;
+    /**
+     * <b>Justizvollzugsanstalt Torgau</b>
+     *  * <p>
+     *  *  Code: U6350
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Torgau;
+    /**
+     * <b>Arbeitsgericht Bautzen</b>
+     *  * <p>
+     *  *  Code: U6385
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bautzen;
+    /**
+     * <b>Arbeitsgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U6386
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Chemnitz;
+    /**
+     * <b>Arbeitsgericht Dresden</b>
+     *  * <p>
+     *  *  Code: U6387
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Dresden;
+    /**
+     * <b>Arbeitsgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U6388
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Leipzig;
+    /**
+     * <b>Arbeitsgericht Zwickau</b>
+     *  * <p>
+     *  *  Code: U6389
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Zwickau;
+    /**
+     * <b>Arbeitsgericht Bautzen Au&#223;enkammern G&#246;rlitz</b>
+     *  * <p>
+     *  *  Code: U6390
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Bautzen_Aussenkammern_Goerlitz;
+    /**
+     * <b>S&#228;chsisches Oberverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: U6400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Saechsisches_Oberverwaltungsgericht;
+    /**
+     * <b>Verwaltungsgericht Dresden Fachgerichtszentrum</b>
+     *  * <p>
+     *  *  Code: U6401
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Dresden_Fachgerichtszentrum;
+    /**
+     * <b>Sozialgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U6409
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Leipzig;
+    /**
+     * <b>Sozialgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U6418
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Chemnitz;
+    /**
+     * <b>Verfassungsgerichtshof Sachsen</b>
+     *  * <p>
+     *  *  Code: U6435
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_Sachsen;
+    /**
+     * <b>Justizvollzugsanstalt Dresden</b>
+     *  * <p>
+     *  *  Code: U6862
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Dresden;
+    /**
+     * <b>Verwaltungsgericht Chemnitz</b>
+     *  * <p>
+     *  *  Code: U8517
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Chemnitz;
+    /**
+     * <b>S&#228;chsisches Landesarbeitsgericht</b>
+     *  * <p>
+     *  *  Code: U8550
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Saechsisches_Landesarbeitsgericht;
+    /**
+     * <b>Landessozialgericht Sachsen</b>
+     *  * <p>
+     *  *  Code: U8563
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Sachsen;
+    /**
+     * <b>Bundesverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: U8572
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesverwaltungsgericht;
+    /**
+     * <b>Justizvollzugsanstalt Bautzen</b>
+     *  * <p>
+     *  *  Code: U8594
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Bautzen;
+    /**
+     * <b>Justizvollzugsanstalt Waldheim</b>
+     *  * <p>
+     *  *  Code: U8598
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Waldheim;
+    /**
+     * <b>Verwaltungsgericht Leipzig</b>
+     *  * <p>
+     *  *  Code: U8613
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Leipzig;
+    /**
+     * <b>S&#228;chsischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: U8616
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Saechsischer_Anwaltsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Chemnitz</b>
+     *  * <p>
+     *  *  Code: U8617
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Chemnitz;
+    /**
+     * <b>S&#228;chsisches Finanzgericht</b>
+     *  * <p>
+     *  *  Code: U8647
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Saechsisches_Finanzgericht;
+    /**
+     * <b>Oberlandesgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Saarbruecken;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Saarbruecken;
+    /**
+     * <b>Landgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Saarbruecken;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Saarbruecken;
+    /**
+     * <b>Amtsgericht Homburg Zweigstelle Blieskastel</b>
+     *  * <p>
+     *  *  Code: V1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Homburg_Zweigstelle_Blieskastel;
+    /**
+     * <b>Amtsgericht Homburg</b>
+     *  * <p>
+     *  *  Code: V1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Homburg;
+    /**
+     * <b>Amtsgericht Lebach</b>
+     *  * <p>
+     *  *  Code: V1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lebach;
+    /**
+     * <b>Amtsgericht Merzig</b>
+     *  * <p>
+     *  *  Code: V1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Merzig;
+    /**
+     * <b>Amtsgericht Neunkirchen</b>
+     *  * <p>
+     *  *  Code: V1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neunkirchen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht St. Wendel, Zwst. Nohfelden</b>
+     *  * <p>
+     *  *  Code: V1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_St_Wendel_Zwst_Nohfelden;
+    /**
+     * <b>Amtsgericht Ottweiler</b>
+     *  * <p>
+     *  *  Code: V1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ottweiler;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Perl</b>
+     *  * <p>
+     *  *  Code: V1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Perl;
+    /**
+     * <b>Amtsgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarbruecken;
+    /**
+     * <b>Amtsgericht Saarbr&#252;cken, Zentrales Vollstreckungsgericht Saarland</b>
+     *  * <p>
+     *  *  Code: V1109R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarbruecken_Zentrales_Vollstreckungsgericht_Saarland;
+    /**
+     * <b>Amtsgericht Saarbr&#252;cken Registergericht und Zwangsversteigerungsgericht</b>
+     *  * <p>
+     *  *  Code: V1109V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarbruecken_Registergericht_und_Zwangsversteigerungsgericht;
+    /**
+     * <b>Amtsgericht Saarlouis</b>
+     *  * <p>
+     *  *  Code: V1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarlouis;
+    /**
+     * <b>Amtsgericht St. Ingbert</b>
+     *  * <p>
+     *  *  Code: V1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Ingbert;
+    /**
+     * <b>Amtsgericht St. Wendel</b>
+     *  * <p>
+     *  *  Code: V1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Wendel;
+    /**
+     * <b>Amtsgericht Sulzbach</b>
+     *  * <p>
+     *  *  Code: V1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sulzbach;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Tholey</b>
+     *  * <p>
+     *  *  Code: V1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Tholey;
+    /**
+     * <b>Amtsgericht V&#246;lklingen</b>
+     *  * <p>
+     *  *  Code: V1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Voelklingen;
+    /**
+     * <b>Amtsgericht Merzig Zweigstelle Wadern</b>
+     *  * <p>
+     *  *  Code: V1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Merzig_Zweigstelle_Wadern;
+    /**
+     * <b>Amtsgericht Neunkirchen Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1120
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neunkirchen_Vereinsregister;
+    /**
+     * <b>Amtsgericht Saarlouis Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1121
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Saarlouis_Vereinsregister;
+    /**
+     * <b>Amtsgericht Homburg Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1122
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Homburg_Vereinsregister;
+    /**
+     * <b>Amtsgericht St. Ingbert Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1123
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Ingbert_Vereinsregister;
+    /**
+     * <b>Amtsgericht Ottweiler Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1124
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ottweiler_Vereinsregister;
+    /**
+     * <b>Amtsgericht Lebach Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1125
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Lebach_Vereinsregister;
+    /**
+     * <b>Amtsgericht St. Wendel Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1126
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_St_Wendel_Vereinsregister;
+    /**
+     * <b>Amtsgericht Merzig Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1127
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Merzig_Vereinsregister;
+    /**
+     * <b>Amtsgericht V&#246;lklingen Vereinsregister</b>
+     *  * <p>
+     *  *  Code: V1128
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Voelklingen_Vereinsregister;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Neunkirchen</b>
+     *  * <p>
+     *  *  Code: V6011
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Neunkirchen;
+    /**
+     * <b>Finanzgericht des Saarlandes</b>
+     *  * <p>
+     *  *  Code: V6012
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_des_Saarlandes;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Saarlouis</b>
+     *  * <p>
+     *  *  Code: V6013
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Saarlouis;
+    /**
+     * <b>Verfassungsgerichtshof des Saarlandes</b>
+     *  * <p>
+     *  *  Code: V6014
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verfassungsgerichtshof_des_Saarlandes;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V6033
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Saarbruecken;
+    /**
+     * <b>Anwaltsgericht f&#252;r den Bezirk der Rechtsanwaltskammer des Saarlandes</b>
+     *  * <p>
+     *  *  Code: V6040
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Saarlandes;
+    /**
+     * <b>Landessozialgericht f&#252;r das Saarland</b>
+     *  * <p>
+     *  *  Code: V6042
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_fuer_das_Saarland;
+    /**
+     * <b>Landesarbeitsgericht Saarland</b>
+     *  * <p>
+     *  *  Code: V6043
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Saarland;
+    /**
+     * <b>Oberverwaltungsgericht des Saarlandes</b>
+     *  * <p>
+     *  *  Code: V6045
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_des_Saarlandes;
+    /**
+     * <b>Sozialgericht f&#252;r das Saarland</b>
+     *  * <p>
+     *  *  Code: V6046
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_fuer_das_Saarland;
+    /**
+     * <b>Verwaltungsgericht des Saarlandes Saarlouis</b>
+     *  * <p>
+     *  *  Code: V6051
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_des_Saarlandes_Saarlouis;
+    /**
+     * <b>Saarl&#228;ndischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: V6054
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Saarlaendischer_Anwaltsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Saarbr&#252;cken</b>
+     *  * <p>
+     *  *  Code: V6067
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Saarbruecken;
+    /**
+     * <b>Jugendarrestanstalt Lebach</b>
+     *  * <p>
+     *  *  Code: V6080
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendarrestanstalt_Lebach;
+    /**
+     * <b>Justizvollzugsanstalt Ottweiler</b>
+     *  * <p>
+     *  *  Code: V6216
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Ottweiler;
+    /**
+     * <b>Arbeitsgericht Saarland</b>
+     *  * <p>
+     *  *  Code: V6234
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Saarland;
+    /**
+     * <b>Kompetenzzentrum der Justiz f&#252;r ambulante Resozialisierung und Opferhilfe</b>
+     *  * <p>
+     *  *  Code: V6240
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Kompetenzzentrum_der_Justiz_fuer_ambulante_Resozialisierung_und_Opferhilfe;
+    /**
+     * <b>Oberlandesgericht Naumburg</b>
+     *  * <p>
+     *  *  Code: W1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Naumburg;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Naumburg</b>
+     *  * <p>
+     *  *  Code: W1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Naumburg;
+    /**
+     * <b>Landgericht Halle</b>
+     *  * <p>
+     *  *  Code: W1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Halle;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Halle</b>
+     *  * <p>
+     *  *  Code: W1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Halle;
+    /**
+     * <b>Amtsgericht Aschersleben</b>
+     *  * <p>
+     *  *  Code: W1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aschersleben;
+    /**
+     * <b>Amtsgericht Bernburg</b>
+     *  * <p>
+     *  *  Code: W1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bernburg;
+    /**
+     * <b>Amtsgericht Bitterfeld-Wolfen</b>
+     *  * <p>
+     *  *  Code: W1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bitterfeld_Wolfen;
+    /**
+     * <b>Amtsgericht Dessau-Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dessau_Rosslau;
+    /**
+     * <b>Amtsgericht Dessau-Ro&#223;lau, Zentrales Vollstreckungsgericht Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W1104R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Dessau_Rosslau_Zentrales_Vollstreckungsgericht_Sachsen_Anhalt;
+    /**
+     * <b>Amtsgericht Eisleben</b>
+     *  * <p>
+     *  *  Code: W1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eisleben;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gr&#228;fenhainichen</b>
+     *  * <p>
+     *  *  Code: W1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Graefenhainichen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Halle, Stadt</b>
+     *  * <p>
+     *  *  Code: W1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Halle_Stadt;
+    /**
+     * <b>Amtsgericht Halle (Saale)</b>
+     *  * <p>
+     *  *  Code: W1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Halle_Saale;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hettstedt</b>
+     *  * <p>
+     *  *  Code: W1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hettstedt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hohenm&#246;lsen</b>
+     *  * <p>
+     *  *  Code: W1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hohenmoelsen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Jessen (in Annaburg)</b>
+     *  * <p>
+     *  *  Code: W1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Jessen_in_Annaburg;
+    /**
+     * <b>Amtsgericht K&#246;then</b>
+     *  * <p>
+     *  *  Code: W1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Koethen;
+    /**
+     * <b>Amtsgericht Merseburg</b>
+     *  * <p>
+     *  *  Code: W1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Merseburg;
+    /**
+     * <b>Amtsgericht Naumburg</b>
+     *  * <p>
+     *  *  Code: W1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Naumburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Naumburg, Zwst. der StA Halle</b>
+     *  * <p>
+     *  *  Code: W1115S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Naumburg_Zwst_der_StA_Halle;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Nebra</b>
+     *  * <p>
+     *  *  Code: W1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Nebra;
+    /**
+     * <b>Amtsgericht Quedlinburg</b>
+     *  * <p>
+     *  *  Code: W1117
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Quedlinburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Querfurt</b>
+     *  * <p>
+     *  *  Code: W1118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Querfurt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W1119
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rosslau;
+    /**
+     * <b>Amtsgericht Sangerhausen</b>
+     *  * <p>
+     *  *  Code: W1120
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sangerhausen;
+    /**
+     * <b>Amtsgericht Wei&#223;enfels</b>
+     *  * <p>
+     *  *  Code: W1121
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weissenfels;
+    /**
+     * <b>Amtsgericht Wittenberg</b>
+     *  * <p>
+     *  *  Code: W1122
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wittenberg;
+    /**
+     * <b>Amtsgericht Zeitz</b>
+     *  * <p>
+     *  *  Code: W1123
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zeitz;
+    /**
+     * <b>Amtsgericht Aschersleben Dienstgeb&#228;ude Sta&#223;furt</b>
+     *  * <p>
+     *  *  Code: W1124
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Aschersleben_Dienstgebaeude_Stassfurt;
+    /**
+     * <b>Landgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Magdeburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Magdeburg;
+    /**
+     * <b>Amtsgericht Burg</b>
+     *  * <p>
+     *  *  Code: W1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Burg;
+    /**
+     * <b>Amtsgericht Gardelegen</b>
+     *  * <p>
+     *  *  Code: W1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gardelegen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Genthin</b>
+     *  * <p>
+     *  *  Code: W1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Genthin;
+    /**
+     * <b>Amtsgericht Halberstadt</b>
+     *  * <p>
+     *  *  Code: W1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Halberstadt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Halberstadt, Zwst. der StA Magdeburg</b>
+     *  * <p>
+     *  *  Code: W1204S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Halberstadt_Zwst_der_StA_Magdeburg;
+    /**
+     * <b>Amtsgericht Haldensleben</b>
+     *  * <p>
+     *  *  Code: W1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Haldensleben;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Havelberg</b>
+     *  * <p>
+     *  *  Code: W1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Havelberg;
+    /**
+     * <b>aufgel&#246;st-Kreisgericht Gardelegen (vormals Kalbe/Milde)</b>
+     *  * <p>
+     *  *  Code: W1207
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Kreisgericht_Gardelegen_vormals_Kalbe_Milde;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kl&#246;tze</b>
+     *  * <p>
+     *  *  Code: W1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kloetze;
+    /**
+     * <b>Amtsgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Magdeburg;
+    /**
+     * <b>Amtsgericht Oschersleben</b>
+     *  * <p>
+     *  *  Code: W1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oschersleben;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Osterburg</b>
+     *  * <p>
+     *  *  Code: W1211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Osterburg;
+    /**
+     * <b>Amtsgericht Salzwedel</b>
+     *  * <p>
+     *  *  Code: W1212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Salzwedel;
+    /**
+     * <b>Amtsgericht Sch&#246;nebeck</b>
+     *  * <p>
+     *  *  Code: W1213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schoenebeck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sta&#223;furt</b>
+     *  * <p>
+     *  *  Code: W1214
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Stassfurt;
+    /**
+     * <b>Amtsgericht Stendal</b>
+     *  * <p>
+     *  *  Code: W1215
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stendal;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wanzleben</b>
+     *  * <p>
+     *  *  Code: W1217
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wanzleben;
+    /**
+     * <b>Amtsgericht Wernigerode</b>
+     *  * <p>
+     *  *  Code: W1218
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Wernigerode;
+    /**
+     * <b>Amtsgericht Haldensleben Zweigstelle Wolmirstedt</b>
+     *  * <p>
+     *  *  Code: W1219
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Haldensleben_Zweigstelle_Wolmirstedt;
+    /**
+     * <b>Amtsgericht Zerbst</b>
+     *  * <p>
+     *  *  Code: W1220
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Zerbst;
+    /**
+     * <b>Landgericht Dessau-Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Dessau_Rosslau;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Dessau-Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Dessau_Rosslau;
+    /**
+     * <b>Landgericht Stendal</b>
+     *  * <p>
+     *  *  Code: W1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Stendal;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Stendal</b>
+     *  * <p>
+     *  *  Code: W1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Stendal;
+    /**
+     * <b>Landgericht Stendal Ausw&#228;rtige Strafvollstreckungskammer</b>
+     *  * <p>
+     *  *  Code: W1430
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Stendal_Auswaertige_Strafvollstreckungskammer;
+    /**
+     * <b>Landgericht Halle Ausw&#228;rtige Strafvollstreckungskammer bei dem Amtsgericht Naumburg</b>
+     *  * <p>
+     *  *  Code: W1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Halle_Auswaertige_Strafvollstreckungskammer_bei_dem_Amtsgericht_Naumburg;
+    /**
+     * <b>Anwaltsgericht im Bezirk der Rechtsanwaltskammer des Landes Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6008
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_des_Landes_Sachsen_Anhalt;
+    /**
+     * <b>Anwaltsgerichtshof des Landes Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6009
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Anwaltsgerichtshof_des_Landes_Sachsen_Anhalt;
+    /**
+     * <b>Ministerium f&#252;r Justiz und Gleichstellung des Landes Sachsen-Anhalt, Magdeburg</b>
+     *  * <p>
+     *  *  Code: W6118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Ministerium_fuer_Justiz_und_Gleichstellung_des_Landes_Sachsen_Anhalt_Magdeburg;
+    /**
+     * <b>Justizvollzugsanstalt Volkstedt</b>
+     *  * <p>
+     *  *  Code: W6235
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Volkstedt;
+    /**
+     * <b>aufgel&#246;st-Verwaltungsgericht Dessau</b>
+     *  * <p>
+     *  *  Code: W6289
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Verwaltungsgericht_Dessau;
+    /**
+     * <b>Verwaltungsgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W6294
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Magdeburg;
+    /**
+     * <b>Justizvollzugsanstalt Halle</b>
+     *  * <p>
+     *  *  Code: W6373
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Halle;
+    /**
+     * <b>Arbeitsgericht Halle</b>
+     *  * <p>
+     *  *  Code: W6377
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Halle;
+    /**
+     * <b>Jugendanstalt Ra&#223;nitz</b>
+     *  * <p>
+     *  *  Code: W6424
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendanstalt_Rassnitz;
+    /**
+     * <b>Oberverwaltungsgericht des Landes Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6438
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberverwaltungsgericht_des_Landes_Sachsen_Anhalt;
+    /**
+     * <b>Justizvollzugsanstalt Burg</b>
+     *  * <p>
+     *  *  Code: W6445
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Burg;
+    /**
+     * <b>Landesarbeitsgericht Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6453
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Sachsen_Anhalt;
+    /**
+     * <b>Arbeitsgericht Dessau-Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W6454
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Dessau_Rosslau;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Halberstadt</b>
+     *  * <p>
+     *  *  Code: W6455
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Halberstadt;
+    /**
+     * <b>Arbeitsgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W6458
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Magdeburg;
+    /**
+     * <b>aufgel&#246;st-Arbeitsgericht Naumburg</b>
+     *  * <p>
+     *  *  Code: W6459
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Arbeitsgericht_Naumburg;
+    /**
+     * <b>Arbeitsgericht Stendal</b>
+     *  * <p>
+     *  *  Code: W6460
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Stendal;
+    /**
+     * <b>Verwaltungsgericht Halle</b>
+     *  * <p>
+     *  *  Code: W6464
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Halle;
+    /**
+     * <b>Finanzgericht des Landes Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6467
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Finanzgericht_des_Landes_Sachsen_Anhalt;
+    /**
+     * <b>Landessozialgericht Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6468
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landessozialgericht_Sachsen_Anhalt;
+    /**
+     * <b>Sozialgericht Dessau-Ro&#223;lau</b>
+     *  * <p>
+     *  *  Code: W6469
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Dessau_Rosslau;
+    /**
+     * <b>Sozialgericht Halle</b>
+     *  * <p>
+     *  *  Code: W6470
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Halle;
+    /**
+     * <b>Sozialgericht Magdeburg</b>
+     *  * <p>
+     *  *  Code: W6471
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Magdeburg;
+    /**
+     * <b>aufgel&#246;st-Sozialgericht Stendal</b>
+     *  * <p>
+     *  *  Code: W6472
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Sozialgericht_Stendal;
+    /**
+     * <b>Landesverfassungsgericht Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6488
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesverfassungsgericht_Sachsen_Anhalt;
+    /**
+     * <b>Dienstgericht f&#252;r Richter Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6632
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Dienstgericht_fuer_Richter_Sachsen_Anhalt;
+    /**
+     * <b>Landesberufsgericht f&#252;r Heilberufe Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6633
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesberufsgericht_fuer_Heilberufe_Sachsen_Anhalt;
+    /**
+     * <b>Berufsgerichtshof der Ingenieurkammer Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6634
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Berufsgerichtshof_der_Ingenieurkammer_Sachsen_Anhalt;
+    /**
+     * <b>Richterdienstgericht Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6635
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Richterdienstgericht_Sachsen_Anhalt;
+    /**
+     * <b>Berufsgericht f&#252;r Heilberufe Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6636
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Berufsgericht_fuer_Heilberufe_Sachsen_Anhalt;
+    /**
+     * <b>Berufsgericht der Ingenieurkammer Sachsen-Anhalt</b>
+     *  * <p>
+     *  *  Code: W6637
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Berufsgericht_der_Ingenieurkammer_Sachsen_Anhalt;
+    /**
+     * <b>Oberlandesgericht Schleswig</b>
+     *  * <p>
+     *  *  Code: X1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Oberlandesgericht_Schleswig;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Schleswig</b>
+     *  * <p>
+     *  *  Code: X1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Schleswig;
+    /**
+     * <b>Landgericht Flensburg</b>
+     *  * <p>
+     *  *  Code: X1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Flensburg;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Flensburg</b>
+     *  * <p>
+     *  *  Code: X1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Flensburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bredstedt</b>
+     *  * <p>
+     *  *  Code: X1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bredstedt;
+    /**
+     * <b>Amtsgericht Flensburg</b>
+     *  * <p>
+     *  *  Code: X1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Flensburg;
+    /**
+     * <b>Grundbuchamt Flensburg</b>
+     *  * <p>
+     *  *  Code: X1112G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Flensburg;
+    /**
+     * <b>Registergericht Amtsgericht Flensburg</b>
+     *  * <p>
+     *  *  Code: X1112R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Flensburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Friedrichstadt</b>
+     *  * <p>
+     *  *  Code: X1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Friedrichstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Heide</b>
+     *  * <p>
+     *  *  Code: X1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Heide;
+    /**
+     * <b>Amtsgericht Husum</b>
+     *  * <p>
+     *  *  Code: X1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Husum;
+    /**
+     * <b>Grundbuchamt Husum</b>
+     *  * <p>
+     *  *  Code: X1115G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Husum;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kappeln</b>
+     *  * <p>
+     *  *  Code: X1116
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kappeln;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Leck</b>
+     *  * <p>
+     *  *  Code: X1117
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Leck;
+    /**
+     * <b>Amtsgericht Nieb&#252;ll</b>
+     *  * <p>
+     *  *  Code: X1118
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Niebuell;
+    /**
+     * <b>Grundbuchamt Nieb&#252;ll</b>
+     *  * <p>
+     *  *  Code: X1118G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Niebuell;
+    /**
+     * <b>Amtsgericht Schleswig</b>
+     *  * <p>
+     *  *  Code: X1119
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schleswig;
+    /**
+     * <b>Grundbuchamt Schleswig</b>
+     *  * <p>
+     *  *  Code: X1119G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schleswig;
+    /**
+     * <b>Amtsgericht Schleswig, Zentrales Mahngericht f&#252;r Schleswig-Holstein</b>
+     *  * <p>
+     *  *  Code: X1119M
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schleswig_Zentrales_Mahngericht_fuer_Schleswig_Holstein;
+    /**
+     * <b>Amtsgericht Schleswig, Zentrales Vollstreckungsgericht Schleswig-Holstein</b>
+     *  * <p>
+     *  *  Code: X1119R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schleswig_Zentrales_Vollstreckungsgericht_Schleswig_Holstein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht T&#246;nning</b>
+     *  * <p>
+     *  *  Code: X1121
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Toenning;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wesselburen</b>
+     *  * <p>
+     *  *  Code: X1122
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wesselburen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Westerland</b>
+     *  * <p>
+     *  *  Code: X1123
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Westerland;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wyk a. F&#246;hr</b>
+     *  * <p>
+     *  *  Code: X1124
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wyk_a_Foehr;
+    /**
+     * <b>Landgericht Itzehoe</b>
+     *  * <p>
+     *  *  Code: X1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Itzehoe;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Itzehoe</b>
+     *  * <p>
+     *  *  Code: X1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Itzehoe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Brunsb&#252;ttelkoog</b>
+     *  * <p>
+     *  *  Code: X1311
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Brunsbuettelkoog;
+    /**
+     * <b>Amtsgericht Elmshorn</b>
+     *  * <p>
+     *  *  Code: X1312
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Elmshorn;
+    /**
+     * <b>Grundbuchamt Elmshorn</b>
+     *  * <p>
+     *  *  Code: X1312G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Elmshorn;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gl&#252;ckstadt</b>
+     *  * <p>
+     *  *  Code: X1314
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Glueckstadt;
+    /**
+     * <b>Amtsgericht Itzehoe</b>
+     *  * <p>
+     *  *  Code: X1315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Itzehoe;
+    /**
+     * <b>Grundbuchamt Itzehoe</b>
+     *  * <p>
+     *  *  Code: X1315G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Itzehoe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Kellinghusen</b>
+     *  * <p>
+     *  *  Code: X1316
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Kellinghusen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Krempe</b>
+     *  * <p>
+     *  *  Code: X1317
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Krempe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Marne</b>
+     *  * <p>
+     *  *  Code: X1318
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Marne;
+    /**
+     * <b>Amtsgericht Meldorf</b>
+     *  * <p>
+     *  *  Code: X1319
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meldorf;
+    /**
+     * <b>Grundbuchamt Meldorf</b>
+     *  * <p>
+     *  *  Code: X1319G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meldorf;
+    /**
+     * <b>Amtsgericht Pinneberg</b>
+     *  * <p>
+     *  *  Code: X1321
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Pinneberg;
+    /**
+     * <b>Grundbuchamt Pinneberg</b>
+     *  * <p>
+     *  *  Code: X1321G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Pinneberg;
+    /**
+     * <b>Registergericht Amtsgericht Pinneberg</b>
+     *  * <p>
+     *  *  Code: X1321R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Pinneberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Rantzau, Post Barmstedt</b>
+     *  * <p>
+     *  *  Code: X1322
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Rantzau_Post_Barmstedt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Schenefeld</b>
+     *  * <p>
+     *  *  Code: X1323
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schenefeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Uetersen</b>
+     *  * <p>
+     *  *  Code: X1324
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Uetersen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wedel (Holstein)</b>
+     *  * <p>
+     *  *  Code: X1325
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wedel_Holstein;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Wilster</b>
+     *  * <p>
+     *  *  Code: X1326
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Wilster;
+    /**
+     * <b>Landgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X1500
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Kiel;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X1500S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Kiel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Bramstedt</b>
+     *  * <p>
+     *  *  Code: X1511
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Bramstedt;
+    /**
+     * <b>Amtsgericht Bad Segeberg</b>
+     *  * <p>
+     *  *  Code: X1512
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Segeberg;
+    /**
+     * <b>Grundbuchamt Bad Segeberg</b>
+     *  * <p>
+     *  *  Code: X1512G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Segeberg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bordesholm</b>
+     *  * <p>
+     *  *  Code: X1513
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bordesholm;
+    /**
+     * <b>Amtsgericht Eckernf&#246;rde</b>
+     *  * <p>
+     *  *  Code: X1514
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eckernfoerde;
+    /**
+     * <b>Grundbuchamt Eckernf&#246;rde</b>
+     *  * <p>
+     *  *  Code: X1514G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eckernfoerde;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Gettorf</b>
+     *  * <p>
+     *  *  Code: X1515
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Gettorf;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Hohenwestedt</b>
+     *  * <p>
+     *  *  Code: X1516
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Hohenwestedt;
+    /**
+     * <b>Amtsgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X1517
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Kiel;
+    /**
+     * <b>Grundbuchamt Kiel</b>
+     *  * <p>
+     *  *  Code: X1517G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Kiel;
+    /**
+     * <b>Registergericht Amtsgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X1517R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Kiel;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht L&#252;tjenburg</b>
+     *  * <p>
+     *  *  Code: X1518
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Luetjenburg;
+    /**
+     * <b>Amtsgericht Neum&#252;nster</b>
+     *  * <p>
+     *  *  Code: X1519
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Neumuenster;
+    /**
+     * <b>Grundbuchamt Neum&#252;nster</b>
+     *  * <p>
+     *  *  Code: X1519G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Neumuenster;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Nortorf</b>
+     *  * <p>
+     *  *  Code: X1521
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Nortorf;
+    /**
+     * <b>Amtsgericht Pl&#246;n</b>
+     *  * <p>
+     *  *  Code: X1522
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ploen;
+    /**
+     * <b>Grundbuchamt Pl&#246;n</b>
+     *  * <p>
+     *  *  Code: X1522G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ploen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Preetz</b>
+     *  * <p>
+     *  *  Code: X1523
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Preetz;
+    /**
+     * <b>Amtsgericht Rendsburg</b>
+     *  * <p>
+     *  *  Code: X1524
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rendsburg;
+    /**
+     * <b>Grundbuchamt Rendsburg</b>
+     *  * <p>
+     *  *  Code: X1524G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rendsburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sch&#246;nberg (Holstein)</b>
+     *  * <p>
+     *  *  Code: X1525
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Schoenberg_Holstein;
+    /**
+     * <b>Amtsgericht Norderstedt</b>
+     *  * <p>
+     *  *  Code: X1526
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Norderstedt;
+    /**
+     * <b>Grundbuchamt Norderstedt</b>
+     *  * <p>
+     *  *  Code: X1526G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Norderstedt;
+    /**
+     * <b>Landgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X1700
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Luebeck;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X1700S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Luebeck;
+    /**
+     * <b>Amtsgericht Ahrensburg</b>
+     *  * <p>
+     *  *  Code: X1711
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ahrensburg;
+    /**
+     * <b>Grundbuchamt Ahrensburg</b>
+     *  * <p>
+     *  *  Code: X1711G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ahrensburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Oldesloe</b>
+     *  * <p>
+     *  *  Code: X1712
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Oldesloe;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bad Schwartau</b>
+     *  * <p>
+     *  *  Code: X1713
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bad_Schwartau;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Bargteheide</b>
+     *  * <p>
+     *  *  Code: X1714
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Bargteheide;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Burg a. F.</b>
+     *  * <p>
+     *  *  Code: X1715
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Burg_a_F;
+    /**
+     * <b>Amtsgericht Eutin</b>
+     *  * <p>
+     *  *  Code: X1716
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eutin;
+    /**
+     * <b>Grundbuchamt Eutin</b>
+     *  * <p>
+     *  *  Code: X1716G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eutin;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Geesthacht</b>
+     *  * <p>
+     *  *  Code: X1717
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Geesthacht;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Heiligenhafen</b>
+     *  * <p>
+     *  *  Code: X1718
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Heiligenhafen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lauenburg (Elbe)</b>
+     *  * <p>
+     *  *  Code: X1719
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lauenburg_Elbe;
+    /**
+     * <b>Amtsgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X1721
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Luebeck;
+    /**
+     * <b>Grundbuchamt L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X1721G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Luebeck;
+    /**
+     * <b>Registergericht Amtsgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X1721R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Registergericht_Amtsgericht_Luebeck;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht M&#246;lln</b>
+     *  * <p>
+     *  *  Code: X1722
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Moelln;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neustadt in Holstein</b>
+     *  * <p>
+     *  *  Code: X1723
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neustadt_in_Holstein;
+    /**
+     * <b>Amtsgericht Oldenburg (Holstein)</b>
+     *  * <p>
+     *  *  Code: X1724
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Oldenburg_Holstein;
+    /**
+     * <b>Grundbuchamt Oldenburg (Holstein)</b>
+     *  * <p>
+     *  *  Code: X1724G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Oldenburg_Holstein;
+    /**
+     * <b>Amtsgericht Ratzeburg</b>
+     *  * <p>
+     *  *  Code: X1725
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Ratzeburg;
+    /**
+     * <b>Grundbuchamt Ratzeburg</b>
+     *  * <p>
+     *  *  Code: X1725G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Ratzeburg;
+    /**
+     * <b>Amtsgericht Reinbek</b>
+     *  * <p>
+     *  *  Code: X1726
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Reinbek;
+    /**
+     * <b>Grundbuchamt Reinbek</b>
+     *  * <p>
+     *  *  Code: X1726G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Reinbek;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Reinfeld</b>
+     *  * <p>
+     *  *  Code: X1727
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Reinfeld;
+    /**
+     * <b>Amtsgericht Schwarzenbek</b>
+     *  * <p>
+     *  *  Code: X1728
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Schwarzenbek;
+    /**
+     * <b>Grundbuchamt Schwarzenbek</b>
+     *  * <p>
+     *  *  Code: X1728G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Schwarzenbek;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Trittau</b>
+     *  * <p>
+     *  *  Code: X1729
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Trittau;
+    /**
+     * <b>Arbeitsgericht Elmshorn</b>
+     *  * <p>
+     *  *  Code: X6070
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Elmshorn;
+    /**
+     * <b>Arbeitsgericht Flensburg</b>
+     *  * <p>
+     *  *  Code: X6071
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Flensburg;
+    /**
+     * <b>Sozialgericht Itzehoe</b>
+     *  * <p>
+     *  *  Code: X6073
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Itzehoe;
+    /**
+     * <b>Schleswig-Holsteinisches Finanzgericht</b>
+     *  * <p>
+     *  *  Code: X6074
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Finanzgericht;
+    /**
+     * <b>Sozialgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X6075
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Kiel;
+    /**
+     * <b>Landesarbeitsgericht Schleswig-Holstein</b>
+     *  * <p>
+     *  *  Code: X6076
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landesarbeitsgericht_Schleswig_Holstein;
+    /**
+     * <b>Arbeitsgericht Neum&#252;nster</b>
+     *  * <p>
+     *  *  Code: X6077
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Neumuenster;
+    /**
+     * <b>Sozialgericht Schleswig</b>
+     *  * <p>
+     *  *  Code: X6078
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Schleswig;
+    /**
+     * <b>Schleswig-Holsteinisches Landessozialgericht</b>
+     *  * <p>
+     *  *  Code: X6079
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Landessozialgericht;
+    /**
+     * <b>Schleswig-Holsteinisches Verwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: X6080
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Verwaltungsgericht;
+    /**
+     * <b>Schleswig-Holsteinischer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: X6111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinischer_Anwaltsgerichtshof;
+    /**
+     * <b>Arbeitsgericht Kiel</b>
+     *  * <p>
+     *  *  Code: X6165
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Kiel;
+    /**
+     * <b>Arbeitsgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X6166
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Luebeck;
+    /**
+     * <b>Sozialgericht L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X6188
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Luebeck;
+    /**
+     * <b>Justizvollzugsanstalt L&#252;beck</b>
+     *  * <p>
+     *  *  Code: X6240
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Luebeck;
+    /**
+     * <b>Justizvollzugsanstalt Glasmoor</b>
+     *  * <p>
+     *  *  Code: X6313
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Glasmoor;
+    /**
+     * <b>Justizvollzugsanstalt Itzehoe</b>
+     *  * <p>
+     *  *  Code: X6315
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Itzehoe;
+    /**
+     * <b>Jugendanstalt Schleswig</b>
+     *  * <p>
+     *  *  Code: X6321
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendanstalt_Schleswig;
+    /**
+     * <b>Justizvollzugsanstalt Neum&#252;nster</b>
+     *  * <p>
+     *  *  Code: X6323
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Neumuenster;
+    /**
+     * <b>Schleswig-Holsteinisches Oberverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: X6387
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Oberverwaltungsgericht;
+    /**
+     * <b>Schleswig-Holsteinisches Landesverfassungsgericht</b>
+     *  * <p>
+     *  *  Code: X6433
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Landesverfassungsgericht;
+    /**
+     * <b>Justizvollzugsanstalt Kiel</b>
+     *  * <p>
+     *  *  Code: X6747
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Kiel;
+    /**
+     * <b>Justizvollzugsanstalt Flensburg</b>
+     *  * <p>
+     *  *  Code: X6756
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Flensburg;
+    /**
+     * <b>Schleswig-Holsteinisches Anwaltsgericht</b>
+     *  * <p>
+     *  *  Code: X6776
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Schleswig_Holsteinisches_Anwaltsgericht;
+    /**
+     * <b>Th&#252;ringer Oberlandesgericht</b>
+     *  * <p>
+     *  *  Code: Y1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Oberlandesgericht;
+    /**
+     * <b>Staatsanwaltschaft beim Oberlandesgericht Jena</b>
+     *  * <p>
+     *  *  Code: Y1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Oberlandesgericht_Jena;
+    /**
+     * <b>Landgericht Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Erfurt;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1100S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Erfurt;
+    /**
+     * <b>Amtsgericht Apolda</b>
+     *  * <p>
+     *  *  Code: Y1101
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Apolda;
+    /**
+     * <b>Grundbuchamt Apolda</b>
+     *  * <p>
+     *  *  Code: Y1101G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Apolda;
+    /**
+     * <b>Amtsgericht Arnstadt</b>
+     *  * <p>
+     *  *  Code: Y1102
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Arnstadt;
+    /**
+     * <b>Grundbuchamt Arnstadt</b>
+     *  * <p>
+     *  *  Code: Y1102G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Arnstadt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Sondershausen Zweigstelle Artern</b>
+     *  * <p>
+     *  *  Code: Y1103
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Sondershausen_Zweigstelle_Artern;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht M&#252;hlhausen Zweigstelle Bad Langensalza</b>
+     *  * <p>
+     *  *  Code: Y1104
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Muehlhausen_Zweigstelle_Bad_Langensalza;
+    /**
+     * <b>aufgel&#246;st-Grundbuchamt M&#252;hlhausen Zweigstelle Bad Langensalza</b>
+     *  * <p>
+     *  *  Code: Y1104G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Grundbuchamt_Muehlhausen_Zweigstelle_Bad_Langensalza;
+    /**
+     * <b>Amtsgericht Eisenach</b>
+     *  * <p>
+     *  *  Code: Y1105
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Eisenach;
+    /**
+     * <b>Grundbuchamt Eisenach</b>
+     *  * <p>
+     *  *  Code: Y1105G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Eisenach;
+    /**
+     * <b>Amtsgericht Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1106
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Erfurt;
+    /**
+     * <b>Grundbuchamt Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1106G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Erfurt;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Erfurt (Land)</b>
+     *  * <p>
+     *  *  Code: Y1107
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Erfurt_Land;
+    /**
+     * <b>Amtsgericht Gotha</b>
+     *  * <p>
+     *  *  Code: Y1108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gotha;
+    /**
+     * <b>Grundbuchamt Gotha</b>
+     *  * <p>
+     *  *  Code: Y1108G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gotha;
+    /**
+     * <b>Amtsgericht Heiligenstadt</b>
+     *  * <p>
+     *  *  Code: Y1109
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Heiligenstadt;
+    /**
+     * <b>Grundbuchamt Heilbad Heiligenstadt</b>
+     *  * <p>
+     *  *  Code: Y1109G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Heilbad_Heiligenstadt;
+    /**
+     * <b>Amtsgericht M&#252;hlhausen</b>
+     *  * <p>
+     *  *  Code: Y1110
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Muehlhausen;
+    /**
+     * <b>Grundbuchamt M&#252;hlhausen</b>
+     *  * <p>
+     *  *  Code: Y1110G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Muehlhausen;
+    /**
+     * <b>Amtsgericht Nordhausen</b>
+     *  * <p>
+     *  *  Code: Y1111
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Nordhausen;
+    /**
+     * <b>Grundbuchamt Nordhausen</b>
+     *  * <p>
+     *  *  Code: Y1111G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Nordhausen;
+    /**
+     * <b>Amtsgericht S&#246;mmerda</b>
+     *  * <p>
+     *  *  Code: Y1112
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Soemmerda;
+    /**
+     * <b>Grundbuchamt S&#246;mmerda</b>
+     *  * <p>
+     *  *  Code: Y1112G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Soemmerda;
+    /**
+     * <b>Amtsgericht Sondershausen</b>
+     *  * <p>
+     *  *  Code: Y1113
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sondershausen;
+    /**
+     * <b>Grundbuchamt Sondershausen</b>
+     *  * <p>
+     *  *  Code: Y1113G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sondershausen;
+    /**
+     * <b>Amtsgericht Weimar</b>
+     *  * <p>
+     *  *  Code: Y1114
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Weimar;
+    /**
+     * <b>Grundbuchamt Weimar</b>
+     *  * <p>
+     *  *  Code: Y1114G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Weimar;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Heilbad Heiligenstadt Zweigstelle Leinefelde-Worbis</b>
+     *  * <p>
+     *  *  Code: Y1115
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Heilbad_Heiligenstadt_Zweigstelle_Leinefelde_Worbis;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Gotha, Au&#223;enstelle der StA Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1116S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Gotha_Aussenstelle_der_StA_Erfurt;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Erfurt, Au&#223;enstelle Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1117S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Erfurt_Aussenstelle_Erfurt;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Weimar, Au&#223;enstelle der StA Erfurt</b>
+     *  * <p>
+     *  *  Code: Y1118S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Weimar_Aussenstelle_der_StA_Erfurt;
+    /**
+     * <b>Landgericht Gera</b>
+     *  * <p>
+     *  *  Code: Y1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Gera;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Gera</b>
+     *  * <p>
+     *  *  Code: Y1200S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Gera;
+    /**
+     * <b>Amtsgericht Altenburg</b>
+     *  * <p>
+     *  *  Code: Y1201
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Altenburg;
+    /**
+     * <b>Grundbuchamt Altenburg</b>
+     *  * <p>
+     *  *  Code: Y1201G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Altenburg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Eisenberg</b>
+     *  * <p>
+     *  *  Code: Y1202
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Eisenberg;
+    /**
+     * <b>Amtsgericht Gera</b>
+     *  * <p>
+     *  *  Code: Y1203
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Gera;
+    /**
+     * <b>Grundbuchamt Gera</b>
+     *  * <p>
+     *  *  Code: Y1203G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Gera;
+    /**
+     * <b>aufgel&#246;st-Kreisgericht Gera-Land</b>
+     *  * <p>
+     *  *  Code: Y1204
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Kreisgericht_Gera_Land;
+    /**
+     * <b>Amtsgericht Greiz</b>
+     *  * <p>
+     *  *  Code: Y1205
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Greiz;
+    /**
+     * <b>Grundbuchamt Greiz</b>
+     *  * <p>
+     *  *  Code: Y1205G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Greiz;
+    /**
+     * <b>Amtsgericht Jena</b>
+     *  * <p>
+     *  *  Code: Y1206
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Jena;
+    /**
+     * <b>Grundbuchamt Jena</b>
+     *  * <p>
+     *  *  Code: Y1206G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Jena;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Jena, Zwst. der StA Gera</b>
+     *  * <p>
+     *  *  Code: Y1206S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Jena_Zwst_der_StA_Gera;
+    /**
+     * <b>Amtsgericht Jena - Handels-, Genossenschafts- und Partnerschaftsregister</b>
+     *  * <p>
+     *  *  Code: Y1206V
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Jena_Handels_Genossenschafts_und_Partnerschaftsregister;
+    /**
+     * <b>Amtsgericht P&#246;&#223;neck Zweigstelle Bad Lobenstein</b>
+     *  * <p>
+     *  *  Code: Y1208
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Poessneck_Zweigstelle_Bad_Lobenstein;
+    /**
+     * <b>Grundbuchamt P&#246;&#223;neck Zweigstelle Bad Lobenstein</b>
+     *  * <p>
+     *  *  Code: Y1208G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Poessneck_Zweigstelle_Bad_Lobenstein;
+    /**
+     * <b>Amtsgericht P&#246;&#223;neck</b>
+     *  * <p>
+     *  *  Code: Y1209
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Poessneck;
+    /**
+     * <b>Grundbuchamt P&#246;&#223;neck</b>
+     *  * <p>
+     *  *  Code: Y1209G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Poessneck;
+    /**
+     * <b>Amtsgericht Rudolstadt</b>
+     *  * <p>
+     *  *  Code: Y1210
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rudolstadt;
+    /**
+     * <b>Grundbuchamt Rudolstadt</b>
+     *  * <p>
+     *  *  Code: Y1210G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rudolstadt;
+    /**
+     * <b>aufgel&#246;st-Staatsanwaltschaft beim Landgericht Rudolstadt, Zwst. der StA Gera</b>
+     *  * <p>
+     *  *  Code: Y1210S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Staatsanwaltschaft_beim_Landgericht_Rudolstadt_Zwst_der_StA_Gera;
+    /**
+     * <b>Amtsgericht Rudolstadt Zweigstelle Saalfeld</b>
+     *  * <p>
+     *  *  Code: Y1211
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Rudolstadt_Zweigstelle_Saalfeld;
+    /**
+     * <b>Grundbuchamt Rudolstadt Zweigstelle Saalfeld</b>
+     *  * <p>
+     *  *  Code: Y1211G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Rudolstadt_Zweigstelle_Saalfeld;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Lobenstein, Zwst. Schleiz</b>
+     *  * <p>
+     *  *  Code: Y1212
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Lobenstein_Zwst_Schleiz;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Altenburg, Zwst. Schm&#246;lln</b>
+     *  * <p>
+     *  *  Code: Y1213
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Altenburg_Zwst_Schmoelln;
+    /**
+     * <b>Amtsgericht Stadtroda</b>
+     *  * <p>
+     *  *  Code: Y1214
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Stadtroda;
+    /**
+     * <b>Grundbuchamt Stadtroda</b>
+     *  * <p>
+     *  *  Code: Y1214G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Stadtroda;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Greiz, Zwst. Zeulenroda</b>
+     *  * <p>
+     *  *  Code: Y1215
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Greiz_Zwst_Zeulenroda;
+    /**
+     * <b>Landgericht Meiningen</b>
+     *  * <p>
+     *  *  Code: Y1300
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Meiningen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht Meiningen</b>
+     *  * <p>
+     *  *  Code: Y1300S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Meiningen;
+    /**
+     * <b>Amtsgericht Bad Salzungen</b>
+     *  * <p>
+     *  *  Code: Y1301
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Bad_Salzungen;
+    /**
+     * <b>Grundbuchamt Bad Salzungen</b>
+     *  * <p>
+     *  *  Code: Y1301G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Bad_Salzungen;
+    /**
+     * <b>Amtsgericht Hildburghausen</b>
+     *  * <p>
+     *  *  Code: Y1302
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Hildburghausen;
+    /**
+     * <b>Grundbuchamt Hildburghausen</b>
+     *  * <p>
+     *  *  Code: Y1302G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Hildburghausen;
+    /**
+     * <b>Amtsgericht Arnstadt Zweigstelle Ilmenau</b>
+     *  * <p>
+     *  *  Code: Y1303
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Arnstadt_Zweigstelle_Ilmenau;
+    /**
+     * <b>Grundbuchamt Arnstadt Zweigstelle Ilmenau</b>
+     *  * <p>
+     *  *  Code: Y1303G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Arnstadt_Zweigstelle_Ilmenau;
+    /**
+     * <b>Amtsgericht Meiningen</b>
+     *  * <p>
+     *  *  Code: Y1304
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meiningen;
+    /**
+     * <b>Grundbuchamt Meiningen</b>
+     *  * <p>
+     *  *  Code: Y1304G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Meiningen;
+    /**
+     * <b>Amtsgericht Meiningen, Zentrales Vollstreckungsgericht Th&#252;ringen</b>
+     *  * <p>
+     *  *  Code: Y1304R
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Meiningen_Zentrales_Vollstreckungsgericht_Thueringen;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Neuhaus/Rwg.</b>
+     *  * <p>
+     *  *  Code: Y1305
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Neuhaus_Rwg;
+    /**
+     * <b>aufgel&#246;st-Amtsgericht Meiningen Zweigstelle Schmalkalden</b>
+     *  * <p>
+     *  *  Code: Y1306
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Amtsgericht_Meiningen_Zweigstelle_Schmalkalden;
+    /**
+     * <b>Amtsgericht Sonneberg</b>
+     *  * <p>
+     *  *  Code: Y1307
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Sonneberg;
+    /**
+     * <b>Grundbuchamt Sonneberg</b>
+     *  * <p>
+     *  *  Code: Y1307G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Sonneberg;
+    /**
+     * <b>Amtsgericht Suhl</b>
+     *  * <p>
+     *  *  Code: Y1308
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Amtsgericht_Suhl;
+    /**
+     * <b>Grundbuchamt Suhl</b>
+     *  * <p>
+     *  *  Code: Y1308G
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Grundbuchamt_Suhl;
+    /**
+     * <b>Landgericht M&#252;hlhausen</b>
+     *  * <p>
+     *  *  Code: Y1400
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Landgericht_Muehlhausen;
+    /**
+     * <b>Staatsanwaltschaft beim Landgericht M&#252;hlhausen</b>
+     *  * <p>
+     *  *  Code: Y1400S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Staatsanwaltschaft_beim_Landgericht_Muehlhausen;
+    /**
+     * <b>Th&#252;ringer Finanzgericht</b>
+     *  * <p>
+     *  *  Code: Y6003
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Finanzgericht;
+    /**
+     * <b>Th&#252;ringer Anwaltsgerichtshof</b>
+     *  * <p>
+     *  *  Code: Y6004
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Anwaltsgerichtshof;
+    /**
+     * <b>Bundesarbeitsgericht</b>
+     *  * <p>
+     *  *  Code: Y6010
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesarbeitsgericht;
+    /**
+     * <b>Arbeitsgericht Gera</b>
+     *  * <p>
+     *  *  Code: Y6060
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Gera;
+    /**
+     * <b>Verwaltungsgericht Gera</b>
+     *  * <p>
+     *  *  Code: Y6061
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Gera;
+    /**
+     * <b>Th&#252;ringer Verfassungsgerichtshof</b>
+     *  * <p>
+     *  *  Code: Y6149
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Verfassungsgerichtshof;
+    /**
+     * <b>Justizvollzugsanstalt Suhl-Goldlauter</b>
+     *  * <p>
+     *  *  Code: Y6319
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Suhl_Goldlauter;
+    /**
+     * <b>Justizvollzugsanstalt Hohenleuben</b>
+     *  * <p>
+     *  *  Code: Y6320
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Hohenleuben;
+    /**
+     * <b>Justizvollzugsanstalt Unterma&#223;feld</b>
+     *  * <p>
+     *  *  Code: Y6322
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Untermassfeld;
+    /**
+     * <b>Justizvollzugsanstalt Tonna</b>
+     *  * <p>
+     *  *  Code: Y6323
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Justizvollzugsanstalt_Tonna;
+    /**
+     * <b>Verwaltungsgericht Weimar</b>
+     *  * <p>
+     *  *  Code: Y6325
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Weimar;
+    /**
+     * <b>Th&#252;ringer Anwaltsgericht</b>
+     *  * <p>
+     *  *  Code: Y6342
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Anwaltsgericht;
+    /**
+     * <b>Th&#252;ringer Landesarbeitsgericht</b>
+     *  * <p>
+     *  *  Code: Y6388
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Landesarbeitsgericht;
+    /**
+     * <b>Arbeitsgericht Eisenach</b>
+     *  * <p>
+     *  *  Code: Y6389
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Eisenach;
+    /**
+     * <b>Arbeitsgericht Erfurt</b>
+     *  * <p>
+     *  *  Code: Y6390
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Erfurt;
+    /**
+     * <b>Arbeitsgericht Jena</b>
+     *  * <p>
+     *  *  Code: Y6391
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Jena;
+    /**
+     * <b>Arbeitsgericht Nordhausen</b>
+     *  * <p>
+     *  *  Code: Y6392
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Nordhausen;
+    /**
+     * <b>Arbeitsgericht Suhl</b>
+     *  * <p>
+     *  *  Code: Y6393
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Arbeitsgericht_Suhl;
+    /**
+     * <b>Th&#252;ringer Oberverwaltungsgericht</b>
+     *  * <p>
+     *  *  Code: Y6397
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Oberverwaltungsgericht;
+    /**
+     * <b>Verwaltungsgericht Meiningen</b>
+     *  * <p>
+     *  *  Code: Y6398
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Verwaltungsgericht_Meiningen;
+    /**
+     * <b>Th&#252;ringer Landessozialgericht</b>
+     *  * <p>
+     *  *  Code: Y6402
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Thueringer_Landessozialgericht;
+    /**
+     * <b>Sozialgericht Altenburg</b>
+     *  * <p>
+     *  *  Code: Y6403
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Altenburg;
+    /**
+     * <b>Sozialgericht Gotha</b>
+     *  * <p>
+     *  *  Code: Y6404
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Gotha;
+    /**
+     * <b>Sozialgericht Meiningen</b>
+     *  * <p>
+     *  *  Code: Y6405
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Meiningen;
+    /**
+     * <b>Sozialgericht Nordhausen</b>
+     *  * <p>
+     *  *  Code: Y6406
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Sozialgericht_Nordhausen;
+    /**
+     * <b>Jugendstrafanstalt Arnstadt</b>
+     *  * <p>
+     *  *  Code: Y6508
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Jugendstrafanstalt_Arnstadt;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof -Ref. BZR 3 / SB 31-</b>
+     *  * <p>
+     *  *  Code: Z1000
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_BZR_3_SB_31;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof -Testanfragen-</b>
+     *  * <p>
+     *  *  Code: Z1000S
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof_Testanfragen;
+    /**
+     * <b>Der Generalbundesanwalt b. BGH Dienststelle Bundeszentralreg. Arbeitsgruppe &quot;Wahlen&quot;</b>
+     *  * <p>
+     *  *  Code: Z1007
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_b_BGH_Dienststelle_Bundeszentralreg_Arbeitsgruppe_Wahlen;
+    /**
+     * <b>aufgel&#246;st-Der Generalbundesanwalt beim Bundesgerichtshof -Bundeszentralregister-</b>
+     *  * <p>
+     *  *  Code: Z1100
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode aufgeloest_Der_Generalbundesanwalt_beim_Bundesgerichtshof_Bundeszentralregister;
+    /**
+     * <b>Bundesamt f&#252;r Justiz, Internationaler Strafnachrichtenaustausch</b>
+     *  * <p>
+     *  *  Code: Z1200
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof Zentrale Beh&#246;rde / SorgeR&#220;bkAG</b>
+     *  * <p>
+     *  *  Code: Z6108
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG;
+    /**
+     * <b>Der Generalbundesanwalt beim Bundesgerichtshof Ref. IV 3 AZ. IV 29 H 2/90</b>
+     *  * <p>
+     *  *  Code: Z7350
+     *  * <p>
+     *  * 
+     */
+    public static GerichtCode Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90;
+
+    private final String value;
+    private final String name;
+    private static final List<GerichtCode> $VALUES = new ArrayList<>();
+
+    private GerichtCode(String name, String value) { this.name = name; this.value = value; }
+
+    /**
+     * Gets the xml value.
+     * @return the xml value
+     */
+    @JsonValue
+    public String getValue() { return value; }
+
+    /**
+     * Gets the enum name.
+     * @return the enum name
+     */
+    public String name() { return name; }
+
+    /**
+     * Returns an unmodifiable list of all enum values.
+     * @return the list of enum values
+     */
+    public static List<GerichtCode> values() { return Collections.unmodifiableList($VALUES); }
+
+    static {
+        init0();
+        init1();
+        init2();
+        init3();
+        init4();
+        init5();
+    }
+
+    private static void init0() {
+        ZZ_Test_Bund = new GerichtCode("ZZ_Test_Bund", "9A0000");
+        $VALUES.add(ZZ_Test_Bund);
+        ZZ_Test_Baden_Wuerttemberg = new GerichtCode("ZZ_Test_Baden_Wuerttemberg", "9B0000");
+        $VALUES.add(ZZ_Test_Baden_Wuerttemberg);
+        ZZ_Test_Bayern = new GerichtCode("ZZ_Test_Bayern", "9D0000");
+        $VALUES.add(ZZ_Test_Bayern);
+        ZZ_Test_Berlin = new GerichtCode("ZZ_Test_Berlin", "9F0000");
+        $VALUES.add(ZZ_Test_Berlin);
+        ZZ_Test_Brandenburg = new GerichtCode("ZZ_Test_Brandenburg", "9G0000");
+        $VALUES.add(ZZ_Test_Brandenburg);
+        ZZ_Test_Bremen = new GerichtCode("ZZ_Test_Bremen", "9H0000");
+        $VALUES.add(ZZ_Test_Bremen);
+        ZZ_Test_Hamburg = new GerichtCode("ZZ_Test_Hamburg", "9K0000");
+        $VALUES.add(ZZ_Test_Hamburg);
+        ZZ_Test_Hessen = new GerichtCode("ZZ_Test_Hessen", "9M0000");
+        $VALUES.add(ZZ_Test_Hessen);
+        ZZ_Test_Mecklenburg_Vorpommern = new GerichtCode("ZZ_Test_Mecklenburg_Vorpommern", "9N0000");
+        $VALUES.add(ZZ_Test_Mecklenburg_Vorpommern);
+        ZZ_Test_Niedersachsen = new GerichtCode("ZZ_Test_Niedersachsen", "9P0000");
+        $VALUES.add(ZZ_Test_Niedersachsen);
+        ZZ_Test_Nordrhein_Westfalen = new GerichtCode("ZZ_Test_Nordrhein_Westfalen", "9R0000");
+        $VALUES.add(ZZ_Test_Nordrhein_Westfalen);
+        ZZ_Test_Rheinland_Pfalz = new GerichtCode("ZZ_Test_Rheinland_Pfalz", "9T0000");
+        $VALUES.add(ZZ_Test_Rheinland_Pfalz);
+        ZZ_Test_Sachsen = new GerichtCode("ZZ_Test_Sachsen", "9U0000");
+        $VALUES.add(ZZ_Test_Sachsen);
+        ZZ_Test_Saarland = new GerichtCode("ZZ_Test_Saarland", "9V0000");
+        $VALUES.add(ZZ_Test_Saarland);
+        ZZ_Test_Sachsen_Anhalt = new GerichtCode("ZZ_Test_Sachsen_Anhalt", "9W0000");
+        $VALUES.add(ZZ_Test_Sachsen_Anhalt);
+        ZZ_Test_Schleswig_Holstein = new GerichtCode("ZZ_Test_Schleswig_Holstein", "9X0000");
+        $VALUES.add(ZZ_Test_Schleswig_Holstein);
+        ZZ_Test_Thueringen = new GerichtCode("ZZ_Test_Thueringen", "9Y0000");
+        $VALUES.add(ZZ_Test_Thueringen);
+        Bundesgerichtshof_Karlsruhe = new GerichtCode("Bundesgerichtshof_Karlsruhe", "A1000");
+        $VALUES.add(Bundesgerichtshof_Karlsruhe);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof", "A1000S");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof_5_Strafsenat = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof_5_Strafsenat", "A1001S");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_5_Strafsenat);
+        Oberlandesgericht_Karlsruhe = new GerichtCode("Oberlandesgericht_Karlsruhe", "B1000");
+        $VALUES.add(Oberlandesgericht_Karlsruhe);
+        Staatsanwaltschaften_beim_Oberlandesgericht_Karlsruhe = new GerichtCode("Staatsanwaltschaften_beim_Oberlandesgericht_Karlsruhe", "B1000S");
+        $VALUES.add(Staatsanwaltschaften_beim_Oberlandesgericht_Karlsruhe);
+        Oberlandesgericht_Karlsruhe_Aussenstelle_Freiburg = new GerichtCode("Oberlandesgericht_Karlsruhe_Aussenstelle_Freiburg", "B1001");
+        $VALUES.add(Oberlandesgericht_Karlsruhe_Aussenstelle_Freiburg);
+        Landgericht_Baden_Baden = new GerichtCode("Landgericht_Baden_Baden", "B1100");
+        $VALUES.add(Landgericht_Baden_Baden);
+        Staatsanwaltschaft_beim_Landgericht_Baden_Baden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Baden_Baden", "B1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Baden_Baden);
+        Amtsgericht_Achern = new GerichtCode("Amtsgericht_Achern", "B1101");
+        $VALUES.add(Amtsgericht_Achern);
+        Grundbuchamt_Achern = new GerichtCode("Grundbuchamt_Achern", "B1101G");
+        $VALUES.add(Grundbuchamt_Achern);
+        Amtsgericht_Baden_Baden = new GerichtCode("Amtsgericht_Baden_Baden", "B1102");
+        $VALUES.add(Amtsgericht_Baden_Baden);
+        Amtsgericht_Buehl = new GerichtCode("Amtsgericht_Buehl", "B1103");
+        $VALUES.add(Amtsgericht_Buehl);
+        Amtsgericht_Gernsbach = new GerichtCode("Amtsgericht_Gernsbach", "B1104");
+        $VALUES.add(Amtsgericht_Gernsbach);
+        Amtsgericht_Rastatt = new GerichtCode("Amtsgericht_Rastatt", "B1105");
+        $VALUES.add(Amtsgericht_Rastatt);
+        Landgericht_Freiburg_i_Br = new GerichtCode("Landgericht_Freiburg_i_Br", "B1200");
+        $VALUES.add(Landgericht_Freiburg_i_Br);
+        Staatsanwaltschaft_beim_Landgericht_Freiburg_im_Breisgau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Freiburg_im_Breisgau", "B1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Freiburg_im_Breisgau);
+        Amtsgericht_Breisach = new GerichtCode("Amtsgericht_Breisach", "B1201");
+        $VALUES.add(Amtsgericht_Breisach);
+        Amtsgericht_Emmendingen = new GerichtCode("Amtsgericht_Emmendingen", "B1202");
+        $VALUES.add(Amtsgericht_Emmendingen);
+        Grundbuchamt_Emmendingen = new GerichtCode("Grundbuchamt_Emmendingen", "B1202G");
+        $VALUES.add(Grundbuchamt_Emmendingen);
+        Amtsgericht_Ettenheim = new GerichtCode("Amtsgericht_Ettenheim", "B1203");
+        $VALUES.add(Amtsgericht_Ettenheim);
+        Amtsgericht_Freiburg = new GerichtCode("Amtsgericht_Freiburg", "B1204");
+        $VALUES.add(Amtsgericht_Freiburg);
+        Amtsgericht_Kenzingen = new GerichtCode("Amtsgericht_Kenzingen", "B1205");
+        $VALUES.add(Amtsgericht_Kenzingen);
+        Amtsgericht_Loerrach = new GerichtCode("Amtsgericht_Loerrach", "B1206");
+        $VALUES.add(Amtsgericht_Loerrach);
+        Staatsanwaltschaft_beim_Landgericht_Loerrach_Zwst_der_StA_Freiburg_im_Breisgau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Loerrach_Zwst_der_StA_Freiburg_im_Breisgau", "B1206S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Loerrach_Zwst_der_StA_Freiburg_im_Breisgau);
+        Amtsgericht_Muellheim = new GerichtCode("Amtsgericht_Muellheim", "B1207");
+        $VALUES.add(Amtsgericht_Muellheim);
+        Amtsgericht_Titisee_Neustadt = new GerichtCode("Amtsgericht_Titisee_Neustadt", "B1208");
+        $VALUES.add(Amtsgericht_Titisee_Neustadt);
+        Amtsgericht_Staufen = new GerichtCode("Amtsgericht_Staufen", "B1209");
+        $VALUES.add(Amtsgericht_Staufen);
+        Amtsgericht_Waldkirch = new GerichtCode("Amtsgericht_Waldkirch", "B1210");
+        $VALUES.add(Amtsgericht_Waldkirch);
+        Landgericht_Heidelberg = new GerichtCode("Landgericht_Heidelberg", "B1300");
+        $VALUES.add(Landgericht_Heidelberg);
+        Staatsanwaltschaft_beim_Landgericht_Heidelberg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Heidelberg", "B1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Heidelberg);
+        aufgeloest_Amtsgericht_Eppingen = new GerichtCode("aufgeloest_Amtsgericht_Eppingen", "B1301");
+        $VALUES.add(aufgeloest_Amtsgericht_Eppingen);
+        Amtsgericht_Heidelberg = new GerichtCode("Amtsgericht_Heidelberg", "B1302");
+        $VALUES.add(Amtsgericht_Heidelberg);
+        aufgeloest_Amtsgericht_Sinsheim_Zwst_Neckarbischofsheim = new GerichtCode("aufgeloest_Amtsgericht_Sinsheim_Zwst_Neckarbischofsheim", "B1303");
+        $VALUES.add(aufgeloest_Amtsgericht_Sinsheim_Zwst_Neckarbischofsheim);
+        Amtsgericht_Sinsheim = new GerichtCode("Amtsgericht_Sinsheim", "B1304");
+        $VALUES.add(Amtsgericht_Sinsheim);
+        Amtsgericht_Wiesloch = new GerichtCode("Amtsgericht_Wiesloch", "B1305");
+        $VALUES.add(Amtsgericht_Wiesloch);
+        Landgericht_Karlsruhe = new GerichtCode("Landgericht_Karlsruhe", "B1400");
+        $VALUES.add(Landgericht_Karlsruhe);
+        Staatsanwaltschaft_beim_Landgericht_Karlsruhe = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Karlsruhe", "B1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Karlsruhe);
+        Amtsgericht_Bretten = new GerichtCode("Amtsgericht_Bretten", "B1401");
+        $VALUES.add(Amtsgericht_Bretten);
+        Amtsgericht_Bruchsal = new GerichtCode("Amtsgericht_Bruchsal", "B1402");
+        $VALUES.add(Amtsgericht_Bruchsal);
+        Amtsgericht_Ettlingen = new GerichtCode("Amtsgericht_Ettlingen", "B1403");
+        $VALUES.add(Amtsgericht_Ettlingen);
+        Amtsgericht_Karlsruhe = new GerichtCode("Amtsgericht_Karlsruhe", "B1404");
+        $VALUES.add(Amtsgericht_Karlsruhe);
+        Amtsgericht_Karlsruhe_Zentrales_Vollstreckungsgericht_Baden_Wuerttemberg = new GerichtCode("Amtsgericht_Karlsruhe_Zentrales_Vollstreckungsgericht_Baden_Wuerttemberg", "B1404R");
+        $VALUES.add(Amtsgericht_Karlsruhe_Zentrales_Vollstreckungsgericht_Baden_Wuerttemberg);
+        Amtsgericht_Karlsruhe_Durlach = new GerichtCode("Amtsgericht_Karlsruhe_Durlach", "B1405");
+        $VALUES.add(Amtsgericht_Karlsruhe_Durlach);
+        Amtsgericht_Pforzheim = new GerichtCode("Amtsgericht_Pforzheim", "B1406");
+        $VALUES.add(Amtsgericht_Pforzheim);
+        Staatsanwaltschaft_beim_Landgericht_Pforzheim_Zwst_der_StA_Karlsruhe = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Pforzheim_Zwst_der_StA_Karlsruhe", "B1406S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Pforzheim_Zwst_der_StA_Karlsruhe);
+        Amtsgericht_Philippsburg = new GerichtCode("Amtsgericht_Philippsburg", "B1407");
+        $VALUES.add(Amtsgericht_Philippsburg);
+        Amtsgericht_Pforzheim_Zweigstelle_Neuenbuerg = new GerichtCode("Amtsgericht_Pforzheim_Zweigstelle_Neuenbuerg", "B1408");
+        $VALUES.add(Amtsgericht_Pforzheim_Zweigstelle_Neuenbuerg);
+        Landgericht_Konstanz = new GerichtCode("Landgericht_Konstanz", "B1500");
+        $VALUES.add(Landgericht_Konstanz);
+        Staatsanwaltschaft_beim_Landgericht_Konstanz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Konstanz", "B1500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Konstanz);
+        Amtsgericht_Donaueschingen = new GerichtCode("Amtsgericht_Donaueschingen", "B1501");
+        $VALUES.add(Amtsgericht_Donaueschingen);
+        aufgeloest_Amtsgericht_Engen = new GerichtCode("aufgeloest_Amtsgericht_Engen", "B1502");
+        $VALUES.add(aufgeloest_Amtsgericht_Engen);
+        Amtsgericht_Konstanz = new GerichtCode("Amtsgericht_Konstanz", "B1503");
+        $VALUES.add(Amtsgericht_Konstanz);
+        aufgeloest_Amtsgericht_Messkirch = new GerichtCode("aufgeloest_Amtsgericht_Messkirch", "B1504");
+        $VALUES.add(aufgeloest_Amtsgericht_Messkirch);
+        aufgeloest_Amtsgericht_Sigmaringen_Zwst_Pfullendorf = new GerichtCode("aufgeloest_Amtsgericht_Sigmaringen_Zwst_Pfullendorf", "B1505");
+        $VALUES.add(aufgeloest_Amtsgericht_Sigmaringen_Zwst_Pfullendorf);
+        Amtsgericht_Radolfzell = new GerichtCode("Amtsgericht_Radolfzell", "B1506");
+        $VALUES.add(Amtsgericht_Radolfzell);
+        Amtsgericht_Singen = new GerichtCode("Amtsgericht_Singen", "B1507");
+        $VALUES.add(Amtsgericht_Singen);
+        Amtsgericht_Stockach = new GerichtCode("Amtsgericht_Stockach", "B1508");
+        $VALUES.add(Amtsgericht_Stockach);
+        aufgeloest_Amtsgericht_Triberg_im_Schwarzwald = new GerichtCode("aufgeloest_Amtsgericht_Triberg_im_Schwarzwald", "B1509");
+        $VALUES.add(aufgeloest_Amtsgericht_Triberg_im_Schwarzwald);
+        Amtsgericht_Ueberlingen = new GerichtCode("Amtsgericht_Ueberlingen", "B1510");
+        $VALUES.add(Amtsgericht_Ueberlingen);
+        Amtsgericht_Villingen_Schwenningen = new GerichtCode("Amtsgericht_Villingen_Schwenningen", "B1511");
+        $VALUES.add(Amtsgericht_Villingen_Schwenningen);
+        Grundbuchamt_Villingen_Schwenningen = new GerichtCode("Grundbuchamt_Villingen_Schwenningen", "B1511G");
+        $VALUES.add(Grundbuchamt_Villingen_Schwenningen);
+        Staatsanwaltschaft_beim_Landgericht_Villingen_Schwenningen_Zwst_der_StA_Konstanz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Villingen_Schwenningen_Zwst_der_StA_Konstanz", "B1511S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Villingen_Schwenningen_Zwst_der_StA_Konstanz);
+        Landgericht_Konstanz_Aussenstelle_Villingen_Schwenningen = new GerichtCode("Landgericht_Konstanz_Aussenstelle_Villingen_Schwenningen", "B1512");
+        $VALUES.add(Landgericht_Konstanz_Aussenstelle_Villingen_Schwenningen);
+        Landgericht_Mannheim = new GerichtCode("Landgericht_Mannheim", "B1600");
+        $VALUES.add(Landgericht_Mannheim);
+        Staatsanwaltschaft_beim_Landgericht_Mannheim = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Mannheim", "B1600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Mannheim);
+        Amtsgericht_Mannheim = new GerichtCode("Amtsgericht_Mannheim", "B1601");
+        $VALUES.add(Amtsgericht_Mannheim);
+        Grundbuchamt_Mannheim = new GerichtCode("Grundbuchamt_Mannheim", "B1601G");
+        $VALUES.add(Grundbuchamt_Mannheim);
+        Amtsgericht_Schwetzingen = new GerichtCode("Amtsgericht_Schwetzingen", "B1602");
+        $VALUES.add(Amtsgericht_Schwetzingen);
+        Amtsgericht_Weinheim = new GerichtCode("Amtsgericht_Weinheim", "B1603");
+        $VALUES.add(Amtsgericht_Weinheim);
+        Landgericht_Mosbach = new GerichtCode("Landgericht_Mosbach", "B1700");
+        $VALUES.add(Landgericht_Mosbach);
+        Staatsanwaltschaft_beim_Landgericht_Mosbach = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Mosbach", "B1700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Mosbach);
+        Amtsgericht_Adelsheim = new GerichtCode("Amtsgericht_Adelsheim", "B1701");
+        $VALUES.add(Amtsgericht_Adelsheim);
+        aufgeloest_Amtsgericht_Boxberg = new GerichtCode("aufgeloest_Amtsgericht_Boxberg", "B1702");
+        $VALUES.add(aufgeloest_Amtsgericht_Boxberg);
+        Amtsgericht_Buchen = new GerichtCode("Amtsgericht_Buchen", "B1703");
+        $VALUES.add(Amtsgericht_Buchen);
+        aufgeloest_Amtsgericht_Eberbach = new GerichtCode("aufgeloest_Amtsgericht_Eberbach", "B1704");
+        $VALUES.add(aufgeloest_Amtsgericht_Eberbach);
+        Amtsgericht_Mosbach = new GerichtCode("Amtsgericht_Mosbach", "B1705");
+        $VALUES.add(Amtsgericht_Mosbach);
+        Amtsgericht_Tauberbischofsheim = new GerichtCode("Amtsgericht_Tauberbischofsheim", "B1706");
+        $VALUES.add(Amtsgericht_Tauberbischofsheim);
+        Grundbuchamt_Tauberbischofsheim = new GerichtCode("Grundbuchamt_Tauberbischofsheim", "B1706G");
+        $VALUES.add(Grundbuchamt_Tauberbischofsheim);
+        Amtsgericht_Wertheim = new GerichtCode("Amtsgericht_Wertheim", "B1707");
+        $VALUES.add(Amtsgericht_Wertheim);
+        Landgericht_Offenburg = new GerichtCode("Landgericht_Offenburg", "B1800");
+        $VALUES.add(Landgericht_Offenburg);
+        Staatsanwaltschaft_beim_Landgericht_Offenburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Offenburg", "B1800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Offenburg);
+        Amtsgericht_Gengenbach = new GerichtCode("Amtsgericht_Gengenbach", "B1801");
+        $VALUES.add(Amtsgericht_Gengenbach);
+        Amtsgericht_Kehl = new GerichtCode("Amtsgericht_Kehl", "B1802");
+        $VALUES.add(Amtsgericht_Kehl);
+        Amtsgericht_Lahr = new GerichtCode("Amtsgericht_Lahr", "B1803");
+        $VALUES.add(Amtsgericht_Lahr);
+        Amtsgericht_Oberkirch = new GerichtCode("Amtsgericht_Oberkirch", "B1804");
+        $VALUES.add(Amtsgericht_Oberkirch);
+        Amtsgericht_Offenburg = new GerichtCode("Amtsgericht_Offenburg", "B1805");
+        $VALUES.add(Amtsgericht_Offenburg);
+        Amtsgericht_Wolfach = new GerichtCode("Amtsgericht_Wolfach", "B1806");
+        $VALUES.add(Amtsgericht_Wolfach);
+        Landgericht_Waldshut_Tiengen = new GerichtCode("Landgericht_Waldshut_Tiengen", "B1900");
+        $VALUES.add(Landgericht_Waldshut_Tiengen);
+        Staatsanwaltschaft_beim_Landgericht_Waldshut_Tiengen_frueher_Waldshut = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Waldshut_Tiengen_frueher_Waldshut", "B1900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Waldshut_Tiengen_frueher_Waldshut);
+        aufgeloest_Amtsgericht_Bonndorf_im_Schwarzwald = new GerichtCode("aufgeloest_Amtsgericht_Bonndorf_im_Schwarzwald", "B1901");
+        $VALUES.add(aufgeloest_Amtsgericht_Bonndorf_im_Schwarzwald);
+        Amtsgericht_Bad_Saeckingen = new GerichtCode("Amtsgericht_Bad_Saeckingen", "B1902");
+        $VALUES.add(Amtsgericht_Bad_Saeckingen);
+        Amtsgericht_St_Blasien = new GerichtCode("Amtsgericht_St_Blasien", "B1903");
+        $VALUES.add(Amtsgericht_St_Blasien);
+        Amtsgericht_Schoenau = new GerichtCode("Amtsgericht_Schoenau", "B1904");
+        $VALUES.add(Amtsgericht_Schoenau);
+        Amtsgericht_Schopfheim = new GerichtCode("Amtsgericht_Schopfheim", "B1905");
+        $VALUES.add(Amtsgericht_Schopfheim);
+        Amtsgericht_Waldshut_Tiengen = new GerichtCode("Amtsgericht_Waldshut_Tiengen", "B1906");
+        $VALUES.add(Amtsgericht_Waldshut_Tiengen);
+        Oberlandesgericht_Stuttgart = new GerichtCode("Oberlandesgericht_Stuttgart", "B2000");
+        $VALUES.add(Oberlandesgericht_Stuttgart);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Stuttgart = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Stuttgart", "B2000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Stuttgart);
+        Landgericht_Ellwangen = new GerichtCode("Landgericht_Ellwangen", "B2100");
+        $VALUES.add(Landgericht_Ellwangen);
+        Staatsanwaltschaft_beim_Landgericht_Ellwangen_Jagst = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Ellwangen_Jagst", "B2100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Ellwangen_Jagst);
+        Amtsgericht_Aalen = new GerichtCode("Amtsgericht_Aalen", "B2101");
+        $VALUES.add(Amtsgericht_Aalen);
+        Amtsgericht_Bad_Mergentheim = new GerichtCode("Amtsgericht_Bad_Mergentheim", "B2102");
+        $VALUES.add(Amtsgericht_Bad_Mergentheim);
+        Amtsgericht_Crailsheim = new GerichtCode("Amtsgericht_Crailsheim", "B2103");
+        $VALUES.add(Amtsgericht_Crailsheim);
+        Amtsgericht_Ellwangen = new GerichtCode("Amtsgericht_Ellwangen", "B2104");
+        $VALUES.add(Amtsgericht_Ellwangen);
+        Amtsgericht_Heidenheim = new GerichtCode("Amtsgericht_Heidenheim", "B2105");
+        $VALUES.add(Amtsgericht_Heidenheim);
+        Amtsgericht_Langenburg = new GerichtCode("Amtsgericht_Langenburg", "B2106");
+        $VALUES.add(Amtsgericht_Langenburg);
+        Amtsgericht_Neresheim = new GerichtCode("Amtsgericht_Neresheim", "B2107");
+        $VALUES.add(Amtsgericht_Neresheim);
+        Amtsgericht_Schwaebisch_Gmuend = new GerichtCode("Amtsgericht_Schwaebisch_Gmuend", "B2108");
+        $VALUES.add(Amtsgericht_Schwaebisch_Gmuend);
+        Grundbuchamt_Schwaebisch_Gmuend = new GerichtCode("Grundbuchamt_Schwaebisch_Gmuend", "B2108G");
+        $VALUES.add(Grundbuchamt_Schwaebisch_Gmuend);
+        Landgericht_Hechingen = new GerichtCode("Landgericht_Hechingen", "B2200");
+        $VALUES.add(Landgericht_Hechingen);
+        Staatsanwaltschaft_beim_Landgericht_Hechingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hechingen", "B2200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hechingen);
+        Amtsgericht_Balingen = new GerichtCode("Amtsgericht_Balingen", "B2201");
+        $VALUES.add(Amtsgericht_Balingen);
+        Amtsgericht_Albstadt = new GerichtCode("Amtsgericht_Albstadt", "B2202");
+        $VALUES.add(Amtsgericht_Albstadt);
+        aufgeloest_Amtsgericht_Haigerloch = new GerichtCode("aufgeloest_Amtsgericht_Haigerloch", "B2203");
+        $VALUES.add(aufgeloest_Amtsgericht_Haigerloch);
+        Amtsgericht_Hechingen = new GerichtCode("Amtsgericht_Hechingen", "B2204");
+        $VALUES.add(Amtsgericht_Hechingen);
+        Amtsgericht_Sigmaringen = new GerichtCode("Amtsgericht_Sigmaringen", "B2205");
+        $VALUES.add(Amtsgericht_Sigmaringen);
+        Grundbuchamt_Sigmaringen = new GerichtCode("Grundbuchamt_Sigmaringen", "B2205G");
+        $VALUES.add(Grundbuchamt_Sigmaringen);
+        Landgericht_Heilbronn = new GerichtCode("Landgericht_Heilbronn", "B2300");
+        $VALUES.add(Landgericht_Heilbronn);
+        Staatsanwaltschaft_beim_Landgericht_Heilbronn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Heilbronn", "B2300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Heilbronn);
+        Amtsgericht_Besigheim = new GerichtCode("Amtsgericht_Besigheim", "B2301");
+        $VALUES.add(Amtsgericht_Besigheim);
+        Amtsgericht_Brackenheim = new GerichtCode("Amtsgericht_Brackenheim", "B2302");
+        $VALUES.add(Amtsgericht_Brackenheim);
+        Amtsgericht_Heilbronn = new GerichtCode("Amtsgericht_Heilbronn", "B2303");
+        $VALUES.add(Amtsgericht_Heilbronn);
+        Grundbuchamt_Heilbronn = new GerichtCode("Grundbuchamt_Heilbronn", "B2303G");
+        $VALUES.add(Grundbuchamt_Heilbronn);
+        Amtsgericht_Kuenzelsau = new GerichtCode("Amtsgericht_Kuenzelsau", "B2304");
+        $VALUES.add(Amtsgericht_Kuenzelsau);
+        Amtsgericht_Marbach_a_N = new GerichtCode("Amtsgericht_Marbach_a_N", "B2305");
+        $VALUES.add(Amtsgericht_Marbach_a_N);
+        Amtsgericht_Maulbronn = new GerichtCode("Amtsgericht_Maulbronn", "B2306");
+        $VALUES.add(Amtsgericht_Maulbronn);
+        Grundbuchamt_Maulbronn = new GerichtCode("Grundbuchamt_Maulbronn", "B2306G");
+        $VALUES.add(Grundbuchamt_Maulbronn);
+        Amtsgericht_Oehringen = new GerichtCode("Amtsgericht_Oehringen", "B2307");
+        $VALUES.add(Amtsgericht_Oehringen);
+        Amtsgericht_Schwaebisch_Hall = new GerichtCode("Amtsgericht_Schwaebisch_Hall", "B2308");
+        $VALUES.add(Amtsgericht_Schwaebisch_Hall);
+        Staatsanwaltschaft_beim_Landgericht_Schwaebisch_Hall_Zwst_der_StA_Heilbronn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Schwaebisch_Hall_Zwst_der_StA_Heilbronn", "B2308S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Schwaebisch_Hall_Zwst_der_StA_Heilbronn);
+        Amtsgericht_Vaihingen = new GerichtCode("Amtsgericht_Vaihingen", "B2309");
+        $VALUES.add(Amtsgericht_Vaihingen);
+        Landgericht_Ravensburg = new GerichtCode("Landgericht_Ravensburg", "B2400");
+        $VALUES.add(Landgericht_Ravensburg);
+        Staatsanwaltschaft_beim_Landgericht_Ravensburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Ravensburg", "B2400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Ravensburg);
+        Amtsgericht_Bad_Waldsee = new GerichtCode("Amtsgericht_Bad_Waldsee", "B2401");
+        $VALUES.add(Amtsgericht_Bad_Waldsee);
+        Amtsgericht_Biberach = new GerichtCode("Amtsgericht_Biberach", "B2402");
+        $VALUES.add(Amtsgericht_Biberach);
+        Amtsgericht_Leutkirch = new GerichtCode("Amtsgericht_Leutkirch", "B2403");
+        $VALUES.add(Amtsgericht_Leutkirch);
+        Amtsgericht_Ravensburg = new GerichtCode("Amtsgericht_Ravensburg", "B2404");
+        $VALUES.add(Amtsgericht_Ravensburg);
+        Grundbuchamt_Ravensburg = new GerichtCode("Grundbuchamt_Ravensburg", "B2404G");
+        $VALUES.add(Grundbuchamt_Ravensburg);
+        Amtsgericht_Riedlingen = new GerichtCode("Amtsgericht_Riedlingen", "B2405");
+        $VALUES.add(Amtsgericht_Riedlingen);
+        Amtsgericht_Bad_Saulgau = new GerichtCode("Amtsgericht_Bad_Saulgau", "B2406");
+        $VALUES.add(Amtsgericht_Bad_Saulgau);
+        Amtsgericht_Tettnang = new GerichtCode("Amtsgericht_Tettnang", "B2407");
+        $VALUES.add(Amtsgericht_Tettnang);
+        Amtsgericht_Wangen = new GerichtCode("Amtsgericht_Wangen", "B2408");
+        $VALUES.add(Amtsgericht_Wangen);
+        Landgericht_Rottweil = new GerichtCode("Landgericht_Rottweil", "B2500");
+        $VALUES.add(Landgericht_Rottweil);
+        Staatsanwaltschaft_beim_Landgericht_Rottweil = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Rottweil", "B2500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Rottweil);
+        Amtsgericht_Freudenstadt = new GerichtCode("Amtsgericht_Freudenstadt", "B2501");
+        $VALUES.add(Amtsgericht_Freudenstadt);
+        Amtsgericht_Horb = new GerichtCode("Amtsgericht_Horb", "B2502");
+        $VALUES.add(Amtsgericht_Horb);
+        Amtsgericht_Oberndorf = new GerichtCode("Amtsgericht_Oberndorf", "B2503");
+        $VALUES.add(Amtsgericht_Oberndorf);
+        Amtsgericht_Rottweil = new GerichtCode("Amtsgericht_Rottweil", "B2504");
+        $VALUES.add(Amtsgericht_Rottweil);
+        Amtsgericht_Spaichingen = new GerichtCode("Amtsgericht_Spaichingen", "B2505");
+        $VALUES.add(Amtsgericht_Spaichingen);
+        Amtsgericht_Tuttlingen = new GerichtCode("Amtsgericht_Tuttlingen", "B2506");
+        $VALUES.add(Amtsgericht_Tuttlingen);
+        Landgericht_Stuttgart = new GerichtCode("Landgericht_Stuttgart", "B2600");
+        $VALUES.add(Landgericht_Stuttgart);
+        Staatsanwaltschaft_beim_Landgericht_Stuttgart = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Stuttgart", "B2600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Stuttgart);
+        Amtsgericht_Backnang = new GerichtCode("Amtsgericht_Backnang", "B2601");
+        $VALUES.add(Amtsgericht_Backnang);
+        Amtsgericht_Boeblingen = new GerichtCode("Amtsgericht_Boeblingen", "B2602");
+        $VALUES.add(Amtsgericht_Boeblingen);
+        Grundbuchamt_Boeblingen = new GerichtCode("Grundbuchamt_Boeblingen", "B2602G");
+        $VALUES.add(Grundbuchamt_Boeblingen);
+        Amtsgericht_Esslingen = new GerichtCode("Amtsgericht_Esslingen", "B2603");
+        $VALUES.add(Amtsgericht_Esslingen);
+        Amtsgericht_Kirchheim = new GerichtCode("Amtsgericht_Kirchheim", "B2604");
+        $VALUES.add(Amtsgericht_Kirchheim);
+        Amtsgericht_Leonberg = new GerichtCode("Amtsgericht_Leonberg", "B2605");
+        $VALUES.add(Amtsgericht_Leonberg);
+        Amtsgericht_Ludwigsburg = new GerichtCode("Amtsgericht_Ludwigsburg", "B2606");
+        $VALUES.add(Amtsgericht_Ludwigsburg);
+        Amtsgericht_Nuertingen = new GerichtCode("Amtsgericht_Nuertingen", "B2607");
+        $VALUES.add(Amtsgericht_Nuertingen);
+        Amtsgericht_Schorndorf = new GerichtCode("Amtsgericht_Schorndorf", "B2608");
+        $VALUES.add(Amtsgericht_Schorndorf);
+        Amtsgericht_Stuttgart = new GerichtCode("Amtsgericht_Stuttgart", "B2609");
+        $VALUES.add(Amtsgericht_Stuttgart);
+        Amtsgericht_Stuttgart_Zentrales_Mahngericht_fuer_Baden_Wuerttemberg = new GerichtCode("Amtsgericht_Stuttgart_Zentrales_Mahngericht_fuer_Baden_Wuerttemberg", "B2609M");
+        $VALUES.add(Amtsgericht_Stuttgart_Zentrales_Mahngericht_fuer_Baden_Wuerttemberg);
+        Amtsgericht_Stuttgart_Bad_Cannstatt = new GerichtCode("Amtsgericht_Stuttgart_Bad_Cannstatt", "B2610");
+        $VALUES.add(Amtsgericht_Stuttgart_Bad_Cannstatt);
+        Amtsgericht_Waiblingen = new GerichtCode("Amtsgericht_Waiblingen", "B2611");
+        $VALUES.add(Amtsgericht_Waiblingen);
+        Grundbuchamt_Waiblingen = new GerichtCode("Grundbuchamt_Waiblingen", "B2611G");
+        $VALUES.add(Grundbuchamt_Waiblingen);
+        Landgericht_Tuebingen = new GerichtCode("Landgericht_Tuebingen", "B2700");
+        $VALUES.add(Landgericht_Tuebingen);
+        Staatsanwaltschaft_beim_Landgericht_Tuebingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Tuebingen", "B2700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Tuebingen);
+        Amtsgericht_Calw = new GerichtCode("Amtsgericht_Calw", "B2701");
+        $VALUES.add(Amtsgericht_Calw);
+        Staatsanwaltschaft_beim_Landgericht_Calw_Aussenstelle_der_StA_Tuebingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Calw_Aussenstelle_der_StA_Tuebingen", "B2701S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Calw_Aussenstelle_der_StA_Tuebingen);
+        Amtsgericht_Muensingen = new GerichtCode("Amtsgericht_Muensingen", "B2702");
+        $VALUES.add(Amtsgericht_Muensingen);
+        Amtsgericht_Nagold = new GerichtCode("Amtsgericht_Nagold", "B2703");
+        $VALUES.add(Amtsgericht_Nagold);
+        Amtsgericht_Reutlingen = new GerichtCode("Amtsgericht_Reutlingen", "B2705");
+        $VALUES.add(Amtsgericht_Reutlingen);
+        Amtsgericht_Rottenburg = new GerichtCode("Amtsgericht_Rottenburg", "B2706");
+        $VALUES.add(Amtsgericht_Rottenburg);
+        Amtsgericht_Tuebingen = new GerichtCode("Amtsgericht_Tuebingen", "B2707");
+        $VALUES.add(Amtsgericht_Tuebingen);
+        Amtsgericht_Bad_Urach = new GerichtCode("Amtsgericht_Bad_Urach", "B2708");
+        $VALUES.add(Amtsgericht_Bad_Urach);
+        Landgericht_Ulm = new GerichtCode("Landgericht_Ulm", "B2800");
+        $VALUES.add(Landgericht_Ulm);
+        Staatsanwaltschaft_beim_Landgericht_Ulm = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Ulm", "B2800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Ulm);
+        Amtsgericht_Ehingen = new GerichtCode("Amtsgericht_Ehingen", "B2801");
+        $VALUES.add(Amtsgericht_Ehingen);
+        Amtsgericht_Geislingen = new GerichtCode("Amtsgericht_Geislingen", "B2802");
+        $VALUES.add(Amtsgericht_Geislingen);
+        Amtsgericht_Goeppingen = new GerichtCode("Amtsgericht_Goeppingen", "B2803");
+        $VALUES.add(Amtsgericht_Goeppingen);
+        aufgeloest_Amtsgericht_Laupheim = new GerichtCode("aufgeloest_Amtsgericht_Laupheim", "B2804");
+        $VALUES.add(aufgeloest_Amtsgericht_Laupheim);
+        Amtsgericht_Ulm = new GerichtCode("Amtsgericht_Ulm", "B2805");
+        $VALUES.add(Amtsgericht_Ulm);
+        Grundbuchamt_Ulm = new GerichtCode("Grundbuchamt_Ulm", "B2805G");
+        $VALUES.add(Grundbuchamt_Ulm);
+        Landgericht_Karlsruhe_Auswaertige_Strafkammer_Pforzheim = new GerichtCode("Landgericht_Karlsruhe_Auswaertige_Strafkammer_Pforzheim", "B2900");
+        $VALUES.add(Landgericht_Karlsruhe_Auswaertige_Strafkammer_Pforzheim);
+        Justizvollzugsanstalt_Stuttgart = new GerichtCode("Justizvollzugsanstalt_Stuttgart", "B6099");
+        $VALUES.add(Justizvollzugsanstalt_Stuttgart);
+        Finanzgericht_Baden_Wuerttemberg_Senate_in_Stuttgart = new GerichtCode("Finanzgericht_Baden_Wuerttemberg_Senate_in_Stuttgart", "B6103");
+        $VALUES.add(Finanzgericht_Baden_Wuerttemberg_Senate_in_Stuttgart);
+        Justizvollzugskrankenhaus_Hohenasperg = new GerichtCode("Justizvollzugskrankenhaus_Hohenasperg", "B6149");
+        $VALUES.add(Justizvollzugskrankenhaus_Hohenasperg);
+        Finanzgericht_Baden_Wuerttemberg_Aussensenate_in_Freiburg = new GerichtCode("Finanzgericht_Baden_Wuerttemberg_Aussensenate_in_Freiburg", "B6155");
+        $VALUES.add(Finanzgericht_Baden_Wuerttemberg_Aussensenate_in_Freiburg);
+        Justizvollzugsanstalt_Adelsheim = new GerichtCode("Justizvollzugsanstalt_Adelsheim", "B6183");
+        $VALUES.add(Justizvollzugsanstalt_Adelsheim);
+        Sozialgericht_Freiburg = new GerichtCode("Sozialgericht_Freiburg", "B6225");
+        $VALUES.add(Sozialgericht_Freiburg);
+        Verwaltungsgericht_Freiburg = new GerichtCode("Verwaltungsgericht_Freiburg", "B6226");
+        $VALUES.add(Verwaltungsgericht_Freiburg);
+        Arbeitsgericht_Freiburg_Kammern_Freiburg = new GerichtCode("Arbeitsgericht_Freiburg_Kammern_Freiburg", "B6227");
+        $VALUES.add(Arbeitsgericht_Freiburg_Kammern_Freiburg);
+        Arbeitsgericht_Heilbronn = new GerichtCode("Arbeitsgericht_Heilbronn", "B6228");
+        $VALUES.add(Arbeitsgericht_Heilbronn);
+        Sozialgericht_Heilbronn = new GerichtCode("Sozialgericht_Heilbronn", "B6229");
+        $VALUES.add(Sozialgericht_Heilbronn);
+        Verwaltungsgericht_Karlsruhe = new GerichtCode("Verwaltungsgericht_Karlsruhe", "B6230");
+        $VALUES.add(Verwaltungsgericht_Karlsruhe);
+        Verwaltungsgericht_Karlsruhe_Aussenstelle = new GerichtCode("Verwaltungsgericht_Karlsruhe_Aussenstelle", "B6231");
+        $VALUES.add(Verwaltungsgericht_Karlsruhe_Aussenstelle);
+        Bundesverfassungsgericht = new GerichtCode("Bundesverfassungsgericht", "B6232");
+        $VALUES.add(Bundesverfassungsgericht);
+        aufgeloest_Finanzgericht_Baden_Wuerttemberg = new GerichtCode("aufgeloest_Finanzgericht_Baden_Wuerttemberg", "B6233");
+        $VALUES.add(aufgeloest_Finanzgericht_Baden_Wuerttemberg);
+        Sozialgericht_Karlsruhe = new GerichtCode("Sozialgericht_Karlsruhe", "B6234");
+        $VALUES.add(Sozialgericht_Karlsruhe);
+        Sozialgericht_Konstanz = new GerichtCode("Sozialgericht_Konstanz", "B6235");
+        $VALUES.add(Sozialgericht_Konstanz);
+        aufgeloest_Arbeitsgericht_Loerrach = new GerichtCode("aufgeloest_Arbeitsgericht_Loerrach", "B6236");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Loerrach);
+        Arbeitsgericht_Mannheim = new GerichtCode("Arbeitsgericht_Mannheim", "B6237");
+        $VALUES.add(Arbeitsgericht_Mannheim);
+        Verwaltungsgerichtshof_Baden_Wuerttemberg = new GerichtCode("Verwaltungsgerichtshof_Baden_Wuerttemberg", "B6238");
+        $VALUES.add(Verwaltungsgerichtshof_Baden_Wuerttemberg);
+        Arbeitsgericht_Pforzheim = new GerichtCode("Arbeitsgericht_Pforzheim", "B6239");
+        $VALUES.add(Arbeitsgericht_Pforzheim);
+        Sozialgericht_Stuttgart = new GerichtCode("Sozialgericht_Stuttgart", "B6240");
+        $VALUES.add(Sozialgericht_Stuttgart);
+        Arbeitsgericht_Stuttgart = new GerichtCode("Arbeitsgericht_Stuttgart", "B6241");
+        $VALUES.add(Arbeitsgericht_Stuttgart);
+        Verwaltungsgericht_Stuttgart = new GerichtCode("Verwaltungsgericht_Stuttgart", "B6242");
+        $VALUES.add(Verwaltungsgericht_Stuttgart);
+        Verfassungsgerichtshof_fuer_das_Land_Baden_Wuerttemberg = new GerichtCode("Verfassungsgerichtshof_fuer_das_Land_Baden_Wuerttemberg", "B6243");
+        $VALUES.add(Verfassungsgerichtshof_fuer_das_Land_Baden_Wuerttemberg);
+        Landesarbeitsgericht_Baden_Wuerttemberg = new GerichtCode("Landesarbeitsgericht_Baden_Wuerttemberg", "B6244");
+        $VALUES.add(Landesarbeitsgericht_Baden_Wuerttemberg);
+        Arbeitsgericht_Ulm = new GerichtCode("Arbeitsgericht_Ulm", "B6245");
+        $VALUES.add(Arbeitsgericht_Ulm);
+        Landessozialgericht_Baden_Wuerttemberg = new GerichtCode("Landessozialgericht_Baden_Wuerttemberg", "B6246");
+        $VALUES.add(Landessozialgericht_Baden_Wuerttemberg);
+        Sozialgericht_Ulm = new GerichtCode("Sozialgericht_Ulm", "B6250");
+        $VALUES.add(Sozialgericht_Ulm);
+        Arbeitsgericht_Reutlingen = new GerichtCode("Arbeitsgericht_Reutlingen", "B6461");
+        $VALUES.add(Arbeitsgericht_Reutlingen);
+        Sozialgericht_Mannheim = new GerichtCode("Sozialgericht_Mannheim", "B6518");
+        $VALUES.add(Sozialgericht_Mannheim);
+        Sozialgericht_Reutlingen = new GerichtCode("Sozialgericht_Reutlingen", "B6519");
+        $VALUES.add(Sozialgericht_Reutlingen);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Freiburg = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Freiburg", "B6547");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Freiburg);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Karlsruhe = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Karlsruhe", "B6550");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Karlsruhe);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Stuttgart = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Stuttgart", "B6551");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Stuttgart);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Tuebingen = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Tuebingen", "B6577");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Tuebingen);
+        Anwaltsgerichtshof_Baden_Wuerttemberg = new GerichtCode("Anwaltsgerichtshof_Baden_Wuerttemberg", "B6579");
+        $VALUES.add(Anwaltsgerichtshof_Baden_Wuerttemberg);
+        Sozialtherapeutische_Anstalt_Baden_Wuerttemberg_Asperg = new GerichtCode("Sozialtherapeutische_Anstalt_Baden_Wuerttemberg_Asperg", "B6704");
+        $VALUES.add(Sozialtherapeutische_Anstalt_Baden_Wuerttemberg_Asperg);
+        Jugendarrestanstalt_Goeppingen = new GerichtCode("Jugendarrestanstalt_Goeppingen", "B7423");
+        $VALUES.add(Jugendarrestanstalt_Goeppingen);
+        Notariat_VII_Mannheim_Nachlassgericht = new GerichtCode("Notariat_VII_Mannheim_Nachlassgericht", "B7554");
+        $VALUES.add(Notariat_VII_Mannheim_Nachlassgericht);
+        Justizvollzugsanstalt_Bruchsal = new GerichtCode("Justizvollzugsanstalt_Bruchsal", "B7645");
+        $VALUES.add(Justizvollzugsanstalt_Bruchsal);
+        Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Freiburg = new GerichtCode("Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Freiburg", "B7691");
+        $VALUES.add(Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Freiburg);
+        Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Mannheim = new GerichtCode("Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Mannheim", "B7692");
+        $VALUES.add(Landesarbeitsgericht_Baden_Wuerttemberg_Kammern_Mannheim);
+        Arbeitsgericht_Karlsruhe = new GerichtCode("Arbeitsgericht_Karlsruhe", "B7696");
+        $VALUES.add(Arbeitsgericht_Karlsruhe);
+        Justizvollzugsanstalt_Schwaebisch_Gmuend = new GerichtCode("Justizvollzugsanstalt_Schwaebisch_Gmuend", "B7761");
+        $VALUES.add(Justizvollzugsanstalt_Schwaebisch_Gmuend);
+        Verwaltungsgericht_Sigmaringen = new GerichtCode("Verwaltungsgericht_Sigmaringen", "B7820");
+        $VALUES.add(Verwaltungsgericht_Sigmaringen);
+        Justizvollzugsanstalt_Freiburg = new GerichtCode("Justizvollzugsanstalt_Freiburg", "B7841");
+        $VALUES.add(Justizvollzugsanstalt_Freiburg);
+        Justizvollzugsanstalt_Ulm = new GerichtCode("Justizvollzugsanstalt_Ulm", "B7846");
+        $VALUES.add(Justizvollzugsanstalt_Ulm);
+        Justizvollzugsanstalt_Mannheim = new GerichtCode("Justizvollzugsanstalt_Mannheim", "B8322");
+        $VALUES.add(Justizvollzugsanstalt_Mannheim);
+        Justizvollzugsanstalt_Heilbronn = new GerichtCode("Justizvollzugsanstalt_Heilbronn", "B8375");
+        $VALUES.add(Justizvollzugsanstalt_Heilbronn);
+        Justizvollzugsanstalt_Heimsheim = new GerichtCode("Justizvollzugsanstalt_Heimsheim", "B8376");
+        $VALUES.add(Justizvollzugsanstalt_Heimsheim);
+        Justizvollzugsanstalt_Karlsruhe = new GerichtCode("Justizvollzugsanstalt_Karlsruhe", "B8377");
+        $VALUES.add(Justizvollzugsanstalt_Karlsruhe);
+        Justizvollzugsanstalt_Konstanz = new GerichtCode("Justizvollzugsanstalt_Konstanz", "B8378");
+        $VALUES.add(Justizvollzugsanstalt_Konstanz);
+        Justizvollzugsanstalt_Ravensburg = new GerichtCode("Justizvollzugsanstalt_Ravensburg", "B8379");
+        $VALUES.add(Justizvollzugsanstalt_Ravensburg);
+        Justizvollzugsanstalt_Rottweil = new GerichtCode("Justizvollzugsanstalt_Rottweil", "B8380");
+        $VALUES.add(Justizvollzugsanstalt_Rottweil);
+        Justizvollzugsanstalt_Waldshut_Tiengen = new GerichtCode("Justizvollzugsanstalt_Waldshut_Tiengen", "B8381");
+        $VALUES.add(Justizvollzugsanstalt_Waldshut_Tiengen);
+        Justizvollzugsanstalt_Schwaebisch_Hall = new GerichtCode("Justizvollzugsanstalt_Schwaebisch_Hall", "B8392");
+        $VALUES.add(Justizvollzugsanstalt_Schwaebisch_Hall);
+        Registergericht_Amtsgericht_Stuttgart = new GerichtCode("Registergericht_Amtsgericht_Stuttgart", "B8534");
+        $VALUES.add(Registergericht_Amtsgericht_Stuttgart);
+        Registergericht_Amtsgericht_Mannheim = new GerichtCode("Registergericht_Amtsgericht_Mannheim", "B8535");
+        $VALUES.add(Registergericht_Amtsgericht_Mannheim);
+        Registergericht_Amtsgericht_Freiburg_i_Br = new GerichtCode("Registergericht_Amtsgericht_Freiburg_i_Br", "B8536");
+        $VALUES.add(Registergericht_Amtsgericht_Freiburg_i_Br);
+        Registergericht_Amtsgericht_Ulm = new GerichtCode("Registergericht_Amtsgericht_Ulm", "B8537");
+        $VALUES.add(Registergericht_Amtsgericht_Ulm);
+        Justizvollzugsanstalt_Offenburg = new GerichtCode("Justizvollzugsanstalt_Offenburg", "B8559");
+        $VALUES.add(Justizvollzugsanstalt_Offenburg);
+        Grundbuchzentralarchiv_Baden_Wuerttemberg = new GerichtCode("Grundbuchzentralarchiv_Baden_Wuerttemberg", "B8721G");
+        $VALUES.add(Grundbuchzentralarchiv_Baden_Wuerttemberg);
+        Arbeitsgericht_Stuttgart_Aussenstelle_Aalen = new GerichtCode("Arbeitsgericht_Stuttgart_Aussenstelle_Aalen", "B8940");
+        $VALUES.add(Arbeitsgericht_Stuttgart_Aussenstelle_Aalen);
+        Arbeitsgericht_Stuttgart_Aussenstelle_Ludwigsburg = new GerichtCode("Arbeitsgericht_Stuttgart_Aussenstelle_Ludwigsburg", "B8941");
+        $VALUES.add(Arbeitsgericht_Stuttgart_Aussenstelle_Ludwigsburg);
+        Arbeitsgericht_Freiburg_Kammern_Offenburg_Offenburg = new GerichtCode("Arbeitsgericht_Freiburg_Kammern_Offenburg_Offenburg", "B9023");
+        $VALUES.add(Arbeitsgericht_Freiburg_Kammern_Offenburg_Offenburg);
+        Arbeitsgericht_Heilbronn_Kammern_Crailsheim_Crailsheim = new GerichtCode("Arbeitsgericht_Heilbronn_Kammern_Crailsheim_Crailsheim", "B9024");
+        $VALUES.add(Arbeitsgericht_Heilbronn_Kammern_Crailsheim_Crailsheim);
+        Arbeitsgericht_Ulm_Kammern_Ravensburg_Ravensburg = new GerichtCode("Arbeitsgericht_Ulm_Kammern_Ravensburg_Ravensburg", "B9025");
+        $VALUES.add(Arbeitsgericht_Ulm_Kammern_Ravensburg_Ravensburg);
+        Arbeitsgericht_Villingen_Schwenningen_Villingen_Schwenningen = new GerichtCode("Arbeitsgericht_Villingen_Schwenningen_Villingen_Schwenningen", "B9026");
+        $VALUES.add(Arbeitsgericht_Villingen_Schwenningen_Villingen_Schwenningen);
+        Arbeitsgericht_Villingen_Schwenningen_Kammern_Radolfzell_Radolfzell = new GerichtCode("Arbeitsgericht_Villingen_Schwenningen_Kammern_Radolfzell_Radolfzell", "B9027");
+        $VALUES.add(Arbeitsgericht_Villingen_Schwenningen_Kammern_Radolfzell_Radolfzell);
+        Arbeitsgericht_Mannheim_Kammern_Heidelberg_Heidelberg = new GerichtCode("Arbeitsgericht_Mannheim_Kammern_Heidelberg_Heidelberg", "B9028");
+        $VALUES.add(Arbeitsgericht_Mannheim_Kammern_Heidelberg_Heidelberg);
+        Arbeitsgericht_Freiburg_Kammern_Loerrach = new GerichtCode("Arbeitsgericht_Freiburg_Kammern_Loerrach", "B9029");
+        $VALUES.add(Arbeitsgericht_Freiburg_Kammern_Loerrach);
+        Justizvollzugsanstalt_Rottenburg = new GerichtCode("Justizvollzugsanstalt_Rottenburg", "B9162");
+        $VALUES.add(Justizvollzugsanstalt_Rottenburg);
+        Europaeische_Staatsanwaltschaft_EPPO_EUStA = new GerichtCode("Europaeische_Staatsanwaltschaft_EPPO_EUStA", "C6087");
+        $VALUES.add(Europaeische_Staatsanwaltschaft_EPPO_EUStA);
+        Bayerisches_Oberstes_Landesgericht_Muenchen = new GerichtCode("Bayerisches_Oberstes_Landesgericht_Muenchen", "D1000");
+        $VALUES.add(Bayerisches_Oberstes_Landesgericht_Muenchen);
+        aufgeloest_Staatsanwaltschaft_bei_dem_Bayerischen_Obersten_Landesgericht_Muenchen = new GerichtCode("aufgeloest_Staatsanwaltschaft_bei_dem_Bayerischen_Obersten_Landesgericht_Muenchen", "D1000S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_bei_dem_Bayerischen_Obersten_Landesgericht_Muenchen);
+        Oberlandesgericht_Muenchen = new GerichtCode("Oberlandesgericht_Muenchen", "D2000");
+        $VALUES.add(Oberlandesgericht_Muenchen);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Muenchen = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Muenchen", "D2000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Muenchen);
+        Landgericht_Augsburg = new GerichtCode("Landgericht_Augsburg", "D2100");
+        $VALUES.add(Landgericht_Augsburg);
+        Staatsanwaltschaft_beim_Landgericht_Augsburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Augsburg", "D2100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Augsburg);
+        Amtsgericht_Aichach = new GerichtCode("Amtsgericht_Aichach", "D2101");
+        $VALUES.add(Amtsgericht_Aichach);
+        Grundbuchamt_Aichach = new GerichtCode("Grundbuchamt_Aichach", "D2101G");
+        $VALUES.add(Grundbuchamt_Aichach);
+        Amtsgericht_Augsburg = new GerichtCode("Amtsgericht_Augsburg", "D2102");
+        $VALUES.add(Amtsgericht_Augsburg);
+        Grundbuchamt_Augsburg = new GerichtCode("Grundbuchamt_Augsburg", "D2102G");
+        $VALUES.add(Grundbuchamt_Augsburg);
+        Registergericht_Amtsgericht_Augsburg = new GerichtCode("Registergericht_Amtsgericht_Augsburg", "D2102V");
+        $VALUES.add(Registergericht_Amtsgericht_Augsburg);
+        Amtsgericht_Dillingen = new GerichtCode("Amtsgericht_Dillingen", "D2103");
+        $VALUES.add(Amtsgericht_Dillingen);
+        Grundbuchamt_Dillingen = new GerichtCode("Grundbuchamt_Dillingen", "D2103G");
+        $VALUES.add(Grundbuchamt_Dillingen);
+        aufgeloest_Amtsgericht_Noerdlingen_Zweigstelle_Donauwoerth = new GerichtCode("aufgeloest_Amtsgericht_Noerdlingen_Zweigstelle_Donauwoerth", "D2104");
+        $VALUES.add(aufgeloest_Amtsgericht_Noerdlingen_Zweigstelle_Donauwoerth);
+        aufgeloest_Amtsgericht_Friedberg_Bayern = new GerichtCode("aufgeloest_Amtsgericht_Friedberg_Bayern", "D2105");
+        $VALUES.add(aufgeloest_Amtsgericht_Friedberg_Bayern);
+        Amtsgericht_Landsberg = new GerichtCode("Amtsgericht_Landsberg", "D2106");
+        $VALUES.add(Amtsgericht_Landsberg);
+        Grundbuchamt_Landsberg = new GerichtCode("Grundbuchamt_Landsberg", "D2106G");
+        $VALUES.add(Grundbuchamt_Landsberg);
+        Amtsgericht_Noerdlingen = new GerichtCode("Amtsgericht_Noerdlingen", "D2108");
+        $VALUES.add(Amtsgericht_Noerdlingen);
+        Grundbuchamt_Noerdlingen = new GerichtCode("Grundbuchamt_Noerdlingen", "D2108G");
+        $VALUES.add(Grundbuchamt_Noerdlingen);
+        aufgeloest_Amtsgericht_Schrobenhausen = new GerichtCode("aufgeloest_Amtsgericht_Schrobenhausen", "D2109");
+        $VALUES.add(aufgeloest_Amtsgericht_Schrobenhausen);
+        Amtsgericht_Augsburg_Zweigstelle_Schwabmuenchen = new GerichtCode("Amtsgericht_Augsburg_Zweigstelle_Schwabmuenchen", "D2110");
+        $VALUES.add(Amtsgericht_Augsburg_Zweigstelle_Schwabmuenchen);
+        aufgeloest_Amtsgericht_Wertingen = new GerichtCode("aufgeloest_Amtsgericht_Wertingen", "D2111");
+        $VALUES.add(aufgeloest_Amtsgericht_Wertingen);
+        Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Aichach = new GerichtCode("Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Aichach", "D2120");
+        $VALUES.add(Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Aichach);
+        Landgericht_Augsburg_Strafvollstreckungskammer_Noerdlingen = new GerichtCode("Landgericht_Augsburg_Strafvollstreckungskammer_Noerdlingen", "D2130");
+        $VALUES.add(Landgericht_Augsburg_Strafvollstreckungskammer_Noerdlingen);
+        Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Landsberg = new GerichtCode("Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Landsberg", "D2140");
+        $VALUES.add(Landgericht_Augsburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Landsberg);
+        Landgericht_Deggendorf = new GerichtCode("Landgericht_Deggendorf", "D2200");
+        $VALUES.add(Landgericht_Deggendorf);
+        Staatsanwaltschaft_beim_Landgericht_Deggendorf = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Deggendorf", "D2200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Deggendorf);
+        Amtsgericht_Deggendorf = new GerichtCode("Amtsgericht_Deggendorf", "D2201");
+        $VALUES.add(Amtsgericht_Deggendorf);
+        Grundbuchamt_Deggendorf = new GerichtCode("Grundbuchamt_Deggendorf", "D2201G");
+        $VALUES.add(Grundbuchamt_Deggendorf);
+        Registergericht_Amtsgericht_Deggendorf = new GerichtCode("Registergericht_Amtsgericht_Deggendorf", "D2201V");
+        $VALUES.add(Registergericht_Amtsgericht_Deggendorf);
+        aufgeloest_Amtsgericht_Grafenau = new GerichtCode("aufgeloest_Amtsgericht_Grafenau", "D2202");
+        $VALUES.add(aufgeloest_Amtsgericht_Grafenau);
+        aufgeloest_Amtsgericht_Hengersberg = new GerichtCode("aufgeloest_Amtsgericht_Hengersberg", "D2203");
+        $VALUES.add(aufgeloest_Amtsgericht_Hengersberg);
+        aufgeloest_Amtsgericht_Regen = new GerichtCode("aufgeloest_Amtsgericht_Regen", "D2204");
+        $VALUES.add(aufgeloest_Amtsgericht_Regen);
+        Amtsgericht_Viechtach = new GerichtCode("Amtsgericht_Viechtach", "D2205");
+        $VALUES.add(Amtsgericht_Viechtach);
+        Grundbuchamt_Viechtach = new GerichtCode("Grundbuchamt_Viechtach", "D2205G");
+        $VALUES.add(Grundbuchamt_Viechtach);
+        Landgericht_Kempten = new GerichtCode("Landgericht_Kempten", "D2300");
+        $VALUES.add(Landgericht_Kempten);
+        Staatsanwaltschaft_beim_Landgericht_Kempten_Allgaeu = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Kempten_Allgaeu", "D2300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Kempten_Allgaeu);
+        aufgeloest_Amtsgericht_Kaufbeuren_Zweigstelle_Fuessen = new GerichtCode("aufgeloest_Amtsgericht_Kaufbeuren_Zweigstelle_Fuessen", "D2301");
+        $VALUES.add(aufgeloest_Amtsgericht_Kaufbeuren_Zweigstelle_Fuessen);
+        aufgeloest_Amtsgericht_Immenstadt_i_Allgaeu = new GerichtCode("aufgeloest_Amtsgericht_Immenstadt_i_Allgaeu", "D2302");
+        $VALUES.add(aufgeloest_Amtsgericht_Immenstadt_i_Allgaeu);
+        Amtsgericht_Kaufbeuren = new GerichtCode("Amtsgericht_Kaufbeuren", "D2303");
+        $VALUES.add(Amtsgericht_Kaufbeuren);
+        Grundbuchamt_Kaufbeuren = new GerichtCode("Grundbuchamt_Kaufbeuren", "D2303G");
+        $VALUES.add(Grundbuchamt_Kaufbeuren);
+        Amtsgericht_Kempten = new GerichtCode("Amtsgericht_Kempten", "D2304");
+        $VALUES.add(Amtsgericht_Kempten);
+        Grundbuchamt_Kempten = new GerichtCode("Grundbuchamt_Kempten", "D2304G");
+        $VALUES.add(Grundbuchamt_Kempten);
+        Registergericht_Amtsgericht_Kempten = new GerichtCode("Registergericht_Amtsgericht_Kempten", "D2304V");
+        $VALUES.add(Registergericht_Amtsgericht_Kempten);
+        Amtsgericht_Lindau = new GerichtCode("Amtsgericht_Lindau", "D2305");
+        $VALUES.add(Amtsgericht_Lindau);
+        Grundbuchamt_Lindau = new GerichtCode("Grundbuchamt_Lindau", "D2305G");
+        $VALUES.add(Grundbuchamt_Lindau);
+        aufgeloest_Amtsgericht_Kaufbeuren_Zwst_Marktoberdorf = new GerichtCode("aufgeloest_Amtsgericht_Kaufbeuren_Zwst_Marktoberdorf", "D2306");
+        $VALUES.add(aufgeloest_Amtsgericht_Kaufbeuren_Zwst_Marktoberdorf);
+        aufgeloest_Amtsgericht_Weilheim_Zweigstelle_Schongau = new GerichtCode("aufgeloest_Amtsgericht_Weilheim_Zweigstelle_Schongau", "D2307");
+        $VALUES.add(aufgeloest_Amtsgericht_Weilheim_Zweigstelle_Schongau);
+        Amtsgericht_Sonthofen = new GerichtCode("Amtsgericht_Sonthofen", "D2308");
+        $VALUES.add(Amtsgericht_Sonthofen);
+        Grundbuchamt_Sonthofen = new GerichtCode("Grundbuchamt_Sonthofen", "D2308G");
+        $VALUES.add(Grundbuchamt_Sonthofen);
+        aufgeloest_Amtsgericht_Weiler_Lindenberg = new GerichtCode("aufgeloest_Amtsgericht_Weiler_Lindenberg", "D2309");
+        $VALUES.add(aufgeloest_Amtsgericht_Weiler_Lindenberg);
+        Landgericht_Landshut = new GerichtCode("Landgericht_Landshut", "D2400");
+        $VALUES.add(Landgericht_Landshut);
+        Staatsanwaltschaft_beim_Landgericht_Landshut = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Landshut", "D2400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Landshut);
+        aufgeloest_Amtsgericht_Dingolfing = new GerichtCode("aufgeloest_Amtsgericht_Dingolfing", "D2401");
+        $VALUES.add(aufgeloest_Amtsgericht_Dingolfing);
+        Amtsgericht_Eggenfelden = new GerichtCode("Amtsgericht_Eggenfelden", "D2402");
+        $VALUES.add(Amtsgericht_Eggenfelden);
+        Grundbuchamt_Eggenfelden = new GerichtCode("Grundbuchamt_Eggenfelden", "D2402G");
+        $VALUES.add(Grundbuchamt_Eggenfelden);
+        Amtsgericht_Landau_Bay = new GerichtCode("Amtsgericht_Landau_Bay", "D2403");
+        $VALUES.add(Amtsgericht_Landau_Bay);
+        Grundbuchamt_Landau = new GerichtCode("Grundbuchamt_Landau", "D2403G");
+        $VALUES.add(Grundbuchamt_Landau);
+        Amtsgericht_Landshut = new GerichtCode("Amtsgericht_Landshut", "D2404");
+        $VALUES.add(Amtsgericht_Landshut);
+        Grundbuchamt_Landshut = new GerichtCode("Grundbuchamt_Landshut", "D2404G");
+        $VALUES.add(Grundbuchamt_Landshut);
+        Registergericht_Amtsgericht_Landshut = new GerichtCode("Registergericht_Amtsgericht_Landshut", "D2404V");
+        $VALUES.add(Registergericht_Amtsgericht_Landshut);
+        aufgeloest_Amtsgericht_Kelheim_Zweigstelle_Mainburg = new GerichtCode("aufgeloest_Amtsgericht_Kelheim_Zweigstelle_Mainburg", "D2405");
+        $VALUES.add(aufgeloest_Amtsgericht_Kelheim_Zweigstelle_Mainburg);
+        aufgeloest_Amtsgericht_Mallersdorf = new GerichtCode("aufgeloest_Amtsgericht_Mallersdorf", "D2406");
+        $VALUES.add(aufgeloest_Amtsgericht_Mallersdorf);
+        aufgeloest_Amtsgericht_Freising_Zweigstelle_Moosburg = new GerichtCode("aufgeloest_Amtsgericht_Freising_Zweigstelle_Moosburg", "D2407");
+        $VALUES.add(aufgeloest_Amtsgericht_Freising_Zweigstelle_Moosburg);
+        aufgeloest_Amtsgericht_Neumarkt_St_Veit = new GerichtCode("aufgeloest_Amtsgericht_Neumarkt_St_Veit", "D2408");
+        $VALUES.add(aufgeloest_Amtsgericht_Neumarkt_St_Veit);
+        aufgeloest_Amtsgericht_Rottenburg_a_d_Laaber = new GerichtCode("aufgeloest_Amtsgericht_Rottenburg_a_d_Laaber", "D2409");
+        $VALUES.add(aufgeloest_Amtsgericht_Rottenburg_a_d_Laaber);
+        aufgeloest_Amtsgericht_Vilsbiburg = new GerichtCode("aufgeloest_Amtsgericht_Vilsbiburg", "D2410");
+        $VALUES.add(aufgeloest_Amtsgericht_Vilsbiburg);
+        Amtsgericht_Erding = new GerichtCode("Amtsgericht_Erding", "D2411");
+        $VALUES.add(Amtsgericht_Erding);
+        Grundbuchamt_Erding = new GerichtCode("Grundbuchamt_Erding", "D2411G");
+        $VALUES.add(Grundbuchamt_Erding);
+        Amtsgericht_Freising = new GerichtCode("Amtsgericht_Freising", "D2412");
+        $VALUES.add(Amtsgericht_Freising);
+        Grundbuchamt_Freising = new GerichtCode("Grundbuchamt_Freising", "D2412G");
+        $VALUES.add(Grundbuchamt_Freising);
+        Landgericht_Landshut_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Erding = new GerichtCode("Landgericht_Landshut_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Erding", "D2420");
+        $VALUES.add(Landgericht_Landshut_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Erding);
+        Landgericht_Memmingen = new GerichtCode("Landgericht_Memmingen", "D2500");
+        $VALUES.add(Landgericht_Memmingen);
+        Staatsanwaltschaft_beim_Landgericht_Memmingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Memmingen", "D2500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Memmingen);
+        aufgeloest_Amtsgericht_Buchloe = new GerichtCode("aufgeloest_Amtsgericht_Buchloe", "D2501");
+        $VALUES.add(aufgeloest_Amtsgericht_Buchloe);
+        Amtsgericht_Guenzburg = new GerichtCode("Amtsgericht_Guenzburg", "D2502");
+        $VALUES.add(Amtsgericht_Guenzburg);
+        Grundbuchamt_Guenzburg = new GerichtCode("Grundbuchamt_Guenzburg", "D2502G");
+        $VALUES.add(Grundbuchamt_Guenzburg);
+        aufgeloest_Amtsgericht_Neu_Ulm_Zweigstelle_Illertissen = new GerichtCode("aufgeloest_Amtsgericht_Neu_Ulm_Zweigstelle_Illertissen", "D2503");
+        $VALUES.add(aufgeloest_Amtsgericht_Neu_Ulm_Zweigstelle_Illertissen);
+        aufgeloest_Amtsgericht_Krumbach_Schwaben = new GerichtCode("aufgeloest_Amtsgericht_Krumbach_Schwaben", "D2504");
+        $VALUES.add(aufgeloest_Amtsgericht_Krumbach_Schwaben);
+        Amtsgericht_Memmingen = new GerichtCode("Amtsgericht_Memmingen", "D2505");
+        $VALUES.add(Amtsgericht_Memmingen);
+        Grundbuchamt_Memmingen = new GerichtCode("Grundbuchamt_Memmingen", "D2505G");
+        $VALUES.add(Grundbuchamt_Memmingen);
+        Registergericht_Amtsgericht_Memmingen = new GerichtCode("Registergericht_Amtsgericht_Memmingen", "D2505V");
+        $VALUES.add(Registergericht_Amtsgericht_Memmingen);
+        aufgeloest_Amtsgericht_Mindelheim = new GerichtCode("aufgeloest_Amtsgericht_Mindelheim", "D2506");
+        $VALUES.add(aufgeloest_Amtsgericht_Mindelheim);
+        Amtsgericht_Neu_Ulm = new GerichtCode("Amtsgericht_Neu_Ulm", "D2507");
+        $VALUES.add(Amtsgericht_Neu_Ulm);
+        Grundbuchamt_Neu_Ulm = new GerichtCode("Grundbuchamt_Neu_Ulm", "D2507G");
+        $VALUES.add(Grundbuchamt_Neu_Ulm);
+        aufgeloest_Amtsgericht_Tuerkheim = new GerichtCode("aufgeloest_Amtsgericht_Tuerkheim", "D2508");
+        $VALUES.add(aufgeloest_Amtsgericht_Tuerkheim);
+        aufgeloest_Amtsgericht_Weissenhorn = new GerichtCode("aufgeloest_Amtsgericht_Weissenhorn", "D2509");
+        $VALUES.add(aufgeloest_Amtsgericht_Weissenhorn);
+        Landgericht_Memmingen_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neu_Ulm = new GerichtCode("Landgericht_Memmingen_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neu_Ulm", "D2520");
+        $VALUES.add(Landgericht_Memmingen_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neu_Ulm);
+        Landgericht_Muenchen_I = new GerichtCode("Landgericht_Muenchen_I", "D2600");
+        $VALUES.add(Landgericht_Muenchen_I);
+        Staatsanwaltschaft_beim_Landgericht_Muenchen_I = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Muenchen_I", "D2600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Muenchen_I);
+        Amtsgericht_Muenchen = new GerichtCode("Amtsgericht_Muenchen", "D2601");
+        $VALUES.add(Amtsgericht_Muenchen);
+        Grundbuchamt_Muenchen = new GerichtCode("Grundbuchamt_Muenchen", "D2601G");
+        $VALUES.add(Grundbuchamt_Muenchen);
+        Registergericht_Amtsgericht_Muenchen = new GerichtCode("Registergericht_Amtsgericht_Muenchen", "D2601V");
+        $VALUES.add(Registergericht_Amtsgericht_Muenchen);
+        Landgericht_Muenchen_II = new GerichtCode("Landgericht_Muenchen_II", "D2700");
+        $VALUES.add(Landgericht_Muenchen_II);
+        Staatsanwaltschaft_beim_Landgericht_Muenchen_II = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Muenchen_II", "D2700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Muenchen_II);
+        aufgeloest_Amtsgericht_Wolfratshausen_Zwst_Bad_Toelz = new GerichtCode("aufgeloest_Amtsgericht_Wolfratshausen_Zwst_Bad_Toelz", "D2701");
+        $VALUES.add(aufgeloest_Amtsgericht_Wolfratshausen_Zwst_Bad_Toelz);
+        Amtsgericht_Dachau = new GerichtCode("Amtsgericht_Dachau", "D2702");
+        $VALUES.add(Amtsgericht_Dachau);
+        Grundbuchamt_Dachau = new GerichtCode("Grundbuchamt_Dachau", "D2702G");
+        $VALUES.add(Grundbuchamt_Dachau);
+        Amtsgericht_Ebersberg = new GerichtCode("Amtsgericht_Ebersberg", "D2703");
+        $VALUES.add(Amtsgericht_Ebersberg);
+        Grundbuchamt_Ebersberg = new GerichtCode("Grundbuchamt_Ebersberg", "D2703G");
+        $VALUES.add(Grundbuchamt_Ebersberg);
+        Amtsgericht_Fuerstenfeldbruck = new GerichtCode("Amtsgericht_Fuerstenfeldbruck", "D2706");
+        $VALUES.add(Amtsgericht_Fuerstenfeldbruck);
+        Grundbuchamt_Fuerstenfeldbruck = new GerichtCode("Grundbuchamt_Fuerstenfeldbruck", "D2706G");
+        $VALUES.add(Grundbuchamt_Fuerstenfeldbruck);
+        Amtsgericht_Garmisch_Partenkirchen = new GerichtCode("Amtsgericht_Garmisch_Partenkirchen", "D2707");
+        $VALUES.add(Amtsgericht_Garmisch_Partenkirchen);
+        Grundbuchamt_Garmisch_Partenkirchen = new GerichtCode("Grundbuchamt_Garmisch_Partenkirchen", "D2707G");
+        $VALUES.add(Grundbuchamt_Garmisch_Partenkirchen);
+        aufgeloest_Amtsgericht_Geisenfeld = new GerichtCode("aufgeloest_Amtsgericht_Geisenfeld", "D2708");
+        $VALUES.add(aufgeloest_Amtsgericht_Geisenfeld);
+        Amtsgericht_Miesbach = new GerichtCode("Amtsgericht_Miesbach", "D2710");
+        $VALUES.add(Amtsgericht_Miesbach);
+        Grundbuchamt_Miesbach = new GerichtCode("Grundbuchamt_Miesbach", "D2710G");
+        $VALUES.add(Grundbuchamt_Miesbach);
+        Amtsgericht_Starnberg = new GerichtCode("Amtsgericht_Starnberg", "D2712");
+        $VALUES.add(Amtsgericht_Starnberg);
+        Grundbuchamt_Starnberg = new GerichtCode("Grundbuchamt_Starnberg", "D2712G");
+        $VALUES.add(Grundbuchamt_Starnberg);
+        Amtsgericht_Weilheim = new GerichtCode("Amtsgericht_Weilheim", "D2713");
+        $VALUES.add(Amtsgericht_Weilheim);
+        Grundbuchamt_Weilheim = new GerichtCode("Grundbuchamt_Weilheim", "D2713G");
+        $VALUES.add(Grundbuchamt_Weilheim);
+        Amtsgericht_Wolfratshausen = new GerichtCode("Amtsgericht_Wolfratshausen", "D2714");
+        $VALUES.add(Amtsgericht_Wolfratshausen);
+        Grundbuchamt_Wolfratshausen = new GerichtCode("Grundbuchamt_Wolfratshausen", "D2714G");
+        $VALUES.add(Grundbuchamt_Wolfratshausen);
+        aufgeloest_Amtsgericht_Miesbach_Zwst_Tegernsee = new GerichtCode("aufgeloest_Amtsgericht_Miesbach_Zwst_Tegernsee", "D2715");
+        $VALUES.add(aufgeloest_Amtsgericht_Miesbach_Zwst_Tegernsee);
+        Landgericht_Muenchen_II_Auswaertige_Strafvollstreckungskammer_b_d_Amtsger_Garmisch_Partenkirchen = new GerichtCode("Landgericht_Muenchen_II_Auswaertige_Strafvollstreckungskammer_b_d_Amtsger_Garmisch_Partenkirchen", "D2720");
+        $VALUES.add(Landgericht_Muenchen_II_Auswaertige_Strafvollstreckungskammer_b_d_Amtsger_Garmisch_Partenkirchen);
+        Landgericht_Passau = new GerichtCode("Landgericht_Passau", "D2800");
+        $VALUES.add(Landgericht_Passau);
+        Staatsanwaltschaft_beim_Landgericht_Passau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Passau", "D2800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Passau);
+        Amtsgericht_Freyung = new GerichtCode("Amtsgericht_Freyung", "D2801");
+        $VALUES.add(Amtsgericht_Freyung);
+        Grundbuchamt_Freyung = new GerichtCode("Grundbuchamt_Freyung", "D2801G");
+        $VALUES.add(Grundbuchamt_Freyung);
+        aufgeloest_Amtsgericht_Passau_Zwst_Griesbach_i_Rottal = new GerichtCode("aufgeloest_Amtsgericht_Passau_Zwst_Griesbach_i_Rottal", "D2802");
+        $VALUES.add(aufgeloest_Amtsgericht_Passau_Zwst_Griesbach_i_Rottal);
+        Amtsgericht_Passau = new GerichtCode("Amtsgericht_Passau", "D2803");
+        $VALUES.add(Amtsgericht_Passau);
+        Grundbuchamt_Passau = new GerichtCode("Grundbuchamt_Passau", "D2803G");
+        $VALUES.add(Grundbuchamt_Passau);
+        Registergericht_Amtsgericht_Passau = new GerichtCode("Registergericht_Amtsgericht_Passau", "D2803V");
+        $VALUES.add(Registergericht_Amtsgericht_Passau);
+        aufgeloest_Amtsgericht_Pfarrkirchen = new GerichtCode("aufgeloest_Amtsgericht_Pfarrkirchen", "D2804");
+        $VALUES.add(aufgeloest_Amtsgericht_Pfarrkirchen);
+        aufgeloest_Amtsgericht_Passau_Zweigstelle_Rotthalmuenster = new GerichtCode("aufgeloest_Amtsgericht_Passau_Zweigstelle_Rotthalmuenster", "D2805");
+        $VALUES.add(aufgeloest_Amtsgericht_Passau_Zweigstelle_Rotthalmuenster);
+        aufgeloest_Amtsgericht_Simbach_a_Inn = new GerichtCode("aufgeloest_Amtsgericht_Simbach_a_Inn", "D2806");
+        $VALUES.add(aufgeloest_Amtsgericht_Simbach_a_Inn);
+        aufgeloest_Amtsgericht_Passau_Zweigstelle_Vilshofen = new GerichtCode("aufgeloest_Amtsgericht_Passau_Zweigstelle_Vilshofen", "D2807");
+        $VALUES.add(aufgeloest_Amtsgericht_Passau_Zweigstelle_Vilshofen);
+        aufgeloest_Amtsgericht_Freyung_Zwst_Waldkirchen = new GerichtCode("aufgeloest_Amtsgericht_Freyung_Zwst_Waldkirchen", "D2808");
+        $VALUES.add(aufgeloest_Amtsgericht_Freyung_Zwst_Waldkirchen);
+        aufgeloest_Amtsgericht_Passau_Zwst_Wegscheid = new GerichtCode("aufgeloest_Amtsgericht_Passau_Zwst_Wegscheid", "D2809");
+        $VALUES.add(aufgeloest_Amtsgericht_Passau_Zwst_Wegscheid);
+        Landgericht_Traunstein = new GerichtCode("Landgericht_Traunstein", "D2900");
+        $VALUES.add(Landgericht_Traunstein);
+        Staatsanwaltschaft_beim_Landgericht_Traunstein = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Traunstein", "D2900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Traunstein);
+        Amtsgericht_Altoetting = new GerichtCode("Amtsgericht_Altoetting", "D2901");
+        $VALUES.add(Amtsgericht_Altoetting);
+        Grundbuchamt_Altoetting = new GerichtCode("Grundbuchamt_Altoetting", "D2901G");
+        $VALUES.add(Grundbuchamt_Altoetting);
+        Amtsgericht_Rosenheim_Zweigstelle_Bad_Aibling = new GerichtCode("Amtsgericht_Rosenheim_Zweigstelle_Bad_Aibling", "D2902");
+        $VALUES.add(Amtsgericht_Rosenheim_Zweigstelle_Bad_Aibling);
+        aufgeloest_Amtsgericht_Bad_Reichenhall = new GerichtCode("aufgeloest_Amtsgericht_Bad_Reichenhall", "D2903");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Reichenhall);
+        aufgeloest_Amtsgericht_Berchtesgaden = new GerichtCode("aufgeloest_Amtsgericht_Berchtesgaden", "D2904");
+        $VALUES.add(aufgeloest_Amtsgericht_Berchtesgaden);
+        aufgeloest_Amtsgericht_Altoetting_Zweigstelle_Burghausen_Obb = new GerichtCode("aufgeloest_Amtsgericht_Altoetting_Zweigstelle_Burghausen_Obb", "D2905");
+        $VALUES.add(aufgeloest_Amtsgericht_Altoetting_Zweigstelle_Burghausen_Obb);
+        aufgeloest_Amtsgericht_Haag_i_OB = new GerichtCode("aufgeloest_Amtsgericht_Haag_i_OB", "D2906");
+        $VALUES.add(aufgeloest_Amtsgericht_Haag_i_OB);
+        Amtsgericht_Laufen = new GerichtCode("Amtsgericht_Laufen", "D2907");
+        $VALUES.add(Amtsgericht_Laufen);
+        Grundbuchamt_Laufen = new GerichtCode("Grundbuchamt_Laufen", "D2907G");
+        $VALUES.add(Grundbuchamt_Laufen);
+        Amtsgericht_Muehldorf = new GerichtCode("Amtsgericht_Muehldorf", "D2908");
+        $VALUES.add(Amtsgericht_Muehldorf);
+        Grundbuchamt_Muehldorf = new GerichtCode("Grundbuchamt_Muehldorf", "D2908G");
+        $VALUES.add(Grundbuchamt_Muehldorf);
+        Amtsgericht_Rosenheim = new GerichtCode("Amtsgericht_Rosenheim", "D2909");
+        $VALUES.add(Amtsgericht_Rosenheim);
+        Grundbuchamt_Rosenheim = new GerichtCode("Grundbuchamt_Rosenheim", "D2909G");
+        $VALUES.add(Grundbuchamt_Rosenheim);
+        Amtsgericht_Traunstein = new GerichtCode("Amtsgericht_Traunstein", "D2910");
+        $VALUES.add(Amtsgericht_Traunstein);
+        Grundbuchamt_Traunstein = new GerichtCode("Grundbuchamt_Traunstein", "D2910G");
+        $VALUES.add(Grundbuchamt_Traunstein);
+        Registergericht_Amtsgericht_Traunstein = new GerichtCode("Registergericht_Amtsgericht_Traunstein", "D2910V");
+        $VALUES.add(Registergericht_Amtsgericht_Traunstein);
+        aufgeloest_Amtsgericht_Trostberg = new GerichtCode("aufgeloest_Amtsgericht_Trostberg", "D2911");
+        $VALUES.add(aufgeloest_Amtsgericht_Trostberg);
+        Amtsgericht_Rosenheim_Zweigstelle_Wasserburg_a_Inn = new GerichtCode("Amtsgericht_Rosenheim_Zweigstelle_Wasserburg_a_Inn", "D2912");
+        $VALUES.add(Amtsgericht_Rosenheim_Zweigstelle_Wasserburg_a_Inn);
+        Landgericht_Traunstein_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Muehldorf = new GerichtCode("Landgericht_Traunstein_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Muehldorf", "D2920");
+        $VALUES.add(Landgericht_Traunstein_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Muehldorf);
+        Oberlandesgericht_Nuernberg = new GerichtCode("Oberlandesgericht_Nuernberg", "D3000");
+        $VALUES.add(Oberlandesgericht_Nuernberg);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Nuernberg = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Nuernberg", "D3000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Nuernberg);
+        Landgericht_Amberg = new GerichtCode("Landgericht_Amberg", "D3100");
+        $VALUES.add(Landgericht_Amberg);
+        Staatsanwaltschaft_beim_Landgericht_Amberg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Amberg", "D3100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Amberg);
+        Amtsgericht_Amberg = new GerichtCode("Amtsgericht_Amberg", "D3101");
+        $VALUES.add(Amtsgericht_Amberg);
+        Grundbuchamt_Amberg = new GerichtCode("Grundbuchamt_Amberg", "D3101G");
+        $VALUES.add(Grundbuchamt_Amberg);
+        Registergericht_Amtsgericht_Amberg = new GerichtCode("Registergericht_Amtsgericht_Amberg", "D3101V");
+        $VALUES.add(Registergericht_Amtsgericht_Amberg);
+        aufgeloest_Amtsgericht_Cham_Zweigstelle_Furth_i_Wald = new GerichtCode("aufgeloest_Amtsgericht_Cham_Zweigstelle_Furth_i_Wald", "D3103");
+        $VALUES.add(aufgeloest_Amtsgericht_Cham_Zweigstelle_Furth_i_Wald);
+        aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Nabburg = new GerichtCode("aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Nabburg", "D3104");
+        $VALUES.add(aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Nabburg);
+        aufgeloest_Amtsgericht_Neunburg_vorm_Wald = new GerichtCode("aufgeloest_Amtsgericht_Neunburg_vorm_Wald", "D3105");
+        $VALUES.add(aufgeloest_Amtsgericht_Neunburg_vorm_Wald);
+        Amtsgericht_Schwandorf = new GerichtCode("Amtsgericht_Schwandorf", "D3106");
+        $VALUES.add(Amtsgericht_Schwandorf);
+        Grundbuchamt_Schwandorf = new GerichtCode("Grundbuchamt_Schwandorf", "D3106G");
+        $VALUES.add(Grundbuchamt_Schwandorf);
+        aufgeloest_Amtsgericht_Sulzbach_Rosenberg = new GerichtCode("aufgeloest_Amtsgericht_Sulzbach_Rosenberg", "D3107");
+        $VALUES.add(aufgeloest_Amtsgericht_Sulzbach_Rosenberg);
+        Amtsgericht_Cham_Zweigstelle_Waldmuenchen = new GerichtCode("Amtsgericht_Cham_Zweigstelle_Waldmuenchen", "D3108");
+        $VALUES.add(Amtsgericht_Cham_Zweigstelle_Waldmuenchen);
+        Landgericht_Ansbach = new GerichtCode("Landgericht_Ansbach", "D3200");
+        $VALUES.add(Landgericht_Ansbach);
+        Staatsanwaltschaft_beim_Landgericht_Ansbach = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Ansbach", "D3200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Ansbach);
+        Amtsgericht_Ansbach = new GerichtCode("Amtsgericht_Ansbach", "D3201");
+        $VALUES.add(Amtsgericht_Ansbach);
+        Grundbuchamt_Ansbach = new GerichtCode("Grundbuchamt_Ansbach", "D3201G");
+        $VALUES.add(Grundbuchamt_Ansbach);
+        Registergericht_Amtsgericht_Ansbach = new GerichtCode("Registergericht_Amtsgericht_Ansbach", "D3201V");
+        $VALUES.add(Registergericht_Amtsgericht_Ansbach);
+        aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Dinkelsbuehl = new GerichtCode("aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Dinkelsbuehl", "D3202");
+        $VALUES.add(aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Dinkelsbuehl);
+        aufgeloest_Amtsgericht_Weissenburg_i_Bay_Zwst_Gunzenhausen = new GerichtCode("aufgeloest_Amtsgericht_Weissenburg_i_Bay_Zwst_Gunzenhausen", "D3203");
+        $VALUES.add(aufgeloest_Amtsgericht_Weissenburg_i_Bay_Zwst_Gunzenhausen);
+        aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Rothenburg_o_d_Tauber = new GerichtCode("aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Rothenburg_o_d_Tauber", "D3204");
+        $VALUES.add(aufgeloest_Amtsgericht_Ansbach_Zweigstelle_Rothenburg_o_d_Tauber);
+        aufgeloest_Amtsgericht_Uffenheim = new GerichtCode("aufgeloest_Amtsgericht_Uffenheim", "D3205");
+        $VALUES.add(aufgeloest_Amtsgericht_Uffenheim);
+        aufgeloest_Amtsgericht_Dinkelsbuehl_Zwst_Feuchtwangen = new GerichtCode("aufgeloest_Amtsgericht_Dinkelsbuehl_Zwst_Feuchtwangen", "D3206");
+        $VALUES.add(aufgeloest_Amtsgericht_Dinkelsbuehl_Zwst_Feuchtwangen);
+        Amtsgericht_Weissenburg_i_Bay = new GerichtCode("Amtsgericht_Weissenburg_i_Bay", "D3208");
+        $VALUES.add(Amtsgericht_Weissenburg_i_Bay);
+        Grundbuchamt_Weissenburg = new GerichtCode("Grundbuchamt_Weissenburg", "D3208G");
+        $VALUES.add(Grundbuchamt_Weissenburg);
+        Landgericht_Nuernberg_Fuerth = new GerichtCode("Landgericht_Nuernberg_Fuerth", "D3300");
+        $VALUES.add(Landgericht_Nuernberg_Fuerth);
+        Staatsanwaltschaft_beim_Landgericht_Nuernberg_Fuerth = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Nuernberg_Fuerth", "D3300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Nuernberg_Fuerth);
+        aufgeloest_Amtsgericht_Beilngries = new GerichtCode("aufgeloest_Amtsgericht_Beilngries", "D3301");
+        $VALUES.add(aufgeloest_Amtsgericht_Beilngries);
+        aufgeloest_Amtsgericht_Ingolstadt_Zwst_Eichstaett = new GerichtCode("aufgeloest_Amtsgericht_Ingolstadt_Zwst_Eichstaett", "D3302");
+        $VALUES.add(aufgeloest_Amtsgericht_Ingolstadt_Zwst_Eichstaett);
+        Amtsgericht_Erlangen = new GerichtCode("Amtsgericht_Erlangen", "D3303");
+        $VALUES.add(Amtsgericht_Erlangen);
+        Grundbuchamt_Erlangen = new GerichtCode("Grundbuchamt_Erlangen", "D3303G");
+        $VALUES.add(Grundbuchamt_Erlangen);
+        Amtsgericht_Fuerth_Bayern = new GerichtCode("Amtsgericht_Fuerth_Bayern", "D3304");
+        $VALUES.add(Amtsgericht_Fuerth_Bayern);
+        Grundbuchamt_Fuerth_Bayern = new GerichtCode("Grundbuchamt_Fuerth_Bayern", "D3304G");
+        $VALUES.add(Grundbuchamt_Fuerth_Bayern);
+        Registergericht_Amtsgericht_Fuerth = new GerichtCode("Registergericht_Amtsgericht_Fuerth", "D3304V");
+        $VALUES.add(Registergericht_Amtsgericht_Fuerth);
+        Amtsgericht_Hersbruck = new GerichtCode("Amtsgericht_Hersbruck", "D3305");
+        $VALUES.add(Amtsgericht_Hersbruck);
+        Grundbuchamt_Hersbruck = new GerichtCode("Grundbuchamt_Hersbruck", "D3305G");
+        $VALUES.add(Grundbuchamt_Hersbruck);
+        aufgeloest_Amtsgericht_Schwabach_Zweigstelle_Hilpoltstein = new GerichtCode("aufgeloest_Amtsgericht_Schwabach_Zweigstelle_Hilpoltstein", "D3306");
+        $VALUES.add(aufgeloest_Amtsgericht_Schwabach_Zweigstelle_Hilpoltstein);
+        aufgeloest_Amtsgericht_Hersbruck_Zwst_Lauf_Pegnitz = new GerichtCode("aufgeloest_Amtsgericht_Hersbruck_Zwst_Lauf_Pegnitz", "D3307");
+        $VALUES.add(aufgeloest_Amtsgericht_Hersbruck_Zwst_Lauf_Pegnitz);
+        Amtsgericht_Neumarkt = new GerichtCode("Amtsgericht_Neumarkt", "D3308");
+        $VALUES.add(Amtsgericht_Neumarkt);
+        Grundbuchamt_Neumarkt = new GerichtCode("Grundbuchamt_Neumarkt", "D3308G");
+        $VALUES.add(Grundbuchamt_Neumarkt);
+        Amtsgericht_Neustadt_an_der_Aisch = new GerichtCode("Amtsgericht_Neustadt_an_der_Aisch", "D3309");
+        $VALUES.add(Amtsgericht_Neustadt_an_der_Aisch);
+        Grundbuchamt_Neustadt = new GerichtCode("Grundbuchamt_Neustadt", "D3309G");
+        $VALUES.add(Grundbuchamt_Neustadt);
+        Amtsgericht_Nuernberg = new GerichtCode("Amtsgericht_Nuernberg", "D3310");
+        $VALUES.add(Amtsgericht_Nuernberg);
+        Grundbuchamt_Nuernberg = new GerichtCode("Grundbuchamt_Nuernberg", "D3310G");
+        $VALUES.add(Grundbuchamt_Nuernberg);
+        Registergericht_Amtsgericht_Nuernberg = new GerichtCode("Registergericht_Amtsgericht_Nuernberg", "D3310V");
+        $VALUES.add(Registergericht_Amtsgericht_Nuernberg);
+        aufgeloest_Amtsgericht_Roth = new GerichtCode("aufgeloest_Amtsgericht_Roth", "D3311");
+        $VALUES.add(aufgeloest_Amtsgericht_Roth);
+        aufgeloest_Amtsgericht_Neustadt_a_d_Aisch_Zwst_Scheinfeld = new GerichtCode("aufgeloest_Amtsgericht_Neustadt_a_d_Aisch_Zwst_Scheinfeld", "D3312");
+        $VALUES.add(aufgeloest_Amtsgericht_Neustadt_a_d_Aisch_Zwst_Scheinfeld);
+        Amtsgericht_Schwabach = new GerichtCode("Amtsgericht_Schwabach", "D3313");
+        $VALUES.add(Amtsgericht_Schwabach);
+        Grundbuchamt_Schwabach = new GerichtCode("Grundbuchamt_Schwabach", "D3313G");
+        $VALUES.add(Grundbuchamt_Schwabach);
+        aufgeloest_Amtsgericht_Windsheim = new GerichtCode("aufgeloest_Amtsgericht_Windsheim", "D3315");
+        $VALUES.add(aufgeloest_Amtsgericht_Windsheim);
+        aufgeloest_Amtsgericht_Nuernberg_Zwst_Altdorf = new GerichtCode("aufgeloest_Amtsgericht_Nuernberg_Zwst_Altdorf", "D3316");
+        $VALUES.add(aufgeloest_Amtsgericht_Nuernberg_Zwst_Altdorf);
+        Landgericht_Regensburg = new GerichtCode("Landgericht_Regensburg", "D3400");
+        $VALUES.add(Landgericht_Regensburg);
+        Staatsanwaltschaft_beim_Landgericht_Regensburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Regensburg", "D3400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Regensburg);
+        aufgeloest_Amtsgericht_Abensberg = new GerichtCode("aufgeloest_Amtsgericht_Abensberg", "D3401");
+        $VALUES.add(aufgeloest_Amtsgericht_Abensberg);
+        aufgeloest_Amtsgericht_Straubing_Zwst_Bogen = new GerichtCode("aufgeloest_Amtsgericht_Straubing_Zwst_Bogen", "D3402");
+        $VALUES.add(aufgeloest_Amtsgericht_Straubing_Zwst_Bogen);
+        aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Burglengenfeld = new GerichtCode("aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Burglengenfeld", "D3403");
+        $VALUES.add(aufgeloest_Amtsgericht_Schwandorf_Zweigstelle_Burglengenfeld);
+        aufgeloest_Amtsgericht_Hemau = new GerichtCode("aufgeloest_Amtsgericht_Hemau", "D3404");
+        $VALUES.add(aufgeloest_Amtsgericht_Hemau);
+        Amtsgericht_Kelheim = new GerichtCode("Amtsgericht_Kelheim", "D3405");
+        $VALUES.add(Amtsgericht_Kelheim);
+        Grundbuchamt_Kelheim = new GerichtCode("Grundbuchamt_Kelheim", "D3405G");
+        $VALUES.add(Grundbuchamt_Kelheim);
+        aufgeloest_Amtsgericht_Cham_Zweigstelle_Koetzting = new GerichtCode("aufgeloest_Amtsgericht_Cham_Zweigstelle_Koetzting", "D3406");
+        $VALUES.add(aufgeloest_Amtsgericht_Cham_Zweigstelle_Koetzting);
+        aufgeloest_Amtsgericht_Mitterfels = new GerichtCode("aufgeloest_Amtsgericht_Mitterfels", "D3407");
+        $VALUES.add(aufgeloest_Amtsgericht_Mitterfels);
+        aufgeloest_Amtsgericht_Neukirchen_b_Hl_Blut = new GerichtCode("aufgeloest_Amtsgericht_Neukirchen_b_Hl_Blut", "D3408");
+        $VALUES.add(aufgeloest_Amtsgericht_Neukirchen_b_Hl_Blut);
+        aufgeloest_Amtsgericht_Parsberg = new GerichtCode("aufgeloest_Amtsgericht_Parsberg", "D3409");
+        $VALUES.add(aufgeloest_Amtsgericht_Parsberg);
+        Amtsgericht_Regensburg = new GerichtCode("Amtsgericht_Regensburg", "D3410");
+        $VALUES.add(Amtsgericht_Regensburg);
+        Grundbuchamt_Regensburg = new GerichtCode("Grundbuchamt_Regensburg", "D3410G");
+        $VALUES.add(Grundbuchamt_Regensburg);
+        Registergericht_Amtsgericht_Regensburg = new GerichtCode("Registergericht_Amtsgericht_Regensburg", "D3410V");
+        $VALUES.add(Registergericht_Amtsgericht_Regensburg);
+        aufgeloest_Amtsgericht_Riedenburg = new GerichtCode("aufgeloest_Amtsgericht_Riedenburg", "D3411");
+        $VALUES.add(aufgeloest_Amtsgericht_Riedenburg);
+        aufgeloest_Amtsgericht_Cham_Zweigstelle_Roding = new GerichtCode("aufgeloest_Amtsgericht_Cham_Zweigstelle_Roding", "D3412");
+        $VALUES.add(aufgeloest_Amtsgericht_Cham_Zweigstelle_Roding);
+        Amtsgericht_Straubing = new GerichtCode("Amtsgericht_Straubing", "D3413");
+        $VALUES.add(Amtsgericht_Straubing);
+        Grundbuchamt_Straubing = new GerichtCode("Grundbuchamt_Straubing", "D3413G");
+        $VALUES.add(Grundbuchamt_Straubing);
+        Registergericht_Amtsgericht_Straubing = new GerichtCode("Registergericht_Amtsgericht_Straubing", "D3413V");
+        $VALUES.add(Registergericht_Amtsgericht_Straubing);
+        aufgeloest_Amtsgericht_Roding_Zwst_Nittenau = new GerichtCode("aufgeloest_Amtsgericht_Roding_Zwst_Nittenau", "D3414");
+        $VALUES.add(aufgeloest_Amtsgericht_Roding_Zwst_Nittenau);
+        Amtsgericht_Cham = new GerichtCode("Amtsgericht_Cham", "D3415");
+        $VALUES.add(Amtsgericht_Cham);
+        Grundbuchamt_Cham = new GerichtCode("Grundbuchamt_Cham", "D3415G");
+        $VALUES.add(Grundbuchamt_Cham);
+        Landgericht_Regensburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Straubing = new GerichtCode("Landgericht_Regensburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Straubing", "D3420");
+        $VALUES.add(Landgericht_Regensburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Straubing);
+    }
+
+    private static void init1() {
+        Landgericht_Weiden_i_d_OPf = new GerichtCode("Landgericht_Weiden_i_d_OPf", "D3500");
+        $VALUES.add(Landgericht_Weiden_i_d_OPf);
+        Staatsanwaltschaft_beim_Landgericht_Weiden_i_d_Opf = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Weiden_i_d_Opf", "D3500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Weiden_i_d_Opf);
+        aufgeloest_Amtsgericht_Weiden_i_d_OPf_Zwst_Eschenbach_i_d_OPf = new GerichtCode("aufgeloest_Amtsgericht_Weiden_i_d_OPf_Zwst_Eschenbach_i_d_OPf", "D3501");
+        $VALUES.add(aufgeloest_Amtsgericht_Weiden_i_d_OPf_Zwst_Eschenbach_i_d_OPf);
+        Amtsgericht_Tirschenreuth_Zweigstelle_Kemnath = new GerichtCode("Amtsgericht_Tirschenreuth_Zweigstelle_Kemnath", "D3502");
+        $VALUES.add(Amtsgericht_Tirschenreuth_Zweigstelle_Kemnath);
+        aufgeloest_Amtsgericht_Neustadt_a_d_Waldnaab = new GerichtCode("aufgeloest_Amtsgericht_Neustadt_a_d_Waldnaab", "D3503");
+        $VALUES.add(aufgeloest_Amtsgericht_Neustadt_a_d_Waldnaab);
+        Amtsgericht_Schwandorf_Zweigstelle_Oberviechtach = new GerichtCode("Amtsgericht_Schwandorf_Zweigstelle_Oberviechtach", "D3504");
+        $VALUES.add(Amtsgericht_Schwandorf_Zweigstelle_Oberviechtach);
+        Amtsgericht_Tirschenreuth = new GerichtCode("Amtsgericht_Tirschenreuth", "D3505");
+        $VALUES.add(Amtsgericht_Tirschenreuth);
+        Grundbuchamt_Tirschenreuth = new GerichtCode("Grundbuchamt_Tirschenreuth", "D3505G");
+        $VALUES.add(Grundbuchamt_Tirschenreuth);
+        Amtsgericht_Weiden_Zweigstelle_Vohenstrauss = new GerichtCode("Amtsgericht_Weiden_Zweigstelle_Vohenstrauss", "D3506");
+        $VALUES.add(Amtsgericht_Weiden_Zweigstelle_Vohenstrauss);
+        aufgeloest_Amtsgericht_Waldsassen = new GerichtCode("aufgeloest_Amtsgericht_Waldsassen", "D3507");
+        $VALUES.add(aufgeloest_Amtsgericht_Waldsassen);
+        Amtsgericht_Weiden_i_d_OPf = new GerichtCode("Amtsgericht_Weiden_i_d_OPf", "D3508");
+        $VALUES.add(Amtsgericht_Weiden_i_d_OPf);
+        Grundbuchamt_Weiden = new GerichtCode("Grundbuchamt_Weiden", "D3508G");
+        $VALUES.add(Grundbuchamt_Weiden);
+        Registergericht_Amtsgericht_Weiden = new GerichtCode("Registergericht_Amtsgericht_Weiden", "D3508V");
+        $VALUES.add(Registergericht_Amtsgericht_Weiden);
+        aufgeloest_Amtsgericht_Eschenbach_Opf_Aussenstelle_Auerbach = new GerichtCode("aufgeloest_Amtsgericht_Eschenbach_Opf_Aussenstelle_Auerbach", "D3509");
+        $VALUES.add(aufgeloest_Amtsgericht_Eschenbach_Opf_Aussenstelle_Auerbach);
+        Oberlandesgericht_Bamberg = new GerichtCode("Oberlandesgericht_Bamberg", "D4000");
+        $VALUES.add(Oberlandesgericht_Bamberg);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Bamberg = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Bamberg", "D4000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Bamberg);
+        Landgericht_Aschaffenburg = new GerichtCode("Landgericht_Aschaffenburg", "D4100");
+        $VALUES.add(Landgericht_Aschaffenburg);
+        Staatsanwaltschaft_beim_Landgericht_Aschaffenburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Aschaffenburg", "D4100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Aschaffenburg);
+        Amtsgericht_Aschaffenburg_Zweigstelle_Alzenau_i_Ufr = new GerichtCode("Amtsgericht_Aschaffenburg_Zweigstelle_Alzenau_i_Ufr", "D4101");
+        $VALUES.add(Amtsgericht_Aschaffenburg_Zweigstelle_Alzenau_i_Ufr);
+        Amtsgericht_Aschaffenburg = new GerichtCode("Amtsgericht_Aschaffenburg", "D4102");
+        $VALUES.add(Amtsgericht_Aschaffenburg);
+        Grundbuchamt_Aschaffenburg = new GerichtCode("Grundbuchamt_Aschaffenburg", "D4102G");
+        $VALUES.add(Grundbuchamt_Aschaffenburg);
+        Registergericht_Amtsgericht_Aschaffenburg = new GerichtCode("Registergericht_Amtsgericht_Aschaffenburg", "D4102V");
+        $VALUES.add(Registergericht_Amtsgericht_Aschaffenburg);
+        aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Lohr_a_Main = new GerichtCode("aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Lohr_a_Main", "D4103");
+        $VALUES.add(aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Lohr_a_Main);
+        Amtsgericht_Obernburg_Zweigstelle_Miltenberg = new GerichtCode("Amtsgericht_Obernburg_Zweigstelle_Miltenberg", "D4104");
+        $VALUES.add(Amtsgericht_Obernburg_Zweigstelle_Miltenberg);
+        Amtsgericht_Obernburg = new GerichtCode("Amtsgericht_Obernburg", "D4105");
+        $VALUES.add(Amtsgericht_Obernburg);
+        Grundbuchamt_Obernburg = new GerichtCode("Grundbuchamt_Obernburg", "D4105G");
+        $VALUES.add(Grundbuchamt_Obernburg);
+        Landgericht_Bamberg = new GerichtCode("Landgericht_Bamberg", "D4200");
+        $VALUES.add(Landgericht_Bamberg);
+        Staatsanwaltschaft_beim_Landgericht_Bamberg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bamberg", "D4200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bamberg);
+        Amtsgericht_Bamberg = new GerichtCode("Amtsgericht_Bamberg", "D4201");
+        $VALUES.add(Amtsgericht_Bamberg);
+        Grundbuchamt_Bamberg = new GerichtCode("Grundbuchamt_Bamberg", "D4201G");
+        $VALUES.add(Grundbuchamt_Bamberg);
+        Registergericht_Amtsgericht_Bamberg = new GerichtCode("Registergericht_Amtsgericht_Bamberg", "D4201V");
+        $VALUES.add(Registergericht_Amtsgericht_Bamberg);
+        aufgeloest_Amtsgericht_Hassfurt_Zweigstelle_Ebern = new GerichtCode("aufgeloest_Amtsgericht_Hassfurt_Zweigstelle_Ebern", "D4202");
+        $VALUES.add(aufgeloest_Amtsgericht_Hassfurt_Zweigstelle_Ebern);
+        Amtsgericht_Forchheim = new GerichtCode("Amtsgericht_Forchheim", "D4203");
+        $VALUES.add(Amtsgericht_Forchheim);
+        Grundbuchamt_Forchheim = new GerichtCode("Grundbuchamt_Forchheim", "D4203G");
+        $VALUES.add(Grundbuchamt_Forchheim);
+        Amtsgericht_Hassfurt = new GerichtCode("Amtsgericht_Hassfurt", "D4204");
+        $VALUES.add(Amtsgericht_Hassfurt);
+        Grundbuchamt_Hassfurt = new GerichtCode("Grundbuchamt_Hassfurt", "D4204G");
+        $VALUES.add(Grundbuchamt_Hassfurt);
+        aufgeloest_Amtsgericht_Hofheim_i_Ufr = new GerichtCode("aufgeloest_Amtsgericht_Hofheim_i_Ufr", "D4205");
+        $VALUES.add(aufgeloest_Amtsgericht_Hofheim_i_Ufr);
+        aufgeloest_Amtsgericht_Forchheim_Zwst_Hoechstadt_a_d_Aisch = new GerichtCode("aufgeloest_Amtsgericht_Forchheim_Zwst_Hoechstadt_a_d_Aisch", "D4206");
+        $VALUES.add(aufgeloest_Amtsgericht_Forchheim_Zwst_Hoechstadt_a_d_Aisch);
+        aufgeloest_Amtsgericht_Forchheim_Aussenstelle_Ebermannstadt = new GerichtCode("aufgeloest_Amtsgericht_Forchheim_Aussenstelle_Ebermannstadt", "D4207");
+        $VALUES.add(aufgeloest_Amtsgericht_Forchheim_Aussenstelle_Ebermannstadt);
+        aufgeloest_Amtsgericht_Hassfurt_Aussenstelle_Eltmann = new GerichtCode("aufgeloest_Amtsgericht_Hassfurt_Aussenstelle_Eltmann", "D4208");
+        $VALUES.add(aufgeloest_Amtsgericht_Hassfurt_Aussenstelle_Eltmann);
+        Landgericht_Bayreuth = new GerichtCode("Landgericht_Bayreuth", "D4300");
+        $VALUES.add(Landgericht_Bayreuth);
+        Staatsanwaltschaft_beim_Landgericht_Bayreuth = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bayreuth", "D4300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bayreuth);
+        Amtsgericht_Bayreuth = new GerichtCode("Amtsgericht_Bayreuth", "D4301");
+        $VALUES.add(Amtsgericht_Bayreuth);
+        Grundbuchamt_Bayreuth = new GerichtCode("Grundbuchamt_Bayreuth", "D4301G");
+        $VALUES.add(Grundbuchamt_Bayreuth);
+        Registergericht_Amtsgericht_Bayreuth = new GerichtCode("Registergericht_Amtsgericht_Bayreuth", "D4301V");
+        $VALUES.add(Registergericht_Amtsgericht_Bayreuth);
+        Amtsgericht_Kulmbach = new GerichtCode("Amtsgericht_Kulmbach", "D4302");
+        $VALUES.add(Amtsgericht_Kulmbach);
+        Grundbuchamt_Kulmbach = new GerichtCode("Grundbuchamt_Kulmbach", "D4302G");
+        $VALUES.add(Grundbuchamt_Kulmbach);
+        Amtsgericht_Bayreuth_Zweigstelle_Pegnitz = new GerichtCode("Amtsgericht_Bayreuth_Zweigstelle_Pegnitz", "D4303");
+        $VALUES.add(Amtsgericht_Bayreuth_Zweigstelle_Pegnitz);
+        aufgeloest_Amtsgericht_Stadtsteinach = new GerichtCode("aufgeloest_Amtsgericht_Stadtsteinach", "D4304");
+        $VALUES.add(aufgeloest_Amtsgericht_Stadtsteinach);
+        Landgericht_Coburg = new GerichtCode("Landgericht_Coburg", "D4400");
+        $VALUES.add(Landgericht_Coburg);
+        Staatsanwaltschaft_beim_Landgericht_Coburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Coburg", "D4400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Coburg);
+        Amtsgericht_Coburg = new GerichtCode("Amtsgericht_Coburg", "D4401");
+        $VALUES.add(Amtsgericht_Coburg);
+        Grundbuchamt_Coburg = new GerichtCode("Grundbuchamt_Coburg", "D4401G");
+        $VALUES.add(Grundbuchamt_Coburg);
+        Amtsgericht_Coburg_Zentrales_Mahngericht = new GerichtCode("Amtsgericht_Coburg_Zentrales_Mahngericht", "D4401M");
+        $VALUES.add(Amtsgericht_Coburg_Zentrales_Mahngericht);
+        Registergericht_Amtsgericht_Coburg = new GerichtCode("Registergericht_Amtsgericht_Coburg", "D4401V");
+        $VALUES.add(Registergericht_Amtsgericht_Coburg);
+        Amtsgericht_Kronach = new GerichtCode("Amtsgericht_Kronach", "D4402");
+        $VALUES.add(Amtsgericht_Kronach);
+        Grundbuchamt_Kronach = new GerichtCode("Grundbuchamt_Kronach", "D4402G");
+        $VALUES.add(Grundbuchamt_Kronach);
+        Amtsgericht_Lichtenfels = new GerichtCode("Amtsgericht_Lichtenfels", "D4403");
+        $VALUES.add(Amtsgericht_Lichtenfels);
+        Grundbuchamt_Lichtenfels = new GerichtCode("Grundbuchamt_Lichtenfels", "D4403G");
+        $VALUES.add(Grundbuchamt_Lichtenfels);
+        aufgeloest_Amtsgericht_Kronach_Zwst_Ludwigsstadt = new GerichtCode("aufgeloest_Amtsgericht_Kronach_Zwst_Ludwigsstadt", "D4404");
+        $VALUES.add(aufgeloest_Amtsgericht_Kronach_Zwst_Ludwigsstadt);
+        aufgeloest_Amtsgericht_Coburg_Zwst_Neustadt_b_Coburg = new GerichtCode("aufgeloest_Amtsgericht_Coburg_Zwst_Neustadt_b_Coburg", "D4405");
+        $VALUES.add(aufgeloest_Amtsgericht_Coburg_Zwst_Neustadt_b_Coburg);
+        aufgeloest_Amtsgericht_Lichtenfels_Aussenstelle_Staffelstein = new GerichtCode("aufgeloest_Amtsgericht_Lichtenfels_Aussenstelle_Staffelstein", "D4406");
+        $VALUES.add(aufgeloest_Amtsgericht_Lichtenfels_Aussenstelle_Staffelstein);
+        Landgericht_Coburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Kronach = new GerichtCode("Landgericht_Coburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Kronach", "D4420");
+        $VALUES.add(Landgericht_Coburg_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Kronach);
+        Landgericht_Hof = new GerichtCode("Landgericht_Hof", "D4500");
+        $VALUES.add(Landgericht_Hof);
+        Staatsanwaltschaft_beim_Landgericht_Hof = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hof", "D4500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hof);
+        Amtsgericht_Hof = new GerichtCode("Amtsgericht_Hof", "D4501");
+        $VALUES.add(Amtsgericht_Hof);
+        Grundbuchamt_Hof = new GerichtCode("Grundbuchamt_Hof", "D4501G");
+        $VALUES.add(Grundbuchamt_Hof);
+        Amtsgericht_Hof_Zentrales_Vollstreckungsgericht_Bayern = new GerichtCode("Amtsgericht_Hof_Zentrales_Vollstreckungsgericht_Bayern", "D4501R");
+        $VALUES.add(Amtsgericht_Hof_Zentrales_Vollstreckungsgericht_Bayern);
+        Registergericht_Amtsgericht_Hof = new GerichtCode("Registergericht_Amtsgericht_Hof", "D4501V");
+        $VALUES.add(Registergericht_Amtsgericht_Hof);
+        aufgeloest_Amtsgericht_Muenchberg = new GerichtCode("aufgeloest_Amtsgericht_Muenchberg", "D4502");
+        $VALUES.add(aufgeloest_Amtsgericht_Muenchberg);
+        aufgeloest_Amtsgericht_Naila = new GerichtCode("aufgeloest_Amtsgericht_Naila", "D4503");
+        $VALUES.add(aufgeloest_Amtsgericht_Naila);
+        aufgeloest_Amtsgericht_Selb = new GerichtCode("aufgeloest_Amtsgericht_Selb", "D4504");
+        $VALUES.add(aufgeloest_Amtsgericht_Selb);
+        Amtsgericht_Wunsiedel = new GerichtCode("Amtsgericht_Wunsiedel", "D4505");
+        $VALUES.add(Amtsgericht_Wunsiedel);
+        Grundbuchamt_Wunsiedel = new GerichtCode("Grundbuchamt_Wunsiedel", "D4505G");
+        $VALUES.add(Grundbuchamt_Wunsiedel);
+        aufgeloest_Amtsgericht_Hof_Zwst_Rehau = new GerichtCode("aufgeloest_Amtsgericht_Hof_Zwst_Rehau", "D4506");
+        $VALUES.add(aufgeloest_Amtsgericht_Hof_Zwst_Rehau);
+        Landgericht_Schweinfurt = new GerichtCode("Landgericht_Schweinfurt", "D4600");
+        $VALUES.add(Landgericht_Schweinfurt);
+        Staatsanwaltschaft_beim_Landgericht_Schweinfurt = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Schweinfurt", "D4600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Schweinfurt);
+        Amtsgericht_Bad_Kissingen = new GerichtCode("Amtsgericht_Bad_Kissingen", "D4601");
+        $VALUES.add(Amtsgericht_Bad_Kissingen);
+        Grundbuchamt_Bad_Kissingen = new GerichtCode("Grundbuchamt_Bad_Kissingen", "D4601G");
+        $VALUES.add(Grundbuchamt_Bad_Kissingen);
+        Amtsgericht_Bad_Neustadt = new GerichtCode("Amtsgericht_Bad_Neustadt", "D4602");
+        $VALUES.add(Amtsgericht_Bad_Neustadt);
+        Grundbuchamt_Bad_Neustadt = new GerichtCode("Grundbuchamt_Bad_Neustadt", "D4602G");
+        $VALUES.add(Grundbuchamt_Bad_Neustadt);
+        Amtsgericht_Schweinfurt_Zweigstelle_Gerolzhofen = new GerichtCode("Amtsgericht_Schweinfurt_Zweigstelle_Gerolzhofen", "D4603");
+        $VALUES.add(Amtsgericht_Schweinfurt_Zweigstelle_Gerolzhofen);
+        aufgeloest_Amtsgericht_Bad_Kissingen_Zweigstelle_Hammelburg = new GerichtCode("aufgeloest_Amtsgericht_Bad_Kissingen_Zweigstelle_Hammelburg", "D4604");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Kissingen_Zweigstelle_Hammelburg);
+        aufgeloest_Amtsgericht_Koenigshofen_i_Grabfeld = new GerichtCode("aufgeloest_Amtsgericht_Koenigshofen_i_Grabfeld", "D4605");
+        $VALUES.add(aufgeloest_Amtsgericht_Koenigshofen_i_Grabfeld);
+        Amtsgericht_Bad_Neustadt_Zweigstelle_Mellrichstadt = new GerichtCode("Amtsgericht_Bad_Neustadt_Zweigstelle_Mellrichstadt", "D4606");
+        $VALUES.add(Amtsgericht_Bad_Neustadt_Zweigstelle_Mellrichstadt);
+        aufgeloest_Amtsgericht_Muennerstadt = new GerichtCode("aufgeloest_Amtsgericht_Muennerstadt", "D4607");
+        $VALUES.add(aufgeloest_Amtsgericht_Muennerstadt);
+        Amtsgericht_Schweinfurt = new GerichtCode("Amtsgericht_Schweinfurt", "D4608");
+        $VALUES.add(Amtsgericht_Schweinfurt);
+        Grundbuchamt_Schweinfurt = new GerichtCode("Grundbuchamt_Schweinfurt", "D4608G");
+        $VALUES.add(Grundbuchamt_Schweinfurt);
+        Registergericht_Amtsgericht_Schweinfurt = new GerichtCode("Registergericht_Amtsgericht_Schweinfurt", "D4608V");
+        $VALUES.add(Registergericht_Amtsgericht_Schweinfurt);
+        Landgericht_Schweinfurt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Bad_Neustadt = new GerichtCode("Landgericht_Schweinfurt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Bad_Neustadt", "D4620");
+        $VALUES.add(Landgericht_Schweinfurt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Bad_Neustadt);
+        Landgericht_Wuerzburg = new GerichtCode("Landgericht_Wuerzburg", "D4700");
+        $VALUES.add(Landgericht_Wuerzburg);
+        Staatsanwaltschaft_beim_Landgericht_Wuerzburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Wuerzburg", "D4700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Wuerzburg);
+        aufgeloest_Amtsgericht_Arnstein = new GerichtCode("aufgeloest_Amtsgericht_Arnstein", "D4701");
+        $VALUES.add(aufgeloest_Amtsgericht_Arnstein);
+        aufgeloest_Amtsgericht_Brueckenau = new GerichtCode("aufgeloest_Amtsgericht_Brueckenau", "D4702");
+        $VALUES.add(aufgeloest_Amtsgericht_Brueckenau);
+        Amtsgericht_Gemuenden = new GerichtCode("Amtsgericht_Gemuenden", "D4703");
+        $VALUES.add(Amtsgericht_Gemuenden);
+        Grundbuchamt_Gemuenden = new GerichtCode("Grundbuchamt_Gemuenden", "D4703G");
+        $VALUES.add(Grundbuchamt_Gemuenden);
+        aufgeloest_Amtsgericht_Karlstadt = new GerichtCode("aufgeloest_Amtsgericht_Karlstadt", "D4704");
+        $VALUES.add(aufgeloest_Amtsgericht_Karlstadt);
+        Amtsgericht_Kitzingen = new GerichtCode("Amtsgericht_Kitzingen", "D4705");
+        $VALUES.add(Amtsgericht_Kitzingen);
+        Grundbuchamt_Kitzingen = new GerichtCode("Grundbuchamt_Kitzingen", "D4705G");
+        $VALUES.add(Grundbuchamt_Kitzingen);
+        aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Marktheidenfeld = new GerichtCode("aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Marktheidenfeld", "D4706");
+        $VALUES.add(aufgeloest_Amtsgericht_Gemuenden_a_Main_Zwst_Marktheidenfeld);
+        aufgeloest_Amtsgericht_Wuerzburg_Zweigstelle_Ochsenfurt = new GerichtCode("aufgeloest_Amtsgericht_Wuerzburg_Zweigstelle_Ochsenfurt", "D4707");
+        $VALUES.add(aufgeloest_Amtsgericht_Wuerzburg_Zweigstelle_Ochsenfurt);
+        Amtsgericht_Wuerzburg = new GerichtCode("Amtsgericht_Wuerzburg", "D4708");
+        $VALUES.add(Amtsgericht_Wuerzburg);
+        Grundbuchamt_Wuerzburg = new GerichtCode("Grundbuchamt_Wuerzburg", "D4708G");
+        $VALUES.add(Grundbuchamt_Wuerzburg);
+        Registergericht_Amtsgericht_Wuerzburg = new GerichtCode("Registergericht_Amtsgericht_Wuerzburg", "D4708V");
+        $VALUES.add(Registergericht_Amtsgericht_Wuerzburg);
+        Staatsanwaltschaft_beim_Landgericht_Erlangen_Zwst_der_StA_Nuernberg_Fuerth = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Erlangen_Zwst_der_StA_Nuernberg_Fuerth", "D5200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Erlangen_Zwst_der_StA_Nuernberg_Fuerth);
+        Staatsanwaltschaft_beim_Landgericht_Fuerth_Zwst_der_StA_Nuernberg_Fuerth = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Fuerth_Zwst_der_StA_Nuernberg_Fuerth", "D5300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Fuerth_Zwst_der_StA_Nuernberg_Fuerth);
+        Staatsanwaltschaft_beim_Landgericht_Straubing_Zwst_der_StA_Regensburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Straubing_Zwst_der_StA_Regensburg", "D5400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Straubing_Zwst_der_StA_Regensburg);
+        Staatsanwaltschaft_beim_Landgericht_Neu_Ulm_Zwst_der_StA_Memmingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Neu_Ulm_Zwst_der_StA_Memmingen", "D5500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Neu_Ulm_Zwst_der_StA_Memmingen);
+        Landgericht_Ingolstadt = new GerichtCode("Landgericht_Ingolstadt", "D5700");
+        $VALUES.add(Landgericht_Ingolstadt);
+        Staatsanwaltschaft_beim_Landgericht_Ingolstadt = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Ingolstadt", "D5700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Ingolstadt);
+        Amtsgericht_Ingolstadt = new GerichtCode("Amtsgericht_Ingolstadt", "D5701");
+        $VALUES.add(Amtsgericht_Ingolstadt);
+        Grundbuchamt_Ingolstadt = new GerichtCode("Grundbuchamt_Ingolstadt", "D5701G");
+        $VALUES.add(Grundbuchamt_Ingolstadt);
+        Registergericht_Amtsgericht_Ingolstadt = new GerichtCode("Registergericht_Amtsgericht_Ingolstadt", "D5701V");
+        $VALUES.add(Registergericht_Amtsgericht_Ingolstadt);
+        Amtsgericht_Neuburg_an_der_Donau = new GerichtCode("Amtsgericht_Neuburg_an_der_Donau", "D5702");
+        $VALUES.add(Amtsgericht_Neuburg_an_der_Donau);
+        Grundbuchamt_Neuburg = new GerichtCode("Grundbuchamt_Neuburg", "D5702G");
+        $VALUES.add(Grundbuchamt_Neuburg);
+        Amtsgericht_Pfaffenhofen_a_d_Ilm = new GerichtCode("Amtsgericht_Pfaffenhofen_a_d_Ilm", "D5703");
+        $VALUES.add(Amtsgericht_Pfaffenhofen_a_d_Ilm);
+        Grundbuchamt_Pfaffenhofen = new GerichtCode("Grundbuchamt_Pfaffenhofen", "D5703G");
+        $VALUES.add(Grundbuchamt_Pfaffenhofen);
+        Landgericht_Ingolstadt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neuburg_a_d_Donau = new GerichtCode("Landgericht_Ingolstadt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neuburg_a_d_Donau", "D5720");
+        $VALUES.add(Landgericht_Ingolstadt_Auswaertige_Strafvollstreckungskammer_b_d_Amtsgericht_Neuburg_a_d_Donau);
+        Staatsanwaltschaft_beim_Landgericht_Rosenheim_Zwst_der_StA_Traunstein = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Rosenheim_Zwst_der_StA_Traunstein", "D5900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Rosenheim_Zwst_der_StA_Traunstein);
+        Justizvollzugsanstalt_Erlangen_Sozialtherapeutische_Anstalt = new GerichtCode("Justizvollzugsanstalt_Erlangen_Sozialtherapeutische_Anstalt", "D6082");
+        $VALUES.add(Justizvollzugsanstalt_Erlangen_Sozialtherapeutische_Anstalt);
+        Bayerischer_Verwaltungsgerichtshof = new GerichtCode("Bayerischer_Verwaltungsgerichtshof", "D6122");
+        $VALUES.add(Bayerischer_Verwaltungsgerichtshof);
+        Justizvollzugsanstalt_Bernau = new GerichtCode("Justizvollzugsanstalt_Bernau", "D6190");
+        $VALUES.add(Justizvollzugsanstalt_Bernau);
+        Verwaltungsgericht_Ansbach = new GerichtCode("Verwaltungsgericht_Ansbach", "D6248");
+        $VALUES.add(Verwaltungsgericht_Ansbach);
+        Sozialgericht_Augsburg = new GerichtCode("Sozialgericht_Augsburg", "D6249");
+        $VALUES.add(Sozialgericht_Augsburg);
+        Arbeitsgericht_Augsburg = new GerichtCode("Arbeitsgericht_Augsburg", "D6250");
+        $VALUES.add(Arbeitsgericht_Augsburg);
+        Arbeitsgericht_Bamberg = new GerichtCode("Arbeitsgericht_Bamberg", "D6251");
+        $VALUES.add(Arbeitsgericht_Bamberg);
+        Arbeitsgericht_Kempten_Allgaeu = new GerichtCode("Arbeitsgericht_Kempten_Allgaeu", "D6252");
+        $VALUES.add(Arbeitsgericht_Kempten_Allgaeu);
+        Sozialgericht_Landshut = new GerichtCode("Sozialgericht_Landshut", "D6253");
+        $VALUES.add(Sozialgericht_Landshut);
+        Bayerisches_Landessozialgericht = new GerichtCode("Bayerisches_Landessozialgericht", "D6255");
+        $VALUES.add(Bayerisches_Landessozialgericht);
+        Landesarbeitsgericht_Muenchen = new GerichtCode("Landesarbeitsgericht_Muenchen", "D6256");
+        $VALUES.add(Landesarbeitsgericht_Muenchen);
+        Arbeitsgericht_Muenchen = new GerichtCode("Arbeitsgericht_Muenchen", "D6257");
+        $VALUES.add(Arbeitsgericht_Muenchen);
+        Finanzgericht_Muenchen = new GerichtCode("Finanzgericht_Muenchen", "D6258");
+        $VALUES.add(Finanzgericht_Muenchen);
+        Bayerischer_Verfassungsgerichtshof = new GerichtCode("Bayerischer_Verfassungsgerichtshof", "D6259");
+        $VALUES.add(Bayerischer_Verfassungsgerichtshof);
+        Sozialgericht_Muenchen = new GerichtCode("Sozialgericht_Muenchen", "D6260");
+        $VALUES.add(Sozialgericht_Muenchen);
+        Bundespatentgericht = new GerichtCode("Bundespatentgericht", "D6261");
+        $VALUES.add(Bundespatentgericht);
+        Verwaltungsgericht_Muenchen = new GerichtCode("Verwaltungsgericht_Muenchen", "D6262");
+        $VALUES.add(Verwaltungsgericht_Muenchen);
+        Bundesfinanzhof = new GerichtCode("Bundesfinanzhof", "D6263");
+        $VALUES.add(Bundesfinanzhof);
+        Finanzgericht_Nuernberg = new GerichtCode("Finanzgericht_Nuernberg", "D6264");
+        $VALUES.add(Finanzgericht_Nuernberg);
+        Sozialgericht_Nuernberg = new GerichtCode("Sozialgericht_Nuernberg", "D6265");
+        $VALUES.add(Sozialgericht_Nuernberg);
+        Landesarbeitsgericht_Nuernberg = new GerichtCode("Landesarbeitsgericht_Nuernberg", "D6266");
+        $VALUES.add(Landesarbeitsgericht_Nuernberg);
+        Arbeitsgericht_Nuernberg = new GerichtCode("Arbeitsgericht_Nuernberg", "D6267");
+        $VALUES.add(Arbeitsgericht_Nuernberg);
+        Sozialgericht_Regensburg = new GerichtCode("Sozialgericht_Regensburg", "D6268");
+        $VALUES.add(Sozialgericht_Regensburg);
+        Arbeitsgericht_Rosenheim = new GerichtCode("Arbeitsgericht_Rosenheim", "D6269");
+        $VALUES.add(Arbeitsgericht_Rosenheim);
+        Arbeitsgericht_Wuerzburg = new GerichtCode("Arbeitsgericht_Wuerzburg", "D6270");
+        $VALUES.add(Arbeitsgericht_Wuerzburg);
+        Sozialgericht_Wuerzburg = new GerichtCode("Sozialgericht_Wuerzburg", "D6271");
+        $VALUES.add(Sozialgericht_Wuerzburg);
+        Verwaltungsgericht_Wuerzburg = new GerichtCode("Verwaltungsgericht_Wuerzburg", "D6272");
+        $VALUES.add(Verwaltungsgericht_Wuerzburg);
+        Justizvollzugsanstalt_Muenchen = new GerichtCode("Justizvollzugsanstalt_Muenchen", "D6463");
+        $VALUES.add(Justizvollzugsanstalt_Muenchen);
+        Arbeitsgericht_Bayreuth = new GerichtCode("Arbeitsgericht_Bayreuth", "D6539");
+        $VALUES.add(Arbeitsgericht_Bayreuth);
+        Arbeitsgericht_Passau = new GerichtCode("Arbeitsgericht_Passau", "D6540");
+        $VALUES.add(Arbeitsgericht_Passau);
+        Arbeitsgericht_Regensburg = new GerichtCode("Arbeitsgericht_Regensburg", "D6541");
+        $VALUES.add(Arbeitsgericht_Regensburg);
+        Arbeitsgericht_Weiden = new GerichtCode("Arbeitsgericht_Weiden", "D6542");
+        $VALUES.add(Arbeitsgericht_Weiden);
+        Sozialgericht_Bayreuth = new GerichtCode("Sozialgericht_Bayreuth", "D6575");
+        $VALUES.add(Sozialgericht_Bayreuth);
+        Verwaltungsgericht_Augsburg = new GerichtCode("Verwaltungsgericht_Augsburg", "D6577");
+        $VALUES.add(Verwaltungsgericht_Augsburg);
+        Verwaltungsgericht_Bayreuth = new GerichtCode("Verwaltungsgericht_Bayreuth", "D6578");
+        $VALUES.add(Verwaltungsgericht_Bayreuth);
+        Verwaltungsgericht_Regensburg = new GerichtCode("Verwaltungsgericht_Regensburg", "D6579");
+        $VALUES.add(Verwaltungsgericht_Regensburg);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Nuernberg = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Nuernberg", "D6657");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Nuernberg);
+        Bayerischer_Anwaltsgerichtshof = new GerichtCode("Bayerischer_Anwaltsgerichtshof", "D6658");
+        $VALUES.add(Bayerischer_Anwaltsgerichtshof);
+        Justizvollzugsanstalt_Memmingen = new GerichtCode("Justizvollzugsanstalt_Memmingen", "D7607");
+        $VALUES.add(Justizvollzugsanstalt_Memmingen);
+        Justizvollzugsanstalt_Nuernberg = new GerichtCode("Justizvollzugsanstalt_Nuernberg", "D7870");
+        $VALUES.add(Justizvollzugsanstalt_Nuernberg);
+        Justizvollzugsanstalt_Kaisheim = new GerichtCode("Justizvollzugsanstalt_Kaisheim", "D7871");
+        $VALUES.add(Justizvollzugsanstalt_Kaisheim);
+        Bayerisches_Landessozialgericht_Zweigstelle_Schweinfurt = new GerichtCode("Bayerisches_Landessozialgericht_Zweigstelle_Schweinfurt", "D8047");
+        $VALUES.add(Bayerisches_Landessozialgericht_Zweigstelle_Schweinfurt);
+        Justizvollzugsanstalt_Landsberg = new GerichtCode("Justizvollzugsanstalt_Landsberg", "D8419");
+        $VALUES.add(Justizvollzugsanstalt_Landsberg);
+        Justizvollzugsanstalt_Wuerzburg = new GerichtCode("Justizvollzugsanstalt_Wuerzburg", "D8445");
+        $VALUES.add(Justizvollzugsanstalt_Wuerzburg);
+        Justizvollzugsanstalt_Neuburg_an_der_Donau = new GerichtCode("Justizvollzugsanstalt_Neuburg_an_der_Donau", "D8485");
+        $VALUES.add(Justizvollzugsanstalt_Neuburg_an_der_Donau);
+        Justizvollzugsanstalt_Kempten = new GerichtCode("Justizvollzugsanstalt_Kempten", "D8491");
+        $VALUES.add(Justizvollzugsanstalt_Kempten);
+        Justizvollzugsanstalt_Straubing = new GerichtCode("Justizvollzugsanstalt_Straubing", "D8517");
+        $VALUES.add(Justizvollzugsanstalt_Straubing);
+        Justizvollzugsanstalt_Aichach = new GerichtCode("Justizvollzugsanstalt_Aichach", "D8551");
+        $VALUES.add(Justizvollzugsanstalt_Aichach);
+        Justizvollzugsanstalt_Amberg = new GerichtCode("Justizvollzugsanstalt_Amberg", "D8552");
+        $VALUES.add(Justizvollzugsanstalt_Amberg);
+        Justizvollzugsanstalt_Ansbach = new GerichtCode("Justizvollzugsanstalt_Ansbach", "D8553");
+        $VALUES.add(Justizvollzugsanstalt_Ansbach);
+        Justizvollzugsanstalt_Aschaffenburg = new GerichtCode("Justizvollzugsanstalt_Aschaffenburg", "D8554");
+        $VALUES.add(Justizvollzugsanstalt_Aschaffenburg);
+        Justizvollzugsanstalt_Bad_Reichenhall = new GerichtCode("Justizvollzugsanstalt_Bad_Reichenhall", "D8555");
+        $VALUES.add(Justizvollzugsanstalt_Bad_Reichenhall);
+        Justizvollzugsanstalt_Bamberg = new GerichtCode("Justizvollzugsanstalt_Bamberg", "D8556");
+        $VALUES.add(Justizvollzugsanstalt_Bamberg);
+        Justizvollzugsanstalt_St_Georgen_Bayreuth = new GerichtCode("Justizvollzugsanstalt_St_Georgen_Bayreuth", "D8557");
+        $VALUES.add(Justizvollzugsanstalt_St_Georgen_Bayreuth);
+        Justizvollzugsanstalt_Ebrach = new GerichtCode("Justizvollzugsanstalt_Ebrach", "D8558");
+        $VALUES.add(Justizvollzugsanstalt_Ebrach);
+        Justizvollzugsanstalt_Eichstaett = new GerichtCode("Justizvollzugsanstalt_Eichstaett", "D8559");
+        $VALUES.add(Justizvollzugsanstalt_Eichstaett);
+        Justizvollzugsanstalt_Erding = new GerichtCode("Justizvollzugsanstalt_Erding", "D8560");
+        $VALUES.add(Justizvollzugsanstalt_Erding);
+        Justizvollzugsanstalt_Garmisch_Partenkirchen = new GerichtCode("Justizvollzugsanstalt_Garmisch_Partenkirchen", "D8561");
+        $VALUES.add(Justizvollzugsanstalt_Garmisch_Partenkirchen);
+        Justizvollzugsanstalt_Hof = new GerichtCode("Justizvollzugsanstalt_Hof", "D8562");
+        $VALUES.add(Justizvollzugsanstalt_Hof);
+        Justizvollzugsanstalt_Ingolstadt = new GerichtCode("Justizvollzugsanstalt_Ingolstadt", "D8563");
+        $VALUES.add(Justizvollzugsanstalt_Ingolstadt);
+        Justizvollzugsanstalt_Kronach = new GerichtCode("Justizvollzugsanstalt_Kronach", "D8564");
+        $VALUES.add(Justizvollzugsanstalt_Kronach);
+        Justizvollzugsanstalt_Landshut = new GerichtCode("Justizvollzugsanstalt_Landshut", "D8566");
+        $VALUES.add(Justizvollzugsanstalt_Landshut);
+        Justizvollzugsanstalt_Passau = new GerichtCode("Justizvollzugsanstalt_Passau", "D8567");
+        $VALUES.add(Justizvollzugsanstalt_Passau);
+        Justizvollzugsanstalt_Regensburg = new GerichtCode("Justizvollzugsanstalt_Regensburg", "D8568");
+        $VALUES.add(Justizvollzugsanstalt_Regensburg);
+        Justizvollzugsanstalt_Schweinfurt = new GerichtCode("Justizvollzugsanstalt_Schweinfurt", "D8569");
+        $VALUES.add(Justizvollzugsanstalt_Schweinfurt);
+        Justizvollzugsanstalt_Traunstein = new GerichtCode("Justizvollzugsanstalt_Traunstein", "D8570");
+        $VALUES.add(Justizvollzugsanstalt_Traunstein);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Muenchen = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Muenchen", "D8642");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Muenchen);
+        Anwaltsgericht_Bamberg = new GerichtCode("Anwaltsgericht_Bamberg", "D8686");
+        $VALUES.add(Anwaltsgericht_Bamberg);
+        Justizvollzugsanstalt_Niederschoenenfeld = new GerichtCode("Justizvollzugsanstalt_Niederschoenenfeld", "D8699");
+        $VALUES.add(Justizvollzugsanstalt_Niederschoenenfeld);
+        Justizvollzugsanstalt_Muehldorf_a_Inn = new GerichtCode("Justizvollzugsanstalt_Muehldorf_a_Inn", "D8793");
+        $VALUES.add(Justizvollzugsanstalt_Muehldorf_a_Inn);
+        Justizvollzugsanstalt_Laufen_Lebenau = new GerichtCode("Justizvollzugsanstalt_Laufen_Lebenau", "D8794");
+        $VALUES.add(Justizvollzugsanstalt_Laufen_Lebenau);
+        Justizvollzugsanstalt_Weiden = new GerichtCode("Justizvollzugsanstalt_Weiden", "D8821");
+        $VALUES.add(Justizvollzugsanstalt_Weiden);
+        Finanzgericht_Augsburg = new GerichtCode("Finanzgericht_Augsburg", "D8902");
+        $VALUES.add(Finanzgericht_Augsburg);
+        Justizvollzugsanstalt_Augsburg_Gablingen = new GerichtCode("Justizvollzugsanstalt_Augsburg_Gablingen", "D9372");
+        $VALUES.add(Justizvollzugsanstalt_Augsburg_Gablingen);
+        Arbeitsgericht_Augsburg_Kammer_Neu_Ulm = new GerichtCode("Arbeitsgericht_Augsburg_Kammer_Neu_Ulm", "D9395");
+        $VALUES.add(Arbeitsgericht_Augsburg_Kammer_Neu_Ulm);
+        Arbeitsgericht_Bamberg_Kammer_Coburg = new GerichtCode("Arbeitsgericht_Bamberg_Kammer_Coburg", "D9396");
+        $VALUES.add(Arbeitsgericht_Bamberg_Kammer_Coburg);
+        Arbeitsgericht_Bayreuth_Kammer_Hof = new GerichtCode("Arbeitsgericht_Bayreuth_Kammer_Hof", "D9397");
+        $VALUES.add(Arbeitsgericht_Bayreuth_Kammer_Hof);
+        Arbeitsgericht_Muenchen_Kammer_Ingolstadt = new GerichtCode("Arbeitsgericht_Muenchen_Kammer_Ingolstadt", "D9398");
+        $VALUES.add(Arbeitsgericht_Muenchen_Kammer_Ingolstadt);
+        Arbeitsgericht_Muenchen_Kammer_Weilheim = new GerichtCode("Arbeitsgericht_Muenchen_Kammer_Weilheim", "D9399");
+        $VALUES.add(Arbeitsgericht_Muenchen_Kammer_Weilheim);
+        Arbeitsgericht_Passau_Kammer_Deggendorf = new GerichtCode("Arbeitsgericht_Passau_Kammer_Deggendorf", "D9400");
+        $VALUES.add(Arbeitsgericht_Passau_Kammer_Deggendorf);
+        Arbeitsgericht_Regensburg_Kammer_Landshut = new GerichtCode("Arbeitsgericht_Regensburg_Kammer_Landshut", "D9401");
+        $VALUES.add(Arbeitsgericht_Regensburg_Kammer_Landshut);
+        Arbeitsgericht_Rosenheim_Kammer_Traunstein = new GerichtCode("Arbeitsgericht_Rosenheim_Kammer_Traunstein", "D9402");
+        $VALUES.add(Arbeitsgericht_Rosenheim_Kammer_Traunstein);
+        Arbeitsgericht_Weiden_Kammer_Schwandorf = new GerichtCode("Arbeitsgericht_Weiden_Kammer_Schwandorf", "D9403");
+        $VALUES.add(Arbeitsgericht_Weiden_Kammer_Schwandorf);
+        Arbeitsgericht_Wuerzburg_Kammer_Aschaffenburg = new GerichtCode("Arbeitsgericht_Wuerzburg_Kammer_Aschaffenburg", "D9404");
+        $VALUES.add(Arbeitsgericht_Wuerzburg_Kammer_Aschaffenburg);
+        Arbeitsgericht_Wuerzburg_Kammer_Schweinfurt = new GerichtCode("Arbeitsgericht_Wuerzburg_Kammer_Schweinfurt", "D9405");
+        $VALUES.add(Arbeitsgericht_Wuerzburg_Kammer_Schweinfurt);
+        Kammergericht_Berlin = new GerichtCode("Kammergericht_Berlin", "F1000");
+        $VALUES.add(Kammergericht_Berlin);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Berlin_Kammergericht = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Berlin_Kammergericht", "F1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Berlin_Kammergericht);
+        Staatsanwaltschaft_bei_dem_Kammergericht_Dezernat_Ausl_Einl = new GerichtCode("Staatsanwaltschaft_bei_dem_Kammergericht_Dezernat_Ausl_Einl", "F1001S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Kammergericht_Dezernat_Ausl_Einl);
+        Landgericht_Berlin_Strafgerichtsbarkeit = new GerichtCode("Landgericht_Berlin_Strafgerichtsbarkeit", "F1100");
+        $VALUES.add(Landgericht_Berlin_Strafgerichtsbarkeit);
+        Staatsanwaltschaft_beim_Landgericht_Berlin = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Berlin", "F1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Berlin);
+        Amtsgericht_Tiergarten = new GerichtCode("Amtsgericht_Tiergarten", "F1101");
+        $VALUES.add(Amtsgericht_Tiergarten);
+        Amtsgericht_Tiergarten_Zivilsachen = new GerichtCode("Amtsgericht_Tiergarten_Zivilsachen", "F1101R");
+        $VALUES.add(Amtsgericht_Tiergarten_Zivilsachen);
+        Amtsgericht_Wedding = new GerichtCode("Amtsgericht_Wedding", "F1102");
+        $VALUES.add(Amtsgericht_Wedding);
+        Amtsgericht_Wedding_Mahngericht = new GerichtCode("Amtsgericht_Wedding_Mahngericht", "F1102M");
+        $VALUES.add(Amtsgericht_Wedding_Mahngericht);
+        Amtsgericht_Charlottenburg = new GerichtCode("Amtsgericht_Charlottenburg", "F1103");
+        $VALUES.add(Amtsgericht_Charlottenburg);
+        Amtsgericht_Charlottenburg_Handels_und_Genossenschaftsregister = new GerichtCode("Amtsgericht_Charlottenburg_Handels_und_Genossenschaftsregister", "F1103R");
+        $VALUES.add(Amtsgericht_Charlottenburg_Handels_und_Genossenschaftsregister);
+        Amtsgericht_Spandau = new GerichtCode("Amtsgericht_Spandau", "F1104");
+        $VALUES.add(Amtsgericht_Spandau);
+        aufgeloest_Amtsgericht_Berlin_Zehlendorf = new GerichtCode("aufgeloest_Amtsgericht_Berlin_Zehlendorf", "F1105");
+        $VALUES.add(aufgeloest_Amtsgericht_Berlin_Zehlendorf);
+        Amtsgericht_Schoeneberg = new GerichtCode("Amtsgericht_Schoeneberg", "F1106");
+        $VALUES.add(Amtsgericht_Schoeneberg);
+        aufgeloest_Amtsgericht_Berlin_Lichterfelde = new GerichtCode("aufgeloest_Amtsgericht_Berlin_Lichterfelde", "F1107");
+        $VALUES.add(aufgeloest_Amtsgericht_Berlin_Lichterfelde);
+        Amtsgericht_Kreuzberg = new GerichtCode("Amtsgericht_Kreuzberg", "F1108");
+        $VALUES.add(Amtsgericht_Kreuzberg);
+        Amtsgericht_Neukoelln = new GerichtCode("Amtsgericht_Neukoelln", "F1109");
+        $VALUES.add(Amtsgericht_Neukoelln);
+        Amtsgericht_Pankow = new GerichtCode("Amtsgericht_Pankow", "F1110");
+        $VALUES.add(Amtsgericht_Pankow);
+        Amtsanwaltschaft_Berlin = new GerichtCode("Amtsanwaltschaft_Berlin", "F1110S");
+        $VALUES.add(Amtsanwaltschaft_Berlin);
+        Amtsgericht_Lichtenberg = new GerichtCode("Amtsgericht_Lichtenberg", "F1111");
+        $VALUES.add(Amtsgericht_Lichtenberg);
+        Amtsgericht_Berlin_Mitte = new GerichtCode("Amtsgericht_Berlin_Mitte", "F1112");
+        $VALUES.add(Amtsgericht_Berlin_Mitte);
+        Amtsgericht_Berlin_Mitte_Zentrales_Vollstreckungsgericht_Berlin = new GerichtCode("Amtsgericht_Berlin_Mitte_Zentrales_Vollstreckungsgericht_Berlin", "F1112R");
+        $VALUES.add(Amtsgericht_Berlin_Mitte_Zentrales_Vollstreckungsgericht_Berlin);
+        Amtsgericht_Koepenick = new GerichtCode("Amtsgericht_Koepenick", "F1113");
+        $VALUES.add(Amtsgericht_Koepenick);
+        Amtsgericht_Hohenschoenhausen = new GerichtCode("Amtsgericht_Hohenschoenhausen", "F1114");
+        $VALUES.add(Amtsgericht_Hohenschoenhausen);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Berlin_II = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Berlin_II", "F1200S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Berlin_II);
+        Bereitschaftsgericht_Berlin = new GerichtCode("Bereitschaftsgericht_Berlin", "F6053");
+        $VALUES.add(Bereitschaftsgericht_Berlin);
+        Sozialgericht_Berlin = new GerichtCode("Sozialgericht_Berlin", "F6061");
+        $VALUES.add(Sozialgericht_Berlin);
+        Finanzgericht_Berlin = new GerichtCode("Finanzgericht_Berlin", "F6080");
+        $VALUES.add(Finanzgericht_Berlin);
+        Landessozialgericht_Berlin = new GerichtCode("Landessozialgericht_Berlin", "F6081");
+        $VALUES.add(Landessozialgericht_Berlin);
+        Arbeitsgericht_Berlin = new GerichtCode("Arbeitsgericht_Berlin", "F6082");
+        $VALUES.add(Arbeitsgericht_Berlin);
+        Landesarbeitsgericht_Berlin = new GerichtCode("Landesarbeitsgericht_Berlin", "F6083");
+        $VALUES.add(Landesarbeitsgericht_Berlin);
+        Verwaltungsgericht_Berlin = new GerichtCode("Verwaltungsgericht_Berlin", "F6084");
+        $VALUES.add(Verwaltungsgericht_Berlin);
+        Justizbeitreibungsstelle_des_Bundesverwaltungsgerichts = new GerichtCode("Justizbeitreibungsstelle_des_Bundesverwaltungsgerichts", "F6085");
+        $VALUES.add(Justizbeitreibungsstelle_des_Bundesverwaltungsgerichts);
+        aufgeloest_Bundesverwaltungsgericht = new GerichtCode("aufgeloest_Bundesverwaltungsgericht", "F6087");
+        $VALUES.add(aufgeloest_Bundesverwaltungsgericht);
+        Die_Praesidentin_des_Kammergerichts = new GerichtCode("Die_Praesidentin_des_Kammergerichts", "F6104");
+        $VALUES.add(Die_Praesidentin_des_Kammergerichts);
+        Oberverwaltungsgericht_Berlin_Brandenburg = new GerichtCode("Oberverwaltungsgericht_Berlin_Brandenburg", "F6145");
+        $VALUES.add(Oberverwaltungsgericht_Berlin_Brandenburg);
+        Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_Berlin = new GerichtCode("Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_Berlin", "F6149");
+        $VALUES.add(Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_Berlin);
+        Anwaltsgerichtshof_Berlin = new GerichtCode("Anwaltsgerichtshof_Berlin", "F6185");
+        $VALUES.add(Anwaltsgerichtshof_Berlin);
+        Jugendarrestanstalt_Berlin_Brandenburg = new GerichtCode("Jugendarrestanstalt_Berlin_Brandenburg", "F6374");
+        $VALUES.add(Jugendarrestanstalt_Berlin_Brandenburg);
+        Jugendstrafanstalt_Berlin = new GerichtCode("Jugendstrafanstalt_Berlin", "F6399");
+        $VALUES.add(Jugendstrafanstalt_Berlin);
+        aufgeloest_Landgericht_Berlin_Zivilgerichtsbarkeit_1_Instanz = new GerichtCode("aufgeloest_Landgericht_Berlin_Zivilgerichtsbarkeit_1_Instanz", "F6402");
+        $VALUES.add(aufgeloest_Landgericht_Berlin_Zivilgerichtsbarkeit_1_Instanz);
+        Justizvollzugsanstalt_Tegel = new GerichtCode("Justizvollzugsanstalt_Tegel", "F6491");
+        $VALUES.add(Justizvollzugsanstalt_Tegel);
+        Die_Praesidentin_des_Verwaltungsgerichts_Berlin = new GerichtCode("Die_Praesidentin_des_Verwaltungsgerichts_Berlin", "F6496");
+        $VALUES.add(Die_Praesidentin_des_Verwaltungsgerichts_Berlin);
+        Justizvollzugsanstalt_Moabit = new GerichtCode("Justizvollzugsanstalt_Moabit", "F6525");
+        $VALUES.add(Justizvollzugsanstalt_Moabit);
+        Landgericht_Berlin_Zivilgerichtsbarkeit = new GerichtCode("Landgericht_Berlin_Zivilgerichtsbarkeit", "F6529");
+        $VALUES.add(Landgericht_Berlin_Zivilgerichtsbarkeit);
+        Verfassungsgerichtshof_Berlin = new GerichtCode("Verfassungsgerichtshof_Berlin", "F6544");
+        $VALUES.add(Verfassungsgerichtshof_Berlin);
+        Europaeisches_Mahngericht_Deutschland = new GerichtCode("Europaeisches_Mahngericht_Deutschland", "F6545");
+        $VALUES.add(Europaeisches_Mahngericht_Deutschland);
+        Amtsgericht_Tiergarten_Verkehrs_und_Wirtschaftsstrafsachen = new GerichtCode("Amtsgericht_Tiergarten_Verkehrs_und_Wirtschaftsstrafsachen", "F6552");
+        $VALUES.add(Amtsgericht_Tiergarten_Verkehrs_und_Wirtschaftsstrafsachen);
+        aufgeloest_Amtsgericht_Pankow_Weissensee_Familiengericht = new GerichtCode("aufgeloest_Amtsgericht_Pankow_Weissensee_Familiengericht", "F6553");
+        $VALUES.add(aufgeloest_Amtsgericht_Pankow_Weissensee_Familiengericht);
+        Justizvollzugsanstalt_fuer_Frauen_Berlin = new GerichtCode("Justizvollzugsanstalt_fuer_Frauen_Berlin", "F7460");
+        $VALUES.add(Justizvollzugsanstalt_fuer_Frauen_Berlin);
+        Justizvollzugsanstalt_Ploetzensee = new GerichtCode("Justizvollzugsanstalt_Ploetzensee", "F7464");
+        $VALUES.add(Justizvollzugsanstalt_Ploetzensee);
+        Justizvollzugsanstalt_des_Offenen_Vollzuges_Berlin = new GerichtCode("Justizvollzugsanstalt_des_Offenen_Vollzuges_Berlin", "F7599");
+        $VALUES.add(Justizvollzugsanstalt_des_Offenen_Vollzuges_Berlin);
+        Brandenburgisches_Oberlandesgericht = new GerichtCode("Brandenburgisches_Oberlandesgericht", "G1000");
+        $VALUES.add(Brandenburgisches_Oberlandesgericht);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Brandenburg_a_d_Havel = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Brandenburg_a_d_Havel", "G1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Brandenburg_a_d_Havel);
+        Generalstaatsanwaltschaft_des_Landes_Brandenburg_Rechtshilfe = new GerichtCode("Generalstaatsanwaltschaft_des_Landes_Brandenburg_Rechtshilfe", "G1001S");
+        $VALUES.add(Generalstaatsanwaltschaft_des_Landes_Brandenburg_Rechtshilfe);
+        Landgericht_Cottbus = new GerichtCode("Landgericht_Cottbus", "G1100");
+        $VALUES.add(Landgericht_Cottbus);
+        Staatsanwaltschaft_beim_Landgericht_Cottbus = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Cottbus", "G1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Cottbus);
+        Amtsgericht_Bad_Liebenwerda = new GerichtCode("Amtsgericht_Bad_Liebenwerda", "G1101");
+        $VALUES.add(Amtsgericht_Bad_Liebenwerda);
+        Grundbuchamt_Bad_Liebenwerda = new GerichtCode("Grundbuchamt_Bad_Liebenwerda", "G1101G");
+        $VALUES.add(Grundbuchamt_Bad_Liebenwerda);
+        aufgeloest_Amtsgericht_Calau_in_Luebbenau = new GerichtCode("aufgeloest_Amtsgericht_Calau_in_Luebbenau", "G1102");
+        $VALUES.add(aufgeloest_Amtsgericht_Calau_in_Luebbenau);
+        Amtsgericht_Cottbus = new GerichtCode("Amtsgericht_Cottbus", "G1103");
+        $VALUES.add(Amtsgericht_Cottbus);
+        Grundbuchamt_Cottbus = new GerichtCode("Grundbuchamt_Cottbus", "G1103G");
+        $VALUES.add(Grundbuchamt_Cottbus);
+        Amtsgericht_Bad_Liebenwerda_Zweigstelle_Finsterwalde = new GerichtCode("Amtsgericht_Bad_Liebenwerda_Zweigstelle_Finsterwalde", "G1105");
+        $VALUES.add(Amtsgericht_Bad_Liebenwerda_Zweigstelle_Finsterwalde);
+        aufgeloest_Amtsgericht_Forst_Lausitz = new GerichtCode("aufgeloest_Amtsgericht_Forst_Lausitz", "G1106");
+        $VALUES.add(aufgeloest_Amtsgericht_Forst_Lausitz);
+        Amtsgericht_Guben = new GerichtCode("Amtsgericht_Guben", "G1107");
+        $VALUES.add(Amtsgericht_Guben);
+        aufgeloest_Amtsgericht_Herzberg_Elster = new GerichtCode("aufgeloest_Amtsgericht_Herzberg_Elster", "G1108");
+        $VALUES.add(aufgeloest_Amtsgericht_Herzberg_Elster);
+        aufgeloest_Amtsgericht_Luckau = new GerichtCode("aufgeloest_Amtsgericht_Luckau", "G1109");
+        $VALUES.add(aufgeloest_Amtsgericht_Luckau);
+        Amtsgericht_Luebben = new GerichtCode("Amtsgericht_Luebben", "G1110");
+        $VALUES.add(Amtsgericht_Luebben);
+        Grundbuchamt_Luebben_Spreewald = new GerichtCode("Grundbuchamt_Luebben_Spreewald", "G1110G");
+        $VALUES.add(Grundbuchamt_Luebben_Spreewald);
+        Amtsgericht_Senftenberg = new GerichtCode("Amtsgericht_Senftenberg", "G1111");
+        $VALUES.add(Amtsgericht_Senftenberg);
+        Grundbuchamt_Senftenberg = new GerichtCode("Grundbuchamt_Senftenberg", "G1111G");
+        $VALUES.add(Grundbuchamt_Senftenberg);
+        aufgeloest_Amtsgericht_Spremberg = new GerichtCode("aufgeloest_Amtsgericht_Spremberg", "G1112");
+        $VALUES.add(aufgeloest_Amtsgericht_Spremberg);
+        Staatsanwaltschaft_bei_dem_Landgericht_Cottbus_Rechtshilfe = new GerichtCode("Staatsanwaltschaft_bei_dem_Landgericht_Cottbus_Rechtshilfe", "G1113S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Landgericht_Cottbus_Rechtshilfe);
+        Landgericht_Frankfurt_Oder = new GerichtCode("Landgericht_Frankfurt_Oder", "G1200");
+        $VALUES.add(Landgericht_Frankfurt_Oder);
+        Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder", "G1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder);
+        aufgeloest_Amtsgericht_Schwedt_Zwst_Angermuende = new GerichtCode("aufgeloest_Amtsgericht_Schwedt_Zwst_Angermuende", "G1201");
+        $VALUES.add(aufgeloest_Amtsgericht_Schwedt_Zwst_Angermuende);
+        Amtsgericht_Bad_Freienwalde = new GerichtCode("Amtsgericht_Bad_Freienwalde", "G1202");
+        $VALUES.add(Amtsgericht_Bad_Freienwalde);
+        Grundbuchamt_Bad_Freienwalde_Oder = new GerichtCode("Grundbuchamt_Bad_Freienwalde_Oder", "G1202G");
+        $VALUES.add(Grundbuchamt_Bad_Freienwalde_Oder);
+        aufgeloest_Amtsgericht_Beeskow = new GerichtCode("aufgeloest_Amtsgericht_Beeskow", "G1203");
+        $VALUES.add(aufgeloest_Amtsgericht_Beeskow);
+        Amtsgericht_Bernau = new GerichtCode("Amtsgericht_Bernau", "G1204");
+        $VALUES.add(Amtsgericht_Bernau);
+        Grundbuchamt_Bernau_bei_Berlin = new GerichtCode("Grundbuchamt_Bernau_bei_Berlin", "G1204G");
+        $VALUES.add(Grundbuchamt_Bernau_bei_Berlin);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Bernau = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Bernau", "G1204S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Bernau);
+        Amtsgericht_Eberswalde = new GerichtCode("Amtsgericht_Eberswalde", "G1205");
+        $VALUES.add(Amtsgericht_Eberswalde);
+        Grundbuchamt_Eberswalde = new GerichtCode("Grundbuchamt_Eberswalde", "G1205G");
+        $VALUES.add(Grundbuchamt_Eberswalde);
+        Staatsanwaltschaft_beim_Landgericht_Eberswalde_Zwst_der_StA_Frankfurt_Oder = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Eberswalde_Zwst_der_StA_Frankfurt_Oder", "G1205S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Eberswalde_Zwst_der_StA_Frankfurt_Oder);
+        Amtsgericht_Eisenhuettenstadt = new GerichtCode("Amtsgericht_Eisenhuettenstadt", "G1206");
+        $VALUES.add(Amtsgericht_Eisenhuettenstadt);
+        Grundbuchamt_Eisenhuettenstadt = new GerichtCode("Grundbuchamt_Eisenhuettenstadt", "G1206G");
+        $VALUES.add(Grundbuchamt_Eisenhuettenstadt);
+        Amtsgericht_Frankfurt_Oder = new GerichtCode("Amtsgericht_Frankfurt_Oder", "G1207");
+        $VALUES.add(Amtsgericht_Frankfurt_Oder);
+        Grundbuchamt_Frankfurt_Oder = new GerichtCode("Grundbuchamt_Frankfurt_Oder", "G1207G");
+        $VALUES.add(Grundbuchamt_Frankfurt_Oder);
+        Amtsgericht_Fuerstenwalde = new GerichtCode("Amtsgericht_Fuerstenwalde", "G1208");
+        $VALUES.add(Amtsgericht_Fuerstenwalde);
+        Grundbuchamt_Fuerstenwalde_Spree = new GerichtCode("Grundbuchamt_Fuerstenwalde_Spree", "G1208G");
+        $VALUES.add(Grundbuchamt_Fuerstenwalde_Spree);
+        Amtsgericht_Prenzlau = new GerichtCode("Amtsgericht_Prenzlau", "G1209");
+        $VALUES.add(Amtsgericht_Prenzlau);
+        Grundbuchamt_Prenzlau = new GerichtCode("Grundbuchamt_Prenzlau", "G1209G");
+        $VALUES.add(Grundbuchamt_Prenzlau);
+        Amtsgericht_Schwedt = new GerichtCode("Amtsgericht_Schwedt", "G1210");
+        $VALUES.add(Amtsgericht_Schwedt);
+        Grundbuchamt_Schwedt_Oder = new GerichtCode("Grundbuchamt_Schwedt_Oder", "G1210G");
+        $VALUES.add(Grundbuchamt_Schwedt_Oder);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Schwedt = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Schwedt", "G1210S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankfurt_Oder_Zwst_Schwedt);
+        aufgeloest_Amtsgericht_Seelow = new GerichtCode("aufgeloest_Amtsgericht_Seelow", "G1211");
+        $VALUES.add(aufgeloest_Amtsgericht_Seelow);
+        Amtsgericht_Strausberg = new GerichtCode("Amtsgericht_Strausberg", "G1212");
+        $VALUES.add(Amtsgericht_Strausberg);
+        Grundbuchamt_Strausberg = new GerichtCode("Grundbuchamt_Strausberg", "G1212G");
+        $VALUES.add(Grundbuchamt_Strausberg);
+        Amtsgericht_Prenzlau_Zweigstelle_Templin = new GerichtCode("Amtsgericht_Prenzlau_Zweigstelle_Templin", "G1213");
+        $VALUES.add(Amtsgericht_Prenzlau_Zweigstelle_Templin);
+        Staatsanwaltschaft_bei_dem_Landgericht_Frankfurt_Oder_Rechtshilfe = new GerichtCode("Staatsanwaltschaft_bei_dem_Landgericht_Frankfurt_Oder_Rechtshilfe", "G1214S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Landgericht_Frankfurt_Oder_Rechtshilfe);
+        Landgericht_Potsdam = new GerichtCode("Landgericht_Potsdam", "G1300");
+        $VALUES.add(Landgericht_Potsdam);
+        Staatsanwaltschaft_beim_Landgericht_Potsdam = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Potsdam", "G1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Potsdam);
+        Amtsgericht_Brandenburg_Zweigstelle_Belzig = new GerichtCode("Amtsgericht_Brandenburg_Zweigstelle_Belzig", "G1301");
+        $VALUES.add(Amtsgericht_Brandenburg_Zweigstelle_Belzig);
+        Amtsgericht_Brandenburg_an_der_Havel = new GerichtCode("Amtsgericht_Brandenburg_an_der_Havel", "G1302");
+        $VALUES.add(Amtsgericht_Brandenburg_an_der_Havel);
+        Grundbuchamt_Brandenburg_an_der_Havel = new GerichtCode("Grundbuchamt_Brandenburg_an_der_Havel", "G1302G");
+        $VALUES.add(Grundbuchamt_Brandenburg_an_der_Havel);
+        Amtsgericht_Zehdenick = new GerichtCode("Amtsgericht_Zehdenick", "G1303");
+        $VALUES.add(Amtsgericht_Zehdenick);
+        Grundbuchamt_Zehdenick = new GerichtCode("Grundbuchamt_Zehdenick", "G1303G");
+        $VALUES.add(Grundbuchamt_Zehdenick);
+        aufgeloest_Amtsgericht_Jueterbog = new GerichtCode("aufgeloest_Amtsgericht_Jueterbog", "G1304");
+        $VALUES.add(aufgeloest_Amtsgericht_Jueterbog);
+        Amtsgericht_Koenigs_Wusterhausen = new GerichtCode("Amtsgericht_Koenigs_Wusterhausen", "G1305");
+        $VALUES.add(Amtsgericht_Koenigs_Wusterhausen);
+        Grundbuchamt_Koenigs_Wusterhausen = new GerichtCode("Grundbuchamt_Koenigs_Wusterhausen", "G1305G");
+        $VALUES.add(Grundbuchamt_Koenigs_Wusterhausen);
+        aufgeloest_Amtsgericht_Kyritz = new GerichtCode("aufgeloest_Amtsgericht_Kyritz", "G1306");
+        $VALUES.add(aufgeloest_Amtsgericht_Kyritz);
+        Amtsgericht_Luckenwalde = new GerichtCode("Amtsgericht_Luckenwalde", "G1307");
+        $VALUES.add(Amtsgericht_Luckenwalde);
+        Grundbuchamt_Luckenwalde = new GerichtCode("Grundbuchamt_Luckenwalde", "G1307G");
+        $VALUES.add(Grundbuchamt_Luckenwalde);
+        Staatsanwaltschaft_beim_Landgericht_Luckenwalde_Zwst_der_StA_Potsdam = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Luckenwalde_Zwst_der_StA_Potsdam", "G1307S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Luckenwalde_Zwst_der_StA_Potsdam);
+        Amtsgericht_Nauen = new GerichtCode("Amtsgericht_Nauen", "G1308");
+        $VALUES.add(Amtsgericht_Nauen);
+        Grundbuchamt_Nauen = new GerichtCode("Grundbuchamt_Nauen", "G1308G");
+        $VALUES.add(Grundbuchamt_Nauen);
+        Amtsgericht_Nauen_Zentrales_Vollstreckungsgericht_Brandenburg = new GerichtCode("Amtsgericht_Nauen_Zentrales_Vollstreckungsgericht_Brandenburg", "G1308R");
+        $VALUES.add(Amtsgericht_Nauen_Zentrales_Vollstreckungsgericht_Brandenburg);
+        Amtsgericht_Neuruppin = new GerichtCode("Amtsgericht_Neuruppin", "G1309");
+        $VALUES.add(Amtsgericht_Neuruppin);
+        Grundbuchamt_Neuruppin = new GerichtCode("Grundbuchamt_Neuruppin", "G1309G");
+        $VALUES.add(Grundbuchamt_Neuruppin);
+        Amtsgericht_Oranienburg = new GerichtCode("Amtsgericht_Oranienburg", "G1310");
+        $VALUES.add(Amtsgericht_Oranienburg);
+        Grundbuchamt_Oranienburg = new GerichtCode("Grundbuchamt_Oranienburg", "G1310G");
+        $VALUES.add(Grundbuchamt_Oranienburg);
+        Amtsgericht_Perleberg = new GerichtCode("Amtsgericht_Perleberg", "G1311");
+        $VALUES.add(Amtsgericht_Perleberg);
+        Grundbuchamt_Perleberg = new GerichtCode("Grundbuchamt_Perleberg", "G1311G");
+        $VALUES.add(Grundbuchamt_Perleberg);
+        Amtsgericht_Potsdam = new GerichtCode("Amtsgericht_Potsdam", "G1312");
+        $VALUES.add(Amtsgericht_Potsdam);
+        Grundbuchamt_Potsdam = new GerichtCode("Grundbuchamt_Potsdam", "G1312G");
+        $VALUES.add(Grundbuchamt_Potsdam);
+        Amtsgericht_Perleberg_Zweigstelle_Pritzwalk = new GerichtCode("Amtsgericht_Perleberg_Zweigstelle_Pritzwalk", "G1314");
+        $VALUES.add(Amtsgericht_Perleberg_Zweigstelle_Pritzwalk);
+        Amtsgericht_Rathenow = new GerichtCode("Amtsgericht_Rathenow", "G1315");
+        $VALUES.add(Amtsgericht_Rathenow);
+        Grundbuchamt_Rathenow = new GerichtCode("Grundbuchamt_Rathenow", "G1315G");
+        $VALUES.add(Grundbuchamt_Rathenow);
+        Amtsgericht_Neuruppin_Zweigstelle_Wittstock = new GerichtCode("Amtsgericht_Neuruppin_Zweigstelle_Wittstock", "G1316");
+        $VALUES.add(Amtsgericht_Neuruppin_Zweigstelle_Wittstock);
+        Amtsgericht_Zossen = new GerichtCode("Amtsgericht_Zossen", "G1317");
+        $VALUES.add(Amtsgericht_Zossen);
+        Grundbuchamt_Zossen = new GerichtCode("Grundbuchamt_Zossen", "G1317G");
+        $VALUES.add(Grundbuchamt_Zossen);
+        Amtsgericht_Zehdenick_Zweigstelle_Gransee = new GerichtCode("Amtsgericht_Zehdenick_Zweigstelle_Gransee", "G1318");
+        $VALUES.add(Amtsgericht_Zehdenick_Zweigstelle_Gransee);
+        Staatsanwaltschaft_bei_dem_Landgericht_Potsdam_Rechtshilfe = new GerichtCode("Staatsanwaltschaft_bei_dem_Landgericht_Potsdam_Rechtshilfe", "G1319S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Landgericht_Potsdam_Rechtshilfe);
+        Landgericht_Neuruppin = new GerichtCode("Landgericht_Neuruppin", "G1400");
+        $VALUES.add(Landgericht_Neuruppin);
+        Staatsanwaltschaft_beim_Landgericht_Neuruppin = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Neuruppin", "G1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Neuruppin);
+        Staatsanwaltschaft_bei_dem_Landgericht_Neuruppin_Rechtshilfe = new GerichtCode("Staatsanwaltschaft_bei_dem_Landgericht_Neuruppin_Rechtshilfe", "G1401S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Landgericht_Neuruppin_Rechtshilfe);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Landes_Brandenburg = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Landes_Brandenburg", "G6002");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Landes_Brandenburg);
+        Brandenburgischer_Anwaltsgerichtshof = new GerichtCode("Brandenburgischer_Anwaltsgerichtshof", "G6008");
+        $VALUES.add(Brandenburgischer_Anwaltsgerichtshof);
+        Justizvollzugsanstalt_Brandenburg_an_der_Havel = new GerichtCode("Justizvollzugsanstalt_Brandenburg_an_der_Havel", "G6017");
+        $VALUES.add(Justizvollzugsanstalt_Brandenburg_an_der_Havel);
+        Verwaltungsgericht_Potsdam = new GerichtCode("Verwaltungsgericht_Potsdam", "G6076");
+        $VALUES.add(Verwaltungsgericht_Potsdam);
+        Verwaltungsgericht_Cottbus = new GerichtCode("Verwaltungsgericht_Cottbus", "G6590");
+        $VALUES.add(Verwaltungsgericht_Cottbus);
+        Justizvollzugsanstalt_Cottbus_Dissenchen = new GerichtCode("Justizvollzugsanstalt_Cottbus_Dissenchen", "G6630");
+        $VALUES.add(Justizvollzugsanstalt_Cottbus_Dissenchen);
+        Finanzgericht_Berlin_Brandenburg = new GerichtCode("Finanzgericht_Berlin_Brandenburg", "G6657");
+        $VALUES.add(Finanzgericht_Berlin_Brandenburg);
+        Landessozialgericht_Berlin_Brandenburg = new GerichtCode("Landessozialgericht_Berlin_Brandenburg", "G6664");
+        $VALUES.add(Landessozialgericht_Berlin_Brandenburg);
+        Verwaltungsgericht_Frankfurt_Oder = new GerichtCode("Verwaltungsgericht_Frankfurt_Oder", "G6669");
+        $VALUES.add(Verwaltungsgericht_Frankfurt_Oder);
+        Justizvollzugsanstalt_Luckau_Duben = new GerichtCode("Justizvollzugsanstalt_Luckau_Duben", "G6671");
+        $VALUES.add(Justizvollzugsanstalt_Luckau_Duben);
+        Sozialgericht_Cottbus = new GerichtCode("Sozialgericht_Cottbus", "G6672");
+        $VALUES.add(Sozialgericht_Cottbus);
+        Sozialgericht_Frankfurt_Oder = new GerichtCode("Sozialgericht_Frankfurt_Oder", "G6673");
+        $VALUES.add(Sozialgericht_Frankfurt_Oder);
+        Sozialgericht_Neuruppin = new GerichtCode("Sozialgericht_Neuruppin", "G6674");
+        $VALUES.add(Sozialgericht_Neuruppin);
+        Sozialgericht_Potsdam = new GerichtCode("Sozialgericht_Potsdam", "G6675");
+        $VALUES.add(Sozialgericht_Potsdam);
+        Arbeitsgericht_Brandenburg_an_der_Havel = new GerichtCode("Arbeitsgericht_Brandenburg_an_der_Havel", "G6676");
+        $VALUES.add(Arbeitsgericht_Brandenburg_an_der_Havel);
+        Arbeitsgericht_Cottbus = new GerichtCode("Arbeitsgericht_Cottbus", "G6677");
+        $VALUES.add(Arbeitsgericht_Cottbus);
+        Arbeitsgericht_Eberswalde = new GerichtCode("Arbeitsgericht_Eberswalde", "G6678");
+        $VALUES.add(Arbeitsgericht_Eberswalde);
+        Arbeitsgericht_Frankfurt_Oder = new GerichtCode("Arbeitsgericht_Frankfurt_Oder", "G6679");
+        $VALUES.add(Arbeitsgericht_Frankfurt_Oder);
+        Arbeitsgericht_Neuruppin = new GerichtCode("Arbeitsgericht_Neuruppin", "G6680");
+        $VALUES.add(Arbeitsgericht_Neuruppin);
+        Arbeitsgericht_Potsdam = new GerichtCode("Arbeitsgericht_Potsdam", "G6681");
+        $VALUES.add(Arbeitsgericht_Potsdam);
+        Arbeitsgericht_Senftenberg = new GerichtCode("Arbeitsgericht_Senftenberg", "G6682");
+        $VALUES.add(Arbeitsgericht_Senftenberg);
+        Verfassungsgericht_Brandenburg = new GerichtCode("Verfassungsgericht_Brandenburg", "G6696");
+        $VALUES.add(Verfassungsgericht_Brandenburg);
+        Justizvollzugsanstalt_Heidering = new GerichtCode("Justizvollzugsanstalt_Heidering", "G6726");
+        $VALUES.add(Justizvollzugsanstalt_Heidering);
+        Hanseatisches_Oberlandesgericht_in_Bremen = new GerichtCode("Hanseatisches_Oberlandesgericht_in_Bremen", "H1000");
+        $VALUES.add(Hanseatisches_Oberlandesgericht_in_Bremen);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Bremen = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Bremen", "H1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Bremen);
+        Landgericht_Bremen = new GerichtCode("Landgericht_Bremen", "H1100");
+        $VALUES.add(Landgericht_Bremen);
+        Staatsanwaltschaft_beim_Landgericht_Bremen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bremen", "H1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bremen);
+        Amtsgericht_Bremen = new GerichtCode("Amtsgericht_Bremen", "H1101");
+        $VALUES.add(Amtsgericht_Bremen);
+        Grundbuchamt_Bremen = new GerichtCode("Grundbuchamt_Bremen", "H1101G");
+        $VALUES.add(Grundbuchamt_Bremen);
+        Amtsgericht_Bremerhaven = new GerichtCode("Amtsgericht_Bremerhaven", "H1102");
+        $VALUES.add(Amtsgericht_Bremerhaven);
+        Grundbuchamt_Bremerhaven = new GerichtCode("Grundbuchamt_Bremerhaven", "H1102G");
+        $VALUES.add(Grundbuchamt_Bremerhaven);
+        Staatsanwaltschaft_beim_Landgericht_Bremerhaven_Zwst_der_StA_Bremen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bremerhaven_Zwst_der_StA_Bremen", "H1102S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bremerhaven_Zwst_der_StA_Bremen);
+        Amtsgericht_Bremerhaven_zentrales_Vollstreckungsgericht_Bremen = new GerichtCode("Amtsgericht_Bremerhaven_zentrales_Vollstreckungsgericht_Bremen", "H1102V");
+        $VALUES.add(Amtsgericht_Bremerhaven_zentrales_Vollstreckungsgericht_Bremen);
+        Amtsgericht_Bremen_Blumenthal = new GerichtCode("Amtsgericht_Bremen_Blumenthal", "H1103");
+        $VALUES.add(Amtsgericht_Bremen_Blumenthal);
+        Grundbuchamt_Bremen_Blumenthal = new GerichtCode("Grundbuchamt_Bremen_Blumenthal", "H1103G");
+        $VALUES.add(Grundbuchamt_Bremen_Blumenthal);
+        Anwaltsgerichtshof_der_Freien_und_Hansestadt_Bremen = new GerichtCode("Anwaltsgerichtshof_der_Freien_und_Hansestadt_Bremen", "H6026");
+        $VALUES.add(Anwaltsgerichtshof_der_Freien_und_Hansestadt_Bremen);
+        Sozialgericht_Bremen = new GerichtCode("Sozialgericht_Bremen", "H6032");
+        $VALUES.add(Sozialgericht_Bremen);
+        Landessozialgericht_Bremen = new GerichtCode("Landessozialgericht_Bremen", "H6033");
+        $VALUES.add(Landessozialgericht_Bremen);
+        Arbeitsgericht_Bremen = new GerichtCode("Arbeitsgericht_Bremen", "H6034");
+        $VALUES.add(Arbeitsgericht_Bremen);
+        Landesarbeitsgericht_Bremen = new GerichtCode("Landesarbeitsgericht_Bremen", "H6035");
+        $VALUES.add(Landesarbeitsgericht_Bremen);
+        Oberverwaltungsgericht_der_Freien_Hansestadt_Bremen = new GerichtCode("Oberverwaltungsgericht_der_Freien_Hansestadt_Bremen", "H6036");
+        $VALUES.add(Oberverwaltungsgericht_der_Freien_Hansestadt_Bremen);
+        Verwaltungsgericht_der_Freien_Hansestadt_Bremen = new GerichtCode("Verwaltungsgericht_der_Freien_Hansestadt_Bremen", "H6037");
+        $VALUES.add(Verwaltungsgericht_der_Freien_Hansestadt_Bremen);
+        Staatsgerichtshof_der_Freien_Hansestadt_Bremen = new GerichtCode("Staatsgerichtshof_der_Freien_Hansestadt_Bremen", "H6038");
+        $VALUES.add(Staatsgerichtshof_der_Freien_Hansestadt_Bremen);
+        aufgeloest_Arbeitsgericht_Bremerhaven = new GerichtCode("aufgeloest_Arbeitsgericht_Bremerhaven", "H6039");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Bremerhaven);
+        Finanzgericht_Bremen = new GerichtCode("Finanzgericht_Bremen", "H6040");
+        $VALUES.add(Finanzgericht_Bremen);
+        Anwaltsgericht_fuer_den_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Bremen = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Bremen", "H6184");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Bremen);
+        Justizvollzugsanstalt_Bremen = new GerichtCode("Justizvollzugsanstalt_Bremen", "H6220");
+        $VALUES.add(Justizvollzugsanstalt_Bremen);
+        Justizvollzugsanstalt_Bremen_Offener_Vollzug_Frauenvollzug = new GerichtCode("Justizvollzugsanstalt_Bremen_Offener_Vollzug_Frauenvollzug", "H6233");
+        $VALUES.add(Justizvollzugsanstalt_Bremen_Offener_Vollzug_Frauenvollzug);
+        Soziale_Dienste_der_Justiz_im_Lande_Bremen = new GerichtCode("Soziale_Dienste_der_Justiz_im_Lande_Bremen", "H6234");
+        $VALUES.add(Soziale_Dienste_der_Justiz_im_Lande_Bremen);
+        Hanseatisches_Oberlandesgericht_Hamburg = new GerichtCode("Hanseatisches_Oberlandesgericht_Hamburg", "K1000");
+        $VALUES.add(Hanseatisches_Oberlandesgericht_Hamburg);
+        Generalstaatsanwaltschaft_Hamburg = new GerichtCode("Generalstaatsanwaltschaft_Hamburg", "K1000S");
+        $VALUES.add(Generalstaatsanwaltschaft_Hamburg);
+        Landgericht_Hamburg = new GerichtCode("Landgericht_Hamburg", "K1100");
+        $VALUES.add(Landgericht_Hamburg);
+        Staatsanwaltschaft_Hamburg = new GerichtCode("Staatsanwaltschaft_Hamburg", "K1100S");
+        $VALUES.add(Staatsanwaltschaft_Hamburg);
+        Amtsgericht_Hamburg = new GerichtCode("Amtsgericht_Hamburg", "K1101");
+        $VALUES.add(Amtsgericht_Hamburg);
+        Grundbuchamt_Hamburg = new GerichtCode("Grundbuchamt_Hamburg", "K1101G");
+        $VALUES.add(Grundbuchamt_Hamburg);
+        Amtsgericht_Hamburg_Zentralisierter_Bereich_Insolvenzgericht = new GerichtCode("Amtsgericht_Hamburg_Zentralisierter_Bereich_Insolvenzgericht", "K1101I");
+        $VALUES.add(Amtsgericht_Hamburg_Zentralisierter_Bereich_Insolvenzgericht);
+        Amtsgericht_Hamburg_Zentralisierter_Bereich_Mahnverfahren = new GerichtCode("Amtsgericht_Hamburg_Zentralisierter_Bereich_Mahnverfahren", "K1101M");
+        $VALUES.add(Amtsgericht_Hamburg_Zentralisierter_Bereich_Mahnverfahren);
+        Amtsgericht_Hamburg_Zentralisierter_Bereich_Handelsregister = new GerichtCode("Amtsgericht_Hamburg_Zentralisierter_Bereich_Handelsregister", "K1101R");
+        $VALUES.add(Amtsgericht_Hamburg_Zentralisierter_Bereich_Handelsregister);
+        Amtsgericht_Hamburg_Zentrales_Vollstreckungsgericht_Hamburg = new GerichtCode("Amtsgericht_Hamburg_Zentrales_Vollstreckungsgericht_Hamburg", "K1101V");
+        $VALUES.add(Amtsgericht_Hamburg_Zentrales_Vollstreckungsgericht_Hamburg);
+        Amtsgericht_Hamburg_Schiffsregister = new GerichtCode("Amtsgericht_Hamburg_Schiffsregister", "K1101Z");
+        $VALUES.add(Amtsgericht_Hamburg_Schiffsregister);
+        Amtsgericht_Hamburg_Altona = new GerichtCode("Amtsgericht_Hamburg_Altona", "K1102");
+        $VALUES.add(Amtsgericht_Hamburg_Altona);
+        Grundbuchamt_Hamburg_Altona = new GerichtCode("Grundbuchamt_Hamburg_Altona", "K1102G");
+        $VALUES.add(Grundbuchamt_Hamburg_Altona);
+        Amtsgericht_Hamburg_Bergedorf = new GerichtCode("Amtsgericht_Hamburg_Bergedorf", "K1103");
+        $VALUES.add(Amtsgericht_Hamburg_Bergedorf);
+        Grundbuchamt_Hamburg_Bergedorf = new GerichtCode("Grundbuchamt_Hamburg_Bergedorf", "K1103G");
+        $VALUES.add(Grundbuchamt_Hamburg_Bergedorf);
+        Amtsgericht_Hamburg_Blankenese = new GerichtCode("Amtsgericht_Hamburg_Blankenese", "K1104");
+        $VALUES.add(Amtsgericht_Hamburg_Blankenese);
+        Grundbuchamt_Hamburg_Blankenese = new GerichtCode("Grundbuchamt_Hamburg_Blankenese", "K1104G");
+        $VALUES.add(Grundbuchamt_Hamburg_Blankenese);
+        Amtsgericht_Hamburg_Harburg = new GerichtCode("Amtsgericht_Hamburg_Harburg", "K1105");
+        $VALUES.add(Amtsgericht_Hamburg_Harburg);
+        Grundbuchamt_Hamburg_Harburg = new GerichtCode("Grundbuchamt_Hamburg_Harburg", "K1105G");
+        $VALUES.add(Grundbuchamt_Hamburg_Harburg);
+        Amtsgericht_Hamburg_Wandsbek = new GerichtCode("Amtsgericht_Hamburg_Wandsbek", "K1106");
+        $VALUES.add(Amtsgericht_Hamburg_Wandsbek);
+        Grundbuchamt_Hamburg_Wandsbek = new GerichtCode("Grundbuchamt_Hamburg_Wandsbek", "K1106G");
+        $VALUES.add(Grundbuchamt_Hamburg_Wandsbek);
+        Amtsgericht_Hamburg_Barmbek = new GerichtCode("Amtsgericht_Hamburg_Barmbek", "K1107");
+        $VALUES.add(Amtsgericht_Hamburg_Barmbek);
+        Grundbuchamt_Hamburg_Barmbek = new GerichtCode("Grundbuchamt_Hamburg_Barmbek", "K1107G");
+        $VALUES.add(Grundbuchamt_Hamburg_Barmbek);
+        Amtsgericht_Hamburg_St_Georg = new GerichtCode("Amtsgericht_Hamburg_St_Georg", "K1108");
+        $VALUES.add(Amtsgericht_Hamburg_St_Georg);
+        Grundbuchamt_Hamburg_St_Georg = new GerichtCode("Grundbuchamt_Hamburg_St_Georg", "K1108G");
+        $VALUES.add(Grundbuchamt_Hamburg_St_Georg);
+        aufgeloest_Verwaltungsgericht_Hamburg = new GerichtCode("aufgeloest_Verwaltungsgericht_Hamburg", "K6046");
+        $VALUES.add(aufgeloest_Verwaltungsgericht_Hamburg);
+        Hamburgisches_Oberverwaltungsgericht = new GerichtCode("Hamburgisches_Oberverwaltungsgericht", "K6051");
+        $VALUES.add(Hamburgisches_Oberverwaltungsgericht);
+        Verwaltungsgericht_Hamburg = new GerichtCode("Verwaltungsgericht_Hamburg", "K6052");
+        $VALUES.add(Verwaltungsgericht_Hamburg);
+        Hamburgisches_Verfassungsgericht = new GerichtCode("Hamburgisches_Verfassungsgericht", "K6053");
+        $VALUES.add(Hamburgisches_Verfassungsgericht);
+        Landesarbeitsgericht_Hamburg = new GerichtCode("Landesarbeitsgericht_Hamburg", "K6054");
+        $VALUES.add(Landesarbeitsgericht_Hamburg);
+        Arbeitsgericht_Hamburg = new GerichtCode("Arbeitsgericht_Hamburg", "K6055");
+        $VALUES.add(Arbeitsgericht_Hamburg);
+        Landessozialgericht_Hamburg = new GerichtCode("Landessozialgericht_Hamburg", "K6078");
+        $VALUES.add(Landessozialgericht_Hamburg);
+        Finanzgericht_Hamburg = new GerichtCode("Finanzgericht_Hamburg", "K6079");
+        $VALUES.add(Finanzgericht_Hamburg);
+        Sozialgericht_Hamburg = new GerichtCode("Sozialgericht_Hamburg", "K6083");
+        $VALUES.add(Sozialgericht_Hamburg);
+        Anwaltsgericht_im_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Hamburg = new GerichtCode("Anwaltsgericht_im_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Hamburg", "K6165");
+        $VALUES.add(Anwaltsgericht_im_Bezirk_der_Hanseatischen_Rechtsanwaltskammer_Hamburg);
+        Anwaltsgerichtshof_in_der_Freien_und_Hansestadt_Hamburg = new GerichtCode("Anwaltsgerichtshof_in_der_Freien_und_Hansestadt_Hamburg", "K6209");
+        $VALUES.add(Anwaltsgerichtshof_in_der_Freien_und_Hansestadt_Hamburg);
+        Justizvollzugsanstalt_Billwerder = new GerichtCode("Justizvollzugsanstalt_Billwerder", "K6274");
+        $VALUES.add(Justizvollzugsanstalt_Billwerder);
+        Justizvollzugsanstalt_Fuhlsbuettel = new GerichtCode("Justizvollzugsanstalt_Fuhlsbuettel", "K6411");
+        $VALUES.add(Justizvollzugsanstalt_Fuhlsbuettel);
+        Oberlandesgericht_Frankfurt = new GerichtCode("Oberlandesgericht_Frankfurt", "M1000");
+        $VALUES.add(Oberlandesgericht_Frankfurt);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Frankfurt_am_Main = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Frankfurt_am_Main", "M1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Frankfurt_am_Main);
+        Generalstaatsanwaltschaft_Frankfurt_am_Main_Rechtshilfe = new GerichtCode("Generalstaatsanwaltschaft_Frankfurt_am_Main_Rechtshilfe", "M1001S");
+        $VALUES.add(Generalstaatsanwaltschaft_Frankfurt_am_Main_Rechtshilfe);
+        Landgericht_Darmstadt = new GerichtCode("Landgericht_Darmstadt", "M1100");
+        $VALUES.add(Landgericht_Darmstadt);
+        Staatsanwaltschaft_beim_Landgericht_Darmstadt = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Darmstadt", "M1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Darmstadt);
+        aufgeloest_Amtsgericht_Beerfelden = new GerichtCode("aufgeloest_Amtsgericht_Beerfelden", "M1101");
+        $VALUES.add(aufgeloest_Amtsgericht_Beerfelden);
+        Amtsgericht_Bensheim = new GerichtCode("Amtsgericht_Bensheim", "M1102");
+        $VALUES.add(Amtsgericht_Bensheim);
+        Grundbuchamt_Bensheim = new GerichtCode("Grundbuchamt_Bensheim", "M1102G");
+        $VALUES.add(Grundbuchamt_Bensheim);
+        Amtsgericht_Darmstadt = new GerichtCode("Amtsgericht_Darmstadt", "M1103");
+        $VALUES.add(Amtsgericht_Darmstadt);
+        Grundbuchamt_Darmstadt = new GerichtCode("Grundbuchamt_Darmstadt", "M1103G");
+        $VALUES.add(Grundbuchamt_Darmstadt);
+        Amtsgericht_Dieburg = new GerichtCode("Amtsgericht_Dieburg", "M1104");
+        $VALUES.add(Amtsgericht_Dieburg);
+        Grundbuchamt_Dieburg = new GerichtCode("Grundbuchamt_Dieburg", "M1104G");
+        $VALUES.add(Grundbuchamt_Dieburg);
+        Amtsgericht_Fuerth_Hessen = new GerichtCode("Amtsgericht_Fuerth_Hessen", "M1105");
+        $VALUES.add(Amtsgericht_Fuerth_Hessen);
+        Grundbuchamt_Fuerth_Hessen = new GerichtCode("Grundbuchamt_Fuerth_Hessen", "M1105G");
+        $VALUES.add(Grundbuchamt_Fuerth_Hessen);
+        Amtsgericht_Gross_Gerau = new GerichtCode("Amtsgericht_Gross_Gerau", "M1106");
+        $VALUES.add(Amtsgericht_Gross_Gerau);
+        Grundbuchamt_Gross_Gerau = new GerichtCode("Grundbuchamt_Gross_Gerau", "M1106G");
+        $VALUES.add(Grundbuchamt_Gross_Gerau);
+        Amtsgericht_Ruesselsheim = new GerichtCode("Amtsgericht_Ruesselsheim", "M1107");
+        $VALUES.add(Amtsgericht_Ruesselsheim);
+        Grundbuchamt_Ruesselsheim = new GerichtCode("Grundbuchamt_Ruesselsheim", "M1107G");
+        $VALUES.add(Grundbuchamt_Ruesselsheim);
+        aufgeloest_Amtsgericht_Gross_Umstadt = new GerichtCode("aufgeloest_Amtsgericht_Gross_Umstadt", "M1108");
+        $VALUES.add(aufgeloest_Amtsgericht_Gross_Umstadt);
+        aufgeloest_Amtsgericht_Fuerth_Zwst_Hirschhorn_Neckar = new GerichtCode("aufgeloest_Amtsgericht_Fuerth_Zwst_Hirschhorn_Neckar", "M1109");
+        $VALUES.add(aufgeloest_Amtsgericht_Fuerth_Zwst_Hirschhorn_Neckar);
+        aufgeloest_Amtsgericht_Michelstadt_Zwst_Hoechst_i_Odw = new GerichtCode("aufgeloest_Amtsgericht_Michelstadt_Zwst_Hoechst_i_Odw", "M1110");
+        $VALUES.add(aufgeloest_Amtsgericht_Michelstadt_Zwst_Hoechst_i_Odw);
+        Amtsgericht_Lampertheim = new GerichtCode("Amtsgericht_Lampertheim", "M1111");
+        $VALUES.add(Amtsgericht_Lampertheim);
+        Grundbuchamt_Lampertheim = new GerichtCode("Grundbuchamt_Lampertheim", "M1111G");
+        $VALUES.add(Grundbuchamt_Lampertheim);
+        Amtsgericht_Langen = new GerichtCode("Amtsgericht_Langen", "M1112");
+        $VALUES.add(Amtsgericht_Langen);
+        Grundbuchamt_Langen = new GerichtCode("Grundbuchamt_Langen", "M1112G");
+        $VALUES.add(Grundbuchamt_Langen);
+        Amtsgericht_Michelstadt = new GerichtCode("Amtsgericht_Michelstadt", "M1113");
+        $VALUES.add(Amtsgericht_Michelstadt);
+        Grundbuchamt_Michelstadt = new GerichtCode("Grundbuchamt_Michelstadt", "M1113G");
+        $VALUES.add(Grundbuchamt_Michelstadt);
+        Amtsgericht_Offenbach_am_Main = new GerichtCode("Amtsgericht_Offenbach_am_Main", "M1114");
+        $VALUES.add(Amtsgericht_Offenbach_am_Main);
+        Grundbuchamt_Offenbach_am_Main = new GerichtCode("Grundbuchamt_Offenbach_am_Main", "M1114G");
+        $VALUES.add(Grundbuchamt_Offenbach_am_Main);
+        Staatsanwaltschaft_beim_Landgericht_Offenbach_am_Main_Zwst_der_StA_Darmstadt = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Offenbach_am_Main_Zwst_der_StA_Darmstadt", "M1114S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Offenbach_am_Main_Zwst_der_StA_Darmstadt);
+        aufgeloest_Amtsgericht_Reichelsheim_Odenwald = new GerichtCode("aufgeloest_Amtsgericht_Reichelsheim_Odenwald", "M1115");
+        $VALUES.add(aufgeloest_Amtsgericht_Reichelsheim_Odenwald);
+        aufgeloest_Amtsgericht_Reinheim = new GerichtCode("aufgeloest_Amtsgericht_Reinheim", "M1116");
+        $VALUES.add(aufgeloest_Amtsgericht_Reinheim);
+        Amtsgericht_Seligenstadt = new GerichtCode("Amtsgericht_Seligenstadt", "M1117");
+        $VALUES.add(Amtsgericht_Seligenstadt);
+        Grundbuchamt_Seligenstadt = new GerichtCode("Grundbuchamt_Seligenstadt", "M1117G");
+        $VALUES.add(Grundbuchamt_Seligenstadt);
+        aufgeloest_Amtsgericht_Wald_Michelbach = new GerichtCode("aufgeloest_Amtsgericht_Wald_Michelbach", "M1118");
+        $VALUES.add(aufgeloest_Amtsgericht_Wald_Michelbach);
+        Landgericht_Frankfurt = new GerichtCode("Landgericht_Frankfurt", "M1200");
+        $VALUES.add(Landgericht_Frankfurt);
+        Staatsanwaltschaft_beim_Landgericht_Frankfurt_am_Main = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Frankfurt_am_Main", "M1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Frankfurt_am_Main);
+        Amtsgericht_Frankfurt = new GerichtCode("Amtsgericht_Frankfurt", "M1201");
+        $VALUES.add(Amtsgericht_Frankfurt);
+        Grundbuchamt_Frankfurt_am_Main = new GerichtCode("Grundbuchamt_Frankfurt_am_Main", "M1201G");
+        $VALUES.add(Grundbuchamt_Frankfurt_am_Main);
+        Amtsanwaltschaft_Frankfurt_am_Main = new GerichtCode("Amtsanwaltschaft_Frankfurt_am_Main", "M1201S");
+        $VALUES.add(Amtsanwaltschaft_Frankfurt_am_Main);
+        Amtsgericht_Bad_Homburg = new GerichtCode("Amtsgericht_Bad_Homburg", "M1202");
+        $VALUES.add(Amtsgericht_Bad_Homburg);
+        Grundbuchamt_Bad_Homburg = new GerichtCode("Grundbuchamt_Bad_Homburg", "M1202G");
+        $VALUES.add(Grundbuchamt_Bad_Homburg);
+        Amtsgericht_Koenigstein = new GerichtCode("Amtsgericht_Koenigstein", "M1203");
+        $VALUES.add(Amtsgericht_Koenigstein);
+        Grundbuchamt_Koenigstein = new GerichtCode("Grundbuchamt_Koenigstein", "M1203G");
+        $VALUES.add(Grundbuchamt_Koenigstein);
+        Amtsgericht_Usingen = new GerichtCode("Amtsgericht_Usingen", "M1204");
+        $VALUES.add(Amtsgericht_Usingen);
+        aufgeloest_Amtsgericht_Bad_Vilbel = new GerichtCode("aufgeloest_Amtsgericht_Bad_Vilbel", "M1205");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Vilbel);
+        Amtsgericht_Frankfurt_am_Main_Aussenstelle_Hoechst = new GerichtCode("Amtsgericht_Frankfurt_am_Main_Aussenstelle_Hoechst", "M1206");
+        $VALUES.add(Amtsgericht_Frankfurt_am_Main_Aussenstelle_Hoechst);
+        Grundbuchamt_Frankfurt_am_Main_Aussenstelle_Hoechst = new GerichtCode("Grundbuchamt_Frankfurt_am_Main_Aussenstelle_Hoechst", "M1206G");
+        $VALUES.add(Grundbuchamt_Frankfurt_am_Main_Aussenstelle_Hoechst);
+        Landgericht_Fulda = new GerichtCode("Landgericht_Fulda", "M1300");
+        $VALUES.add(Landgericht_Fulda);
+        Staatsanwaltschaft_beim_Landgericht_Fulda = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Fulda", "M1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Fulda);
+        Amtsgericht_Fulda = new GerichtCode("Amtsgericht_Fulda", "M1301");
+        $VALUES.add(Amtsgericht_Fulda);
+        Grundbuchamt_Fulda = new GerichtCode("Grundbuchamt_Fulda", "M1301G");
+        $VALUES.add(Grundbuchamt_Fulda);
+        aufgeloest_Amtsgericht_Fulda_Zwst_Gersfeld = new GerichtCode("aufgeloest_Amtsgericht_Fulda_Zwst_Gersfeld", "M1302");
+        $VALUES.add(aufgeloest_Amtsgericht_Fulda_Zwst_Gersfeld);
+        aufgeloest_Amtsgericht_Fulda_Zwst_Hilders = new GerichtCode("aufgeloest_Amtsgericht_Fulda_Zwst_Hilders", "M1303");
+        $VALUES.add(aufgeloest_Amtsgericht_Fulda_Zwst_Hilders);
+        aufgeloest_Amtsgericht_Fulda_Zwst_Neuhof = new GerichtCode("aufgeloest_Amtsgericht_Fulda_Zwst_Neuhof", "M1304");
+        $VALUES.add(aufgeloest_Amtsgericht_Fulda_Zwst_Neuhof);
+        Amtsgericht_Bad_Hersfeld = new GerichtCode("Amtsgericht_Bad_Hersfeld", "M1305");
+        $VALUES.add(Amtsgericht_Bad_Hersfeld);
+        Grundbuchamt_Bad_Hersfeld = new GerichtCode("Grundbuchamt_Bad_Hersfeld", "M1305G");
+        $VALUES.add(Grundbuchamt_Bad_Hersfeld);
+        Amtsgericht_Huenfeld = new GerichtCode("Amtsgericht_Huenfeld", "M1307");
+        $VALUES.add(Amtsgericht_Huenfeld);
+        Grundbuchamt_Huenfeld = new GerichtCode("Grundbuchamt_Huenfeld", "M1307G");
+        $VALUES.add(Grundbuchamt_Huenfeld);
+        Amtsgericht_Huenfeld_Zentrales_Vollstreckungsgericht_Hessen = new GerichtCode("Amtsgericht_Huenfeld_Zentrales_Vollstreckungsgericht_Hessen", "M1307R");
+        $VALUES.add(Amtsgericht_Huenfeld_Zentrales_Vollstreckungsgericht_Hessen);
+        aufgeloest_Amtsgericht_Lauterbach = new GerichtCode("aufgeloest_Amtsgericht_Lauterbach", "M1308");
+        $VALUES.add(aufgeloest_Amtsgericht_Lauterbach);
+        Amtsgericht_Rotenburg_a_d_Fulda = new GerichtCode("Amtsgericht_Rotenburg_a_d_Fulda", "M1310");
+        $VALUES.add(Amtsgericht_Rotenburg_a_d_Fulda);
+        Landgericht_Giessen = new GerichtCode("Landgericht_Giessen", "M1400");
+        $VALUES.add(Landgericht_Giessen);
+        Staatsanwaltschaft_beim_Landgericht_Giessen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Giessen", "M1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Giessen);
+        Amtsgericht_Alsfeld = new GerichtCode("Amtsgericht_Alsfeld", "M1401");
+        $VALUES.add(Amtsgericht_Alsfeld);
+        Grundbuchamt_Alsfeld = new GerichtCode("Grundbuchamt_Alsfeld", "M1401G");
+        $VALUES.add(Grundbuchamt_Alsfeld);
+        Amtsgericht_Buedingen = new GerichtCode("Amtsgericht_Buedingen", "M1402");
+        $VALUES.add(Amtsgericht_Buedingen);
+        Grundbuchamt_Buedingen = new GerichtCode("Grundbuchamt_Buedingen", "M1402G");
+        $VALUES.add(Grundbuchamt_Buedingen);
+        aufgeloest_Amtsgericht_Butzbach = new GerichtCode("aufgeloest_Amtsgericht_Butzbach", "M1404");
+        $VALUES.add(aufgeloest_Amtsgericht_Butzbach);
+        Amtsgericht_Friedberg = new GerichtCode("Amtsgericht_Friedberg", "M1405");
+        $VALUES.add(Amtsgericht_Friedberg);
+        Grundbuchamt_Friedberg = new GerichtCode("Grundbuchamt_Friedberg", "M1405G");
+        $VALUES.add(Grundbuchamt_Friedberg);
+        Amtsgericht_Giessen = new GerichtCode("Amtsgericht_Giessen", "M1406");
+        $VALUES.add(Amtsgericht_Giessen);
+    }
+
+    private static void init2() {
+        Grundbuchamt_Giessen = new GerichtCode("Grundbuchamt_Giessen", "M1406G");
+        $VALUES.add(Grundbuchamt_Giessen);
+        aufgeloest_Amtsgericht_Gruenberg = new GerichtCode("aufgeloest_Amtsgericht_Gruenberg", "M1407");
+        $VALUES.add(aufgeloest_Amtsgericht_Gruenberg);
+        aufgeloest_Amtsgericht_Homberg_Ohm = new GerichtCode("aufgeloest_Amtsgericht_Homberg_Ohm", "M1408");
+        $VALUES.add(aufgeloest_Amtsgericht_Homberg_Ohm);
+        aufgeloest_Amtsgericht_Laubach = new GerichtCode("aufgeloest_Amtsgericht_Laubach", "M1409");
+        $VALUES.add(aufgeloest_Amtsgericht_Laubach);
+        aufgeloest_Amtsgericht_Bad_Nauheim = new GerichtCode("aufgeloest_Amtsgericht_Bad_Nauheim", "M1410");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Nauheim);
+        Amtsgericht_Nidda = new GerichtCode("Amtsgericht_Nidda", "M1411");
+        $VALUES.add(Amtsgericht_Nidda);
+        aufgeloest_Amtsgericht_Ortenberg = new GerichtCode("aufgeloest_Amtsgericht_Ortenberg", "M1412");
+        $VALUES.add(aufgeloest_Amtsgericht_Ortenberg);
+        aufgeloest_Amtsgericht_Schotten = new GerichtCode("aufgeloest_Amtsgericht_Schotten", "M1413");
+        $VALUES.add(aufgeloest_Amtsgericht_Schotten);
+        Amtsgericht_Alsfeld_Zweigstelle_Lauterbach = new GerichtCode("Amtsgericht_Alsfeld_Zweigstelle_Lauterbach", "M1420");
+        $VALUES.add(Amtsgericht_Alsfeld_Zweigstelle_Lauterbach);
+        Landgericht_Hanau = new GerichtCode("Landgericht_Hanau", "M1500");
+        $VALUES.add(Landgericht_Hanau);
+        Staatsanwaltschaft_beim_Landgericht_Hanau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hanau", "M1500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hanau);
+        Amtsgericht_Gelnhausen = new GerichtCode("Amtsgericht_Gelnhausen", "M1501");
+        $VALUES.add(Amtsgericht_Gelnhausen);
+        Grundbuchamt_Gelnhausen = new GerichtCode("Grundbuchamt_Gelnhausen", "M1501G");
+        $VALUES.add(Grundbuchamt_Gelnhausen);
+        Amtsgericht_Hanau = new GerichtCode("Amtsgericht_Hanau", "M1502");
+        $VALUES.add(Amtsgericht_Hanau);
+        Grundbuchamt_Hanau = new GerichtCode("Grundbuchamt_Hanau", "M1502G");
+        $VALUES.add(Grundbuchamt_Hanau);
+        aufgeloest_Amtsgericht_Langenselbold = new GerichtCode("aufgeloest_Amtsgericht_Langenselbold", "M1504");
+        $VALUES.add(aufgeloest_Amtsgericht_Langenselbold);
+        aufgeloest_Amtsgericht_Bad_Orb = new GerichtCode("aufgeloest_Amtsgericht_Bad_Orb", "M1505");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Orb);
+        aufgeloest_Amtsgericht_Schluechtern_Zwst_Bad_Soden_Salmuenster = new GerichtCode("aufgeloest_Amtsgericht_Schluechtern_Zwst_Bad_Soden_Salmuenster", "M1506");
+        $VALUES.add(aufgeloest_Amtsgericht_Schluechtern_Zwst_Bad_Soden_Salmuenster);
+        Amtsgericht_Schluechtern = new GerichtCode("Amtsgericht_Schluechtern", "M1507");
+        $VALUES.add(Amtsgericht_Schluechtern);
+        aufgeloest_Amtsgericht_Schluechtern_Zwst_Steinau = new GerichtCode("aufgeloest_Amtsgericht_Schluechtern_Zwst_Steinau", "M1508");
+        $VALUES.add(aufgeloest_Amtsgericht_Schluechtern_Zwst_Steinau);
+        aufgeloest_Amtsgericht_Gelnhausen_Zwst_Waechtersbach = new GerichtCode("aufgeloest_Amtsgericht_Gelnhausen_Zwst_Waechtersbach", "M1509");
+        $VALUES.add(aufgeloest_Amtsgericht_Gelnhausen_Zwst_Waechtersbach);
+        Landgericht_Kassel = new GerichtCode("Landgericht_Kassel", "M1600");
+        $VALUES.add(Landgericht_Kassel);
+        Staatsanwaltschaft_beim_Landgericht_Kassel = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Kassel", "M1600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Kassel);
+        aufgeloest_Amtsgericht_Arolsen = new GerichtCode("aufgeloest_Amtsgericht_Arolsen", "M1601");
+        $VALUES.add(aufgeloest_Amtsgericht_Arolsen);
+        Amtsgericht_Eschwege = new GerichtCode("Amtsgericht_Eschwege", "M1602");
+        $VALUES.add(Amtsgericht_Eschwege);
+        Grundbuchamt_Eschwege = new GerichtCode("Grundbuchamt_Eschwege", "M1602G");
+        $VALUES.add(Grundbuchamt_Eschwege);
+        Amtsgericht_Fritzlar = new GerichtCode("Amtsgericht_Fritzlar", "M1603");
+        $VALUES.add(Amtsgericht_Fritzlar);
+        Grundbuchamt_Fritzlar = new GerichtCode("Grundbuchamt_Fritzlar", "M1603G");
+        $VALUES.add(Grundbuchamt_Fritzlar);
+        Amtsgericht_Kassel_Zweigstelle_Hofgeismar = new GerichtCode("Amtsgericht_Kassel_Zweigstelle_Hofgeismar", "M1605");
+        $VALUES.add(Amtsgericht_Kassel_Zweigstelle_Hofgeismar);
+        Grundbuchamt_Kassel_Zweigstelle_Hofgeismar = new GerichtCode("Grundbuchamt_Kassel_Zweigstelle_Hofgeismar", "M1605G");
+        $VALUES.add(Grundbuchamt_Kassel_Zweigstelle_Hofgeismar);
+        aufgeloest_Amtsgericht_Karlshafen = new GerichtCode("aufgeloest_Amtsgericht_Karlshafen", "M1606");
+        $VALUES.add(aufgeloest_Amtsgericht_Karlshafen);
+        Amtsgericht_Kassel = new GerichtCode("Amtsgericht_Kassel", "M1607");
+        $VALUES.add(Amtsgericht_Kassel);
+        Grundbuchamt_Kassel = new GerichtCode("Grundbuchamt_Kassel", "M1607G");
+        $VALUES.add(Grundbuchamt_Kassel);
+        Amtsgericht_Korbach = new GerichtCode("Amtsgericht_Korbach", "M1608");
+        $VALUES.add(Amtsgericht_Korbach);
+        Grundbuchamt_Korbach = new GerichtCode("Grundbuchamt_Korbach", "M1608G");
+        $VALUES.add(Grundbuchamt_Korbach);
+        Amtsgericht_Melsungen = new GerichtCode("Amtsgericht_Melsungen", "M1609");
+        $VALUES.add(Amtsgericht_Melsungen);
+        Grundbuchamt_Melsungen = new GerichtCode("Grundbuchamt_Melsungen", "M1609G");
+        $VALUES.add(Grundbuchamt_Melsungen);
+        aufgeloest_Amtsgericht_Rotenburg_a_d_Fulda = new GerichtCode("aufgeloest_Amtsgericht_Rotenburg_a_d_Fulda", "M1612");
+        $VALUES.add(aufgeloest_Amtsgericht_Rotenburg_a_d_Fulda);
+        aufgeloest_Amtsgericht_Eschwege_Zwst_Sontra = new GerichtCode("aufgeloest_Amtsgericht_Eschwege_Zwst_Sontra", "M1613");
+        $VALUES.add(aufgeloest_Amtsgericht_Eschwege_Zwst_Sontra);
+        aufgeloest_Amtsgericht_Bad_Wildungen = new GerichtCode("aufgeloest_Amtsgericht_Bad_Wildungen", "M1614");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Wildungen);
+        aufgeloest_Amtsgericht_Witzenhausen = new GerichtCode("aufgeloest_Amtsgericht_Witzenhausen", "M1615");
+        $VALUES.add(aufgeloest_Amtsgericht_Witzenhausen);
+        aufgeloest_Amtsgericht_Wolfhagen = new GerichtCode("aufgeloest_Amtsgericht_Wolfhagen", "M1616");
+        $VALUES.add(aufgeloest_Amtsgericht_Wolfhagen);
+        aufgeloest_Amtsgericht_Homberg_Efze = new GerichtCode("aufgeloest_Amtsgericht_Homberg_Efze", "M1619");
+        $VALUES.add(aufgeloest_Amtsgericht_Homberg_Efze);
+        Landgericht_Limburg = new GerichtCode("Landgericht_Limburg", "M1700");
+        $VALUES.add(Landgericht_Limburg);
+        Staatsanwaltschaft_beim_Landgericht_Limburg_a_d_Lahn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Limburg_a_d_Lahn", "M1700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Limburg_a_d_Lahn);
+        aufgeloest_Amtsgericht_Wetzlar_Zwst_Braunfels = new GerichtCode("aufgeloest_Amtsgericht_Wetzlar_Zwst_Braunfels", "M1701");
+        $VALUES.add(aufgeloest_Amtsgericht_Wetzlar_Zwst_Braunfels);
+        Amtsgericht_Dillenburg = new GerichtCode("Amtsgericht_Dillenburg", "M1702");
+        $VALUES.add(Amtsgericht_Dillenburg);
+        Grundbuchamt_Dillenburg = new GerichtCode("Grundbuchamt_Dillenburg", "M1702G");
+        $VALUES.add(Grundbuchamt_Dillenburg);
+        aufgeloest_Amtsgericht_Ehringshausen = new GerichtCode("aufgeloest_Amtsgericht_Ehringshausen", "M1703");
+        $VALUES.add(aufgeloest_Amtsgericht_Ehringshausen);
+        Amtsgericht_Limburg_Lahn_Zweigstelle_Hadamar = new GerichtCode("Amtsgericht_Limburg_Lahn_Zweigstelle_Hadamar", "M1704");
+        $VALUES.add(Amtsgericht_Limburg_Lahn_Zweigstelle_Hadamar);
+        Grundbuchamt_Limburg_Zweigstelle_Hadamar = new GerichtCode("Grundbuchamt_Limburg_Zweigstelle_Hadamar", "M1704G");
+        $VALUES.add(Grundbuchamt_Limburg_Zweigstelle_Hadamar);
+        Amtsgericht_Dillenburg_Zweigstelle_Herborn = new GerichtCode("Amtsgericht_Dillenburg_Zweigstelle_Herborn", "M1705");
+        $VALUES.add(Amtsgericht_Dillenburg_Zweigstelle_Herborn);
+        Grundbuchamt_Dillenburg_Zweigstelle_Herborn = new GerichtCode("Grundbuchamt_Dillenburg_Zweigstelle_Herborn", "M1705G");
+        $VALUES.add(Grundbuchamt_Dillenburg_Zweigstelle_Herborn);
+        Amtsgericht_Limburg = new GerichtCode("Amtsgericht_Limburg", "M1706");
+        $VALUES.add(Amtsgericht_Limburg);
+        Grundbuchamt_Limburg = new GerichtCode("Grundbuchamt_Limburg", "M1706G");
+        $VALUES.add(Grundbuchamt_Limburg);
+        aufgeloest_Amtsgericht_Runkel = new GerichtCode("aufgeloest_Amtsgericht_Runkel", "M1708");
+        $VALUES.add(aufgeloest_Amtsgericht_Runkel);
+        Amtsgericht_Weilburg = new GerichtCode("Amtsgericht_Weilburg", "M1709");
+        $VALUES.add(Amtsgericht_Weilburg);
+        Grundbuchamt_Weilburg = new GerichtCode("Grundbuchamt_Weilburg", "M1709G");
+        $VALUES.add(Grundbuchamt_Weilburg);
+        Amtsgericht_Wetzlar = new GerichtCode("Amtsgericht_Wetzlar", "M1710");
+        $VALUES.add(Amtsgericht_Wetzlar);
+        Grundbuchamt_Wetzlar = new GerichtCode("Grundbuchamt_Wetzlar", "M1710G");
+        $VALUES.add(Grundbuchamt_Wetzlar);
+        Staatsanwaltschaft_beim_Landgericht_Wetzlar_Zwst_der_StA_Limburg_a_d_Lahn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Wetzlar_Zwst_der_StA_Limburg_a_d_Lahn", "M1710S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Wetzlar_Zwst_der_StA_Limburg_a_d_Lahn);
+        Landgericht_Marburg = new GerichtCode("Landgericht_Marburg", "M1800");
+        $VALUES.add(Landgericht_Marburg);
+        Staatsanwaltschaft_beim_Landgericht_Marburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Marburg", "M1800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Marburg);
+        Amtsgericht_Biedenkopf = new GerichtCode("Amtsgericht_Biedenkopf", "M1801");
+        $VALUES.add(Amtsgericht_Biedenkopf);
+        Grundbuchamt_Biedenkopf = new GerichtCode("Grundbuchamt_Biedenkopf", "M1801G");
+        $VALUES.add(Grundbuchamt_Biedenkopf);
+        aufgeloest_Amtsgericht_Borken_Hessen = new GerichtCode("aufgeloest_Amtsgericht_Borken_Hessen", "M1802");
+        $VALUES.add(aufgeloest_Amtsgericht_Borken_Hessen);
+        Amtsgericht_Frankenberg_Eder = new GerichtCode("Amtsgericht_Frankenberg_Eder", "M1803");
+        $VALUES.add(Amtsgericht_Frankenberg_Eder);
+        Grundbuchamt_Frankenberg_Eder = new GerichtCode("Grundbuchamt_Frankenberg_Eder", "M1803G");
+        $VALUES.add(Grundbuchamt_Frankenberg_Eder);
+        aufgeloest_Amtsgericht_Biedenkopf_Zwst_Gladenbach = new GerichtCode("aufgeloest_Amtsgericht_Biedenkopf_Zwst_Gladenbach", "M1805");
+        $VALUES.add(aufgeloest_Amtsgericht_Biedenkopf_Zwst_Gladenbach);
+        Amtsgericht_Kirchhain = new GerichtCode("Amtsgericht_Kirchhain", "M1807");
+        $VALUES.add(Amtsgericht_Kirchhain);
+        Grundbuchamt_Kirchhain = new GerichtCode("Grundbuchamt_Kirchhain", "M1807G");
+        $VALUES.add(Grundbuchamt_Kirchhain);
+        aufgeloest_Amtsgericht_Frankenberg_Eder_Zwst_Gemuenden_Wohra = new GerichtCode("aufgeloest_Amtsgericht_Frankenberg_Eder_Zwst_Gemuenden_Wohra", "M1808");
+        $VALUES.add(aufgeloest_Amtsgericht_Frankenberg_Eder_Zwst_Gemuenden_Wohra);
+        Amtsgericht_Marburg = new GerichtCode("Amtsgericht_Marburg", "M1809");
+        $VALUES.add(Amtsgericht_Marburg);
+        Grundbuchamt_Marburg = new GerichtCode("Grundbuchamt_Marburg", "M1809G");
+        $VALUES.add(Grundbuchamt_Marburg);
+        aufgeloest_Amtsgericht_Neukirchen_Kreis_Ziegenhain = new GerichtCode("aufgeloest_Amtsgericht_Neukirchen_Kreis_Ziegenhain", "M1810");
+        $VALUES.add(aufgeloest_Amtsgericht_Neukirchen_Kreis_Ziegenhain);
+        Amtsgericht_Schwalmstadt = new GerichtCode("Amtsgericht_Schwalmstadt", "M1812");
+        $VALUES.add(Amtsgericht_Schwalmstadt);
+        Grundbuchamt_Schwalmstadt = new GerichtCode("Grundbuchamt_Schwalmstadt", "M1812G");
+        $VALUES.add(Grundbuchamt_Schwalmstadt);
+        Landgericht_Wiesbaden = new GerichtCode("Landgericht_Wiesbaden", "M1900");
+        $VALUES.add(Landgericht_Wiesbaden);
+        Staatsanwaltschaft_beim_Landgericht_Wiesbaden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Wiesbaden", "M1900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Wiesbaden);
+        aufgeloest_Amtsgericht_Eltville_am_Rhein = new GerichtCode("aufgeloest_Amtsgericht_Eltville_am_Rhein", "M1901");
+        $VALUES.add(aufgeloest_Amtsgericht_Eltville_am_Rhein);
+        aufgeloest_Amtsgericht_Hochheim_am_Main = new GerichtCode("aufgeloest_Amtsgericht_Hochheim_am_Main", "M1902");
+        $VALUES.add(aufgeloest_Amtsgericht_Hochheim_am_Main);
+        Amtsgericht_Idstein = new GerichtCode("Amtsgericht_Idstein", "M1903");
+        $VALUES.add(Amtsgericht_Idstein);
+        Grundbuchamt_Idstein = new GerichtCode("Grundbuchamt_Idstein", "M1903G");
+        $VALUES.add(Grundbuchamt_Idstein);
+        Amtsgericht_Ruedesheim = new GerichtCode("Amtsgericht_Ruedesheim", "M1904");
+        $VALUES.add(Amtsgericht_Ruedesheim);
+        Grundbuchamt_Ruedesheim = new GerichtCode("Grundbuchamt_Ruedesheim", "M1904G");
+        $VALUES.add(Grundbuchamt_Ruedesheim);
+        Amtsgericht_Bad_Schwalbach = new GerichtCode("Amtsgericht_Bad_Schwalbach", "M1905");
+        $VALUES.add(Amtsgericht_Bad_Schwalbach);
+        Grundbuchamt_Bad_Schwalbach = new GerichtCode("Grundbuchamt_Bad_Schwalbach", "M1905G");
+        $VALUES.add(Grundbuchamt_Bad_Schwalbach);
+        Amtsgericht_Wiesbaden = new GerichtCode("Amtsgericht_Wiesbaden", "M1906");
+        $VALUES.add(Amtsgericht_Wiesbaden);
+        Grundbuchamt_Wiesbaden = new GerichtCode("Grundbuchamt_Wiesbaden", "M1906G");
+        $VALUES.add(Grundbuchamt_Wiesbaden);
+        Staatsanwaltschaft_bei_dem_Landgericht_Darmstadt_Zweigstelle_Offenbach_a_Main = new GerichtCode("Staatsanwaltschaft_bei_dem_Landgericht_Darmstadt_Zweigstelle_Offenbach_a_Main", "M6036S");
+        $VALUES.add(Staatsanwaltschaft_bei_dem_Landgericht_Darmstadt_Zweigstelle_Offenbach_a_Main);
+        Sozialgericht_Frankfurt = new GerichtCode("Sozialgericht_Frankfurt", "M6057");
+        $VALUES.add(Sozialgericht_Frankfurt);
+        Arbeitsgericht_Bad_Hersfeld = new GerichtCode("Arbeitsgericht_Bad_Hersfeld", "M6086");
+        $VALUES.add(Arbeitsgericht_Bad_Hersfeld);
+        Sozialgericht_Darmstadt = new GerichtCode("Sozialgericht_Darmstadt", "M6087");
+        $VALUES.add(Sozialgericht_Darmstadt);
+        Arbeitsgericht_Darmstadt = new GerichtCode("Arbeitsgericht_Darmstadt", "M6088");
+        $VALUES.add(Arbeitsgericht_Darmstadt);
+        Hessisches_Landessozialgericht = new GerichtCode("Hessisches_Landessozialgericht", "M6089");
+        $VALUES.add(Hessisches_Landessozialgericht);
+        Verwaltungsgericht_Darmstadt = new GerichtCode("Verwaltungsgericht_Darmstadt", "M6090");
+        $VALUES.add(Verwaltungsgericht_Darmstadt);
+        Bundesdisziplinargericht = new GerichtCode("Bundesdisziplinargericht", "M6091");
+        $VALUES.add(Bundesdisziplinargericht);
+        Verwaltungsgericht_Frankfurt_am_Main = new GerichtCode("Verwaltungsgericht_Frankfurt_am_Main", "M6093");
+        $VALUES.add(Verwaltungsgericht_Frankfurt_am_Main);
+        Landesarbeitsgericht_Frankfurt_a_M = new GerichtCode("Landesarbeitsgericht_Frankfurt_a_M", "M6094");
+        $VALUES.add(Landesarbeitsgericht_Frankfurt_a_M);
+        Arbeitsgericht_Frankfurt_a_M = new GerichtCode("Arbeitsgericht_Frankfurt_a_M", "M6095");
+        $VALUES.add(Arbeitsgericht_Frankfurt_a_M);
+        Arbeitsgericht_Fulda = new GerichtCode("Arbeitsgericht_Fulda", "M6096");
+        $VALUES.add(Arbeitsgericht_Fulda);
+        Sozialgericht_Giessen = new GerichtCode("Sozialgericht_Giessen", "M6097");
+        $VALUES.add(Sozialgericht_Giessen);
+        Arbeitsgericht_Giessen = new GerichtCode("Arbeitsgericht_Giessen", "M6098");
+        $VALUES.add(Arbeitsgericht_Giessen);
+        Arbeitsgericht_Hanau = new GerichtCode("Arbeitsgericht_Hanau", "M6099");
+        $VALUES.add(Arbeitsgericht_Hanau);
+        Sozialgericht_Kassel = new GerichtCode("Sozialgericht_Kassel", "M6100");
+        $VALUES.add(Sozialgericht_Kassel);
+        Hessischer_Verwaltungsgerichtshof = new GerichtCode("Hessischer_Verwaltungsgerichtshof", "M6102");
+        $VALUES.add(Hessischer_Verwaltungsgerichtshof);
+        Hessisches_Finanzgericht = new GerichtCode("Hessisches_Finanzgericht", "M6103");
+        $VALUES.add(Hessisches_Finanzgericht);
+        Arbeitsgericht_Kassel = new GerichtCode("Arbeitsgericht_Kassel", "M6104");
+        $VALUES.add(Arbeitsgericht_Kassel);
+        Verwaltungsgericht_Kassel = new GerichtCode("Verwaltungsgericht_Kassel", "M6105");
+        $VALUES.add(Verwaltungsgericht_Kassel);
+        Arbeitsgericht_Limburg_a_d_Lahn = new GerichtCode("Arbeitsgericht_Limburg_a_d_Lahn", "M6106");
+        $VALUES.add(Arbeitsgericht_Limburg_a_d_Lahn);
+        Sozialgericht_Marburg = new GerichtCode("Sozialgericht_Marburg", "M6107");
+        $VALUES.add(Sozialgericht_Marburg);
+        Arbeitsgericht_Marburg = new GerichtCode("Arbeitsgericht_Marburg", "M6108");
+        $VALUES.add(Arbeitsgericht_Marburg);
+        Arbeitsgericht_Offenbach_a_M = new GerichtCode("Arbeitsgericht_Offenbach_a_M", "M6230");
+        $VALUES.add(Arbeitsgericht_Offenbach_a_M);
+        aufgeloest_Arbeitsgericht_Wetzlar = new GerichtCode("aufgeloest_Arbeitsgericht_Wetzlar", "M6231");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Wetzlar);
+        aufgeloest_Arbeitsgericht_Wetzlar_M6232 = new GerichtCode("aufgeloest_Arbeitsgericht_Wetzlar_M6232", "M6232");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Wetzlar_M6232);
+        Arbeitsgericht_Wiesbaden = new GerichtCode("Arbeitsgericht_Wiesbaden", "M6233");
+        $VALUES.add(Arbeitsgericht_Wiesbaden);
+        Bundessozialgericht = new GerichtCode("Bundessozialgericht", "M6246");
+        $VALUES.add(Bundessozialgericht);
+        Sozialgericht_Wiesbaden = new GerichtCode("Sozialgericht_Wiesbaden", "M6265");
+        $VALUES.add(Sozialgericht_Wiesbaden);
+        Verwaltungsgericht_Wiesbaden = new GerichtCode("Verwaltungsgericht_Wiesbaden", "M6276");
+        $VALUES.add(Verwaltungsgericht_Wiesbaden);
+        Staatsgerichtshof_des_Landes_Hessen = new GerichtCode("Staatsgerichtshof_des_Landes_Hessen", "M6279");
+        $VALUES.add(Staatsgerichtshof_des_Landes_Hessen);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Frankfurt_Main = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Frankfurt_Main", "M6300");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Frankfurt_Main);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Kassel = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Kassel", "M6318");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Kassel);
+        Hessischer_Anwaltsgerichtshof = new GerichtCode("Hessischer_Anwaltsgerichtshof", "M6320");
+        $VALUES.add(Hessischer_Anwaltsgerichtshof);
+        Sozialgericht_Fulda = new GerichtCode("Sozialgericht_Fulda", "M6361");
+        $VALUES.add(Sozialgericht_Fulda);
+        Justizvollzugsanstalt_Kassel_II_Sozialtherapeutische_Anstalt = new GerichtCode("Justizvollzugsanstalt_Kassel_II_Sozialtherapeutische_Anstalt", "M6516");
+        $VALUES.add(Justizvollzugsanstalt_Kassel_II_Sozialtherapeutische_Anstalt);
+        Justizvollzugsanstalt_Frankfurt_am_Main_IV = new GerichtCode("Justizvollzugsanstalt_Frankfurt_am_Main_IV", "M6864");
+        $VALUES.add(Justizvollzugsanstalt_Frankfurt_am_Main_IV);
+        Verwaltungsgericht_Giessen = new GerichtCode("Verwaltungsgericht_Giessen", "M7095");
+        $VALUES.add(Verwaltungsgericht_Giessen);
+        Justizvollzugsanstalt_Frankfurt_am_Main_III = new GerichtCode("Justizvollzugsanstalt_Frankfurt_am_Main_III", "M7131");
+        $VALUES.add(Justizvollzugsanstalt_Frankfurt_am_Main_III);
+        Zentrales_elektronisches_Schutzschriftenregister = new GerichtCode("Zentrales_elektronisches_Schutzschriftenregister", "M7333");
+        $VALUES.add(Zentrales_elektronisches_Schutzschriftenregister);
+        Jugendarresteinrichtung_Gelnhausen = new GerichtCode("Jugendarresteinrichtung_Gelnhausen", "M7348");
+        $VALUES.add(Jugendarresteinrichtung_Gelnhausen);
+        Justizvollzugsanstalt_Weiterstadt = new GerichtCode("Justizvollzugsanstalt_Weiterstadt", "M8403");
+        $VALUES.add(Justizvollzugsanstalt_Weiterstadt);
+        Justizvollzugsanstalt_Frankfurt_am_Main_I = new GerichtCode("Justizvollzugsanstalt_Frankfurt_am_Main_I", "M8408");
+        $VALUES.add(Justizvollzugsanstalt_Frankfurt_am_Main_I);
+        Justizvollzugsanstalt_Schwalmstadt = new GerichtCode("Justizvollzugsanstalt_Schwalmstadt", "M8435");
+        $VALUES.add(Justizvollzugsanstalt_Schwalmstadt);
+        Justizvollzugsanstalt_Giessen = new GerichtCode("Justizvollzugsanstalt_Giessen", "M8440");
+        $VALUES.add(Justizvollzugsanstalt_Giessen);
+        Justizvollzugsanstalt_Butzbach = new GerichtCode("Justizvollzugsanstalt_Butzbach", "M8447");
+        $VALUES.add(Justizvollzugsanstalt_Butzbach);
+        Justizvollzugsanstalt_Darmstadt = new GerichtCode("Justizvollzugsanstalt_Darmstadt", "M8448");
+        $VALUES.add(Justizvollzugsanstalt_Darmstadt);
+        Justizvollzugsanstalt_Dieburg = new GerichtCode("Justizvollzugsanstalt_Dieburg", "M8449");
+        $VALUES.add(Justizvollzugsanstalt_Dieburg);
+        Justizvollzugsanstalt_Fulda = new GerichtCode("Justizvollzugsanstalt_Fulda", "M8450");
+        $VALUES.add(Justizvollzugsanstalt_Fulda);
+        Justizvollzugsanstalt_Kassel_I = new GerichtCode("Justizvollzugsanstalt_Kassel_I", "M8451");
+        $VALUES.add(Justizvollzugsanstalt_Kassel_I);
+        Justizvollzugsanstalt_Wiesbaden = new GerichtCode("Justizvollzugsanstalt_Wiesbaden", "M8500");
+        $VALUES.add(Justizvollzugsanstalt_Wiesbaden);
+        Justizvollzugsanstalt_Rockenberg = new GerichtCode("Justizvollzugsanstalt_Rockenberg", "M8611");
+        $VALUES.add(Justizvollzugsanstalt_Rockenberg);
+        Justizvollzugsanstalt_Limburg_a_d_Lahn = new GerichtCode("Justizvollzugsanstalt_Limburg_a_d_Lahn", "M8612");
+        $VALUES.add(Justizvollzugsanstalt_Limburg_a_d_Lahn);
+        Justizvollzugsanstalt_Huenfeld = new GerichtCode("Justizvollzugsanstalt_Huenfeld", "M8668");
+        $VALUES.add(Justizvollzugsanstalt_Huenfeld);
+        Oberlandesgericht_Rostock = new GerichtCode("Oberlandesgericht_Rostock", "N1000");
+        $VALUES.add(Oberlandesgericht_Rostock);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Rostock = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Rostock", "N1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Rostock);
+        Landgericht_Neubrandenburg = new GerichtCode("Landgericht_Neubrandenburg", "N1100");
+        $VALUES.add(Landgericht_Neubrandenburg);
+        Staatsanwaltschaft_beim_Landgericht_Neubrandenburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Neubrandenburg", "N1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Neubrandenburg);
+        aufgeloest_Amtsgericht_Altentreptow = new GerichtCode("aufgeloest_Amtsgericht_Altentreptow", "N1101");
+        $VALUES.add(aufgeloest_Amtsgericht_Altentreptow);
+        aufgeloest_Amtsgericht_Anklam = new GerichtCode("aufgeloest_Amtsgericht_Anklam", "N1102");
+        $VALUES.add(aufgeloest_Amtsgericht_Anklam);
+        aufgeloest_Amtsgericht_Demmin = new GerichtCode("aufgeloest_Amtsgericht_Demmin", "N1103");
+        $VALUES.add(aufgeloest_Amtsgericht_Demmin);
+        aufgeloest_Amtsgericht_Demmin_Zweigstelle_Malchin = new GerichtCode("aufgeloest_Amtsgericht_Demmin_Zweigstelle_Malchin", "N1104");
+        $VALUES.add(aufgeloest_Amtsgericht_Demmin_Zweigstelle_Malchin);
+        Amtsgericht_Neubrandenburg = new GerichtCode("Amtsgericht_Neubrandenburg", "N1105");
+        $VALUES.add(Amtsgericht_Neubrandenburg);
+        Amtsgericht_Neubrandenburg_Zentrales_Vollstreckungsgericht_Mecklenburg_Vorpommern = new GerichtCode("Amtsgericht_Neubrandenburg_Zentrales_Vollstreckungsgericht_Mecklenburg_Vorpommern", "N1105R");
+        $VALUES.add(Amtsgericht_Neubrandenburg_Zentrales_Vollstreckungsgericht_Mecklenburg_Vorpommern);
+        Registergericht_Amtsgericht_Neubrandenburg = new GerichtCode("Registergericht_Amtsgericht_Neubrandenburg", "N1105V");
+        $VALUES.add(Registergericht_Amtsgericht_Neubrandenburg);
+        aufgeloest_Amtsgericht_Neustrelitz = new GerichtCode("aufgeloest_Amtsgericht_Neustrelitz", "N1106");
+        $VALUES.add(aufgeloest_Amtsgericht_Neustrelitz);
+        Amtsgericht_Pasewalk = new GerichtCode("Amtsgericht_Pasewalk", "N1107");
+        $VALUES.add(Amtsgericht_Pasewalk);
+        aufgeloest_Amtsgericht_Roebel_Mueritz = new GerichtCode("aufgeloest_Amtsgericht_Roebel_Mueritz", "N1108");
+        $VALUES.add(aufgeloest_Amtsgericht_Roebel_Mueritz);
+        aufgeloest_Amtsgericht_Strasburg = new GerichtCode("aufgeloest_Amtsgericht_Strasburg", "N1109");
+        $VALUES.add(aufgeloest_Amtsgericht_Strasburg);
+        aufgeloest_Amtsgericht_Teterow = new GerichtCode("aufgeloest_Amtsgericht_Teterow", "N1110");
+        $VALUES.add(aufgeloest_Amtsgericht_Teterow);
+        aufgeloest_Amtsgericht_Ueckermuende = new GerichtCode("aufgeloest_Amtsgericht_Ueckermuende", "N1111");
+        $VALUES.add(aufgeloest_Amtsgericht_Ueckermuende);
+        Amtsgericht_Waren_Mueritz = new GerichtCode("Amtsgericht_Waren_Mueritz", "N1112");
+        $VALUES.add(Amtsgericht_Waren_Mueritz);
+        Grundbuchamt_Waren_Mueritz = new GerichtCode("Grundbuchamt_Waren_Mueritz", "N1112G");
+        $VALUES.add(Grundbuchamt_Waren_Mueritz);
+        Amtsgericht_Pasewalk_Zweigstelle_Anklam = new GerichtCode("Amtsgericht_Pasewalk_Zweigstelle_Anklam", "N1113");
+        $VALUES.add(Amtsgericht_Pasewalk_Zweigstelle_Anklam);
+        Grundbuchamt_Pasewalk_Zweigstelle_Anklam = new GerichtCode("Grundbuchamt_Pasewalk_Zweigstelle_Anklam", "N1113G");
+        $VALUES.add(Grundbuchamt_Pasewalk_Zweigstelle_Anklam);
+        Amtsgericht_Waren_Mueritz_Zweigstelle_Neustrelitz = new GerichtCode("Amtsgericht_Waren_Mueritz_Zweigstelle_Neustrelitz", "N1114");
+        $VALUES.add(Amtsgericht_Waren_Mueritz_Zweigstelle_Neustrelitz);
+        Amtsgericht_Neubrandenburg_Zweigstelle_Demmin = new GerichtCode("Amtsgericht_Neubrandenburg_Zweigstelle_Demmin", "N1115");
+        $VALUES.add(Amtsgericht_Neubrandenburg_Zweigstelle_Demmin);
+        Grundbuchamt_Neubrandenburg_Zweigstelle_Demmin = new GerichtCode("Grundbuchamt_Neubrandenburg_Zweigstelle_Demmin", "N1115G");
+        $VALUES.add(Grundbuchamt_Neubrandenburg_Zweigstelle_Demmin);
+        Landgericht_Rostock = new GerichtCode("Landgericht_Rostock", "N1200");
+        $VALUES.add(Landgericht_Rostock);
+        Staatsanwaltschaft_beim_Landgericht_Rostock = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Rostock", "N1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Rostock);
+        aufgeloest_Amtsgericht_Bad_Doberan = new GerichtCode("aufgeloest_Amtsgericht_Bad_Doberan", "N1201");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Doberan);
+        Amtsgericht_Greifswald = new GerichtCode("Amtsgericht_Greifswald", "N1202");
+        $VALUES.add(Amtsgericht_Greifswald);
+        Grundbuchamt_Greifswald = new GerichtCode("Grundbuchamt_Greifswald", "N1202G");
+        $VALUES.add(Grundbuchamt_Greifswald);
+        aufgeloest_Amtsgericht_Grevesmuehlen = new GerichtCode("aufgeloest_Amtsgericht_Grevesmuehlen", "N1203");
+        $VALUES.add(aufgeloest_Amtsgericht_Grevesmuehlen);
+        aufgeloest_Amtsgericht_Stralsund_Zweigstelle_Grimmen = new GerichtCode("aufgeloest_Amtsgericht_Stralsund_Zweigstelle_Grimmen", "N1204");
+        $VALUES.add(aufgeloest_Amtsgericht_Stralsund_Zweigstelle_Grimmen);
+        aufgeloest_Amtsgericht_Ribnitz_Damgarten = new GerichtCode("aufgeloest_Amtsgericht_Ribnitz_Damgarten", "N1205");
+        $VALUES.add(aufgeloest_Amtsgericht_Ribnitz_Damgarten);
+        aufgeloest_Grundbuchamt_Ribnitz_Damgarten = new GerichtCode("aufgeloest_Grundbuchamt_Ribnitz_Damgarten", "N1205G");
+        $VALUES.add(aufgeloest_Grundbuchamt_Ribnitz_Damgarten);
+        Amtsgericht_Rostock = new GerichtCode("Amtsgericht_Rostock", "N1206");
+        $VALUES.add(Amtsgericht_Rostock);
+        Grundbuchamt_Rostock = new GerichtCode("Grundbuchamt_Rostock", "N1206G");
+        $VALUES.add(Grundbuchamt_Rostock);
+        Registergericht_Amtsgericht_Rostock = new GerichtCode("Registergericht_Amtsgericht_Rostock", "N1206V");
+        $VALUES.add(Registergericht_Amtsgericht_Rostock);
+        aufgeloest_Amtsgericht_Bergen = new GerichtCode("aufgeloest_Amtsgericht_Bergen", "N1208");
+        $VALUES.add(aufgeloest_Amtsgericht_Bergen);
+        Amtsgericht_Stralsund = new GerichtCode("Amtsgericht_Stralsund", "N1209");
+        $VALUES.add(Amtsgericht_Stralsund);
+        Grundbuchamt_Stralsund = new GerichtCode("Grundbuchamt_Stralsund", "N1209G");
+        $VALUES.add(Grundbuchamt_Stralsund);
+        Registergericht_Amtsgericht_Stralsund = new GerichtCode("Registergericht_Amtsgericht_Stralsund", "N1209V");
+        $VALUES.add(Registergericht_Amtsgericht_Stralsund);
+        Amtsgericht_Wismar = new GerichtCode("Amtsgericht_Wismar", "N1210");
+        $VALUES.add(Amtsgericht_Wismar);
+        aufgeloest_Amtsgericht_Wolgast = new GerichtCode("aufgeloest_Amtsgericht_Wolgast", "N1211");
+        $VALUES.add(aufgeloest_Amtsgericht_Wolgast);
+        Landgericht_Schwerin = new GerichtCode("Landgericht_Schwerin", "N1300");
+        $VALUES.add(Landgericht_Schwerin);
+        Staatsanwaltschaft_beim_Landgericht_Schwerin = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Schwerin", "N1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Schwerin);
+        aufgeloest_Amtsgericht_Buetzow = new GerichtCode("aufgeloest_Amtsgericht_Buetzow", "N1301");
+        $VALUES.add(aufgeloest_Amtsgericht_Buetzow);
+        aufgeloest_Amtsgericht_Gadebusch = new GerichtCode("aufgeloest_Amtsgericht_Gadebusch", "N1302");
+        $VALUES.add(aufgeloest_Amtsgericht_Gadebusch);
+        Amtsgericht_Guestrow = new GerichtCode("Amtsgericht_Guestrow", "N1303");
+        $VALUES.add(Amtsgericht_Guestrow);
+        Grundbuchamt_Guestrow = new GerichtCode("Grundbuchamt_Guestrow", "N1303G");
+        $VALUES.add(Grundbuchamt_Guestrow);
+        aufgeloest_Amtsgericht_Hagenow = new GerichtCode("aufgeloest_Amtsgericht_Hagenow", "N1304");
+        $VALUES.add(aufgeloest_Amtsgericht_Hagenow);
+        Amtsgericht_Ludwigslust = new GerichtCode("Amtsgericht_Ludwigslust", "N1305");
+        $VALUES.add(Amtsgericht_Ludwigslust);
+        aufgeloest_Amtsgericht_Plau_am_See = new GerichtCode("aufgeloest_Amtsgericht_Plau_am_See", "N1306");
+        $VALUES.add(aufgeloest_Amtsgericht_Plau_am_See);
+        aufgeloest_Amtsgericht_Parchim = new GerichtCode("aufgeloest_Amtsgericht_Parchim", "N1307");
+        $VALUES.add(aufgeloest_Amtsgericht_Parchim);
+        Amtsgericht_Schwerin = new GerichtCode("Amtsgericht_Schwerin", "N1308");
+        $VALUES.add(Amtsgericht_Schwerin);
+        Grundbuchamt_Schwerin = new GerichtCode("Grundbuchamt_Schwerin", "N1308G");
+        $VALUES.add(Grundbuchamt_Schwerin);
+        Registergericht_Amtsgericht_Schwerin = new GerichtCode("Registergericht_Amtsgericht_Schwerin", "N1308V");
+        $VALUES.add(Registergericht_Amtsgericht_Schwerin);
+        aufgeloest_Amtsgericht_Sternberg = new GerichtCode("aufgeloest_Amtsgericht_Sternberg", "N1309");
+        $VALUES.add(aufgeloest_Amtsgericht_Sternberg);
+        Amtsgericht_Ludwigslust_Zweigstelle_Parchim = new GerichtCode("Amtsgericht_Ludwigslust_Zweigstelle_Parchim", "N1310");
+        $VALUES.add(Amtsgericht_Ludwigslust_Zweigstelle_Parchim);
+        Grundbuchamt_Ludwigslust_Zweigstelle_Parchim = new GerichtCode("Grundbuchamt_Ludwigslust_Zweigstelle_Parchim", "N1310G");
+        $VALUES.add(Grundbuchamt_Ludwigslust_Zweigstelle_Parchim);
+        Amtsgericht_Wismar_Zweigstelle_Grevesmuehlen = new GerichtCode("Amtsgericht_Wismar_Zweigstelle_Grevesmuehlen", "N1311");
+        $VALUES.add(Amtsgericht_Wismar_Zweigstelle_Grevesmuehlen);
+        Grundbuchamt_Wismar_Zweigstelle_Grevesmuehlen = new GerichtCode("Grundbuchamt_Wismar_Zweigstelle_Grevesmuehlen", "N1311G");
+        $VALUES.add(Grundbuchamt_Wismar_Zweigstelle_Grevesmuehlen);
+        Landgericht_Stralsund = new GerichtCode("Landgericht_Stralsund", "N1400");
+        $VALUES.add(Landgericht_Stralsund);
+        Staatsanwaltschaft_beim_Landgericht_Stralsund = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Stralsund", "N1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Stralsund);
+        Amtsgericht_Stralsund_Zweigstelle_Bergen_auf_Ruegen = new GerichtCode("Amtsgericht_Stralsund_Zweigstelle_Bergen_auf_Ruegen", "N1401");
+        $VALUES.add(Amtsgericht_Stralsund_Zweigstelle_Bergen_auf_Ruegen);
+        Anwaltsgerichtshof_Mecklenburg_Vorpommern = new GerichtCode("Anwaltsgerichtshof_Mecklenburg_Vorpommern", "N6001");
+        $VALUES.add(Anwaltsgerichtshof_Mecklenburg_Vorpommern);
+        Justizvollzugsanstalt_Buetzow = new GerichtCode("Justizvollzugsanstalt_Buetzow", "N6059");
+        $VALUES.add(Justizvollzugsanstalt_Buetzow);
+        Justizvollzugsanstalt_Stralsund = new GerichtCode("Justizvollzugsanstalt_Stralsund", "N6061");
+        $VALUES.add(Justizvollzugsanstalt_Stralsund);
+        Justizvollzugsanstalt_Neustrelitz = new GerichtCode("Justizvollzugsanstalt_Neustrelitz", "N6062");
+        $VALUES.add(Justizvollzugsanstalt_Neustrelitz);
+        Justizvollzugsanstalt_Waldeck = new GerichtCode("Justizvollzugsanstalt_Waldeck", "N6068");
+        $VALUES.add(Justizvollzugsanstalt_Waldeck);
+        aufgeloest_Arbeitsgericht_Neubrandenburg = new GerichtCode("aufgeloest_Arbeitsgericht_Neubrandenburg", "N6206");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Neubrandenburg);
+        Sozialgericht_Schwerin = new GerichtCode("Sozialgericht_Schwerin", "N6208");
+        $VALUES.add(Sozialgericht_Schwerin);
+        Oberverwaltungsgericht_Mecklenburg_Vorpommern = new GerichtCode("Oberverwaltungsgericht_Mecklenburg_Vorpommern", "N6209");
+        $VALUES.add(Oberverwaltungsgericht_Mecklenburg_Vorpommern);
+        Arbeitsgericht_Schwerin = new GerichtCode("Arbeitsgericht_Schwerin", "N6212");
+        $VALUES.add(Arbeitsgericht_Schwerin);
+        Arbeitsgericht_Rostock = new GerichtCode("Arbeitsgericht_Rostock", "N6224");
+        $VALUES.add(Arbeitsgericht_Rostock);
+        Landesarbeitsgericht_Mecklenburg_Vorpommern = new GerichtCode("Landesarbeitsgericht_Mecklenburg_Vorpommern", "N6235");
+        $VALUES.add(Landesarbeitsgericht_Mecklenburg_Vorpommern);
+        Arbeitsgericht_Stralsund = new GerichtCode("Arbeitsgericht_Stralsund", "N6247");
+        $VALUES.add(Arbeitsgericht_Stralsund);
+        Finanzgericht_Mecklenburg_Vorpommern = new GerichtCode("Finanzgericht_Mecklenburg_Vorpommern", "N6269");
+        $VALUES.add(Finanzgericht_Mecklenburg_Vorpommern);
+        Landesverfassungsgericht_Mecklenburg_Vorpommern = new GerichtCode("Landesverfassungsgericht_Mecklenburg_Vorpommern", "N6298");
+        $VALUES.add(Landesverfassungsgericht_Mecklenburg_Vorpommern);
+        Landessozialgericht_Mecklenburg_Vorpommern = new GerichtCode("Landessozialgericht_Mecklenburg_Vorpommern", "N6312");
+        $VALUES.add(Landessozialgericht_Mecklenburg_Vorpommern);
+        Sozialgericht_Neubrandenburg = new GerichtCode("Sozialgericht_Neubrandenburg", "N6313");
+        $VALUES.add(Sozialgericht_Neubrandenburg);
+        Sozialgericht_Stralsund = new GerichtCode("Sozialgericht_Stralsund", "N6325");
+        $VALUES.add(Sozialgericht_Stralsund);
+        Sozialgericht_Rostock = new GerichtCode("Sozialgericht_Rostock", "N6326");
+        $VALUES.add(Sozialgericht_Rostock);
+        Verwaltungsgericht_Greifswald = new GerichtCode("Verwaltungsgericht_Greifswald", "N6339");
+        $VALUES.add(Verwaltungsgericht_Greifswald);
+        Verwaltungsgericht_Schwerin = new GerichtCode("Verwaltungsgericht_Schwerin", "N6441");
+        $VALUES.add(Verwaltungsgericht_Schwerin);
+        Anwaltsgericht_Mecklenburg_Vorpommern = new GerichtCode("Anwaltsgericht_Mecklenburg_Vorpommern", "N6473");
+        $VALUES.add(Anwaltsgericht_Mecklenburg_Vorpommern);
+        Arbeitsgericht_Stralsund_Kammer_Neubrandenburg = new GerichtCode("Arbeitsgericht_Stralsund_Kammer_Neubrandenburg", "N6511");
+        $VALUES.add(Arbeitsgericht_Stralsund_Kammer_Neubrandenburg);
+        Richterdienstgericht = new GerichtCode("Richterdienstgericht", "N6516");
+        $VALUES.add(Richterdienstgericht);
+        Dienstgerichtshof = new GerichtCode("Dienstgerichtshof", "N6517");
+        $VALUES.add(Dienstgerichtshof);
+        Oberlandesgericht_Braunschweig = new GerichtCode("Oberlandesgericht_Braunschweig", "P1000");
+        $VALUES.add(Oberlandesgericht_Braunschweig);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Braunschweig = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Braunschweig", "P1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Braunschweig);
+        Landgericht_Braunschweig = new GerichtCode("Landgericht_Braunschweig", "P1100");
+        $VALUES.add(Landgericht_Braunschweig);
+        Staatsanwaltschaft_beim_Landgericht_Braunschweig = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Braunschweig", "P1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Braunschweig);
+        Amtsgericht_Bad_Gandersheim = new GerichtCode("Amtsgericht_Bad_Gandersheim", "P1101");
+        $VALUES.add(Amtsgericht_Bad_Gandersheim);
+        Grundbuchamt_Bad_Gandersheim = new GerichtCode("Grundbuchamt_Bad_Gandersheim", "P1101G");
+        $VALUES.add(Grundbuchamt_Bad_Gandersheim);
+        aufgeloest_Amtsgericht_Bad_Harzburg = new GerichtCode("aufgeloest_Amtsgericht_Bad_Harzburg", "P1102");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Harzburg);
+        Amtsgericht_Braunschweig = new GerichtCode("Amtsgericht_Braunschweig", "P1103");
+        $VALUES.add(Amtsgericht_Braunschweig);
+        Grundbuchamt_Braunschweig = new GerichtCode("Grundbuchamt_Braunschweig", "P1103G");
+        $VALUES.add(Grundbuchamt_Braunschweig);
+        Amtsgericht_Goslar = new GerichtCode("Amtsgericht_Goslar", "P1104");
+        $VALUES.add(Amtsgericht_Goslar);
+        Grundbuchamt_Goslar = new GerichtCode("Grundbuchamt_Goslar", "P1104G");
+        $VALUES.add(Grundbuchamt_Goslar);
+        Amtsgericht_Goslar_Zentrales_Vollstreckungsgericht_Niedersachsen = new GerichtCode("Amtsgericht_Goslar_Zentrales_Vollstreckungsgericht_Niedersachsen", "P1104R");
+        $VALUES.add(Amtsgericht_Goslar_Zentrales_Vollstreckungsgericht_Niedersachsen);
+        Amtsgericht_Helmstedt = new GerichtCode("Amtsgericht_Helmstedt", "P1105");
+        $VALUES.add(Amtsgericht_Helmstedt);
+        Grundbuchamt_Helmstedt = new GerichtCode("Grundbuchamt_Helmstedt", "P1105G");
+        $VALUES.add(Grundbuchamt_Helmstedt);
+        aufgeloest_Amtsgericht_Koenigslutter = new GerichtCode("aufgeloest_Amtsgericht_Koenigslutter", "P1106");
+        $VALUES.add(aufgeloest_Amtsgericht_Koenigslutter);
+        aufgeloest_Amtsgericht_Salzgitter_Bad = new GerichtCode("aufgeloest_Amtsgericht_Salzgitter_Bad", "P1107");
+        $VALUES.add(aufgeloest_Amtsgericht_Salzgitter_Bad);
+        Amtsgericht_Salzgitter = new GerichtCode("Amtsgericht_Salzgitter", "P1108");
+        $VALUES.add(Amtsgericht_Salzgitter);
+        Grundbuchamt_Salzgitter = new GerichtCode("Grundbuchamt_Salzgitter", "P1108G");
+        $VALUES.add(Grundbuchamt_Salzgitter);
+        aufgeloest_Amtsgericht_Schoeningen = new GerichtCode("aufgeloest_Amtsgericht_Schoeningen", "P1109");
+        $VALUES.add(aufgeloest_Amtsgericht_Schoeningen);
+        aufgeloest_Amtsgericht_Schoeppenstedt = new GerichtCode("aufgeloest_Amtsgericht_Schoeppenstedt", "P1110");
+        $VALUES.add(aufgeloest_Amtsgericht_Schoeppenstedt);
+        Amtsgericht_Seesen = new GerichtCode("Amtsgericht_Seesen", "P1111");
+        $VALUES.add(Amtsgericht_Seesen);
+        Grundbuchamt_Seesen = new GerichtCode("Grundbuchamt_Seesen", "P1111G");
+        $VALUES.add(Grundbuchamt_Seesen);
+        aufgeloest_Amtsgericht_Vechelde = new GerichtCode("aufgeloest_Amtsgericht_Vechelde", "P1112");
+        $VALUES.add(aufgeloest_Amtsgericht_Vechelde);
+        aufgeloest_Amtsgericht_Vorsfelde = new GerichtCode("aufgeloest_Amtsgericht_Vorsfelde", "P1113");
+        $VALUES.add(aufgeloest_Amtsgericht_Vorsfelde);
+        aufgeloest_Amtsgericht_Walkenried = new GerichtCode("aufgeloest_Amtsgericht_Walkenried", "P1114");
+        $VALUES.add(aufgeloest_Amtsgericht_Walkenried);
+        Amtsgericht_Wolfenbuettel = new GerichtCode("Amtsgericht_Wolfenbuettel", "P1115");
+        $VALUES.add(Amtsgericht_Wolfenbuettel);
+        Grundbuchamt_Wolfenbuettel = new GerichtCode("Grundbuchamt_Wolfenbuettel", "P1115G");
+        $VALUES.add(Grundbuchamt_Wolfenbuettel);
+        aufgeloest_Amtsgericht_Greene = new GerichtCode("aufgeloest_Amtsgericht_Greene", "P1116");
+        $VALUES.add(aufgeloest_Amtsgericht_Greene);
+        Oberlandesgericht_Celle = new GerichtCode("Oberlandesgericht_Celle", "P2000");
+        $VALUES.add(Oberlandesgericht_Celle);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Celle = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Celle", "P2000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Celle);
+        Landgericht_Bueckeburg = new GerichtCode("Landgericht_Bueckeburg", "P2100");
+        $VALUES.add(Landgericht_Bueckeburg);
+        Staatsanwaltschaft_beim_Landgericht_Bueckeburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bueckeburg", "P2100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bueckeburg);
+        Amtsgericht_Bueckeburg = new GerichtCode("Amtsgericht_Bueckeburg", "P2101");
+        $VALUES.add(Amtsgericht_Bueckeburg);
+        Grundbuchamt_Bueckeburg = new GerichtCode("Grundbuchamt_Bueckeburg", "P2101G");
+        $VALUES.add(Grundbuchamt_Bueckeburg);
+        aufgeloest_Amtsgericht_Hess_Oldendorf = new GerichtCode("aufgeloest_Amtsgericht_Hess_Oldendorf", "P2102");
+        $VALUES.add(aufgeloest_Amtsgericht_Hess_Oldendorf);
+        aufgeloest_Amtsgericht_Obernkirchen = new GerichtCode("aufgeloest_Amtsgericht_Obernkirchen", "P2103");
+        $VALUES.add(aufgeloest_Amtsgericht_Obernkirchen);
+        Amtsgericht_Rinteln = new GerichtCode("Amtsgericht_Rinteln", "P2104");
+        $VALUES.add(Amtsgericht_Rinteln);
+        Grundbuchamt_Rinteln = new GerichtCode("Grundbuchamt_Rinteln", "P2104G");
+        $VALUES.add(Grundbuchamt_Rinteln);
+        aufgeloest_Amtsgericht_Rodenberg = new GerichtCode("aufgeloest_Amtsgericht_Rodenberg", "P2105");
+        $VALUES.add(aufgeloest_Amtsgericht_Rodenberg);
+        Amtsgericht_Stadthagen = new GerichtCode("Amtsgericht_Stadthagen", "P2106");
+        $VALUES.add(Amtsgericht_Stadthagen);
+        Grundbuchamt_Stadthagen = new GerichtCode("Grundbuchamt_Stadthagen", "P2106G");
+        $VALUES.add(Grundbuchamt_Stadthagen);
+        Landgericht_Goettingen = new GerichtCode("Landgericht_Goettingen", "P2200");
+        $VALUES.add(Landgericht_Goettingen);
+        Staatsanwaltschaft_beim_Landgericht_Goettingen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Goettingen", "P2200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Goettingen);
+        Amtsgericht_Clausthal_Zellerfeld = new GerichtCode("Amtsgericht_Clausthal_Zellerfeld", "P2201");
+        $VALUES.add(Amtsgericht_Clausthal_Zellerfeld);
+        Grundbuchamt_Clausthal_Zellerfeld = new GerichtCode("Grundbuchamt_Clausthal_Zellerfeld", "P2201G");
+        $VALUES.add(Grundbuchamt_Clausthal_Zellerfeld);
+        Amtsgericht_Duderstadt = new GerichtCode("Amtsgericht_Duderstadt", "P2202");
+        $VALUES.add(Amtsgericht_Duderstadt);
+        Grundbuchamt_Duderstadt = new GerichtCode("Grundbuchamt_Duderstadt", "P2202G");
+        $VALUES.add(Grundbuchamt_Duderstadt);
+        Amtsgericht_Einbeck = new GerichtCode("Amtsgericht_Einbeck", "P2203");
+        $VALUES.add(Amtsgericht_Einbeck);
+        Grundbuchamt_Einbeck = new GerichtCode("Grundbuchamt_Einbeck", "P2203G");
+        $VALUES.add(Grundbuchamt_Einbeck);
+        Amtsgericht_Goettingen = new GerichtCode("Amtsgericht_Goettingen", "P2204");
+        $VALUES.add(Amtsgericht_Goettingen);
+        Grundbuchamt_Goettingen = new GerichtCode("Grundbuchamt_Goettingen", "P2204G");
+        $VALUES.add(Grundbuchamt_Goettingen);
+        Amtsgericht_Hann_Muenden = new GerichtCode("Amtsgericht_Hann_Muenden", "P2205");
+        $VALUES.add(Amtsgericht_Hann_Muenden);
+        Grundbuchamt_Hann_Muenden = new GerichtCode("Grundbuchamt_Hann_Muenden", "P2205G");
+        $VALUES.add(Grundbuchamt_Hann_Muenden);
+        Amtsgericht_Herzberg_am_Harz = new GerichtCode("Amtsgericht_Herzberg_am_Harz", "P2206");
+        $VALUES.add(Amtsgericht_Herzberg_am_Harz);
+        Grundbuchamt_Herzberg_am_Harz = new GerichtCode("Grundbuchamt_Herzberg_am_Harz", "P2206G");
+        $VALUES.add(Grundbuchamt_Herzberg_am_Harz);
+        aufgeloest_Amtsgericht_Moringen = new GerichtCode("aufgeloest_Amtsgericht_Moringen", "P2207");
+        $VALUES.add(aufgeloest_Amtsgericht_Moringen);
+        Amtsgericht_Northeim = new GerichtCode("Amtsgericht_Northeim", "P2208");
+        $VALUES.add(Amtsgericht_Northeim);
+        Grundbuchamt_Northeim = new GerichtCode("Grundbuchamt_Northeim", "P2208G");
+        $VALUES.add(Grundbuchamt_Northeim);
+        Amtsgericht_Osterode = new GerichtCode("Amtsgericht_Osterode", "P2209");
+        $VALUES.add(Amtsgericht_Osterode);
+        Grundbuchamt_Osterode = new GerichtCode("Grundbuchamt_Osterode", "P2209G");
+        $VALUES.add(Grundbuchamt_Osterode);
+        aufgeloest_Amtsgericht_Reinhausen = new GerichtCode("aufgeloest_Amtsgericht_Reinhausen", "P2210");
+        $VALUES.add(aufgeloest_Amtsgericht_Reinhausen);
+        aufgeloest_Amtsgericht_Uslar = new GerichtCode("aufgeloest_Amtsgericht_Uslar", "P2211");
+        $VALUES.add(aufgeloest_Amtsgericht_Uslar);
+        Landgericht_Hannover = new GerichtCode("Landgericht_Hannover", "P2300");
+        $VALUES.add(Landgericht_Hannover);
+        Staatsanwaltschaft_beim_Landgericht_Hannover = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hannover", "P2300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hannover);
+        aufgeloest_Amtsgericht_Bad_Muender_am_Deister = new GerichtCode("aufgeloest_Amtsgericht_Bad_Muender_am_Deister", "P2301");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Muender_am_Deister);
+        aufgeloest_Amtsgericht_Bad_Pyrmont = new GerichtCode("aufgeloest_Amtsgericht_Bad_Pyrmont", "P2302");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Pyrmont);
+        Amtsgericht_Burgwedel = new GerichtCode("Amtsgericht_Burgwedel", "P2303");
+        $VALUES.add(Amtsgericht_Burgwedel);
+        Grundbuchamt_Burgwedel = new GerichtCode("Grundbuchamt_Burgwedel", "P2303G");
+        $VALUES.add(Grundbuchamt_Burgwedel);
+        Amtsgericht_Hameln = new GerichtCode("Amtsgericht_Hameln", "P2304");
+        $VALUES.add(Amtsgericht_Hameln);
+        Grundbuchamt_Hameln = new GerichtCode("Grundbuchamt_Hameln", "P2304G");
+        $VALUES.add(Grundbuchamt_Hameln);
+        Amtsgericht_Hannover = new GerichtCode("Amtsgericht_Hannover", "P2305");
+        $VALUES.add(Amtsgericht_Hannover);
+        Grundbuchamt_Hannover = new GerichtCode("Grundbuchamt_Hannover", "P2305G");
+        $VALUES.add(Grundbuchamt_Hannover);
+        Amtsgericht_Neustadt_a_Rbge = new GerichtCode("Amtsgericht_Neustadt_a_Rbge", "P2306");
+        $VALUES.add(Amtsgericht_Neustadt_a_Rbge);
+        Grundbuchamt_Neustadt_a_Rbge = new GerichtCode("Grundbuchamt_Neustadt_a_Rbge", "P2306G");
+        $VALUES.add(Grundbuchamt_Neustadt_a_Rbge);
+        Amtsgericht_Springe = new GerichtCode("Amtsgericht_Springe", "P2307");
+        $VALUES.add(Amtsgericht_Springe);
+        Grundbuchamt_Springe = new GerichtCode("Grundbuchamt_Springe", "P2307G");
+        $VALUES.add(Grundbuchamt_Springe);
+        Amtsgericht_Wennigsen_Deister = new GerichtCode("Amtsgericht_Wennigsen_Deister", "P2308");
+        $VALUES.add(Amtsgericht_Wennigsen_Deister);
+        Grundbuchamt_Wennigsen_Deister = new GerichtCode("Grundbuchamt_Wennigsen_Deister", "P2308G");
+        $VALUES.add(Grundbuchamt_Wennigsen_Deister);
+        aufgeloest_Amtsgericht_Lauenstein = new GerichtCode("aufgeloest_Amtsgericht_Lauenstein", "P2309");
+        $VALUES.add(aufgeloest_Amtsgericht_Lauenstein);
+        Landgericht_Hildesheim = new GerichtCode("Landgericht_Hildesheim", "P2400");
+        $VALUES.add(Landgericht_Hildesheim);
+        Staatsanwaltschaft_beim_Landgericht_Hildesheim = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hildesheim", "P2400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hildesheim);
+        Amtsgericht_Alfeld = new GerichtCode("Amtsgericht_Alfeld", "P2401");
+        $VALUES.add(Amtsgericht_Alfeld);
+        Grundbuchamt_Alfeld = new GerichtCode("Grundbuchamt_Alfeld", "P2401G");
+        $VALUES.add(Grundbuchamt_Alfeld);
+        aufgeloest_Amtsgericht_Bockenem = new GerichtCode("aufgeloest_Amtsgericht_Bockenem", "P2402");
+        $VALUES.add(aufgeloest_Amtsgericht_Bockenem);
+        Amtsgericht_Burgdorf = new GerichtCode("Amtsgericht_Burgdorf", "P2403");
+        $VALUES.add(Amtsgericht_Burgdorf);
+        Grundbuchamt_Burgdorf = new GerichtCode("Grundbuchamt_Burgdorf", "P2403G");
+        $VALUES.add(Grundbuchamt_Burgdorf);
+        Amtsgericht_Elze = new GerichtCode("Amtsgericht_Elze", "P2404");
+        $VALUES.add(Amtsgericht_Elze);
+        Grundbuchamt_Elze = new GerichtCode("Grundbuchamt_Elze", "P2404G");
+        $VALUES.add(Grundbuchamt_Elze);
+        aufgeloest_Amtsgericht_Eschershausen = new GerichtCode("aufgeloest_Amtsgericht_Eschershausen", "P2405");
+        $VALUES.add(aufgeloest_Amtsgericht_Eschershausen);
+        aufgeloest_Amtsgericht_Fallersleben = new GerichtCode("aufgeloest_Amtsgericht_Fallersleben", "P2406");
+        $VALUES.add(aufgeloest_Amtsgericht_Fallersleben);
+        Amtsgericht_Gifhorn = new GerichtCode("Amtsgericht_Gifhorn", "P2407");
+        $VALUES.add(Amtsgericht_Gifhorn);
+        Grundbuchamt_Gifhorn = new GerichtCode("Grundbuchamt_Gifhorn", "P2407G");
+        $VALUES.add(Grundbuchamt_Gifhorn);
+        Amtsgericht_Hildesheim = new GerichtCode("Amtsgericht_Hildesheim", "P2408");
+        $VALUES.add(Amtsgericht_Hildesheim);
+        Grundbuchamt_Hildesheim = new GerichtCode("Grundbuchamt_Hildesheim", "P2408G");
+        $VALUES.add(Grundbuchamt_Hildesheim);
+        Amtsgericht_Holzminden = new GerichtCode("Amtsgericht_Holzminden", "P2409");
+        $VALUES.add(Amtsgericht_Holzminden);
+        Grundbuchamt_Holzminden = new GerichtCode("Grundbuchamt_Holzminden", "P2409G");
+        $VALUES.add(Grundbuchamt_Holzminden);
+        Amtsgericht_Lehrte = new GerichtCode("Amtsgericht_Lehrte", "P2410");
+        $VALUES.add(Amtsgericht_Lehrte);
+        Grundbuchamt_Lehrte = new GerichtCode("Grundbuchamt_Lehrte", "P2410G");
+        $VALUES.add(Grundbuchamt_Lehrte);
+        Amtsgericht_Peine = new GerichtCode("Amtsgericht_Peine", "P2411");
+        $VALUES.add(Amtsgericht_Peine);
+        Grundbuchamt_Peine = new GerichtCode("Grundbuchamt_Peine", "P2411G");
+        $VALUES.add(Grundbuchamt_Peine);
+        aufgeloest_Amtsgericht_Stadtoldendorf = new GerichtCode("aufgeloest_Amtsgericht_Stadtoldendorf", "P2412");
+        $VALUES.add(aufgeloest_Amtsgericht_Stadtoldendorf);
+        Amtsgericht_Wolfsburg = new GerichtCode("Amtsgericht_Wolfsburg", "P2413");
+        $VALUES.add(Amtsgericht_Wolfsburg);
+        Grundbuchamt_Wolfsburg = new GerichtCode("Grundbuchamt_Wolfsburg", "P2413G");
+        $VALUES.add(Grundbuchamt_Wolfsburg);
+        Landgericht_Lueneburg = new GerichtCode("Landgericht_Lueneburg", "P2500");
+        $VALUES.add(Landgericht_Lueneburg);
+        Staatsanwaltschaft_beim_Landgericht_Lueneburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Lueneburg", "P2500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Lueneburg);
+        aufgeloest_Amtsgericht_Bergen_P2501 = new GerichtCode("aufgeloest_Amtsgericht_Bergen_P2501", "P2501");
+        $VALUES.add(aufgeloest_Amtsgericht_Bergen_P2501);
+        aufgeloest_Amtsgericht_Bleckede = new GerichtCode("aufgeloest_Amtsgericht_Bleckede", "P2502");
+        $VALUES.add(aufgeloest_Amtsgericht_Bleckede);
+        Amtsgericht_Celle = new GerichtCode("Amtsgericht_Celle", "P2503");
+        $VALUES.add(Amtsgericht_Celle);
+        Grundbuchamt_Celle = new GerichtCode("Grundbuchamt_Celle", "P2503G");
+        $VALUES.add(Grundbuchamt_Celle);
+        Amtsgericht_Dannenberg_Elbe = new GerichtCode("Amtsgericht_Dannenberg_Elbe", "P2504");
+        $VALUES.add(Amtsgericht_Dannenberg_Elbe);
+        Grundbuchamt_Dannenberg_Elbe = new GerichtCode("Grundbuchamt_Dannenberg_Elbe", "P2504G");
+        $VALUES.add(Grundbuchamt_Dannenberg_Elbe);
+        aufgeloest_Amtsgericht_Hankensbuettel = new GerichtCode("aufgeloest_Amtsgericht_Hankensbuettel", "P2505");
+        $VALUES.add(aufgeloest_Amtsgericht_Hankensbuettel);
+        aufgeloest_Amtsgericht_Luechow = new GerichtCode("aufgeloest_Amtsgericht_Luechow", "P2506");
+        $VALUES.add(aufgeloest_Amtsgericht_Luechow);
+        Amtsgericht_Lueneburg = new GerichtCode("Amtsgericht_Lueneburg", "P2507");
+        $VALUES.add(Amtsgericht_Lueneburg);
+        Grundbuchamt_Lueneburg = new GerichtCode("Grundbuchamt_Lueneburg", "P2507G");
+        $VALUES.add(Grundbuchamt_Lueneburg);
+        aufgeloest_Amtsgericht_Medingen = new GerichtCode("aufgeloest_Amtsgericht_Medingen", "P2508");
+        $VALUES.add(aufgeloest_Amtsgericht_Medingen);
+        Amtsgericht_Soltau = new GerichtCode("Amtsgericht_Soltau", "P2509");
+        $VALUES.add(Amtsgericht_Soltau);
+        Grundbuchamt_Soltau = new GerichtCode("Grundbuchamt_Soltau", "P2509G");
+        $VALUES.add(Grundbuchamt_Soltau);
+        Amtsgericht_Uelzen = new GerichtCode("Amtsgericht_Uelzen", "P2510");
+        $VALUES.add(Amtsgericht_Uelzen);
+        Grundbuchamt_Uelzen = new GerichtCode("Grundbuchamt_Uelzen", "P2510G");
+        $VALUES.add(Grundbuchamt_Uelzen);
+        Amtsgericht_Uelzen_Zentrales_Mahngericht = new GerichtCode("Amtsgericht_Uelzen_Zentrales_Mahngericht", "P2510M");
+        $VALUES.add(Amtsgericht_Uelzen_Zentrales_Mahngericht);
+        Amtsgericht_Winsen = new GerichtCode("Amtsgericht_Winsen", "P2511");
+        $VALUES.add(Amtsgericht_Winsen);
+        Grundbuchamt_Winsen = new GerichtCode("Grundbuchamt_Winsen", "P2511G");
+        $VALUES.add(Grundbuchamt_Winsen);
+        Landgericht_Stade = new GerichtCode("Landgericht_Stade", "P2600");
+        $VALUES.add(Landgericht_Stade);
+        Staatsanwaltschaft_beim_Landgericht_Stade = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Stade", "P2600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Stade);
+        Amtsgericht_Bremervoerde = new GerichtCode("Amtsgericht_Bremervoerde", "P2601");
+        $VALUES.add(Amtsgericht_Bremervoerde);
+        Grundbuchamt_Bremervoerde = new GerichtCode("Grundbuchamt_Bremervoerde", "P2601G");
+        $VALUES.add(Grundbuchamt_Bremervoerde);
+        Amtsgericht_Buxtehude = new GerichtCode("Amtsgericht_Buxtehude", "P2602");
+        $VALUES.add(Amtsgericht_Buxtehude);
+        Grundbuchamt_Buxtehude = new GerichtCode("Grundbuchamt_Buxtehude", "P2602G");
+        $VALUES.add(Grundbuchamt_Buxtehude);
+        Amtsgericht_Cuxhaven = new GerichtCode("Amtsgericht_Cuxhaven", "P2603");
+        $VALUES.add(Amtsgericht_Cuxhaven);
+        Grundbuchamt_Cuxhaven = new GerichtCode("Grundbuchamt_Cuxhaven", "P2603G");
+        $VALUES.add(Grundbuchamt_Cuxhaven);
+        aufgeloest_Amtsgericht_Dorum = new GerichtCode("aufgeloest_Amtsgericht_Dorum", "P2604");
+        $VALUES.add(aufgeloest_Amtsgericht_Dorum);
+        aufgeloest_Amtsgericht_Freiburg_Elbe = new GerichtCode("aufgeloest_Amtsgericht_Freiburg_Elbe", "P2605");
+        $VALUES.add(aufgeloest_Amtsgericht_Freiburg_Elbe);
+        aufgeloest_Amtsgericht_Hagen_im_Bremischen = new GerichtCode("aufgeloest_Amtsgericht_Hagen_im_Bremischen", "P2606");
+        $VALUES.add(aufgeloest_Amtsgericht_Hagen_im_Bremischen);
+        aufgeloest_Amtsgericht_Jork = new GerichtCode("aufgeloest_Amtsgericht_Jork", "P2607");
+        $VALUES.add(aufgeloest_Amtsgericht_Jork);
+        Amtsgericht_Geestland = new GerichtCode("Amtsgericht_Geestland", "P2608");
+        $VALUES.add(Amtsgericht_Geestland);
+        Grundbuchamt_Geestland = new GerichtCode("Grundbuchamt_Geestland", "P2608G");
+        $VALUES.add(Grundbuchamt_Geestland);
+        aufgeloest_Amtsgericht_Neuhaus_Oste = new GerichtCode("aufgeloest_Amtsgericht_Neuhaus_Oste", "P2609");
+        $VALUES.add(aufgeloest_Amtsgericht_Neuhaus_Oste);
+        aufgeloest_Amtsgericht_Osten = new GerichtCode("aufgeloest_Amtsgericht_Osten", "P2610");
+        $VALUES.add(aufgeloest_Amtsgericht_Osten);
+        Amtsgericht_Otterndorf = new GerichtCode("Amtsgericht_Otterndorf", "P2611");
+        $VALUES.add(Amtsgericht_Otterndorf);
+        Grundbuchamt_Otterndorf = new GerichtCode("Grundbuchamt_Otterndorf", "P2611G");
+        $VALUES.add(Grundbuchamt_Otterndorf);
+        Amtsgericht_Stade = new GerichtCode("Amtsgericht_Stade", "P2612");
+        $VALUES.add(Amtsgericht_Stade);
+        Grundbuchamt_Stade = new GerichtCode("Grundbuchamt_Stade", "P2612G");
+        $VALUES.add(Grundbuchamt_Stade);
+        Amtsgericht_Tostedt = new GerichtCode("Amtsgericht_Tostedt", "P2613");
+        $VALUES.add(Amtsgericht_Tostedt);
+        Grundbuchamt_Tostedt = new GerichtCode("Grundbuchamt_Tostedt", "P2613G");
+        $VALUES.add(Grundbuchamt_Tostedt);
+        Amtsgericht_Zeven = new GerichtCode("Amtsgericht_Zeven", "P2614");
+        $VALUES.add(Amtsgericht_Zeven);
+        Grundbuchamt_Zeven = new GerichtCode("Grundbuchamt_Zeven", "P2614G");
+        $VALUES.add(Grundbuchamt_Zeven);
+        Fuehrungsaufsichtsstelle_beim_Landgericht_Stade = new GerichtCode("Fuehrungsaufsichtsstelle_beim_Landgericht_Stade", "P2620");
+        $VALUES.add(Fuehrungsaufsichtsstelle_beim_Landgericht_Stade);
+        Landgericht_Verden = new GerichtCode("Landgericht_Verden", "P2700");
+        $VALUES.add(Landgericht_Verden);
+        Staatsanwaltschaft_beim_Landgericht_Verden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Verden", "P2700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Verden);
+        Amtsgericht_Achim = new GerichtCode("Amtsgericht_Achim", "P2701");
+        $VALUES.add(Amtsgericht_Achim);
+        Grundbuchamt_Achim = new GerichtCode("Grundbuchamt_Achim", "P2701G");
+        $VALUES.add(Grundbuchamt_Achim);
+        aufgeloest_Amtsgericht_Ahlden = new GerichtCode("aufgeloest_Amtsgericht_Ahlden", "P2702");
+        $VALUES.add(aufgeloest_Amtsgericht_Ahlden);
+        Amtsgericht_Syke_Zweigstelle_Bassum = new GerichtCode("Amtsgericht_Syke_Zweigstelle_Bassum", "P2703");
+        $VALUES.add(Amtsgericht_Syke_Zweigstelle_Bassum);
+        aufgeloest_Amtsgericht_Bruchhausen_Vilsen = new GerichtCode("aufgeloest_Amtsgericht_Bruchhausen_Vilsen", "P2704");
+        $VALUES.add(aufgeloest_Amtsgericht_Bruchhausen_Vilsen);
+        Amtsgericht_Diepholz = new GerichtCode("Amtsgericht_Diepholz", "P2705");
+        $VALUES.add(Amtsgericht_Diepholz);
+        Grundbuchamt_Diepholz = new GerichtCode("Grundbuchamt_Diepholz", "P2705G");
+        $VALUES.add(Grundbuchamt_Diepholz);
+        Amtsgericht_Nienburg_Zweigstelle_Hoya = new GerichtCode("Amtsgericht_Nienburg_Zweigstelle_Hoya", "P2706");
+        $VALUES.add(Amtsgericht_Nienburg_Zweigstelle_Hoya);
+        aufgeloest_Amtsgericht_Lilienthal = new GerichtCode("aufgeloest_Amtsgericht_Lilienthal", "P2707");
+        $VALUES.add(aufgeloest_Amtsgericht_Lilienthal);
+        Amtsgericht_Nienburg_Weser = new GerichtCode("Amtsgericht_Nienburg_Weser", "P2708");
+        $VALUES.add(Amtsgericht_Nienburg_Weser);
+        Grundbuchamt_Nienburg_Weser = new GerichtCode("Grundbuchamt_Nienburg_Weser", "P2708G");
+        $VALUES.add(Grundbuchamt_Nienburg_Weser);
+        Amtsgericht_Osterholz_Scharmbeck = new GerichtCode("Amtsgericht_Osterholz_Scharmbeck", "P2709");
+        $VALUES.add(Amtsgericht_Osterholz_Scharmbeck);
+        Grundbuchamt_Osterholz_Scharmbeck = new GerichtCode("Grundbuchamt_Osterholz_Scharmbeck", "P2709G");
+        $VALUES.add(Grundbuchamt_Osterholz_Scharmbeck);
+        Amtsgericht_Rotenburg_Wuemme = new GerichtCode("Amtsgericht_Rotenburg_Wuemme", "P2710");
+        $VALUES.add(Amtsgericht_Rotenburg_Wuemme);
+        Grundbuchamt_Rotenburg_Wuemme = new GerichtCode("Grundbuchamt_Rotenburg_Wuemme", "P2710G");
+        $VALUES.add(Grundbuchamt_Rotenburg_Wuemme);
+        Amtsgericht_Stolzenau = new GerichtCode("Amtsgericht_Stolzenau", "P2711");
+        $VALUES.add(Amtsgericht_Stolzenau);
+        Grundbuchamt_Stolzenau = new GerichtCode("Grundbuchamt_Stolzenau", "P2711G");
+        $VALUES.add(Grundbuchamt_Stolzenau);
+        Amtsgericht_Sulingen = new GerichtCode("Amtsgericht_Sulingen", "P2712");
+        $VALUES.add(Amtsgericht_Sulingen);
+        Grundbuchamt_Sulingen = new GerichtCode("Grundbuchamt_Sulingen", "P2712G");
+        $VALUES.add(Grundbuchamt_Sulingen);
+        Amtsgericht_Syke = new GerichtCode("Amtsgericht_Syke", "P2713");
+        $VALUES.add(Amtsgericht_Syke);
+        Grundbuchamt_Syke = new GerichtCode("Grundbuchamt_Syke", "P2713G");
+        $VALUES.add(Grundbuchamt_Syke);
+        aufgeloest_Amtsgericht_Uchte = new GerichtCode("aufgeloest_Amtsgericht_Uchte", "P2714");
+        $VALUES.add(aufgeloest_Amtsgericht_Uchte);
+        Amtsgericht_Verden_Aller = new GerichtCode("Amtsgericht_Verden_Aller", "P2715");
+        $VALUES.add(Amtsgericht_Verden_Aller);
+        Grundbuchamt_Verden_Aller = new GerichtCode("Grundbuchamt_Verden_Aller", "P2715G");
+        $VALUES.add(Grundbuchamt_Verden_Aller);
+        Amtsgericht_Walsrode = new GerichtCode("Amtsgericht_Walsrode", "P2716");
+        $VALUES.add(Amtsgericht_Walsrode);
+        Grundbuchamt_Walsrode = new GerichtCode("Grundbuchamt_Walsrode", "P2716G");
+        $VALUES.add(Grundbuchamt_Walsrode);
+        Landgericht_Lueneburg_Zweigstelle_Celle = new GerichtCode("Landgericht_Lueneburg_Zweigstelle_Celle", "P2800");
+        $VALUES.add(Landgericht_Lueneburg_Zweigstelle_Celle);
+        Staatsanwaltschaft_beim_Landgericht_Celle_Zwst_der_StA_Lueneburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Celle_Zwst_der_StA_Lueneburg", "P2800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Celle_Zwst_der_StA_Lueneburg);
+        Oberlandesgericht_Oldenburg = new GerichtCode("Oberlandesgericht_Oldenburg", "P3000");
+        $VALUES.add(Oberlandesgericht_Oldenburg);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Oldenburg_Oldenburg = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Oldenburg_Oldenburg", "P3000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Oldenburg_Oldenburg);
+        Landgericht_Aurich = new GerichtCode("Landgericht_Aurich", "P3100");
+        $VALUES.add(Landgericht_Aurich);
+        Staatsanwaltschaft_beim_Landgericht_Aurich = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Aurich", "P3100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Aurich);
+        Amtsgericht_Aurich = new GerichtCode("Amtsgericht_Aurich", "P3101");
+        $VALUES.add(Amtsgericht_Aurich);
+        Grundbuchamt_Aurich = new GerichtCode("Grundbuchamt_Aurich", "P3101G");
+        $VALUES.add(Grundbuchamt_Aurich);
+        Amtsgericht_Emden = new GerichtCode("Amtsgericht_Emden", "P3102");
+        $VALUES.add(Amtsgericht_Emden);
+        Grundbuchamt_Emden = new GerichtCode("Grundbuchamt_Emden", "P3102G");
+        $VALUES.add(Grundbuchamt_Emden);
+        Amtsgericht_Wittmund_Zweigstelle_Esens = new GerichtCode("Amtsgericht_Wittmund_Zweigstelle_Esens", "P3103");
+        $VALUES.add(Amtsgericht_Wittmund_Zweigstelle_Esens);
+        Amtsgericht_Leer = new GerichtCode("Amtsgericht_Leer", "P3104");
+        $VALUES.add(Amtsgericht_Leer);
+        Grundbuchamt_Leer = new GerichtCode("Grundbuchamt_Leer", "P3104G");
+        $VALUES.add(Grundbuchamt_Leer);
+        Amtsgericht_Norden = new GerichtCode("Amtsgericht_Norden", "P3105");
+        $VALUES.add(Amtsgericht_Norden);
+        Grundbuchamt_Norden = new GerichtCode("Grundbuchamt_Norden", "P3105G");
+        $VALUES.add(Grundbuchamt_Norden);
+        aufgeloest_Amtsgericht_Weener = new GerichtCode("aufgeloest_Amtsgericht_Weener", "P3106");
+        $VALUES.add(aufgeloest_Amtsgericht_Weener);
+        Amtsgericht_Wittmund = new GerichtCode("Amtsgericht_Wittmund", "P3107");
+        $VALUES.add(Amtsgericht_Wittmund);
+        Grundbuchamt_Wittmund = new GerichtCode("Grundbuchamt_Wittmund", "P3107G");
+        $VALUES.add(Grundbuchamt_Wittmund);
+        Fuehrungsaufsichtsstelle_beim_Landgericht_Aurich = new GerichtCode("Fuehrungsaufsichtsstelle_beim_Landgericht_Aurich", "P3110");
+        $VALUES.add(Fuehrungsaufsichtsstelle_beim_Landgericht_Aurich);
+        Landgericht_Oldenburg = new GerichtCode("Landgericht_Oldenburg", "P3200");
+        $VALUES.add(Landgericht_Oldenburg);
+        Staatsanwaltschaft_beim_Landgericht_Oldenburg_Oldenburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Oldenburg_Oldenburg", "P3200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Oldenburg_Oldenburg);
+        Amtsgericht_Brake = new GerichtCode("Amtsgericht_Brake", "P3201");
+        $VALUES.add(Amtsgericht_Brake);
+        Grundbuchamt_Brake = new GerichtCode("Grundbuchamt_Brake", "P3201G");
+        $VALUES.add(Grundbuchamt_Brake);
+        Amtsgericht_Cloppenburg = new GerichtCode("Amtsgericht_Cloppenburg", "P3202");
+        $VALUES.add(Amtsgericht_Cloppenburg);
+        Grundbuchamt_Cloppenburg = new GerichtCode("Grundbuchamt_Cloppenburg", "P3202G");
+        $VALUES.add(Grundbuchamt_Cloppenburg);
+        aufgeloest_Amtsgericht_Damme = new GerichtCode("aufgeloest_Amtsgericht_Damme", "P3203");
+        $VALUES.add(aufgeloest_Amtsgericht_Damme);
+        Amtsgericht_Delmenhorst = new GerichtCode("Amtsgericht_Delmenhorst", "P3204");
+        $VALUES.add(Amtsgericht_Delmenhorst);
+        Grundbuchamt_Delmenhorst = new GerichtCode("Grundbuchamt_Delmenhorst", "P3204G");
+        $VALUES.add(Grundbuchamt_Delmenhorst);
+        aufgeloest_Amtsgericht_Elsfleth = new GerichtCode("aufgeloest_Amtsgericht_Elsfleth", "P3205");
+        $VALUES.add(aufgeloest_Amtsgericht_Elsfleth);
+        aufgeloest_Amtsgericht_Friesoythe = new GerichtCode("aufgeloest_Amtsgericht_Friesoythe", "P3206");
+        $VALUES.add(aufgeloest_Amtsgericht_Friesoythe);
+        Amtsgericht_Jever = new GerichtCode("Amtsgericht_Jever", "P3207");
+        $VALUES.add(Amtsgericht_Jever);
+        Grundbuchamt_Jever = new GerichtCode("Grundbuchamt_Jever", "P3207G");
+        $VALUES.add(Grundbuchamt_Jever);
+        aufgeloest_Amtsgericht_Loeningen = new GerichtCode("aufgeloest_Amtsgericht_Loeningen", "P3208");
+        $VALUES.add(aufgeloest_Amtsgericht_Loeningen);
+        Amtsgericht_Nordenham = new GerichtCode("Amtsgericht_Nordenham", "P3209");
+        $VALUES.add(Amtsgericht_Nordenham);
+        Grundbuchamt_Nordenham = new GerichtCode("Grundbuchamt_Nordenham", "P3209G");
+        $VALUES.add(Grundbuchamt_Nordenham);
+        Amtsgericht_Oldenburg_Oldenburg = new GerichtCode("Amtsgericht_Oldenburg_Oldenburg", "P3210");
+        $VALUES.add(Amtsgericht_Oldenburg_Oldenburg);
+        Grundbuchamt_Oldenburg_Oldenburg = new GerichtCode("Grundbuchamt_Oldenburg_Oldenburg", "P3210G");
+        $VALUES.add(Grundbuchamt_Oldenburg_Oldenburg);
+        Amtsgericht_Varel = new GerichtCode("Amtsgericht_Varel", "P3211");
+        $VALUES.add(Amtsgericht_Varel);
+        Grundbuchamt_Varel = new GerichtCode("Grundbuchamt_Varel", "P3211G");
+        $VALUES.add(Grundbuchamt_Varel);
+        Amtsgericht_Vechta = new GerichtCode("Amtsgericht_Vechta", "P3212");
+        $VALUES.add(Amtsgericht_Vechta);
+        Grundbuchamt_Vechta = new GerichtCode("Grundbuchamt_Vechta", "P3212G");
+        $VALUES.add(Grundbuchamt_Vechta);
+        Amtsgericht_Westerstede = new GerichtCode("Amtsgericht_Westerstede", "P3213");
+        $VALUES.add(Amtsgericht_Westerstede);
+        Grundbuchamt_Westerstede = new GerichtCode("Grundbuchamt_Westerstede", "P3213G");
+        $VALUES.add(Grundbuchamt_Westerstede);
+        Amtsgericht_Wildeshausen = new GerichtCode("Amtsgericht_Wildeshausen", "P3214");
+        $VALUES.add(Amtsgericht_Wildeshausen);
+        Grundbuchamt_Wildeshausen = new GerichtCode("Grundbuchamt_Wildeshausen", "P3214G");
+        $VALUES.add(Grundbuchamt_Wildeshausen);
+        Amtsgericht_Wilhelmshaven = new GerichtCode("Amtsgericht_Wilhelmshaven", "P3215");
+        $VALUES.add(Amtsgericht_Wilhelmshaven);
+        Grundbuchamt_Wilhelmshaven = new GerichtCode("Grundbuchamt_Wilhelmshaven", "P3215G");
+        $VALUES.add(Grundbuchamt_Wilhelmshaven);
+        Landgericht_Osnabrueck = new GerichtCode("Landgericht_Osnabrueck", "P3300");
+        $VALUES.add(Landgericht_Osnabrueck);
+        Staatsanwaltschaft_beim_Landgericht_Osnabrueck = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Osnabrueck", "P3300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Osnabrueck);
+        aufgeloest_Amtsgericht_Bentheim = new GerichtCode("aufgeloest_Amtsgericht_Bentheim", "P3301");
+        $VALUES.add(aufgeloest_Amtsgericht_Bentheim);
+        Amtsgericht_Bersenbrueck = new GerichtCode("Amtsgericht_Bersenbrueck", "P3302");
+        $VALUES.add(Amtsgericht_Bersenbrueck);
+        Grundbuchamt_Bersenbrueck = new GerichtCode("Grundbuchamt_Bersenbrueck", "P3302G");
+        $VALUES.add(Grundbuchamt_Bersenbrueck);
+        aufgeloest_Amtsgericht_Bramsche = new GerichtCode("aufgeloest_Amtsgericht_Bramsche", "P3303");
+        $VALUES.add(aufgeloest_Amtsgericht_Bramsche);
+        aufgeloest_Amtsgericht_Bad_Essen = new GerichtCode("aufgeloest_Amtsgericht_Bad_Essen", "P3304");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Essen);
+        aufgeloest_Amtsgericht_Freren = new GerichtCode("aufgeloest_Amtsgericht_Freren", "P3305");
+        $VALUES.add(aufgeloest_Amtsgericht_Freren);
+        aufgeloest_Amtsgericht_Fuerstenau = new GerichtCode("aufgeloest_Amtsgericht_Fuerstenau", "P3306");
+        $VALUES.add(aufgeloest_Amtsgericht_Fuerstenau);
+        Amtsgericht_Bad_Iburg = new GerichtCode("Amtsgericht_Bad_Iburg", "P3307");
+        $VALUES.add(Amtsgericht_Bad_Iburg);
+        Grundbuchamt_Bad_Iburg = new GerichtCode("Grundbuchamt_Bad_Iburg", "P3307G");
+        $VALUES.add(Grundbuchamt_Bad_Iburg);
+        Amtsgericht_Lingen_Ems = new GerichtCode("Amtsgericht_Lingen_Ems", "P3308");
+        $VALUES.add(Amtsgericht_Lingen_Ems);
+        Grundbuchamt_Lingen_Ems = new GerichtCode("Grundbuchamt_Lingen_Ems", "P3308G");
+        $VALUES.add(Grundbuchamt_Lingen_Ems);
+        aufgeloest_Amtsgericht_Melle = new GerichtCode("aufgeloest_Amtsgericht_Melle", "P3309");
+        $VALUES.add(aufgeloest_Amtsgericht_Melle);
+        Amtsgericht_Meppen = new GerichtCode("Amtsgericht_Meppen", "P3310");
+        $VALUES.add(Amtsgericht_Meppen);
+        Grundbuchamt_Meppen = new GerichtCode("Grundbuchamt_Meppen", "P3310G");
+        $VALUES.add(Grundbuchamt_Meppen);
+        aufgeloest_Amtsgericht_Neuenhaus = new GerichtCode("aufgeloest_Amtsgericht_Neuenhaus", "P3311");
+        $VALUES.add(aufgeloest_Amtsgericht_Neuenhaus);
+        Amtsgericht_Nordhorn = new GerichtCode("Amtsgericht_Nordhorn", "P3312");
+        $VALUES.add(Amtsgericht_Nordhorn);
+        Grundbuchamt_Nordhorn = new GerichtCode("Grundbuchamt_Nordhorn", "P3312G");
+        $VALUES.add(Grundbuchamt_Nordhorn);
+        Amtsgericht_Osnabrueck = new GerichtCode("Amtsgericht_Osnabrueck", "P3313");
+        $VALUES.add(Amtsgericht_Osnabrueck);
+        Grundbuchamt_Osnabrueck = new GerichtCode("Grundbuchamt_Osnabrueck", "P3313G");
+        $VALUES.add(Grundbuchamt_Osnabrueck);
+        Amtsgericht_Papenburg = new GerichtCode("Amtsgericht_Papenburg", "P3314");
+        $VALUES.add(Amtsgericht_Papenburg);
+        Grundbuchamt_Papenburg = new GerichtCode("Grundbuchamt_Papenburg", "P3314G");
+        $VALUES.add(Grundbuchamt_Papenburg);
+        aufgeloest_Amtsgericht_Quakenbrueck = new GerichtCode("aufgeloest_Amtsgericht_Quakenbrueck", "P3315");
+        $VALUES.add(aufgeloest_Amtsgericht_Quakenbrueck);
+        aufgeloest_Amtsgericht_Soegel = new GerichtCode("aufgeloest_Amtsgericht_Soegel", "P3316");
+        $VALUES.add(aufgeloest_Amtsgericht_Soegel);
+        Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Vechta = new GerichtCode("Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Vechta", "P3400");
+        $VALUES.add(Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Vechta);
+        Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Nordenham = new GerichtCode("Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Nordenham", "P3500");
+        $VALUES.add(Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Nordenham);
+        Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Wilhelmshaven = new GerichtCode("Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Wilhelmshaven", "P3600");
+        $VALUES.add(Landgericht_Oldenburg_Oldbg_Strafvollstreckungskammer_b_d_Amtsgericht_Wilhelmshaven);
+        Landgericht_Osnabrueck_Strafvollstreckungskammer_b_d_Amtsgericht_Lingen = new GerichtCode("Landgericht_Osnabrueck_Strafvollstreckungskammer_b_d_Amtsgericht_Lingen", "P3700");
+        $VALUES.add(Landgericht_Osnabrueck_Strafvollstreckungskammer_b_d_Amtsgericht_Lingen);
+        Verwaltungsgericht_Stade = new GerichtCode("Verwaltungsgericht_Stade", "P6098");
+        $VALUES.add(Verwaltungsgericht_Stade);
+        Sozialgericht_Aurich = new GerichtCode("Sozialgericht_Aurich", "P6117");
+        $VALUES.add(Sozialgericht_Aurich);
+        Sozialgericht_Braunschweig = new GerichtCode("Sozialgericht_Braunschweig", "P6118");
+        $VALUES.add(Sozialgericht_Braunschweig);
+        Arbeitsgericht_Braunschweig = new GerichtCode("Arbeitsgericht_Braunschweig", "P6119");
+        $VALUES.add(Arbeitsgericht_Braunschweig);
+        Niedersaechsischer_Staatsgerichtshof = new GerichtCode("Niedersaechsischer_Staatsgerichtshof", "P6120");
+        $VALUES.add(Niedersaechsischer_Staatsgerichtshof);
+        Arbeitsgericht_Celle = new GerichtCode("Arbeitsgericht_Celle", "P6121");
+        $VALUES.add(Arbeitsgericht_Celle);
+        Landessozialgericht_Niedersachsen_Bremen = new GerichtCode("Landessozialgericht_Niedersachsen_Bremen", "P6122");
+        $VALUES.add(Landessozialgericht_Niedersachsen_Bremen);
+        Arbeitsgericht_Emden = new GerichtCode("Arbeitsgericht_Emden", "P6123");
+        $VALUES.add(Arbeitsgericht_Emden);
+        Arbeitsgericht_Goettingen = new GerichtCode("Arbeitsgericht_Goettingen", "P6124");
+        $VALUES.add(Arbeitsgericht_Goettingen);
+        Arbeitsgericht_Hameln = new GerichtCode("Arbeitsgericht_Hameln", "P6125");
+        $VALUES.add(Arbeitsgericht_Hameln);
+        Verwaltungsgericht_Hannover = new GerichtCode("Verwaltungsgericht_Hannover", "P6126");
+        $VALUES.add(Verwaltungsgericht_Hannover);
+        Niedersaechsisches_Finanzgericht = new GerichtCode("Niedersaechsisches_Finanzgericht", "P6127");
+        $VALUES.add(Niedersaechsisches_Finanzgericht);
+        Sozialgericht_Hannover = new GerichtCode("Sozialgericht_Hannover", "P6128");
+        $VALUES.add(Sozialgericht_Hannover);
+        Arbeitsgericht_Hannover = new GerichtCode("Arbeitsgericht_Hannover", "P6129");
+        $VALUES.add(Arbeitsgericht_Hannover);
+        Landesarbeitsgericht_Niedersachsen = new GerichtCode("Landesarbeitsgericht_Niedersachsen", "P6130");
+        $VALUES.add(Landesarbeitsgericht_Niedersachsen);
+        Sozialgericht_Hildesheim = new GerichtCode("Sozialgericht_Hildesheim", "P6131");
+        $VALUES.add(Sozialgericht_Hildesheim);
+        Arbeitsgericht_Hildesheim = new GerichtCode("Arbeitsgericht_Hildesheim", "P6132");
+        $VALUES.add(Arbeitsgericht_Hildesheim);
+        Arbeitsgericht_Lingen_Ems = new GerichtCode("Arbeitsgericht_Lingen_Ems", "P6133");
+        $VALUES.add(Arbeitsgericht_Lingen_Ems);
+    }
+
+    private static void init3() {
+        Sozialgericht_Lueneburg = new GerichtCode("Sozialgericht_Lueneburg", "P6134");
+        $VALUES.add(Sozialgericht_Lueneburg);
+        Arbeitsgericht_Lueneburg = new GerichtCode("Arbeitsgericht_Lueneburg", "P6135");
+        $VALUES.add(Arbeitsgericht_Lueneburg);
+        Niedersaechsisches_Oberverwaltungsgericht = new GerichtCode("Niedersaechsisches_Oberverwaltungsgericht", "P6136");
+        $VALUES.add(Niedersaechsisches_Oberverwaltungsgericht);
+        Arbeitsgericht_Nienburg = new GerichtCode("Arbeitsgericht_Nienburg", "P6137");
+        $VALUES.add(Arbeitsgericht_Nienburg);
+        Sozialgericht_Oldenburg = new GerichtCode("Sozialgericht_Oldenburg", "P6138");
+        $VALUES.add(Sozialgericht_Oldenburg);
+        Arbeitsgericht_Osnabrueck = new GerichtCode("Arbeitsgericht_Osnabrueck", "P6139");
+        $VALUES.add(Arbeitsgericht_Osnabrueck);
+        Sozialgericht_Stade = new GerichtCode("Sozialgericht_Stade", "P6140");
+        $VALUES.add(Sozialgericht_Stade);
+        Arbeitsgericht_Stade = new GerichtCode("Arbeitsgericht_Stade", "P6141");
+        $VALUES.add(Arbeitsgericht_Stade);
+        Arbeitsgericht_Verden = new GerichtCode("Arbeitsgericht_Verden", "P6142");
+        $VALUES.add(Arbeitsgericht_Verden);
+        Arbeitsgericht_Wilhelmshaven = new GerichtCode("Arbeitsgericht_Wilhelmshaven", "P6143");
+        $VALUES.add(Arbeitsgericht_Wilhelmshaven);
+        Arbeitsgericht_Oldenburg = new GerichtCode("Arbeitsgericht_Oldenburg", "P6296");
+        $VALUES.add(Arbeitsgericht_Oldenburg);
+        Sozialgericht_Osnabrueck = new GerichtCode("Sozialgericht_Osnabrueck", "P6330");
+        $VALUES.add(Sozialgericht_Osnabrueck);
+        Verwaltungsgericht_Oldenburg = new GerichtCode("Verwaltungsgericht_Oldenburg", "P6348");
+        $VALUES.add(Verwaltungsgericht_Oldenburg);
+        Verwaltungsgericht_Osnabrueck = new GerichtCode("Verwaltungsgericht_Osnabrueck", "P6395");
+        $VALUES.add(Verwaltungsgericht_Osnabrueck);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Braunschweig = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Braunschweig", "P6436");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Braunschweig);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Celle = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Celle", "P6442");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Celle);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Oldenburg = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Oldenburg", "P6445");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Oldenburg);
+        Niedersaechsischer_Anwaltsgerichtshof = new GerichtCode("Niedersaechsischer_Anwaltsgerichtshof", "P6447");
+        $VALUES.add(Niedersaechsischer_Anwaltsgerichtshof);
+        Justizvollzugsanstalt_fuer_Frauen_Vechta = new GerichtCode("Justizvollzugsanstalt_fuer_Frauen_Vechta", "P6496");
+        $VALUES.add(Justizvollzugsanstalt_fuer_Frauen_Vechta);
+        Justizvollzugsanstalt_Wolfenbuettel = new GerichtCode("Justizvollzugsanstalt_Wolfenbuettel", "P6717");
+        $VALUES.add(Justizvollzugsanstalt_Wolfenbuettel);
+        Jugendanstalt_Hameln = new GerichtCode("Jugendanstalt_Hameln", "P6951");
+        $VALUES.add(Jugendanstalt_Hameln);
+        Justizvollzugsanstalt_Vechta = new GerichtCode("Justizvollzugsanstalt_Vechta", "P7153");
+        $VALUES.add(Justizvollzugsanstalt_Vechta);
+        Justizvollzugsanstalt_Celle = new GerichtCode("Justizvollzugsanstalt_Celle", "P7181");
+        $VALUES.add(Justizvollzugsanstalt_Celle);
+        Justizvollzugsanstalt_Hannover = new GerichtCode("Justizvollzugsanstalt_Hannover", "P7404");
+        $VALUES.add(Justizvollzugsanstalt_Hannover);
+        Justizvollzugsanstalt_Meppen = new GerichtCode("Justizvollzugsanstalt_Meppen", "P7480");
+        $VALUES.add(Justizvollzugsanstalt_Meppen);
+        Justizvollzugsanstalt_Uelzen = new GerichtCode("Justizvollzugsanstalt_Uelzen", "P7575");
+        $VALUES.add(Justizvollzugsanstalt_Uelzen);
+        Jugendarrestanstalt_Verden = new GerichtCode("Jugendarrestanstalt_Verden", "P7581");
+        $VALUES.add(Jugendarrestanstalt_Verden);
+        Justizvollzugsanstalt_Rosdorf = new GerichtCode("Justizvollzugsanstalt_Rosdorf", "P7607");
+        $VALUES.add(Justizvollzugsanstalt_Rosdorf);
+        Berufsgerichtshof_der_Ingenieurkammer_Niedersachsen = new GerichtCode("Berufsgerichtshof_der_Ingenieurkammer_Niedersachsen", "P7626");
+        $VALUES.add(Berufsgerichtshof_der_Ingenieurkammer_Niedersachsen);
+        Justizvollzugsanstalt_Sehnde = new GerichtCode("Justizvollzugsanstalt_Sehnde", "P7683");
+        $VALUES.add(Justizvollzugsanstalt_Sehnde);
+        Justizvollzugsanstalt_Oldenburg = new GerichtCode("Justizvollzugsanstalt_Oldenburg", "P7698");
+        $VALUES.add(Justizvollzugsanstalt_Oldenburg);
+        Justizvollzugsanstalt_Lingen = new GerichtCode("Justizvollzugsanstalt_Lingen", "P7744");
+        $VALUES.add(Justizvollzugsanstalt_Lingen);
+        Verwaltungsgericht_Braunschweig = new GerichtCode("Verwaltungsgericht_Braunschweig", "P7771");
+        $VALUES.add(Verwaltungsgericht_Braunschweig);
+        Verwaltungsgericht_Goettingen = new GerichtCode("Verwaltungsgericht_Goettingen", "P7772");
+        $VALUES.add(Verwaltungsgericht_Goettingen);
+        Verwaltungsgericht_Lueneburg = new GerichtCode("Verwaltungsgericht_Lueneburg", "P7773");
+        $VALUES.add(Verwaltungsgericht_Lueneburg);
+        Justizvollzugsanstalt_Hahnoefersand = new GerichtCode("Justizvollzugsanstalt_Hahnoefersand", "P7904");
+        $VALUES.add(Justizvollzugsanstalt_Hahnoefersand);
+        Ambulanter_Justizsozialdienst_Niedersachsen = new GerichtCode("Ambulanter_Justizsozialdienst_Niedersachsen", "P7920");
+        $VALUES.add(Ambulanter_Justizsozialdienst_Niedersachsen);
+        Justizvollzugsanstalt_Bremervoerde = new GerichtCode("Justizvollzugsanstalt_Bremervoerde", "P8050");
+        $VALUES.add(Justizvollzugsanstalt_Bremervoerde);
+        Oberlandesgericht_Duesseldorf = new GerichtCode("Oberlandesgericht_Duesseldorf", "R1000");
+        $VALUES.add(Oberlandesgericht_Duesseldorf);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Duesseldorf = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Duesseldorf", "R1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Duesseldorf);
+        Strafkammer_des_LG_Muenster_bei_dem_AG_Bocholt = new GerichtCode("Strafkammer_des_LG_Muenster_bei_dem_AG_Bocholt", "R1001");
+        $VALUES.add(Strafkammer_des_LG_Muenster_bei_dem_AG_Bocholt);
+        Landgericht_Duesseldorf = new GerichtCode("Landgericht_Duesseldorf", "R1100");
+        $VALUES.add(Landgericht_Duesseldorf);
+        aufgeloest_Landgericht_Duesseldorf = new GerichtCode("aufgeloest_Landgericht_Duesseldorf", "R1100Q");
+        $VALUES.add(aufgeloest_Landgericht_Duesseldorf);
+        Staatsanwaltschaft_beim_Landgericht_Duesseldorf = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Duesseldorf", "R1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Duesseldorf);
+        Amtsgericht_Duesseldorf = new GerichtCode("Amtsgericht_Duesseldorf", "R1101");
+        $VALUES.add(Amtsgericht_Duesseldorf);
+        Grundbuchamt_Duesseldorf = new GerichtCode("Grundbuchamt_Duesseldorf", "R1101G");
+        $VALUES.add(Grundbuchamt_Duesseldorf);
+        Amtsgericht_Neuss = new GerichtCode("Amtsgericht_Neuss", "R1102");
+        $VALUES.add(Amtsgericht_Neuss);
+        Grundbuchamt_Neuss = new GerichtCode("Grundbuchamt_Neuss", "R1102G");
+        $VALUES.add(Grundbuchamt_Neuss);
+        aufgeloest_Amtsgericht_Opladen = new GerichtCode("aufgeloest_Amtsgericht_Opladen", "R1103");
+        $VALUES.add(aufgeloest_Amtsgericht_Opladen);
+        Amtsgericht_Ratingen = new GerichtCode("Amtsgericht_Ratingen", "R1104");
+        $VALUES.add(Amtsgericht_Ratingen);
+        Grundbuchamt_Ratingen = new GerichtCode("Grundbuchamt_Ratingen", "R1104G");
+        $VALUES.add(Grundbuchamt_Ratingen);
+        Amtsgericht_Langenfeld = new GerichtCode("Amtsgericht_Langenfeld", "R1105");
+        $VALUES.add(Amtsgericht_Langenfeld);
+        Grundbuchamt_Langenfeld = new GerichtCode("Grundbuchamt_Langenfeld", "R1105G");
+        $VALUES.add(Grundbuchamt_Langenfeld);
+        Landgericht_Duisburg = new GerichtCode("Landgericht_Duisburg", "R1200");
+        $VALUES.add(Landgericht_Duisburg);
+        Staatsanwaltschaft_beim_Landgericht_Duisburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Duisburg", "R1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Duisburg);
+        Amtsgericht_Dinslaken = new GerichtCode("Amtsgericht_Dinslaken", "R1201");
+        $VALUES.add(Amtsgericht_Dinslaken);
+        Grundbuchamt_Dinslaken = new GerichtCode("Grundbuchamt_Dinslaken", "R1201G");
+        $VALUES.add(Grundbuchamt_Dinslaken);
+        Amtsgericht_Duisburg = new GerichtCode("Amtsgericht_Duisburg", "R1202");
+        $VALUES.add(Amtsgericht_Duisburg);
+        Grundbuchamt_Duisburg = new GerichtCode("Grundbuchamt_Duisburg", "R1202G");
+        $VALUES.add(Grundbuchamt_Duisburg);
+        Amtsgericht_Duisburg_Hamborn = new GerichtCode("Amtsgericht_Duisburg_Hamborn", "R1203");
+        $VALUES.add(Amtsgericht_Duisburg_Hamborn);
+        Grundbuchamt_Duisburg_Hamborn = new GerichtCode("Grundbuchamt_Duisburg_Hamborn", "R1203G");
+        $VALUES.add(Grundbuchamt_Duisburg_Hamborn);
+        Amtsgericht_Duisburg_Ruhrort = new GerichtCode("Amtsgericht_Duisburg_Ruhrort", "R1204");
+        $VALUES.add(Amtsgericht_Duisburg_Ruhrort);
+        Grundbuchamt_Duisburg_Ruhrort = new GerichtCode("Grundbuchamt_Duisburg_Ruhrort", "R1204G");
+        $VALUES.add(Grundbuchamt_Duisburg_Ruhrort);
+        Amtsgericht_Muelheim = new GerichtCode("Amtsgericht_Muelheim", "R1205");
+        $VALUES.add(Amtsgericht_Muelheim);
+        Grundbuchamt_Muelheim_an_der_Ruhr = new GerichtCode("Grundbuchamt_Muelheim_an_der_Ruhr", "R1205G");
+        $VALUES.add(Grundbuchamt_Muelheim_an_der_Ruhr);
+        Amtsgericht_Oberhausen = new GerichtCode("Amtsgericht_Oberhausen", "R1206");
+        $VALUES.add(Amtsgericht_Oberhausen);
+        Grundbuchamt_Oberhausen = new GerichtCode("Grundbuchamt_Oberhausen", "R1206G");
+        $VALUES.add(Grundbuchamt_Oberhausen);
+        aufgeloest_Amtsgericht_Rees = new GerichtCode("aufgeloest_Amtsgericht_Rees", "R1207");
+        $VALUES.add(aufgeloest_Amtsgericht_Rees);
+        Amtsgericht_Wesel = new GerichtCode("Amtsgericht_Wesel", "R1208");
+        $VALUES.add(Amtsgericht_Wesel);
+        Grundbuchamt_Wesel = new GerichtCode("Grundbuchamt_Wesel", "R1208G");
+        $VALUES.add(Grundbuchamt_Wesel);
+        Landgericht_Kleve = new GerichtCode("Landgericht_Kleve", "R1300");
+        $VALUES.add(Landgericht_Kleve);
+        Staatsanwaltschaft_beim_Landgericht_Kleve = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Kleve", "R1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Kleve);
+        Amtsgericht_Emmerich = new GerichtCode("Amtsgericht_Emmerich", "R1301");
+        $VALUES.add(Amtsgericht_Emmerich);
+        Grundbuchamt_Emmerich_am_Rhein = new GerichtCode("Grundbuchamt_Emmerich_am_Rhein", "R1301G");
+        $VALUES.add(Grundbuchamt_Emmerich_am_Rhein);
+        Amtsgericht_Geldern = new GerichtCode("Amtsgericht_Geldern", "R1302");
+        $VALUES.add(Amtsgericht_Geldern);
+        Grundbuchamt_Geldern = new GerichtCode("Grundbuchamt_Geldern", "R1302G");
+        $VALUES.add(Grundbuchamt_Geldern);
+        aufgeloest_Amtsgericht_Goch = new GerichtCode("aufgeloest_Amtsgericht_Goch", "R1303");
+        $VALUES.add(aufgeloest_Amtsgericht_Goch);
+        Amtsgericht_Kleve = new GerichtCode("Amtsgericht_Kleve", "R1304");
+        $VALUES.add(Amtsgericht_Kleve);
+        Grundbuchamt_Kleve = new GerichtCode("Grundbuchamt_Kleve", "R1304G");
+        $VALUES.add(Grundbuchamt_Kleve);
+        Amtsgericht_Moers = new GerichtCode("Amtsgericht_Moers", "R1305");
+        $VALUES.add(Amtsgericht_Moers);
+        Grundbuchamt_Moers = new GerichtCode("Grundbuchamt_Moers", "R1305G");
+        $VALUES.add(Grundbuchamt_Moers);
+        Staatsanwaltschaft_beim_Landgericht_Moers_Zwst_der_StA_Kleve = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Moers_Zwst_der_StA_Kleve", "R1305S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Moers_Zwst_der_StA_Kleve);
+        Amtsgericht_Rheinberg = new GerichtCode("Amtsgericht_Rheinberg", "R1306");
+        $VALUES.add(Amtsgericht_Rheinberg);
+        Grundbuchamt_Rheinberg = new GerichtCode("Grundbuchamt_Rheinberg", "R1306G");
+        $VALUES.add(Grundbuchamt_Rheinberg);
+        aufgeloest_Amtsgericht_Rheinberg_Zwst_Xanten = new GerichtCode("aufgeloest_Amtsgericht_Rheinberg_Zwst_Xanten", "R1307");
+        $VALUES.add(aufgeloest_Amtsgericht_Rheinberg_Zwst_Xanten);
+        Auswaertige_Strafkammer_des_Landgerichts_Kleve_in_Moers = new GerichtCode("Auswaertige_Strafkammer_des_Landgerichts_Kleve_in_Moers", "R1310");
+        $VALUES.add(Auswaertige_Strafkammer_des_Landgerichts_Kleve_in_Moers);
+        Landgericht_Krefeld = new GerichtCode("Landgericht_Krefeld", "R1400");
+        $VALUES.add(Landgericht_Krefeld);
+        Staatsanwaltschaft_beim_Landgericht_Krefeld = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Krefeld", "R1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Krefeld);
+        Amtsgericht_Kempen = new GerichtCode("Amtsgericht_Kempen", "R1401");
+        $VALUES.add(Amtsgericht_Kempen);
+        Grundbuchamt_Kempen = new GerichtCode("Grundbuchamt_Kempen", "R1401G");
+        $VALUES.add(Grundbuchamt_Kempen);
+        Amtsgericht_Krefeld = new GerichtCode("Amtsgericht_Krefeld", "R1402");
+        $VALUES.add(Amtsgericht_Krefeld);
+        Grundbuchamt_Krefeld = new GerichtCode("Grundbuchamt_Krefeld", "R1402G");
+        $VALUES.add(Grundbuchamt_Krefeld);
+        aufgeloest_Amtsgericht_Krefeld_Uerdingen = new GerichtCode("aufgeloest_Amtsgericht_Krefeld_Uerdingen", "R1403");
+        $VALUES.add(aufgeloest_Amtsgericht_Krefeld_Uerdingen);
+        Amtsgericht_Nettetal = new GerichtCode("Amtsgericht_Nettetal", "R1404");
+        $VALUES.add(Amtsgericht_Nettetal);
+        Grundbuchamt_Nettetal = new GerichtCode("Grundbuchamt_Nettetal", "R1404G");
+        $VALUES.add(Grundbuchamt_Nettetal);
+        Landgericht_Moenchengladbach = new GerichtCode("Landgericht_Moenchengladbach", "R1500");
+        $VALUES.add(Landgericht_Moenchengladbach);
+        Staatsanwaltschaft_beim_Landgericht_Moenchengladbach = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Moenchengladbach", "R1500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Moenchengladbach);
+        aufgeloest_Amtsgericht_Duelken = new GerichtCode("aufgeloest_Amtsgericht_Duelken", "R1501");
+        $VALUES.add(aufgeloest_Amtsgericht_Duelken);
+        Amtsgericht_Erkelenz = new GerichtCode("Amtsgericht_Erkelenz", "R1502");
+        $VALUES.add(Amtsgericht_Erkelenz);
+        Grundbuchamt_Erkelenz = new GerichtCode("Grundbuchamt_Erkelenz", "R1502G");
+        $VALUES.add(Grundbuchamt_Erkelenz);
+        Amtsgericht_Grevenbroich = new GerichtCode("Amtsgericht_Grevenbroich", "R1503");
+        $VALUES.add(Amtsgericht_Grevenbroich);
+        Grundbuchamt_Grevenbroich = new GerichtCode("Grundbuchamt_Grevenbroich", "R1503G");
+        $VALUES.add(Grundbuchamt_Grevenbroich);
+        Amtsgericht_Moenchengladbach = new GerichtCode("Amtsgericht_Moenchengladbach", "R1504");
+        $VALUES.add(Amtsgericht_Moenchengladbach);
+        Grundbuchamt_Moenchengladbach = new GerichtCode("Grundbuchamt_Moenchengladbach", "R1504G");
+        $VALUES.add(Grundbuchamt_Moenchengladbach);
+        Amtsgericht_Moenchengladbach_Rheydt = new GerichtCode("Amtsgericht_Moenchengladbach_Rheydt", "R1505");
+        $VALUES.add(Amtsgericht_Moenchengladbach_Rheydt);
+        Grundbuchamt_Moenchengladbach_Rheydt = new GerichtCode("Grundbuchamt_Moenchengladbach_Rheydt", "R1505G");
+        $VALUES.add(Grundbuchamt_Moenchengladbach_Rheydt);
+        Amtsgericht_Viersen = new GerichtCode("Amtsgericht_Viersen", "R1506");
+        $VALUES.add(Amtsgericht_Viersen);
+        Grundbuchamt_Viersen = new GerichtCode("Grundbuchamt_Viersen", "R1506G");
+        $VALUES.add(Grundbuchamt_Viersen);
+        aufgeloest_Amtsgericht_Erkelenz_Zwst_Wegberg = new GerichtCode("aufgeloest_Amtsgericht_Erkelenz_Zwst_Wegberg", "R1507");
+        $VALUES.add(aufgeloest_Amtsgericht_Erkelenz_Zwst_Wegberg);
+        Landgericht_Wuppertal = new GerichtCode("Landgericht_Wuppertal", "R1600");
+        $VALUES.add(Landgericht_Wuppertal);
+        Staatsanwaltschaft_beim_Landgericht_Wuppertal = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Wuppertal", "R1600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Wuppertal);
+        aufgeloest_Amtsgericht_Langenberg = new GerichtCode("aufgeloest_Amtsgericht_Langenberg", "R1601");
+        $VALUES.add(aufgeloest_Amtsgericht_Langenberg);
+        Amtsgericht_Mettmann = new GerichtCode("Amtsgericht_Mettmann", "R1602");
+        $VALUES.add(Amtsgericht_Mettmann);
+        Grundbuchamt_Mettmann = new GerichtCode("Grundbuchamt_Mettmann", "R1602G");
+        $VALUES.add(Grundbuchamt_Mettmann);
+        Amtsgericht_Remscheid = new GerichtCode("Amtsgericht_Remscheid", "R1603");
+        $VALUES.add(Amtsgericht_Remscheid);
+        Grundbuchamt_Remscheid = new GerichtCode("Grundbuchamt_Remscheid", "R1603G");
+        $VALUES.add(Grundbuchamt_Remscheid);
+        aufgeloest_Amtsgericht_Remscheid_Lennep = new GerichtCode("aufgeloest_Amtsgericht_Remscheid_Lennep", "R1604");
+        $VALUES.add(aufgeloest_Amtsgericht_Remscheid_Lennep);
+        Amtsgericht_Solingen = new GerichtCode("Amtsgericht_Solingen", "R1605");
+        $VALUES.add(Amtsgericht_Solingen);
+        Grundbuchamt_Solingen = new GerichtCode("Grundbuchamt_Solingen", "R1605G");
+        $VALUES.add(Grundbuchamt_Solingen);
+        Amtsgericht_Velbert = new GerichtCode("Amtsgericht_Velbert", "R1606");
+        $VALUES.add(Amtsgericht_Velbert);
+        Grundbuchamt_Velbert = new GerichtCode("Grundbuchamt_Velbert", "R1606G");
+        $VALUES.add(Grundbuchamt_Velbert);
+        Amtsgericht_Wuppertal = new GerichtCode("Amtsgericht_Wuppertal", "R1608");
+        $VALUES.add(Amtsgericht_Wuppertal);
+        Grundbuchamt_Wuppertal = new GerichtCode("Grundbuchamt_Wuppertal", "R1608G");
+        $VALUES.add(Grundbuchamt_Wuppertal);
+        Landgericht_Arnsberg = new GerichtCode("Landgericht_Arnsberg", "R1900");
+        $VALUES.add(Landgericht_Arnsberg);
+        aufgeloest_Landgericht_Arnsberg = new GerichtCode("aufgeloest_Landgericht_Arnsberg", "R1900Q");
+        $VALUES.add(aufgeloest_Landgericht_Arnsberg);
+        Staatsanwaltschaft_beim_Landgericht_Arnsberg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Arnsberg", "R1900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Arnsberg);
+        Amtsgericht_Arnsberg = new GerichtCode("Amtsgericht_Arnsberg", "R1901");
+        $VALUES.add(Amtsgericht_Arnsberg);
+        Grundbuchamt_Arnsberg = new GerichtCode("Grundbuchamt_Arnsberg", "R1901G");
+        $VALUES.add(Grundbuchamt_Arnsberg);
+        aufgeloest_Amtsgericht_Balve = new GerichtCode("aufgeloest_Amtsgericht_Balve", "R1902");
+        $VALUES.add(aufgeloest_Amtsgericht_Balve);
+        aufgeloest_Amtsgericht_Bigge = new GerichtCode("aufgeloest_Amtsgericht_Bigge", "R1903");
+        $VALUES.add(aufgeloest_Amtsgericht_Bigge);
+        Amtsgericht_Brilon = new GerichtCode("Amtsgericht_Brilon", "R1904");
+        $VALUES.add(Amtsgericht_Brilon);
+        Grundbuchamt_Brilon = new GerichtCode("Grundbuchamt_Brilon", "R1904G");
+        $VALUES.add(Grundbuchamt_Brilon);
+        Amtsgericht_Schmallenberg = new GerichtCode("Amtsgericht_Schmallenberg", "R1905");
+        $VALUES.add(Amtsgericht_Schmallenberg);
+        Grundbuchamt_Schmallenberg = new GerichtCode("Grundbuchamt_Schmallenberg", "R1905G");
+        $VALUES.add(Grundbuchamt_Schmallenberg);
+        Amtsgericht_Marsberg = new GerichtCode("Amtsgericht_Marsberg", "R1906");
+        $VALUES.add(Amtsgericht_Marsberg);
+        Grundbuchamt_Marsberg = new GerichtCode("Grundbuchamt_Marsberg", "R1906G");
+        $VALUES.add(Grundbuchamt_Marsberg);
+        Amtsgericht_Medebach = new GerichtCode("Amtsgericht_Medebach", "R1907");
+        $VALUES.add(Amtsgericht_Medebach);
+        Grundbuchamt_Medebach = new GerichtCode("Grundbuchamt_Medebach", "R1907G");
+        $VALUES.add(Grundbuchamt_Medebach);
+        Amtsgericht_Menden = new GerichtCode("Amtsgericht_Menden", "R1908");
+        $VALUES.add(Amtsgericht_Menden);
+        Grundbuchamt_Menden = new GerichtCode("Grundbuchamt_Menden", "R1908G");
+        $VALUES.add(Grundbuchamt_Menden);
+        Amtsgericht_Meschede = new GerichtCode("Amtsgericht_Meschede", "R1909");
+        $VALUES.add(Amtsgericht_Meschede);
+        Grundbuchamt_Meschede = new GerichtCode("Grundbuchamt_Meschede", "R1909G");
+        $VALUES.add(Grundbuchamt_Meschede);
+        aufgeloest_Amtsgericht_Neheim_Huesten = new GerichtCode("aufgeloest_Amtsgericht_Neheim_Huesten", "R1910");
+        $VALUES.add(aufgeloest_Amtsgericht_Neheim_Huesten);
+        Amtsgericht_Soest = new GerichtCode("Amtsgericht_Soest", "R1911");
+        $VALUES.add(Amtsgericht_Soest);
+        Grundbuchamt_Soest = new GerichtCode("Grundbuchamt_Soest", "R1911G");
+        $VALUES.add(Grundbuchamt_Soest);
+        Amtsgericht_Warstein = new GerichtCode("Amtsgericht_Warstein", "R1912");
+        $VALUES.add(Amtsgericht_Warstein);
+        Grundbuchamt_Warstein = new GerichtCode("Grundbuchamt_Warstein", "R1912G");
+        $VALUES.add(Grundbuchamt_Warstein);
+        Amtsgericht_Werl = new GerichtCode("Amtsgericht_Werl", "R1913");
+        $VALUES.add(Amtsgericht_Werl);
+        Grundbuchamt_Werl = new GerichtCode("Grundbuchamt_Werl", "R1913G");
+        $VALUES.add(Grundbuchamt_Werl);
+        Oberlandesgericht_Hamm = new GerichtCode("Oberlandesgericht_Hamm", "R2000");
+        $VALUES.add(Oberlandesgericht_Hamm);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Hamm = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Hamm", "R2000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Hamm);
+        Landgericht_Bielefeld = new GerichtCode("Landgericht_Bielefeld", "R2100");
+        $VALUES.add(Landgericht_Bielefeld);
+        Staatsanwaltschaft_beim_Landgericht_Bielefeld = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bielefeld", "R2100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bielefeld);
+        Amtsgericht_Bielefeld = new GerichtCode("Amtsgericht_Bielefeld", "R2101");
+        $VALUES.add(Amtsgericht_Bielefeld);
+        Grundbuchamt_Bielefeld = new GerichtCode("Grundbuchamt_Bielefeld", "R2101G");
+        $VALUES.add(Grundbuchamt_Bielefeld);
+        Amtsgericht_Buende = new GerichtCode("Amtsgericht_Buende", "R2102");
+        $VALUES.add(Amtsgericht_Buende);
+        Grundbuchamt_Buende = new GerichtCode("Grundbuchamt_Buende", "R2102G");
+        $VALUES.add(Grundbuchamt_Buende);
+        Amtsgericht_Guetersloh = new GerichtCode("Amtsgericht_Guetersloh", "R2103");
+        $VALUES.add(Amtsgericht_Guetersloh);
+        Grundbuchamt_Guetersloh = new GerichtCode("Grundbuchamt_Guetersloh", "R2103G");
+        $VALUES.add(Grundbuchamt_Guetersloh);
+        Amtsgericht_Halle = new GerichtCode("Amtsgericht_Halle", "R2104");
+        $VALUES.add(Amtsgericht_Halle);
+        Grundbuchamt_Halle_Westf = new GerichtCode("Grundbuchamt_Halle_Westf", "R2104G");
+        $VALUES.add(Grundbuchamt_Halle_Westf);
+        Amtsgericht_Herford = new GerichtCode("Amtsgericht_Herford", "R2105");
+        $VALUES.add(Amtsgericht_Herford);
+        Grundbuchamt_Herford = new GerichtCode("Grundbuchamt_Herford", "R2105G");
+        $VALUES.add(Grundbuchamt_Herford);
+        Amtsgericht_Luebbecke = new GerichtCode("Amtsgericht_Luebbecke", "R2106");
+        $VALUES.add(Amtsgericht_Luebbecke);
+        Grundbuchamt_Luebbecke = new GerichtCode("Grundbuchamt_Luebbecke", "R2106G");
+        $VALUES.add(Grundbuchamt_Luebbecke);
+        Amtsgericht_Minden = new GerichtCode("Amtsgericht_Minden", "R2107");
+        $VALUES.add(Amtsgericht_Minden);
+        Grundbuchamt_Minden = new GerichtCode("Grundbuchamt_Minden", "R2107G");
+        $VALUES.add(Grundbuchamt_Minden);
+        Amtsgericht_Bad_Oeynhausen = new GerichtCode("Amtsgericht_Bad_Oeynhausen", "R2108");
+        $VALUES.add(Amtsgericht_Bad_Oeynhausen);
+        Grundbuchamt_Bad_Oeynhausen = new GerichtCode("Grundbuchamt_Bad_Oeynhausen", "R2108G");
+        $VALUES.add(Grundbuchamt_Bad_Oeynhausen);
+        aufgeloest_Amtsgericht_Petershagen = new GerichtCode("aufgeloest_Amtsgericht_Petershagen", "R2109");
+        $VALUES.add(aufgeloest_Amtsgericht_Petershagen);
+        Amtsgericht_Rahden = new GerichtCode("Amtsgericht_Rahden", "R2110");
+        $VALUES.add(Amtsgericht_Rahden);
+        Grundbuchamt_Rahden = new GerichtCode("Grundbuchamt_Rahden", "R2110G");
+        $VALUES.add(Grundbuchamt_Rahden);
+        aufgeloest_Amtsgericht_Rietberg = new GerichtCode("aufgeloest_Amtsgericht_Rietberg", "R2111");
+        $VALUES.add(aufgeloest_Amtsgericht_Rietberg);
+        aufgeloest_Amtsgericht_Bad_Oeynhausen_Zwst_Vlotho = new GerichtCode("aufgeloest_Amtsgericht_Bad_Oeynhausen_Zwst_Vlotho", "R2112");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Oeynhausen_Zwst_Vlotho);
+        Amtsgericht_Rheda_Wiedenbrueck = new GerichtCode("Amtsgericht_Rheda_Wiedenbrueck", "R2113");
+        $VALUES.add(Amtsgericht_Rheda_Wiedenbrueck);
+        Grundbuchamt_Rheda_Wiedenbrueck = new GerichtCode("Grundbuchamt_Rheda_Wiedenbrueck", "R2113G");
+        $VALUES.add(Grundbuchamt_Rheda_Wiedenbrueck);
+        Landgericht_Bochum = new GerichtCode("Landgericht_Bochum", "R2200");
+        $VALUES.add(Landgericht_Bochum);
+        Staatsanwaltschaft_beim_Landgericht_Bochum = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bochum", "R2200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bochum);
+        Amtsgericht_Bochum = new GerichtCode("Amtsgericht_Bochum", "R2201");
+        $VALUES.add(Amtsgericht_Bochum);
+        Grundbuchamt_Bochum = new GerichtCode("Grundbuchamt_Bochum", "R2201G");
+        $VALUES.add(Grundbuchamt_Bochum);
+        aufgeloest_Amtsgericht_Bochum_Langendreer = new GerichtCode("aufgeloest_Amtsgericht_Bochum_Langendreer", "R2202");
+        $VALUES.add(aufgeloest_Amtsgericht_Bochum_Langendreer);
+        Amtsgericht_Herne = new GerichtCode("Amtsgericht_Herne", "R2203");
+        $VALUES.add(Amtsgericht_Herne);
+        Grundbuchamt_Herne = new GerichtCode("Grundbuchamt_Herne", "R2203G");
+        $VALUES.add(Grundbuchamt_Herne);
+        Amtsgericht_Recklinghausen = new GerichtCode("Amtsgericht_Recklinghausen", "R2204");
+        $VALUES.add(Amtsgericht_Recklinghausen);
+        Grundbuchamt_Recklinghausen = new GerichtCode("Grundbuchamt_Recklinghausen", "R2204G");
+        $VALUES.add(Grundbuchamt_Recklinghausen);
+        Staatsanwaltschaft_beim_Landgericht_Recklinghausen_Zwst_der_StA_Bochum = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Recklinghausen_Zwst_der_StA_Bochum", "R2204S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Recklinghausen_Zwst_der_StA_Bochum);
+        Amtsgericht_Herne_Wanne = new GerichtCode("Amtsgericht_Herne_Wanne", "R2205");
+        $VALUES.add(Amtsgericht_Herne_Wanne);
+        Grundbuchamt_Herne_Wanne = new GerichtCode("Grundbuchamt_Herne_Wanne", "R2205G");
+        $VALUES.add(Grundbuchamt_Herne_Wanne);
+        aufgeloest_Amtsgericht_Wattenscheid = new GerichtCode("aufgeloest_Amtsgericht_Wattenscheid", "R2206");
+        $VALUES.add(aufgeloest_Amtsgericht_Wattenscheid);
+        Amtsgericht_Witten = new GerichtCode("Amtsgericht_Witten", "R2207");
+        $VALUES.add(Amtsgericht_Witten);
+        Grundbuchamt_Witten = new GerichtCode("Grundbuchamt_Witten", "R2207G");
+        $VALUES.add(Grundbuchamt_Witten);
+        Landgericht_Bochum_Auswaertige_Strafkammer_Recklinghsn = new GerichtCode("Landgericht_Bochum_Auswaertige_Strafkammer_Recklinghsn", "R2210");
+        $VALUES.add(Landgericht_Bochum_Auswaertige_Strafkammer_Recklinghsn);
+        Landgericht_Detmold = new GerichtCode("Landgericht_Detmold", "R2300");
+        $VALUES.add(Landgericht_Detmold);
+        Staatsanwaltschaft_beim_Landgericht_Detmold = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Detmold", "R2300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Detmold);
+        aufgeloest_Amtsgericht_Alverdissen = new GerichtCode("aufgeloest_Amtsgericht_Alverdissen", "R2301");
+        $VALUES.add(aufgeloest_Amtsgericht_Alverdissen);
+        Amtsgericht_Blomberg = new GerichtCode("Amtsgericht_Blomberg", "R2302");
+        $VALUES.add(Amtsgericht_Blomberg);
+        Grundbuchamt_Blomberg = new GerichtCode("Grundbuchamt_Blomberg", "R2302G");
+        $VALUES.add(Grundbuchamt_Blomberg);
+        Amtsgericht_Detmold = new GerichtCode("Amtsgericht_Detmold", "R2303");
+        $VALUES.add(Amtsgericht_Detmold);
+        Grundbuchamt_Detmold = new GerichtCode("Grundbuchamt_Detmold", "R2303G");
+        $VALUES.add(Grundbuchamt_Detmold);
+        aufgeloest_Amtsgericht_Hohenhausen = new GerichtCode("aufgeloest_Amtsgericht_Hohenhausen", "R2304");
+        $VALUES.add(aufgeloest_Amtsgericht_Hohenhausen);
+        aufgeloest_Amtsgericht_Horn = new GerichtCode("aufgeloest_Amtsgericht_Horn", "R2305");
+        $VALUES.add(aufgeloest_Amtsgericht_Horn);
+        aufgeloest_Amtsgericht_Lage = new GerichtCode("aufgeloest_Amtsgericht_Lage", "R2306");
+        $VALUES.add(aufgeloest_Amtsgericht_Lage);
+        Amtsgericht_Lemgo = new GerichtCode("Amtsgericht_Lemgo", "R2307");
+        $VALUES.add(Amtsgericht_Lemgo);
+        Grundbuchamt_Lemgo = new GerichtCode("Grundbuchamt_Lemgo", "R2307G");
+        $VALUES.add(Grundbuchamt_Lemgo);
+        aufgeloest_Amtsgericht_Oerlinghausen = new GerichtCode("aufgeloest_Amtsgericht_Oerlinghausen", "R2308");
+        $VALUES.add(aufgeloest_Amtsgericht_Oerlinghausen);
+        aufgeloest_Amtsgericht_Bad_Salzuflen = new GerichtCode("aufgeloest_Amtsgericht_Bad_Salzuflen", "R2309");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Salzuflen);
+        Landgericht_Dortmund = new GerichtCode("Landgericht_Dortmund", "R2400");
+        $VALUES.add(Landgericht_Dortmund);
+        Staatsanwaltschaft_beim_Landgericht_Dortmund = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Dortmund", "R2400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Dortmund);
+        Amtsgericht_Castrop_Rauxel = new GerichtCode("Amtsgericht_Castrop_Rauxel", "R2401");
+        $VALUES.add(Amtsgericht_Castrop_Rauxel);
+        Grundbuchamt_Castrop_Rauxel = new GerichtCode("Grundbuchamt_Castrop_Rauxel", "R2401G");
+        $VALUES.add(Grundbuchamt_Castrop_Rauxel);
+        Amtsgericht_Dortmund = new GerichtCode("Amtsgericht_Dortmund", "R2402");
+        $VALUES.add(Amtsgericht_Dortmund);
+        Grundbuchamt_Dortmund = new GerichtCode("Grundbuchamt_Dortmund", "R2402G");
+        $VALUES.add(Grundbuchamt_Dortmund);
+        aufgeloest_Amtsgericht_Dortmund_Hoerde = new GerichtCode("aufgeloest_Amtsgericht_Dortmund_Hoerde", "R2403");
+        $VALUES.add(aufgeloest_Amtsgericht_Dortmund_Hoerde);
+        Amtsgericht_Hamm = new GerichtCode("Amtsgericht_Hamm", "R2404");
+        $VALUES.add(Amtsgericht_Hamm);
+        Grundbuchamt_Hamm = new GerichtCode("Grundbuchamt_Hamm", "R2404G");
+        $VALUES.add(Grundbuchamt_Hamm);
+        Staatsanwaltschaft_beim_Landgericht_Hamm_Zwst_der_StA_Dortmund = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hamm_Zwst_der_StA_Dortmund", "R2404S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hamm_Zwst_der_StA_Dortmund);
+        Amtsgericht_Kamen = new GerichtCode("Amtsgericht_Kamen", "R2405");
+        $VALUES.add(Amtsgericht_Kamen);
+        Grundbuchamt_Kamen = new GerichtCode("Grundbuchamt_Kamen", "R2405G");
+        $VALUES.add(Grundbuchamt_Kamen);
+        Amtsgericht_Luenen = new GerichtCode("Amtsgericht_Luenen", "R2406");
+        $VALUES.add(Amtsgericht_Luenen);
+        Grundbuchamt_Luenen = new GerichtCode("Grundbuchamt_Luenen", "R2406G");
+        $VALUES.add(Grundbuchamt_Luenen);
+        Amtsgericht_Unna = new GerichtCode("Amtsgericht_Unna", "R2407");
+        $VALUES.add(Amtsgericht_Unna);
+        Grundbuchamt_Unna = new GerichtCode("Grundbuchamt_Unna", "R2407G");
+        $VALUES.add(Grundbuchamt_Unna);
+        Amtsgericht_Luenen_Zweigstelle_Werne = new GerichtCode("Amtsgericht_Luenen_Zweigstelle_Werne", "R2408");
+        $VALUES.add(Amtsgericht_Luenen_Zweigstelle_Werne);
+        Landgericht_Essen = new GerichtCode("Landgericht_Essen", "R2500");
+        $VALUES.add(Landgericht_Essen);
+        Staatsanwaltschaft_beim_Landgericht_Essen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Essen", "R2500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Essen);
+        Amtsgericht_Bottrop = new GerichtCode("Amtsgericht_Bottrop", "R2501");
+        $VALUES.add(Amtsgericht_Bottrop);
+        Grundbuchamt_Bottrop = new GerichtCode("Grundbuchamt_Bottrop", "R2501G");
+        $VALUES.add(Grundbuchamt_Bottrop);
+        Amtsgericht_Dorsten = new GerichtCode("Amtsgericht_Dorsten", "R2502");
+        $VALUES.add(Amtsgericht_Dorsten);
+        Grundbuchamt_Dorsten = new GerichtCode("Grundbuchamt_Dorsten", "R2502G");
+        $VALUES.add(Grundbuchamt_Dorsten);
+        Amtsgericht_Essen = new GerichtCode("Amtsgericht_Essen", "R2503");
+        $VALUES.add(Amtsgericht_Essen);
+        Grundbuchamt_Essen = new GerichtCode("Grundbuchamt_Essen", "R2503G");
+        $VALUES.add(Grundbuchamt_Essen);
+        Amtsgericht_Essen_Borbeck = new GerichtCode("Amtsgericht_Essen_Borbeck", "R2504");
+        $VALUES.add(Amtsgericht_Essen_Borbeck);
+        Grundbuchamt_Essen_Borbeck = new GerichtCode("Grundbuchamt_Essen_Borbeck", "R2504G");
+        $VALUES.add(Grundbuchamt_Essen_Borbeck);
+        Amtsgericht_Essen_Steele = new GerichtCode("Amtsgericht_Essen_Steele", "R2505");
+        $VALUES.add(Amtsgericht_Essen_Steele);
+        Grundbuchamt_Essen_Steele = new GerichtCode("Grundbuchamt_Essen_Steele", "R2505G");
+        $VALUES.add(Grundbuchamt_Essen_Steele);
+        aufgeloest_Amtsgericht_Essen_Werden = new GerichtCode("aufgeloest_Amtsgericht_Essen_Werden", "R2506");
+        $VALUES.add(aufgeloest_Amtsgericht_Essen_Werden);
+        Amtsgericht_Gelsenkirchen = new GerichtCode("Amtsgericht_Gelsenkirchen", "R2507");
+        $VALUES.add(Amtsgericht_Gelsenkirchen);
+        Grundbuchamt_Gelsenkirchen = new GerichtCode("Grundbuchamt_Gelsenkirchen", "R2507G");
+        $VALUES.add(Grundbuchamt_Gelsenkirchen);
+        aufgeloest_Amtsgericht_Gelsenkirchen_Buer = new GerichtCode("aufgeloest_Amtsgericht_Gelsenkirchen_Buer", "R2508");
+        $VALUES.add(aufgeloest_Amtsgericht_Gelsenkirchen_Buer);
+        aufgeloest_Grundbuchamt_Gelsenkirchen = new GerichtCode("aufgeloest_Grundbuchamt_Gelsenkirchen", "R2508G");
+        $VALUES.add(aufgeloest_Grundbuchamt_Gelsenkirchen);
+        Staatsanwaltschaft_beim_Landgericht_Gelsenkirchen_Zwst_der_StA_Essen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Gelsenkirchen_Zwst_der_StA_Essen", "R2508S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Gelsenkirchen_Zwst_der_StA_Essen);
+        Amtsgericht_Gladbeck = new GerichtCode("Amtsgericht_Gladbeck", "R2509");
+        $VALUES.add(Amtsgericht_Gladbeck);
+        Grundbuchamt_Gladbeck = new GerichtCode("Grundbuchamt_Gladbeck", "R2509G");
+        $VALUES.add(Grundbuchamt_Gladbeck);
+        Amtsgericht_Hattingen = new GerichtCode("Amtsgericht_Hattingen", "R2510");
+        $VALUES.add(Amtsgericht_Hattingen);
+        Grundbuchamt_Hattingen = new GerichtCode("Grundbuchamt_Hattingen", "R2510G");
+        $VALUES.add(Grundbuchamt_Hattingen);
+        Amtsgericht_Marl = new GerichtCode("Amtsgericht_Marl", "R2511");
+        $VALUES.add(Amtsgericht_Marl);
+        Grundbuchamt_Marl = new GerichtCode("Grundbuchamt_Marl", "R2511G");
+        $VALUES.add(Grundbuchamt_Marl);
+        aufgeloest_Amtsgericht_Haltern = new GerichtCode("aufgeloest_Amtsgericht_Haltern", "R2512");
+        $VALUES.add(aufgeloest_Amtsgericht_Haltern);
+        Landgericht_Hagen = new GerichtCode("Landgericht_Hagen", "R2600");
+        $VALUES.add(Landgericht_Hagen);
+        Staatsanwaltschaft_beim_Landgericht_Hagen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hagen", "R2600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hagen);
+        Amtsgericht_Altena = new GerichtCode("Amtsgericht_Altena", "R2601");
+        $VALUES.add(Amtsgericht_Altena);
+        Grundbuchamt_Altena = new GerichtCode("Grundbuchamt_Altena", "R2601G");
+        $VALUES.add(Grundbuchamt_Altena);
+        Amtsgericht_Hagen = new GerichtCode("Amtsgericht_Hagen", "R2602");
+        $VALUES.add(Amtsgericht_Hagen);
+        Grundbuchamt_Hagen = new GerichtCode("Grundbuchamt_Hagen", "R2602G");
+        $VALUES.add(Grundbuchamt_Hagen);
+        Amtsgericht_Hagen_Zentrale_Mahnabteilung = new GerichtCode("Amtsgericht_Hagen_Zentrale_Mahnabteilung", "R2602M");
+        $VALUES.add(Amtsgericht_Hagen_Zentrale_Mahnabteilung);
+        Amtsgericht_Hagen_Zentrales_Vollstreckungsgericht_Nordrhein_Westfalen = new GerichtCode("Amtsgericht_Hagen_Zentrales_Vollstreckungsgericht_Nordrhein_Westfalen", "R2602R");
+        $VALUES.add(Amtsgericht_Hagen_Zentrales_Vollstreckungsgericht_Nordrhein_Westfalen);
+        aufgeloest_Amtsgericht_Hohenlimburg = new GerichtCode("aufgeloest_Amtsgericht_Hohenlimburg", "R2603");
+        $VALUES.add(aufgeloest_Amtsgericht_Hohenlimburg);
+        Amtsgericht_Iserlohn = new GerichtCode("Amtsgericht_Iserlohn", "R2604");
+        $VALUES.add(Amtsgericht_Iserlohn);
+        Grundbuchamt_Iserlohn = new GerichtCode("Grundbuchamt_Iserlohn", "R2604G");
+        $VALUES.add(Grundbuchamt_Iserlohn);
+        Amtsgericht_Luedenscheid = new GerichtCode("Amtsgericht_Luedenscheid", "R2605");
+        $VALUES.add(Amtsgericht_Luedenscheid);
+        Grundbuchamt_Luedenscheid = new GerichtCode("Grundbuchamt_Luedenscheid", "R2605G");
+        $VALUES.add(Grundbuchamt_Luedenscheid);
+        Amtsgericht_Meinerzhagen = new GerichtCode("Amtsgericht_Meinerzhagen", "R2606");
+        $VALUES.add(Amtsgericht_Meinerzhagen);
+        Grundbuchamt_Meinerzhagen = new GerichtCode("Grundbuchamt_Meinerzhagen", "R2606G");
+        $VALUES.add(Grundbuchamt_Meinerzhagen);
+        Amtsgericht_Plettenberg = new GerichtCode("Amtsgericht_Plettenberg", "R2607");
+        $VALUES.add(Amtsgericht_Plettenberg);
+        Grundbuchamt_Plettenberg = new GerichtCode("Grundbuchamt_Plettenberg", "R2607G");
+        $VALUES.add(Grundbuchamt_Plettenberg);
+        Amtsgericht_Schwelm = new GerichtCode("Amtsgericht_Schwelm", "R2608");
+        $VALUES.add(Amtsgericht_Schwelm);
+        Grundbuchamt_Schwelm = new GerichtCode("Grundbuchamt_Schwelm", "R2608G");
+        $VALUES.add(Grundbuchamt_Schwelm);
+        Amtsgericht_Schwerte = new GerichtCode("Amtsgericht_Schwerte", "R2609");
+        $VALUES.add(Amtsgericht_Schwerte);
+        Grundbuchamt_Schwerte = new GerichtCode("Grundbuchamt_Schwerte", "R2609G");
+        $VALUES.add(Grundbuchamt_Schwerte);
+        Amtsgericht_Wetter = new GerichtCode("Amtsgericht_Wetter", "R2610");
+        $VALUES.add(Amtsgericht_Wetter);
+        Grundbuchamt_Wetter_Ruhr = new GerichtCode("Grundbuchamt_Wetter_Ruhr", "R2610G");
+        $VALUES.add(Grundbuchamt_Wetter_Ruhr);
+        Landgericht_Muenster = new GerichtCode("Landgericht_Muenster", "R2700");
+        $VALUES.add(Landgericht_Muenster);
+        Staatsanwaltschaft_beim_Landgericht_Muenster = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Muenster", "R2700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Muenster);
+        Amtsgericht_Ahaus = new GerichtCode("Amtsgericht_Ahaus", "R2701");
+        $VALUES.add(Amtsgericht_Ahaus);
+        Grundbuchamt_Ahaus = new GerichtCode("Grundbuchamt_Ahaus", "R2701G");
+        $VALUES.add(Grundbuchamt_Ahaus);
+        Amtsgericht_Ahlen = new GerichtCode("Amtsgericht_Ahlen", "R2702");
+        $VALUES.add(Amtsgericht_Ahlen);
+        Grundbuchamt_Ahlen = new GerichtCode("Grundbuchamt_Ahlen", "R2702G");
+        $VALUES.add(Grundbuchamt_Ahlen);
+        Amtsgericht_Beckum = new GerichtCode("Amtsgericht_Beckum", "R2703");
+        $VALUES.add(Amtsgericht_Beckum);
+        Grundbuchamt_Beckum = new GerichtCode("Grundbuchamt_Beckum", "R2703G");
+        $VALUES.add(Grundbuchamt_Beckum);
+        Amtsgericht_Bocholt = new GerichtCode("Amtsgericht_Bocholt", "R2704");
+        $VALUES.add(Amtsgericht_Bocholt);
+        Grundbuchamt_Bocholt = new GerichtCode("Grundbuchamt_Bocholt", "R2704G");
+        $VALUES.add(Grundbuchamt_Bocholt);
+        Staatsanwaltschaft_beim_Landgericht_Bocholt_Zwst_der_StA_Muenster = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bocholt_Zwst_der_StA_Muenster", "R2704S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bocholt_Zwst_der_StA_Muenster);
+        Amtsgericht_Borken = new GerichtCode("Amtsgericht_Borken", "R2705");
+        $VALUES.add(Amtsgericht_Borken);
+        Grundbuchamt_Borken = new GerichtCode("Grundbuchamt_Borken", "R2705G");
+        $VALUES.add(Grundbuchamt_Borken);
+        Amtsgericht_Steinfurt = new GerichtCode("Amtsgericht_Steinfurt", "R2706");
+        $VALUES.add(Amtsgericht_Steinfurt);
+        Grundbuchamt_Steinfurt = new GerichtCode("Grundbuchamt_Steinfurt", "R2706G");
+        $VALUES.add(Grundbuchamt_Steinfurt);
+        Amtsgericht_Coesfeld = new GerichtCode("Amtsgericht_Coesfeld", "R2707");
+        $VALUES.add(Amtsgericht_Coesfeld);
+        Grundbuchamt_Coesfeld = new GerichtCode("Grundbuchamt_Coesfeld", "R2707G");
+        $VALUES.add(Grundbuchamt_Coesfeld);
+        Amtsgericht_Duelmen = new GerichtCode("Amtsgericht_Duelmen", "R2708");
+        $VALUES.add(Amtsgericht_Duelmen);
+        Grundbuchamt_Duelmen = new GerichtCode("Grundbuchamt_Duelmen", "R2708G");
+        $VALUES.add(Grundbuchamt_Duelmen);
+        Amtsgericht_Gronau = new GerichtCode("Amtsgericht_Gronau", "R2709");
+        $VALUES.add(Amtsgericht_Gronau);
+        Grundbuchamt_Gronau = new GerichtCode("Grundbuchamt_Gronau", "R2709G");
+        $VALUES.add(Grundbuchamt_Gronau);
+        Amtsgericht_Haltern = new GerichtCode("Amtsgericht_Haltern", "R2710");
+        $VALUES.add(Amtsgericht_Haltern);
+        Amtsgericht_Ibbenbueren = new GerichtCode("Amtsgericht_Ibbenbueren", "R2711");
+        $VALUES.add(Amtsgericht_Ibbenbueren);
+        Grundbuchamt_Ibbenbueren = new GerichtCode("Grundbuchamt_Ibbenbueren", "R2711G");
+        $VALUES.add(Grundbuchamt_Ibbenbueren);
+        Amtsgericht_Luedinghausen = new GerichtCode("Amtsgericht_Luedinghausen", "R2712");
+        $VALUES.add(Amtsgericht_Luedinghausen);
+        Grundbuchamt_Luedinghausen = new GerichtCode("Grundbuchamt_Luedinghausen", "R2712G");
+        $VALUES.add(Grundbuchamt_Luedinghausen);
+        Amtsgericht_Muenster = new GerichtCode("Amtsgericht_Muenster", "R2713");
+        $VALUES.add(Amtsgericht_Muenster);
+        Grundbuchamt_Muenster = new GerichtCode("Grundbuchamt_Muenster", "R2713G");
+        $VALUES.add(Grundbuchamt_Muenster);
+        aufgeloest_Amtsgericht_Oelde = new GerichtCode("aufgeloest_Amtsgericht_Oelde", "R2714");
+        $VALUES.add(aufgeloest_Amtsgericht_Oelde);
+        Amtsgericht_Rheine = new GerichtCode("Amtsgericht_Rheine", "R2715");
+        $VALUES.add(Amtsgericht_Rheine);
+        Grundbuchamt_Rheine = new GerichtCode("Grundbuchamt_Rheine", "R2715G");
+        $VALUES.add(Grundbuchamt_Rheine);
+        Amtsgericht_Tecklenburg = new GerichtCode("Amtsgericht_Tecklenburg", "R2716");
+        $VALUES.add(Amtsgericht_Tecklenburg);
+        Grundbuchamt_Tecklenburg = new GerichtCode("Grundbuchamt_Tecklenburg", "R2716G");
+        $VALUES.add(Grundbuchamt_Tecklenburg);
+        aufgeloest_Amtsgericht_Vreden = new GerichtCode("aufgeloest_Amtsgericht_Vreden", "R2717");
+        $VALUES.add(aufgeloest_Amtsgericht_Vreden);
+        Amtsgericht_Warendorf = new GerichtCode("Amtsgericht_Warendorf", "R2718");
+        $VALUES.add(Amtsgericht_Warendorf);
+        Grundbuchamt_Warendorf = new GerichtCode("Grundbuchamt_Warendorf", "R2718G");
+        $VALUES.add(Grundbuchamt_Warendorf);
+        Landgericht_Paderborn = new GerichtCode("Landgericht_Paderborn", "R2800");
+        $VALUES.add(Landgericht_Paderborn);
+        Staatsanwaltschaft_beim_Landgericht_Paderborn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Paderborn", "R2800S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Paderborn);
+        aufgeloest_Amtsgericht_Beverungen = new GerichtCode("aufgeloest_Amtsgericht_Beverungen", "R2801");
+        $VALUES.add(aufgeloest_Amtsgericht_Beverungen);
+        Amtsgericht_Brakel = new GerichtCode("Amtsgericht_Brakel", "R2802");
+        $VALUES.add(Amtsgericht_Brakel);
+        Grundbuchamt_Brakel = new GerichtCode("Grundbuchamt_Brakel", "R2802G");
+        $VALUES.add(Grundbuchamt_Brakel);
+        aufgeloest_Amtsgericht_Bueren = new GerichtCode("aufgeloest_Amtsgericht_Bueren", "R2803");
+        $VALUES.add(aufgeloest_Amtsgericht_Bueren);
+        Amtsgericht_Delbrueck = new GerichtCode("Amtsgericht_Delbrueck", "R2804");
+        $VALUES.add(Amtsgericht_Delbrueck);
+        Grundbuchamt_Delbrueck = new GerichtCode("Grundbuchamt_Delbrueck", "R2804G");
+        $VALUES.add(Grundbuchamt_Delbrueck);
+        aufgeloest_Amtsgericht_Erwitte = new GerichtCode("aufgeloest_Amtsgericht_Erwitte", "R2805");
+        $VALUES.add(aufgeloest_Amtsgericht_Erwitte);
+        aufgeloest_Amtsgericht_Geseke = new GerichtCode("aufgeloest_Amtsgericht_Geseke", "R2806");
+        $VALUES.add(aufgeloest_Amtsgericht_Geseke);
+        Amtsgericht_Hoexter = new GerichtCode("Amtsgericht_Hoexter", "R2807");
+        $VALUES.add(Amtsgericht_Hoexter);
+        Grundbuchamt_Hoexter = new GerichtCode("Grundbuchamt_Hoexter", "R2807G");
+        $VALUES.add(Grundbuchamt_Hoexter);
+        Amtsgericht_Lippstadt = new GerichtCode("Amtsgericht_Lippstadt", "R2808");
+        $VALUES.add(Amtsgericht_Lippstadt);
+        Grundbuchamt_Lippstadt = new GerichtCode("Grundbuchamt_Lippstadt", "R2808G");
+        $VALUES.add(Grundbuchamt_Lippstadt);
+        Amtsgericht_Paderborn = new GerichtCode("Amtsgericht_Paderborn", "R2809");
+        $VALUES.add(Amtsgericht_Paderborn);
+        Grundbuchamt_Paderborn = new GerichtCode("Grundbuchamt_Paderborn", "R2809G");
+        $VALUES.add(Grundbuchamt_Paderborn);
+        aufgeloest_Amtsgericht_Ruethen = new GerichtCode("aufgeloest_Amtsgericht_Ruethen", "R2810");
+        $VALUES.add(aufgeloest_Amtsgericht_Ruethen);
+        aufgeloest_Amtsgericht_Salzkotten = new GerichtCode("aufgeloest_Amtsgericht_Salzkotten", "R2811");
+        $VALUES.add(aufgeloest_Amtsgericht_Salzkotten);
+        aufgeloest_Amtsgericht_Steinheim = new GerichtCode("aufgeloest_Amtsgericht_Steinheim", "R2812");
+        $VALUES.add(aufgeloest_Amtsgericht_Steinheim);
+        Amtsgericht_Warburg = new GerichtCode("Amtsgericht_Warburg", "R2813");
+        $VALUES.add(Amtsgericht_Warburg);
+        Grundbuchamt_Warburg = new GerichtCode("Grundbuchamt_Warburg", "R2813G");
+        $VALUES.add(Grundbuchamt_Warburg);
+        Landgericht_Siegen = new GerichtCode("Landgericht_Siegen", "R2900");
+        $VALUES.add(Landgericht_Siegen);
+        Staatsanwaltschaft_beim_Landgericht_Siegen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Siegen", "R2900S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Siegen);
+        aufgeloest_Amtsgericht_Olpe_Zwst_Attendorn = new GerichtCode("aufgeloest_Amtsgericht_Olpe_Zwst_Attendorn", "R2901");
+        $VALUES.add(aufgeloest_Amtsgericht_Olpe_Zwst_Attendorn);
+        Amtsgericht_Bad_Berleburg = new GerichtCode("Amtsgericht_Bad_Berleburg", "R2902");
+        $VALUES.add(Amtsgericht_Bad_Berleburg);
+        Grundbuchamt_Bad_Berleburg = new GerichtCode("Grundbuchamt_Bad_Berleburg", "R2902G");
+        $VALUES.add(Grundbuchamt_Bad_Berleburg);
+        aufgeloest_Amtsgericht_Burbach = new GerichtCode("aufgeloest_Amtsgericht_Burbach", "R2903");
+        $VALUES.add(aufgeloest_Amtsgericht_Burbach);
+        Amtsgericht_Lennestadt = new GerichtCode("Amtsgericht_Lennestadt", "R2904");
+        $VALUES.add(Amtsgericht_Lennestadt);
+        Grundbuchamt_Lennestadt = new GerichtCode("Grundbuchamt_Lennestadt", "R2904G");
+        $VALUES.add(Grundbuchamt_Lennestadt);
+        aufgeloest_Amtsgericht_Hilchenbach = new GerichtCode("aufgeloest_Amtsgericht_Hilchenbach", "R2905");
+        $VALUES.add(aufgeloest_Amtsgericht_Hilchenbach);
+        aufgeloest_Amtsgericht_Kirchhundem = new GerichtCode("aufgeloest_Amtsgericht_Kirchhundem", "R2906");
+        $VALUES.add(aufgeloest_Amtsgericht_Kirchhundem);
+        aufgeloest_Amtsgericht_Laasphe = new GerichtCode("aufgeloest_Amtsgericht_Laasphe", "R2907");
+        $VALUES.add(aufgeloest_Amtsgericht_Laasphe);
+        Amtsgericht_Olpe = new GerichtCode("Amtsgericht_Olpe", "R2908");
+        $VALUES.add(Amtsgericht_Olpe);
+        Grundbuchamt_Olpe = new GerichtCode("Grundbuchamt_Olpe", "R2908G");
+        $VALUES.add(Grundbuchamt_Olpe);
+        Amtsgericht_Siegen = new GerichtCode("Amtsgericht_Siegen", "R2909");
+        $VALUES.add(Amtsgericht_Siegen);
+        Grundbuchamt_Siegen = new GerichtCode("Grundbuchamt_Siegen", "R2909G");
+        $VALUES.add(Grundbuchamt_Siegen);
+        Oberlandesgericht_Koeln = new GerichtCode("Oberlandesgericht_Koeln", "R3000");
+        $VALUES.add(Oberlandesgericht_Koeln);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Koeln = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Koeln", "R3000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Koeln);
+        Landgericht_Aachen = new GerichtCode("Landgericht_Aachen", "R3100");
+        $VALUES.add(Landgericht_Aachen);
+        Staatsanwaltschaft_beim_Landgericht_Aachen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Aachen", "R3100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Aachen);
+        Amtsgericht_Aachen = new GerichtCode("Amtsgericht_Aachen", "R3101");
+        $VALUES.add(Amtsgericht_Aachen);
+        Grundbuchamt_Aachen = new GerichtCode("Grundbuchamt_Aachen", "R3101G");
+        $VALUES.add(Grundbuchamt_Aachen);
+        aufgeloest_Amtsgericht_Blankenheim = new GerichtCode("aufgeloest_Amtsgericht_Blankenheim", "R3102");
+        $VALUES.add(aufgeloest_Amtsgericht_Blankenheim);
+        Amtsgericht_Dueren = new GerichtCode("Amtsgericht_Dueren", "R3103");
+        $VALUES.add(Amtsgericht_Dueren);
+        Grundbuchamt_Dueren = new GerichtCode("Grundbuchamt_Dueren", "R3103G");
+        $VALUES.add(Grundbuchamt_Dueren);
+        Amtsgericht_Eschweiler = new GerichtCode("Amtsgericht_Eschweiler", "R3104");
+        $VALUES.add(Amtsgericht_Eschweiler);
+        Grundbuchamt_Eschweiler = new GerichtCode("Grundbuchamt_Eschweiler", "R3104G");
+        $VALUES.add(Grundbuchamt_Eschweiler);
+        Amtsgericht_Geilenkirchen = new GerichtCode("Amtsgericht_Geilenkirchen", "R3105");
+        $VALUES.add(Amtsgericht_Geilenkirchen);
+        Grundbuchamt_Geilenkirchen = new GerichtCode("Grundbuchamt_Geilenkirchen", "R3105G");
+        $VALUES.add(Grundbuchamt_Geilenkirchen);
+        Amtsgericht_Schleiden = new GerichtCode("Amtsgericht_Schleiden", "R3106");
+        $VALUES.add(Amtsgericht_Schleiden);
+        Grundbuchamt_Schleiden = new GerichtCode("Grundbuchamt_Schleiden", "R3106G");
+        $VALUES.add(Grundbuchamt_Schleiden);
+        Amtsgericht_Heinsberg = new GerichtCode("Amtsgericht_Heinsberg", "R3107");
+        $VALUES.add(Amtsgericht_Heinsberg);
+        Grundbuchamt_Heinsberg = new GerichtCode("Grundbuchamt_Heinsberg", "R3107G");
+        $VALUES.add(Grundbuchamt_Heinsberg);
+        Amtsgericht_Juelich = new GerichtCode("Amtsgericht_Juelich", "R3108");
+        $VALUES.add(Amtsgericht_Juelich);
+        Grundbuchamt_Juelich = new GerichtCode("Grundbuchamt_Juelich", "R3108G");
+        $VALUES.add(Grundbuchamt_Juelich);
+        Amtsgericht_Monschau = new GerichtCode("Amtsgericht_Monschau", "R3109");
+        $VALUES.add(Amtsgericht_Monschau);
+        Grundbuchamt_Monschau = new GerichtCode("Grundbuchamt_Monschau", "R3109G");
+        $VALUES.add(Grundbuchamt_Monschau);
+        aufgeloest_Amtsgericht_Stolberg = new GerichtCode("aufgeloest_Amtsgericht_Stolberg", "R3110");
+        $VALUES.add(aufgeloest_Amtsgericht_Stolberg);
+        Landgericht_Bonn = new GerichtCode("Landgericht_Bonn", "R3200");
+        $VALUES.add(Landgericht_Bonn);
+        Staatsanwaltschaft_beim_Landgericht_Bonn = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bonn", "R3200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bonn);
+        Amtsgericht_Bonn = new GerichtCode("Amtsgericht_Bonn", "R3201");
+        $VALUES.add(Amtsgericht_Bonn);
+        Grundbuchamt_Bonn = new GerichtCode("Grundbuchamt_Bonn", "R3201G");
+        $VALUES.add(Grundbuchamt_Bonn);
+        aufgeloest_Amtsgericht_Eitorf = new GerichtCode("aufgeloest_Amtsgericht_Eitorf", "R3202");
+        $VALUES.add(aufgeloest_Amtsgericht_Eitorf);
+        Amtsgericht_Euskirchen = new GerichtCode("Amtsgericht_Euskirchen", "R3203");
+        $VALUES.add(Amtsgericht_Euskirchen);
+        Grundbuchamt_Euskirchen = new GerichtCode("Grundbuchamt_Euskirchen", "R3203G");
+        $VALUES.add(Grundbuchamt_Euskirchen);
+        Amtsgericht_Euskirchen_Zentrale_Mahnabteilung = new GerichtCode("Amtsgericht_Euskirchen_Zentrale_Mahnabteilung", "R3203M");
+        $VALUES.add(Amtsgericht_Euskirchen_Zentrale_Mahnabteilung);
+        aufgeloest_Amtsgericht_Siegburg_Zwst_Hennef = new GerichtCode("aufgeloest_Amtsgericht_Siegburg_Zwst_Hennef", "R3204");
+        $VALUES.add(aufgeloest_Amtsgericht_Siegburg_Zwst_Hennef);
+        Amtsgericht_Koenigswinter = new GerichtCode("Amtsgericht_Koenigswinter", "R3205");
+        $VALUES.add(Amtsgericht_Koenigswinter);
+        Grundbuchamt_Koenigswinter = new GerichtCode("Grundbuchamt_Koenigswinter", "R3205G");
+        $VALUES.add(Grundbuchamt_Koenigswinter);
+        Amtsgericht_Rheinbach = new GerichtCode("Amtsgericht_Rheinbach", "R3207");
+        $VALUES.add(Amtsgericht_Rheinbach);
+        Grundbuchamt_Rheinbach = new GerichtCode("Grundbuchamt_Rheinbach", "R3207G");
+        $VALUES.add(Grundbuchamt_Rheinbach);
+        Amtsgericht_Siegburg = new GerichtCode("Amtsgericht_Siegburg", "R3208");
+        $VALUES.add(Amtsgericht_Siegburg);
+        Grundbuchamt_Siegburg = new GerichtCode("Grundbuchamt_Siegburg", "R3208G");
+        $VALUES.add(Grundbuchamt_Siegburg);
+        Amtsgericht_Waldbroel = new GerichtCode("Amtsgericht_Waldbroel", "R3209");
+        $VALUES.add(Amtsgericht_Waldbroel);
+        Grundbuchamt_Waldbroel = new GerichtCode("Grundbuchamt_Waldbroel", "R3209G");
+        $VALUES.add(Grundbuchamt_Waldbroel);
+        aufgeloest_Landgericht_Bonn = new GerichtCode("aufgeloest_Landgericht_Bonn", "R3299");
+        $VALUES.add(aufgeloest_Landgericht_Bonn);
+        Landgericht_Koeln = new GerichtCode("Landgericht_Koeln", "R3300");
+        $VALUES.add(Landgericht_Koeln);
+        Staatsanwaltschaft_beim_Landgericht_Koeln = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Koeln", "R3300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Koeln);
+        Amtsgericht_Bergisch_Gladbach = new GerichtCode("Amtsgericht_Bergisch_Gladbach", "R3301");
+        $VALUES.add(Amtsgericht_Bergisch_Gladbach);
+        Grundbuchamt_Bergisch_Gladbach = new GerichtCode("Grundbuchamt_Bergisch_Gladbach", "R3301G");
+        $VALUES.add(Grundbuchamt_Bergisch_Gladbach);
+        Amtsgericht_Bergheim = new GerichtCode("Amtsgericht_Bergheim", "R3302");
+        $VALUES.add(Amtsgericht_Bergheim);
+        Grundbuchamt_Bergheim = new GerichtCode("Grundbuchamt_Bergheim", "R3302G");
+        $VALUES.add(Grundbuchamt_Bergheim);
+        Amtsgericht_Bruehl = new GerichtCode("Amtsgericht_Bruehl", "R3303");
+        $VALUES.add(Amtsgericht_Bruehl);
+        Grundbuchamt_Bruehl = new GerichtCode("Grundbuchamt_Bruehl", "R3303G");
+        $VALUES.add(Grundbuchamt_Bruehl);
+        Amtsgericht_Gummersbach = new GerichtCode("Amtsgericht_Gummersbach", "R3304");
+        $VALUES.add(Amtsgericht_Gummersbach);
+        Grundbuchamt_Gummersbach = new GerichtCode("Grundbuchamt_Gummersbach", "R3304G");
+        $VALUES.add(Grundbuchamt_Gummersbach);
+        Amtsgericht_Kerpen = new GerichtCode("Amtsgericht_Kerpen", "R3305");
+        $VALUES.add(Amtsgericht_Kerpen);
+        Grundbuchamt_Kerpen = new GerichtCode("Grundbuchamt_Kerpen", "R3305G");
+        $VALUES.add(Grundbuchamt_Kerpen);
+        Amtsgericht_Koeln = new GerichtCode("Amtsgericht_Koeln", "R3306");
+        $VALUES.add(Amtsgericht_Koeln);
+        Grundbuchamt_Koeln = new GerichtCode("Grundbuchamt_Koeln", "R3306G");
+        $VALUES.add(Grundbuchamt_Koeln);
+        aufgeloest_Amtsgericht_Lindlar = new GerichtCode("aufgeloest_Amtsgericht_Lindlar", "R3307");
+        $VALUES.add(aufgeloest_Amtsgericht_Lindlar);
+        aufgeloest_Amtsgericht_Wiehl = new GerichtCode("aufgeloest_Amtsgericht_Wiehl", "R3308");
+        $VALUES.add(aufgeloest_Amtsgericht_Wiehl);
+        Amtsgericht_Wipperfuerth = new GerichtCode("Amtsgericht_Wipperfuerth", "R3309");
+        $VALUES.add(Amtsgericht_Wipperfuerth);
+        Grundbuchamt_Wipperfuerth = new GerichtCode("Grundbuchamt_Wipperfuerth", "R3309G");
+        $VALUES.add(Grundbuchamt_Wipperfuerth);
+        aufgeloest_Amtsgericht_Bruehl_Zwst_Lechenich_in_Erftstadt = new GerichtCode("aufgeloest_Amtsgericht_Bruehl_Zwst_Lechenich_in_Erftstadt", "R3310");
+        $VALUES.add(aufgeloest_Amtsgericht_Bruehl_Zwst_Lechenich_in_Erftstadt);
+        Amtsgericht_Leverkusen = new GerichtCode("Amtsgericht_Leverkusen", "R3311");
+        $VALUES.add(Amtsgericht_Leverkusen);
+        Grundbuchamt_Leverkusen = new GerichtCode("Grundbuchamt_Leverkusen", "R3311G");
+        $VALUES.add(Grundbuchamt_Leverkusen);
+        Amtsgericht_Wermelskirchen = new GerichtCode("Amtsgericht_Wermelskirchen", "R3312");
+        $VALUES.add(Amtsgericht_Wermelskirchen);
+        Grundbuchamt_Wermelskirchen = new GerichtCode("Grundbuchamt_Wermelskirchen", "R3312G");
+        $VALUES.add(Grundbuchamt_Wermelskirchen);
+        Justizvollzugsanstalt_Siegburg = new GerichtCode("Justizvollzugsanstalt_Siegburg", "R6109");
+        $VALUES.add(Justizvollzugsanstalt_Siegburg);
+        Sozialgericht_Dortmund = new GerichtCode("Sozialgericht_Dortmund", "R6205");
+        $VALUES.add(Sozialgericht_Dortmund);
+        Finanzgericht_Duesseldorf = new GerichtCode("Finanzgericht_Duesseldorf", "R6254");
+        $VALUES.add(Finanzgericht_Duesseldorf);
+        Arbeitsgericht_Aachen = new GerichtCode("Arbeitsgericht_Aachen", "R6293");
+        $VALUES.add(Arbeitsgericht_Aachen);
+        Sozialgericht_Aachen = new GerichtCode("Sozialgericht_Aachen", "R6294");
+        $VALUES.add(Sozialgericht_Aachen);
+        Verwaltungsgericht_Aachen = new GerichtCode("Verwaltungsgericht_Aachen", "R6295");
+        $VALUES.add(Verwaltungsgericht_Aachen);
+        Arbeitsgericht_Arnsberg = new GerichtCode("Arbeitsgericht_Arnsberg", "R6296");
+        $VALUES.add(Arbeitsgericht_Arnsberg);
+        Arbeitsgericht_Bocholt = new GerichtCode("Arbeitsgericht_Bocholt", "R6297");
+        $VALUES.add(Arbeitsgericht_Bocholt);
+        Sozialgericht_Detmold = new GerichtCode("Sozialgericht_Detmold", "R6298");
+        $VALUES.add(Sozialgericht_Detmold);
+        Arbeitsgericht_Detmold = new GerichtCode("Arbeitsgericht_Detmold", "R6299");
+        $VALUES.add(Arbeitsgericht_Detmold);
+        Landesarbeitsgericht_Duesseldorf = new GerichtCode("Landesarbeitsgericht_Duesseldorf", "R6300");
+        $VALUES.add(Landesarbeitsgericht_Duesseldorf);
+        Verwaltungsgericht_Duesseldorf = new GerichtCode("Verwaltungsgericht_Duesseldorf", "R6301");
+        $VALUES.add(Verwaltungsgericht_Duesseldorf);
+        Arbeitsgericht_Duesseldorf = new GerichtCode("Arbeitsgericht_Duesseldorf", "R6302");
+        $VALUES.add(Arbeitsgericht_Duesseldorf);
+        Arbeitsgericht_Duisburg = new GerichtCode("Arbeitsgericht_Duisburg", "R6303");
+        $VALUES.add(Arbeitsgericht_Duisburg);
+        Sozialgericht_Duisburg = new GerichtCode("Sozialgericht_Duisburg", "R6304");
+        $VALUES.add(Sozialgericht_Duisburg);
+        Arbeitsgericht_Essen = new GerichtCode("Arbeitsgericht_Essen", "R6305");
+        $VALUES.add(Arbeitsgericht_Essen);
+        Landessozialgericht_fuer_das_Land_Nordrhein_Westfalen = new GerichtCode("Landessozialgericht_fuer_das_Land_Nordrhein_Westfalen", "R6306");
+        $VALUES.add(Landessozialgericht_fuer_das_Land_Nordrhein_Westfalen);
+        Arbeitsgericht_Herford = new GerichtCode("Arbeitsgericht_Herford", "R6307");
+        $VALUES.add(Arbeitsgericht_Herford);
+        Arbeitsgericht_Iserlohn = new GerichtCode("Arbeitsgericht_Iserlohn", "R6308");
+        $VALUES.add(Arbeitsgericht_Iserlohn);
+        Verwaltungsgericht_Koeln = new GerichtCode("Verwaltungsgericht_Koeln", "R6309");
+        $VALUES.add(Verwaltungsgericht_Koeln);
+        Sozialgericht_Koeln = new GerichtCode("Sozialgericht_Koeln", "R6310");
+        $VALUES.add(Sozialgericht_Koeln);
+        Finanzgericht_Koeln = new GerichtCode("Finanzgericht_Koeln", "R6311");
+        $VALUES.add(Finanzgericht_Koeln);
+        Arbeitsgericht_Koeln = new GerichtCode("Arbeitsgericht_Koeln", "R6312");
+        $VALUES.add(Arbeitsgericht_Koeln);
+        Landesarbeitsgericht_Koeln = new GerichtCode("Landesarbeitsgericht_Koeln", "R6313");
+        $VALUES.add(Landesarbeitsgericht_Koeln);
+        Verwaltungsgericht_Minden = new GerichtCode("Verwaltungsgericht_Minden", "R6314");
+        $VALUES.add(Verwaltungsgericht_Minden);
+        Arbeitsgericht_Minden = new GerichtCode("Arbeitsgericht_Minden", "R6315");
+        $VALUES.add(Arbeitsgericht_Minden);
+        Arbeitsgericht_Moenchengladbach = new GerichtCode("Arbeitsgericht_Moenchengladbach", "R6316");
+        $VALUES.add(Arbeitsgericht_Moenchengladbach);
+        Arbeitsgericht_Bonn = new GerichtCode("Arbeitsgericht_Bonn", "R6317");
+        $VALUES.add(Arbeitsgericht_Bonn);
+        Finanzgericht_Muenster = new GerichtCode("Finanzgericht_Muenster", "R6318");
+        $VALUES.add(Finanzgericht_Muenster);
+        Verwaltungsgericht_Muenster = new GerichtCode("Verwaltungsgericht_Muenster", "R6319");
+        $VALUES.add(Verwaltungsgericht_Muenster);
+        Arbeitsgericht_Muenster = new GerichtCode("Arbeitsgericht_Muenster", "R6320");
+        $VALUES.add(Arbeitsgericht_Muenster);
+        Oberverwaltungsgericht_fuer_das_Land_Nordrhein_Westfalen = new GerichtCode("Oberverwaltungsgericht_fuer_das_Land_Nordrhein_Westfalen", "R6321");
+        $VALUES.add(Oberverwaltungsgericht_fuer_das_Land_Nordrhein_Westfalen);
+        Verfassungsgerichtshof_fuer_das_Land_Nordrhein_Westfalen = new GerichtCode("Verfassungsgerichtshof_fuer_das_Land_Nordrhein_Westfalen", "R6322");
+        $VALUES.add(Verfassungsgerichtshof_fuer_das_Land_Nordrhein_Westfalen);
+        Sozialgericht_Muenster = new GerichtCode("Sozialgericht_Muenster", "R6323");
+        $VALUES.add(Sozialgericht_Muenster);
+        Arbeitsgericht_Oberhausen = new GerichtCode("Arbeitsgericht_Oberhausen", "R6324");
+        $VALUES.add(Arbeitsgericht_Oberhausen);
+        Arbeitsgericht_Siegburg = new GerichtCode("Arbeitsgericht_Siegburg", "R6325");
+        $VALUES.add(Arbeitsgericht_Siegburg);
+        Arbeitsgericht_Siegen = new GerichtCode("Arbeitsgericht_Siegen", "R6326");
+        $VALUES.add(Arbeitsgericht_Siegen);
+        Arbeitsgericht_Solingen = new GerichtCode("Arbeitsgericht_Solingen", "R6327");
+        $VALUES.add(Arbeitsgericht_Solingen);
+        Arbeitsgericht_Wesel = new GerichtCode("Arbeitsgericht_Wesel", "R6328");
+        $VALUES.add(Arbeitsgericht_Wesel);
+        Arbeitsgericht_Wuppertal = new GerichtCode("Arbeitsgericht_Wuppertal", "R6329");
+        $VALUES.add(Arbeitsgericht_Wuppertal);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Duesseldorf = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Duesseldorf", "R6568");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Duesseldorf);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Hamm = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Hamm", "R6578");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Hamm);
+        Justizvollzugsanstalt_Muenster = new GerichtCode("Justizvollzugsanstalt_Muenster", "R6636");
+        $VALUES.add(Justizvollzugsanstalt_Muenster);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koeln = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koeln", "R6657");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koeln);
+        Anwaltsgerichtshof_des_Landes_Nordrhein_Westfalen = new GerichtCode("Anwaltsgerichtshof_des_Landes_Nordrhein_Westfalen", "R6675");
+        $VALUES.add(Anwaltsgerichtshof_des_Landes_Nordrhein_Westfalen);
+        Arbeitsgericht_Bielefeld = new GerichtCode("Arbeitsgericht_Bielefeld", "R6725");
+        $VALUES.add(Arbeitsgericht_Bielefeld);
+        Arbeitsgericht_Bochum = new GerichtCode("Arbeitsgericht_Bochum", "R6726");
+        $VALUES.add(Arbeitsgericht_Bochum);
+        Arbeitsgericht_Dortmund = new GerichtCode("Arbeitsgericht_Dortmund", "R6727");
+        $VALUES.add(Arbeitsgericht_Dortmund);
+        Arbeitsgericht_Gelsenkirchen = new GerichtCode("Arbeitsgericht_Gelsenkirchen", "R6728");
+        $VALUES.add(Arbeitsgericht_Gelsenkirchen);
+        Arbeitsgericht_Hagen = new GerichtCode("Arbeitsgericht_Hagen", "R6729");
+        $VALUES.add(Arbeitsgericht_Hagen);
+        Arbeitsgericht_Hamm = new GerichtCode("Arbeitsgericht_Hamm", "R6730");
+        $VALUES.add(Arbeitsgericht_Hamm);
+        Arbeitsgericht_Herne = new GerichtCode("Arbeitsgericht_Herne", "R6731");
+        $VALUES.add(Arbeitsgericht_Herne);
+        Arbeitsgericht_Krefeld = new GerichtCode("Arbeitsgericht_Krefeld", "R6732");
+        $VALUES.add(Arbeitsgericht_Krefeld);
+        Arbeitsgericht_Paderborn = new GerichtCode("Arbeitsgericht_Paderborn", "R6733");
+        $VALUES.add(Arbeitsgericht_Paderborn);
+        Arbeitsgericht_Rheine = new GerichtCode("Arbeitsgericht_Rheine", "R6734");
+        $VALUES.add(Arbeitsgericht_Rheine);
+        Landesarbeitsgericht_Hamm = new GerichtCode("Landesarbeitsgericht_Hamm", "R6757");
+        $VALUES.add(Landesarbeitsgericht_Hamm);
+        Justizvollzugsanstalt_Attendorn = new GerichtCode("Justizvollzugsanstalt_Attendorn", "R6767");
+        $VALUES.add(Justizvollzugsanstalt_Attendorn);
+        Justizvollzugskrankenhaus_NRW = new GerichtCode("Justizvollzugskrankenhaus_NRW", "R6781");
+        $VALUES.add(Justizvollzugskrankenhaus_NRW);
+        aufgeloest_Sozialgericht_Dortmund = new GerichtCode("aufgeloest_Sozialgericht_Dortmund", "R6802");
+        $VALUES.add(aufgeloest_Sozialgericht_Dortmund);
+        Sozialgericht_Duesseldorf_Der_Praesident_o_V_i_A_pers = new GerichtCode("Sozialgericht_Duesseldorf_Der_Praesident_o_V_i_A_pers", "R6803");
+        $VALUES.add(Sozialgericht_Duesseldorf_Der_Praesident_o_V_i_A_pers);
+        Sozialgericht_Gelsenkirchen = new GerichtCode("Sozialgericht_Gelsenkirchen", "R6804");
+        $VALUES.add(Sozialgericht_Gelsenkirchen);
+        Verwaltungsgericht_Arnsberg = new GerichtCode("Verwaltungsgericht_Arnsberg", "R6835");
+        $VALUES.add(Verwaltungsgericht_Arnsberg);
+        Verwaltungsgericht_Gelsenkirchen = new GerichtCode("Verwaltungsgericht_Gelsenkirchen", "R6836");
+        $VALUES.add(Verwaltungsgericht_Gelsenkirchen);
+        Justizvollzugsanstalt_Willich_II = new GerichtCode("Justizvollzugsanstalt_Willich_II", "R6913");
+        $VALUES.add(Justizvollzugsanstalt_Willich_II);
+        Justizvollzugsanstalt_Bielefeld_Senne = new GerichtCode("Justizvollzugsanstalt_Bielefeld_Senne", "R7093");
+        $VALUES.add(Justizvollzugsanstalt_Bielefeld_Senne);
+        Justizvollzugsanstalt_Bochum_Langendreer = new GerichtCode("Justizvollzugsanstalt_Bochum_Langendreer", "R7156");
+        $VALUES.add(Justizvollzugsanstalt_Bochum_Langendreer);
+        Jugendarrestanstalt_Remscheid = new GerichtCode("Jugendarrestanstalt_Remscheid", "R7725");
+        $VALUES.add(Jugendarrestanstalt_Remscheid);
+        Jugendarrestanstalt_Bottrop = new GerichtCode("Jugendarrestanstalt_Bottrop", "R7728");
+        $VALUES.add(Jugendarrestanstalt_Bottrop);
+        Justizvollzugsanstalt_Bielefeld_Brackwede = new GerichtCode("Justizvollzugsanstalt_Bielefeld_Brackwede", "R7738");
+        $VALUES.add(Justizvollzugsanstalt_Bielefeld_Brackwede);
+        Justizvollzugsanstalt_Hamm = new GerichtCode("Justizvollzugsanstalt_Hamm", "R7763");
+        $VALUES.add(Justizvollzugsanstalt_Hamm);
+        Jugendarrestanstalt_Wetter = new GerichtCode("Jugendarrestanstalt_Wetter", "R7787");
+        $VALUES.add(Jugendarrestanstalt_Wetter);
+        Justizvollzugsanstalt_Duisburg_Hamborn = new GerichtCode("Justizvollzugsanstalt_Duisburg_Hamborn", "R8080");
+        $VALUES.add(Justizvollzugsanstalt_Duisburg_Hamborn);
+        Justizvollzugsanstalt_Koeln = new GerichtCode("Justizvollzugsanstalt_Koeln", "R8088");
+        $VALUES.add(Justizvollzugsanstalt_Koeln);
+        Justizvollzugsanstalt_Rheinbach = new GerichtCode("Justizvollzugsanstalt_Rheinbach", "R8367");
+        $VALUES.add(Justizvollzugsanstalt_Rheinbach);
+        Justizvollzugsanstalt_Euskirchen = new GerichtCode("Justizvollzugsanstalt_Euskirchen", "R8371");
+        $VALUES.add(Justizvollzugsanstalt_Euskirchen);
+        Sozialtherapeutische_Anstalt_Bochum = new GerichtCode("Sozialtherapeutische_Anstalt_Bochum", "R8998");
+        $VALUES.add(Sozialtherapeutische_Anstalt_Bochum);
+        Justizvollzugsanstalt_Duesseldorf = new GerichtCode("Justizvollzugsanstalt_Duesseldorf", "R9071");
+        $VALUES.add(Justizvollzugsanstalt_Duesseldorf);
+        Justizvollzugsanstalt_Moers_Kapellen = new GerichtCode("Justizvollzugsanstalt_Moers_Kapellen", "R9090");
+        $VALUES.add(Justizvollzugsanstalt_Moers_Kapellen);
+        Justizvollzugsanstalt_Aachen = new GerichtCode("Justizvollzugsanstalt_Aachen", "R9099");
+        $VALUES.add(Justizvollzugsanstalt_Aachen);
+        Justizvollzugsanstalt_Werl = new GerichtCode("Justizvollzugsanstalt_Werl", "R9162");
+        $VALUES.add(Justizvollzugsanstalt_Werl);
+        Justizvollzugsanstalt_Hagen = new GerichtCode("Justizvollzugsanstalt_Hagen", "R9165");
+        $VALUES.add(Justizvollzugsanstalt_Hagen);
+        Justizvollzugsanstalt_Bochum = new GerichtCode("Justizvollzugsanstalt_Bochum", "R9167");
+        $VALUES.add(Justizvollzugsanstalt_Bochum);
+        Justizvollzugsanstalt_Castrop_Rauxel = new GerichtCode("Justizvollzugsanstalt_Castrop_Rauxel", "R9169");
+        $VALUES.add(Justizvollzugsanstalt_Castrop_Rauxel);
+        Justizvollzugsanstalt_Detmold = new GerichtCode("Justizvollzugsanstalt_Detmold", "R9170");
+        $VALUES.add(Justizvollzugsanstalt_Detmold);
+        Justizvollzugsanstalt_Dortmund = new GerichtCode("Justizvollzugsanstalt_Dortmund", "R9171");
+        $VALUES.add(Justizvollzugsanstalt_Dortmund);
+        Justizvollzugsanstalt_Essen = new GerichtCode("Justizvollzugsanstalt_Essen", "R9172");
+        $VALUES.add(Justizvollzugsanstalt_Essen);
+        Justizvollzugsanstalt_Geldern = new GerichtCode("Justizvollzugsanstalt_Geldern", "R9173");
+        $VALUES.add(Justizvollzugsanstalt_Geldern);
+        Justizvollzugsanstalt_Gelsenkirchen = new GerichtCode("Justizvollzugsanstalt_Gelsenkirchen", "R9174");
+        $VALUES.add(Justizvollzugsanstalt_Gelsenkirchen);
+        Justizvollzugsanstalt_Heinsberg = new GerichtCode("Justizvollzugsanstalt_Heinsberg", "R9175");
+        $VALUES.add(Justizvollzugsanstalt_Heinsberg);
+        Justizvollzugsanstalt_Herford = new GerichtCode("Justizvollzugsanstalt_Herford", "R9176");
+        $VALUES.add(Justizvollzugsanstalt_Herford);
+        Justizvollzugsanstalt_Hoevelhof = new GerichtCode("Justizvollzugsanstalt_Hoevelhof", "R9177");
+        $VALUES.add(Justizvollzugsanstalt_Hoevelhof);
+        Justizvollzugsanstalt_Iserlohn = new GerichtCode("Justizvollzugsanstalt_Iserlohn", "R9178");
+        $VALUES.add(Justizvollzugsanstalt_Iserlohn);
+        Justizvollzugsanstalt_Kleve = new GerichtCode("Justizvollzugsanstalt_Kleve", "R9179");
+        $VALUES.add(Justizvollzugsanstalt_Kleve);
+        Justizvollzugsanstalt_Remscheid = new GerichtCode("Justizvollzugsanstalt_Remscheid", "R9180");
+        $VALUES.add(Justizvollzugsanstalt_Remscheid);
+    }
+
+    private static void init4() {
+        Justizvollzugsanstalt_Schwerte = new GerichtCode("Justizvollzugsanstalt_Schwerte", "R9181");
+        $VALUES.add(Justizvollzugsanstalt_Schwerte);
+        Justizvollzugsanstalt_Wuppertal_Vohwinkel = new GerichtCode("Justizvollzugsanstalt_Wuppertal_Vohwinkel", "R9182");
+        $VALUES.add(Justizvollzugsanstalt_Wuppertal_Vohwinkel);
+        Justizvollzugsanstalt_Willich_I = new GerichtCode("Justizvollzugsanstalt_Willich_I", "R9288");
+        $VALUES.add(Justizvollzugsanstalt_Willich_I);
+        Justizvollzugsanstalt_Wuppertal_Ronsdorf = new GerichtCode("Justizvollzugsanstalt_Wuppertal_Ronsdorf", "R9483");
+        $VALUES.add(Justizvollzugsanstalt_Wuppertal_Ronsdorf);
+        Jugendarrestanstalt_Duesseldorf = new GerichtCode("Jugendarrestanstalt_Duesseldorf", "R9565");
+        $VALUES.add(Jugendarrestanstalt_Duesseldorf);
+        Test_Amtsgericht_Duesseldorf = new GerichtCode("Test_Amtsgericht_Duesseldorf", "R9999");
+        $VALUES.add(Test_Amtsgericht_Duesseldorf);
+        Oberlandesgericht_Koblenz = new GerichtCode("Oberlandesgericht_Koblenz", "T2000");
+        $VALUES.add(Oberlandesgericht_Koblenz);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Koblenz = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Koblenz", "T2000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Koblenz);
+        Landgericht_Bad_Kreuznach = new GerichtCode("Landgericht_Bad_Kreuznach", "T2100");
+        $VALUES.add(Landgericht_Bad_Kreuznach);
+        Staatsanwaltschaft_beim_Landgericht_Bad_Kreuznach = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Bad_Kreuznach", "T2100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Bad_Kreuznach);
+        Amtsgericht_Bad_Kreuznach = new GerichtCode("Amtsgericht_Bad_Kreuznach", "T2101");
+        $VALUES.add(Amtsgericht_Bad_Kreuznach);
+        Grundbuchamt_Bad_Kreuznach = new GerichtCode("Grundbuchamt_Bad_Kreuznach", "T2101G");
+        $VALUES.add(Grundbuchamt_Bad_Kreuznach);
+        Amtsgericht_Bad_Kreuznach_Insolvenzgericht = new GerichtCode("Amtsgericht_Bad_Kreuznach_Insolvenzgericht", "T2101I");
+        $VALUES.add(Amtsgericht_Bad_Kreuznach_Insolvenzgericht);
+        Registergericht_Amtsgericht_Bad_Kreuznach = new GerichtCode("Registergericht_Amtsgericht_Bad_Kreuznach", "T2101V");
+        $VALUES.add(Registergericht_Amtsgericht_Bad_Kreuznach);
+        aufgeloest_Amtsgericht_Birkenfeld = new GerichtCode("aufgeloest_Amtsgericht_Birkenfeld", "T2102");
+        $VALUES.add(aufgeloest_Amtsgericht_Birkenfeld);
+        Amtsgericht_Idar_Oberstein = new GerichtCode("Amtsgericht_Idar_Oberstein", "T2103");
+        $VALUES.add(Amtsgericht_Idar_Oberstein);
+        Grundbuchamt_Idar_Oberstein = new GerichtCode("Grundbuchamt_Idar_Oberstein", "T2103G");
+        $VALUES.add(Grundbuchamt_Idar_Oberstein);
+        Amtsgericht_Idar_Oberstein_Insolvenzgericht = new GerichtCode("Amtsgericht_Idar_Oberstein_Insolvenzgericht", "T2103I");
+        $VALUES.add(Amtsgericht_Idar_Oberstein_Insolvenzgericht);
+        aufgeloest_Amtsgericht_Kirn = new GerichtCode("aufgeloest_Amtsgericht_Kirn", "T2104");
+        $VALUES.add(aufgeloest_Amtsgericht_Kirn);
+        Amtsgericht_Simmern = new GerichtCode("Amtsgericht_Simmern", "T2105");
+        $VALUES.add(Amtsgericht_Simmern);
+        Grundbuchamt_Simmern_Hunsrueck = new GerichtCode("Grundbuchamt_Simmern_Hunsrueck", "T2105G");
+        $VALUES.add(Grundbuchamt_Simmern_Hunsrueck);
+        Amtsgericht_Bad_Sobernheim = new GerichtCode("Amtsgericht_Bad_Sobernheim", "T2106");
+        $VALUES.add(Amtsgericht_Bad_Sobernheim);
+        Grundbuchamt_Bad_Sobernheim = new GerichtCode("Grundbuchamt_Bad_Sobernheim", "T2106G");
+        $VALUES.add(Grundbuchamt_Bad_Sobernheim);
+        aufgeloest_Amtsgericht_Baumholder = new GerichtCode("aufgeloest_Amtsgericht_Baumholder", "T2107");
+        $VALUES.add(aufgeloest_Amtsgericht_Baumholder);
+        aufgeloest_Amtsgericht_Kirchberg = new GerichtCode("aufgeloest_Amtsgericht_Kirchberg", "T2108");
+        $VALUES.add(aufgeloest_Amtsgericht_Kirchberg);
+        aufgeloest_Amtsgericht_Meisenheim = new GerichtCode("aufgeloest_Amtsgericht_Meisenheim", "T2109");
+        $VALUES.add(aufgeloest_Amtsgericht_Meisenheim);
+        aufgeloest_Amtsgericht_Stromberg = new GerichtCode("aufgeloest_Amtsgericht_Stromberg", "T2110");
+        $VALUES.add(aufgeloest_Amtsgericht_Stromberg);
+        Landgericht_Koblenz = new GerichtCode("Landgericht_Koblenz", "T2200");
+        $VALUES.add(Landgericht_Koblenz);
+        Staatsanwaltschaft_beim_Landgericht_Koblenz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Koblenz", "T2200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Koblenz);
+        aufgeloest_Amtsgericht_Bad_Neuenahr_Ahrweiler_Zwst_Adenau = new GerichtCode("aufgeloest_Amtsgericht_Bad_Neuenahr_Ahrweiler_Zwst_Adenau", "T2201");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Neuenahr_Ahrweiler_Zwst_Adenau);
+        Amtsgericht_Altenkirchen = new GerichtCode("Amtsgericht_Altenkirchen", "T2202");
+        $VALUES.add(Amtsgericht_Altenkirchen);
+        Grundbuchamt_Altenkirchen_Westerwald = new GerichtCode("Grundbuchamt_Altenkirchen_Westerwald", "T2202G");
+        $VALUES.add(Grundbuchamt_Altenkirchen_Westerwald);
+        Amtsgericht_Andernach = new GerichtCode("Amtsgericht_Andernach", "T2203");
+        $VALUES.add(Amtsgericht_Andernach);
+        Grundbuchamt_Andernach = new GerichtCode("Grundbuchamt_Andernach", "T2203G");
+        $VALUES.add(Grundbuchamt_Andernach);
+        Amtsgericht_Bad_Neuenahr_Ahrweiler = new GerichtCode("Amtsgericht_Bad_Neuenahr_Ahrweiler", "T2204");
+        $VALUES.add(Amtsgericht_Bad_Neuenahr_Ahrweiler);
+        Grundbuchamt_Bad_Neuenahr_Ahrweiler = new GerichtCode("Grundbuchamt_Bad_Neuenahr_Ahrweiler", "T2204G");
+        $VALUES.add(Grundbuchamt_Bad_Neuenahr_Ahrweiler);
+        Amtsgericht_Bad_Neuenahr_Ahrweiler_Insolvenzgericht = new GerichtCode("Amtsgericht_Bad_Neuenahr_Ahrweiler_Insolvenzgericht", "T2204I");
+        $VALUES.add(Amtsgericht_Bad_Neuenahr_Ahrweiler_Insolvenzgericht);
+        Amtsgericht_Betzdorf = new GerichtCode("Amtsgericht_Betzdorf", "T2205");
+        $VALUES.add(Amtsgericht_Betzdorf);
+        Grundbuchamt_Betzdorf = new GerichtCode("Grundbuchamt_Betzdorf", "T2205G");
+        $VALUES.add(Grundbuchamt_Betzdorf);
+        Amtsgericht_Betzdorf_Insolvenzgericht = new GerichtCode("Amtsgericht_Betzdorf_Insolvenzgericht", "T2205I");
+        $VALUES.add(Amtsgericht_Betzdorf_Insolvenzgericht);
+        aufgeloest_Amtsgericht_Boppard = new GerichtCode("aufgeloest_Amtsgericht_Boppard", "T2206");
+        $VALUES.add(aufgeloest_Amtsgericht_Boppard);
+        Amtsgericht_Cochem = new GerichtCode("Amtsgericht_Cochem", "T2207");
+        $VALUES.add(Amtsgericht_Cochem);
+        Grundbuchamt_Cochem = new GerichtCode("Grundbuchamt_Cochem", "T2207G");
+        $VALUES.add(Grundbuchamt_Cochem);
+        Amtsgericht_Cochem_Insolvenzgericht = new GerichtCode("Amtsgericht_Cochem_Insolvenzgericht", "T2207I");
+        $VALUES.add(Amtsgericht_Cochem_Insolvenzgericht);
+        Amtsgericht_Diez = new GerichtCode("Amtsgericht_Diez", "T2208");
+        $VALUES.add(Amtsgericht_Diez);
+        Grundbuchamt_Diez = new GerichtCode("Grundbuchamt_Diez", "T2208G");
+        $VALUES.add(Grundbuchamt_Diez);
+        aufgeloest_Amtsgericht_Hachenburg = new GerichtCode("aufgeloest_Amtsgericht_Hachenburg", "T2209");
+        $VALUES.add(aufgeloest_Amtsgericht_Hachenburg);
+        Amtsgericht_Koblenz = new GerichtCode("Amtsgericht_Koblenz", "T2210");
+        $VALUES.add(Amtsgericht_Koblenz);
+        Grundbuchamt_Koblenz = new GerichtCode("Grundbuchamt_Koblenz", "T2210G");
+        $VALUES.add(Grundbuchamt_Koblenz);
+        Amtsgericht_Koblenz_Insolvenzgericht = new GerichtCode("Amtsgericht_Koblenz_Insolvenzgericht", "T2210I");
+        $VALUES.add(Amtsgericht_Koblenz_Insolvenzgericht);
+        Registergericht_Amtsgericht_Koblenz = new GerichtCode("Registergericht_Amtsgericht_Koblenz", "T2210V");
+        $VALUES.add(Registergericht_Amtsgericht_Koblenz);
+        Amtsgericht_Lahnstein = new GerichtCode("Amtsgericht_Lahnstein", "T2211");
+        $VALUES.add(Amtsgericht_Lahnstein);
+        Grundbuchamt_Lahnstein = new GerichtCode("Grundbuchamt_Lahnstein", "T2211G");
+        $VALUES.add(Grundbuchamt_Lahnstein);
+        Amtsgericht_Linz_am_Rhein = new GerichtCode("Amtsgericht_Linz_am_Rhein", "T2212");
+        $VALUES.add(Amtsgericht_Linz_am_Rhein);
+        Grundbuchamt_Linz_am_Rhein = new GerichtCode("Grundbuchamt_Linz_am_Rhein", "T2212G");
+        $VALUES.add(Grundbuchamt_Linz_am_Rhein);
+        Amtsgericht_Mayen = new GerichtCode("Amtsgericht_Mayen", "T2213");
+        $VALUES.add(Amtsgericht_Mayen);
+        Grundbuchamt_Mayen = new GerichtCode("Grundbuchamt_Mayen", "T2213G");
+        $VALUES.add(Grundbuchamt_Mayen);
+        Amtsgericht_Mayen_Insolvenzgericht = new GerichtCode("Amtsgericht_Mayen_Insolvenzgericht", "T2213I");
+        $VALUES.add(Amtsgericht_Mayen_Insolvenzgericht);
+        Amtsgericht_Mayen_Gemeinsames_Mahngericht_der_Laender_Rheinland_Pfalz_und_Saarland = new GerichtCode("Amtsgericht_Mayen_Gemeinsames_Mahngericht_der_Laender_Rheinland_Pfalz_und_Saarland", "T2213M");
+        $VALUES.add(Amtsgericht_Mayen_Gemeinsames_Mahngericht_der_Laender_Rheinland_Pfalz_und_Saarland);
+        Amtsgericht_Montabaur = new GerichtCode("Amtsgericht_Montabaur", "T2214");
+        $VALUES.add(Amtsgericht_Montabaur);
+        Grundbuchamt_Montabaur = new GerichtCode("Grundbuchamt_Montabaur", "T2214G");
+        $VALUES.add(Grundbuchamt_Montabaur);
+        Amtsgericht_Montabaur_Insolvenzgericht = new GerichtCode("Amtsgericht_Montabaur_Insolvenzgericht", "T2214I");
+        $VALUES.add(Amtsgericht_Montabaur_Insolvenzgericht);
+        Registergericht_Amtsgericht_Montabaur = new GerichtCode("Registergericht_Amtsgericht_Montabaur", "T2214V");
+        $VALUES.add(Registergericht_Amtsgericht_Montabaur);
+        Amtsgericht_Neuwied = new GerichtCode("Amtsgericht_Neuwied", "T2215");
+        $VALUES.add(Amtsgericht_Neuwied);
+        Grundbuchamt_Neuwied = new GerichtCode("Grundbuchamt_Neuwied", "T2215G");
+        $VALUES.add(Grundbuchamt_Neuwied);
+        Amtsgericht_Neuwied_Insolvenzgericht = new GerichtCode("Amtsgericht_Neuwied_Insolvenzgericht", "T2215I");
+        $VALUES.add(Amtsgericht_Neuwied_Insolvenzgericht);
+        Amtsgericht_St_Goar = new GerichtCode("Amtsgericht_St_Goar", "T2216");
+        $VALUES.add(Amtsgericht_St_Goar);
+        Grundbuchamt_Sankt_Goar = new GerichtCode("Grundbuchamt_Sankt_Goar", "T2216G");
+        $VALUES.add(Grundbuchamt_Sankt_Goar);
+        aufgeloest_Amtsgericht_St_Goarshausen = new GerichtCode("aufgeloest_Amtsgericht_St_Goarshausen", "T2217");
+        $VALUES.add(aufgeloest_Amtsgericht_St_Goarshausen);
+        Amtsgericht_Sinzig = new GerichtCode("Amtsgericht_Sinzig", "T2218");
+        $VALUES.add(Amtsgericht_Sinzig);
+        Grundbuchamt_Sinzig = new GerichtCode("Grundbuchamt_Sinzig", "T2218G");
+        $VALUES.add(Grundbuchamt_Sinzig);
+        Amtsgericht_Westerburg = new GerichtCode("Amtsgericht_Westerburg", "T2219");
+        $VALUES.add(Amtsgericht_Westerburg);
+        Grundbuchamt_Westerburg = new GerichtCode("Grundbuchamt_Westerburg", "T2219G");
+        $VALUES.add(Grundbuchamt_Westerburg);
+        aufgeloest_Amtsgericht_Asbach = new GerichtCode("aufgeloest_Amtsgericht_Asbach", "T2220");
+        $VALUES.add(aufgeloest_Amtsgericht_Asbach);
+        aufgeloest_Amtsgericht_Bad_Ems = new GerichtCode("aufgeloest_Amtsgericht_Bad_Ems", "T2221");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Ems);
+        aufgeloest_Amtsgericht_Daaden = new GerichtCode("aufgeloest_Amtsgericht_Daaden", "T2222");
+        $VALUES.add(aufgeloest_Amtsgericht_Daaden);
+        aufgeloest_Amtsgericht_Dierdorf = new GerichtCode("aufgeloest_Amtsgericht_Dierdorf", "T2223");
+        $VALUES.add(aufgeloest_Amtsgericht_Dierdorf);
+        aufgeloest_Amtsgericht_Hoehr_Grenzhausen = new GerichtCode("aufgeloest_Amtsgericht_Hoehr_Grenzhausen", "T2224");
+        $VALUES.add(aufgeloest_Amtsgericht_Hoehr_Grenzhausen);
+        aufgeloest_Amtsgericht_Kastellaun = new GerichtCode("aufgeloest_Amtsgericht_Kastellaun", "T2225");
+        $VALUES.add(aufgeloest_Amtsgericht_Kastellaun);
+        aufgeloest_Amtsgericht_Kirchen = new GerichtCode("aufgeloest_Amtsgericht_Kirchen", "T2226");
+        $VALUES.add(aufgeloest_Amtsgericht_Kirchen);
+        aufgeloest_Amtsgericht_Marienberg = new GerichtCode("aufgeloest_Amtsgericht_Marienberg", "T2227");
+        $VALUES.add(aufgeloest_Amtsgericht_Marienberg);
+        aufgeloest_Amtsgericht_Muenstermaifeld = new GerichtCode("aufgeloest_Amtsgericht_Muenstermaifeld", "T2228");
+        $VALUES.add(aufgeloest_Amtsgericht_Muenstermaifeld);
+        aufgeloest_Amtsgericht_Nassau = new GerichtCode("aufgeloest_Amtsgericht_Nassau", "T2229");
+        $VALUES.add(aufgeloest_Amtsgericht_Nassau);
+        aufgeloest_Amtsgericht_Nastaetten = new GerichtCode("aufgeloest_Amtsgericht_Nastaetten", "T2230");
+        $VALUES.add(aufgeloest_Amtsgericht_Nastaetten);
+        aufgeloest_Amtsgericht_Rennerod = new GerichtCode("aufgeloest_Amtsgericht_Rennerod", "T2231");
+        $VALUES.add(aufgeloest_Amtsgericht_Rennerod);
+        aufgeloest_Amtsgericht_Selters = new GerichtCode("aufgeloest_Amtsgericht_Selters", "T2232");
+        $VALUES.add(aufgeloest_Amtsgericht_Selters);
+        aufgeloest_Amtsgericht_Traben_Trarbach = new GerichtCode("aufgeloest_Amtsgericht_Traben_Trarbach", "T2233");
+        $VALUES.add(aufgeloest_Amtsgericht_Traben_Trarbach);
+        aufgeloest_Amtsgericht_Wallmerod = new GerichtCode("aufgeloest_Amtsgericht_Wallmerod", "T2234");
+        $VALUES.add(aufgeloest_Amtsgericht_Wallmerod);
+        aufgeloest_Amtsgericht_Wissen = new GerichtCode("aufgeloest_Amtsgericht_Wissen", "T2235");
+        $VALUES.add(aufgeloest_Amtsgericht_Wissen);
+        aufgeloest_Amtsgericht_Zell = new GerichtCode("aufgeloest_Amtsgericht_Zell", "T2236");
+        $VALUES.add(aufgeloest_Amtsgericht_Zell);
+        Landgericht_Mainz = new GerichtCode("Landgericht_Mainz", "T2300");
+        $VALUES.add(Landgericht_Mainz);
+        Staatsanwaltschaft_beim_Landgericht_Mainz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Mainz", "T2300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Mainz);
+        Amtsgericht_Alzey = new GerichtCode("Amtsgericht_Alzey", "T2301");
+        $VALUES.add(Amtsgericht_Alzey);
+        Grundbuchamt_Alzey = new GerichtCode("Grundbuchamt_Alzey", "T2301G");
+        $VALUES.add(Grundbuchamt_Alzey);
+        Amtsgericht_Alzey_Insolvenzgericht = new GerichtCode("Amtsgericht_Alzey_Insolvenzgericht", "T2301I");
+        $VALUES.add(Amtsgericht_Alzey_Insolvenzgericht);
+        Amtsgericht_Bingen = new GerichtCode("Amtsgericht_Bingen", "T2302");
+        $VALUES.add(Amtsgericht_Bingen);
+        Grundbuchamt_Bingen_am_Rhein = new GerichtCode("Grundbuchamt_Bingen_am_Rhein", "T2302G");
+        $VALUES.add(Grundbuchamt_Bingen_am_Rhein);
+        Amtsgericht_Bingen_am_Rhein_Insolvenzgericht = new GerichtCode("Amtsgericht_Bingen_am_Rhein_Insolvenzgericht", "T2302I");
+        $VALUES.add(Amtsgericht_Bingen_am_Rhein_Insolvenzgericht);
+        aufgeloest_Amtsgericht_Bingen_Zwst_Ingelheim_am_Rhein = new GerichtCode("aufgeloest_Amtsgericht_Bingen_Zwst_Ingelheim_am_Rhein", "T2303");
+        $VALUES.add(aufgeloest_Amtsgericht_Bingen_Zwst_Ingelheim_am_Rhein);
+        Amtsgericht_Mainz = new GerichtCode("Amtsgericht_Mainz", "T2304");
+        $VALUES.add(Amtsgericht_Mainz);
+        Grundbuchamt_Mainz = new GerichtCode("Grundbuchamt_Mainz", "T2304G");
+        $VALUES.add(Grundbuchamt_Mainz);
+        Amtsgericht_Mainz_Insolvenzgericht = new GerichtCode("Amtsgericht_Mainz_Insolvenzgericht", "T2304I");
+        $VALUES.add(Amtsgericht_Mainz_Insolvenzgericht);
+        Registergericht_Amtsgericht_Mainz = new GerichtCode("Registergericht_Amtsgericht_Mainz", "T2304V");
+        $VALUES.add(Registergericht_Amtsgericht_Mainz);
+        aufgeloest_Amtsgericht_Oppenheim = new GerichtCode("aufgeloest_Amtsgericht_Oppenheim", "T2305");
+        $VALUES.add(aufgeloest_Amtsgericht_Oppenheim);
+        aufgeloest_Amtsgericht_Woellstein = new GerichtCode("aufgeloest_Amtsgericht_Woellstein", "T2306");
+        $VALUES.add(aufgeloest_Amtsgericht_Woellstein);
+        Amtsgericht_Worms = new GerichtCode("Amtsgericht_Worms", "T2307");
+        $VALUES.add(Amtsgericht_Worms);
+        Grundbuchamt_Worms = new GerichtCode("Grundbuchamt_Worms", "T2307G");
+        $VALUES.add(Grundbuchamt_Worms);
+        Amtsgericht_Worms_Insolvenzgericht = new GerichtCode("Amtsgericht_Worms_Insolvenzgericht", "T2307I");
+        $VALUES.add(Amtsgericht_Worms_Insolvenzgericht);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Mainz_Zwst_Worms = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Mainz_Zwst_Worms", "T2307S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Mainz_Zwst_Worms);
+        aufgeloest_Amtsgericht_Woerrstadt = new GerichtCode("aufgeloest_Amtsgericht_Woerrstadt", "T2308");
+        $VALUES.add(aufgeloest_Amtsgericht_Woerrstadt);
+        Landgericht_Trier = new GerichtCode("Landgericht_Trier", "T2400");
+        $VALUES.add(Landgericht_Trier);
+        Staatsanwaltschaft_beim_Landgericht_Trier = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Trier", "T2400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Trier);
+        Amtsgericht_Bernkastel_Kues = new GerichtCode("Amtsgericht_Bernkastel_Kues", "T2401");
+        $VALUES.add(Amtsgericht_Bernkastel_Kues);
+        Grundbuchamt_Bernkastel_Kues = new GerichtCode("Grundbuchamt_Bernkastel_Kues", "T2401G");
+        $VALUES.add(Grundbuchamt_Bernkastel_Kues);
+        Amtsgericht_Bitburg = new GerichtCode("Amtsgericht_Bitburg", "T2402");
+        $VALUES.add(Amtsgericht_Bitburg);
+        Grundbuchamt_Bitburg = new GerichtCode("Grundbuchamt_Bitburg", "T2402G");
+        $VALUES.add(Grundbuchamt_Bitburg);
+        Amtsgericht_Bitburg_Insolvenzgericht = new GerichtCode("Amtsgericht_Bitburg_Insolvenzgericht", "T2402I");
+        $VALUES.add(Amtsgericht_Bitburg_Insolvenzgericht);
+        Amtsgericht_Daun = new GerichtCode("Amtsgericht_Daun", "T2403");
+        $VALUES.add(Amtsgericht_Daun);
+        Grundbuchamt_Daun = new GerichtCode("Grundbuchamt_Daun", "T2403G");
+        $VALUES.add(Grundbuchamt_Daun);
+        Amtsgericht_Hermeskeil = new GerichtCode("Amtsgericht_Hermeskeil", "T2404");
+        $VALUES.add(Amtsgericht_Hermeskeil);
+        Grundbuchamt_Hermeskeil = new GerichtCode("Grundbuchamt_Hermeskeil", "T2404G");
+        $VALUES.add(Grundbuchamt_Hermeskeil);
+        Amtsgericht_Pruem = new GerichtCode("Amtsgericht_Pruem", "T2405");
+        $VALUES.add(Amtsgericht_Pruem);
+        Grundbuchamt_Pruem = new GerichtCode("Grundbuchamt_Pruem", "T2405G");
+        $VALUES.add(Grundbuchamt_Pruem);
+        Amtsgericht_Saarburg = new GerichtCode("Amtsgericht_Saarburg", "T2406");
+        $VALUES.add(Amtsgericht_Saarburg);
+        Grundbuchamt_Saarburg = new GerichtCode("Grundbuchamt_Saarburg", "T2406G");
+        $VALUES.add(Grundbuchamt_Saarburg);
+        Amtsgericht_Trier = new GerichtCode("Amtsgericht_Trier", "T2407");
+        $VALUES.add(Amtsgericht_Trier);
+        Grundbuchamt_Trier = new GerichtCode("Grundbuchamt_Trier", "T2407G");
+        $VALUES.add(Grundbuchamt_Trier);
+        Amtsgericht_Trier_Insolvenzgericht = new GerichtCode("Amtsgericht_Trier_Insolvenzgericht", "T2407I");
+        $VALUES.add(Amtsgericht_Trier_Insolvenzgericht);
+        Amtsgericht_Wittlich = new GerichtCode("Amtsgericht_Wittlich", "T2408");
+        $VALUES.add(Amtsgericht_Wittlich);
+        Grundbuchamt_Wittlich = new GerichtCode("Grundbuchamt_Wittlich", "T2408G");
+        $VALUES.add(Grundbuchamt_Wittlich);
+        Amtsgericht_Wittlich_Insolvenzgericht = new GerichtCode("Amtsgericht_Wittlich_Insolvenzgericht", "T2408I");
+        $VALUES.add(Amtsgericht_Wittlich_Insolvenzgericht);
+        Registergericht_Amtsgericht_Wittlich = new GerichtCode("Registergericht_Amtsgericht_Wittlich", "T2408V");
+        $VALUES.add(Registergericht_Amtsgericht_Wittlich);
+        aufgeloest_Amtsgericht_Hillesheim = new GerichtCode("aufgeloest_Amtsgericht_Hillesheim", "T2409");
+        $VALUES.add(aufgeloest_Amtsgericht_Hillesheim);
+        aufgeloest_Amtsgericht_Neuerburg = new GerichtCode("aufgeloest_Amtsgericht_Neuerburg", "T2410");
+        $VALUES.add(aufgeloest_Amtsgericht_Neuerburg);
+        aufgeloest_Amtsgericht_Neumagen = new GerichtCode("aufgeloest_Amtsgericht_Neumagen", "T2411");
+        $VALUES.add(aufgeloest_Amtsgericht_Neumagen);
+        aufgeloest_Amtsgericht_Rhaunen = new GerichtCode("aufgeloest_Amtsgericht_Rhaunen", "T2412");
+        $VALUES.add(aufgeloest_Amtsgericht_Rhaunen);
+        aufgeloest_Amtsgericht_Waxweiler = new GerichtCode("aufgeloest_Amtsgericht_Waxweiler", "T2413");
+        $VALUES.add(aufgeloest_Amtsgericht_Waxweiler);
+        Oberlandesgericht_Zweibruecken = new GerichtCode("Oberlandesgericht_Zweibruecken", "T3000");
+        $VALUES.add(Oberlandesgericht_Zweibruecken);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Zweibruecken = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Zweibruecken", "T3000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Zweibruecken);
+        Landgericht_Frankenthal = new GerichtCode("Landgericht_Frankenthal", "T3100");
+        $VALUES.add(Landgericht_Frankenthal);
+        Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz", "T3100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz);
+        Amtsgericht_Bad_Duerkheim = new GerichtCode("Amtsgericht_Bad_Duerkheim", "T3101");
+        $VALUES.add(Amtsgericht_Bad_Duerkheim);
+        Grundbuchamt_Bad_Duerkheim = new GerichtCode("Grundbuchamt_Bad_Duerkheim", "T3101G");
+        $VALUES.add(Grundbuchamt_Bad_Duerkheim);
+        Amtsgericht_Frankenthal = new GerichtCode("Amtsgericht_Frankenthal", "T3102");
+        $VALUES.add(Amtsgericht_Frankenthal);
+        Grundbuchamt_Frankenthal_Pfalz = new GerichtCode("Grundbuchamt_Frankenthal_Pfalz", "T3102G");
+        $VALUES.add(Grundbuchamt_Frankenthal_Pfalz);
+        Amtsgericht_Gruenstadt = new GerichtCode("Amtsgericht_Gruenstadt", "T3103");
+        $VALUES.add(Amtsgericht_Gruenstadt);
+        Grundbuchamt_Gruenstadt = new GerichtCode("Grundbuchamt_Gruenstadt", "T3103G");
+        $VALUES.add(Grundbuchamt_Gruenstadt);
+        Amtsgericht_Ludwigshafen_a_Rhein = new GerichtCode("Amtsgericht_Ludwigshafen_a_Rhein", "T3104");
+        $VALUES.add(Amtsgericht_Ludwigshafen_a_Rhein);
+        Grundbuchamt_Ludwigshafen_am_Rhein = new GerichtCode("Grundbuchamt_Ludwigshafen_am_Rhein", "T3104G");
+        $VALUES.add(Grundbuchamt_Ludwigshafen_am_Rhein);
+        Amtsgericht_Ludwigshafen_am_Rhein_Insolvenzgericht = new GerichtCode("Amtsgericht_Ludwigshafen_am_Rhein_Insolvenzgericht", "T3104I");
+        $VALUES.add(Amtsgericht_Ludwigshafen_am_Rhein_Insolvenzgericht);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz_Zwst_Ludwigshafen_Rhein = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz_Zwst_Ludwigshafen_Rhein", "T3104S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Frankenthal_Pfalz_Zwst_Ludwigshafen_Rhein);
+        Registergericht_Amtsgericht_Ludwigshafen_am_Rhein = new GerichtCode("Registergericht_Amtsgericht_Ludwigshafen_am_Rhein", "T3104V");
+        $VALUES.add(Registergericht_Amtsgericht_Ludwigshafen_am_Rhein);
+        Amtsgericht_Neustadt_an_der_Weinstrasse = new GerichtCode("Amtsgericht_Neustadt_an_der_Weinstrasse", "T3105");
+        $VALUES.add(Amtsgericht_Neustadt_an_der_Weinstrasse);
+        Grundbuchamt_Neustadt_an_der_Weinstrasse = new GerichtCode("Grundbuchamt_Neustadt_an_der_Weinstrasse", "T3105G");
+        $VALUES.add(Grundbuchamt_Neustadt_an_der_Weinstrasse);
+        Amtsgericht_Neustadt_an_der_Weinstrasse_Insolvenzgericht = new GerichtCode("Amtsgericht_Neustadt_an_der_Weinstrasse_Insolvenzgericht", "T3105I");
+        $VALUES.add(Amtsgericht_Neustadt_an_der_Weinstrasse_Insolvenzgericht);
+        Amtsgericht_Speyer = new GerichtCode("Amtsgericht_Speyer", "T3106");
+        $VALUES.add(Amtsgericht_Speyer);
+        Grundbuchamt_Speyer = new GerichtCode("Grundbuchamt_Speyer", "T3106G");
+        $VALUES.add(Grundbuchamt_Speyer);
+        Landgericht_Kaiserslautern = new GerichtCode("Landgericht_Kaiserslautern", "T3200");
+        $VALUES.add(Landgericht_Kaiserslautern);
+        Staatsanwaltschaft_beim_Landgericht_Kaiserslautern = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Kaiserslautern", "T3200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Kaiserslautern);
+        Amtsgericht_Kaiserslautern = new GerichtCode("Amtsgericht_Kaiserslautern", "T3201");
+        $VALUES.add(Amtsgericht_Kaiserslautern);
+        Grundbuchamt_Kaiserslautern = new GerichtCode("Grundbuchamt_Kaiserslautern", "T3201G");
+        $VALUES.add(Grundbuchamt_Kaiserslautern);
+        Amtsgericht_Kaiserslautern_Insolvenzgericht = new GerichtCode("Amtsgericht_Kaiserslautern_Insolvenzgericht", "T3201I");
+        $VALUES.add(Amtsgericht_Kaiserslautern_Insolvenzgericht);
+        Amtsgericht_Kaiserslautern_Zentrales_Vollstreckungsgericht_Rheinland_Pfalz = new GerichtCode("Amtsgericht_Kaiserslautern_Zentrales_Vollstreckungsgericht_Rheinland_Pfalz", "T3201R");
+        $VALUES.add(Amtsgericht_Kaiserslautern_Zentrales_Vollstreckungsgericht_Rheinland_Pfalz);
+        Registergericht_Amtsgericht_Kaiserslautern = new GerichtCode("Registergericht_Amtsgericht_Kaiserslautern", "T3201V");
+        $VALUES.add(Registergericht_Amtsgericht_Kaiserslautern);
+        aufgeloest_Amtsgericht_Kirchheimbolanden = new GerichtCode("aufgeloest_Amtsgericht_Kirchheimbolanden", "T3202");
+        $VALUES.add(aufgeloest_Amtsgericht_Kirchheimbolanden);
+        Amtsgericht_Kusel = new GerichtCode("Amtsgericht_Kusel", "T3203");
+        $VALUES.add(Amtsgericht_Kusel);
+        Grundbuchamt_Kusel = new GerichtCode("Grundbuchamt_Kusel", "T3203G");
+        $VALUES.add(Grundbuchamt_Kusel);
+        aufgeloest_Amtsgericht_Lauterecken = new GerichtCode("aufgeloest_Amtsgericht_Lauterecken", "T3204");
+        $VALUES.add(aufgeloest_Amtsgericht_Lauterecken);
+        Amtsgericht_Rockenhausen = new GerichtCode("Amtsgericht_Rockenhausen", "T3205");
+        $VALUES.add(Amtsgericht_Rockenhausen);
+        Grundbuchamt_Rockenhausen = new GerichtCode("Grundbuchamt_Rockenhausen", "T3205G");
+        $VALUES.add(Grundbuchamt_Rockenhausen);
+        aufgeloest_Amtsgericht_Obermoschel = new GerichtCode("aufgeloest_Amtsgericht_Obermoschel", "T3206");
+        $VALUES.add(aufgeloest_Amtsgericht_Obermoschel);
+        aufgeloest_Amtsgericht_Winnweiler = new GerichtCode("aufgeloest_Amtsgericht_Winnweiler", "T3207");
+        $VALUES.add(aufgeloest_Amtsgericht_Winnweiler);
+        aufgeloest_Amtsgericht_Wolfstein = new GerichtCode("aufgeloest_Amtsgericht_Wolfstein", "T3208");
+        $VALUES.add(aufgeloest_Amtsgericht_Wolfstein);
+        Landgericht_Landau_Pfalz = new GerichtCode("Landgericht_Landau_Pfalz", "T3300");
+        $VALUES.add(Landgericht_Landau_Pfalz);
+        Staatsanwaltschaft_beim_Landgericht_Landau_in_der_Pfalz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Landau_in_der_Pfalz", "T3300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Landau_in_der_Pfalz);
+        Amtsgericht_Landau_Zweigstelle_Bad_Bergzabern = new GerichtCode("Amtsgericht_Landau_Zweigstelle_Bad_Bergzabern", "T3301");
+        $VALUES.add(Amtsgericht_Landau_Zweigstelle_Bad_Bergzabern);
+        Grundbuchamt_Bad_Bergzabern = new GerichtCode("Grundbuchamt_Bad_Bergzabern", "T3301G");
+        $VALUES.add(Grundbuchamt_Bad_Bergzabern);
+        Amtsgericht_Germersheim = new GerichtCode("Amtsgericht_Germersheim", "T3302");
+        $VALUES.add(Amtsgericht_Germersheim);
+        Grundbuchamt_Germersheim = new GerichtCode("Grundbuchamt_Germersheim", "T3302G");
+        $VALUES.add(Grundbuchamt_Germersheim);
+        Amtsgericht_Kandel = new GerichtCode("Amtsgericht_Kandel", "T3303");
+        $VALUES.add(Amtsgericht_Kandel);
+        Grundbuchamt_Kandel = new GerichtCode("Grundbuchamt_Kandel", "T3303G");
+        $VALUES.add(Grundbuchamt_Kandel);
+        Amtsgericht_Landau_Pfalz = new GerichtCode("Amtsgericht_Landau_Pfalz", "T3304");
+        $VALUES.add(Amtsgericht_Landau_Pfalz);
+        Grundbuchamt_Landau_in_der_Pfalz = new GerichtCode("Grundbuchamt_Landau_in_der_Pfalz", "T3304G");
+        $VALUES.add(Grundbuchamt_Landau_in_der_Pfalz);
+        Amtsgericht_Landau_in_der_Pfalz_Insolvenzgericht = new GerichtCode("Amtsgericht_Landau_in_der_Pfalz_Insolvenzgericht", "T3304I");
+        $VALUES.add(Amtsgericht_Landau_in_der_Pfalz_Insolvenzgericht);
+        Registergericht_Amtsgericht_Landau_in_der_Pfalz = new GerichtCode("Registergericht_Amtsgericht_Landau_in_der_Pfalz", "T3304V");
+        $VALUES.add(Registergericht_Amtsgericht_Landau_in_der_Pfalz);
+        aufgeloest_Amtsgericht_Annweiler = new GerichtCode("aufgeloest_Amtsgericht_Annweiler", "T3305");
+        $VALUES.add(aufgeloest_Amtsgericht_Annweiler);
+        aufgeloest_Amtsgericht_Edenkoben = new GerichtCode("aufgeloest_Amtsgericht_Edenkoben", "T3306");
+        $VALUES.add(aufgeloest_Amtsgericht_Edenkoben);
+        Landgericht_Zweibruecken = new GerichtCode("Landgericht_Zweibruecken", "T3400");
+        $VALUES.add(Landgericht_Zweibruecken);
+        Staatsanwaltschaft_beim_Landgericht_Zweibruecken = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Zweibruecken", "T3400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Zweibruecken);
+        Amtsgericht_Landstuhl = new GerichtCode("Amtsgericht_Landstuhl", "T3401");
+        $VALUES.add(Amtsgericht_Landstuhl);
+        Grundbuchamt_Landstuhl = new GerichtCode("Grundbuchamt_Landstuhl", "T3401G");
+        $VALUES.add(Grundbuchamt_Landstuhl);
+        Amtsgericht_Pirmasens = new GerichtCode("Amtsgericht_Pirmasens", "T3402");
+        $VALUES.add(Amtsgericht_Pirmasens);
+        Grundbuchamt_Pirmasens = new GerichtCode("Grundbuchamt_Pirmasens", "T3402G");
+        $VALUES.add(Grundbuchamt_Pirmasens);
+        Amtsgericht_Pirmasens_Insolvenzgericht = new GerichtCode("Amtsgericht_Pirmasens_Insolvenzgericht", "T3402I");
+        $VALUES.add(Amtsgericht_Pirmasens_Insolvenzgericht);
+        Amtsgericht_Zweibruecken = new GerichtCode("Amtsgericht_Zweibruecken", "T3403");
+        $VALUES.add(Amtsgericht_Zweibruecken);
+        Grundbuchamt_Zweibruecken = new GerichtCode("Grundbuchamt_Zweibruecken", "T3403G");
+        $VALUES.add(Grundbuchamt_Zweibruecken);
+        Amtsgericht_Zweibruecken_Insolvenzgericht = new GerichtCode("Amtsgericht_Zweibruecken_Insolvenzgericht", "T3403I");
+        $VALUES.add(Amtsgericht_Zweibruecken_Insolvenzgericht);
+        Registergericht_Amtsgericht_Zweibruecken = new GerichtCode("Registergericht_Amtsgericht_Zweibruecken", "T3403V");
+        $VALUES.add(Registergericht_Amtsgericht_Zweibruecken);
+        aufgeloest_Amtsgericht_Dahn = new GerichtCode("aufgeloest_Amtsgericht_Dahn", "T3404");
+        $VALUES.add(aufgeloest_Amtsgericht_Dahn);
+        aufgeloest_Amtsgericht_Waldfischbach = new GerichtCode("aufgeloest_Amtsgericht_Waldfischbach", "T3405");
+        $VALUES.add(aufgeloest_Amtsgericht_Waldfischbach);
+        aufgeloest_Amtsgericht_Waldmohr = new GerichtCode("aufgeloest_Amtsgericht_Waldmohr", "T3406");
+        $VALUES.add(aufgeloest_Amtsgericht_Waldmohr);
+        Arbeitsgericht_Kaiserslautern = new GerichtCode("Arbeitsgericht_Kaiserslautern", "T6072");
+        $VALUES.add(Arbeitsgericht_Kaiserslautern);
+        Sozialgericht_Koblenz = new GerichtCode("Sozialgericht_Koblenz", "T6073");
+        $VALUES.add(Sozialgericht_Koblenz);
+        Oberverwaltungsgericht_Rheinland_Pfalz = new GerichtCode("Oberverwaltungsgericht_Rheinland_Pfalz", "T6074");
+        $VALUES.add(Oberverwaltungsgericht_Rheinland_Pfalz);
+        Verfassungsgerichtshof_Rheinland_Pfalz = new GerichtCode("Verfassungsgerichtshof_Rheinland_Pfalz", "T6075");
+        $VALUES.add(Verfassungsgerichtshof_Rheinland_Pfalz);
+        Verwaltungsgericht_Koblenz = new GerichtCode("Verwaltungsgericht_Koblenz", "T6076");
+        $VALUES.add(Verwaltungsgericht_Koblenz);
+        Arbeitsgericht_Koblenz = new GerichtCode("Arbeitsgericht_Koblenz", "T6077");
+        $VALUES.add(Arbeitsgericht_Koblenz);
+        Arbeitsgericht_Ludwigshafen = new GerichtCode("Arbeitsgericht_Ludwigshafen", "T6078");
+        $VALUES.add(Arbeitsgericht_Ludwigshafen);
+        Landessozialgericht_Rheinland_Pfalz = new GerichtCode("Landessozialgericht_Rheinland_Pfalz", "T6079");
+        $VALUES.add(Landessozialgericht_Rheinland_Pfalz);
+        Arbeitsgericht_Mainz = new GerichtCode("Arbeitsgericht_Mainz", "T6080");
+        $VALUES.add(Arbeitsgericht_Mainz);
+        Landesarbeitsgericht_Rheinland_Pfalz = new GerichtCode("Landesarbeitsgericht_Rheinland_Pfalz", "T6081");
+        $VALUES.add(Landesarbeitsgericht_Rheinland_Pfalz);
+        Verwaltungsgericht_Mainz = new GerichtCode("Verwaltungsgericht_Mainz", "T6082");
+        $VALUES.add(Verwaltungsgericht_Mainz);
+        Verwaltungsgericht_Neustadt_an_der_Weinstrasse = new GerichtCode("Verwaltungsgericht_Neustadt_an_der_Weinstrasse", "T6083");
+        $VALUES.add(Verwaltungsgericht_Neustadt_an_der_Weinstrasse);
+        Finanzgericht_Rheinland_Pfalz = new GerichtCode("Finanzgericht_Rheinland_Pfalz", "T6084");
+        $VALUES.add(Finanzgericht_Rheinland_Pfalz);
+        Verwaltungsgericht_Trier = new GerichtCode("Verwaltungsgericht_Trier", "T6085");
+        $VALUES.add(Verwaltungsgericht_Trier);
+        Sozialgericht_Trier = new GerichtCode("Sozialgericht_Trier", "T6086");
+        $VALUES.add(Sozialgericht_Trier);
+        Arbeitsgericht_Trier = new GerichtCode("Arbeitsgericht_Trier", "T6121");
+        $VALUES.add(Arbeitsgericht_Trier);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koblenz = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koblenz", "T6176");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_Koblenz);
+        Anwaltsgericht_fuer_den_Bezirk_der_Pfaelzischen_Rechtsanwaltskammer = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Pfaelzischen_Rechtsanwaltskammer", "T6182");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Pfaelzischen_Rechtsanwaltskammer);
+        Anwaltsgerichtshof_Rheinland_Pfalz = new GerichtCode("Anwaltsgerichtshof_Rheinland_Pfalz", "T6183");
+        $VALUES.add(Anwaltsgerichtshof_Rheinland_Pfalz);
+        Sozialgericht_Mainz = new GerichtCode("Sozialgericht_Mainz", "T6221");
+        $VALUES.add(Sozialgericht_Mainz);
+        Sozialgericht_Speyer = new GerichtCode("Sozialgericht_Speyer", "T6252");
+        $VALUES.add(Sozialgericht_Speyer);
+        Jugendstrafanstalt_Schifferstadt = new GerichtCode("Jugendstrafanstalt_Schifferstadt", "T6311");
+        $VALUES.add(Jugendstrafanstalt_Schifferstadt);
+        Jugendarrestanstalt_Worms = new GerichtCode("Jugendarrestanstalt_Worms", "T6347");
+        $VALUES.add(Jugendarrestanstalt_Worms);
+        Arbeitsgericht_Kaiserslautern_Auswaertige_Kammern_Pirmasens = new GerichtCode("Arbeitsgericht_Kaiserslautern_Auswaertige_Kammern_Pirmasens", "T6840");
+        $VALUES.add(Arbeitsgericht_Kaiserslautern_Auswaertige_Kammern_Pirmasens);
+        Arbeitsgericht_Ludwigshafen_am_Rhein_Auswaertige_Kammern_Landau_i_d_Pfalz = new GerichtCode("Arbeitsgericht_Ludwigshafen_am_Rhein_Auswaertige_Kammern_Landau_i_d_Pfalz", "T6841");
+        $VALUES.add(Arbeitsgericht_Ludwigshafen_am_Rhein_Auswaertige_Kammern_Landau_i_d_Pfalz);
+        Arbeitsgericht_Mainz_Auswaertige_Kammern_Bad_Kreuznach = new GerichtCode("Arbeitsgericht_Mainz_Auswaertige_Kammern_Bad_Kreuznach", "T6842");
+        $VALUES.add(Arbeitsgericht_Mainz_Auswaertige_Kammern_Bad_Kreuznach);
+        Justizvollzugsanstalt_Frankenthal = new GerichtCode("Justizvollzugsanstalt_Frankenthal", "T7894");
+        $VALUES.add(Justizvollzugsanstalt_Frankenthal);
+        Justizvollzugsanstalt_Koblenz = new GerichtCode("Justizvollzugsanstalt_Koblenz", "T7895");
+        $VALUES.add(Justizvollzugsanstalt_Koblenz);
+        Justizvollzugsanstalt_Wittlich = new GerichtCode("Justizvollzugsanstalt_Wittlich", "T7913");
+        $VALUES.add(Justizvollzugsanstalt_Wittlich);
+        Justizvollzugsanstalt_Diez = new GerichtCode("Justizvollzugsanstalt_Diez", "T7929");
+        $VALUES.add(Justizvollzugsanstalt_Diez);
+        Justizvollzugsanstalt_Trier = new GerichtCode("Justizvollzugsanstalt_Trier", "T7945");
+        $VALUES.add(Justizvollzugsanstalt_Trier);
+        Justizvollzugsanstalt_Ludwigshafen_Sozialtherapeutische_Anstalt = new GerichtCode("Justizvollzugsanstalt_Ludwigshafen_Sozialtherapeutische_Anstalt", "T7946");
+        $VALUES.add(Justizvollzugsanstalt_Ludwigshafen_Sozialtherapeutische_Anstalt);
+        Justizvollzugsanstalt_Rohrbach = new GerichtCode("Justizvollzugsanstalt_Rohrbach", "T7947");
+        $VALUES.add(Justizvollzugsanstalt_Rohrbach);
+        Justizvollzugsanstalt_Zweibruecken = new GerichtCode("Justizvollzugsanstalt_Zweibruecken", "T7948");
+        $VALUES.add(Justizvollzugsanstalt_Zweibruecken);
+        Jugendstrafanstalt_Wittlich = new GerichtCode("Jugendstrafanstalt_Wittlich", "T7966");
+        $VALUES.add(Jugendstrafanstalt_Wittlich);
+        Oberlandesgericht_Dresden = new GerichtCode("Oberlandesgericht_Dresden", "U1000");
+        $VALUES.add(Oberlandesgericht_Dresden);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Dresden = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Dresden", "U1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Dresden);
+        Justizvollzugsanstalt_Zwickau = new GerichtCode("Justizvollzugsanstalt_Zwickau", "U1001");
+        $VALUES.add(Justizvollzugsanstalt_Zwickau);
+        Landgericht_Dresden = new GerichtCode("Landgericht_Dresden", "U1100");
+        $VALUES.add(Landgericht_Dresden);
+        Staatsanwaltschaft_beim_Landgericht_Dresden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Dresden", "U1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Dresden);
+        Amtsgericht_Bautzen = new GerichtCode("Amtsgericht_Bautzen", "U1101");
+        $VALUES.add(Amtsgericht_Bautzen);
+        Grundbuchamt_Bautzen = new GerichtCode("Grundbuchamt_Bautzen", "U1101G");
+        $VALUES.add(Grundbuchamt_Bautzen);
+        aufgeloest_Amtsgericht_Bischofswerda = new GerichtCode("aufgeloest_Amtsgericht_Bischofswerda", "U1102");
+        $VALUES.add(aufgeloest_Amtsgericht_Bischofswerda);
+        Amtsgericht_Dippoldiswalde = new GerichtCode("Amtsgericht_Dippoldiswalde", "U1103");
+        $VALUES.add(Amtsgericht_Dippoldiswalde);
+        Grundbuchamt_Dippoldiswalde = new GerichtCode("Grundbuchamt_Dippoldiswalde", "U1103G");
+        $VALUES.add(Grundbuchamt_Dippoldiswalde);
+        Amtsgericht_Dresden = new GerichtCode("Amtsgericht_Dresden", "U1104");
+        $VALUES.add(Amtsgericht_Dresden);
+        Grundbuchamt_Dresden = new GerichtCode("Grundbuchamt_Dresden", "U1104G");
+        $VALUES.add(Grundbuchamt_Dresden);
+        aufgeloest_Amtsgericht_Dresden_Land = new GerichtCode("aufgeloest_Amtsgericht_Dresden_Land", "U1105");
+        $VALUES.add(aufgeloest_Amtsgericht_Dresden_Land);
+        aufgeloest_Amtsgericht_Dippoldiswalde_Zwst_Freital = new GerichtCode("aufgeloest_Amtsgericht_Dippoldiswalde_Zwst_Freital", "U1106");
+        $VALUES.add(aufgeloest_Amtsgericht_Dippoldiswalde_Zwst_Freital);
+        Amtsgericht_Goerlitz = new GerichtCode("Amtsgericht_Goerlitz", "U1107");
+        $VALUES.add(Amtsgericht_Goerlitz);
+        Grundbuchamt_Goerlitz = new GerichtCode("Grundbuchamt_Goerlitz", "U1107G");
+        $VALUES.add(Grundbuchamt_Goerlitz);
+        aufgeloest_Amtsgericht_Grossenhain = new GerichtCode("aufgeloest_Amtsgericht_Grossenhain", "U1108");
+        $VALUES.add(aufgeloest_Amtsgericht_Grossenhain);
+        Amtsgericht_Hoyerswerda = new GerichtCode("Amtsgericht_Hoyerswerda", "U1109");
+        $VALUES.add(Amtsgericht_Hoyerswerda);
+        Grundbuchamt_Hoyerswerda = new GerichtCode("Grundbuchamt_Hoyerswerda", "U1109G");
+        $VALUES.add(Grundbuchamt_Hoyerswerda);
+        Staatsanwaltschaft_beim_Landgericht_Hoyerswerda_Zwst_der_StA_Bautzen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Hoyerswerda_Zwst_der_StA_Bautzen", "U1109S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Hoyerswerda_Zwst_der_StA_Bautzen);
+        Amtsgericht_Kamenz = new GerichtCode("Amtsgericht_Kamenz", "U1110");
+        $VALUES.add(Amtsgericht_Kamenz);
+        Grundbuchamt_Kamenz = new GerichtCode("Grundbuchamt_Kamenz", "U1110G");
+        $VALUES.add(Grundbuchamt_Kamenz);
+        aufgeloest_Amtsgericht_Zittau_Zweigstelle_Loebau = new GerichtCode("aufgeloest_Amtsgericht_Zittau_Zweigstelle_Loebau", "U1111");
+        $VALUES.add(aufgeloest_Amtsgericht_Zittau_Zweigstelle_Loebau);
+        Amtsgericht_Meissen = new GerichtCode("Amtsgericht_Meissen", "U1112");
+        $VALUES.add(Amtsgericht_Meissen);
+        Grundbuchamt_Meissen = new GerichtCode("Grundbuchamt_Meissen", "U1112G");
+        $VALUES.add(Grundbuchamt_Meissen);
+        Staatsanwaltschaft_beim_Landgericht_Meissen_Zwst_der_StA_Dresden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Meissen_Zwst_der_StA_Dresden", "U1112S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Meissen_Zwst_der_StA_Dresden);
+        aufgeloest_Amtsgericht_Weisswasser_Zwst_Niesky = new GerichtCode("aufgeloest_Amtsgericht_Weisswasser_Zwst_Niesky", "U1113");
+        $VALUES.add(aufgeloest_Amtsgericht_Weisswasser_Zwst_Niesky);
+        Amtsgericht_Pirna = new GerichtCode("Amtsgericht_Pirna", "U1114");
+        $VALUES.add(Amtsgericht_Pirna);
+        Grundbuchamt_Pirna = new GerichtCode("Grundbuchamt_Pirna", "U1114G");
+        $VALUES.add(Grundbuchamt_Pirna);
+        Staatsanwaltschaft_beim_Landgericht_Pirna_Zwst_der_StA_Dresden = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Pirna_Zwst_der_StA_Dresden", "U1114S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Pirna_Zwst_der_StA_Dresden);
+        Amtsgericht_Riesa = new GerichtCode("Amtsgericht_Riesa", "U1115");
+        $VALUES.add(Amtsgericht_Riesa);
+        Grundbuchamt_Riesa = new GerichtCode("Grundbuchamt_Riesa", "U1115G");
+        $VALUES.add(Grundbuchamt_Riesa);
+        aufgeloest_Amtsgericht_Pirna_Zwst_Neustadt_in_Sachsen = new GerichtCode("aufgeloest_Amtsgericht_Pirna_Zwst_Neustadt_in_Sachsen", "U1116");
+        $VALUES.add(aufgeloest_Amtsgericht_Pirna_Zwst_Neustadt_in_Sachsen);
+        Amtsgericht_Weisswasser = new GerichtCode("Amtsgericht_Weisswasser", "U1117");
+        $VALUES.add(Amtsgericht_Weisswasser);
+        Grundbuchamt_Weisswasser = new GerichtCode("Grundbuchamt_Weisswasser", "U1117G");
+        $VALUES.add(Grundbuchamt_Weisswasser);
+        Amtsgericht_Zittau = new GerichtCode("Amtsgericht_Zittau", "U1118");
+        $VALUES.add(Amtsgericht_Zittau);
+        Grundbuchamt_Zittau = new GerichtCode("Grundbuchamt_Zittau", "U1118G");
+        $VALUES.add(Grundbuchamt_Zittau);
+        Staatsanwaltschaft_beim_Landgericht_Zittau_Zwst_der_StA_Goerlitz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Zittau_Zwst_der_StA_Goerlitz", "U1118S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Zittau_Zwst_der_StA_Goerlitz);
+        Amtsgericht_Zittau_Zweigstelle_Loebau = new GerichtCode("Amtsgericht_Zittau_Zweigstelle_Loebau", "U1119");
+        $VALUES.add(Amtsgericht_Zittau_Zweigstelle_Loebau);
+        Landgericht_Dresden_Auswaertige_Strafvollstreckungskammer = new GerichtCode("Landgericht_Dresden_Auswaertige_Strafvollstreckungskammer", "U1130");
+        $VALUES.add(Landgericht_Dresden_Auswaertige_Strafvollstreckungskammer);
+        Landgericht_Chemnitz = new GerichtCode("Landgericht_Chemnitz", "U1200");
+        $VALUES.add(Landgericht_Chemnitz);
+        Staatsanwaltschaft_beim_Landgericht_Chemnitz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Chemnitz", "U1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Chemnitz);
+        aufgeloest_Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz = new GerichtCode("aufgeloest_Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz", "U1201");
+        $VALUES.add(aufgeloest_Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz);
+        Amtsgericht_Aue_Bad_Schlema = new GerichtCode("Amtsgericht_Aue_Bad_Schlema", "U1202");
+        $VALUES.add(Amtsgericht_Aue_Bad_Schlema);
+        Grundbuchamt_Aue_Bad_Schlema = new GerichtCode("Grundbuchamt_Aue_Bad_Schlema", "U1202G");
+        $VALUES.add(Grundbuchamt_Aue_Bad_Schlema);
+        Amtsgericht_Auerbach = new GerichtCode("Amtsgericht_Auerbach", "U1203");
+        $VALUES.add(Amtsgericht_Auerbach);
+        Grundbuchamt_Auerbach = new GerichtCode("Grundbuchamt_Auerbach", "U1203G");
+        $VALUES.add(Grundbuchamt_Auerbach);
+        aufgeloest_Amtsgericht_Freiberg_Zwst_Brand_Erbisdorf = new GerichtCode("aufgeloest_Amtsgericht_Freiberg_Zwst_Brand_Erbisdorf", "U1204");
+        $VALUES.add(aufgeloest_Amtsgericht_Freiberg_Zwst_Brand_Erbisdorf);
+        aufgeloest_Amtsgericht_Chemnitz_Stadt = new GerichtCode("aufgeloest_Amtsgericht_Chemnitz_Stadt", "U1205");
+        $VALUES.add(aufgeloest_Amtsgericht_Chemnitz_Stadt);
+        Amtsgericht_Chemnitz = new GerichtCode("Amtsgericht_Chemnitz", "U1206");
+        $VALUES.add(Amtsgericht_Chemnitz);
+        Grundbuchamt_Chemnitz = new GerichtCode("Grundbuchamt_Chemnitz", "U1206G");
+        $VALUES.add(Grundbuchamt_Chemnitz);
+        aufgeloest_Amtsgericht_Freiberg_Zweigstelle_Oederan = new GerichtCode("aufgeloest_Amtsgericht_Freiberg_Zweigstelle_Oederan", "U1207");
+        $VALUES.add(aufgeloest_Amtsgericht_Freiberg_Zweigstelle_Oederan);
+        Amtsgericht_Freiberg = new GerichtCode("Amtsgericht_Freiberg", "U1208");
+        $VALUES.add(Amtsgericht_Freiberg);
+        Grundbuchamt_Freiberg = new GerichtCode("Grundbuchamt_Freiberg", "U1208G");
+        $VALUES.add(Grundbuchamt_Freiberg);
+        aufgeloest_Amtsgericht_Hohenstein_Ernstthal_Zwst_des_AG_Glauchau = new GerichtCode("aufgeloest_Amtsgericht_Hohenstein_Ernstthal_Zwst_des_AG_Glauchau", "U1209");
+        $VALUES.add(aufgeloest_Amtsgericht_Hohenstein_Ernstthal_Zwst_des_AG_Glauchau);
+        aufgeloest_Amtsgericht_Doebeln_Zweigstelle_Hainichen = new GerichtCode("aufgeloest_Amtsgericht_Doebeln_Zweigstelle_Hainichen", "U1210");
+        $VALUES.add(aufgeloest_Amtsgericht_Doebeln_Zweigstelle_Hainichen);
+        Amtsgericht_Hohenstein_Ernstthal = new GerichtCode("Amtsgericht_Hohenstein_Ernstthal", "U1211");
+        $VALUES.add(Amtsgericht_Hohenstein_Ernstthal);
+        Grundbuchamt_Hohenstein_Ernstthal = new GerichtCode("Grundbuchamt_Hohenstein_Ernstthal", "U1211G");
+        $VALUES.add(Grundbuchamt_Hohenstein_Ernstthal);
+        aufgeloest_Amtsgericht_Auerbach_Zwst_Klingenthal = new GerichtCode("aufgeloest_Amtsgericht_Auerbach_Zwst_Klingenthal", "U1212");
+        $VALUES.add(aufgeloest_Amtsgericht_Auerbach_Zwst_Klingenthal);
+        Amtsgericht_Marienberg = new GerichtCode("Amtsgericht_Marienberg", "U1213");
+        $VALUES.add(Amtsgericht_Marienberg);
+        Grundbuchamt_Marienberg = new GerichtCode("Grundbuchamt_Marienberg", "U1213G");
+        $VALUES.add(Grundbuchamt_Marienberg);
+        aufgeloest_Amtsgericht_Plauen_Zwst_Oelsnitz = new GerichtCode("aufgeloest_Amtsgericht_Plauen_Zwst_Oelsnitz", "U1214");
+        $VALUES.add(aufgeloest_Amtsgericht_Plauen_Zwst_Oelsnitz);
+        Amtsgericht_Plauen = new GerichtCode("Amtsgericht_Plauen", "U1215");
+        $VALUES.add(Amtsgericht_Plauen);
+        Grundbuchamt_Plauen = new GerichtCode("Grundbuchamt_Plauen", "U1215G");
+        $VALUES.add(Grundbuchamt_Plauen);
+        aufgeloest_Amtsgericht_Reichenbach = new GerichtCode("aufgeloest_Amtsgericht_Reichenbach", "U1216");
+        $VALUES.add(aufgeloest_Amtsgericht_Reichenbach);
+        aufgeloest_Amtsgericht_Rochlitz = new GerichtCode("aufgeloest_Amtsgericht_Rochlitz", "U1217");
+        $VALUES.add(aufgeloest_Amtsgericht_Rochlitz);
+        aufgeloest_Amtsgericht_Schwarzenberg_Erzgebirge = new GerichtCode("aufgeloest_Amtsgericht_Schwarzenberg_Erzgebirge", "U1218");
+        $VALUES.add(aufgeloest_Amtsgericht_Schwarzenberg_Erzgebirge);
+        aufgeloest_Amtsgericht_Aue_Zweigstelle_Stollberg = new GerichtCode("aufgeloest_Amtsgericht_Aue_Zweigstelle_Stollberg", "U1219");
+        $VALUES.add(aufgeloest_Amtsgericht_Aue_Zweigstelle_Stollberg);
+        aufgeloest_Amtsgericht_Zwickau_Zwst_Werdau = new GerichtCode("aufgeloest_Amtsgericht_Zwickau_Zwst_Werdau", "U1220");
+        $VALUES.add(aufgeloest_Amtsgericht_Zwickau_Zwst_Werdau);
+        aufgeloest_Amtsgericht_Zschopau = new GerichtCode("aufgeloest_Amtsgericht_Zschopau", "U1221");
+        $VALUES.add(aufgeloest_Amtsgericht_Zschopau);
+        Amtsgericht_Zwickau = new GerichtCode("Amtsgericht_Zwickau", "U1222");
+        $VALUES.add(Amtsgericht_Zwickau);
+        Grundbuchamt_Zwickau = new GerichtCode("Grundbuchamt_Zwickau", "U1222G");
+        $VALUES.add(Grundbuchamt_Zwickau);
+        Amtsgericht_Zwickau_Zentrales_Vollstreckungsgericht_Sachsen = new GerichtCode("Amtsgericht_Zwickau_Zentrales_Vollstreckungsgericht_Sachsen", "U1222R");
+        $VALUES.add(Amtsgericht_Zwickau_Zentrales_Vollstreckungsgericht_Sachsen);
+        aufgeloest_Amtsgericht_Zwickau_Land = new GerichtCode("aufgeloest_Amtsgericht_Zwickau_Land", "U1223");
+        $VALUES.add(aufgeloest_Amtsgericht_Zwickau_Land);
+        Amtsgericht_Aue_Bad_Schlema_Zweigstelle_Stollberg = new GerichtCode("Amtsgericht_Aue_Bad_Schlema_Zweigstelle_Stollberg", "U1225");
+        $VALUES.add(Amtsgericht_Aue_Bad_Schlema_Zweigstelle_Stollberg);
+        Grundbuchamt_Aue_Bad_Schlema_Zweigstelle_Stollberg = new GerichtCode("Grundbuchamt_Aue_Bad_Schlema_Zweigstelle_Stollberg", "U1225G");
+        $VALUES.add(Grundbuchamt_Aue_Bad_Schlema_Zweigstelle_Stollberg);
+        Amtsgericht_Doebeln_Zweigstelle_Hainichen = new GerichtCode("Amtsgericht_Doebeln_Zweigstelle_Hainichen", "U1226");
+        $VALUES.add(Amtsgericht_Doebeln_Zweigstelle_Hainichen);
+        Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz = new GerichtCode("Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz", "U1227");
+        $VALUES.add(Amtsgericht_Marienberg_Zweigstelle_Annaberg_Buchholz);
+        aufgeloest_Amtsgericht_Stollberg_Ausw_Strafvollstreckungskammer_des_Landgerichts_Chemnitz = new GerichtCode("aufgeloest_Amtsgericht_Stollberg_Ausw_Strafvollstreckungskammer_des_Landgerichts_Chemnitz", "U1230");
+        $VALUES.add(aufgeloest_Amtsgericht_Stollberg_Ausw_Strafvollstreckungskammer_des_Landgerichts_Chemnitz);
+        Landgericht_Leipzig = new GerichtCode("Landgericht_Leipzig", "U1300");
+        $VALUES.add(Landgericht_Leipzig);
+        Staatsanwaltschaft_beim_Landgericht_Leipzig = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Leipzig", "U1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Leipzig);
+        aufgeloest_Amtsgericht_Geithain_in_Bad_Lausick = new GerichtCode("aufgeloest_Amtsgericht_Geithain_in_Bad_Lausick", "U1301");
+        $VALUES.add(aufgeloest_Amtsgericht_Geithain_in_Bad_Lausick);
+        Amtsgericht_Borna = new GerichtCode("Amtsgericht_Borna", "U1302");
+        $VALUES.add(Amtsgericht_Borna);
+        Grundbuchamt_Borna = new GerichtCode("Grundbuchamt_Borna", "U1302G");
+        $VALUES.add(Grundbuchamt_Borna);
+        aufgeloest_Amtsgericht_Eilenburg_Zweigstelle_Delitzsch = new GerichtCode("aufgeloest_Amtsgericht_Eilenburg_Zweigstelle_Delitzsch", "U1303");
+        $VALUES.add(aufgeloest_Amtsgericht_Eilenburg_Zweigstelle_Delitzsch);
+        Amtsgericht_Doebeln = new GerichtCode("Amtsgericht_Doebeln", "U1304");
+        $VALUES.add(Amtsgericht_Doebeln);
+        Grundbuchamt_Doebeln = new GerichtCode("Grundbuchamt_Doebeln", "U1304G");
+        $VALUES.add(Grundbuchamt_Doebeln);
+        Amtsgericht_Eilenburg = new GerichtCode("Amtsgericht_Eilenburg", "U1305");
+        $VALUES.add(Amtsgericht_Eilenburg);
+        Grundbuchamt_Eilenburg = new GerichtCode("Grundbuchamt_Eilenburg", "U1305G");
+        $VALUES.add(Grundbuchamt_Eilenburg);
+        Amtsgericht_Grimma = new GerichtCode("Amtsgericht_Grimma", "U1306");
+        $VALUES.add(Amtsgericht_Grimma);
+        Grundbuchamt_Grimma = new GerichtCode("Grundbuchamt_Grimma", "U1306G");
+        $VALUES.add(Grundbuchamt_Grimma);
+        Staatsanwaltschaft_beim_Landgericht_Grimma_Zwst_der_StA_Leipzig = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Grimma_Zwst_der_StA_Leipzig", "U1306S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Grimma_Zwst_der_StA_Leipzig);
+        aufgeloest_Amtsgericht_der_Stadt_Leipzig = new GerichtCode("aufgeloest_Amtsgericht_der_Stadt_Leipzig", "U1307");
+        $VALUES.add(aufgeloest_Amtsgericht_der_Stadt_Leipzig);
+        Amtsgericht_Leipzig = new GerichtCode("Amtsgericht_Leipzig", "U1308");
+        $VALUES.add(Amtsgericht_Leipzig);
+        Grundbuchamt_Leipzig = new GerichtCode("Grundbuchamt_Leipzig", "U1308G");
+        $VALUES.add(Grundbuchamt_Leipzig);
+        aufgeloest_Amtsgericht_Torgau_Zweigstelle_Oschatz = new GerichtCode("aufgeloest_Amtsgericht_Torgau_Zweigstelle_Oschatz", "U1309");
+        $VALUES.add(aufgeloest_Amtsgericht_Torgau_Zweigstelle_Oschatz);
+        Amtsgericht_Torgau = new GerichtCode("Amtsgericht_Torgau", "U1310");
+        $VALUES.add(Amtsgericht_Torgau);
+        Grundbuchamt_Torgau = new GerichtCode("Grundbuchamt_Torgau", "U1310G");
+        $VALUES.add(Grundbuchamt_Torgau);
+        Staatsanwaltschaft_beim_Landgericht_Torgau_Zwst_der_StA_Leipzig = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Torgau_Zwst_der_StA_Leipzig", "U1310S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Torgau_Zwst_der_StA_Leipzig);
+        aufgeloest_Amtsgericht_Grimma_Zweigstelle_Wurzen = new GerichtCode("aufgeloest_Amtsgericht_Grimma_Zweigstelle_Wurzen", "U1311");
+        $VALUES.add(aufgeloest_Amtsgericht_Grimma_Zweigstelle_Wurzen);
+        Amtsgericht_Torgau_Zweigstelle_Oschatz = new GerichtCode("Amtsgericht_Torgau_Zweigstelle_Oschatz", "U1312");
+        $VALUES.add(Amtsgericht_Torgau_Zweigstelle_Oschatz);
+        Landgericht_Leipzig_Strafvollstreckungskammer_in_Torgau = new GerichtCode("Landgericht_Leipzig_Strafvollstreckungskammer_in_Torgau", "U1330");
+        $VALUES.add(Landgericht_Leipzig_Strafvollstreckungskammer_in_Torgau);
+        Landgericht_Leipzig_Strafvollstreckungskammer_in_Doebeln = new GerichtCode("Landgericht_Leipzig_Strafvollstreckungskammer_in_Doebeln", "U1340");
+        $VALUES.add(Landgericht_Leipzig_Strafvollstreckungskammer_in_Doebeln);
+        Landgericht_Leipzig_Strafvollstreckungskammer_in_Borna = new GerichtCode("Landgericht_Leipzig_Strafvollstreckungskammer_in_Borna", "U1350");
+        $VALUES.add(Landgericht_Leipzig_Strafvollstreckungskammer_in_Borna);
+        aufgeloest_Landgericht_Bautzen_Aussenstelle_des_Landgerichts_Goerlitz = new GerichtCode("aufgeloest_Landgericht_Bautzen_Aussenstelle_des_Landgerichts_Goerlitz", "U1400");
+        $VALUES.add(aufgeloest_Landgericht_Bautzen_Aussenstelle_des_Landgerichts_Goerlitz);
+        aufgeloest_Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen = new GerichtCode("aufgeloest_Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen", "U1400S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen);
+        Landgericht_Goerlitz = new GerichtCode("Landgericht_Goerlitz", "U1500");
+        $VALUES.add(Landgericht_Goerlitz);
+        Staatsanwaltschaft_beim_Landgericht_Goerlitz = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Goerlitz", "U1500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Goerlitz);
+        Landgericht_Bautzen_Aussenstelle_Landgericht_Goerlitz = new GerichtCode("Landgericht_Bautzen_Aussenstelle_Landgericht_Goerlitz", "U1510");
+        $VALUES.add(Landgericht_Bautzen_Aussenstelle_Landgericht_Goerlitz);
+        Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen = new GerichtCode("Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen", "U1510S");
+        $VALUES.add(Staatsanwaltschaft_Goerlitz_Zweigstelle_Bautzen);
+        Landgericht_Zwickau = new GerichtCode("Landgericht_Zwickau", "U1600");
+        $VALUES.add(Landgericht_Zwickau);
+        Staatsanwaltschaft_beim_Landgericht_Zwickau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Zwickau", "U1600S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Zwickau);
+        Landgericht_Zwickau_Zweigstelle_Plauen = new GerichtCode("Landgericht_Zwickau_Zweigstelle_Plauen", "U1601");
+        $VALUES.add(Landgericht_Zwickau_Zweigstelle_Plauen);
+        Staatsanwaltschaft_beim_Landgericht_Plauen_Zwst_der_StA_Zwickau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Plauen_Zwst_der_StA_Zwickau", "U1601S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Plauen_Zwst_der_StA_Zwickau);
+        Justizvollzugsanstalt_Leipzig_mit_Krankenhaus = new GerichtCode("Justizvollzugsanstalt_Leipzig_mit_Krankenhaus", "U6001");
+        $VALUES.add(Justizvollzugsanstalt_Leipzig_mit_Krankenhaus);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Freistaates_Sachsen = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Freistaates_Sachsen", "U6008");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Freistaates_Sachsen);
+        Sozialgericht_Dresden = new GerichtCode("Sozialgericht_Dresden", "U6027");
+        $VALUES.add(Sozialgericht_Dresden);
+        Jugendstrafvollzugsanstalt_Regis_Breitingen = new GerichtCode("Jugendstrafvollzugsanstalt_Regis_Breitingen", "U6269");
+        $VALUES.add(Jugendstrafvollzugsanstalt_Regis_Breitingen);
+        Justizvollzugsanstalt_Zeithain = new GerichtCode("Justizvollzugsanstalt_Zeithain", "U6346");
+        $VALUES.add(Justizvollzugsanstalt_Zeithain);
+        Justizvollzugsanstalt_Goerlitz = new GerichtCode("Justizvollzugsanstalt_Goerlitz", "U6348");
+        $VALUES.add(Justizvollzugsanstalt_Goerlitz);
+        Justizvollzugsanstalt_Torgau = new GerichtCode("Justizvollzugsanstalt_Torgau", "U6350");
+        $VALUES.add(Justizvollzugsanstalt_Torgau);
+        Arbeitsgericht_Bautzen = new GerichtCode("Arbeitsgericht_Bautzen", "U6385");
+        $VALUES.add(Arbeitsgericht_Bautzen);
+        Arbeitsgericht_Chemnitz = new GerichtCode("Arbeitsgericht_Chemnitz", "U6386");
+        $VALUES.add(Arbeitsgericht_Chemnitz);
+        Arbeitsgericht_Dresden = new GerichtCode("Arbeitsgericht_Dresden", "U6387");
+        $VALUES.add(Arbeitsgericht_Dresden);
+        Arbeitsgericht_Leipzig = new GerichtCode("Arbeitsgericht_Leipzig", "U6388");
+        $VALUES.add(Arbeitsgericht_Leipzig);
+        Arbeitsgericht_Zwickau = new GerichtCode("Arbeitsgericht_Zwickau", "U6389");
+        $VALUES.add(Arbeitsgericht_Zwickau);
+        Arbeitsgericht_Bautzen_Aussenkammern_Goerlitz = new GerichtCode("Arbeitsgericht_Bautzen_Aussenkammern_Goerlitz", "U6390");
+        $VALUES.add(Arbeitsgericht_Bautzen_Aussenkammern_Goerlitz);
+        Saechsisches_Oberverwaltungsgericht = new GerichtCode("Saechsisches_Oberverwaltungsgericht", "U6400");
+        $VALUES.add(Saechsisches_Oberverwaltungsgericht);
+        Verwaltungsgericht_Dresden_Fachgerichtszentrum = new GerichtCode("Verwaltungsgericht_Dresden_Fachgerichtszentrum", "U6401");
+        $VALUES.add(Verwaltungsgericht_Dresden_Fachgerichtszentrum);
+        Sozialgericht_Leipzig = new GerichtCode("Sozialgericht_Leipzig", "U6409");
+        $VALUES.add(Sozialgericht_Leipzig);
+        Sozialgericht_Chemnitz = new GerichtCode("Sozialgericht_Chemnitz", "U6418");
+        $VALUES.add(Sozialgericht_Chemnitz);
+        Verfassungsgerichtshof_Sachsen = new GerichtCode("Verfassungsgerichtshof_Sachsen", "U6435");
+        $VALUES.add(Verfassungsgerichtshof_Sachsen);
+        Justizvollzugsanstalt_Dresden = new GerichtCode("Justizvollzugsanstalt_Dresden", "U6862");
+        $VALUES.add(Justizvollzugsanstalt_Dresden);
+        Verwaltungsgericht_Chemnitz = new GerichtCode("Verwaltungsgericht_Chemnitz", "U8517");
+        $VALUES.add(Verwaltungsgericht_Chemnitz);
+        Saechsisches_Landesarbeitsgericht = new GerichtCode("Saechsisches_Landesarbeitsgericht", "U8550");
+        $VALUES.add(Saechsisches_Landesarbeitsgericht);
+        Landessozialgericht_Sachsen = new GerichtCode("Landessozialgericht_Sachsen", "U8563");
+        $VALUES.add(Landessozialgericht_Sachsen);
+        Bundesverwaltungsgericht = new GerichtCode("Bundesverwaltungsgericht", "U8572");
+        $VALUES.add(Bundesverwaltungsgericht);
+        Justizvollzugsanstalt_Bautzen = new GerichtCode("Justizvollzugsanstalt_Bautzen", "U8594");
+        $VALUES.add(Justizvollzugsanstalt_Bautzen);
+        Justizvollzugsanstalt_Waldheim = new GerichtCode("Justizvollzugsanstalt_Waldheim", "U8598");
+        $VALUES.add(Justizvollzugsanstalt_Waldheim);
+        Verwaltungsgericht_Leipzig = new GerichtCode("Verwaltungsgericht_Leipzig", "U8613");
+        $VALUES.add(Verwaltungsgericht_Leipzig);
+        Saechsischer_Anwaltsgerichtshof = new GerichtCode("Saechsischer_Anwaltsgerichtshof", "U8616");
+        $VALUES.add(Saechsischer_Anwaltsgerichtshof);
+        Justizvollzugsanstalt_Chemnitz = new GerichtCode("Justizvollzugsanstalt_Chemnitz", "U8617");
+        $VALUES.add(Justizvollzugsanstalt_Chemnitz);
+        Saechsisches_Finanzgericht = new GerichtCode("Saechsisches_Finanzgericht", "U8647");
+        $VALUES.add(Saechsisches_Finanzgericht);
+        Oberlandesgericht_Saarbruecken = new GerichtCode("Oberlandesgericht_Saarbruecken", "V1000");
+        $VALUES.add(Oberlandesgericht_Saarbruecken);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Saarbruecken = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Saarbruecken", "V1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Saarbruecken);
+        Landgericht_Saarbruecken = new GerichtCode("Landgericht_Saarbruecken", "V1100");
+        $VALUES.add(Landgericht_Saarbruecken);
+        Staatsanwaltschaft_beim_Landgericht_Saarbruecken = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Saarbruecken", "V1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Saarbruecken);
+        Amtsgericht_Homburg_Zweigstelle_Blieskastel = new GerichtCode("Amtsgericht_Homburg_Zweigstelle_Blieskastel", "V1101");
+        $VALUES.add(Amtsgericht_Homburg_Zweigstelle_Blieskastel);
+        Amtsgericht_Homburg = new GerichtCode("Amtsgericht_Homburg", "V1102");
+        $VALUES.add(Amtsgericht_Homburg);
+        Amtsgericht_Lebach = new GerichtCode("Amtsgericht_Lebach", "V1103");
+        $VALUES.add(Amtsgericht_Lebach);
+        Amtsgericht_Merzig = new GerichtCode("Amtsgericht_Merzig", "V1104");
+        $VALUES.add(Amtsgericht_Merzig);
+        Amtsgericht_Neunkirchen = new GerichtCode("Amtsgericht_Neunkirchen", "V1105");
+        $VALUES.add(Amtsgericht_Neunkirchen);
+        aufgeloest_Amtsgericht_St_Wendel_Zwst_Nohfelden = new GerichtCode("aufgeloest_Amtsgericht_St_Wendel_Zwst_Nohfelden", "V1106");
+        $VALUES.add(aufgeloest_Amtsgericht_St_Wendel_Zwst_Nohfelden);
+        Amtsgericht_Ottweiler = new GerichtCode("Amtsgericht_Ottweiler", "V1107");
+        $VALUES.add(Amtsgericht_Ottweiler);
+        aufgeloest_Amtsgericht_Perl = new GerichtCode("aufgeloest_Amtsgericht_Perl", "V1108");
+        $VALUES.add(aufgeloest_Amtsgericht_Perl);
+        Amtsgericht_Saarbruecken = new GerichtCode("Amtsgericht_Saarbruecken", "V1109");
+        $VALUES.add(Amtsgericht_Saarbruecken);
+        Amtsgericht_Saarbruecken_Zentrales_Vollstreckungsgericht_Saarland = new GerichtCode("Amtsgericht_Saarbruecken_Zentrales_Vollstreckungsgericht_Saarland", "V1109R");
+        $VALUES.add(Amtsgericht_Saarbruecken_Zentrales_Vollstreckungsgericht_Saarland);
+        Amtsgericht_Saarbruecken_Registergericht_und_Zwangsversteigerungsgericht = new GerichtCode("Amtsgericht_Saarbruecken_Registergericht_und_Zwangsversteigerungsgericht", "V1109V");
+        $VALUES.add(Amtsgericht_Saarbruecken_Registergericht_und_Zwangsversteigerungsgericht);
+        Amtsgericht_Saarlouis = new GerichtCode("Amtsgericht_Saarlouis", "V1110");
+        $VALUES.add(Amtsgericht_Saarlouis);
+        Amtsgericht_St_Ingbert = new GerichtCode("Amtsgericht_St_Ingbert", "V1111");
+        $VALUES.add(Amtsgericht_St_Ingbert);
+        Amtsgericht_St_Wendel = new GerichtCode("Amtsgericht_St_Wendel", "V1112");
+        $VALUES.add(Amtsgericht_St_Wendel);
+        Amtsgericht_Sulzbach = new GerichtCode("Amtsgericht_Sulzbach", "V1113");
+        $VALUES.add(Amtsgericht_Sulzbach);
+        aufgeloest_Amtsgericht_Tholey = new GerichtCode("aufgeloest_Amtsgericht_Tholey", "V1114");
+        $VALUES.add(aufgeloest_Amtsgericht_Tholey);
+        Amtsgericht_Voelklingen = new GerichtCode("Amtsgericht_Voelklingen", "V1115");
+        $VALUES.add(Amtsgericht_Voelklingen);
+        Amtsgericht_Merzig_Zweigstelle_Wadern = new GerichtCode("Amtsgericht_Merzig_Zweigstelle_Wadern", "V1116");
+        $VALUES.add(Amtsgericht_Merzig_Zweigstelle_Wadern);
+        Amtsgericht_Neunkirchen_Vereinsregister = new GerichtCode("Amtsgericht_Neunkirchen_Vereinsregister", "V1120");
+        $VALUES.add(Amtsgericht_Neunkirchen_Vereinsregister);
+        Amtsgericht_Saarlouis_Vereinsregister = new GerichtCode("Amtsgericht_Saarlouis_Vereinsregister", "V1121");
+        $VALUES.add(Amtsgericht_Saarlouis_Vereinsregister);
+        Amtsgericht_Homburg_Vereinsregister = new GerichtCode("Amtsgericht_Homburg_Vereinsregister", "V1122");
+        $VALUES.add(Amtsgericht_Homburg_Vereinsregister);
+        Amtsgericht_St_Ingbert_Vereinsregister = new GerichtCode("Amtsgericht_St_Ingbert_Vereinsregister", "V1123");
+        $VALUES.add(Amtsgericht_St_Ingbert_Vereinsregister);
+        Amtsgericht_Ottweiler_Vereinsregister = new GerichtCode("Amtsgericht_Ottweiler_Vereinsregister", "V1124");
+        $VALUES.add(Amtsgericht_Ottweiler_Vereinsregister);
+        Amtsgericht_Lebach_Vereinsregister = new GerichtCode("Amtsgericht_Lebach_Vereinsregister", "V1125");
+        $VALUES.add(Amtsgericht_Lebach_Vereinsregister);
+        Amtsgericht_St_Wendel_Vereinsregister = new GerichtCode("Amtsgericht_St_Wendel_Vereinsregister", "V1126");
+        $VALUES.add(Amtsgericht_St_Wendel_Vereinsregister);
+        Amtsgericht_Merzig_Vereinsregister = new GerichtCode("Amtsgericht_Merzig_Vereinsregister", "V1127");
+        $VALUES.add(Amtsgericht_Merzig_Vereinsregister);
+        Amtsgericht_Voelklingen_Vereinsregister = new GerichtCode("Amtsgericht_Voelklingen_Vereinsregister", "V1128");
+        $VALUES.add(Amtsgericht_Voelklingen_Vereinsregister);
+        aufgeloest_Arbeitsgericht_Neunkirchen = new GerichtCode("aufgeloest_Arbeitsgericht_Neunkirchen", "V6011");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Neunkirchen);
+        Finanzgericht_des_Saarlandes = new GerichtCode("Finanzgericht_des_Saarlandes", "V6012");
+        $VALUES.add(Finanzgericht_des_Saarlandes);
+        aufgeloest_Arbeitsgericht_Saarlouis = new GerichtCode("aufgeloest_Arbeitsgericht_Saarlouis", "V6013");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Saarlouis);
+        Verfassungsgerichtshof_des_Saarlandes = new GerichtCode("Verfassungsgerichtshof_des_Saarlandes", "V6014");
+        $VALUES.add(Verfassungsgerichtshof_des_Saarlandes);
+        aufgeloest_Arbeitsgericht_Saarbruecken = new GerichtCode("aufgeloest_Arbeitsgericht_Saarbruecken", "V6033");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Saarbruecken);
+        Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Saarlandes = new GerichtCode("Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Saarlandes", "V6040");
+        $VALUES.add(Anwaltsgericht_fuer_den_Bezirk_der_Rechtsanwaltskammer_des_Saarlandes);
+        Landessozialgericht_fuer_das_Saarland = new GerichtCode("Landessozialgericht_fuer_das_Saarland", "V6042");
+        $VALUES.add(Landessozialgericht_fuer_das_Saarland);
+        Landesarbeitsgericht_Saarland = new GerichtCode("Landesarbeitsgericht_Saarland", "V6043");
+        $VALUES.add(Landesarbeitsgericht_Saarland);
+        Oberverwaltungsgericht_des_Saarlandes = new GerichtCode("Oberverwaltungsgericht_des_Saarlandes", "V6045");
+        $VALUES.add(Oberverwaltungsgericht_des_Saarlandes);
+        Sozialgericht_fuer_das_Saarland = new GerichtCode("Sozialgericht_fuer_das_Saarland", "V6046");
+        $VALUES.add(Sozialgericht_fuer_das_Saarland);
+        Verwaltungsgericht_des_Saarlandes_Saarlouis = new GerichtCode("Verwaltungsgericht_des_Saarlandes_Saarlouis", "V6051");
+        $VALUES.add(Verwaltungsgericht_des_Saarlandes_Saarlouis);
+        Saarlaendischer_Anwaltsgerichtshof = new GerichtCode("Saarlaendischer_Anwaltsgerichtshof", "V6054");
+        $VALUES.add(Saarlaendischer_Anwaltsgerichtshof);
+        Justizvollzugsanstalt_Saarbruecken = new GerichtCode("Justizvollzugsanstalt_Saarbruecken", "V6067");
+        $VALUES.add(Justizvollzugsanstalt_Saarbruecken);
+        Jugendarrestanstalt_Lebach = new GerichtCode("Jugendarrestanstalt_Lebach", "V6080");
+        $VALUES.add(Jugendarrestanstalt_Lebach);
+        Justizvollzugsanstalt_Ottweiler = new GerichtCode("Justizvollzugsanstalt_Ottweiler", "V6216");
+        $VALUES.add(Justizvollzugsanstalt_Ottweiler);
+        Arbeitsgericht_Saarland = new GerichtCode("Arbeitsgericht_Saarland", "V6234");
+        $VALUES.add(Arbeitsgericht_Saarland);
+        Kompetenzzentrum_der_Justiz_fuer_ambulante_Resozialisierung_und_Opferhilfe = new GerichtCode("Kompetenzzentrum_der_Justiz_fuer_ambulante_Resozialisierung_und_Opferhilfe", "V6240");
+        $VALUES.add(Kompetenzzentrum_der_Justiz_fuer_ambulante_Resozialisierung_und_Opferhilfe);
+        Oberlandesgericht_Naumburg = new GerichtCode("Oberlandesgericht_Naumburg", "W1000");
+        $VALUES.add(Oberlandesgericht_Naumburg);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Naumburg = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Naumburg", "W1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Naumburg);
+        Landgericht_Halle = new GerichtCode("Landgericht_Halle", "W1100");
+        $VALUES.add(Landgericht_Halle);
+        Staatsanwaltschaft_beim_Landgericht_Halle = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Halle", "W1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Halle);
+        Amtsgericht_Aschersleben = new GerichtCode("Amtsgericht_Aschersleben", "W1101");
+        $VALUES.add(Amtsgericht_Aschersleben);
+        Amtsgericht_Bernburg = new GerichtCode("Amtsgericht_Bernburg", "W1102");
+        $VALUES.add(Amtsgericht_Bernburg);
+        Amtsgericht_Bitterfeld_Wolfen = new GerichtCode("Amtsgericht_Bitterfeld_Wolfen", "W1103");
+        $VALUES.add(Amtsgericht_Bitterfeld_Wolfen);
+        Amtsgericht_Dessau_Rosslau = new GerichtCode("Amtsgericht_Dessau_Rosslau", "W1104");
+        $VALUES.add(Amtsgericht_Dessau_Rosslau);
+        Amtsgericht_Dessau_Rosslau_Zentrales_Vollstreckungsgericht_Sachsen_Anhalt = new GerichtCode("Amtsgericht_Dessau_Rosslau_Zentrales_Vollstreckungsgericht_Sachsen_Anhalt", "W1104R");
+        $VALUES.add(Amtsgericht_Dessau_Rosslau_Zentrales_Vollstreckungsgericht_Sachsen_Anhalt);
+        Amtsgericht_Eisleben = new GerichtCode("Amtsgericht_Eisleben", "W1105");
+        $VALUES.add(Amtsgericht_Eisleben);
+        aufgeloest_Amtsgericht_Graefenhainichen = new GerichtCode("aufgeloest_Amtsgericht_Graefenhainichen", "W1106");
+        $VALUES.add(aufgeloest_Amtsgericht_Graefenhainichen);
+        aufgeloest_Amtsgericht_Halle_Stadt = new GerichtCode("aufgeloest_Amtsgericht_Halle_Stadt", "W1107");
+        $VALUES.add(aufgeloest_Amtsgericht_Halle_Stadt);
+        Amtsgericht_Halle_Saale = new GerichtCode("Amtsgericht_Halle_Saale", "W1109");
+        $VALUES.add(Amtsgericht_Halle_Saale);
+        aufgeloest_Amtsgericht_Hettstedt = new GerichtCode("aufgeloest_Amtsgericht_Hettstedt", "W1110");
+        $VALUES.add(aufgeloest_Amtsgericht_Hettstedt);
+        aufgeloest_Amtsgericht_Hohenmoelsen = new GerichtCode("aufgeloest_Amtsgericht_Hohenmoelsen", "W1111");
+        $VALUES.add(aufgeloest_Amtsgericht_Hohenmoelsen);
+        aufgeloest_Amtsgericht_Jessen_in_Annaburg = new GerichtCode("aufgeloest_Amtsgericht_Jessen_in_Annaburg", "W1112");
+        $VALUES.add(aufgeloest_Amtsgericht_Jessen_in_Annaburg);
+        Amtsgericht_Koethen = new GerichtCode("Amtsgericht_Koethen", "W1113");
+        $VALUES.add(Amtsgericht_Koethen);
+        Amtsgericht_Merseburg = new GerichtCode("Amtsgericht_Merseburg", "W1114");
+        $VALUES.add(Amtsgericht_Merseburg);
+        Amtsgericht_Naumburg = new GerichtCode("Amtsgericht_Naumburg", "W1115");
+        $VALUES.add(Amtsgericht_Naumburg);
+        Staatsanwaltschaft_beim_Landgericht_Naumburg_Zwst_der_StA_Halle = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Naumburg_Zwst_der_StA_Halle", "W1115S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Naumburg_Zwst_der_StA_Halle);
+        aufgeloest_Amtsgericht_Nebra = new GerichtCode("aufgeloest_Amtsgericht_Nebra", "W1116");
+        $VALUES.add(aufgeloest_Amtsgericht_Nebra);
+        Amtsgericht_Quedlinburg = new GerichtCode("Amtsgericht_Quedlinburg", "W1117");
+        $VALUES.add(Amtsgericht_Quedlinburg);
+        aufgeloest_Amtsgericht_Querfurt = new GerichtCode("aufgeloest_Amtsgericht_Querfurt", "W1118");
+        $VALUES.add(aufgeloest_Amtsgericht_Querfurt);
+        aufgeloest_Amtsgericht_Rosslau = new GerichtCode("aufgeloest_Amtsgericht_Rosslau", "W1119");
+        $VALUES.add(aufgeloest_Amtsgericht_Rosslau);
+        Amtsgericht_Sangerhausen = new GerichtCode("Amtsgericht_Sangerhausen", "W1120");
+        $VALUES.add(Amtsgericht_Sangerhausen);
+        Amtsgericht_Weissenfels = new GerichtCode("Amtsgericht_Weissenfels", "W1121");
+        $VALUES.add(Amtsgericht_Weissenfels);
+        Amtsgericht_Wittenberg = new GerichtCode("Amtsgericht_Wittenberg", "W1122");
+        $VALUES.add(Amtsgericht_Wittenberg);
+        Amtsgericht_Zeitz = new GerichtCode("Amtsgericht_Zeitz", "W1123");
+        $VALUES.add(Amtsgericht_Zeitz);
+        Amtsgericht_Aschersleben_Dienstgebaeude_Stassfurt = new GerichtCode("Amtsgericht_Aschersleben_Dienstgebaeude_Stassfurt", "W1124");
+        $VALUES.add(Amtsgericht_Aschersleben_Dienstgebaeude_Stassfurt);
+        Landgericht_Magdeburg = new GerichtCode("Landgericht_Magdeburg", "W1200");
+        $VALUES.add(Landgericht_Magdeburg);
+        Staatsanwaltschaft_beim_Landgericht_Magdeburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Magdeburg", "W1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Magdeburg);
+        Amtsgericht_Burg = new GerichtCode("Amtsgericht_Burg", "W1201");
+        $VALUES.add(Amtsgericht_Burg);
+        Amtsgericht_Gardelegen = new GerichtCode("Amtsgericht_Gardelegen", "W1202");
+        $VALUES.add(Amtsgericht_Gardelegen);
+        aufgeloest_Amtsgericht_Genthin = new GerichtCode("aufgeloest_Amtsgericht_Genthin", "W1203");
+        $VALUES.add(aufgeloest_Amtsgericht_Genthin);
+        Amtsgericht_Halberstadt = new GerichtCode("Amtsgericht_Halberstadt", "W1204");
+        $VALUES.add(Amtsgericht_Halberstadt);
+        Staatsanwaltschaft_beim_Landgericht_Halberstadt_Zwst_der_StA_Magdeburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Halberstadt_Zwst_der_StA_Magdeburg", "W1204S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Halberstadt_Zwst_der_StA_Magdeburg);
+        Amtsgericht_Haldensleben = new GerichtCode("Amtsgericht_Haldensleben", "W1205");
+        $VALUES.add(Amtsgericht_Haldensleben);
+        aufgeloest_Amtsgericht_Havelberg = new GerichtCode("aufgeloest_Amtsgericht_Havelberg", "W1206");
+        $VALUES.add(aufgeloest_Amtsgericht_Havelberg);
+        aufgeloest_Kreisgericht_Gardelegen_vormals_Kalbe_Milde = new GerichtCode("aufgeloest_Kreisgericht_Gardelegen_vormals_Kalbe_Milde", "W1207");
+        $VALUES.add(aufgeloest_Kreisgericht_Gardelegen_vormals_Kalbe_Milde);
+        aufgeloest_Amtsgericht_Kloetze = new GerichtCode("aufgeloest_Amtsgericht_Kloetze", "W1208");
+        $VALUES.add(aufgeloest_Amtsgericht_Kloetze);
+        Amtsgericht_Magdeburg = new GerichtCode("Amtsgericht_Magdeburg", "W1209");
+        $VALUES.add(Amtsgericht_Magdeburg);
+        Amtsgericht_Oschersleben = new GerichtCode("Amtsgericht_Oschersleben", "W1210");
+        $VALUES.add(Amtsgericht_Oschersleben);
+        aufgeloest_Amtsgericht_Osterburg = new GerichtCode("aufgeloest_Amtsgericht_Osterburg", "W1211");
+        $VALUES.add(aufgeloest_Amtsgericht_Osterburg);
+        Amtsgericht_Salzwedel = new GerichtCode("Amtsgericht_Salzwedel", "W1212");
+        $VALUES.add(Amtsgericht_Salzwedel);
+        Amtsgericht_Schoenebeck = new GerichtCode("Amtsgericht_Schoenebeck", "W1213");
+        $VALUES.add(Amtsgericht_Schoenebeck);
+        aufgeloest_Amtsgericht_Stassfurt = new GerichtCode("aufgeloest_Amtsgericht_Stassfurt", "W1214");
+        $VALUES.add(aufgeloest_Amtsgericht_Stassfurt);
+        Amtsgericht_Stendal = new GerichtCode("Amtsgericht_Stendal", "W1215");
+        $VALUES.add(Amtsgericht_Stendal);
+        aufgeloest_Amtsgericht_Wanzleben = new GerichtCode("aufgeloest_Amtsgericht_Wanzleben", "W1217");
+        $VALUES.add(aufgeloest_Amtsgericht_Wanzleben);
+        Amtsgericht_Wernigerode = new GerichtCode("Amtsgericht_Wernigerode", "W1218");
+        $VALUES.add(Amtsgericht_Wernigerode);
+        Amtsgericht_Haldensleben_Zweigstelle_Wolmirstedt = new GerichtCode("Amtsgericht_Haldensleben_Zweigstelle_Wolmirstedt", "W1219");
+        $VALUES.add(Amtsgericht_Haldensleben_Zweigstelle_Wolmirstedt);
+        Amtsgericht_Zerbst = new GerichtCode("Amtsgericht_Zerbst", "W1220");
+        $VALUES.add(Amtsgericht_Zerbst);
+        Landgericht_Dessau_Rosslau = new GerichtCode("Landgericht_Dessau_Rosslau", "W1300");
+        $VALUES.add(Landgericht_Dessau_Rosslau);
+        Staatsanwaltschaft_beim_Landgericht_Dessau_Rosslau = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Dessau_Rosslau", "W1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Dessau_Rosslau);
+        Landgericht_Stendal = new GerichtCode("Landgericht_Stendal", "W1400");
+        $VALUES.add(Landgericht_Stendal);
+        Staatsanwaltschaft_beim_Landgericht_Stendal = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Stendal", "W1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Stendal);
+        Landgericht_Stendal_Auswaertige_Strafvollstreckungskammer = new GerichtCode("Landgericht_Stendal_Auswaertige_Strafvollstreckungskammer", "W1430");
+        $VALUES.add(Landgericht_Stendal_Auswaertige_Strafvollstreckungskammer);
+        Landgericht_Halle_Auswaertige_Strafvollstreckungskammer_bei_dem_Amtsgericht_Naumburg = new GerichtCode("Landgericht_Halle_Auswaertige_Strafvollstreckungskammer_bei_dem_Amtsgericht_Naumburg", "W1500");
+        $VALUES.add(Landgericht_Halle_Auswaertige_Strafvollstreckungskammer_bei_dem_Amtsgericht_Naumburg);
+        Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_des_Landes_Sachsen_Anhalt = new GerichtCode("Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_des_Landes_Sachsen_Anhalt", "W6008");
+        $VALUES.add(Anwaltsgericht_im_Bezirk_der_Rechtsanwaltskammer_des_Landes_Sachsen_Anhalt);
+        Anwaltsgerichtshof_des_Landes_Sachsen_Anhalt = new GerichtCode("Anwaltsgerichtshof_des_Landes_Sachsen_Anhalt", "W6009");
+        $VALUES.add(Anwaltsgerichtshof_des_Landes_Sachsen_Anhalt);
+        Ministerium_fuer_Justiz_und_Gleichstellung_des_Landes_Sachsen_Anhalt_Magdeburg = new GerichtCode("Ministerium_fuer_Justiz_und_Gleichstellung_des_Landes_Sachsen_Anhalt_Magdeburg", "W6118");
+        $VALUES.add(Ministerium_fuer_Justiz_und_Gleichstellung_des_Landes_Sachsen_Anhalt_Magdeburg);
+        Justizvollzugsanstalt_Volkstedt = new GerichtCode("Justizvollzugsanstalt_Volkstedt", "W6235");
+        $VALUES.add(Justizvollzugsanstalt_Volkstedt);
+        aufgeloest_Verwaltungsgericht_Dessau = new GerichtCode("aufgeloest_Verwaltungsgericht_Dessau", "W6289");
+        $VALUES.add(aufgeloest_Verwaltungsgericht_Dessau);
+        Verwaltungsgericht_Magdeburg = new GerichtCode("Verwaltungsgericht_Magdeburg", "W6294");
+        $VALUES.add(Verwaltungsgericht_Magdeburg);
+        Justizvollzugsanstalt_Halle = new GerichtCode("Justizvollzugsanstalt_Halle", "W6373");
+        $VALUES.add(Justizvollzugsanstalt_Halle);
+        Arbeitsgericht_Halle = new GerichtCode("Arbeitsgericht_Halle", "W6377");
+        $VALUES.add(Arbeitsgericht_Halle);
+        Jugendanstalt_Rassnitz = new GerichtCode("Jugendanstalt_Rassnitz", "W6424");
+        $VALUES.add(Jugendanstalt_Rassnitz);
+        Oberverwaltungsgericht_des_Landes_Sachsen_Anhalt = new GerichtCode("Oberverwaltungsgericht_des_Landes_Sachsen_Anhalt", "W6438");
+        $VALUES.add(Oberverwaltungsgericht_des_Landes_Sachsen_Anhalt);
+        Justizvollzugsanstalt_Burg = new GerichtCode("Justizvollzugsanstalt_Burg", "W6445");
+        $VALUES.add(Justizvollzugsanstalt_Burg);
+        Landesarbeitsgericht_Sachsen_Anhalt = new GerichtCode("Landesarbeitsgericht_Sachsen_Anhalt", "W6453");
+        $VALUES.add(Landesarbeitsgericht_Sachsen_Anhalt);
+        Arbeitsgericht_Dessau_Rosslau = new GerichtCode("Arbeitsgericht_Dessau_Rosslau", "W6454");
+        $VALUES.add(Arbeitsgericht_Dessau_Rosslau);
+        aufgeloest_Arbeitsgericht_Halberstadt = new GerichtCode("aufgeloest_Arbeitsgericht_Halberstadt", "W6455");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Halberstadt);
+        Arbeitsgericht_Magdeburg = new GerichtCode("Arbeitsgericht_Magdeburg", "W6458");
+        $VALUES.add(Arbeitsgericht_Magdeburg);
+        aufgeloest_Arbeitsgericht_Naumburg = new GerichtCode("aufgeloest_Arbeitsgericht_Naumburg", "W6459");
+        $VALUES.add(aufgeloest_Arbeitsgericht_Naumburg);
+    }
+
+    private static void init5() {
+        Arbeitsgericht_Stendal = new GerichtCode("Arbeitsgericht_Stendal", "W6460");
+        $VALUES.add(Arbeitsgericht_Stendal);
+        Verwaltungsgericht_Halle = new GerichtCode("Verwaltungsgericht_Halle", "W6464");
+        $VALUES.add(Verwaltungsgericht_Halle);
+        Finanzgericht_des_Landes_Sachsen_Anhalt = new GerichtCode("Finanzgericht_des_Landes_Sachsen_Anhalt", "W6467");
+        $VALUES.add(Finanzgericht_des_Landes_Sachsen_Anhalt);
+        Landessozialgericht_Sachsen_Anhalt = new GerichtCode("Landessozialgericht_Sachsen_Anhalt", "W6468");
+        $VALUES.add(Landessozialgericht_Sachsen_Anhalt);
+        Sozialgericht_Dessau_Rosslau = new GerichtCode("Sozialgericht_Dessau_Rosslau", "W6469");
+        $VALUES.add(Sozialgericht_Dessau_Rosslau);
+        Sozialgericht_Halle = new GerichtCode("Sozialgericht_Halle", "W6470");
+        $VALUES.add(Sozialgericht_Halle);
+        Sozialgericht_Magdeburg = new GerichtCode("Sozialgericht_Magdeburg", "W6471");
+        $VALUES.add(Sozialgericht_Magdeburg);
+        aufgeloest_Sozialgericht_Stendal = new GerichtCode("aufgeloest_Sozialgericht_Stendal", "W6472");
+        $VALUES.add(aufgeloest_Sozialgericht_Stendal);
+        Landesverfassungsgericht_Sachsen_Anhalt = new GerichtCode("Landesverfassungsgericht_Sachsen_Anhalt", "W6488");
+        $VALUES.add(Landesverfassungsgericht_Sachsen_Anhalt);
+        Dienstgericht_fuer_Richter_Sachsen_Anhalt = new GerichtCode("Dienstgericht_fuer_Richter_Sachsen_Anhalt", "W6632");
+        $VALUES.add(Dienstgericht_fuer_Richter_Sachsen_Anhalt);
+        Landesberufsgericht_fuer_Heilberufe_Sachsen_Anhalt = new GerichtCode("Landesberufsgericht_fuer_Heilberufe_Sachsen_Anhalt", "W6633");
+        $VALUES.add(Landesberufsgericht_fuer_Heilberufe_Sachsen_Anhalt);
+        Berufsgerichtshof_der_Ingenieurkammer_Sachsen_Anhalt = new GerichtCode("Berufsgerichtshof_der_Ingenieurkammer_Sachsen_Anhalt", "W6634");
+        $VALUES.add(Berufsgerichtshof_der_Ingenieurkammer_Sachsen_Anhalt);
+        Richterdienstgericht_Sachsen_Anhalt = new GerichtCode("Richterdienstgericht_Sachsen_Anhalt", "W6635");
+        $VALUES.add(Richterdienstgericht_Sachsen_Anhalt);
+        Berufsgericht_fuer_Heilberufe_Sachsen_Anhalt = new GerichtCode("Berufsgericht_fuer_Heilberufe_Sachsen_Anhalt", "W6636");
+        $VALUES.add(Berufsgericht_fuer_Heilberufe_Sachsen_Anhalt);
+        Berufsgericht_der_Ingenieurkammer_Sachsen_Anhalt = new GerichtCode("Berufsgericht_der_Ingenieurkammer_Sachsen_Anhalt", "W6637");
+        $VALUES.add(Berufsgericht_der_Ingenieurkammer_Sachsen_Anhalt);
+        Oberlandesgericht_Schleswig = new GerichtCode("Oberlandesgericht_Schleswig", "X1000");
+        $VALUES.add(Oberlandesgericht_Schleswig);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Schleswig = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Schleswig", "X1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Schleswig);
+        Landgericht_Flensburg = new GerichtCode("Landgericht_Flensburg", "X1100");
+        $VALUES.add(Landgericht_Flensburg);
+        Staatsanwaltschaft_beim_Landgericht_Flensburg = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Flensburg", "X1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Flensburg);
+        aufgeloest_Amtsgericht_Bredstedt = new GerichtCode("aufgeloest_Amtsgericht_Bredstedt", "X1111");
+        $VALUES.add(aufgeloest_Amtsgericht_Bredstedt);
+        Amtsgericht_Flensburg = new GerichtCode("Amtsgericht_Flensburg", "X1112");
+        $VALUES.add(Amtsgericht_Flensburg);
+        Grundbuchamt_Flensburg = new GerichtCode("Grundbuchamt_Flensburg", "X1112G");
+        $VALUES.add(Grundbuchamt_Flensburg);
+        Registergericht_Amtsgericht_Flensburg = new GerichtCode("Registergericht_Amtsgericht_Flensburg", "X1112R");
+        $VALUES.add(Registergericht_Amtsgericht_Flensburg);
+        aufgeloest_Amtsgericht_Friedrichstadt = new GerichtCode("aufgeloest_Amtsgericht_Friedrichstadt", "X1113");
+        $VALUES.add(aufgeloest_Amtsgericht_Friedrichstadt);
+        aufgeloest_Amtsgericht_Heide = new GerichtCode("aufgeloest_Amtsgericht_Heide", "X1114");
+        $VALUES.add(aufgeloest_Amtsgericht_Heide);
+        Amtsgericht_Husum = new GerichtCode("Amtsgericht_Husum", "X1115");
+        $VALUES.add(Amtsgericht_Husum);
+        Grundbuchamt_Husum = new GerichtCode("Grundbuchamt_Husum", "X1115G");
+        $VALUES.add(Grundbuchamt_Husum);
+        aufgeloest_Amtsgericht_Kappeln = new GerichtCode("aufgeloest_Amtsgericht_Kappeln", "X1116");
+        $VALUES.add(aufgeloest_Amtsgericht_Kappeln);
+        aufgeloest_Amtsgericht_Leck = new GerichtCode("aufgeloest_Amtsgericht_Leck", "X1117");
+        $VALUES.add(aufgeloest_Amtsgericht_Leck);
+        Amtsgericht_Niebuell = new GerichtCode("Amtsgericht_Niebuell", "X1118");
+        $VALUES.add(Amtsgericht_Niebuell);
+        Grundbuchamt_Niebuell = new GerichtCode("Grundbuchamt_Niebuell", "X1118G");
+        $VALUES.add(Grundbuchamt_Niebuell);
+        Amtsgericht_Schleswig = new GerichtCode("Amtsgericht_Schleswig", "X1119");
+        $VALUES.add(Amtsgericht_Schleswig);
+        Grundbuchamt_Schleswig = new GerichtCode("Grundbuchamt_Schleswig", "X1119G");
+        $VALUES.add(Grundbuchamt_Schleswig);
+        Amtsgericht_Schleswig_Zentrales_Mahngericht_fuer_Schleswig_Holstein = new GerichtCode("Amtsgericht_Schleswig_Zentrales_Mahngericht_fuer_Schleswig_Holstein", "X1119M");
+        $VALUES.add(Amtsgericht_Schleswig_Zentrales_Mahngericht_fuer_Schleswig_Holstein);
+        Amtsgericht_Schleswig_Zentrales_Vollstreckungsgericht_Schleswig_Holstein = new GerichtCode("Amtsgericht_Schleswig_Zentrales_Vollstreckungsgericht_Schleswig_Holstein", "X1119R");
+        $VALUES.add(Amtsgericht_Schleswig_Zentrales_Vollstreckungsgericht_Schleswig_Holstein);
+        aufgeloest_Amtsgericht_Toenning = new GerichtCode("aufgeloest_Amtsgericht_Toenning", "X1121");
+        $VALUES.add(aufgeloest_Amtsgericht_Toenning);
+        aufgeloest_Amtsgericht_Wesselburen = new GerichtCode("aufgeloest_Amtsgericht_Wesselburen", "X1122");
+        $VALUES.add(aufgeloest_Amtsgericht_Wesselburen);
+        aufgeloest_Amtsgericht_Westerland = new GerichtCode("aufgeloest_Amtsgericht_Westerland", "X1123");
+        $VALUES.add(aufgeloest_Amtsgericht_Westerland);
+        aufgeloest_Amtsgericht_Wyk_a_Foehr = new GerichtCode("aufgeloest_Amtsgericht_Wyk_a_Foehr", "X1124");
+        $VALUES.add(aufgeloest_Amtsgericht_Wyk_a_Foehr);
+        Landgericht_Itzehoe = new GerichtCode("Landgericht_Itzehoe", "X1300");
+        $VALUES.add(Landgericht_Itzehoe);
+        Staatsanwaltschaft_beim_Landgericht_Itzehoe = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Itzehoe", "X1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Itzehoe);
+        aufgeloest_Amtsgericht_Brunsbuettelkoog = new GerichtCode("aufgeloest_Amtsgericht_Brunsbuettelkoog", "X1311");
+        $VALUES.add(aufgeloest_Amtsgericht_Brunsbuettelkoog);
+        Amtsgericht_Elmshorn = new GerichtCode("Amtsgericht_Elmshorn", "X1312");
+        $VALUES.add(Amtsgericht_Elmshorn);
+        Grundbuchamt_Elmshorn = new GerichtCode("Grundbuchamt_Elmshorn", "X1312G");
+        $VALUES.add(Grundbuchamt_Elmshorn);
+        aufgeloest_Amtsgericht_Glueckstadt = new GerichtCode("aufgeloest_Amtsgericht_Glueckstadt", "X1314");
+        $VALUES.add(aufgeloest_Amtsgericht_Glueckstadt);
+        Amtsgericht_Itzehoe = new GerichtCode("Amtsgericht_Itzehoe", "X1315");
+        $VALUES.add(Amtsgericht_Itzehoe);
+        Grundbuchamt_Itzehoe = new GerichtCode("Grundbuchamt_Itzehoe", "X1315G");
+        $VALUES.add(Grundbuchamt_Itzehoe);
+        aufgeloest_Amtsgericht_Kellinghusen = new GerichtCode("aufgeloest_Amtsgericht_Kellinghusen", "X1316");
+        $VALUES.add(aufgeloest_Amtsgericht_Kellinghusen);
+        aufgeloest_Amtsgericht_Krempe = new GerichtCode("aufgeloest_Amtsgericht_Krempe", "X1317");
+        $VALUES.add(aufgeloest_Amtsgericht_Krempe);
+        aufgeloest_Amtsgericht_Marne = new GerichtCode("aufgeloest_Amtsgericht_Marne", "X1318");
+        $VALUES.add(aufgeloest_Amtsgericht_Marne);
+        Amtsgericht_Meldorf = new GerichtCode("Amtsgericht_Meldorf", "X1319");
+        $VALUES.add(Amtsgericht_Meldorf);
+        Grundbuchamt_Meldorf = new GerichtCode("Grundbuchamt_Meldorf", "X1319G");
+        $VALUES.add(Grundbuchamt_Meldorf);
+        Amtsgericht_Pinneberg = new GerichtCode("Amtsgericht_Pinneberg", "X1321");
+        $VALUES.add(Amtsgericht_Pinneberg);
+        Grundbuchamt_Pinneberg = new GerichtCode("Grundbuchamt_Pinneberg", "X1321G");
+        $VALUES.add(Grundbuchamt_Pinneberg);
+        Registergericht_Amtsgericht_Pinneberg = new GerichtCode("Registergericht_Amtsgericht_Pinneberg", "X1321R");
+        $VALUES.add(Registergericht_Amtsgericht_Pinneberg);
+        aufgeloest_Amtsgericht_Rantzau_Post_Barmstedt = new GerichtCode("aufgeloest_Amtsgericht_Rantzau_Post_Barmstedt", "X1322");
+        $VALUES.add(aufgeloest_Amtsgericht_Rantzau_Post_Barmstedt);
+        aufgeloest_Amtsgericht_Schenefeld = new GerichtCode("aufgeloest_Amtsgericht_Schenefeld", "X1323");
+        $VALUES.add(aufgeloest_Amtsgericht_Schenefeld);
+        aufgeloest_Amtsgericht_Uetersen = new GerichtCode("aufgeloest_Amtsgericht_Uetersen", "X1324");
+        $VALUES.add(aufgeloest_Amtsgericht_Uetersen);
+        aufgeloest_Amtsgericht_Wedel_Holstein = new GerichtCode("aufgeloest_Amtsgericht_Wedel_Holstein", "X1325");
+        $VALUES.add(aufgeloest_Amtsgericht_Wedel_Holstein);
+        aufgeloest_Amtsgericht_Wilster = new GerichtCode("aufgeloest_Amtsgericht_Wilster", "X1326");
+        $VALUES.add(aufgeloest_Amtsgericht_Wilster);
+        Landgericht_Kiel = new GerichtCode("Landgericht_Kiel", "X1500");
+        $VALUES.add(Landgericht_Kiel);
+        Staatsanwaltschaft_beim_Landgericht_Kiel = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Kiel", "X1500S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Kiel);
+        aufgeloest_Amtsgericht_Bad_Bramstedt = new GerichtCode("aufgeloest_Amtsgericht_Bad_Bramstedt", "X1511");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Bramstedt);
+        Amtsgericht_Bad_Segeberg = new GerichtCode("Amtsgericht_Bad_Segeberg", "X1512");
+        $VALUES.add(Amtsgericht_Bad_Segeberg);
+        Grundbuchamt_Bad_Segeberg = new GerichtCode("Grundbuchamt_Bad_Segeberg", "X1512G");
+        $VALUES.add(Grundbuchamt_Bad_Segeberg);
+        aufgeloest_Amtsgericht_Bordesholm = new GerichtCode("aufgeloest_Amtsgericht_Bordesholm", "X1513");
+        $VALUES.add(aufgeloest_Amtsgericht_Bordesholm);
+        Amtsgericht_Eckernfoerde = new GerichtCode("Amtsgericht_Eckernfoerde", "X1514");
+        $VALUES.add(Amtsgericht_Eckernfoerde);
+        Grundbuchamt_Eckernfoerde = new GerichtCode("Grundbuchamt_Eckernfoerde", "X1514G");
+        $VALUES.add(Grundbuchamt_Eckernfoerde);
+        aufgeloest_Amtsgericht_Gettorf = new GerichtCode("aufgeloest_Amtsgericht_Gettorf", "X1515");
+        $VALUES.add(aufgeloest_Amtsgericht_Gettorf);
+        aufgeloest_Amtsgericht_Hohenwestedt = new GerichtCode("aufgeloest_Amtsgericht_Hohenwestedt", "X1516");
+        $VALUES.add(aufgeloest_Amtsgericht_Hohenwestedt);
+        Amtsgericht_Kiel = new GerichtCode("Amtsgericht_Kiel", "X1517");
+        $VALUES.add(Amtsgericht_Kiel);
+        Grundbuchamt_Kiel = new GerichtCode("Grundbuchamt_Kiel", "X1517G");
+        $VALUES.add(Grundbuchamt_Kiel);
+        Registergericht_Amtsgericht_Kiel = new GerichtCode("Registergericht_Amtsgericht_Kiel", "X1517R");
+        $VALUES.add(Registergericht_Amtsgericht_Kiel);
+        aufgeloest_Amtsgericht_Luetjenburg = new GerichtCode("aufgeloest_Amtsgericht_Luetjenburg", "X1518");
+        $VALUES.add(aufgeloest_Amtsgericht_Luetjenburg);
+        Amtsgericht_Neumuenster = new GerichtCode("Amtsgericht_Neumuenster", "X1519");
+        $VALUES.add(Amtsgericht_Neumuenster);
+        Grundbuchamt_Neumuenster = new GerichtCode("Grundbuchamt_Neumuenster", "X1519G");
+        $VALUES.add(Grundbuchamt_Neumuenster);
+        aufgeloest_Amtsgericht_Nortorf = new GerichtCode("aufgeloest_Amtsgericht_Nortorf", "X1521");
+        $VALUES.add(aufgeloest_Amtsgericht_Nortorf);
+        Amtsgericht_Ploen = new GerichtCode("Amtsgericht_Ploen", "X1522");
+        $VALUES.add(Amtsgericht_Ploen);
+        Grundbuchamt_Ploen = new GerichtCode("Grundbuchamt_Ploen", "X1522G");
+        $VALUES.add(Grundbuchamt_Ploen);
+        aufgeloest_Amtsgericht_Preetz = new GerichtCode("aufgeloest_Amtsgericht_Preetz", "X1523");
+        $VALUES.add(aufgeloest_Amtsgericht_Preetz);
+        Amtsgericht_Rendsburg = new GerichtCode("Amtsgericht_Rendsburg", "X1524");
+        $VALUES.add(Amtsgericht_Rendsburg);
+        Grundbuchamt_Rendsburg = new GerichtCode("Grundbuchamt_Rendsburg", "X1524G");
+        $VALUES.add(Grundbuchamt_Rendsburg);
+        aufgeloest_Amtsgericht_Schoenberg_Holstein = new GerichtCode("aufgeloest_Amtsgericht_Schoenberg_Holstein", "X1525");
+        $VALUES.add(aufgeloest_Amtsgericht_Schoenberg_Holstein);
+        Amtsgericht_Norderstedt = new GerichtCode("Amtsgericht_Norderstedt", "X1526");
+        $VALUES.add(Amtsgericht_Norderstedt);
+        Grundbuchamt_Norderstedt = new GerichtCode("Grundbuchamt_Norderstedt", "X1526G");
+        $VALUES.add(Grundbuchamt_Norderstedt);
+        Landgericht_Luebeck = new GerichtCode("Landgericht_Luebeck", "X1700");
+        $VALUES.add(Landgericht_Luebeck);
+        Staatsanwaltschaft_beim_Landgericht_Luebeck = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Luebeck", "X1700S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Luebeck);
+        Amtsgericht_Ahrensburg = new GerichtCode("Amtsgericht_Ahrensburg", "X1711");
+        $VALUES.add(Amtsgericht_Ahrensburg);
+        Grundbuchamt_Ahrensburg = new GerichtCode("Grundbuchamt_Ahrensburg", "X1711G");
+        $VALUES.add(Grundbuchamt_Ahrensburg);
+        aufgeloest_Amtsgericht_Bad_Oldesloe = new GerichtCode("aufgeloest_Amtsgericht_Bad_Oldesloe", "X1712");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Oldesloe);
+        aufgeloest_Amtsgericht_Bad_Schwartau = new GerichtCode("aufgeloest_Amtsgericht_Bad_Schwartau", "X1713");
+        $VALUES.add(aufgeloest_Amtsgericht_Bad_Schwartau);
+        aufgeloest_Amtsgericht_Bargteheide = new GerichtCode("aufgeloest_Amtsgericht_Bargteheide", "X1714");
+        $VALUES.add(aufgeloest_Amtsgericht_Bargteheide);
+        aufgeloest_Amtsgericht_Burg_a_F = new GerichtCode("aufgeloest_Amtsgericht_Burg_a_F", "X1715");
+        $VALUES.add(aufgeloest_Amtsgericht_Burg_a_F);
+        Amtsgericht_Eutin = new GerichtCode("Amtsgericht_Eutin", "X1716");
+        $VALUES.add(Amtsgericht_Eutin);
+        Grundbuchamt_Eutin = new GerichtCode("Grundbuchamt_Eutin", "X1716G");
+        $VALUES.add(Grundbuchamt_Eutin);
+        aufgeloest_Amtsgericht_Geesthacht = new GerichtCode("aufgeloest_Amtsgericht_Geesthacht", "X1717");
+        $VALUES.add(aufgeloest_Amtsgericht_Geesthacht);
+        aufgeloest_Amtsgericht_Heiligenhafen = new GerichtCode("aufgeloest_Amtsgericht_Heiligenhafen", "X1718");
+        $VALUES.add(aufgeloest_Amtsgericht_Heiligenhafen);
+        aufgeloest_Amtsgericht_Lauenburg_Elbe = new GerichtCode("aufgeloest_Amtsgericht_Lauenburg_Elbe", "X1719");
+        $VALUES.add(aufgeloest_Amtsgericht_Lauenburg_Elbe);
+        Amtsgericht_Luebeck = new GerichtCode("Amtsgericht_Luebeck", "X1721");
+        $VALUES.add(Amtsgericht_Luebeck);
+        Grundbuchamt_Luebeck = new GerichtCode("Grundbuchamt_Luebeck", "X1721G");
+        $VALUES.add(Grundbuchamt_Luebeck);
+        Registergericht_Amtsgericht_Luebeck = new GerichtCode("Registergericht_Amtsgericht_Luebeck", "X1721R");
+        $VALUES.add(Registergericht_Amtsgericht_Luebeck);
+        aufgeloest_Amtsgericht_Moelln = new GerichtCode("aufgeloest_Amtsgericht_Moelln", "X1722");
+        $VALUES.add(aufgeloest_Amtsgericht_Moelln);
+        aufgeloest_Amtsgericht_Neustadt_in_Holstein = new GerichtCode("aufgeloest_Amtsgericht_Neustadt_in_Holstein", "X1723");
+        $VALUES.add(aufgeloest_Amtsgericht_Neustadt_in_Holstein);
+        Amtsgericht_Oldenburg_Holstein = new GerichtCode("Amtsgericht_Oldenburg_Holstein", "X1724");
+        $VALUES.add(Amtsgericht_Oldenburg_Holstein);
+        Grundbuchamt_Oldenburg_Holstein = new GerichtCode("Grundbuchamt_Oldenburg_Holstein", "X1724G");
+        $VALUES.add(Grundbuchamt_Oldenburg_Holstein);
+        Amtsgericht_Ratzeburg = new GerichtCode("Amtsgericht_Ratzeburg", "X1725");
+        $VALUES.add(Amtsgericht_Ratzeburg);
+        Grundbuchamt_Ratzeburg = new GerichtCode("Grundbuchamt_Ratzeburg", "X1725G");
+        $VALUES.add(Grundbuchamt_Ratzeburg);
+        Amtsgericht_Reinbek = new GerichtCode("Amtsgericht_Reinbek", "X1726");
+        $VALUES.add(Amtsgericht_Reinbek);
+        Grundbuchamt_Reinbek = new GerichtCode("Grundbuchamt_Reinbek", "X1726G");
+        $VALUES.add(Grundbuchamt_Reinbek);
+        aufgeloest_Amtsgericht_Reinfeld = new GerichtCode("aufgeloest_Amtsgericht_Reinfeld", "X1727");
+        $VALUES.add(aufgeloest_Amtsgericht_Reinfeld);
+        Amtsgericht_Schwarzenbek = new GerichtCode("Amtsgericht_Schwarzenbek", "X1728");
+        $VALUES.add(Amtsgericht_Schwarzenbek);
+        Grundbuchamt_Schwarzenbek = new GerichtCode("Grundbuchamt_Schwarzenbek", "X1728G");
+        $VALUES.add(Grundbuchamt_Schwarzenbek);
+        aufgeloest_Amtsgericht_Trittau = new GerichtCode("aufgeloest_Amtsgericht_Trittau", "X1729");
+        $VALUES.add(aufgeloest_Amtsgericht_Trittau);
+        Arbeitsgericht_Elmshorn = new GerichtCode("Arbeitsgericht_Elmshorn", "X6070");
+        $VALUES.add(Arbeitsgericht_Elmshorn);
+        Arbeitsgericht_Flensburg = new GerichtCode("Arbeitsgericht_Flensburg", "X6071");
+        $VALUES.add(Arbeitsgericht_Flensburg);
+        Sozialgericht_Itzehoe = new GerichtCode("Sozialgericht_Itzehoe", "X6073");
+        $VALUES.add(Sozialgericht_Itzehoe);
+        Schleswig_Holsteinisches_Finanzgericht = new GerichtCode("Schleswig_Holsteinisches_Finanzgericht", "X6074");
+        $VALUES.add(Schleswig_Holsteinisches_Finanzgericht);
+        Sozialgericht_Kiel = new GerichtCode("Sozialgericht_Kiel", "X6075");
+        $VALUES.add(Sozialgericht_Kiel);
+        Landesarbeitsgericht_Schleswig_Holstein = new GerichtCode("Landesarbeitsgericht_Schleswig_Holstein", "X6076");
+        $VALUES.add(Landesarbeitsgericht_Schleswig_Holstein);
+        Arbeitsgericht_Neumuenster = new GerichtCode("Arbeitsgericht_Neumuenster", "X6077");
+        $VALUES.add(Arbeitsgericht_Neumuenster);
+        Sozialgericht_Schleswig = new GerichtCode("Sozialgericht_Schleswig", "X6078");
+        $VALUES.add(Sozialgericht_Schleswig);
+        Schleswig_Holsteinisches_Landessozialgericht = new GerichtCode("Schleswig_Holsteinisches_Landessozialgericht", "X6079");
+        $VALUES.add(Schleswig_Holsteinisches_Landessozialgericht);
+        Schleswig_Holsteinisches_Verwaltungsgericht = new GerichtCode("Schleswig_Holsteinisches_Verwaltungsgericht", "X6080");
+        $VALUES.add(Schleswig_Holsteinisches_Verwaltungsgericht);
+        Schleswig_Holsteinischer_Anwaltsgerichtshof = new GerichtCode("Schleswig_Holsteinischer_Anwaltsgerichtshof", "X6111");
+        $VALUES.add(Schleswig_Holsteinischer_Anwaltsgerichtshof);
+        Arbeitsgericht_Kiel = new GerichtCode("Arbeitsgericht_Kiel", "X6165");
+        $VALUES.add(Arbeitsgericht_Kiel);
+        Arbeitsgericht_Luebeck = new GerichtCode("Arbeitsgericht_Luebeck", "X6166");
+        $VALUES.add(Arbeitsgericht_Luebeck);
+        Sozialgericht_Luebeck = new GerichtCode("Sozialgericht_Luebeck", "X6188");
+        $VALUES.add(Sozialgericht_Luebeck);
+        Justizvollzugsanstalt_Luebeck = new GerichtCode("Justizvollzugsanstalt_Luebeck", "X6240");
+        $VALUES.add(Justizvollzugsanstalt_Luebeck);
+        Justizvollzugsanstalt_Glasmoor = new GerichtCode("Justizvollzugsanstalt_Glasmoor", "X6313");
+        $VALUES.add(Justizvollzugsanstalt_Glasmoor);
+        Justizvollzugsanstalt_Itzehoe = new GerichtCode("Justizvollzugsanstalt_Itzehoe", "X6315");
+        $VALUES.add(Justizvollzugsanstalt_Itzehoe);
+        Jugendanstalt_Schleswig = new GerichtCode("Jugendanstalt_Schleswig", "X6321");
+        $VALUES.add(Jugendanstalt_Schleswig);
+        Justizvollzugsanstalt_Neumuenster = new GerichtCode("Justizvollzugsanstalt_Neumuenster", "X6323");
+        $VALUES.add(Justizvollzugsanstalt_Neumuenster);
+        Schleswig_Holsteinisches_Oberverwaltungsgericht = new GerichtCode("Schleswig_Holsteinisches_Oberverwaltungsgericht", "X6387");
+        $VALUES.add(Schleswig_Holsteinisches_Oberverwaltungsgericht);
+        Schleswig_Holsteinisches_Landesverfassungsgericht = new GerichtCode("Schleswig_Holsteinisches_Landesverfassungsgericht", "X6433");
+        $VALUES.add(Schleswig_Holsteinisches_Landesverfassungsgericht);
+        Justizvollzugsanstalt_Kiel = new GerichtCode("Justizvollzugsanstalt_Kiel", "X6747");
+        $VALUES.add(Justizvollzugsanstalt_Kiel);
+        Justizvollzugsanstalt_Flensburg = new GerichtCode("Justizvollzugsanstalt_Flensburg", "X6756");
+        $VALUES.add(Justizvollzugsanstalt_Flensburg);
+        Schleswig_Holsteinisches_Anwaltsgericht = new GerichtCode("Schleswig_Holsteinisches_Anwaltsgericht", "X6776");
+        $VALUES.add(Schleswig_Holsteinisches_Anwaltsgericht);
+        Thueringer_Oberlandesgericht = new GerichtCode("Thueringer_Oberlandesgericht", "Y1000");
+        $VALUES.add(Thueringer_Oberlandesgericht);
+        Staatsanwaltschaft_beim_Oberlandesgericht_Jena = new GerichtCode("Staatsanwaltschaft_beim_Oberlandesgericht_Jena", "Y1000S");
+        $VALUES.add(Staatsanwaltschaft_beim_Oberlandesgericht_Jena);
+        Landgericht_Erfurt = new GerichtCode("Landgericht_Erfurt", "Y1100");
+        $VALUES.add(Landgericht_Erfurt);
+        Staatsanwaltschaft_beim_Landgericht_Erfurt = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Erfurt", "Y1100S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Erfurt);
+        Amtsgericht_Apolda = new GerichtCode("Amtsgericht_Apolda", "Y1101");
+        $VALUES.add(Amtsgericht_Apolda);
+        Grundbuchamt_Apolda = new GerichtCode("Grundbuchamt_Apolda", "Y1101G");
+        $VALUES.add(Grundbuchamt_Apolda);
+        Amtsgericht_Arnstadt = new GerichtCode("Amtsgericht_Arnstadt", "Y1102");
+        $VALUES.add(Amtsgericht_Arnstadt);
+        Grundbuchamt_Arnstadt = new GerichtCode("Grundbuchamt_Arnstadt", "Y1102G");
+        $VALUES.add(Grundbuchamt_Arnstadt);
+        aufgeloest_Amtsgericht_Sondershausen_Zweigstelle_Artern = new GerichtCode("aufgeloest_Amtsgericht_Sondershausen_Zweigstelle_Artern", "Y1103");
+        $VALUES.add(aufgeloest_Amtsgericht_Sondershausen_Zweigstelle_Artern);
+        aufgeloest_Amtsgericht_Muehlhausen_Zweigstelle_Bad_Langensalza = new GerichtCode("aufgeloest_Amtsgericht_Muehlhausen_Zweigstelle_Bad_Langensalza", "Y1104");
+        $VALUES.add(aufgeloest_Amtsgericht_Muehlhausen_Zweigstelle_Bad_Langensalza);
+        aufgeloest_Grundbuchamt_Muehlhausen_Zweigstelle_Bad_Langensalza = new GerichtCode("aufgeloest_Grundbuchamt_Muehlhausen_Zweigstelle_Bad_Langensalza", "Y1104G");
+        $VALUES.add(aufgeloest_Grundbuchamt_Muehlhausen_Zweigstelle_Bad_Langensalza);
+        Amtsgericht_Eisenach = new GerichtCode("Amtsgericht_Eisenach", "Y1105");
+        $VALUES.add(Amtsgericht_Eisenach);
+        Grundbuchamt_Eisenach = new GerichtCode("Grundbuchamt_Eisenach", "Y1105G");
+        $VALUES.add(Grundbuchamt_Eisenach);
+        Amtsgericht_Erfurt = new GerichtCode("Amtsgericht_Erfurt", "Y1106");
+        $VALUES.add(Amtsgericht_Erfurt);
+        Grundbuchamt_Erfurt = new GerichtCode("Grundbuchamt_Erfurt", "Y1106G");
+        $VALUES.add(Grundbuchamt_Erfurt);
+        aufgeloest_Amtsgericht_Erfurt_Land = new GerichtCode("aufgeloest_Amtsgericht_Erfurt_Land", "Y1107");
+        $VALUES.add(aufgeloest_Amtsgericht_Erfurt_Land);
+        Amtsgericht_Gotha = new GerichtCode("Amtsgericht_Gotha", "Y1108");
+        $VALUES.add(Amtsgericht_Gotha);
+        Grundbuchamt_Gotha = new GerichtCode("Grundbuchamt_Gotha", "Y1108G");
+        $VALUES.add(Grundbuchamt_Gotha);
+        Amtsgericht_Heiligenstadt = new GerichtCode("Amtsgericht_Heiligenstadt", "Y1109");
+        $VALUES.add(Amtsgericht_Heiligenstadt);
+        Grundbuchamt_Heilbad_Heiligenstadt = new GerichtCode("Grundbuchamt_Heilbad_Heiligenstadt", "Y1109G");
+        $VALUES.add(Grundbuchamt_Heilbad_Heiligenstadt);
+        Amtsgericht_Muehlhausen = new GerichtCode("Amtsgericht_Muehlhausen", "Y1110");
+        $VALUES.add(Amtsgericht_Muehlhausen);
+        Grundbuchamt_Muehlhausen = new GerichtCode("Grundbuchamt_Muehlhausen", "Y1110G");
+        $VALUES.add(Grundbuchamt_Muehlhausen);
+        Amtsgericht_Nordhausen = new GerichtCode("Amtsgericht_Nordhausen", "Y1111");
+        $VALUES.add(Amtsgericht_Nordhausen);
+        Grundbuchamt_Nordhausen = new GerichtCode("Grundbuchamt_Nordhausen", "Y1111G");
+        $VALUES.add(Grundbuchamt_Nordhausen);
+        Amtsgericht_Soemmerda = new GerichtCode("Amtsgericht_Soemmerda", "Y1112");
+        $VALUES.add(Amtsgericht_Soemmerda);
+        Grundbuchamt_Soemmerda = new GerichtCode("Grundbuchamt_Soemmerda", "Y1112G");
+        $VALUES.add(Grundbuchamt_Soemmerda);
+        Amtsgericht_Sondershausen = new GerichtCode("Amtsgericht_Sondershausen", "Y1113");
+        $VALUES.add(Amtsgericht_Sondershausen);
+        Grundbuchamt_Sondershausen = new GerichtCode("Grundbuchamt_Sondershausen", "Y1113G");
+        $VALUES.add(Grundbuchamt_Sondershausen);
+        Amtsgericht_Weimar = new GerichtCode("Amtsgericht_Weimar", "Y1114");
+        $VALUES.add(Amtsgericht_Weimar);
+        Grundbuchamt_Weimar = new GerichtCode("Grundbuchamt_Weimar", "Y1114G");
+        $VALUES.add(Grundbuchamt_Weimar);
+        aufgeloest_Amtsgericht_Heilbad_Heiligenstadt_Zweigstelle_Leinefelde_Worbis = new GerichtCode("aufgeloest_Amtsgericht_Heilbad_Heiligenstadt_Zweigstelle_Leinefelde_Worbis", "Y1115");
+        $VALUES.add(aufgeloest_Amtsgericht_Heilbad_Heiligenstadt_Zweigstelle_Leinefelde_Worbis);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Gotha_Aussenstelle_der_StA_Erfurt = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Gotha_Aussenstelle_der_StA_Erfurt", "Y1116S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Gotha_Aussenstelle_der_StA_Erfurt);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Erfurt_Aussenstelle_Erfurt = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Erfurt_Aussenstelle_Erfurt", "Y1117S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Erfurt_Aussenstelle_Erfurt);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Weimar_Aussenstelle_der_StA_Erfurt = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Weimar_Aussenstelle_der_StA_Erfurt", "Y1118S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Weimar_Aussenstelle_der_StA_Erfurt);
+        Landgericht_Gera = new GerichtCode("Landgericht_Gera", "Y1200");
+        $VALUES.add(Landgericht_Gera);
+        Staatsanwaltschaft_beim_Landgericht_Gera = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Gera", "Y1200S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Gera);
+        Amtsgericht_Altenburg = new GerichtCode("Amtsgericht_Altenburg", "Y1201");
+        $VALUES.add(Amtsgericht_Altenburg);
+        Grundbuchamt_Altenburg = new GerichtCode("Grundbuchamt_Altenburg", "Y1201G");
+        $VALUES.add(Grundbuchamt_Altenburg);
+        aufgeloest_Amtsgericht_Eisenberg = new GerichtCode("aufgeloest_Amtsgericht_Eisenberg", "Y1202");
+        $VALUES.add(aufgeloest_Amtsgericht_Eisenberg);
+        Amtsgericht_Gera = new GerichtCode("Amtsgericht_Gera", "Y1203");
+        $VALUES.add(Amtsgericht_Gera);
+        Grundbuchamt_Gera = new GerichtCode("Grundbuchamt_Gera", "Y1203G");
+        $VALUES.add(Grundbuchamt_Gera);
+        aufgeloest_Kreisgericht_Gera_Land = new GerichtCode("aufgeloest_Kreisgericht_Gera_Land", "Y1204");
+        $VALUES.add(aufgeloest_Kreisgericht_Gera_Land);
+        Amtsgericht_Greiz = new GerichtCode("Amtsgericht_Greiz", "Y1205");
+        $VALUES.add(Amtsgericht_Greiz);
+        Grundbuchamt_Greiz = new GerichtCode("Grundbuchamt_Greiz", "Y1205G");
+        $VALUES.add(Grundbuchamt_Greiz);
+        Amtsgericht_Jena = new GerichtCode("Amtsgericht_Jena", "Y1206");
+        $VALUES.add(Amtsgericht_Jena);
+        Grundbuchamt_Jena = new GerichtCode("Grundbuchamt_Jena", "Y1206G");
+        $VALUES.add(Grundbuchamt_Jena);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Jena_Zwst_der_StA_Gera = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Jena_Zwst_der_StA_Gera", "Y1206S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Jena_Zwst_der_StA_Gera);
+        Amtsgericht_Jena_Handels_Genossenschafts_und_Partnerschaftsregister = new GerichtCode("Amtsgericht_Jena_Handels_Genossenschafts_und_Partnerschaftsregister", "Y1206V");
+        $VALUES.add(Amtsgericht_Jena_Handels_Genossenschafts_und_Partnerschaftsregister);
+        Amtsgericht_Poessneck_Zweigstelle_Bad_Lobenstein = new GerichtCode("Amtsgericht_Poessneck_Zweigstelle_Bad_Lobenstein", "Y1208");
+        $VALUES.add(Amtsgericht_Poessneck_Zweigstelle_Bad_Lobenstein);
+        Grundbuchamt_Poessneck_Zweigstelle_Bad_Lobenstein = new GerichtCode("Grundbuchamt_Poessneck_Zweigstelle_Bad_Lobenstein", "Y1208G");
+        $VALUES.add(Grundbuchamt_Poessneck_Zweigstelle_Bad_Lobenstein);
+        Amtsgericht_Poessneck = new GerichtCode("Amtsgericht_Poessneck", "Y1209");
+        $VALUES.add(Amtsgericht_Poessneck);
+        Grundbuchamt_Poessneck = new GerichtCode("Grundbuchamt_Poessneck", "Y1209G");
+        $VALUES.add(Grundbuchamt_Poessneck);
+        Amtsgericht_Rudolstadt = new GerichtCode("Amtsgericht_Rudolstadt", "Y1210");
+        $VALUES.add(Amtsgericht_Rudolstadt);
+        Grundbuchamt_Rudolstadt = new GerichtCode("Grundbuchamt_Rudolstadt", "Y1210G");
+        $VALUES.add(Grundbuchamt_Rudolstadt);
+        aufgeloest_Staatsanwaltschaft_beim_Landgericht_Rudolstadt_Zwst_der_StA_Gera = new GerichtCode("aufgeloest_Staatsanwaltschaft_beim_Landgericht_Rudolstadt_Zwst_der_StA_Gera", "Y1210S");
+        $VALUES.add(aufgeloest_Staatsanwaltschaft_beim_Landgericht_Rudolstadt_Zwst_der_StA_Gera);
+        Amtsgericht_Rudolstadt_Zweigstelle_Saalfeld = new GerichtCode("Amtsgericht_Rudolstadt_Zweigstelle_Saalfeld", "Y1211");
+        $VALUES.add(Amtsgericht_Rudolstadt_Zweigstelle_Saalfeld);
+        Grundbuchamt_Rudolstadt_Zweigstelle_Saalfeld = new GerichtCode("Grundbuchamt_Rudolstadt_Zweigstelle_Saalfeld", "Y1211G");
+        $VALUES.add(Grundbuchamt_Rudolstadt_Zweigstelle_Saalfeld);
+        aufgeloest_Amtsgericht_Lobenstein_Zwst_Schleiz = new GerichtCode("aufgeloest_Amtsgericht_Lobenstein_Zwst_Schleiz", "Y1212");
+        $VALUES.add(aufgeloest_Amtsgericht_Lobenstein_Zwst_Schleiz);
+        aufgeloest_Amtsgericht_Altenburg_Zwst_Schmoelln = new GerichtCode("aufgeloest_Amtsgericht_Altenburg_Zwst_Schmoelln", "Y1213");
+        $VALUES.add(aufgeloest_Amtsgericht_Altenburg_Zwst_Schmoelln);
+        Amtsgericht_Stadtroda = new GerichtCode("Amtsgericht_Stadtroda", "Y1214");
+        $VALUES.add(Amtsgericht_Stadtroda);
+        Grundbuchamt_Stadtroda = new GerichtCode("Grundbuchamt_Stadtroda", "Y1214G");
+        $VALUES.add(Grundbuchamt_Stadtroda);
+        aufgeloest_Amtsgericht_Greiz_Zwst_Zeulenroda = new GerichtCode("aufgeloest_Amtsgericht_Greiz_Zwst_Zeulenroda", "Y1215");
+        $VALUES.add(aufgeloest_Amtsgericht_Greiz_Zwst_Zeulenroda);
+        Landgericht_Meiningen = new GerichtCode("Landgericht_Meiningen", "Y1300");
+        $VALUES.add(Landgericht_Meiningen);
+        Staatsanwaltschaft_beim_Landgericht_Meiningen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Meiningen", "Y1300S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Meiningen);
+        Amtsgericht_Bad_Salzungen = new GerichtCode("Amtsgericht_Bad_Salzungen", "Y1301");
+        $VALUES.add(Amtsgericht_Bad_Salzungen);
+        Grundbuchamt_Bad_Salzungen = new GerichtCode("Grundbuchamt_Bad_Salzungen", "Y1301G");
+        $VALUES.add(Grundbuchamt_Bad_Salzungen);
+        Amtsgericht_Hildburghausen = new GerichtCode("Amtsgericht_Hildburghausen", "Y1302");
+        $VALUES.add(Amtsgericht_Hildburghausen);
+        Grundbuchamt_Hildburghausen = new GerichtCode("Grundbuchamt_Hildburghausen", "Y1302G");
+        $VALUES.add(Grundbuchamt_Hildburghausen);
+        Amtsgericht_Arnstadt_Zweigstelle_Ilmenau = new GerichtCode("Amtsgericht_Arnstadt_Zweigstelle_Ilmenau", "Y1303");
+        $VALUES.add(Amtsgericht_Arnstadt_Zweigstelle_Ilmenau);
+        Grundbuchamt_Arnstadt_Zweigstelle_Ilmenau = new GerichtCode("Grundbuchamt_Arnstadt_Zweigstelle_Ilmenau", "Y1303G");
+        $VALUES.add(Grundbuchamt_Arnstadt_Zweigstelle_Ilmenau);
+        Amtsgericht_Meiningen = new GerichtCode("Amtsgericht_Meiningen", "Y1304");
+        $VALUES.add(Amtsgericht_Meiningen);
+        Grundbuchamt_Meiningen = new GerichtCode("Grundbuchamt_Meiningen", "Y1304G");
+        $VALUES.add(Grundbuchamt_Meiningen);
+        Amtsgericht_Meiningen_Zentrales_Vollstreckungsgericht_Thueringen = new GerichtCode("Amtsgericht_Meiningen_Zentrales_Vollstreckungsgericht_Thueringen", "Y1304R");
+        $VALUES.add(Amtsgericht_Meiningen_Zentrales_Vollstreckungsgericht_Thueringen);
+        aufgeloest_Amtsgericht_Neuhaus_Rwg = new GerichtCode("aufgeloest_Amtsgericht_Neuhaus_Rwg", "Y1305");
+        $VALUES.add(aufgeloest_Amtsgericht_Neuhaus_Rwg);
+        aufgeloest_Amtsgericht_Meiningen_Zweigstelle_Schmalkalden = new GerichtCode("aufgeloest_Amtsgericht_Meiningen_Zweigstelle_Schmalkalden", "Y1306");
+        $VALUES.add(aufgeloest_Amtsgericht_Meiningen_Zweigstelle_Schmalkalden);
+        Amtsgericht_Sonneberg = new GerichtCode("Amtsgericht_Sonneberg", "Y1307");
+        $VALUES.add(Amtsgericht_Sonneberg);
+        Grundbuchamt_Sonneberg = new GerichtCode("Grundbuchamt_Sonneberg", "Y1307G");
+        $VALUES.add(Grundbuchamt_Sonneberg);
+        Amtsgericht_Suhl = new GerichtCode("Amtsgericht_Suhl", "Y1308");
+        $VALUES.add(Amtsgericht_Suhl);
+        Grundbuchamt_Suhl = new GerichtCode("Grundbuchamt_Suhl", "Y1308G");
+        $VALUES.add(Grundbuchamt_Suhl);
+        Landgericht_Muehlhausen = new GerichtCode("Landgericht_Muehlhausen", "Y1400");
+        $VALUES.add(Landgericht_Muehlhausen);
+        Staatsanwaltschaft_beim_Landgericht_Muehlhausen = new GerichtCode("Staatsanwaltschaft_beim_Landgericht_Muehlhausen", "Y1400S");
+        $VALUES.add(Staatsanwaltschaft_beim_Landgericht_Muehlhausen);
+        Thueringer_Finanzgericht = new GerichtCode("Thueringer_Finanzgericht", "Y6003");
+        $VALUES.add(Thueringer_Finanzgericht);
+        Thueringer_Anwaltsgerichtshof = new GerichtCode("Thueringer_Anwaltsgerichtshof", "Y6004");
+        $VALUES.add(Thueringer_Anwaltsgerichtshof);
+        Bundesarbeitsgericht = new GerichtCode("Bundesarbeitsgericht", "Y6010");
+        $VALUES.add(Bundesarbeitsgericht);
+        Arbeitsgericht_Gera = new GerichtCode("Arbeitsgericht_Gera", "Y6060");
+        $VALUES.add(Arbeitsgericht_Gera);
+        Verwaltungsgericht_Gera = new GerichtCode("Verwaltungsgericht_Gera", "Y6061");
+        $VALUES.add(Verwaltungsgericht_Gera);
+        Thueringer_Verfassungsgerichtshof = new GerichtCode("Thueringer_Verfassungsgerichtshof", "Y6149");
+        $VALUES.add(Thueringer_Verfassungsgerichtshof);
+        Justizvollzugsanstalt_Suhl_Goldlauter = new GerichtCode("Justizvollzugsanstalt_Suhl_Goldlauter", "Y6319");
+        $VALUES.add(Justizvollzugsanstalt_Suhl_Goldlauter);
+        Justizvollzugsanstalt_Hohenleuben = new GerichtCode("Justizvollzugsanstalt_Hohenleuben", "Y6320");
+        $VALUES.add(Justizvollzugsanstalt_Hohenleuben);
+        Justizvollzugsanstalt_Untermassfeld = new GerichtCode("Justizvollzugsanstalt_Untermassfeld", "Y6322");
+        $VALUES.add(Justizvollzugsanstalt_Untermassfeld);
+        Justizvollzugsanstalt_Tonna = new GerichtCode("Justizvollzugsanstalt_Tonna", "Y6323");
+        $VALUES.add(Justizvollzugsanstalt_Tonna);
+        Verwaltungsgericht_Weimar = new GerichtCode("Verwaltungsgericht_Weimar", "Y6325");
+        $VALUES.add(Verwaltungsgericht_Weimar);
+        Thueringer_Anwaltsgericht = new GerichtCode("Thueringer_Anwaltsgericht", "Y6342");
+        $VALUES.add(Thueringer_Anwaltsgericht);
+        Thueringer_Landesarbeitsgericht = new GerichtCode("Thueringer_Landesarbeitsgericht", "Y6388");
+        $VALUES.add(Thueringer_Landesarbeitsgericht);
+        Arbeitsgericht_Eisenach = new GerichtCode("Arbeitsgericht_Eisenach", "Y6389");
+        $VALUES.add(Arbeitsgericht_Eisenach);
+        Arbeitsgericht_Erfurt = new GerichtCode("Arbeitsgericht_Erfurt", "Y6390");
+        $VALUES.add(Arbeitsgericht_Erfurt);
+        Arbeitsgericht_Jena = new GerichtCode("Arbeitsgericht_Jena", "Y6391");
+        $VALUES.add(Arbeitsgericht_Jena);
+        Arbeitsgericht_Nordhausen = new GerichtCode("Arbeitsgericht_Nordhausen", "Y6392");
+        $VALUES.add(Arbeitsgericht_Nordhausen);
+        Arbeitsgericht_Suhl = new GerichtCode("Arbeitsgericht_Suhl", "Y6393");
+        $VALUES.add(Arbeitsgericht_Suhl);
+        Thueringer_Oberverwaltungsgericht = new GerichtCode("Thueringer_Oberverwaltungsgericht", "Y6397");
+        $VALUES.add(Thueringer_Oberverwaltungsgericht);
+        Verwaltungsgericht_Meiningen = new GerichtCode("Verwaltungsgericht_Meiningen", "Y6398");
+        $VALUES.add(Verwaltungsgericht_Meiningen);
+        Thueringer_Landessozialgericht = new GerichtCode("Thueringer_Landessozialgericht", "Y6402");
+        $VALUES.add(Thueringer_Landessozialgericht);
+        Sozialgericht_Altenburg = new GerichtCode("Sozialgericht_Altenburg", "Y6403");
+        $VALUES.add(Sozialgericht_Altenburg);
+        Sozialgericht_Gotha = new GerichtCode("Sozialgericht_Gotha", "Y6404");
+        $VALUES.add(Sozialgericht_Gotha);
+        Sozialgericht_Meiningen = new GerichtCode("Sozialgericht_Meiningen", "Y6405");
+        $VALUES.add(Sozialgericht_Meiningen);
+        Sozialgericht_Nordhausen = new GerichtCode("Sozialgericht_Nordhausen", "Y6406");
+        $VALUES.add(Sozialgericht_Nordhausen);
+        Jugendstrafanstalt_Arnstadt = new GerichtCode("Jugendstrafanstalt_Arnstadt", "Y6508");
+        $VALUES.add(Jugendstrafanstalt_Arnstadt);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_BZR_3_SB_31 = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_BZR_3_SB_31", "Z1000");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_BZR_3_SB_31);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof_Testanfragen = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof_Testanfragen", "Z1000S");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_Testanfragen);
+        Der_Generalbundesanwalt_b_BGH_Dienststelle_Bundeszentralreg_Arbeitsgruppe_Wahlen = new GerichtCode("Der_Generalbundesanwalt_b_BGH_Dienststelle_Bundeszentralreg_Arbeitsgruppe_Wahlen", "Z1007");
+        $VALUES.add(Der_Generalbundesanwalt_b_BGH_Dienststelle_Bundeszentralreg_Arbeitsgruppe_Wahlen);
+        aufgeloest_Der_Generalbundesanwalt_beim_Bundesgerichtshof_Bundeszentralregister = new GerichtCode("aufgeloest_Der_Generalbundesanwalt_beim_Bundesgerichtshof_Bundeszentralregister", "Z1100");
+        $VALUES.add(aufgeloest_Der_Generalbundesanwalt_beim_Bundesgerichtshof_Bundeszentralregister);
+        Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch = new GerichtCode("Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch", "Z1200");
+        $VALUES.add(Bundesamt_fuer_Justiz_Internationaler_Strafnachrichtenaustausch);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG", "Z6108");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_Zentrale_Behoerde_SorgeRUebkAG);
+        Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90 = new GerichtCode("Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90", "Z7350");
+        $VALUES.add(Der_Generalbundesanwalt_beim_Bundesgerichtshof_Ref_IV_3_AZ_IV_29_H_2_90);
+    }
+
+    /**
+     * Creates an enum from a string value.
+     * @param value the string value
+     * @return the enum value
+     */
+    @JsonCreator
+    public static GerichtCode fromValue(String value) {
+        for (GerichtCode e : $VALUES) {
+            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
+                return e;
+            }
+        }
+        throw new IllegalArgumentException(value);
+    }
+
+    @Override
+    public String toString() { return value; }
+
+    /**
+     * XML Adapter for JAXB.
+     */
+    public static class Adapter extends XmlAdapter<String, GerichtCode> {
+        public GerichtCode unmarshal(String v) { return fromValue(v); }
+        public String marshal(GerichtCode v) { return v != null ? v.getValue() : null; }
+    }
+}

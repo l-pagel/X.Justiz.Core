@@ -1,0 +1,16 @@
+[
+    {
+        "version": "0.3.0",
+        "changelog": {
+            "en": "Add Java SDK",
+            "de": "Java SDK hinzugefügt"
+        }
+    },
+    {
+        "version": "0.2.0",
+        "changelog": {
+            "en": "Initial release\nOpen Beta Version",
+            "de": "Erstveröffentlichung\nOffene Beta-Version"
+        }
+    }
+]
