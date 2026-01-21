@@ -240,7 +240,7 @@ jobs:
 
   build-java-sdk:
     name: Build and Test Java SDK
-    needs: [build-and-test, generate-xsd, verify-documentation]
+    needs: [build-and-test, generate-xsd, verify-documentation, sync-changelogs]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
