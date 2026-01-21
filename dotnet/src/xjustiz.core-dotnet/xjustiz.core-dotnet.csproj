@@ -41,6 +41,7 @@
 	</ItemGroup>
 
 	<Target Name="GenerateJavaModels" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug' And '$(SkipJavaGeneration)' != 'true'">
-		<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)../../../scripts/generate-java-models.ps1&quot; --skip-schema-generation" />
+		<Exec Condition="'$(OS)' == 'Windows_NT'" Command="powershell -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)../../../scripts/generate-java-models.ps1&quot; --skip-schema-generation" />
+		<Exec Condition="'$(OS)' != 'Windows_NT'" Command="pwsh -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)../../../scripts/generate-java-models.ps1&quot; --skip-schema-generation" />
 	</Target>
 </Project>
