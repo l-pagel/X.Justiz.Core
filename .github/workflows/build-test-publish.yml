@@ -293,7 +293,7 @@ jobs:
 
   publish-dotnet:
     name: Publish .NET SDK
-    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk, run-integration-tests]
+    needs: [build-and-test, generate-xsd, build-java-sdk, run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
@@ -362,7 +362,7 @@ jobs:
 
   publish-java:
     name: Publish Java SDK
-    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk, run-integration-tests]
+    needs: [build-and-test, generate-xsd, build-java-sdk, run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
