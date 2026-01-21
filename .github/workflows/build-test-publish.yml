@@ -15,29 +15,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate-changelog:
-    name: Validate Changelog
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Get version from tag
-        id: get_version
-        run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
-
-      - name: Validate Changelog Entry
-        run: python scripts/validate_changelog.py ${{ steps.get_version.outputs.version }}
 
   build-and-test:
     name: Build, Test .NET SDK
-    needs: [validate-changelog]
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
@@ -127,6 +107,26 @@ jobs:
           echo "| Build | ${{ job.status == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| SonarCloud | [View Analysis](https://sonarcloud.io/dashboard?id=l-pagel_X.Justiz.Core) 🔍 |" >> $GITHUB_STEP_SUMMARY
 
+  validate-changelog:
+    name: Validate Changelog
+    needs: [build-and-test]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Validate Changelog Entry
+        run: python scripts/validate_changelog.py ${{ steps.get_version.outputs.version }}
 
   verify-documentation:
     name: Verify Data Model Documentation
