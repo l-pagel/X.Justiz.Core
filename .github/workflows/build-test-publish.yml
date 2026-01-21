@@ -182,13 +182,15 @@ jobs:
 
   generate-xsd:
     name: Generate XSDs
-    needs: [build-and-test]
+    needs: [build-and-test, sync-changelogs]
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -223,6 +225,10 @@ jobs:
             CHANGED_FILES=$(git diff --staged --name-only | sed 's/^/- /')
             
             git commit -m "chore: update generated XSDs and schemas [skip ci]"
+
+            # Pull latest changes to avoid conflicts (e.g. from sync-changelogs)
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+
             if [[ "${{ github.ref_type }}" == "tag" ]]; then
               echo "Pushing to main since we are on a tag"
               git push origin HEAD:main
@@ -275,7 +281,7 @@ jobs:
 
   run-integration-tests:
     name: Run Integration & Cross-SDK Tests
-    needs: [build-and-test, build-java-sdk, generate-xsd]
+    needs: [build-and-test, build-java-sdk]
     runs-on: ubuntu-latest
     env:
       TEST_INTEGRATION_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj
@@ -307,7 +313,7 @@ jobs:
 
   publish-dotnet:
     name: Publish .NET SDK
-    needs: [build-and-test, generate-xsd, build-java-sdk, run-integration-tests]
+    needs: [run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
@@ -377,7 +383,7 @@ jobs:
 
   publish-java:
     name: Publish Java SDK
-    needs: [build-and-test, generate-xsd, build-java-sdk, run-integration-tests]
+    needs: [run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
