@@ -278,6 +278,9 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Make gradlew executable
+        run: chmod +x java/gradlew
+
       - name: Test Integration
         run: dotnet test $TEST_INTEGRATION_PROJECT_PATH --logger "trx;LogFileName=integration-test-results.trx" --logger "junit;LogFileName=integration-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
 
