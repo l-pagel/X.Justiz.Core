@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
-      TEST_PROJECT_PATH: dotnet/src/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
+      TEST_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
     permissions:
       actions: write  # This is the required permission for 'gh run cancel'
       contents: write # Required to checkout code/read tags
@@ -96,7 +96,7 @@ jobs:
         uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
         if: always()
         with:
-          paths: "**/test-results.xml"
+          paths: "**/*test-results.xml"
 
       - name: Build Summary
         if: always()
@@ -262,9 +262,38 @@ jobs:
           paths: "**/test-results/**/*.xml"
 
 
+  run-integration-tests:
+    name: Run Integration & Cross-SDK Tests
+    needs: [build-and-test, build-java-sdk, generate-xsd]
+    runs-on: ubuntu-latest
+    env:
+      TEST_INTEGRATION_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj
+      TEST_CROSS_PARITY_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.CrossSdkTests/xjustiz.core-dotnet.CrossSdkTests.csproj
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Test Integration
+        run: dotnet test $TEST_INTEGRATION_PROJECT_PATH --logger "trx;LogFileName=integration-test-results.trx" --logger "junit;LogFileName=integration-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+
+      - name: Test Cross-SDK Parity
+        run: dotnet test $TEST_CROSS_PARITY_PROJECT_PATH --logger "trx;LogFileName=cross-sdk-test-results.trx" --logger "junit;LogFileName=cross-sdk-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
+
+      - name: Test Summary
+        uses: test-summary/action@31493c76ec9e7aa675f1585d3ed6f1da69269a86 # v2
+        if: always()
+        with:
+          paths: "**/*test-results.xml"
+
+
   publish-dotnet:
     name: Publish .NET SDK
-    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk]
+    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk, run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     env:
@@ -333,7 +362,7 @@ jobs:
 
   publish-java:
     name: Publish Java SDK
-    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk]
+    needs: [build-and-test, generate-xsd, verify-documentation, build-java-sdk, run-integration-tests]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
