@@ -22038,8 +22038,16 @@ public class GerichtCode {
     @JsonValue
     public String getValue() { return value; }
 
+    /**
+     * Gets the enum name.
+     * @return the enum name
+     */
     public String name() { return name; }
 
+    /**
+     * Returns an unmodifiable list of all enum values.
+     * @return the list of enum values
+     */
     public static List<GerichtCode> values() { return Collections.unmodifiableList($VALUES); }
 
     static {
@@ -27589,6 +27597,9 @@ public class GerichtCode {
     @Override
     public String toString() { return value; }
 
+    /**
+     * XML Adapter for JAXB.
+     */
     public static class Adapter extends XmlAdapter<String, GerichtCode> {
         public GerichtCode unmarshal(String v) { return fromValue(v); }
         public String marshal(GerichtCode v) { return v != null ? v.getValue() : null; }
