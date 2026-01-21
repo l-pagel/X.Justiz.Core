@@ -16,40 +16,8 @@ concurrency:
 
 jobs:
 
-  sync-changelogs:
-    name: Sync Changelogs
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Sync Changelog Files
-        run: python scripts/sync_versions.py
-
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add Changelog.md Changelog_DE.md
-          
-          if git diff --staged --quiet; then
-            echo "No changes to changelogs."
-          else
-            git commit -m "chore: sync changelogs from versions.json [skip ci]"
-            git push
-            echo "::notice ::Changelogs updated and pushed."
-          fi
-
   build-and-test:
     name: Build, Test .NET SDK
-    needs: [sync-changelogs]
     runs-on: ubuntu-latest
     env:
       CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
@@ -138,6 +106,38 @@ jobs:
           echo "|---|---|" >> $GITHUB_STEP_SUMMARY
           echo "| Build | ${{ job.status == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
           echo "| SonarCloud | [View Analysis](https://sonarcloud.io/dashboard?id=l-pagel_X.Justiz.Core) 🔍 |" >> $GITHUB_STEP_SUMMARY
+
+  sync-changelogs:
+    name: Sync Changelogs
+    needs: [build-and-test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Sync Changelog Files
+        run: python scripts/sync_versions.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add Changelog.md Changelog_DE.md
+          
+          if git diff --staged --quiet; then
+            echo "No changes to changelogs."
+          else
+            git commit -m "chore: sync changelogs from versions.json [skip ci]"
+            git push
+            echo "::notice ::Changelogs updated and pushed."
+          fi
 
   verify-documentation:
     name: Verify Data Model Documentation
