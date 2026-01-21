@@ -2,6 +2,7 @@ plugins {
     java
     `java-library`
     `maven-publish`
+    signing
 }
 
 group = "io.github.l-pagel"
@@ -56,9 +57,9 @@ publishing {
             artifactId = "xjustiz-core"
             
             pom {
-                name = "X.Justiz Core"
-                description = "Java SDK for X.Justiz Core document transmission messages"
-                url = "https://github.com/l-pagel/X.Justiz.Core"
+                name.set("X.Justiz Core")
+                description.set("Java SDK for X.Justiz Core document transmission messages")
+                url.set("https://github.com/l-pagel/X.Justiz.Core")
                 
                 licenses {
                     license {
@@ -69,27 +70,35 @@ publishing {
                 
                 developers {
                     developer {
-                        id = "l-pagel"
-                        name = "Lukas M. Pagel"
+                        id.set("l-pagel")
+                        name.set("Lukas M. Pagel")
                     }
                 }
                 
                 scm {
-                    connection = "scm:git:git://github.com/l-pagel/X.Justiz.Core.git"
-                    developerConnection = "scm:git:ssh://github.com/l-pagel/X.Justiz.Core.git"
-                    url = "https://github.com/l-pagel/X.Justiz.Core"
+                    connection.set("scm:git:git://github.com/l-pagel/X.Justiz.Core.git")
+                    developerConnection.set("scm:git:ssh://github.com/l-pagel/X.Justiz.Core.git")
+                    url.set("https://github.com/l-pagel/X.Justiz.Core")
                 }
             }
         }
     }
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/l-pagel/X.Justiz.Core")
+            name = "SonatypeCentral"
+            // Using the Sonatype Central Portal (S01)
+            url = uri("https://central.sonatype.com/api/v1/publisher/deployments/maven/repository")
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = System.getenv("OSSRH_USERNAME")
+                password = System.getenv("OSSRH_PASSWORD")
             }
         }
     }
+}
+
+signing {
+    val signingKey = System.getenv("GPG_PRIVATE_KEY")
+    val signingPassword = System.getenv("GPG_PASSPHRASE")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign(publishing.publications["maven"])
 }

@@ -279,6 +279,12 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
       - name: Get version from tag
         id: get_version
         run: |
@@ -303,6 +309,13 @@ jobs:
 
       - name: Pack
         run: dotnet pack $CSPROJ_PATH --configuration Release --no-build -o ./artifacts
+
+      - name: Sign NuGet Package
+        run: |
+          # Note: 'dotnet nuget sign' typically requires a certificate (pfx). 
+          # Assuming the environment is prepared or the specific GPG setup works as implied.
+          # If a specific certificate file is needed, add --certificate-path <path>.
+          dotnet nuget sign "./artifacts/*.nupkg" --timestamper http://timestamp.digicert.com
 
       - name: Push to NuGet
         run: >
@@ -339,17 +352,25 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
 
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
       - name: Get version from tag
         id: get_version
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Publish to GitHub Packages
+      - name: Publish to Maven Central
         working-directory: java
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PROJECT_VERSION: ${{ steps.get_version.outputs.version }}
+          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: gradle publish -Pversion=${{ steps.get_version.outputs.version }}
 
       - name: Java Publish Summary
@@ -357,4 +378,4 @@ jobs:
         run: |
           echo "## 🚀 Java SDK Published" >> $GITHUB_STEP_SUMMARY
           echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Repository**: [GitHub Packages](https://github.com/l-pagel/X.Justiz.Core/packages)" >> $GITHUB_STEP_SUMMARY
+          echo "**Repository**: [Maven Central](https://central.sonatype.co/artifact/io.github.l-pagel/xjustiz-core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY
