@@ -146,6 +146,10 @@ Ein `Feld` repräsentiert ein einzelnes Schlüssel-Wert-Paar mit optionalen Meta
 | **Datentyp** | `string` | Optional: Der Datentyp (z.B. "string", "decimal", "date") |
 | **Beschreibung** | `string` | Optional: Menschenlesbare Beschreibung |
 
+> [!IMPORTANT]  
+> **Best Practice: Immer `Datentyp` angeben**  
+> Obwohl `Datentyp` technisch optional ist, wird **dringend empfohlen**, ihn immer anzugeben. Dies ermöglicht es empfangenden Systemen, den Wert korrekt zu parsen und zu validieren (z.B. "4500.00" als Dezimalzahl oder "2024-01-15" als Datum zu konvertieren). Ohne `Datentyp` muss der Empfänger den beabsichtigten Datentyp erraten, was zu Interpretationsfehlern führen kann.
+
 ### 2.3 Feldgruppe
 
 Eine `Feldgruppe` ermöglicht es, verwandte Felder zusammenzufassen und sogar Gruppen hierarchisch zu verschachteln:

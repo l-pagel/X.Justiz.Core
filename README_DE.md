@@ -14,6 +14,10 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [Implementierung (SDKs)](#implementierung-sdk)
 - [Spezifikation & Dokumentation](#spezifikation--dokumentation)
 
+> [!NOTE]  
+> **📘 Suchen Sie nach technischen Details?**  
+> Springen Sie direkt zur **[Spezifikation für X.Justiz Core](/docs/Specification_DE.md)** für Datenmodell-Dokumentation, Code-Beispiele und Best Practices.
+
 ## Hintergrund
 Die „Arbeitsgruppe Schnittstellen" des [**LegalTech Verband Deutschland**]( https://www.legaltechverband.de/ ) entwickelte 2024 diesen Standard, um den Austausch von Rechtsangelegenheiten (Akten) effizienter zu gestalten.
 

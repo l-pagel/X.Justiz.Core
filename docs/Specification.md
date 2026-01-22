@@ -146,6 +146,10 @@ A `Feld` represents a single key-value pair with optional metadata:
 | **Datentyp** | `string` | Optional: The data type (e.g., "string", "decimal", "date") |
 | **Beschreibung** | `string` | Optional: Human-readable description |
 
+> [!IMPORTANT]  
+> **Best Practice: Always include `Datentyp`**  
+> While `Datentyp` is technically optional, it is **highly recommended** to always specify it. This enables receiving systems to correctly parse and validate the value (e.g., converting "4500.00" to a decimal or "2024-01-15" to a date). Without `Datentyp`, the receiver must guess the intended data type, which can lead to interpretation errors.
+
 ### 2.3 Feldgruppe (Field Group)
 
 A `Feldgruppe` allows you to group related fields together and even nest groups hierarchically:

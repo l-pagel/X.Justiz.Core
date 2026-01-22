@@ -14,6 +14,10 @@ X.Justiz Core is a lightweight schema for data exchange between software solutio
 - [Implementation (SDKs)](#implementation-sdks)
 - [Specification & Documentation](#specification--documentation)
 
+> [!NOTE]  
+> **📘 Looking for technical details?**  
+> Jump directly to the **[Specification for X.Justiz Core](/docs/Specification.md)** for data model documentation, code examples, and best practices.
+
 ## Background
 The "Arbeitsgruppe Schnittstellen" (Interfaces Working Group) of the [**LegalTech Verband Deutschland**](https://www.legaltechverband.de/) developed this standard in 2024 to make the exchange of legal matters (files) more efficient.
 
