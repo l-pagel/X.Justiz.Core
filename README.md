@@ -14,6 +14,10 @@ X.Justiz Core is a lightweight schema for data exchange between software solutio
 - [Implementation (SDKs)](#implementation-sdks)
 - [Specification & Documentation](#specification--documentation)
 
+> [!NOTE]  
+> **📘 Looking for technical details?**  
+> Jump directly to the **[Specification for X.Justiz Core](/docs/Specification.md)** for data model documentation, code examples, and best practices.
+
 ## Background
 The "Arbeitsgruppe Schnittstellen" (Interfaces Working Group) of the [**LegalTech Verband Deutschland**](https://www.legaltechverband.de/) developed this standard in 2024 to make the exchange of legal matters (files) more efficient.
 
@@ -82,28 +86,32 @@ We have placed special emphasis on documentation: All codes have been elaboratel
 ## Implementation (SDKs)
 To accelerate integration, the project provides software libraries.
 They include:
-- [Class library](/dotnet/src/xjustiz.core-dotnet/Models/)
-- [Utility tools](/dotnet/src/xjustiz.core-dotnet/Util)
-- [Code lists (X.Justiz & X.Justiz Core)](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
+- [Class library](/sdk/dotnet/src/xjustiz.core-dotnet/Models/)
+- [Utility tools](/sdk/dotnet/src/xjustiz.core-dotnet/Util)
+- [Code lists (X.Justiz & X.Justiz Core)](/sdk/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 
 The SDKs are available in the following languages:
--   ✅ [**.NET Code**](/dotnet) | [**nuget Package**](https://www.nuget.org/packages/xjustiz.core-dotnet) | [**Getting Started**](/dotnet/README.md)
--   ✅ [**Java**](/java) | [**Maven Package**](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core) | [**Getting Started**](/java/README.md)
+-   ✅ [**.NET Code**](/sdk/dotnet) | [**nuget Package**](https://www.nuget.org/packages/xjustiz.core-dotnet) | [**Getting Started**](/sdk/dotnet/README.md)
+-   ✅ [**Java**](/sdk/java) | [**Maven Package**](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core) | [**Getting Started**](/sdk/java/README.md)
 -   ⏳ **JavaScript / TypeScript** (In progress)
 -   ⏳ **Python** (In progress)
 
 ## Specification & Documentation
 
 ### X.Justiz Core
-- [Specification](Specification.md)
-- [Validation rules as XSD](/X.Justiz-Core-Versions)
-- [Example datasets](/example-datasets)
-- [Lists of used codes](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
-- [Changelog (DE)](/Changelog_DE.md), [Changelog (EN)](/Changelog.md)
+- [Specification for X.Justiz Core](/docs/Specification.md) - Comprehensive data model documentation
+- [Validation rules as XSD](/schemas)
+- [Example datasets](/docs/examples)
+- [Lists of used codes](/sdk/dotnet/src/xjustiz.core-dotnet/Models/Codes)
+- [Changelog](/docs/Changelog.md)
 - [License](LICENSE)
 
 ### X.Justiz
-- [Archive of all X.Justiz versions and specifications](/X.Justiz-Versions)
+- [Archive of all X.Justiz versions and specifications](/xjustiz-xsd)
+
+### Developer Resources
+- [**🔧 SDK Generation Workflow**](/docs/SDK-GENERATION.md) - How cross-SDK consistency is maintained
+- [**🧪 Integration Tests**](/sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md) - Cross-platform compatibility testing
 
 ## Quality Assurance
 The project is regularly checked for quality. You can find the current status on SonarCloud:  

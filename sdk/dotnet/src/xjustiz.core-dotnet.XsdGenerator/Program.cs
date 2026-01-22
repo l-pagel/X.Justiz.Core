@@ -1,0 +1,261 @@
+namespace xjustiz.core_dotnet.XsdGenerator;
+
+using System.Reflection;
+using System.Xml.Serialization;
+using NJsonSchema;
+using xjustiz.core_dotnet.Models;
+using xjustiz.core_dotnet.Models.Helpers;
+using xjustiz.core_dotnet.Util.Versioning;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            Console.WriteLine("Please provide the repository root path as an argument.");
+            return;
+        }
+
+        var repoRoot = args[0];
+        var outputBaseDir = Path.Combine(repoRoot, "schemas");
+        var schemaDir = Path.Combine(repoRoot, "schemas");
+
+        Console.WriteLine($"Repository Root: {repoRoot}");
+        Console.WriteLine($"Output Base Dir: {outputBaseDir}");
+        Console.WriteLine($"Schema Dir: {schemaDir}");
+
+        var modelAssembly = typeof(UebermittlungSchriftgutobjekteNachricht).Assembly;
+        var referencedVersions = GetReferencedVersions(modelAssembly);
+        var allVersions = Enum.GetValues<XJustizCoreVersion>();
+
+        var usedVersions = allVersions.Intersect(referencedVersions).OrderBy(v => v).ToList();
+        var unusedVersions = allVersions.Except(referencedVersions).OrderBy(v => v).ToList();
+
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine("Version Detection Summary:");
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine($"Total known versions in Enum: {allVersions.Length}");
+        Console.WriteLine($"Versions referenced in code:  {referencedVersions.Count}");
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine("DETECTED / TO BE GENERATED:");
+
+        foreach (var v in usedVersions)
+        {
+            Console.WriteLine($" - {v}");
+        }
+
+        if (unusedVersions.Count != 0)
+        {
+            Console.WriteLine("UNUSED / GHOST VERSIONS (Skipped):");
+            foreach (var v in unusedVersions)
+            {
+                Console.WriteLine($" - {v}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("No unused versions detected.");
+        }
+
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine(string.Empty);
+
+        // Generate XSD for each version
+        foreach (var version in allVersions)
+        {
+            if (referencedVersions.Contains(version))
+            {
+                GenerateXsdForVersion(version, outputBaseDir);
+            }
+            else
+            {
+                Console.WriteLine($"Skipping version {version} (No schema changes defined).");
+            }
+        }
+
+        // Generate JSON Schema for SDK generation (latest version only)
+        GenerateJsonSchema(schemaDir);
+    }
+
+    private static void GenerateXsdForVersion(XJustizCoreVersion version, string baseDir)
+    {
+        Console.WriteLine($"Generating XSD for version {version}...");
+
+        // Format folder name: "1.0.0" from "V1_0_0"
+        var versionString = version.ToString().Replace("V", string.Empty).Replace("_", ".");
+        var outputDir = Path.Combine(baseDir, versionString);
+        Directory.CreateDirectory(outputDir);
+
+        var overrides = CreateOverrides(version);
+        var importer = new XmlReflectionImporter(overrides, SchemeConstants.XJustiz_Tns);
+        var schemas = new XmlSchemas();
+        var exporter = new XmlSchemaExporter(schemas);
+
+        var mapping = importer.ImportTypeMapping(typeof(UebermittlungSchriftgutobjekteNachricht));
+        exporter.ExportTypeMapping(mapping);
+
+        // Post-process schemas if necessary (e.g. set schemaLocation for imports if we had them,
+        // but mostly everything is in TNS or standard XML/XSI which we might want to handle).
+
+        // Core models use TNS.
+
+        foreach (System.Xml.Schema.XmlSchema schema in schemas)
+        {
+            if (schema.TargetNamespace == SchemeConstants.XJustiz_Tns)
+            {
+                var filename = $"X.Justiz-Core_{versionString}.xsd";
+                var outputPath = Path.Combine(outputDir, filename);
+
+                using var writer = new StreamWriter(outputPath);
+                schema.Write(writer);
+                Console.WriteLine($"Written {outputPath}");
+            }
+        }
+    }
+
+    private static XmlAttributeOverrides CreateOverrides(XJustizCoreVersion targetVersion)
+    {
+        var overrides = new XmlAttributeOverrides();
+        var assembly = typeof(UebermittlungSchriftgutobjekteNachricht).Assembly;
+
+        foreach (var type in assembly.GetTypes())
+        {
+            foreach (var prop in type.GetProperties())
+            {
+                var availability = prop.GetCustomAttribute<XJustizCoreAvailabilityAttribute>();
+                if (availability != null)
+                {
+                    if (!availability.IsAvailableIn(targetVersion))
+                    {
+                        overrides.Add(type, prop.Name, new XmlAttributes { XmlIgnore = true });
+                        // Console.WriteLine($"Ignoring {type.Name}.{prop.Name} (Not available in {targetVersion})");
+                    }
+                }
+            }
+        }
+
+        return overrides;
+    }
+
+    private static HashSet<XJustizCoreVersion> GetReferencedVersions(Assembly assembly)
+    {
+        var versions = new HashSet<XJustizCoreVersion>();
+
+        foreach (var type in assembly.GetTypes())
+        {
+            // Check Type
+            CheckAttribute(type.GetCustomAttribute<XJustizCoreAvailabilityAttribute>());
+
+            // Check Properties
+            foreach (var prop in type.GetProperties())
+            {
+                CheckAttribute(prop.GetCustomAttribute<XJustizCoreAvailabilityAttribute>());
+            }
+
+            // Check Fields (for Enum members)
+            foreach (var field in type.GetFields())
+            {
+                CheckAttribute(field.GetCustomAttribute<XJustizCoreAvailabilityAttribute>());
+            }
+        }
+
+        // Always include the oldest version if nothing is found?
+        // Or assume implicit baseline?
+        // Usually code starts with *some* version.
+
+        return versions;
+
+        void CheckAttribute(XJustizCoreAvailabilityAttribute? attr)
+        {
+            if (attr == null)
+            {
+                return;
+            }
+
+            versions.Add(attr.IntroducedIn);
+
+            // If 'Removed' is set (it's not min/default), then that version is also a pivot point.
+            // Assuming 0 or some default value indicates "not removed".
+            // The attribute helper logic often handles this, but here we access the property directly.
+            // Let's assume the default raw value 0 or similar means not set.
+            // However, looking at the Attribute definition, Removed returns (XJustizCoreVersion)RemovedRaw.
+            // We catch everything that is a valid enum value distinct from "unspecified".
+
+            if (Enum.IsDefined(attr.Removed))
+            {
+                versions.Add(attr.Removed);
+            }
+        }
+    }
+
+    private static void GenerateJsonSchema(string outputDir)
+    {
+        Console.WriteLine("--------------------------------------------------");
+        Console.WriteLine("Generating JSON Schema for SDK generation...");
+        Console.WriteLine("--------------------------------------------------");
+
+        Directory.CreateDirectory(outputDir);
+
+        var schema = JsonSchema.FromType<UebermittlungSchriftgutobjekteNachricht>();
+
+        // Add metadata
+        schema.Title = "X.Justiz Core Schema";
+        schema.Description = "JSON Schema for X.Justiz Core document transmission messages. Generated from .NET project.";
+
+        var versionString = SchemeConstants.XJustizVersion.VersionString;
+        var outputPath = Path.Combine(outputDir, "xjustiz-core.schema.json");
+
+        File.WriteAllText(outputPath, schema.ToJson());
+        Console.WriteLine($"Written JSON Schema: {outputPath}");
+
+        // Also generate a minimal OpenAPI document for openapi-generator compatibility
+        GenerateOpenApiDocument(outputDir, schema, versionString);
+    }
+
+    private static void GenerateOpenApiDocument(string outputDir, JsonSchema rootSchema, string version)
+    {
+        var openApiPath = Path.Combine(outputDir, "openapi.yaml");
+
+        // Generate a minimal OpenAPI 3.0 document that references the JSON Schema
+        var openApiContent = $"""
+            openapi: 3.0.3
+            info:
+              title: X.Justiz Core API
+              description: API for X.Justiz Core document transmission messages
+              version: "{version}"
+              license:
+                name: MIT
+                url: https://opensource.org/licenses/MIT
+            servers:
+              - url: https://api.xjustiz.de
+                description: X.Justiz Core API Server
+            paths:
+              /messages:
+                post:
+                  summary: Submit a document transmission message
+                  operationId: submitMessage
+                  requestBody:
+                    required: true
+                    content:
+                      application/json:
+                        schema:
+                          $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+                      application/xml:
+                        schema:
+                          $ref: '#/components/schemas/UebermittlungSchriftgutobjekteNachricht'
+                  responses:
+                    '200':
+                      description: Message accepted
+                    '400':
+                      description: Invalid message format
+            components:
+              schemas:
+                UebermittlungSchriftgutobjekteNachricht:
+                  $ref: 'xjustiz-core.schema.json'
+            """;
+
+        File.WriteAllText(openApiPath, openApiContent);
+        Console.WriteLine($"Written OpenAPI document: {openApiPath}");
+    }
+}

@@ -3,7 +3,7 @@ name: Build, Test and Publish
 on:
   push:
     branches:
-      - '**'
+      - 'main'
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -17,8 +17,8 @@ jobs:
     name: Build, Test .NET SDK
     runs-on: ubuntu-latest
     env:
-      CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
-      TEST_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
+      CSPROJ_PATH: sdk/dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
+      TEST_PROJECT_PATH: sdk/dotnet/test/xjustiz.core-dotnet.UnitTests/xjustiz.core-dotnet.UnitTests.csproj
     permissions:
       actions: write  # This is the required permission for 'gh run cancel'
       contents: write # Required to checkout code/read tags
@@ -70,7 +70,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="X.Justiz-Versions/**/*,scripts/**/*" /d:sonar.cpd.exclusions="**/StaatCodeLists.cs,**/GerichtCodeLists.cs,**/DokumentklasseCodeLists.cs" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="xjustiz-xsd/**/*,scripts/**/*" /d:sonar.cpd.exclusions="**/StaatCodeLists.cs,**/GerichtCodeLists.cs,**/DokumentklasseCodeLists.cs" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
           dotnet build $CSPROJ_PATH
           dotnet test $TEST_PROJECT_PATH --logger "trx;LogFileName=test-results.trx" --logger "junit;LogFileName=test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
@@ -118,7 +118,7 @@ jobs:
             echo "No changes to changelogs."
           else
             git commit -m "chore: sync changelogs from versions.json [skip ci]"
-            git push
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
             echo "::notice ::Changelogs updated and pushed."
           fi
 
@@ -181,12 +181,12 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Generate XSDs
-        run: dotnet run --project dotnet/src/xjustiz.core-dotnet.XsdGenerator/xjustiz.core-dotnet.XsdGenerator.csproj -- "${{ github.workspace }}"
+        run: dotnet run --project sdk/dotnet/src/xjustiz.core-dotnet.XsdGenerator/xjustiz.core-dotnet.XsdGenerator.csproj -- "${{ github.workspace }}"
 
       - name: Verify XSDs generated successfully
         run: |
-          if [ ! -d "X.Justiz-Core-Versions" ] || [ ! -d "schemas" ]; then
-            echo "ERROR: XSD generation failed - expected directories not found"
+          if [ ! -d "schemas" ]; then
+            echo "ERROR: XSD generation failed - schemas directory not found"
             exit 1
           fi
           echo "XSD generation successful"
@@ -196,7 +196,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -f X.Justiz-Core-Versions schemas
+          git add -f schemas
 
           echo "## 📄 XSD Generation Results" >> $GITHUB_STEP_SUMMARY
 
@@ -252,7 +252,7 @@ jobs:
         uses: gradle/actions/setup-gradle@748248ddd2a24f49513d8f472f81c3a07d4d50e1 # v4
 
       - name: Build and Test Java SDK
-        working-directory: java
+        working-directory: sdk/java
         run: gradle build test
 
       - name: Java Test Summary
@@ -267,8 +267,8 @@ jobs:
     needs: [build-and-test, build-java-sdk]
     runs-on: ubuntu-latest
     env:
-      TEST_INTEGRATION_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj
-      TEST_CROSS_PARITY_PROJECT_PATH: dotnet/test/xjustiz.core-dotnet.CrossSdkTests/xjustiz.core-dotnet.CrossSdkTests.csproj
+      TEST_INTEGRATION_PROJECT_PATH: sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/xjustiz.core-dotnet.IntegrationTests.csproj
+      TEST_CROSS_PARITY_PROJECT_PATH: sdk/dotnet/test/xjustiz.core-dotnet.CrossSdkTests/xjustiz.core-dotnet.CrossSdkTests.csproj
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -279,7 +279,7 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Make gradlew executable
-        run: chmod +x java/gradlew
+        run: chmod +x sdk/java/gradlew
 
       - name: Test Integration
         run: dotnet test $TEST_INTEGRATION_PROJECT_PATH --logger "trx;LogFileName=integration-test-results.trx" --logger "junit;LogFileName=integration-test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
@@ -299,7 +299,7 @@ jobs:
     needs: [run-integration-tests]
     runs-on: ubuntu-latest
     env:
-      CSPROJ_PATH: dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
+      CSPROJ_PATH: sdk/dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
 
     steps:
       - name: Checkout
@@ -400,7 +400,7 @@ jobs:
 
       - name: Publish to Maven Central
         if: github.ref == 'refs/heads/main'
-        working-directory: java
+        working-directory: sdk/java
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}

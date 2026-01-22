@@ -25,7 +25,7 @@ Wenn sich .NET-Modelle ändern, generiert das `XsdGenerator`-Projekt folgendes n
 
 ### 2. Java SDK
 
-Die Java-Modelle werden manuell in `java/src/main/java/de/xjustiz/core/models/` erstellt.
+Die Java-Modelle werden manuell in `sdk/java/src/main/java/de/xjustiz/core/models/` erstellt.
 
 Automatisierte Paritätstests überprüfen, ob die Java-Modelle:
 - Für alle Core-Typen existieren
@@ -44,7 +44,7 @@ Wird eine Abweichung gefunden, schlägt die Pipeline **fehl**.
 
 ### Ändern von .NET-Modellen
 
-1. Ändern Sie die .NET-Modelle in `dotnet/src/xjustiz.core-dotnet/Models/`
+1. Ändern Sie die .NET-Modelle in `sdk/dotnet/src/xjustiz.core-dotnet/Models/`
 2. Pushen Sie Ihre Änderungen
 3. Die Pipeline generiert das JSON-Schema neu
 4. **Aktualisieren Sie manuell** die entsprechenden Java-Modelle bei Bedarf
@@ -59,7 +59,7 @@ python scripts/sync-java-models.py
 ```
 
 Das Skript wird:
-- Alle C#-Modelldateien in `dotnet/src/xjustiz.core-dotnet/Models/Entities/` parsen
+- Alle C#-Modelldateien in `sdk/dotnet/src/xjustiz.core-dotnet/Models/Entities/` parsen
 - Entsprechende Java-Klassen mit korrekten Annotationen generieren
 - Berichten, was erstellt, aktualisiert oder unverändert geblieben ist
 
@@ -67,20 +67,30 @@ Das Skript wird:
 
 ```bash
 # Java Paritätstests (via Gradle)
-cd java && gradle test --tests "*SchemaParityTest*"
+cd sdk/java && gradle test --tests "*SchemaParityTest*"
 ```
 
 ## Verzeichnisstruktur
 
 ```
 X.Justiz.Core/
-├── dotnet/src/xjustiz.core-dotnet/     # Source of Truth
+├── sdk/dotnet/src/xjustiz.core-dotnet/    # Source of Truth
 │   └── Models/                          # .NET Modelle (hier bearbeiten)
 ├── schemas/
 │   └── xjustiz-core.schema.json        # Generiert aus .NET
-├── java/src/main/java/de/xjustiz/core/
+├── sdk/java/src/main/java/de/xjustiz/core/
 │   ├── models/                          # Java Modelle (synchronisiert von .NET)
 │   └── serialization/                   # Handgeschriebene Hilfsprogramme
 └── scripts/
     └── sync-java-models.py              # Synchronisiert Java-Modelle von .NET
 ```
+
+---
+
+## Siehe auch
+
+- **[README](../README_DE.md)** - Projektübersicht
+- **[Spezifikation](Specification_DE.md)** - Vollständige Datenmodell-Spezifikation
+- **[.NET SDK](../sdk/dotnet/README_DE.md)** - .NET SDK Dokumentation
+- **[Java SDK](../sdk/java/README_DE.md)** - Java SDK Dokumentation
+- **[Integrationstests](../sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README_DE.md)** - Plattformübergreifende Tests

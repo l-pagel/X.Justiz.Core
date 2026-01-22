@@ -13,14 +13,15 @@ from dataclasses import dataclass, field
 from typing import Optional, List, Tuple, Dict
 
 # Configuration
-DOTNET_PROJECT_PATH = "dotnet/src/xjustiz.core-dotnet"
+# Configuration
+DOTNET_PROJECT_PATH = "sdk/dotnet/src/xjustiz.core-dotnet"
 DOTNET_ENTITIES_PATH = f"{DOTNET_PROJECT_PATH}/Models/Entities"
 DOTNET_CODES_PATH = f"{DOTNET_PROJECT_PATH}/Models/Codes"
 OTHER_SOURCE_PATHS = [
     f"{DOTNET_PROJECT_PATH}/Models",
 ]
-JAVA_MODELS_PATH = "java/src/main/java/de/xjustiz/core/models"
-XSD_GENERATOR_PROJECT = "dotnet/src/xjustiz.core-dotnet.XsdGenerator"
+JAVA_MODELS_PATH = "sdk/java/src/main/java/de/xjustiz/core/models"
+XSD_GENERATOR_PROJECT = "sdk/dotnet/src/xjustiz.core-dotnet.XsdGenerator"
 
 # Type mappings from C# to Java
 TYPE_MAPPINGS = {

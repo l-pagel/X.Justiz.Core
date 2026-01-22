@@ -26,7 +26,7 @@ When .NET models change, the `XsdGenerator` project regenerates:
 
 ### 2. Java SDK
 
-The Java models are manually crafted in `java/src/main/java/de/xjustiz/core/models/`.
+The Java models are manually crafted in `sdk/java/src/main/java/de/xjustiz/core/models/`.
 
 Automated parity tests verify that Java models:
 - Exist for all core types
@@ -45,7 +45,7 @@ If any discrepancy is found, the pipeline **fails**.
 
 ### Changing .NET Models
 
-1. Modify .NET models in `dotnet/src/xjustiz.core-dotnet/Models/`
+1. Modify .NET models in `sdk/dotnet/src/xjustiz.core-dotnet/Models/`
 2. Push your changes
 3. The pipeline regenerates the JSON Schema
 4. **Manually update** the corresponding Java models if needed
@@ -60,7 +60,7 @@ python scripts/sync-java-models.py
 ```
 
 The script will:
-- Parse all C# model files in `dotnet/src/xjustiz.core-dotnet/Models/Entities/`
+- Parse all C# model files in `sdk/dotnet/src/xjustiz.core-dotnet/Models/Entities/`
 - Generate corresponding Java classes with proper annotations
 - Report what was created, updated, or unchanged
 
@@ -68,20 +68,30 @@ The script will:
 
 ```bash
 # Java parity tests (via Gradle)
-cd java && gradle test --tests "*SchemaParityTest*"
+cd sdk/java && gradle test --tests "*SchemaParityTest*"
 ```
 
 ## Directory Structure
 
 ```
 X.Justiz.Core/
-├── dotnet/src/xjustiz.core-dotnet/     # Source of Truth
+├── sdk/dotnet/src/xjustiz.core-dotnet/    # Source of Truth
 │   └── Models/                          # .NET models (edit here)
 ├── schemas/
 │   └── xjustiz-core.schema.json        # Generated from .NET
-├── java/src/main/java/de/xjustiz/core/
+├── sdk/java/src/main/java/de/xjustiz/core/
 │   ├── models/                          # Java models (synced from .NET)
 │   └── serialization/                   # Hand-written utilities
 └── scripts/
     └── sync-java-models.py              # Sync Java models from .NET
 ```
+
+---
+
+## See Also
+
+- **[README](../README.md)** - Project overview
+- **[Specification](Specification.md)** - Complete data model specification
+- **[.NET SDK](../sdk/dotnet/README.md)** - .NET SDK documentation
+- **[Java SDK](../sdk/java/README.md)** - Java SDK documentation
+- **[Integration Tests](../sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md)** - Cross-platform testing
