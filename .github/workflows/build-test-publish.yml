@@ -413,4 +413,4 @@ jobs:
         run: |
           echo "## 🚀 Java SDK Published" >> $GITHUB_STEP_SUMMARY
           echo "**Version**: \`${{ steps.get_version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Repository**: [Maven Central](https://central.sonatype.co/artifact/io.github.l-pagel/xjustiz-core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY
+          echo "**Repository**: [Maven Central](https://central.sonatype.co/artifact/de.xjustizcore.io/xjustiz-core/${{ steps.get_version.outputs.version }})" >> $GITHUB_STEP_SUMMARY

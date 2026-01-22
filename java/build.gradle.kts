@@ -5,7 +5,7 @@ plugins {
     signing
 }
 
-group = "io.github.l-pagel"
+group = "de.xjustizcore.io"
 // Prioritize PROJECT_VERSION env var, otherwise keep existing (e.g. from -Pversion), otherwise default
 version = System.getenv("PROJECT_VERSION") ?: if (version == "unspecified") "0.0.1-SNAPSHOT" else version
 
@@ -53,7 +53,7 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
             
-            groupId = "io.github.l-pagel"
+            groupId = "de.xjustizcore.io"
             artifactId = "xjustiz-core"
             
             pom {
