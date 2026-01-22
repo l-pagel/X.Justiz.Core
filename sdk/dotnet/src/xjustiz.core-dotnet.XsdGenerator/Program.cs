@@ -1,4 +1,4 @@
-﻿namespace xjustiz.core_dotnet.XsdGenerator;
+namespace xjustiz.core_dotnet.XsdGenerator;
 
 using System.Reflection;
 using System.Xml.Serialization;
@@ -18,7 +18,7 @@ public class Program
         }
 
         var repoRoot = args[0];
-        var outputBaseDir = Path.Combine(repoRoot, "X.Justiz-Core-Versions");
+        var outputBaseDir = Path.Combine(repoRoot, "schemas");
         var schemaDir = Path.Combine(repoRoot, "schemas");
 
         Console.WriteLine($"Repository Root: {repoRoot}");
