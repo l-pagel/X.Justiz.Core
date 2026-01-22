@@ -320,6 +320,14 @@ Beide APIs stellen die gleichen Endpunkte bereit:
 
 ---
 
+## Siehe auch
+
+- **[📘 Spezifikation für X.Justiz Core](../../../docs/Specification_DE.md)** - Umfassende Datenmodell-Dokumentation
+- **[README](../../../README_DE.md)** - Projektübersicht
+- **[.NET SDK](../../README_DE.md)** - .NET SDK Dokumentation
+- **[Java SDK](../../../java/README_DE.md)** - Java SDK Dokumentation
+- **[SDK-Generierungs-Workflow](../../../docs/SDK-GENERATION_DE.md)** - Wie SDKs synchron gehalten werden
+
 ## 📄 Lizenz
 
 Dieses Projekt ist Teil des X.Justiz Core SDKs und steht unter der MIT-Lizenz.

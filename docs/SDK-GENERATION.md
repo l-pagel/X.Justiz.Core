@@ -85,3 +85,13 @@ X.Justiz.Core/
 └── scripts/
     └── sync-java-models.py              # Sync Java models from .NET
 ```
+
+---
+
+## See Also
+
+- **[README](../README.md)** - Project overview
+- **[Specification](Specification.md)** - Complete data model specification
+- **[.NET SDK](../dotnet/README.md)** - .NET SDK documentation
+- **[Java SDK](../java/README.md)** - Java SDK documentation
+- **[Integration Tests](../dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md)** - Cross-platform testing

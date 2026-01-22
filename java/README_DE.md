@@ -158,6 +158,15 @@ if (conversionResult.hasLostData()) {
 }
 ```
 
+## Siehe auch
+
+- **[📘 Spezifikation für X.Justiz Core](../docs/Specification_DE.md)** - Umfassende Datenmodell-Dokumentation
+- **[README](../README_DE.md)** - Projektübersicht
+- **[.NET SDK](../dotnet/README_DE.md)** - .NET SDK Dokumentation
+- **[Beispiel-API](example-api/README_DE.md)** - Spring Boot Beispielanwendung
+- **[SDK-Generierungs-Workflow](../docs/SDK-GENERATION_DE.md)** - Wie SDKs synchron gehalten werden
+- **[Änderungshistorie](../docs/Changelog_DE.md)** - Versionshistorie
+
 ## Lizenz
 
 MIT Lizenz - siehe [LICENSE](../LICENSE) für Details.

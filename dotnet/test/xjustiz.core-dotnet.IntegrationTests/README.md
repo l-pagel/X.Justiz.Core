@@ -321,6 +321,14 @@ Both APIs expose the same endpoints:
 
 ---
 
+## See Also
+
+- **[📘 Specification for X.Justiz Core](../../../docs/Specification.md)** - Complete data model documentation
+- **[README](../../../README.md)** - Project overview
+- **[.NET SDK](../../README.md)** - .NET SDK documentation
+- **[Java SDK](../../../java/README.md)** - Java SDK documentation
+- **[SDK Generation Workflow](../../../docs/SDK-GENERATION.md)** - How SDKs are kept in sync
+
 ## 📄 License
 
 This project is part of the X.Justiz Core SDK and is licensed under MIT.

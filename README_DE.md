@@ -15,7 +15,7 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [Spezifikation & Dokumentation](#spezifikation--dokumentation)
 
 ## Hintergrund
-Die „Arbeitsgruppe Schnittstellen“ des [**LegalTech Verband Deutschland**]( https://www.legaltechverband.de/ ) entwickelte 2024 diesen Standard, um den Austausch von Rechtsangelegenheiten (Akten) effizienter zu gestalten.
+Die „Arbeitsgruppe Schnittstellen" des [**LegalTech Verband Deutschland**]( https://www.legaltechverband.de/ ) entwickelte 2024 diesen Standard, um den Austausch von Rechtsangelegenheiten (Akten) effizienter zu gestalten.
 
 Als Basis dient der offizielle [**X.Justiz-Standard**]( https://xjustiz.justiz.de/ ), da dieser der etablierte Maßstab im elektronischen Rechtsverkehr (ERV) ist und von der Bund-Länder-Kommission (BLK-AG IT-Standards) gepflegt wird.
 
@@ -26,7 +26,7 @@ Als Basis dient der offizielle [**X.Justiz-Standard**]( https://xjustiz.justiz.d
 ## Motivation
 Der klassische X.Justiz-Standard ist funktionsreich, jedoch für den schnellen Austausch zwischen privaten Marktteilnehmern oft zu komplex. X.Justiz Core adressiert folgende Punkte:
 
-*   **Reduzierte Komplexität:** Beschränkung auf eine praxisrelevante Teilmenge, um „Noise“ im Datenaustausch zu vermeiden.
+*   **Reduzierte Komplexität:** Beschränkung auf eine praxisrelevante Teilmenge, um „Noise" im Datenaustausch zu vermeiden.
 *   **Moderne Technik:** Unterstützung von Dokumentenübertragungen via Pre-Signed URLs und Format-Agnostik (optimiert für JSON und XML).
 *   **Zugänglichkeit:** Zweisprachige Dokumentation (Deutsch/Englisch) für internationale Entwicklerteams.
 *   **Erweiterung:** Einführung neuer Schlüssel für Rechtsangelegenheiten (z.B. Erbrecht, Verkehrsrecht, Mietrecht).
@@ -95,15 +95,19 @@ Die SDKs sind in folgenden Sprachen verfügbar:
 ## Spezifikation & Dokumentation
 
 ### X.Justiz Core
-- [Spezifikation](Specification.md)
+- [Spezifikation für X.Justiz Core](/docs/Specification_DE.md) - Umfassende Datenmodell-Dokumentation
 - [Validierungsregeln als XSD](/X.Justiz-Core-Versions)
 - [Beipieldatensätze](/example-datasets)
 - [Listen verwendeter Codes](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
-- [Änderungshistorie (DE)](/Changelog_DE.md), [Änderungshistorie (EN)](/Changelog.md)
+- [Änderungshistorie](/docs/Changelog_DE.md)
 - [Lizenz](LICENSE)
 
 ### X.Justiz
 - [Archiv aller X.Justiz Versionen und Spezifikationen](/X.Justiz-Versions)
+
+### Entwickler-Ressourcen
+- [**🔧 SDK-Generierungs-Workflow**](/docs/SDK-GENERATION_DE.md) - Wie die SDK-Konsistenz gewährleistet wird
+- [**🧪 Integrationstests**](/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README_DE.md) - Plattformübergreifende Kompatibilitätstests
 
 ## Qualitätssicherung
 Das Projekt wird regelmäßig auf Qualität überprüft. Den aktuellen Status finden Sie auf SonarCloud:  

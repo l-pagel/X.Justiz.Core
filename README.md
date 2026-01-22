@@ -95,15 +95,19 @@ The SDKs are available in the following languages:
 ## Specification & Documentation
 
 ### X.Justiz Core
-- [Specification](Specification.md)
+- [Specification for X.Justiz Core](/docs/Specification.md) - Comprehensive data model documentation
 - [Validation rules as XSD](/X.Justiz-Core-Versions)
 - [Example datasets](/example-datasets)
 - [Lists of used codes](/dotnet/src/xjustiz.core-dotnet/Models/Codes)
-- [Changelog (DE)](/Changelog_DE.md), [Changelog (EN)](/Changelog.md)
+- [Changelog](/docs/Changelog.md)
 - [License](LICENSE)
 
 ### X.Justiz
 - [Archive of all X.Justiz versions and specifications](/X.Justiz-Versions)
+
+### Developer Resources
+- [**🔧 SDK Generation Workflow**](/docs/SDK-GENERATION.md) - How cross-SDK consistency is maintained
+- [**🧪 Integration Tests**](/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md) - Cross-platform compatibility testing
 
 ## Quality Assurance
 The project is regularly checked for quality. You can find the current status on SonarCloud:  

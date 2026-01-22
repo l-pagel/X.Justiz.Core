@@ -1,17 +1,443 @@
-# X.Justiz-Core Datenmodell Spezifikation
+# Spezifikation für X.Justiz Core
 
 > [!TIP]  
 > **🌐 [English version available here](Specification.md) 👈**
 
-Dieses Dokument bietet einen umfassenden Überblick über das X.Justiz-Core-Datenmodell, einschließlich seiner Klassen, Eigenschaften und Versionierung.
+Dieses Dokument bietet eine umfassende Spezifikation des X.Justiz-Core-Datenmodells, einschließlich seiner Klassen, Eigenschaften, Versionierung und Nutzungsmuster.
 
-### Verwendung der Tabelle
+---
+
+## Inhaltsverzeichnis
+
+- [1. Wurzelobjekt: UebermittlungSchriftgutobjekteNachricht](#1-wurzelobjekt-uebermittlungschriftgutobjektenachricht)
+  - [1.1 Übersicht](#11-übersicht)
+  - [1.2 Struktur](#12-struktur)
+  - [1.3 Einfache Verwendungsbeispiele](#13-einfache-verwendungsbeispiele)
+- [2. Benutzerdefinierte Daten: Feld und Feldgruppe](#2-benutzerdefinierte-daten-feld-und-feldgruppe)
+  - [2.1 Wann benutzerdefinierte Felder verwenden](#21-wann-benutzerdefinierte-felder-verwenden)
+  - [2.2 Feld](#22-feld)
+  - [2.3 Feldgruppe](#23-feldgruppe)
+  - [2.4 Beispiele: Verkehrsunfall](#24-beispiele-verkehrsunfall)
+- [3. Dateianhänge](#3-dateianhänge)
+  - [3.1 Anhänge-Optionen](#31-anhänge-optionen)
+  - [3.2 Verwendung von Datei (Standard X.Justiz)](#32-verwendung-von-datei-standard-xjustiz)
+  - [3.3 Verwendung von DateiCore (Erweitert)](#33-verwendung-von-dateicore-erweitert)
+  - [3.4 Artefakt-Typen](#34-artefakt-typen)
+- [4. Datenmodell-Referenz](#4-datenmodell-referenz)
+  - [4.1 Verwendung der Tabelle](#41-verwendung-der-tabelle)
+  - [4.2 Vollständiges Datenmodell](#42-vollständiges-datenmodell)
+
+---
+
+## 1. Wurzelobjekt: UebermittlungSchriftgutobjekteNachricht
+
+### 1.1 Übersicht
+
+Die `UebermittlungSchriftgutobjekteNachricht` (Schriftgutobjekte-Übermittlungsnachricht) ist das **Wurzelobjekt** für allen Datenaustausch im X.Justiz Core Format. Sie dient als standardisierte „Hülle", die alle Informationen über einen Rechtsfall enthält, einschließlich Metadaten, Beteiligten und Dokumenten.
+
+Diese Klasse ist der primäre Einstiegspunkt für:
+- **Daten senden**: Serialisieren Sie eine Instanz zu JSON oder XML, um Rechtsfallsinformationen zu übermitteln
+- **Daten empfangen**: Deserialisieren Sie eingehende JSON- oder XML-Daten in ein stark typisiertes Objekt
+
+### 1.2 Struktur
+
+Die `UebermittlungSchriftgutobjekteNachricht` besteht aus drei Hauptkomponenten:
+
+| Eigenschaft | Typ | Beschreibung |
+|-------------|-----|--------------|
+| **Kopf** | `NachrichtenkopfCore` | Nachrichtenkopf mit Metadaten (Version, Zeitstempel, Absender-/Empfängerinfo) |
+| **Grunddaten** | `Grunddaten` | Grundlegende Falldaten einschließlich Verfahrensinformationen und Beteiligten |
+| **Schriftgutobjekte** | `Schriftgutobjekte` | Die eigentlichen Dokumente und Dateien (Akten und Dokumente) |
+| **SchemaLocation** | `string` | Optionale XSD-Schema-Position für XML-Validierung |
+
+```
+UebermittlungSchriftgutobjekteNachricht
+├── Kopf (NachrichtenkopfCore)
+│   ├── Version
+│   ├── Version_XJustizCore
+│   ├── Version_XJustizReferenz
+│   ├── Erstellungszeitpunkt
+│   ├── Absender / Empfaenger
+│   └── AktenzeichenAbsender / AktenzeichenEmpfaenger
+├── Grunddaten
+│   └── Verfahrensdaten
+│       ├── Verfahrensnummer
+│       ├── Instanzdaten
+│       └── Beteiligungen (Beteiligte)
+└── Schriftgutobjekte
+    ├── Akte[] (Akten)
+    └── Dokumente[] (Dokumente)
+```
+
+### 1.3 Einfache Verwendungsbeispiele
+
+#### Nachricht erstellen (C#)
+```csharp
+using xjustiz.core_dotnet.Models;
+
+var message = new UebermittlungSchriftgutobjekteNachricht
+{
+    Kopf = new NachrichtenkopfCore
+    {
+        Version = "3.5.1",
+        Version_XJustizCore = "0.2.0",
+        Erstellungszeitpunkt = DateTime.UtcNow,
+        EigeneNachrichtenId = Guid.NewGuid().ToString(),
+        Absender = new AuswahlAdresse { AbsenderSonstige = "Kanzlei ABC" },
+        Empfaenger = new AuswahlAdresse { EmpfaengerSonstige = "Versicherung XYZ" }
+    },
+    Grunddaten = new Grunddaten
+    {
+        Verfahrensdaten = new Verfahrensdaten
+        {
+            Verfahrensnummer = "2024-VU-12345"
+        }
+    },
+    Schriftgutobjekte = new Schriftgutobjekte()
+};
+```
+
+#### Nachricht erstellen (Java)
+```java
+import de.xjustiz.core.models.*;
+
+var message = new UebermittlungSchriftgutobjekteNachricht();
+
+var kopf = new NachrichtenkopfCore();
+kopf.setVersion("3.5.1");
+kopf.setVersionXJustizCore("0.2.0");
+kopf.setErstellungszeitpunkt(LocalDateTime.now());
+kopf.setEigeneNachrichtenId(UUID.randomUUID().toString());
+message.setKopf(kopf);
+
+var grunddaten = new Grunddaten();
+var verfahrensdaten = new Verfahrensdaten();
+verfahrensdaten.setVerfahrensnummer("2024-VU-12345");
+grunddaten.setVerfahrensdaten(verfahrensdaten);
+message.setGrunddaten(grunddaten);
+
+message.setSchriftgutobjekte(new Schriftgutobjekte());
+```
+
+---
+
+## 2. Benutzerdefinierte Daten: Feld und Feldgruppe
+
+### 2.1 Wann benutzerdefinierte Felder verwenden
+
+X.Justiz Core bietet einen umfassenden Satz von Eigenschaften für gängige rechtliche Szenarien. Es kann jedoch Fälle geben, in denen Sie Informationen übermitteln müssen, für die **keine passende Standardeigenschaft existiert**.
+
+Für diese Situationen verwenden Sie die `AnwendungsspezifischeErweiterung` (Anwendungsspezifische Erweiterung) mit ihren `Feld`- und `Feldgruppe`-Elementen.
+
+**Verwenden Sie benutzerdefinierte Felder wenn:**
+- Die Information fachspezifisch ist und nicht durch Standardeigenschaften abgedeckt wird
+- Sie strukturierte Daten übermitteln müssen, die nicht in das bestehende Modell passen
+- Verschiedene Systeme sich auf benutzerdefinierte Austauschformate geeinigt haben
+- Sie Rückwärtskompatibilität benötigen, während Sie auf Standardisierung warten
+
+### 2.2 Feld
+
+Ein `Feld` repräsentiert ein einzelnes Schlüssel-Wert-Paar mit optionalen Metadaten:
+
+| Eigenschaft | Typ | Beschreibung |
+|-------------|-----|--------------|
+| **Name** | `string` | Der Bezeichner/Schlüssel des Feldes |
+| **Wert** | `string` | Der Wert (wird immer als String übermittelt) |
+| **Datentyp** | `string` | Optional: Der Datentyp (z.B. "string", "decimal", "date") |
+| **Beschreibung** | `string` | Optional: Menschenlesbare Beschreibung |
+
+### 2.3 Feldgruppe
+
+Eine `Feldgruppe` ermöglicht es, verwandte Felder zusammenzufassen und sogar Gruppen hierarchisch zu verschachteln:
+
+| Eigenschaft | Typ | Beschreibung |
+|-------------|-----|--------------|
+| **Name** | `string` | Der Name der Gruppe |
+| **Beschreibung** | `string` | Optional: Beschreibung des Gruppenzwecks |
+| **Felder** | `List<Feld>` | Felder, die zu dieser Gruppe gehören |
+| **UnterFeldgruppen** | `List<Feldgruppe>` | Verschachtelte Untergruppen |
+
+### 2.4 Beispiele: Verkehrsunfall
+
+Hier zeigen wir, wie `Feld` und `Feldgruppe` für einen Verkehrsunfall-Fall verwendet werden:
+
+#### Beispiel 1: Unfalldetails als Felder (C#)
+```csharp
+var akte = new AkteCore
+{
+    Identifikation = new Identifikation { Id = "AKTE-001" },
+    AnwendungsspezifischeErweiterung = new AnwendungsspezifischeErweiterung
+    {
+        Kennung = "verkehrsunfall-details",
+        Name = "Verkehrsunfall-Details",
+        Beschreibung = "Erweiterte Daten für Verkehrsunfälle",
+        Felder = new List<Feld>
+        {
+            new Feld 
+            { 
+                Name = "Unfallort", 
+                Wert = "Hauptstraße 42, 10115 Berlin",
+                Datentyp = "string",
+                Beschreibung = "Ort des Unfalls"
+            },
+            new Feld 
+            { 
+                Name = "Unfalldatum", 
+                Wert = "2024-01-15",
+                Datentyp = "date"
+            },
+            new Feld 
+            { 
+                Name = "Unfallzeit", 
+                Wert = "14:30",
+                Datentyp = "time"
+            },
+            new Feld 
+            { 
+                Name = "Geschaetzte_Schadenshoehe", 
+                Wert = "4500.00",
+                Datentyp = "decimal",
+                Beschreibung = "Geschätzte Schadenshöhe in EUR"
+            }
+        }
+    }
+};
+```
+
+#### Beispiel 2: Verschachtelte Gruppen für Fahrzeuge und Zeugen (C#)
+```csharp
+var erweiterung = new AnwendungsspezifischeErweiterung
+{
+    Kennung = "verkehrsunfall-vollstaendig",
+    Name = "Vollständige Verkehrsunfall-Daten",
+    Feldgruppen = new List<Feldgruppe>
+    {
+        // Fahrzeug 1 Information
+        new Feldgruppe
+        {
+            Name = "Fahrzeug_Mandant",
+            Beschreibung = "Fahrzeuginformationen des Mandanten",
+            Felder = new List<Feld>
+            {
+                new Feld { Name = "Kennzeichen", Wert = "B-AB 1234" },
+                new Feld { Name = "Fahrzeugtyp", Wert = "PKW" },
+                new Feld { Name = "Hersteller", Wert = "Volkswagen" },
+                new Feld { Name = "Modell", Wert = "Golf" },
+                new Feld { Name = "Baujahr", Wert = "2020", Datentyp = "integer" }
+            }
+        },
+        // Fahrzeug 2 Information (Gegner)
+        new Feldgruppe
+        {
+            Name = "Fahrzeug_Gegner",
+            Beschreibung = "Fahrzeuginformationen des Gegners",
+            Felder = new List<Feld>
+            {
+                new Feld { Name = "Kennzeichen", Wert = "M-XY 5678" },
+                new Feld { Name = "Fahrzeugtyp", Wert = "PKW" },
+                new Feld { Name = "Hersteller", Wert = "BMW" },
+                new Feld { Name = "Modell", Wert = "3er" }
+            }
+        },
+        // Zeugen als verschachtelte Gruppe
+        new Feldgruppe
+        {
+            Name = "Zeugen",
+            Beschreibung = "Zeugeinformationen",
+            UnterFeldgruppen = new List<Feldgruppe>
+            {
+                new Feldgruppe
+                {
+                    Name = "Zeuge_1",
+                    Felder = new List<Feld>
+                    {
+                        new Feld { Name = "Name", Wert = "Max Mustermann" },
+                        new Feld { Name = "Telefon", Wert = "+49 30 12345678" },
+                        new Feld { Name = "War_Anwesend", Wert = "true", Datentyp = "boolean" }
+                    }
+                }
+            }
+        }
+    }
+};
+```
+
+#### Beispiel 3: Verkehrsunfall im JSON-Format
+```json
+{
+  "Kopf": {
+    "Version": "3.5.1",
+    "Version_XJustizCore": "0.2.0",
+    "Erstellungszeitpunkt": "2024-01-20T10:30:00Z",
+    "AktenzeichenAbsender": ["2024-VU-001"]
+  },
+  "Grunddaten": {
+    "Verfahrensdaten": {
+      "Verfahrensnummer": "2024-VU-001"
+    }
+  },
+  "Schriftgutobjekte": {
+    "Akte": [{
+      "Identifikation": { "Id": "AKTE-001" },
+      "AnwendungsspezifischeErweiterung": {
+        "Kennung": "verkehrsunfall",
+        "Name": "Verkehrsunfall-Daten",
+        "Felder": [
+          { "Name": "Unfallort", "Wert": "Hauptstraße 42, Berlin" },
+          { "Name": "Unfalldatum", "Wert": "2024-01-15", "Datentyp": "date" },
+          { "Name": "Schadenshoehe_EUR", "Wert": "4500.00", "Datentyp": "decimal" }
+        ],
+        "Feldgruppen": [{
+          "Name": "Fahrzeugdaten",
+          "Felder": [
+            { "Name": "Kennzeichen", "Wert": "B-AB 1234" },
+            { "Name": "Fahrzeugtyp", "Wert": "PKW" }
+          ]
+        }]
+      }
+    }]
+  }
+}
+```
+
+---
+
+## 3. Dateianhänge
+
+X.Justiz Core bietet mehrere Möglichkeiten, Dateien und Dokumente an eine Nachricht anzuhängen. Die Wahl hängt von Ihrem Anwendungsfall ab und davon, ob Sie Standard-X.Justiz-Kompatibilität oder X.Justiz Core-Erweiterungen verwenden.
+
+### 3.1 Anhänge-Optionen
+
+| Option | Klasse | Anwendungsfall |
+|--------|--------|----------------|
+| **Standard** | `Datei` | X.Justiz-Kompatibilität, grundlegende Dateimetadaten |
+| **Erweitert** | `DateiCore` | Vollständige Metadaten inkl. Hash, Größe, Content-Type |
+| **Gebündelt** | `BundlePathArtifact` | Datei im ZIP-Archiv enthalten |
+| **Fernzugriff** | `HttpsArtifact` | Datei verfügbar über Pre-signed URL |
+
+### 3.2 Verwendung von Datei (Standard X.Justiz)
+
+Die `Datei`-Klasse bietet grundlegende Dateimetadaten, kompatibel mit Standard-X.Justiz:
+
+```csharp
+var dokument = new Dokument
+{
+    Identifikation = new Identifikation { Id = "DOK-001" },
+    FachspezifischeDaten = new XjustizFachspezifischeDaten
+    {
+        Dokumentklasse = new Dokumentklasse { Code = DokumentklasseCode.Anlagen },
+        Datei = new Datei
+        {
+            Dateiname = "unfallbericht.pdf",
+            Bestandteil = new Bestandteiltyp { Code = BestandteiltypCode.Inhalt }
+        }
+    }
+};
+```
+
+### 3.3 Verwendung von DateiCore (Erweitert)
+
+Die `DateiCore`-Klasse (X.Justiz Core-Erweiterung) bietet umfassende Dateimetadaten:
+
+```csharp
+var dokumentCore = new DokumentCore
+{
+    Identifikation = new Identifikation { Id = "DOK-002" },
+    Erstellungszeitpunkt = DateTime.UtcNow,
+    FachspezifischeDaten = new XjustizFachspezifischeDatenCore
+    {
+        Dokumentklasse = new Dokumentklasse { Code = DokumentklasseCode.Anlagen },
+        Datei = new DateiCore
+        {
+            Dateiname = "unfallfotos.zip",
+            Dateiendung = "zip",
+            ContentType = "application/zip",
+            Groesse = 2456789,  // Größe in Bytes
+            Hash = new HashInfo
+            {
+                Algorithm = "SHA-256",
+                Value = "a1b2c3d4e5f6..."
+            },
+            Bestandteil = new Bestandteiltyp { Code = BestandteiltypCode.Inhalt },
+            Artefakte = new List<Artifact>
+            {
+                // Siehe Artefakt-Typen unten
+            }
+        }
+    }
+};
+```
+
+### 3.4 Artefakt-Typen
+
+Artefakte definieren, wo der eigentliche Dateiinhalt abgerufen werden kann:
+
+#### BundlePathArtifact - Dateien im ZIP-Archiv
+```csharp
+// Datei ist im selben ZIP-Archiv wie die XML/JSON-Nachricht enthalten
+new BundlePathArtifact
+{
+    Pfad = "attachments/unfallbericht.pdf"
+}
+```
+
+#### HttpsArtifact - Dateien über Pre-signed URL
+```csharp
+// Datei ist zum Download über eine Pre-signed URL verfügbar
+new HttpsArtifact
+{
+    Url = "https://storage.example.com/files/unfallbericht.pdf?signature=abc123",
+    ExpiresAtUtc = DateTime.UtcNow.AddHours(24),
+    Header = new List<HttpHeader>
+    {
+        new HttpHeader { Key = "Authorization", Value = "Bearer token123" }
+    }
+}
+```
+
+#### Vollständiges Beispiel - Mehrere Artefakte
+```csharp
+var datei = new DateiCore
+{
+    Dateiname = "gutachten.pdf",
+    Dateiendung = "pdf",
+    ContentType = "application/pdf",
+    Groesse = 1234567,
+    Hash = new HashInfo
+    {
+        Algorithm = "SHA-256",
+        Value = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    Artefakte = new List<Artifact>
+    {
+        // Primär: verfügbar im ZIP-Bundle
+        new BundlePathArtifact { Pfad = "documents/gutachten.pdf" },
+        
+        // Fallback: auch über HTTPS verfügbar
+        new HttpsArtifact
+        {
+            Url = "https://cdn.example.com/gutachten.pdf?token=xyz",
+            ExpiresAtUtc = DateTime.UtcNow.AddDays(7)
+        }
+    }
+};
+```
+
+---
+
+## 4. Datenmodell-Referenz
+
+### 4.1 Verwendung der Tabelle
+
 Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
+
 - **Class**: Die fettgedruckte Container-Klasse für eine Gruppe von Eigenschaften.
 - **Property / Type**: Der Name des Feldes und der zugehörige Datentyp. Komplexe Typen (verknüpfte Klassen) sind **fett** gedruckt.
 - **Core Only**: Markiert mit einem `x`, wenn diese spezifische Klasse oder Eigenschaft eine Erweiterung ist, die exklusiv durch X.Justiz-Core eingeführt wurde.
 - **Release X.Justiz**: Die ursprüngliche X.Justiz-Version, in der dieses Element erstmals eingeführt wurde (markiert mit `-` bei Core-only Erweiterungen).
 - **Release Core**: Die X.Justiz-Core-Version, ab der dieses Element verfügbar ist.
+
+### 4.2 Vollständiges Datenmodell
 
 &nbsp;
 
@@ -241,3 +667,14 @@ Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
 | **RollenCode** | | | No | 2.1.0 | 0.2.0 |
 | **StaatCode** | | | No | 3.1.1 | 0.2.0 |
 | **TelekommunikationsartCode** | | | No | 3.2.1 | 0.2.0 |
+
+---
+
+## Siehe auch
+
+- **[README](../README_DE.md)** - Projektübersicht und Erste Schritte
+- **[Änderungshistorie](Changelog_DE.md)** - Versionshistorie
+- **[.NET SDK Dokumentation](../dotnet/README_DE.md)** - .NET SDK Benutzerhandbuch
+- **[Java SDK Dokumentation](../java/README_DE.md)** - Java SDK Benutzerhandbuch
+- **[Beispieldatensätze](../example-datasets/)** - Beispieldateien
+- **[SDK-Generierungs-Workflow](SDK-GENERATION_DE.md)** - Wie SDKs synchron gehalten werden

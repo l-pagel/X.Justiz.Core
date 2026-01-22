@@ -151,3 +151,14 @@ await Zipper.ArchiveToZipFileAsync(nachricht, "export.zip", attachments);
 
 ---
 *Weiterführende Beispiele finden Sie im [/dotnet/example-api](https://github.com/l-pagel/X.Justiz.Core/tree/main/dotnet/example-api) Ordner.*
+
+---
+
+## Siehe auch
+
+- **[📘 Spezifikation für X.Justiz Core](../docs/Specification_DE.md)** - Umfassende Datenmodell-Dokumentation
+- **[README](../README_DE.md)** - Projektübersicht
+- **[Java SDK](../java/README_DE.md)** - Java SDK Dokumentation
+- **[Integrationstests](test/xjustiz.core-dotnet.IntegrationTests/README_DE.md)** - Plattformübergreifende Kompatibilitätstests
+- **[SDK-Generierungs-Workflow](../docs/SDK-GENERATION_DE.md)** - Wie SDKs synchron gehalten werden
+- **[Änderungshistorie](../docs/Changelog_DE.md)** - Versionshistorie

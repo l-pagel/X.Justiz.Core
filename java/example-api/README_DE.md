@@ -26,3 +26,13 @@ Führen Sie die Anwendung mit Gradle aus dem `java`-Stammverzeichnis aus:
 ```bash
 ./gradlew :example-api:bootRun
 ```
+
+---
+
+## Siehe auch
+
+- **[📘 Spezifikation für X.Justiz Core](../../docs/Specification_DE.md)** - Umfassende Datenmodell-Dokumentation
+- **[README](../../README_DE.md)** - Projektübersicht
+- **[Java SDK](../README_DE.md)** - Java SDK Dokumentation
+- **[.NET SDK](../../dotnet/README_DE.md)** - .NET SDK Dokumentation
+- **[Integrationstests](../../dotnet/test/xjustiz.core-dotnet.IntegrationTests/README_DE.md)** - Plattformübergreifende Tests

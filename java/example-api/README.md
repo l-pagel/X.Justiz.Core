@@ -27,3 +27,13 @@ Run the application using Gradle from the `java` root directory:
 ```bash
 ./gradlew :example-api:bootRun
 ```
+
+---
+
+## See Also
+
+- **[📘 Specification for X.Justiz Core](../../docs/Specification.md)** - Complete data model documentation
+- **[README](../../README.md)** - Project overview
+- **[Java SDK](../README.md)** - Java SDK documentation
+- **[.NET SDK](../../dotnet/README.md)** - .NET SDK documentation
+- **[Integration Tests](../../dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md)** - Cross-platform testing

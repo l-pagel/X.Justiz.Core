@@ -159,6 +159,15 @@ if (conversionResult.hasLostData()) {
 }
 ```
 
+## See Also
+
+- **[📘 Specification for X.Justiz Core](../docs/Specification.md)** - Complete data model documentation
+- **[README](../README.md)** - Project overview
+- **[.NET SDK](../dotnet/README.md)** - .NET SDK documentation
+- **[Example API](example-api/README.md)** - Spring Boot example application
+- **[SDK Generation Workflow](../docs/SDK-GENERATION.md)** - How SDKs are kept in sync
+- **[Changelog](../docs/Changelog.md)** - Version history
+
 ## License
 
 MIT License - see [LICENSE](../LICENSE) for details.
