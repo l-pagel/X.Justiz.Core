@@ -3,6 +3,7 @@ plugins {
     `java-library`
     `maven-publish`
     signing
+    id("io.github.boolivar.sonatype-portal-publish") version "0.1.0"
 }
 
 group = "de.xjustizcore.io"
@@ -83,17 +84,17 @@ publishing {
             }
         }
     }
-    repositories {
-        maven {
-            name = "SonatypeCentral"
-            // Using the Sonatype Central Portal (S01)
-            url = uri("https://central.sonatype.com/api/v1/publisher/deployments/maven/repository")
-            credentials {
-                username = System.getenv("OSSRH_USERNAME")
-                password = System.getenv("OSSRH_PASSWORD")
-            }
-        }
-    }
+// Repository for Central Portal is handled by dev.lukebemish.central-portal-publishing plugin
+}
+
+// Map environment variables to project properties expected by the plugin
+ext {
+    set("sonatypeUsername", System.getenv("OSSRH_USERNAME"))
+    set("sonatypePassword", System.getenv("OSSRH_PASSWORD"))
+}
+
+sonatypePublish {
+    autoPublish = true
 }
 
 signing {

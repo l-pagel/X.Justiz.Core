@@ -406,7 +406,7 @@ jobs:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: gradle publish -Pversion=${{ steps.get_version.outputs.version }}
+        run: gradle publishToSonatype -Pversion=${{ steps.get_version.outputs.version }}
 
       - name: Java Publish Summary
         if: success() && github.ref == 'refs/heads/main'
