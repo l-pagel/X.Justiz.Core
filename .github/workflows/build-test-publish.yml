@@ -3,7 +3,7 @@ name: Build, Test and Publish
 on:
   push:
     branches:
-      - '**'
+      - 'main'
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -118,7 +118,7 @@ jobs:
             echo "No changes to changelogs."
           else
             git commit -m "chore: sync changelogs from versions.json [skip ci]"
-            git push
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
             echo "::notice ::Changelogs updated and pushed."
           fi
 

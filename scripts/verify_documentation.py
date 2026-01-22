@@ -4,8 +4,8 @@ import sys
 
 # Paths
 ROOT_DIR = os.getcwd()
-MODELS_DIR = os.path.join(ROOT_DIR, "dotnet", "src", "xjustiz.core-dotnet", "Models")
-DOC_FILE = os.path.join(ROOT_DIR, "Specification.md")
+MODELS_DIR = os.path.join(ROOT_DIR, "sdk", "dotnet", "src", "xjustiz.core-dotnet", "Models")
+DOC_FILE = os.path.join(ROOT_DIR, "docs", "Specification.md")
 
 type_map = {} # name -> {'path': path, 'type': 'class'|'enum'}
 
