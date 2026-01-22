@@ -13,6 +13,28 @@ Java SDK for X.Justiz Core document transmission messages.
 - **Jackson Integration**: Uses Jackson for both JSON and XML serialization
 - **German Property Names**: Uses German property names as defined in the .NET project
 
+## Installation
+
+The SDK is provided via Maven Central [[Link]](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core). You can install it via Maven or Gradle:
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>de.xjustizcore.io</groupId>
+    <artifactId>xjustiz-core</artifactId>
+    <version>0.3.0</version>
+</dependency>
+```
+
+### Gradle
+
+```kotlin
+implementation("de.xjustizcore.io:xjustiz-core:0.3.0")
+```
+
+The latest version can be found on [Maven Central](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core).
+
 ## Requirements
 
 - Java 17+

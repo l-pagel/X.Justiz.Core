@@ -88,7 +88,7 @@ They include:
 
 The SDKs are available in the following languages:
 -   ✅ [**.NET Code**](/dotnet) | [**nuget Package**](https://www.nuget.org/packages/xjustiz.core-dotnet) | [**Getting Started**](/dotnet/README.md)
--   ⏳ **Java (Spring)** (In progress)
+-   ✅ [**Java**](/java) | [**Maven Package**](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core) | [**Getting Started**](/java/README.md)
 -   ⏳ **JavaScript / TypeScript** (In progress)
 -   ⏳ **Python** (In progress)
 

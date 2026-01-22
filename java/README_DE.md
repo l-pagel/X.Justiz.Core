@@ -12,6 +12,28 @@ Java SDK für X.Justiz Core Dokumentenübermittlungsnachrichten.
 - **Jackson-Integration**: Verwendet Jackson für sowohl JSON- als auch XML-Serialisierung
 - **Deutsche Eigenschaftsnamen**: Verwendet deutsche Eigenschaftsnamen wie im .NET-Projekt definiert
 
+## Installation
+
+Das SDK wird über Maven Central bereitgestellt [[Link]](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core). Sie können es über Maven oder Gradle installieren:
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>de.xjustizcore.io</groupId>
+    <artifactId>xjustiz-core</artifactId>
+    <version>0.3.0</version>
+</dependency>
+```
+
+### Gradle
+
+```kotlin
+implementation("de.xjustizcore.io:xjustiz-core:0.3.0")
+```
+
+Die aktuellste Version finden Sie auf [Maven Central](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core).
+
 ## Anforderungen
 
 - Java 17+
