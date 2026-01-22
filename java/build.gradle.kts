@@ -89,8 +89,8 @@ publishing {
 
 // Map environment variables to project properties expected by the plugin
 ext {
-    set("sonatypeUsername", System.getenv("OSSRH_USERNAME"))
-    set("sonatypePassword", System.getenv("OSSRH_PASSWORD"))
+    set("sonatypeMavenCentralUser", System.getenv("OSSRH_USERNAME"))
+    set("sonatypeMavenCentralPassword", System.getenv("OSSRH_PASSWORD"))
 }
 
 sonatypePublish {
