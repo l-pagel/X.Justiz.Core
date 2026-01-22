@@ -9,7 +9,7 @@ public class SchemaParityTests
 {
     private static readonly string RepoRoot = FindRepoRoot();
     private static readonly string SchemaPath = Path.Combine(RepoRoot, "schemas", "xjustiz-core.schema.json");
-    private static readonly string JavaModelsPath = Path.Combine(RepoRoot, "java", "src", "main", "java", "de", "xjustiz", "core", "models");
+    private static readonly string JavaModelsPath = Path.Combine(RepoRoot, "sdk", "java", "src", "main", "java", "de", "xjustiz", "core", "models");
 
     [Fact]
     public void JsonSchema_ShouldExist()

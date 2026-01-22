@@ -163,8 +163,8 @@ public static class XmlValidator
 
         while (currentDir != null)
         {
-            // Check if "X.Justiz-Versions" exists in this directory
-            var check = Path.Combine(currentDir.FullName, "X.Justiz-Versions");
+            // Check if "schemas/xjustiz-xsd" exists in this directory
+            var check = Path.Combine(currentDir.FullName, "schemas", "xjustiz-xsd");
             if (Directory.Exists(check))
             {
                 xjustizVersionsRoot = new DirectoryInfo(check);

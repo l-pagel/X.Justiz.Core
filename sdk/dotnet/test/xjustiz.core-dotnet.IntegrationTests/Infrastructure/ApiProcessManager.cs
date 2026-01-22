@@ -65,7 +65,7 @@ public class ApiProcessManager : IAsyncDisposable
         }
 
         // Check Gradle wrapper
-        var gradleWrapperPath = Path.Combine(repoRoot, "java", "gradlew.bat");
+        var gradleWrapperPath = Path.Combine(repoRoot, "sdk", "java", "gradlew.bat");
         result.GradleWrapperExists = File.Exists(gradleWrapperPath);
         if (!result.GradleWrapperExists)
         {
@@ -88,14 +88,14 @@ public class ApiProcessManager : IAsyncDisposable
         }
 
         // Check example-api projects exist
-        var dotNetApiPath = Path.Combine(repoRoot, "dotnet", "example-api", "example-api.csproj");
+        var dotNetApiPath = Path.Combine(repoRoot, "sdk", "dotnet", "example-api", "example-api.csproj");
         result.DotNetApiExists = File.Exists(dotNetApiPath);
         if (!result.DotNetApiExists)
         {
             result.Errors.Add($"❌ .NET example-api not found at: {dotNetApiPath}");
         }
 
-        var javaApiPath = Path.Combine(repoRoot, "java", "example-api", "build.gradle.kts");
+        var javaApiPath = Path.Combine(repoRoot, "sdk", "java", "example-api", "build.gradle.kts");
         result.JavaApiExists = File.Exists(javaApiPath);
         if (!result.JavaApiExists)
         {
@@ -103,7 +103,7 @@ public class ApiProcessManager : IAsyncDisposable
         }
 
         // Check example datasets
-        var datasetsPath = Path.Combine(repoRoot, "example-datasets");
+        var datasetsPath = Path.Combine(repoRoot, "docs", "examples");
         result.ExampleDatasetsExist = Directory.Exists(datasetsPath) &&
             Directory.GetFiles(datasetsPath, "*.json").Length > 0;
         if (!result.ExampleDatasetsExist)
@@ -152,7 +152,7 @@ public class ApiProcessManager : IAsyncDisposable
 
         Log("[INFO] Starting .NET API...");
 
-        var dotNetApiPath = Path.Combine(repoRoot, "dotnet", "example-api");
+        var dotNetApiPath = Path.Combine(repoRoot, "sdk", "dotnet", "example-api");
 
         var startInfo = new ProcessStartInfo
         {
@@ -210,7 +210,7 @@ public class ApiProcessManager : IAsyncDisposable
 
         Log("[INFO] Starting Java API...");
 
-        var javaPath = Path.Combine(repoRoot, "java");
+        var javaPath = Path.Combine(repoRoot, "sdk", "java");
 
         ProcessStartInfo startInfo;
 

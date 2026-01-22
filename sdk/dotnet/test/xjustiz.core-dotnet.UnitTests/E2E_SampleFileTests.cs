@@ -14,7 +14,7 @@ public class E2E_SampleFileTests
 
     public E2E_SampleFileTests()
     {
-        _datasetsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example-datasets");
+        _datasetsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "docs", "examples");
     }
 
     [Theory]

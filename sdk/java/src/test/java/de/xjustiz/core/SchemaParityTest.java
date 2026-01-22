@@ -28,7 +28,7 @@ class SchemaParityTest {
     @BeforeAll
     static void loadSchema() throws Exception {
         // Find schema relative to project root
-        Path schemaPath = Paths.get("..", "schemas", "xjustiz-core.schema.json");
+        Path schemaPath = Paths.get("..", "..", "schemas", "xjustiz-core.schema.json");
         File schemaFile = schemaPath.toFile();
 
         if (!schemaFile.exists()) {

@@ -15,7 +15,7 @@ using xjustiz.core_dotnet.Models;
 public static class TestDataProvider
 {
     private static readonly string RepoRoot = FindRepoRoot();
-    private static readonly string ExampleDatasetsPath = Path.Combine(RepoRoot, "example-datasets");
+    private static readonly string ExampleDatasetsPath = Path.Combine(RepoRoot, "docs", "examples");
 
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
