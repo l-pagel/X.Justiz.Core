@@ -105,6 +105,22 @@ public enum TelekommunikationsartCode {
 
     private final String value;
     TelekommunikationsartCode(String value) { this.value = value; }
+    private static final java.util.Map<String, TelekommunikationsartCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("E-Mail".toLowerCase(), Email);
+        ALIASES.put("Fax".toLowerCase(), Fax);
+        ALIASES.put("Internet".toLowerCase(), Internet);
+        ALIASES.put("Mobiltelefon".toLowerCase(), Mobiltelefon);
+        ALIASES.put("Pager".toLowerCase(), Pager);
+        ALIASES.put("Sonstige".toLowerCase(), Sonstige);
+        ALIASES.put("Telefon".toLowerCase(), Telefon);
+        ALIASES.put("Rechtsverbindlicher elektronischer Kommunikationsweg".toLowerCase(), RechtsverbindlicherElektronischerKommunikationsweg);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -119,11 +135,14 @@ public enum TelekommunikationsartCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static TelekommunikationsartCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (TelekommunikationsartCode e : TelekommunikationsartCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        TelekommunikationsartCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

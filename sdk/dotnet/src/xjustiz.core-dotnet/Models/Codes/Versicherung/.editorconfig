@@ -1,0 +1,7 @@
+[*.cs]
+generated_code = true
+dotnet_diagnostic.SA1028.severity = none
+dotnet_diagnostic.SA1413.severity = none
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1518.severity = none
+dotnet_diagnostic.SA1502.severity = none

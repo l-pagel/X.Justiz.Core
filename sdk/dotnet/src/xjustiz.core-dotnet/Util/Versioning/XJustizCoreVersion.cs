@@ -14,6 +14,12 @@ public enum XJustizCoreVersion
     V0_2_0 = 020,
 
     /// <summary>
+    /// Beta-Version, gültig ab 01.02.2026<br/>
+    /// Beta version, valid from 01.02.2026
+    /// </summary>
+    V0_3_0 = 030,
+
+    /// <summary>
     /// Version ausschliesslich zum Testen<br/>
     /// Version for testing purposes only
     /// </summary>

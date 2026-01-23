@@ -281,6 +281,38 @@ public enum AktentypCode {
 
     private final String value;
     AktentypCode(String value) { this.value = value; }
+    private static final java.util.Map<String, AktentypCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("Zivilakte / Civil Case File".toLowerCase(), Zivilakte);
+        ALIASES.put("Betreuungsakte / Guardianship Case File".toLowerCase(), Betreuungsakte);
+        ALIASES.put("Familienakte / Family Case File".toLowerCase(), Familienakte);
+        ALIASES.put("Nachlassakte / Probate Case File".toLowerCase(), Nachlassakte);
+        ALIASES.put("Insolvenzakte / Insolvency Case File".toLowerCase(), Insolvenzakte);
+        ALIASES.put("Grundakte / Land Registry File".toLowerCase(), Grundakte);
+        ALIASES.put("Registerakte / Register File".toLowerCase(), Registerakte);
+        ALIASES.put("Zwangsvollstreckungsakte / Enforcement Case File".toLowerCase(), Zwangsvollstreckungsakte);
+        ALIASES.put("Justizverwaltungsakte / Judicial Administration File".toLowerCase(), Justizverwaltungsakte);
+        ALIASES.put("Bu&#223;geldakte / Fine Proceedings File".toLowerCase(), Bussgeldakte);
+        ALIASES.put("Bew&#228;hrungshilfeakte / Probation Service File".toLowerCase(), Bewaehrungshilfeakte);
+        ALIASES.put("Strafakte / Criminal Case File".toLowerCase(), Strafakte);
+        ALIASES.put("Arbeitsgerichtsakte / Labor Court File".toLowerCase(), Arbeitsgerichtsakte);
+        ALIASES.put("Finanzgerichtsakte / Fiscal Court File".toLowerCase(), Finanzgerichtsakte);
+        ALIASES.put("Sozialgerichtsakte / Social Court File".toLowerCase(), Sozialgerichtsakte);
+        ALIASES.put("Verwaltungsgerichtsakte / Administrative Court File".toLowerCase(), Verwaltungsgerichtsakte);
+        ALIASES.put("Andere / Sonstige / Other/Miscellaneous".toLowerCase(), Andere_oder_Sonstige);
+        ALIASES.put("Beh&#246;rdenakte / Authority File".toLowerCase(), Behoerdenakte);
+        ALIASES.put("Hinterlegungsakte / Deposit File".toLowerCase(), Hinterlegungsakte);
+        ALIASES.put("Gerichtsvollzieherverfahrensakte / Bailiff Proceedings File".toLowerCase(), Gerichtsvollzieherverfahrensakte);
+        ALIASES.put("Gerichtsvollziehergesch&#228;ftsbuch DR I / Bailiff&#39;s Register DR I".toLowerCase(), Gerichtsvollziehergeschaeftsbuch_DR_I);
+        ALIASES.put("Gerichtsvollziehergesch&#228;ftsbuch DR II / Bailiff&#39;s Register DR II".toLowerCase(), Gerichtsvollziehergeschaeftsbuch_DR_II);
+        ALIASES.put("Gerichtsvollziehergesch&#228;ftsbuch KB I / Bailiff&#39;s Register KB I".toLowerCase(), Gerichtsvollziehergeschaeftsbuch_KB_I);
+        ALIASES.put("Gerichtsvollziehergesch&#228;ftsbuch KB II / Bailiff&#39;s Register KB II".toLowerCase(), Gerichtsvollziehergeschaeftsbuch_KB_II);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -295,11 +327,14 @@ public enum AktentypCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static AktentypCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (AktentypCode e : AktentypCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        AktentypCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

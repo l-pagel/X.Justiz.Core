@@ -226,6 +226,33 @@ public enum DokumentklasseCode {
 
     private final String value;
     DokumentklasseCode(String value) { this.value = value; }
+    private static final java.util.Map<String, DokumentklasseCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("Andere / Sonstige / Other / Miscellaneous".toLowerCase(), Andere_Sonstige);
+        ALIASES.put("Klage / Antrag / Complaint / Application".toLowerCase(), Klage_Antrag);
+        ALIASES.put("Anlage".toLowerCase(), Anlage);
+        ALIASES.put("Urteil / Judgment".toLowerCase(), Urteil);
+        ALIASES.put("Beschluss / Resolution / Order".toLowerCase(), Beschluss);
+        ALIASES.put("Verf&#252;gung / Decree / Disposition".toLowerCase(), Verfuegung);
+        ALIASES.put("Vermerk / Note / Memo".toLowerCase(), Vermerk);
+        ALIASES.put("Protokoll / Protocol / Minutes".toLowerCase(), Protokoll);
+        ALIASES.put("Fehlblatt / Missing Sheet".toLowerCase(), Fehlblatt);
+        ALIASES.put("Zustellungsdokument / Service Document".toLowerCase(), Zustellungsdokument);
+        ALIASES.put("Gutachten / Expert Opinion".toLowerCase(), Gutachten);
+        ALIASES.put("Technische Information / Technical Information".toLowerCase(), Technische_Information);
+        ALIASES.put("Schreiben / Letter".toLowerCase(), Schreiben);
+        ALIASES.put("Antrag (Beh&#246;rde) / Application (Authority)".toLowerCase(), Antrag_Behoerde);
+        ALIASES.put("Bescheid / Decision / Notice".toLowerCase(), Bescheid);
+        ALIASES.put("Einspruch / Widerspruch (Beh&#246;rde) / Objection / Opposition (Authority)".toLowerCase(), Einspruch_Widerspruch_Behoerde);
+        ALIASES.put("Einspruchs- / Widerspruchsbescheid / Decision on Objection / Opposition".toLowerCase(), Einspruchs_Widerspruchsbescheid);
+        ALIASES.put("Kostendokument / Cost Document".toLowerCase(), Kostendokument);
+        ALIASES.put("Gerichtsbescheid / Court Order".toLowerCase(), Gerichtsbescheid);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -240,11 +267,14 @@ public enum DokumentklasseCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static DokumentklasseCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (DokumentklasseCode e : DokumentklasseCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        DokumentklasseCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

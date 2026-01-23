@@ -1,4 +1,4 @@
-# X.Justiz Core 0.2.0-beta
+# X.Justiz Core
 
 > [!TIP]  
 > **🌐 [English version available here](README.md) 👈**

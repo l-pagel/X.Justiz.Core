@@ -105,6 +105,22 @@ public enum BestandteiltypCode {
 
     private final String value;
     BestandteiltypCode(String value) { this.value = value; }
+    private static final java.util.Map<String, BestandteiltypCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("Original / Original".toLowerCase(), Original);
+        ALIASES.put("Repr&#228;sentat / Representation Copy".toLowerCase(), Repraesentat);
+        ALIASES.put("Signaturdatei / Signature File".toLowerCase(), Signaturdatei);
+        ALIASES.put("signierte Vorversion / Signed Previous Version".toLowerCase(), signierte_Vorversion);
+        ALIASES.put("Transfervermerk / Transfer Record".toLowerCase(), Transfervermerk);
+        ALIASES.put("Pr&#252;fvermerk / Verification Record".toLowerCase(), Pruefvermerk);
+        ALIASES.put("VHN / Trusted Origin Evidence (VHN)".toLowerCase(), VHN);
+        ALIASES.put("hinlaufendes eEB / Incoming eEB".toLowerCase(), hinlaufendes_eEB);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -119,11 +135,14 @@ public enum BestandteiltypCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static BestandteiltypCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (BestandteiltypCode e : BestandteiltypCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        BestandteiltypCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

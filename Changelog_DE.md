@@ -2,6 +2,7 @@
 
 ## Version 0.3.0
 - Java SDK hinzugefügt
+- Code Liste für Versicherungen hinzugefügt
 
 ## Version 0.2.0
 - Erstveröffentlichung
