@@ -30,7 +30,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
+		<ProjectReference Include="..\..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
