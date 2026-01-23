@@ -18,10 +18,10 @@ public static class VersicherungsTypCodeMapper
             return result;
         }
 
-        throw new System.ArgumentException($"Unknown Versicherung: {value}", nameof(value));
+        throw new ArgumentException($"Unknown Versicherung: {value}", nameof(value));
     }
 
-    public static bool TryParse(string? value, out VersicherungsTypCode result)
+    public static bool TryParse(string value, out VersicherungsTypCode result)
     {
         result = default;
         if (string.IsNullOrEmpty(value))

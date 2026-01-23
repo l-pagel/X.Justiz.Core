@@ -1,4 +1,3 @@
-
 namespace xjustiz.core_dotnet.Models.Codes.Versicherung;
 
 using System.Xml.Serialization;

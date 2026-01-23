@@ -11,7 +11,7 @@ public static class VersichererCodeMapper
         }
 
         // Fallback to iterating
-        foreach (VersichererCode code in System.Enum.GetValues(typeof(VersichererCode)))
+        foreach (VersichererCode code in Enum.GetValues(typeof(VersichererCode)))
         {
             if (code.ToCode() == value)
             {
