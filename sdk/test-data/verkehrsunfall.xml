@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+  <nachrichtenkopf xjustizVersion="3.5.1">
+    <aktenzeichen.absender>VR-2026-112</aktenzeichen.absender>
+    <aktenzeichen.empfaenger>AG-VR-55/26</aktenzeichen.empfaenger>
+    <erstellungszeitpunkt>2026-02-01T10:00:00Z</erstellungszeitpunkt>
+    <auswahl_absender>
+      <absender.sonstige>Max Mustermann, Musterstraße 1, 12345 Musterstadt</absender.sonstige>
+    </auswahl_absender>
+    <auswahl_empfaenger>
+      <empfaenger.gericht>
+        <code xmlns="">9999</code>
+      </empfaenger.gericht>
+    </auswahl_empfaenger>
+    <eigeneNachrichtenID>MSG-VR-001</eigeneNachrichtenID>
+  </nachrichtenkopf>
+  <grunddaten>
+    <verfahrensdaten>
+      <verfahrensnummer>20 C 123/26</verfahrensnummer>
+      <instanzdaten>
+        <instanznummer>1</instanznummer>
+        <sachgebietszusatz>Verkehrsunfall</sachgebietszusatz>
+        <auswahl_instanzbehoerde>
+          <gericht>
+            <code xmlns="">B1204</code>
+          </gericht>
+        </auswahl_instanzbehoerde>
+      </instanzdaten>
+      <beteiligung>
+        <rolle>
+          <code xmlns="">101</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <natuerlichePerson>
+              <vollerName>
+                <vorname>Max</vorname>
+                <nachname>Mustermann</nachname>
+              </vollerName>
+              <geschlecht>
+                <code xmlns="">1</code>
+              </geschlecht>
+            </natuerlichePerson>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+      <beteiligung>
+        <rolle>
+          <code xmlns="">028</code>
+        </rolle>
+        <beteiligter>
+          <auswahl_beteiligter>
+            <organisation>
+              <bezeichnung>
+                <bezeichnung.aktuell>Haftpflicht-Versicherung AG</bezeichnung.aktuell>
+              </bezeichnung>
+              <anschrift>
+                <strasse>Versicherungsplatz</strasse>
+                <hausnummer>1</hausnummer>
+                <postleitzahl>50667</postleitzahl>
+                <ort>Köln</ort>
+                <staat>
+                  <code xmlns="">DE</code>
+                </staat>
+              </anschrift>
+            </organisation>
+          </auswahl_beteiligter>
+        </beteiligter>
+      </beteiligung>
+    </verfahrensdaten>
+  </grunddaten>
+  <schriftgutobjekte>
+    <akte>
+      <identifikation>
+        <id>a1b2c3d4-e5f6-7890-1234-567890abcdef</id>
+        <nummerImUebergeordnetenContainer>1</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <anwendungsspezifischeErweiterung>
+        <kennung>VR-GUTACHTEN</kennung>
+        <name>Schadensgutachten</name>
+        <beschreibung>Gutachten zum Unfallschaden</beschreibung>
+        <feld>
+          <name>Schadenshoehe</name>
+          <beschreibung>Geschätzter Schaden in Euro</beschreibung>
+          <datentyp>decimal</datentyp>
+          <wert>4500.50</wert>
+        </feld>
+        <feld>
+          <name>Unfalldatum</name>
+          <beschreibung>Datum des Unfalls</beschreibung>
+          <datentyp>date</datentyp>
+          <wert>2026-01-20</wert>
+        </feld>
+      </anwendungsspezifischeErweiterung>
+      <xjustiz.fachspezifischeDaten>
+        <aktentyp>
+          <code xmlns="">Zivilakte</code>
+        </aktentyp>
+        <anzeigename>Unfall Mustermann ./ Versicherung</anzeigename>
+        <aktenzeichen>
+          <auswahl_aktenzeichen>
+            <aktenzeichen.freitext>20 C 123/26</aktenzeichen.freitext>
+          </auswahl_aktenzeichen>
+        </aktenzeichen>
+      </xjustiz.fachspezifischeDaten>
+    </akte>
+    <dokument>
+      <identifikation>
+        <id>f0e9d8c7-b6a5-4321-0987-6543210fedcb</id>
+        <nummerImUebergeordnetenContainer>2</nummerImUebergeordnetenContainer>
+      </identifikation>
+      <xjustiz.fachspezifischeDaten>
+        <dokumentklasse>
+          <code xmlns="">013</code>
+        </dokumentklasse>
+        <datei>
+          <dateiname>Gutachten.pdf</dateiname>
+          <bestandteil>
+            <code xmlns="">Original</code>
+          </bestandteil>
+          <dateiendung>.pdf</dateiendung>
+          <contentType>application/pdf</contentType>
+          <groesse>10240</groesse>
+          <hash>
+            <algorithmus>SHA-256</algorithmus>
+            <wert>a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0</wert>
+          </hash>
+        </datei>
+      </xjustiz.fachspezifischeDaten>
+      <erstellungszeitpunkt>2026-01-25T09:00:00Z</erstellungszeitpunkt>
+    </dokument>
+  </schriftgutobjekte>
+</nachricht.gds.uebermittlungSchriftgutobjekte.0005005>

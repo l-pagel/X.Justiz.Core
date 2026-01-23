@@ -12,13 +12,16 @@ public class GerichtCodeJsonConverter : JsonConverter<GerichtCode>
 {
     public override GerichtCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var parsedNumber = reader.TryGetInt64(out var l)
-            ? l.ToString()
-            : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture);
+        var value = reader.TokenType switch
+        {
+            JsonTokenType.Number => reader.TryGetInt64(out var longVal)
+                ? longVal.ToString()
+                : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture),
 
-        var value = reader.TokenType == JsonTokenType.Number
-            ? parsedNumber
-            : reader.GetString();
+            JsonTokenType.String => reader.GetString(),
+
+            _ => reader.GetString()
+        };
 
         if (GerichtCodeMapper.TryParse(value, out var result))
         {
