@@ -1,7 +1,5 @@
 namespace xjustiz.core_dotnet.Models.Codes.Versicherer;
 
-using xjustiz.core_dotnet.Util.Versioning;
-
 public sealed class VersichererCodeLists : ICodeListCollection<VersichererCode>
 {
     public static IVersionedCodeList<VersichererCode> All { get; } = new VersionedCodeList<VersichererCode>("1.0")

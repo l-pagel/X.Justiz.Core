@@ -11,13 +11,13 @@ public static class VersichererCodeMapper
         }
 
         // Fallback to iterating
-        foreach(VersichererCode code in System.Enum.GetValues(typeof(VersichererCode)))
+        foreach (VersichererCode code in System.Enum.GetValues(typeof(VersichererCode)))
         {
-             if (code.ToCode() == value)
-             {
-                 result = code;
-                 return true;
-             }
+            if (code.ToCode() == value)
+            {
+                result = code;
+                return true;
+            }
         }
 
         result = default;

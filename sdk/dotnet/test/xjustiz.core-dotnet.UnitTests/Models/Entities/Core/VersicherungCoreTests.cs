@@ -92,7 +92,7 @@ public class VersicherungCoreTests
         entity.Should().NotBeNull();
         entity!.Versicherungsnummer.Should().Be("V-123456");
         entity.Versicherungsunternehmen.Should().HaveCount(1);
-        entity.Versicherungsunternehmen![0].Code.Should().Be(xjustiz.core_dotnet.Models.Codes.Versicherer.VersichererCode.Allianz_Versorgungskasse_Versicherungsverein_a_G);
+        entity.Versicherungsunternehmen![0].Code.Should().Be(core_dotnet.Models.Codes.Versicherer.VersichererCode.Allianz_Versorgungskasse_Versicherungsverein_a_G);
         entity.Versicherungstyp.Should().NotBeNull();
         entity.Versicherungstyp!.Code.Should().Be(VersicherungsTypCode.Kraftfahrtversicherung);
     }
@@ -108,7 +108,7 @@ public class VersicherungCoreTests
         entity.Should().NotBeNull();
         entity!.Versicherungsnummer.Should().Be("V-123456");
         entity.Versicherungsunternehmen.Should().HaveCount(1);
-        entity.Versicherungsunternehmen![0].Code.Should().Be(xjustiz.core_dotnet.Models.Codes.Versicherer.VersichererCode.Allianz_Versorgungskasse_Versicherungsverein_a_G);
+        entity.Versicherungsunternehmen![0].Code.Should().Be(core_dotnet.Models.Codes.Versicherer.VersichererCode.Allianz_Versorgungskasse_Versicherungsverein_a_G);
         entity.Versicherungstyp.Should().NotBeNull();
         entity.Versicherungstyp!.Code.Should().Be(VersicherungsTypCode.Kraftfahrtversicherung);
     }
