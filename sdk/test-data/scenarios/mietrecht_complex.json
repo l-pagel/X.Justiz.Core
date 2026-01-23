@@ -1,0 +1,121 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "MIE-CPLX-2026-55"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-MIE-55/26"
+        ],
+        "Erstellungszeitpunkt": "2026-04-01T14:00:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Hausverwaltung Sorglos"
+        },
+        "Empfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht München"
+        },
+        "EigeneNachrichtenId": "MSG-MIE-CPLX-003"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "401 C 1234/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Räumungsklage und Zahlungsklage",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "9D0000"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Immobilien GmbH & Co. KG"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "004"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Peter",
+                                    "Nachname": "Pechvogel"
+                                }
+                            }
+                        },
+                        "Anschrift": {
+                            "Strasse": "Mietshausweg",
+                            "Hausnummer": "13",
+                            "Postleitzahl": "80331",
+                            "Ort": "München",
+                            "Staat": {
+                                "Code": "Deutschland"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "ff223344-5566-7788-9900-aabbccddee11",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "MIE-EXT-CPLX",
+                    "Name": "Forderungsaufstellung",
+                    "Beschreibung": "Detaillierte Aufstellung der Mietrückstände",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Rückstände 2025",
+                            "Felder": [
+                                {
+                                    "Name": "November",
+                                    "Wert": "850.00"
+                                },
+                                {
+                                    "Name": "Dezember",
+                                    "Wert": "850.00"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "Rückstände 2026",
+                            "Felder": [
+                                {
+                                    "Name": "Januar",
+                                    "Wert": "900.00"
+                                },
+                                {
+                                    "Name": "Februar",
+                                    "Wert": "900.00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    }
+                }
+            }
+        ]
+    }
+}

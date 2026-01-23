@@ -12,7 +12,9 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [X.Justiz Kompatibilität](#xjustiz-kompatibilität)
 - [Nutzung von Codes](#nutzung-von-codes)
 - [Implementierung (SDKs)](#implementierung-sdk)
-- [Spezifikation & Dokumentation](#spezifikation--dokumentation)
+- [Spezifikation](#spezifikation)
+- [Beispieldaten](#beispieldaten)
+- [Entwickler-Ressourcen](#entwickler-ressourcen)
 
 > [!NOTE]  
 > **📘 Suchen Sie nach technischen Details?**  
@@ -96,12 +98,11 @@ Die SDKs sind in folgenden Sprachen verfügbar:
 -   ⏳ **JavaScript / TypeScript** (In Arbeit)
 -   ⏳ **Python** (In Arbeit)
 
-## Spezifikation & Dokumentation
+## Spezifikation
 
 ### X.Justiz Core
 - [Spezifikation für X.Justiz Core](/docs/Specification_DE.md) - Umfassende Datenmodell-Dokumentation
 - [Validierungsregeln als XSD](/schemas)
-- [Beipieldatensätze](/docs/examples)
 - [Listen verwendeter Codes](/sdk/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 - [Änderungshistorie](/docs/Changelog_DE.md)
 - [Lizenz](LICENSE)
@@ -109,7 +110,19 @@ Die SDKs sind in folgenden Sprachen verfügbar:
 ### X.Justiz
 - [Archiv aller X.Justiz Versionen und Spezifikationen](/xjustiz-xsd)
 
-### Entwickler-Ressourcen
+## Beispieldaten
+
+Testdaten und Szenarien stehen zur Verfügung, um Ihre Implementierung zu testen:  
+[**Beispieldaten**](/sdk/test-data)
+
+Enthält Beispiele für:
+- Arbeitsrecht
+- Erbrecht
+- Verkehrsrecht
+- Mietrecht
+- Und mehr...
+
+## Entwickler-Ressourcen
 - [**🔧 SDK-Generierungs-Workflow**](/docs/SDK-GENERATION_DE.md) - Wie die SDK-Konsistenz gewährleistet wird
 - [**🧪 Integrationstests**](/sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README_DE.md) - Plattformübergreifende Kompatibilitätstests
 

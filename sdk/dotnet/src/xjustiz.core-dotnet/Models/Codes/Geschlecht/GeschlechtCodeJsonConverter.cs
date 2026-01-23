@@ -11,7 +11,10 @@ public class GeschlechtCodeJsonConverter : JsonConverter<GeschlechtCode>
 {
     public override GeschlechtCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var value = reader.GetString();
+        var value = reader.TokenType == JsonTokenType.Number
+            ? (reader.TryGetInt64(out var l) ? l.ToString() : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture))
+            : reader.GetString();
+
         if (GeschlechtCodeMapper.TryParse(value, out var result))
         {
             return result;

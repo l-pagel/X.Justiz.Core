@@ -1,0 +1,172 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "ERB-CPLX-2026-101"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-ERB-101/26"
+        ],
+        "Erstellungszeitpunkt": "2026-03-10T10:00:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Notariat Justitia"
+        },
+        "Empfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht Köln"
+        },
+        "EigeneNachrichtenId": "MSG-ERB-CPLX-002"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "12 VI 9000/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Erbscheinsverfahren mit Testamentsvollstreckung",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "9R0000"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "001"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Heinrich",
+                                    "Nachname": "Erblasser"
+                                },
+                                "Geburt": {
+                                    "Geburtsdatum": "1940-01-01",
+                                    "Sterbedatum": "2026-02-01"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "002"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Anna",
+                                    "Nachname": "Erbe"
+                                },
+                                "Anschrift": {
+                                    "Strasse": "Erbenweg",
+                                    "Hausnummer": "1",
+                                    "Postleitzahl": "50667",
+                                    "Ort": "Köln",
+                                    "Staat": {
+                                        "Code": "Deutschland"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "002"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Bernd",
+                                    "Nachname": "Erbe"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Dr. V.",
+                                    "Nachname": "Vollstrecker",
+                                    "Titel": "Dr."
+                                },
+                                "Beruf": {
+                                    "Berufsbezeichnung": "Rechtsanwalt"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "ee112233-4455-6677-8899-aabbccddeeff",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "ERB-EXT-CPLX",
+                    "Name": "Vermögensverzeichnis",
+                    "Beschreibung": "Auflistung des Nachlasses",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Immobilien",
+                            "Felder": [
+                                {
+                                    "Name": "Einfamilienhaus",
+                                    "Wert": "750000.00",
+                                    "Datentyp": "decimal"
+                                },
+                                {
+                                    "Name": "Eigentumswohnung",
+                                    "Wert": "250000.00",
+                                    "Datentyp": "decimal"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "Bankkonten",
+                            "Feldgruppen": [
+                                {
+                                    "Name": "Sparkasse",
+                                    "Felder": [
+                                        {
+                                            "Name": "Girokonto",
+                                            "Wert": "12345.67"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Name": "Deutsche Bank",
+                                    "Felder": [
+                                        {
+                                            "Name": "Depot",
+                                            "Wert": "50000.00"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Nachlassakte"
+                    }
+                }
+            }
+        ]
+    }
+}

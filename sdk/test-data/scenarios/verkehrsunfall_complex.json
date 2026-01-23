@@ -1,0 +1,135 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "VR-CPLX-2026-999"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-VR-99/26"
+        ],
+        "Erstellungszeitpunkt": "2026-06-01T08:30:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Polizeipräsidium Musterstadt"
+        },
+        "Empfaenger": {
+            "EmpfaengerGericht": "9999"
+        },
+        "EigeneNachrichtenId": "MSG-VR-CPLX-005"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "20 C 999/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Verkehrsunfall mit Personenschaden",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "B1204"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": 101,
+                        "_comment": "Code as Integer 101 (Klaeger)"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Max",
+                                    "Nachname": "Raser"
+                                },
+                                "Geschlecht": {
+                                    "Code": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": 102,
+                        "_comment": "Code as Integer 102 (Beklagter)"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Susi",
+                                    "Nachname": "Sorglos"
+                                },
+                                "Geschlecht": {
+                                    "Code": "2"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "028"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Allschutz Versicherung AG"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "12345678-1234-1234-1234-123456789abc",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "VR-DETAIL",
+                    "Name": "Unfalldetails",
+                    "Beschreibung": "Detailbericht Polizei",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Fahrzeug1",
+                            "Felder": [
+                                {
+                                    "Name": "Kennzeichen",
+                                    "Wert": "M-XY 123"
+                                },
+                                {
+                                    "Name": "Modell",
+                                    "Wert": "VW Golf"
+                                }
+                            ]
+                        },
+                        {
+                            "Name": "Fahrzeug2",
+                            "Felder": [
+                                {
+                                    "Name": "Kennzeichen",
+                                    "Wert": "K-AB 987"
+                                },
+                                {
+                                    "Name": "Modell",
+                                    "Wert": "BMW 3er"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    }
+                }
+            }
+        ]
+    }
+}
