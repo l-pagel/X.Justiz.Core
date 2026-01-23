@@ -10,6 +10,7 @@ X.Justiz Core ist ein leichtgewichtiges Schema für den Datenaustausch zwischen 
 - [Motivation](#motivation)
 - [Ziele & Vorteile](#ziele--vorteile)
 - [X.Justiz Kompatibilität](#xjustiz-kompatibilität)
+- [Herausragende Merkmale & Verbesserungen](#herausragende-merkmale--verbesserungen)
 - [Nutzung von Codes](#nutzung-von-codes)
 - [Implementierung (SDKs)](#implementierung-sdk)
 - [Spezifikation](#spezifikation)
@@ -47,9 +48,18 @@ Das Ziel von X.Justiz Core ist eine effiziente Interoperabilität:
 
 ![X.Justiz Core](./.media/README/xjustizcore-venn_DE.drawio.svg)
 
-## X.Justiz Kompatibilität
-X.Justiz Core ist vollständig kompatibel mit **X.Justiz 3.2.1 bis X.Justiz 3.6.2**.  
 Mit entsprechenden Kompatibilitätseinbußen können X.Justiz Core-Daten auch mit älteren Versionen (bis 2.1.0) kompatibel verwendet werden.
+
+## Herausragende Merkmale & Verbesserungen
+X.Justiz Core fungiert als moderne Brücke zwischen dem offiziellen Standard und den Bedürfnissen privater Marktteilnehmer:
+
+*   **Etablierte Basis:** Basiert auf dem offiziellen **X.Justiz-Standard**, der für deutsche Legal Tech- und Justiz-Kommunikation obligatorisch ist.
+*   **Optimierte Dokumentation:** Entwicklerzentrierte Dokumentation in Deutsch und Englisch, was die Einarbeitungszeit für internationale Teams verkürzt.
+*   **Gebrauchsfertige SDKs:** Vollständige Klassenbibliotheken und Codelisten-Mappings für .NET und Java, was das manuelle XML/JSON-Parsing überflüssig macht.
+*   **Erweiterte Codelisten:** Einbeziehung eigener Codelisten für Bereiche, die nicht durch den Standard abgedeckt sind (z. B. **Versicherer**, **Versicherungstyp**).
+*   **Unabhängiger Dokumenttransfer:** Konzept für die unabhängige Übertragung von Dokumenten und Anhängen von der Hauptnachricht (z. B. über Pre-Signed URLs).
+*   **Detaillierter Sachverhalt:** Zusätzliche Eigenschaften zur Beschreibung des Sachverhalts, zugeschnitten auf die Anforderungen im Legal Tech.
+*   **Flexibles Datenkonzept:** Erweiterte Möglichkeiten zur Übertragung generischer oder fachspezifischer Daten durch ein verbessertes `Feld` / `Feldgruppe` Konzept.
 
 ## Nutzung von Codes
 In X.Justiz Core werden Fachdaten (wie Staaten, Rollen oder Gerichte) über standardisierte **Codes /Schlüssel** identifiziert. Dies gewährleistet eine maschinenlesbare Eindeutigkeit über Systemgrenzen hinweg.
@@ -80,10 +90,16 @@ Obwohl primär der technische Code (z.B. `000` für Deutschland) verwendet werde
 
 Wir legen dennoch nahe, primär die Codes (z.B. `000` für Deutschland) zu verwenden. Die SDKs verwenden beim Senden / Schreiben der Daten automatisch die technische Codes.
 
-### Umfang im Projekt
 Um Entwicklern die Arbeit zu erleichtern, haben wir alle relevanten Kataloge direkt in unsere SDKs integriert. Heute sind es 3.397 Codes in 26 verschiedenen Versionlisten aus 8 Haupt-Codetypen (Staat, Rolle, Gericht, Dokumentklasse, etc.).
 
-Besonderen Wert haben wir auf die Dokumentation gelegt: Alle Codes wurden von uns aufwendig **zweisprachig (Deutsch und Englisch)** mit Beschreibungen und Zusammenfassungen versehen, um auch internationalen Entwicklungsteams den Einstieg in das deutsche Rechtswesen zu erleichtern.
+### X.Justiz Core Erweiterungen
+Zusätzlich zu den standardmäßigen X.Justiz-Katalogen haben wir **eigene Codelisten** erstellt, um moderne LegalTech-Szenarien zu unterstützen, in denen der Standard keine spezifischen Schlüssel bietet. Dies umfasst:
+- **[Versicherer](/docs/codes/versicherer/)**: Eine umfassende Liste von Versicherern (BaFin-basiert).
+- **[Versicherungstyp](/docs/codes/versicherungstyp/)**: Definitionen für verschiedene Arten des Versicherungsschutzes.
+
+Diese Listen sind als stark typisierte Enums vollständig in die SDKs integriert. Eine vollständige Liste der verfügbaren Codes und deren Verwendung finden Sie in der **[Datenmodell-Referenz in der Spezifikation](/docs/Specification_DE.md#4-datenmodell-referenz)**.
+
+Wir haben besonderen Wert auf die Entwicklereffizienz gelegt: Die SDKs enthalten umfassende Klassenbibliotheken für diese Codes, die mit **deutschen und englischen Übersetzungen** direkt im Quellcode optimiert wurden. Dies macht die Entwicklung extrem schnell, da moderne IDEs die Dokumentation und Bedeutung in beiden Sprachen über IntelliSense anzeigen.
 
 ## Implementierung (SDKs)
 Um die Einbindung zu beschleunigen, stellt das Projekt Softwarebibliotheken bereit.  

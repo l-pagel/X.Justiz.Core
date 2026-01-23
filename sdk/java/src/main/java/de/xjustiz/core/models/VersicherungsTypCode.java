@@ -7,13 +7,13 @@ import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
 
 /**
- * Versicherungs Codes aus urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+ * VersicherungsTyp Codes aus <a href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK Liste</a>.
  *  * <p>
- *  *  // todo: replace with https://github.com/l-pagel/X.Justiz.Core/tree/main/docs... !? <u><b>Insurance codes:</b></u> from urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+ *  *  <u><b>Insurance type codes:</b></u> from <a href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK list</a>.
  */
 @XmlType
 @XmlEnum
-public enum VersicherungsCode {
+public enum VersicherungsTypCode {
 
     /**
      * <b>Alle Sparten</b>
@@ -3613,8 +3613,8 @@ public enum VersicherungsCode {
     Schaden_und_Unfallversicherungen_insgesamt("300");
 
     private final String value;
-    VersicherungsCode(String value) { this.value = value; }
-    private static final java.util.Map<String, VersicherungsCode> ALIASES = new java.util.HashMap<>();
+    VersicherungsTypCode(String value) { this.value = value; }
+    private static final java.util.Map<String, VersicherungsTypCode> ALIASES = new java.util.HashMap<>();
     static {
         initAliases0();
         initAliases1();
@@ -3966,14 +3966,14 @@ public enum VersicherungsCode {
      * @return the enum value
      */
     @com.fasterxml.jackson.annotation.JsonCreator
-    public static VersicherungsCode fromValue(String value) {
+    public static VersicherungsTypCode fromValue(String value) {
         if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
-        for (VersicherungsCode e : VersicherungsCode.values()) {
+        for (VersicherungsTypCode e : VersicherungsTypCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
-        VersicherungsCode match = ALIASES.get(value.toLowerCase());
+        VersicherungsTypCode match = ALIASES.get(value.toLowerCase());
         if (match != null) return match;
         throw new IllegalArgumentException(value);
     }

@@ -15,20 +15,20 @@ import jakarta.xml.bind.annotation.XmlType;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Typ der VersicherungCore.
+ * Das Versicherungsunternehmen.
  * <p>
- * <u><b>Insurance type:</b></u> Insurance type.
+ * <u><b>Insurance company:</b></u> The insurance company.
  */
-@XmlType(name = "VersicherungsTyp", propOrder = { "listVersionId", "listUri", "code" })
+@XmlType(name = "Versicherer", propOrder = { "listVersionId", "listUri", "code" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class VersicherungsTyp {
+public class Versicherer {
 
     /**
-     * Typ der VersicherungCore.
+     * Das Versicherungsunternehmen.
      * <p>
-     * <u><b>Insurance type:</b></u> Insurance type.
+     * <u><b>Insurance company:</b></u> The insurance company.
      */
     @XmlAttribute(name = "listVersionID")
     @JacksonXmlProperty(isAttribute = true, localName = "listVersionID")
@@ -37,9 +37,9 @@ public class VersicherungsTyp {
     private String listVersionId;
 
     /**
-     * Typ der VersicherungCore.
+     * Das Versicherungsunternehmen.
      * <p>
-     * <u><b>Insurance type:</b></u> Insurance type.
+     * <u><b>Insurance company:</b></u> The insurance company.
      */
     @XmlAttribute(name = "listURI")
     @JacksonXmlProperty(isAttribute = true, localName = "listURI")
@@ -57,12 +57,12 @@ public class VersicherungsTyp {
     @JacksonXmlProperty(localName = "code", namespace = "http://www.xjustizcore.de")
     @JsonProperty("code")
     @JsonAlias({ "Code", "code" })
-    private VersicherungsTypCode code;
+    private VersichererCode code;
 
     /**
      * Default constructor.
      */
-    public VersicherungsTyp() {}
+    public Versicherer() {}
 
     /**
      * Gets the value of the ListVersionId property.
@@ -90,11 +90,11 @@ public class VersicherungsTyp {
      * Gets the value of the Code property.
      * @return the value of the Code property
      */
-    public VersicherungsTypCode getCode() { return code; }
+    public VersichererCode getCode() { return code; }
     /**
      * Sets the value of the Code property.
      * @param code the value to set
      */
-    public void setCode(VersicherungsTypCode code) { this.code = code; }
+    public void setCode(VersichererCode code) { this.code = code; }
 
 }

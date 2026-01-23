@@ -30,6 +30,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Content Include="..\..\..\test-data\**">
+			<Link>test-data\%(RecursiveDir)%(Filename)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\..\src\xjustiz.core-dotnet\xjustiz.core-dotnet.csproj" />
 	</ItemGroup>
 

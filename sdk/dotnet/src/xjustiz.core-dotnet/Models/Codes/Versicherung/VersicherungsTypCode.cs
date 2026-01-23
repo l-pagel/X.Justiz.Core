@@ -5,13 +5,13 @@ using System.Xml.Serialization;
 using xjustiz.core_dotnet.Util.Versioning;
 
 /// <summary>
-/// Versicherungs Codes aus urn:xoev-de:xjustiz:codeliste:gds.versicherung.<br/> // todo: replace with https://github.com/l-pagel/X.Justiz.Core/tree/main/docs... !?
-/// <u><b>Insurance codes:</b></u> from urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+/// VersicherungsTyp Codes aus <see href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK Liste</see>.<br/>
+/// <u><b>Insurance type codes:</b></u> from <see href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK list</see>.
 /// </summary>
 [XJustizAvailability(XJustizVersion.V3_2_1)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-[System.Text.Json.Serialization.JsonConverter(typeof(VersicherungsCodeJsonConverter))]
-public enum VersicherungsCode
+[System.Text.Json.Serialization.JsonConverter(typeof(VersicherungsTypCodeJsonConverter))]
+public enum VersicherungsTypCode
 {
     /// <summary>
     /// <b>Alle Sparten</b><br/>

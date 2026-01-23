@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.xjustiz.de" elementFormDefault="qualified" targetNamespace="http://www.xjustiz.de" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://www.xjustizcore.de" />
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" />
+  <xs:element name="nachricht.gds.uebermittlungSchriftgutobjekte.0005005" nillable="true" type="tns:UebermittlungSchriftgutobjekteNachricht" />
+  <xs:complexType name="UebermittlungSchriftgutobjekteNachricht">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="nachrichtenkopf" type="tns:Nachrichtenkopf" />
+      <xs:element minOccurs="0" maxOccurs="1" name="grunddaten" type="tns:Grunddaten" />
+      <xs:element minOccurs="0" maxOccurs="1" name="schriftgutobjekte" type="tns:Schriftgutobjekte" />
+    </xs:sequence>
+    <xs:attribute xmlns:q1="http://www.w3.org/2001/XMLSchema-instance" ref="q1:schemaLocation" />
+  </xs:complexType>
+  <xs:complexType name="Nachrichtenkopf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aktenzeichen.absender" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="aktenzeichen.empfaenger" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="erstellungszeitpunkt" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="auswahl_absender" type="tns:AuswahlAdresse" />
+      <xs:element minOccurs="0" maxOccurs="1" name="auswahl_empfaenger" type="tns:AuswahlAdresse" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eigeneNachrichtenID" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="xjustizVersion" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="AuswahlAdresse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="absender.sonstige" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="empfaenger.sonstige" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="empfaenger.gericht" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="empfaenger.rvTraeger" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="empfaenger.polizeibehoerde" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Grunddaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="verfahrensdaten" type="tns:Verfahrensdaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Verfahrensdaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="verfahrensnummer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="instanzdaten" type="tns:Instanzdaten" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="beteiligung" type="tns:Beteiligung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Instanzdaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="instanznummer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="sachgebietszusatz" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="auswahl_instanzbehoerde" type="tns:AuswahlInstanzbehoerde" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuswahlInstanzbehoerde">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="gericht" type="tns:Gericht" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Gericht">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q2="http://www.xjustizcore.de" ref="q2:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Beteiligung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="rolle" type="tns:Rolle" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beteiligter" type="tns:Beteiligter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Rolle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q3="http://www.xjustizcore.de" ref="q3:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Beteiligter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="auswahl_beteiligter" type="tns:AuswahlBeteiligter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuswahlBeteiligter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="natuerlichePerson" type="tns:NatuerlichePerson" />
+      <xs:element minOccurs="0" maxOccurs="1" name="organisation" type="tns:Organisation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NatuerlichePerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="vollerName" type="tns:VollerName" />
+      <xs:element minOccurs="0" maxOccurs="1" name="geschlecht" type="tns:Geschlecht" />
+      <xs:element minOccurs="0" maxOccurs="1" name="anschrift" type="tns:Anschrift" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="telekommunikation" type="tns:Telekommunikation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bankverbindung" type="tns:Bankverbindung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VollerName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="vorname" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="rufname" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="titel" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="namensvorsatz" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nachname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Geschlecht">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q4="http://www.xjustizcore.de" ref="q4:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Anschrift">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="strasse" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="hausnummer" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="postleitzahl" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ort" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="staat" type="tns:Staat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Staat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q5="http://www.xjustizcore.de" ref="q5:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Telekommunikation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="telekommunikationsart" type="tns:Telekommunikationsart" />
+      <xs:element minOccurs="0" maxOccurs="1" name="verbindung" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Telekommunikationsart">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q6="http://www.xjustizcore.de" ref="q6:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Bankverbindung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="kontoinhaber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="iban" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bic" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Organisation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="bezeichnung" type="tns:Bezeichnung" />
+      <xs:element minOccurs="0" maxOccurs="1" name="anschrift" type="tns:Anschrift" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="telekommunikation" type="tns:Telekommunikation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bankverbindung" type="tns:Bankverbindung" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Bezeichnung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="bezeichnung.aktuell" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Schriftgutobjekte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="akte" type="tns:Akte" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dokument" type="tns:Dokument" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Akte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identifikation" type="tns:Identifikation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="anwendungsspezifischeErweiterung" type="tns:AnwendungsspezifischeErweiterung" />
+      <xs:element minOccurs="0" maxOccurs="1" name="xjustiz.fachspezifischeDaten" type="tns:XjustizAkteFachspezifischeDaten" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Identifikation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="nummerImUebergeordnetenContainer" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AnwendungsspezifischeErweiterung">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="kennung" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beschreibung" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="feldgruppe" type="tns:Feldgruppe" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="feld" type="tns:Feld" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Feldgruppe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beschreibung" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="unterfeldgruppe" type="tns:Feldgruppe" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="feld" type="tns:Feld" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Feld">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="beschreibung" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="datentyp" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="wert" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XjustizAkteFachspezifischeDaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="aktentyp" type="tns:Aktentyp" />
+      <xs:element minOccurs="0" maxOccurs="1" name="anzeigename" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="aktenzeichen" type="tns:Aktenzeichen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Aktentyp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q7="http://www.xjustizcore.de" ref="q7:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Aktenzeichen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="auswahl_aktenzeichen" type="tns:AuswahlAktenzeichen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuswahlAktenzeichen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="aktenzeichen.freitext" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Dokument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="identifikation" type="tns:Identifikation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="xjustiz.fachspezifischeDaten" type="tns:XjustizFachspezifischeDaten" />
+      <xs:element minOccurs="1" maxOccurs="1" name="erstellungszeitpunkt" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XjustizFachspezifischeDaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="dokumentklasse" type="tns:Dokumentklasse" />
+      <xs:element minOccurs="0" maxOccurs="1" name="datei" type="tns:Datei" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Dokumentklasse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q8="http://www.xjustizcore.de" ref="q8:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Datei">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="dateiname" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="bestandteil" type="tns:Bestandteiltyp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Bestandteiltyp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q9="http://www.xjustizcore.de" ref="q9:code" />
+    </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

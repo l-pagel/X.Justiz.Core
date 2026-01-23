@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class VersicherungCoreTest {
 
     @Test
-    void testSerialization_WithVersicherungsCode() {
+    void testSerialization_WithVersicherungsTypCode() {
         VersicherungsTyp typ = new VersicherungsTyp();
-        typ.setCode(VersicherungsCode.Alle_Sparten);
+        typ.setCode(VersicherungsTypCode.Alle_Sparten);
 
         VersicherungCore core = new VersicherungCore();
         core.setVersicherungstyp(typ);
@@ -28,7 +28,7 @@ class VersicherungCoreTest {
     }
 
     @Test
-    void testDeserialization_WithVersicherungsCode() {
+    void testDeserialization_WithVersicherungsTypCode() {
         String json = """
                 {
                     "Versicherungstyp": {
@@ -44,7 +44,7 @@ class VersicherungCoreTest {
         VersicherungCore core = serializer.deserialize(json, VersicherungCore.class);
         assertNotNull(core);
         assertNotNull(core.getVersicherungstyp());
-        assertEquals(VersicherungsCode.Alle_Sparten, core.getVersicherungstyp().getCode());
+        assertEquals(VersicherungsTypCode.Alle_Sparten, core.getVersicherungstyp().getCode());
     }
 
     @Test
@@ -65,6 +65,6 @@ class VersicherungCoreTest {
         VersicherungCore core = serializer.deserialize(json, VersicherungCore.class);
         assertNotNull(core);
         assertNotNull(core.getVersicherungstyp());
-        assertEquals(VersicherungsCode.Alle_Sparten, core.getVersicherungstyp().getCode());
+        assertEquals(VersicherungsTypCode.Alle_Sparten, core.getVersicherungstyp().getCode());
     }
 }

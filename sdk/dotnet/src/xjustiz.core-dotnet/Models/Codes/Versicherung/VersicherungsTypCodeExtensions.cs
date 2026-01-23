@@ -1,14 +1,14 @@
 namespace xjustiz.core_dotnet.Models.Codes.Versicherung;
 
 /// <summary>
-/// Erweiterungsmethoden für <see cref="VersicherungsCode"/>.<br/>
-/// <u><b>Insurance code extensions:</b></u> Extension methods for <see cref="VersicherungsCode"/>.
+/// Erweiterungsmethoden für <see cref="VersicherungsTypCode"/>.<br/>
+/// <u><b>Insurance code extensions:</b></u> Extension methods for <see cref="VersicherungsTypCode"/>.
 /// </summary>
-public static class VersicherungsCodeExtensions
+public static class VersicherungsTypCodeExtensions
 {
-    public static string ToCode(this VersicherungsCode value)
+    public static string ToCode(this VersicherungsTypCode value)
     {
-        var memberInfo = typeof(VersicherungsCode).GetMember(value.ToString());
+        var memberInfo = typeof(VersicherungsTypCode).GetMember(value.ToString());
         if (memberInfo.Length > 0)
         {
             var attributes = memberInfo[0].GetCustomAttributes(typeof(System.Xml.Serialization.XmlEnumAttribute), false);

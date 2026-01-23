@@ -6,11 +6,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlElements;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +23,8 @@ import org.jetbrains.annotations.Nullable;
  * <p>
  * <u><b>Insurance:</b></u> Represents an insurance.
  */
+@XmlRootElement(name = "VersicherungCore", namespace = "http://www.xjustizcore.de")
+@JacksonXmlRootElement(localName = "VersicherungCore", namespace = "http://www.xjustizcore.de")
 @XmlType(name = "VersicherungCore", propOrder = { "versicherungsnummer", "versicherungsunternehmen", "anschrift", "referenzId", "versicherter", "schadensnummer", "versicherungstyp", "selbstbeteiligung", "anwendungsspezifischeErweiterung" })
 @XmlAccessorType(XmlAccessType.FIELD)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -50,7 +54,7 @@ public class VersicherungCore {
     @JsonProperty("Versicherungsunternehmen")
     @JsonAlias({ "versicherungsunternehmen" })
     @Nullable
-    private List<Organisation> versicherungsunternehmen;
+    private List<Versicherer> versicherungsunternehmen;
 
     /**
      * Die Anschrift der VersicherungCore.
@@ -156,12 +160,12 @@ public class VersicherungCore {
      * Gets the value of the Versicherungsunternehmen property.
      * @return the value of the Versicherungsunternehmen property
      */
-    public List<Organisation> getVersicherungsunternehmen() { return versicherungsunternehmen; }
+    public List<Versicherer> getVersicherungsunternehmen() { return versicherungsunternehmen; }
     /**
      * Sets the value of the Versicherungsunternehmen property.
      * @param versicherungsunternehmen the value to set
      */
-    public void setVersicherungsunternehmen(List<Organisation> versicherungsunternehmen) { this.versicherungsunternehmen = versicherungsunternehmen; }
+    public void setVersicherungsunternehmen(List<Versicherer> versicherungsunternehmen) { this.versicherungsunternehmen = versicherungsunternehmen; }
 
     /**
      * Gets the value of the Anschrift property.

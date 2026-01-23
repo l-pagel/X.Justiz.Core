@@ -4,12 +4,12 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 /// <summary>
-/// JSON Konverter für <see cref="VersicherungsCode"/>.<br/>
-/// <u><b>Insurance code JSON converter:</b></u> JSON converter for <see cref="VersicherungsCode"/>.
+/// JSON Konverter für <see cref="VersicherungsTypCode"/>.<br/>
+/// <u><b>Insurance code JSON converter:</b></u> JSON converter for <see cref="VersicherungsTypCode"/>.
 /// </summary>
-public class VersicherungsCodeJsonConverter : JsonConverter<VersicherungsCode>
+public class VersicherungsTypCodeJsonConverter : JsonConverter<VersicherungsTypCode>
 {
-    public override VersicherungsCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override VersicherungsTypCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         var value = reader.TokenType switch
         {
@@ -22,7 +22,7 @@ public class VersicherungsCodeJsonConverter : JsonConverter<VersicherungsCode>
             _ => reader.GetString()
         };
 
-        if (VersicherungsCodeMapper.TryParse(value, out var result))
+        if (VersicherungsTypCodeMapper.TryParse(value, out var result))
         {
             return result;
         }
@@ -30,7 +30,7 @@ public class VersicherungsCodeJsonConverter : JsonConverter<VersicherungsCode>
         throw new JsonException($"Unknown Versicherung: {value}");
     }
 
-    public override void Write(Utf8JsonWriter writer, VersicherungsCode value, JsonSerializerOptions options)
+    public override void Write(Utf8JsonWriter writer, VersicherungsTypCode value, JsonSerializerOptions options)
     {
         writer.WriteStringValue(value.ToCode());
     }

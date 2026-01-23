@@ -3,6 +3,7 @@ namespace xjustiz.core_dotnet.Models.Entities.Core;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using xjustiz.core_dotnet.Models.Codes;
+using xjustiz.core_dotnet.Models.Codes.Versicherer;
 using xjustiz.core_dotnet.Models.Codes.Versicherung;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;
@@ -11,6 +12,7 @@ using xjustiz.core_dotnet.Util.Versioning;
 /// Repräsentiert eine VersicherungCore.<br/>
 /// <u><b>Insurance:</b></u> Represents an insurance.
 /// </summary>
+[XmlRoot("VersicherungCore", Namespace = SchemeConstants.XJustizCore_Tns)]
 [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
 public class VersicherungCore
 {
@@ -28,7 +30,7 @@ public class VersicherungCore
     /// </summary>
     [XmlElement("versicherungsunternehmen", Namespace = SchemeConstants.XJustizCore_Tns)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-    public List<Organisation>? Versicherungsunternehmen { get; set; }
+    public List<Versicherer>? Versicherungsunternehmen { get; set; }
 
     /// <summary>
     /// Die Anschrift der VersicherungCore.<br/>
@@ -85,45 +87,6 @@ public class VersicherungCore
     [XmlElement("anwendungsspezifischeErweiterung", Namespace = SchemeConstants.XJustiz_Tns)]
     [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
     public AnwendungsspezifischeErweiterung? AnwendungsspezifischeErweiterung { get; set; }
-}
-
-/// <summary>
-/// Typ der VersicherungCore.<br/>
-/// <u><b>Insurance type:</b></u> Insurance type.
-/// </summary>
-public class VersicherungsTyp : ICode<VersicherungsCode>
-{
-    /// <inheritdoc/>
-    [XmlAttribute("listVersionID")]
-    [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-    public string ListVersionId { get; set; } = xjustiz.core_dotnet.Models.Codes.Versicherung.VersicherungsCodeLists.LatestList.Version;
-
-    /// <inheritdoc/>
-    [XmlAttribute("listURI")]
-    [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-    public string? ListUri { get; set; } = xjustiz.core_dotnet.Models.Codes.Versicherung.VersicherungsCodeLists.Uri;
-
-    /// <summary>
-    /// Der Code.<br/>
-    /// <u><b>Code:</b></u> The code.
-    /// </summary>
-    [XmlIgnore]
-    [System.Text.Json.Serialization.JsonPropertyName("code")]
-    [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-    public VersicherungsCode Code { get; set; }
-
-    /// <summary>
-    /// Hilfseigenschaft für die XML-Serialisierung.<br/>
-    /// <u><b>Code for XML:</b></u> Helper property for XML serialization.
-    /// </summary>
-    [XmlElement("code", Namespace = SchemeConstants.XJustizCore_Tns)]
-    [System.Text.Json.Serialization.JsonIgnore]
-    [XJustizCoreAvailability(XJustizCoreVersion.V0_3_0)]
-    public string CodeForXml
-    {
-        get => Code.ToCode();
-        set => Code = VersicherungsCodeMapper.TryParse(value, out var result) ? result : default;
-    }
 }
 
 /// <summary>
