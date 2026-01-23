@@ -70,7 +70,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="xjustiz-xsd/**/*,scripts/**/*" /d:sonar.cpd.exclusions="**/StaatCodeLists.cs,**/GerichtCodeLists.cs,**/DokumentklasseCodeLists.cs" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+          ./.sonar/scanner/dotnet-sonarscanner begin /k:"l-pagel_X.Justiz.Core" /o:"l-pagel" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.exclusions="xjustiz-xsd/**/*,scripts/**/*,sdk/test-data/**/*,**/*.yml" /d:sonar.cpd.exclusions="**/StaatCodeLists.cs,**/GerichtCodeLists.cs,**/DokumentklasseCodeLists.cs" /d:sonar.branch.name="main" /d:sonar.cs.vstest.reportsPaths="**/*.trx" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
           dotnet build $CSPROJ_PATH
           dotnet test $TEST_PROJECT_PATH --logger "trx;LogFileName=test-results.trx" --logger "junit;LogFileName=test-results.xml" --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
           ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"

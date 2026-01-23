@@ -12,16 +12,23 @@ public class DokumentklasseCodeJsonConverter : JsonConverter<DokumentklasseCode>
 {
     public override DokumentklasseCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        if (reader.TokenType == JsonTokenType.String)
+        var value = reader.TokenType switch
         {
-            var stringValue = reader.GetString();
-            if (DokumentklasseCodeMapper.TryParse(stringValue, out var result))
-            {
-                return result;
-            }
+            JsonTokenType.Number => reader.TryGetInt64(out var longVal)
+                ? longVal.ToString()
+                : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture),
+
+            JsonTokenType.String => reader.GetString(),
+
+            _ => reader.GetString()
+        };
+
+        if (DokumentklasseCodeMapper.TryParse(value, out var result))
+        {
+            return result;
         }
 
-        throw new JsonException($"Unable to convert \"{reader.GetString()}\" to {nameof(DokumentklasseCode)}.");
+        throw new JsonException($"Unable to convert \"{value}\" to {nameof(DokumentklasseCode)}.");
     }
 
     public override void Write(Utf8JsonWriter writer, DokumentklasseCode value, JsonSerializerOptions options)

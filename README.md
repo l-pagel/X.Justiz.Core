@@ -12,7 +12,9 @@ X.Justiz Core is a lightweight schema for data exchange between software solutio
 - [X.Justiz Compatibility](#xjustiz-compatibility)
 - [Usage of Codes](#usage-of-codes)
 - [Implementation (SDKs)](#implementation-sdks)
-- [Specification & Documentation](#specification--documentation)
+- [Specification](#specification)
+- [Sample Data](#sample-data)
+- [Developer Resources](#developer-resources)
 
 > [!NOTE]  
 > **📘 Looking for technical details?**  
@@ -96,12 +98,11 @@ The SDKs are available in the following languages:
 -   ⏳ **JavaScript / TypeScript** (In progress)
 -   ⏳ **Python** (In progress)
 
-## Specification & Documentation
+## Specification
 
 ### X.Justiz Core
 - [Specification for X.Justiz Core](/docs/Specification.md) - Comprehensive data model documentation
 - [Validation rules as XSD](/schemas)
-- [Example datasets](/docs/examples)
 - [Lists of used codes](/sdk/dotnet/src/xjustiz.core-dotnet/Models/Codes)
 - [Changelog](/docs/Changelog.md)
 - [License](LICENSE)
@@ -109,7 +110,19 @@ The SDKs are available in the following languages:
 ### X.Justiz
 - [Archive of all X.Justiz versions and specifications](/xjustiz-xsd)
 
-### Developer Resources
+## Sample Data
+
+Comprehensive test data and scenarios are available to help you test your implementation:  
+[**Browse Sample Data**](/sdk/test-data)
+
+Includes examples for:
+- Labor Law (Arbeitsrecht)
+- Inheritance Law (Erbrecht)
+- Traffic Law (Verkehrsrecht)
+- Tenancy Law (Mietrecht)
+- And more...
+
+## Developer Resources
 - [**🔧 SDK Generation Workflow**](/docs/SDK-GENERATION.md) - How cross-SDK consistency is maintained
 - [**🧪 Integration Tests**](/sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md) - Cross-platform compatibility testing
 

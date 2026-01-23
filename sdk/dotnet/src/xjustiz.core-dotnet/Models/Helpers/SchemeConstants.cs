@@ -12,19 +12,19 @@ public static class SchemeConstants
     /// Target Namespace für XJustiz.<br/>
     /// <u><b>Target namespace:</b></u> Target Namespace for XJustiz.
     /// </summary>
-    public const string XJustiz_Tns = "http://www.xjustiz.de";
+    public const string XJustiz_Tns = "http://www.xjustiz.de"; //NOSONAR
 
     /// <summary>
     /// Target Namespace für XJustiz Core.<br/>
     /// <u><b>Target namespace:</b></u> Target Namespace for XJustiz Core.
     /// </summary>
-    public const string XJustizCore_Tns = "http://www.xjustizcore.de";
+    public const string XJustizCore_Tns = "http://www.xjustizcore.de"; //NOSONAR
 
     /// <summary>
     /// XML Schema Instance Namespace.<br/>
     /// <u><b>XML schema instance namespace:</b></u> XML Schema Instance Namespace.
     /// </summary>
-    public const string Xsi = "http://www.w3.org/2001/XMLSchema-instance";
+    public const string Xsi = "http://www.w3.org/2001/XMLSchema-instance"; //NOSONAR
 
     /// <summary>
     /// Enthält Informationen zur neuesten X.Justiz Core-Version.<br/>

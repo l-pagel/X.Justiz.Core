@@ -1,0 +1,186 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "ARB-CPLX-2026-99"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-ARB-99/26"
+        ],
+        "Erstellungszeitpunkt": "2026-02-15T09:00:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Kanzlei für Arbeitsrecht Müller & Partner"
+        },
+        "Empfaenger": {
+            "EmpfaengerSonstige": "Arbeitsgericht Aachen"
+        },
+        "EigeneNachrichtenId": "MSG-ARB-CPLX-001"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "15 Ga 9999/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Komplexe Kündigungsschutzklage mit Abfindung",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "9R0000"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Maria",
+                                    "Nachname": "Musterfrau",
+                                    "Anrede": "Frau",
+                                    "Doktortitel": "Dr."
+                                },
+                                "Geschlecht": {
+                                    "Code": "2"
+                                },
+                                "Geburt": {
+                                    "Geburtsdatum": "1980-05-15",
+                                    "Geburtsort": "München",
+                                    "Geburtsstaat": {
+                                        "Code": "Deutschland"
+                                    }
+                                }
+                            }
+                        },
+                        "Anschrift": {
+                            "Strasse": "Musterstraße",
+                            "Hausnummer": "1",
+                            "Postleitzahl": "52062",
+                            "Ort": "Aachen",
+                            "Staat": {
+                                "Code": "Deutschland"
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "004"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Global Tech Industries GmbH"
+                                },
+                                "Anschrift": {
+                                    "Strasse": "Industriepark",
+                                    "Hausnummer": "20a",
+                                    "Postleitzahl": "52070",
+                                    "Ort": "Aachen",
+                                    "Staat": {
+                                        "Code": "Deutschland"
+                                    }
+                                },
+                                "Rechtsform": "GmbH",
+                                "Registerzeichen": "HRB 12345"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "ARB-EXT-CPLX",
+                    "Name": "Erweiterte Arbeitsdaten",
+                    "Beschreibung": "Detaillierte Informationen zum Arbeitsverhältnis und Kündigung",
+                    "Feldgruppen": [
+                        {
+                            "Name": "Vertragsdetails",
+                            "Beschreibung": "Details zum Arbeitsvertrag",
+                            "Felder": [
+                                {
+                                    "Name": "Wochenarbeitszeit",
+                                    "Wert": "40.0"
+                                },
+                                {
+                                    "Name": "Urlaubsanspruch",
+                                    "Wert": "30"
+                                }
+                            ],
+                            "Feldgruppen": [
+                                {
+                                    "Name": "Vergütung",
+                                    "Felder": [
+                                        {
+                                            "Name": "Grundgehalt",
+                                            "Wert": "6500.00"
+                                        },
+                                        {
+                                            "Name": "BonusZiel",
+                                            "Wert": "15000.00"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Arbeitsgerichtsakte"
+                    },
+                    "Anzeigename": "Klage Musterfrau ./ Global Tech",
+                    "Aktenzeichen": {
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "15 Ga 9999/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "Id": "f1e2d3c4-b5a6-7890-1234-567890abcdef",
+                    "NummerImUebergeordnetenContainer": "2"
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "001"
+                    },
+                    "Datei": {
+                        "Dateiname": "Klageschrift_Musterfrau.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 102400,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "0000000000000000000000000000000000000000000000000000000000000000"
+                        },
+                        "artifacts": [
+                            {
+                                "type": "bundle-path",
+                                "path": "anhang/Klageschrift_Musterfrau.pdf"
+                            }
+                        ]
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-02-15T08:30:00Z"
+            }
+        ]
+    }
+}

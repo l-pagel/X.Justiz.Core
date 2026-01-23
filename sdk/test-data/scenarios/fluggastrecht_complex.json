@@ -1,0 +1,133 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "FLUG-CPLX-2026-77"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-FLUG-77/26"
+        ],
+        "Erstellungszeitpunkt": "2026-05-15T11:00:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Verbraucherschutz Flugrechte"
+        },
+        "Empfaenger": {
+            "EmpfaengerSonstige": "Amtsgericht Frankfurt am Main"
+        },
+        "EigeneNachrichtenId": "MSG-FLUG-CPLX-004"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "32 C 987/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Fluggastrechte VO (EG) 261/2004",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "9M0000"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Hans",
+                                    "Nachname": "Vielflieger"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "003"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Helga",
+                                    "Nachname": "Vielflieger"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "004"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Airline XY AG"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "aa998877-6655-4433-2211-001122334455",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "FLUG-EXT-CPLX",
+                    "Name": "Flugdaten",
+                    "Beschreibung": "Details zum annullierten Flug",
+                    "Felder": [
+                        {
+                            "Name": "Flugnummer",
+                            "Wert": "XY1234"
+                        },
+                        {
+                            "Name": "Startflughafen",
+                            "Wert": "FRA"
+                        },
+                        {
+                            "Name": "Zielflughafen",
+                            "Wert": "JFK"
+                        },
+                        {
+                            "Name": "GeplanterStart",
+                            "Wert": "2026-05-01T10:00:00Z",
+                            "Datentyp": "date"
+                        }
+                    ],
+                    "Feldgruppen": [
+                        {
+                            "Name": "Entschädigungsforderung",
+                            "Felder": [
+                                {
+                                    "Name": "ProPerson",
+                                    "Wert": "600.00"
+                                },
+                                {
+                                    "Name": "Gesamt",
+                                    "Wert": "2400.00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    }
+                }
+            }
+        ]
+    }
+}

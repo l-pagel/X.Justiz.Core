@@ -11,7 +11,17 @@ public class RollenCodeJsonConverter : JsonConverter<RollenCode>
 {
     public override RollenCode Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var value = reader.GetString();
+        var value = reader.TokenType switch
+        {
+            JsonTokenType.Number => reader.TryGetInt64(out var longVal)
+                ? longVal.ToString()
+                : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture),
+
+            JsonTokenType.String => reader.GetString(),
+
+            _ => reader.GetString()
+        };
+
         if (RollenCodeMapper.TryParse(value, out var result))
         {
             return result;
