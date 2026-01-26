@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VersicherungCore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.xjustizcore.de">
+  <versicherungsnummer>V-123456</versicherungsnummer>
+  <versicherungsunternehmen listVersionID="1.0" listURI="urn:xoev-de:xjustiz:codeliste:gds.versicherer">
+    <code>10002018</code>
+  </versicherungsunternehmen>
+  <versicherungstyp listVersionID="1.0" listURI="urn:xoev-de:xjustiz:codeliste:gds.versicherung">
+    <code>05</code>
+  </versicherungstyp>
+</VersicherungCore>

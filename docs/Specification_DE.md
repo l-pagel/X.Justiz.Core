@@ -119,6 +119,17 @@ message.setGrunddaten(grunddaten);
 message.setSchriftgutobjekte(new Schriftgutobjekte());
 ```
 
+### 1.4 Erweiterungen gegenüber Standard-X.Justiz
+
+X.Justiz Core führt mehrere Erweiterungen gegenüber dem Standard-X.Justiz-Schema ein, um die Benutzerfreundlichkeit und Entwicklererfahrung zu verbessern:
+
+- **Vereinfachte Modelle**: Core-Entitäten (wie `VersicherungCore`) kapseln komplexe X.Justiz-Strukturen in entwicklerfreundliche Klassen.
+- **Verbesserte Typsicherheit**: Felder, die in X.Justiz generische Strings sind, werden wo möglich auf stark typisierte Enums abgebildet (z.B. `VersichererCode`, `VersicherungsTypCode`).
+- **Zusätzliche Metadaten**: Klassen wie `DateiCore` bieten erweiterte Metadaten wie Hashes und Content-Type, die für moderne Anwendungen unerlässlich sind, aber in Basis-X.Justiz fehlen oder optional sind.
+- **Komfortfunktionen**: Hilfseigenschaften (wie `CodeForXml`) behandeln die Komplexität von X.Justiz-Codelisten transparent.
+
+Diese Erweiterungen sind in der [Datenmodell-Referenz](#4-datenmodell-referenz) Tabelle mit einem `x` gekennzeichnet.
+
 ---
 
 ## 2. Benutzerdefinierte Daten: Feld und Feldgruppe
@@ -607,6 +618,10 @@ Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
 | **Schriftgutobjekte** | | | 3.1.1 | 0.2.0 |
 | | Property: Akte <br/> Type: List<**Akte**> | | 3.1.1 | 0.2.0 |
 | | Property: Dokumente <br/> Type: List<**Dokument**> | | 3.1.1 | 0.2.0 |
+| **Selbstbeteiligung** | | x | - | 0.3.0 |
+| | Property: SelbstbehaltBeteiligung <br/> Type: string | x | - | 0.3.0 |
+| | Property: TeilweiseUmfassendeSelbstbeteiligung <br/> Type: string | x | - | 0.3.0 |
+| | Property: UmfassendeSelbstbeteiligung <br/> Type: string | x | - | 0.3.0 |
 | **Staat** | | | 3.1.1 | 0.2.0 |
 | | Property: Code <br/> Type: StaatCode | | 3.1.1 | 0.2.0 |
 | **Telekommunikation** | | | 2.1.0 | 0.2.0 |
@@ -623,18 +638,24 @@ Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
 | | Property: Verfahrensnummer <br/> Type: string | | 2.1.0 | 0.2.0 |
 | | Property: Instanzdaten <br/> Type: **Instanzdaten** | | 2.1.0 | 0.2.0 |
 | | Property: Beteiligungen <br/> Type: List<**Beteiligung**> | | 2.1.0 | 0.2.0 |
-| **Versicherung** | | x | - | 0.2.0 |
-| | Property: Versicherungsnummer <br/> Type: string | x | - | 0.2.0 |
-| | Property: Versicherungsunternehmen <br/> Type: List<**Organisation**> | x | - | 0.2.0 |
-| | Property: Anschrift <br/> Type: **Anschrift** | x | - | 0.2.0 |
-| | Property: ReferenzId <br/> Type: Guid | x | - | 0.2.0 |
-| | Property: Versicherter <br/> Type: **AuswahlBeteiligter** | x | - | 0.2.0 |
-| | Property: Schadensnummer <br/> Type: string | x | - | 0.2.0 |
-| | Property: Versicherungstyp <br/> Type: **VersicherungsTyp** | x | - | 0.2.0 |
-| | Property: RechtsschutzTyp <br/> Type: **RechtschutzVersicherungsTyp** | x | - | 0.2.0 |
-| | Property: Fahrzeug <br/> Type: **Fahrzeug** | x | - | 0.2.0 |
-| | Property: Selbstbeteiligung <br/> Type: **Selbstbeteiligung** | x | - | 0.2.0 |
-| | Property: AnwendungsspezifischeErweiterung <br/> Type: **AnwendungsspezifischeErweiterung** | x | - | 0.2.0 |
+| **Versicherer** | | x | - | 0.3.0 |
+| | Property: Code <br/> Type: **VersichererCode** | x | - | 0.3.0 |
+| | Property: ListVersionId <br/> Type: string | x | - | 0.3.0 |
+| | Property: ListUri <br/> Type: string | x | - | 0.3.0 |
+| **VersicherungCore** | | x | - | 0.3.0 |
+| | Property: Versicherungsnummer <br/> Type: string | x | - | 0.3.0 |
+| | Property: Versicherungsunternehmen <br/> Type: List<**Versicherer**> | x | - | 0.3.0 |
+| | Property: Anschrift <br/> Type: **Anschrift** | x | - | 0.3.0 |
+| | Property: ReferenzId <br/> Type: Guid | x | - | 0.3.0 |
+| | Property: Versicherter <br/> Type: **AuswahlBeteiligter** | x | - | 0.3.0 |
+| | Property: Schadensnummer <br/> Type: string | x | - | 0.3.0 |
+| | Property: Versicherungstyp <br/> Type: **VersicherungsTyp** | x | - | 0.3.0 |
+| | Property: Selbstbeteiligung <br/> Type: **Selbstbeteiligung** | x | - | 0.3.0 |
+| | Property: AnwendungsspezifischeErweiterung <br/> Type: **AnwendungsspezifischeErweiterung** | x | - | 0.3.0 |
+| **VersicherungsTyp** | | x | - | 0.3.0 |
+| | Property: Code <br/> Type: **VersicherungsTypCode** | x | - | 0.3.0 |
+| | Property: ListVersionId <br/> Type: string | x | - | 0.3.0 |
+| | Property: ListUri <br/> Type: string | x | - | 0.3.0 |
 | **VollerName** | | | 2.1.0 | 0.2.0 |
 | | Property: Vorname <br/> Type: string | | 2.1.0 | 0.2.0 |
 | | Property: Rufname <br/> Type: string | | 2.1.0 | 0.2.0 |
@@ -670,7 +691,10 @@ Die folgende Tabelle beschreibt die Hierarchie und Entwicklung des Datenmodells:
 | **GeschlechtCode** | | | No | 2.1.0 | 0.2.0 |
 | **RollenCode** | | | No | 2.1.0 | 0.2.0 |
 | **StaatCode** | | | No | 3.1.1 | 0.2.0 |
+| **StaatCode** | | | No | 3.1.1 | 0.2.0 |
 | **TelekommunikationsartCode** | | | No | 3.2.1 | 0.2.0 |
+| **VersichererCode** | Quellen: [BaFin](https://portal.mvp.bafin.de/database/InstInfo/) | x | - | 0.3.0 |
+| **VersicherungsTypCode** | Quellen: [IHK](https://github.com/l-pagel/X.Justiz.Core/tree/main/docs) | x | - | 0.3.0 |
 
 ---
 

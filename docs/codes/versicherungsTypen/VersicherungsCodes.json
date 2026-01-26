@@ -1,0 +1,1310 @@
+[
+  {
+    "Schlüssel": "000",
+    "Bezeichnung": "Alle Sparten"
+  },
+  {
+    "Schlüssel": "01",
+    "Bezeichnung": "Lebensversicherung"
+  },
+  {
+    "Schlüssel": "011",
+    "Bezeichnung": "Einzelversicherung (ohne Zusatzversicherung) mit Überschussbeteiligung, bei\nder das Anlagerisiko vom Versicherungsunternehmen getragen wird."
+  },
+  {
+    "Schlüssel": "0111",
+    "Bezeichnung": "Kapitalbildende Lebensversicherung (einschließlich vermögensbildender\nLebensversicherung) mit überwiegendem Todesfallcharakter"
+  },
+  {
+    "Schlüssel": "0112",
+    "Bezeichnung": "Risikoversicherung"
+  },
+  {
+    "Schlüssel": "0113",
+    "Bezeichnung": "Kapitalbildende Lebensversicherung mit überwiegendem Erlebensfallcharakter"
+  },
+  {
+    "Schlüssel": "0114",
+    "Bezeichnung": "Berufsunfähigkeitsversicherung"
+  },
+  {
+    "Schlüssel": "0115",
+    "Bezeichnung": "Pflegerentenversicherung"
+  },
+  {
+    "Schlüssel": "0116",
+    "Bezeichnung": "übrige und nicht aufgegliederte Einzelversicherung (einschließlich der Heirats-\nund Geburtenversicherung, aber ohne sonstige Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0117",
+    "Bezeichnung": "Kapitalbildende Lebensversicherung mit überwiegendem Erlebensfallcharakter\nnach dem AltZertG"
+  },
+  {
+    "Schlüssel": "012",
+    "Bezeichnung": "Kollektivversicherung (ohne Zusatzversicherung) mit Überschussbeteiligung,\nbei der das Anlagerisiko vom Versicherungsunternehmen getragen wird."
+  },
+  {
+    "Schlüssel": "0121",
+    "Bezeichnung": "Kapitalversicherung mit überwiegendem Todesfallcharakter (ohne Kennzahlen\n01.2.2 und 01.2.3)"
+  },
+  {
+    "Schlüssel": "0122",
+    "Bezeichnung": "Bausparrisikoversicherung"
+  },
+  {
+    "Schlüssel": "0123",
+    "Bezeichnung": "Restschuldversicherung"
+  },
+  {
+    "Schlüssel": "0124",
+    "Bezeichnung": "übrige und nicht aufgegliederte Kollektivversicherung (einschließlich der\nHeirats- und Geburtenversicherung), aber ohne sonstige Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0125",
+    "Bezeichnung": "Kapitalbildende Lebensversicherung mit überwiegendem Erlebensfallcharakter\nnach dem AltZertG"
+  },
+  {
+    "Schlüssel": "013",
+    "Bezeichnung": "Zusatzversicherung (einschließlich der, für Kollektivversicherungen)"
+  },
+  {
+    "Schlüssel": "0131",
+    "Bezeichnung": "Unfall- Zusatzversicherung"
+  },
+  {
+    "Schlüssel": "0132",
+    "Bezeichnung": "Berufsunfähigkeits(Invaliditäts)-Zusatzversicherung"
+  },
+  {
+    "Schlüssel": "0133",
+    "Bezeichnung": "Risiko- und Zeitrenten- Zusatzversicherung"
+  },
+  {
+    "Schlüssel": "0134",
+    "Bezeichnung": "Pflegerenten- Zusatzversicherung"
+  },
+  {
+    "Schlüssel": "0135",
+    "Bezeichnung": "Sonstige Zusatzversicherung"
+  },
+  {
+    "Schlüssel": "014",
+    "Bezeichnung": "Sonstige Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0141",
+    "Bezeichnung": "Lebensversicherung, bei der das Anlagerisiko vom Versicherungsnehmer\ngetragen wird"
+  },
+  {
+    "Schlüssel": "0142",
+    "Bezeichnung": "Lebensversicherung ohne Überschussbeteiligung, bei der das Anlagerisiko vom\nVersicherungsunternehmen getragen wird"
+  },
+  {
+    "Schlüssel": "0143",
+    "Bezeichnung": "Tontinengeschäfte"
+  },
+  {
+    "Schlüssel": "0144",
+    "Bezeichnung": "Kapitalisierungsgeschäfte"
+  },
+  {
+    "Schlüssel": "0145",
+    "Bezeichnung": "Lebensversicherung, bei der das Anlagerisiko vom Versicherungsnehmer\ngetragen wird, nach dem AltZertG"
+  },
+  {
+    "Schlüssel": "015",
+    "Bezeichnung": "Geschäfte der Verwaltung von Versorgungseinrichtungen"
+  },
+  {
+    "Schlüssel": "02",
+    "Bezeichnung": "Krankenversicherung"
+  },
+  {
+    "Schlüssel": "021",
+    "Bezeichnung": "Einzel- Krankheitskostenvollversicherung (ambulant und stationär)"
+  },
+  {
+    "Schlüssel": "0211",
+    "Bezeichnung": "Einzel- Krankheitskostenvollversicherung"
+  },
+  {
+    "Schlüssel": "0212",
+    "Bezeichnung": "Einzel- Krankheitskostenvollversicherung (ambulant und stationär), nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0213",
+    "Bezeichnung": "Einzel- Krankheitskostenvollversicherung (ambulant und stationär) nach Art\nder Schadensversicherung"
+  },
+  {
+    "Schlüssel": "022",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (ambulant)"
+  },
+  {
+    "Schlüssel": "0221",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (ambulant) substitutiv"
+  },
+  {
+    "Schlüssel": "0222",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (ambulant) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0223",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (ambulant) nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "023",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (stationär)"
+  },
+  {
+    "Schlüssel": "0231",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (stationär) substitutiv"
+  },
+  {
+    "Schlüssel": "0232",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (stationär) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0233",
+    "Bezeichnung": "Selbstständige Einzel- Krankheitskostenversicherung (stationär) nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "024",
+    "Bezeichnung": "Einzel- Krankentagegeldversicherung"
+  },
+  {
+    "Schlüssel": "0241",
+    "Bezeichnung": "Krankentagegeldversicherung (ohne Kennzahlen 02.4.4 und 02.4.5) substitutiv"
+  },
+  {
+    "Schlüssel": "0242",
+    "Bezeichnung": "Krankentagegeldversicherung (ohne Kennzahlen 02.4.4 und 02.4.5) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0243",
+    "Bezeichnung": "Krankentagegeldversicherung (ohne Kennzahlen 02.4.4 und 02.4.5) nach Art\nder Schadenversicherung"
+  },
+  {
+    "Schlüssel": "0244",
+    "Bezeichnung": "Lohnfortzahlungsversicherung"
+  },
+  {
+    "Schlüssel": "0245",
+    "Bezeichnung": "Restschuldversicherung"
+  },
+  {
+    "Schlüssel": "025",
+    "Bezeichnung": "Selbstständige Einzel- Krankenhaustagegeldversicherung"
+  },
+  {
+    "Schlüssel": "0251",
+    "Bezeichnung": "Selbstständige Einzel- Krankenhaustagegeldversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "0252",
+    "Bezeichnung": "Selbstständige Einzel- Krankenhaustagegeldversicherung nicht substitutiv\nnach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0253",
+    "Bezeichnung": "Selbstständige Einzel- Krankenhaustagegeldversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "026",
+    "Bezeichnung": "Sonstige selbstständige Einzel- Teilversicherung"
+  },
+  {
+    "Schlüssel": "0261",
+    "Bezeichnung": "Selbstständige Zahnbehandlungsversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "0262",
+    "Bezeichnung": "Selbstständige Zahnbehandlungsversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "0263",
+    "Bezeichnung": "Selbstständige Zahnbehandlungsversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "0264",
+    "Bezeichnung": "Kurkostenversicherung (einschließlich der Kurtagegeldversicherung)\nsubstitutiv"
+  },
+  {
+    "Schlüssel": "0265",
+    "Bezeichnung": "Kurkostenversicherung (einschließlich der Kurtagegeldversicherung) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0266",
+    "Bezeichnung": "Kurkostenversicherung (einschließlich der Kurtagegeldversicherung) nach Art\nder Schadenversicherung"
+  },
+  {
+    "Schlüssel": "0267",
+    "Bezeichnung": "Reisekrankenversicherung (gegen festes Entgelt)"
+  },
+  {
+    "Schlüssel": "0268",
+    "Bezeichnung": "Sonstige Teilversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "0269",
+    "Bezeichnung": "Sonstige Teilversicherung nicht substitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "02610",
+    "Bezeichnung": "Sonstige Teilversicherung nach Art der Schadenversicherung"
+  },
+  {
+    "Schlüssel": "027",
+    "Bezeichnung": "Gruppen- Krankenversicherung (nach Einzel- und Sondertarifen)"
+  },
+  {
+    "Schlüssel": "0271",
+    "Bezeichnung": "Gruppen- Krankheitskostenvollversicherung (ambulant und stationär)\nsubstitutiv"
+  },
+  {
+    "Schlüssel": "0272",
+    "Bezeichnung": "Gruppen- Krankheitskostenvollversicherung (ambulant und stationär) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0273",
+    "Bezeichnung": "Gruppen- Krankheitskostenvollversicherung (ambulant und stationär) nach Art\nder Schadenversicherung"
+  },
+  {
+    "Schlüssel": "0274",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (ambulant) substitutiv"
+  },
+  {
+    "Schlüssel": "0275",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (ambulant) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0276",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (ambulant) nach Art\nder Schadenversicherung"
+  },
+  {
+    "Schlüssel": "0277",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (stationär) substitutiv"
+  },
+  {
+    "Schlüssel": "0278",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (stationär) nicht\nsubstitutiv nach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "0279",
+    "Bezeichnung": "Selbstständige Gruppen- Krankheitskostenversicherung (stationär) nach Art\nder Schadenversicherung"
+  },
+  {
+    "Schlüssel": "02710",
+    "Bezeichnung": "Gruppen- Krankentagegeldversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "02711",
+    "Bezeichnung": "Gruppen- Krankentagegeldversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "02712",
+    "Bezeichnung": "Gruppen- Krankentagegeldversicherung nach Art der Schadenversicherung"
+  },
+  {
+    "Schlüssel": "02713",
+    "Bezeichnung": "Selbstständige Gruppen- Krankenhaustagegeldversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "02714",
+    "Bezeichnung": "Selbstständige Gruppen- Krankenhaustagegeldversicherung nicht substitutiv\nnach Art der Lebensversicherung"
+  },
+  {
+    "Schlüssel": "02715",
+    "Bezeichnung": "Selbstständige Gruppen- Krankenhaustagegeldversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "02716",
+    "Bezeichnung": "Sonstige selbstständige Gruppenteilversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "02717",
+    "Bezeichnung": "Sonstige selbstständige Gruppenteilversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "02718",
+    "Bezeichnung": "Sonstige selbstständige Gruppenteilversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "02719",
+    "Bezeichnung": "Gruppen- Pflegepflichtversicherung"
+  },
+  {
+    "Schlüssel": "02720",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegekostenversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "02721",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegekostenversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "02722",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegekostenversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "02723",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegetagegeldversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "02724",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegetagegeldversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "02725",
+    "Bezeichnung": "Freiwillige Gruppen- Pflegetagegeldversicherung nach Art der\nSchadenversicherung"
+  },
+  {
+    "Schlüssel": "028",
+    "Bezeichnung": "Pflegekrankenversicherung"
+  },
+  {
+    "Schlüssel": "0281",
+    "Bezeichnung": "Pflegepflichtversicherung"
+  },
+  {
+    "Schlüssel": "0282",
+    "Bezeichnung": "Freiwillige Pflegekostenversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "0283",
+    "Bezeichnung": "Freiwillige Pflegekostenversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "0284",
+    "Bezeichnung": "Freiwillige Pflegekostenversicherung nach Art der Schadenversicherung"
+  },
+  {
+    "Schlüssel": "0285",
+    "Bezeichnung": "Freiwillige Pflegetagegeldversicherung substitutiv"
+  },
+  {
+    "Schlüssel": "0286",
+    "Bezeichnung": "Freiwillige Pflegetagegeldversicherung nicht substitutiv nach Art der\nLebensversicherung"
+  },
+  {
+    "Schlüssel": "0287",
+    "Bezeichnung": "Freiwillige Pflegetagegeldversicherung nach Art der Schadenversicherung"
+  },
+  {
+    "Schlüssel": "029",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Krankenversicherung (einschließlich der\nBeihilfeablöseversicherung)"
+  },
+  {
+    "Schlüssel": "03",
+    "Bezeichnung": "Allgemeine Unfallversicherung"
+  },
+  {
+    "Schlüssel": "031",
+    "Bezeichnung": "Einzelunfallversicherung ohne Beitragsrückgewähr"
+  },
+  {
+    "Schlüssel": "03101",
+    "Bezeichnung": "Unfallvollversicherung (ohne Kennzahlen 03.1.02 und 03.1.03)"
+  },
+  {
+    "Schlüssel": "03102",
+    "Bezeichnung": "Volks- Unfallvollversicherung"
+  },
+  {
+    "Schlüssel": "03103",
+    "Bezeichnung": "Unfallvollversicherung aus der FUSt- Versicherung"
+  },
+  {
+    "Schlüssel": "03104",
+    "Bezeichnung": "Versicherung gegen außerberufliche Unfälle"
+  },
+  {
+    "Schlüssel": "03105",
+    "Bezeichnung": "Reiseunfallversicherung"
+  },
+  {
+    "Schlüssel": "03106",
+    "Bezeichnung": "Sofortunfallversicherung"
+  },
+  {
+    "Schlüssel": "03107",
+    "Bezeichnung": "Luftfahrtunfallversicherung"
+  },
+  {
+    "Schlüssel": "03108",
+    "Bezeichnung": "Lebenslängliche Verkehrsmittelunfallversicherung"
+  },
+  {
+    "Schlüssel": "03109",
+    "Bezeichnung": "Sportbootinsassenunfallversicherung"
+  },
+  {
+    "Schlüssel": "03199",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Einzelunfallversicherung"
+  },
+  {
+    "Schlüssel": "033",
+    "Bezeichnung": "Gruppen- Unfallversicherung ohne Beitragsrückgewähr"
+  },
+  {
+    "Schlüssel": "0331",
+    "Bezeichnung": "Gruppen- Unfallvollversicherung"
+  },
+  {
+    "Schlüssel": "0333",
+    "Bezeichnung": "Gruppen- Unfallteilversicherung"
+  },
+  {
+    "Schlüssel": "034",
+    "Bezeichnung": "Probandenversicherung"
+  },
+  {
+    "Schlüssel": "035",
+    "Bezeichnung": "Kraftfahrtunfallversicherung (einschließlich der namentlichen\nKraftfahrtunfallversicherung)"
+  },
+  {
+    "Schlüssel": "038",
+    "Bezeichnung": "Unfallversicherung mit Beitragsrückgewähr"
+  },
+  {
+    "Schlüssel": "0381",
+    "Bezeichnung": "Einzel- Unfallversicherung"
+  },
+  {
+    "Schlüssel": "0382",
+    "Bezeichnung": "Gruppen- Unfallversicherung"
+  },
+  {
+    "Schlüssel": "039",
+    "Bezeichnung": "Übrige und nicht aufgegliederte allgemeine Unfallversicherung"
+  },
+  {
+    "Schlüssel": "04",
+    "Bezeichnung": "Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "041",
+    "Bezeichnung": "Privathaftpflichtversicherung (einschließlich Sportboot- und\nHundehalterhaftpflichtversicherung)"
+  },
+  {
+    "Schlüssel": "042",
+    "Bezeichnung": "Betriebs- und Berufshaftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "0421",
+    "Bezeichnung": "Industrie- und Handelsbetriebe"
+  },
+  {
+    "Schlüssel": "0422",
+    "Bezeichnung": "Baugewerbe (einschließlich Architekten und Bauingeneure)"
+  },
+  {
+    "Schlüssel": "0423",
+    "Bezeichnung": "Sonstige Betriebs- und Berufshaftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "043",
+    "Bezeichnung": "Umwelt- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "0431",
+    "Bezeichnung": "Gewässerschaden- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "0432",
+    "Bezeichnung": "Umwelthaftpflicht- Modell"
+  },
+  {
+    "Schlüssel": "044",
+    "Bezeichnung": "Vermögensschaden- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "045",
+    "Bezeichnung": "Verkehrshaftungsversicherung (einschließlich der Speditions- und\nRollfuhrversicherung)"
+  },
+  {
+    "Schlüssel": "046",
+    "Bezeichnung": "Strahlen- und Atomanlagen- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "0461",
+    "Bezeichnung": "Strahlen- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "0462",
+    "Bezeichnung": "Atomanlagen- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "047",
+    "Bezeichnung": "Feuerhaftungsversicherung"
+  },
+  {
+    "Schlüssel": "048",
+    "Bezeichnung": "See-, Binnensee- und Flussschifffahrtshaftpflichtversicherung (ohne\nKollisionshaftpflichtrisiko) sowie Haftpflichtversicherung für\nnichtversicherungspflichtige Landfahrzeuge"
+  },
+  {
+    "Schlüssel": "0481",
+    "Bezeichnung": "Haftpflichtversicherung für nichtversicherungspflichtige Landfahrzeuge mit\neigenem Antrieb"
+  },
+  {
+    "Schlüssel": "0482",
+    "Bezeichnung": "Haftpflichtversicherung für nichtversicherungspflichtige Landfahrzeuge ohne\neigenen Antrieb"
+  },
+  {
+    "Schlüssel": "0483",
+    "Bezeichnung": "See-, Binnensee- und Flussschifffahrtshaftpflichtversicherung (ohne\nKollisionshaftpflichtrisiko)"
+  },
+  {
+    "Schlüssel": "049",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "04901",
+    "Bezeichnung": "Haus- und Grundbesitzerhaftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "04902",
+    "Bezeichnung": "Kraftfahrzeug- Parkplatzversicherung"
+  },
+  {
+    "Schlüssel": "04903",
+    "Bezeichnung": "Kühlgüterhaftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "04999",
+    "Bezeichnung": "Sonstige Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "05",
+    "Bezeichnung": "Kraftfahrtversicherung"
+  },
+  {
+    "Schlüssel": "051",
+    "Bezeichnung": "Kraftfahrzeug- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "052",
+    "Bezeichnung": "Fahrzeugvollversicherung"
+  },
+  {
+    "Schlüssel": "053",
+    "Bezeichnung": "Fahrzeugteilversicherung"
+  },
+  {
+    "Schlüssel": "055",
+    "Bezeichnung": "Sonstige Kraftfahrtversicherung (05.2 und 05.3 insgesamt)"
+  },
+  {
+    "Schlüssel": "059",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Kraftfahrtversicherung"
+  },
+  {
+    "Schlüssel": "06",
+    "Bezeichnung": "Luftfahrtversicherung (einschließlich der Raumfahrtversicherung)"
+  },
+  {
+    "Schlüssel": "063",
+    "Bezeichnung": "Luftfahrzeug- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "065",
+    "Bezeichnung": "Raumfahrzeug- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "0651",
+    "Bezeichnung": "Pre- Launch- Versicherung"
+  },
+  {
+    "Schlüssel": "0652",
+    "Bezeichnung": "Launch- Versicherung"
+  },
+  {
+    "Schlüssel": "0653",
+    "Bezeichnung": "In- Orbit- Versicherung"
+  },
+  {
+    "Schlüssel": "069",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Luftfahrtversicherung (einschließlich der\nRaumfahrtversicherung)"
+  },
+  {
+    "Schlüssel": "07",
+    "Bezeichnung": "Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "071",
+    "Bezeichnung": "Rechtsschutzversicherung nach ARB"
+  },
+  {
+    "Schlüssel": "0711",
+    "Bezeichnung": "Verkehrs- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0712",
+    "Bezeichnung": "Fahrzeug- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0713",
+    "Bezeichnung": "Fahrer- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0714",
+    "Bezeichnung": "Rechtsschutzversicherung für Gewerbetreibende und freiberuflich Tätige"
+  },
+  {
+    "Schlüssel": "0715",
+    "Bezeichnung": "Familien- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0716",
+    "Bezeichnung": "Familien- und Verkehrs- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0717",
+    "Bezeichnung": "Landwirtschafts- und Verkehrs- Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "0718",
+    "Bezeichnung": "Rechtsschutzversicherung für Vereine"
+  },
+  {
+    "Schlüssel": "0719",
+    "Bezeichnung": "Rechtsschutzversicherung für Grundstückseigentum und Miete"
+  },
+  {
+    "Schlüssel": "072",
+    "Bezeichnung": "Vermögensschaden-Rechtsschutzversicherungen für Aufsichtsräte, Beiräte,\nVorstände (VRB)"
+  },
+  {
+    "Schlüssel": "073",
+    "Bezeichnung": "Rechtsschutzversicherung für Träger öffentlicher Aufgaben (ÖRB)"
+  },
+  {
+    "Schlüssel": "075",
+    "Bezeichnung": "Kraftfahrt- Strafrechtsschutzversicherung mit Auslands-\nZivilrechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "076",
+    "Bezeichnung": "Spezial- Strafrechtsschutzversicherung der Unternehmen"
+  },
+  {
+    "Schlüssel": "079",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Rechtsschutzversicherung"
+  },
+  {
+    "Schlüssel": "08",
+    "Bezeichnung": "Feuerversicherung"
+  },
+  {
+    "Schlüssel": "081",
+    "Bezeichnung": "Feuer- Industrie- Versicherung"
+  },
+  {
+    "Schlüssel": "082",
+    "Bezeichnung": "Landwirtschaftliche Feuerversicherung"
+  },
+  {
+    "Schlüssel": "083",
+    "Bezeichnung": "Sonstige Feuerversicherung (einschließlich der Waldbrandversicherung)"
+  },
+  {
+    "Schlüssel": "089",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Feuerversicherung"
+  },
+  {
+    "Schlüssel": "09",
+    "Bezeichnung": "Einbruchdiebstahl und Raub (ED)- Versicherung"
+  },
+  {
+    "Schlüssel": "099",
+    "Bezeichnung": "übrige und nicht aufgegliederte ED-Versicherung"
+  },
+  {
+    "Schlüssel": "10",
+    "Bezeichnung": "Leitungswasser (Lw)- Versicherung"
+  },
+  {
+    "Schlüssel": "109",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Lw- Versicherung"
+  },
+  {
+    "Schlüssel": "11",
+    "Bezeichnung": "Glasversicherung"
+  },
+  {
+    "Schlüssel": "12",
+    "Bezeichnung": "Sturmversicherung"
+  },
+  {
+    "Schlüssel": "121",
+    "Bezeichnung": "Sturmversicherung"
+  },
+  {
+    "Schlüssel": "123",
+    "Bezeichnung": "Gärtnerei- Sturmversicherung"
+  },
+  {
+    "Schlüssel": "124",
+    "Bezeichnung": "Versicherung weiterer Elementarschäden bei gewerblichen Risiken"
+  },
+  {
+    "Schlüssel": "13",
+    "Bezeichnung": "Verbundene Hausratversicherung"
+  },
+  {
+    "Schlüssel": "131",
+    "Bezeichnung": "Verbundene Hausratversicherung ohne Einschluss weiterer Elementarschäden"
+  },
+  {
+    "Schlüssel": "132",
+    "Bezeichnung": "Verbundene Hausratversicherung unter Einschluss weiterer Elementarschäden"
+  },
+  {
+    "Schlüssel": "14",
+    "Bezeichnung": "Verbundene Wohngebäudeversicherung"
+  },
+  {
+    "Schlüssel": "141",
+    "Bezeichnung": "Verbundene Wohngebäudeversicherung ohne Einfluss weiterer\nElementarschäden"
+  },
+  {
+    "Schlüssel": "142",
+    "Bezeichnung": "Verbundene Wohngebäudeversicherung ohne Einfluss weiterer\nElementarschäden"
+  },
+  {
+    "Schlüssel": "15",
+    "Bezeichnung": "Hagelversicherung"
+  },
+  {
+    "Schlüssel": "16",
+    "Bezeichnung": "Tierversicherung"
+  },
+  {
+    "Schlüssel": "161",
+    "Bezeichnung": "Langfristige Tierlebensversicherung"
+  },
+  {
+    "Schlüssel": "1611",
+    "Bezeichnung": "Pferdelebensversicherung"
+  },
+  {
+    "Schlüssel": "1612",
+    "Bezeichnung": "Rindviehlebensversicherung"
+  },
+  {
+    "Schlüssel": "1613",
+    "Bezeichnung": "Schweinelebensversicherung"
+  },
+  {
+    "Schlüssel": "1614",
+    "Bezeichnung": "Geflügellebensversicherung"
+  },
+  {
+    "Schlüssel": "1616",
+    "Bezeichnung": "Hundelebensversicherung"
+  },
+  {
+    "Schlüssel": "1619",
+    "Bezeichnung": "Übrige langfristige Tierlebensversicherung"
+  },
+  {
+    "Schlüssel": "162",
+    "Bezeichnung": "Kurzfristige Tierversicherung"
+  },
+  {
+    "Schlüssel": "1621",
+    "Bezeichnung": "Trächtigkeits-, Leibesfrucht- und Fohlenversicherung"
+  },
+  {
+    "Schlüssel": "1622",
+    "Bezeichnung": "Weidetierversicherung"
+  },
+  {
+    "Schlüssel": "1623",
+    "Bezeichnung": "Mastviehversicherung"
+  },
+  {
+    "Schlüssel": "1624",
+    "Bezeichnung": "Schlachttierversicherung (einschließlich Schlachtwertversicherung)"
+  },
+  {
+    "Schlüssel": "1625",
+    "Bezeichnung": "Operations-(Kastrations)-Versicherung"
+  },
+  {
+    "Schlüssel": "1629",
+    "Bezeichnung": "Übrige kurzfristige Tierversicherung"
+  },
+  {
+    "Schlüssel": "169",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Tierversicherung"
+  },
+  {
+    "Schlüssel": "17",
+    "Bezeichnung": "Technische Versicherung"
+  },
+  {
+    "Schlüssel": "171",
+    "Bezeichnung": "Maschinenversicherung (einschließlich der Baugeräteversicherung)"
+  },
+  {
+    "Schlüssel": "172",
+    "Bezeichnung": "Elektronikversicherung"
+  },
+  {
+    "Schlüssel": "174",
+    "Bezeichnung": "Montageversicherung"
+  },
+  {
+    "Schlüssel": "175",
+    "Bezeichnung": "Haushaltsgeräteversicherung"
+  },
+  {
+    "Schlüssel": "176",
+    "Bezeichnung": "Bauleistungsversicherung"
+  },
+  {
+    "Schlüssel": "179",
+    "Bezeichnung": "Übrige technische Versicherungen"
+  },
+  {
+    "Schlüssel": "1791",
+    "Bezeichnung": "Übrige technische Sachschadenversicherungen"
+  },
+  {
+    "Schlüssel": "17911",
+    "Bezeichnung": "Reparaturkostenversicherung von Kraftwagen"
+  },
+  {
+    "Schlüssel": "17912",
+    "Bezeichnung": "Reparaturkostenversicherung von Fernseh- und Videogeräten"
+  },
+  {
+    "Schlüssel": "17913",
+    "Bezeichnung": "Reparaturkostenversicherung von Haushaltsgeräten"
+  },
+  {
+    "Schlüssel": "17914",
+    "Bezeichnung": "Garantieverlängerungsversicherung von technischen Geräten"
+  },
+  {
+    "Schlüssel": "1799",
+    "Bezeichnung": "Sonstige technische Versicherungen"
+  },
+  {
+    "Schlüssel": "18",
+    "Bezeichnung": "Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "181",
+    "Bezeichnung": "Allgemeine Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "182",
+    "Bezeichnung": "Juwelierwaren- Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "183",
+    "Bezeichnung": "Rauchwaren- Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "184",
+    "Bezeichnung": "Textilveredlung- Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "185",
+    "Bezeichnung": "Wäscheschutz- Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "189",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "19",
+    "Bezeichnung": "Transportversicherung"
+  },
+  {
+    "Schlüssel": "191",
+    "Bezeichnung": "Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1911",
+    "Bezeichnung": "Seeschifffahrts- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1912",
+    "Bezeichnung": "Binnensee- und Flussschifffahrts- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1915",
+    "Bezeichnung": "Schienenfahrzeug- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1916",
+    "Bezeichnung": "Sportboot- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1917",
+    "Bezeichnung": "Baurisikoversicherung"
+  },
+  {
+    "Schlüssel": "1919",
+    "Bezeichnung": "Übrige Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "192",
+    "Bezeichnung": "Transportgüterversicherung"
+  },
+  {
+    "Schlüssel": "1922",
+    "Bezeichnung": "Transportgüterversicherung (ohne die Kennzahlen 19.2.3 bis 19.2.6)"
+  },
+  {
+    "Schlüssel": "1923",
+    "Bezeichnung": "Reiselagerversicherung"
+  },
+  {
+    "Schlüssel": "1925",
+    "Bezeichnung": "Container- Kaskoversicherung"
+  },
+  {
+    "Schlüssel": "1926",
+    "Bezeichnung": "Tiertransportversicherung"
+  },
+  {
+    "Schlüssel": "1929",
+    "Bezeichnung": "Übrige Warenversicherung"
+  },
+  {
+    "Schlüssel": "193",
+    "Bezeichnung": "Valorenversicherung (gewerblich)"
+  },
+  {
+    "Schlüssel": "194",
+    "Bezeichnung": "Filmversicherung (ohne die Kennzahl 29.2.01)"
+  },
+  {
+    "Schlüssel": "197",
+    "Bezeichnung": "Kriegsrisikoversicherung"
+  },
+  {
+    "Schlüssel": "199",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Transportversicherung (einschließlich\nVersicherung von Offshore- Risiken)"
+  },
+  {
+    "Schlüssel": "20",
+    "Bezeichnung": "Kredit- und Kautionsversicherung"
+  },
+  {
+    "Schlüssel": "201",
+    "Bezeichnung": "Kautionsversicherung (einschließlich Baugarantieversicherung)"
+  },
+  {
+    "Schlüssel": "202",
+    "Bezeichnung": "Delkrederversicherung"
+  },
+  {
+    "Schlüssel": "2021",
+    "Bezeichnung": "Ausfuhrkreditversicherung"
+  },
+  {
+    "Schlüssel": "2022",
+    "Bezeichnung": "Warenkreditversicherung"
+  },
+  {
+    "Schlüssel": "2023",
+    "Bezeichnung": "Investitionsgüterkreditversicherung"
+  },
+  {
+    "Schlüssel": "2024",
+    "Bezeichnung": "Konsumentenkreditversicherung"
+  },
+  {
+    "Schlüssel": "2029",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Delkrederversicherung"
+  },
+  {
+    "Schlüssel": "209",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Kredit- und Kautionsversicherung"
+  },
+  {
+    "Schlüssel": "21",
+    "Bezeichnung": "Versicherung zusätzlicher Gefahren zur Feuer- bzw. Feuer-\nBetriebsunterbrechungs- Versicherung (Extend Coverage (EC)- Versicherung)"
+  },
+  {
+    "Schlüssel": "23",
+    "Bezeichnung": "Betriebsunterbrechungs- Versicherung"
+  },
+  {
+    "Schlüssel": "231",
+    "Bezeichnung": "Feuer-(Groß) Betriebsunterbrechungs- Versicherung"
+  },
+  {
+    "Schlüssel": "232",
+    "Bezeichnung": "Technische- Betriebsunterbrechungs- Versicherung/ MBU Elektronik"
+  },
+  {
+    "Schlüssel": "233",
+    "Bezeichnung": "Sonstige Betriebsunterbrechungsversicherungen"
+  },
+  {
+    "Schlüssel": "24",
+    "Bezeichnung": "Beistandsleistungsversicherung"
+  },
+  {
+    "Schlüssel": "241",
+    "Bezeichnung": "Schutzbriefversicherung"
+  },
+  {
+    "Schlüssel": "242",
+    "Bezeichnung": "Sportboot- Serviceversicherung"
+  },
+  {
+    "Schlüssel": "243",
+    "Bezeichnung": "Flugrückholkostenversicherung"
+  },
+  {
+    "Schlüssel": "244",
+    "Bezeichnung": "Schutzbriefversicherung unter Einschluss der sog. Mallorca- Police"
+  },
+  {
+    "Schlüssel": "249",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Beistandsleistungsversicherung"
+  },
+  {
+    "Schlüssel": "25",
+    "Bezeichnung": "Luft- und Raumfahrzeug- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "251",
+    "Bezeichnung": "Luftfahrt- Haftpflichtversicherung (einschließlich der Luftfrachtführer-\nHaftpflichtversicherung)"
+  },
+  {
+    "Schlüssel": "252",
+    "Bezeichnung": "Raumfahrzeug- Haftpflichtversicherung"
+  },
+  {
+    "Schlüssel": "29",
+    "Bezeichnung": "Sonstige Schadenversicherung, z.B. Maschinen- Garantie- Versicherung"
+  },
+  {
+    "Schlüssel": "291",
+    "Bezeichnung": "Sonstige Sachschadenversicherung"
+  },
+  {
+    "Schlüssel": "29101",
+    "Bezeichnung": "Schwamm- und Hausbockkäferversicherung"
+  },
+  {
+    "Schlüssel": "29102",
+    "Bezeichnung": "Ausstellungsversicherung"
+  },
+  {
+    "Schlüssel": "29103",
+    "Bezeichnung": "Fahrradversicherung"
+  },
+  {
+    "Schlüssel": "29104",
+    "Bezeichnung": "Garderobenversicherung"
+  },
+  {
+    "Schlüssel": "29105",
+    "Bezeichnung": "Jagd- und Sportwaffenversicherung"
+  },
+  {
+    "Schlüssel": "29106",
+    "Bezeichnung": "Musikinstrumenteversicherung"
+  },
+  {
+    "Schlüssel": "29107",
+    "Bezeichnung": "Fotoapparateversicherung"
+  },
+  {
+    "Schlüssel": "29108",
+    "Bezeichnung": "Kühlgüterversicherung"
+  },
+  {
+    "Schlüssel": "29109",
+    "Bezeichnung": "Warenversicherung in Tiefkühlanlagen"
+  },
+  {
+    "Schlüssel": "29110",
+    "Bezeichnung": "Atomanlagen- Sachversicherung"
+  },
+  {
+    "Schlüssel": "29111",
+    "Bezeichnung": "Automatenversicherung"
+  },
+  {
+    "Schlüssel": "29112",
+    "Bezeichnung": "Reisegepäckversicherung"
+  },
+  {
+    "Schlüssel": "29113",
+    "Bezeichnung": "Kraftfahrtgepäckversicherung"
+  },
+  {
+    "Schlüssel": "29114",
+    "Bezeichnung": "Valorenversicherung (privat)"
+  },
+  {
+    "Schlüssel": "29115",
+    "Bezeichnung": "Freizeitsportgeräteversicherung (einschließlich der Skibruchversicherung)"
+  },
+  {
+    "Schlüssel": "29116",
+    "Bezeichnung": "Verderbschadenversicherung"
+  },
+  {
+    "Schlüssel": "29117",
+    "Bezeichnung": "Gärtnereri- Verderbschadenversicherung"
+  },
+  {
+    "Schlüssel": "29119",
+    "Bezeichnung": "Campingversicherung"
+  },
+  {
+    "Schlüssel": "29120",
+    "Bezeichnung": "Versicherung von Kunstgegenständen"
+  },
+  {
+    "Schlüssel": "29121",
+    "Bezeichnung": "Versicherung von Auktionen"
+  },
+  {
+    "Schlüssel": "29122",
+    "Bezeichnung": "Brillenversicherung"
+  },
+  {
+    "Schlüssel": "29199",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Sachschadenversicherung"
+  },
+  {
+    "Schlüssel": "293",
+    "Bezeichnung": "Sonstige Vermögensschadenversicherung"
+  },
+  {
+    "Schlüssel": "29301",
+    "Bezeichnung": "Boykott- und Streikversicherung"
+  },
+  {
+    "Schlüssel": "29302",
+    "Bezeichnung": "Reise-Rücktrittskostenversicherung"
+  },
+  {
+    "Schlüssel": "29304",
+    "Bezeichnung": "Lizenzverlustversicherung"
+  },
+  {
+    "Schlüssel": "29305",
+    "Bezeichnung": "Tierkrankenversicherung"
+  },
+  {
+    "Schlüssel": "29306",
+    "Bezeichnung": "Maschinengarantieversicherung"
+  },
+  {
+    "Schlüssel": "29307",
+    "Bezeichnung": "Datenmissbrauchsversicherung"
+  },
+  {
+    "Schlüssel": "29308",
+    "Bezeichnung": "Scheckkartenversicherung von Scheckkarteninhabern"
+  },
+  {
+    "Schlüssel": "29310",
+    "Bezeichnung": "Insolvenzversicherung"
+  },
+  {
+    "Schlüssel": "29311",
+    "Bezeichnung": "Schlüsselverlustsicherung"
+  },
+  {
+    "Schlüssel": "29312",
+    "Bezeichnung": "Garantieversicherung von Kraftfahrzeugen"
+  },
+  {
+    "Schlüssel": "29313",
+    "Bezeichnung": "Mietverlustversicherung"
+  },
+  {
+    "Schlüssel": "29314",
+    "Bezeichnung": "Raumfahrzeug-Vermögensschadenversicherung"
+  },
+  {
+    "Schlüssel": "29315",
+    "Bezeichnung": "Milchgeldausfallversicherung"
+  },
+  {
+    "Schlüssel": "29316",
+    "Bezeichnung": "Produktschutzversicherung"
+  },
+  {
+    "Schlüssel": "29399",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Vermögensschadenversicherung"
+  },
+  {
+    "Schlüssel": "294",
+    "Bezeichnung": "Sonstige gemischte Versicherung"
+  },
+  {
+    "Schlüssel": "29402",
+    "Bezeichnung": "Tank- und Fassleckageversicherung"
+  },
+  {
+    "Schlüssel": "29403",
+    "Bezeichnung": "Filmtheater- Einheitsversicherung"
+  },
+  {
+    "Schlüssel": "29404",
+    "Bezeichnung": "Versicherung von Winzerbetrieben gegen Frostschäden"
+  },
+  {
+    "Schlüssel": "29405",
+    "Bezeichnung": "Allgefahrenversicherung"
+  },
+  {
+    "Schlüssel": "29406",
+    "Bezeichnung": "Inhaltsversicherung für Geschäfte und Betriebe"
+  },
+  {
+    "Schlüssel": "29407",
+    "Bezeichnung": "Erweiterte Haushaltsversicherung"
+  },
+  {
+    "Schlüssel": "29408",
+    "Bezeichnung": "Dynamische Sachversicherung"
+  },
+  {
+    "Schlüssel": "29499",
+    "Bezeichnung": "Übrige und nicht aufgegliederte gemischte Versicherung"
+  },
+  {
+    "Schlüssel": "296",
+    "Bezeichnung": "Vertrauensschadenversicherung"
+  },
+  {
+    "Schlüssel": "29601",
+    "Bezeichnung": "Vertrauensschadenversicherung (ohne Kennzahlen 26.6.02 und 29.6.04)"
+  },
+  {
+    "Schlüssel": "29602",
+    "Bezeichnung": "Computermissbrauchsversicherung"
+  },
+  {
+    "Schlüssel": "29603",
+    "Bezeichnung": "Versicherung gegen Veruntreuung von Selbstfahrervermieterfahrzeugen"
+  },
+  {
+    "Schlüssel": "29604",
+    "Bezeichnung": "Eigenschadenversicherung von Körperschaften und Anstalten des öffentlichen\nRechts"
+  },
+  {
+    "Schlüssel": "29699",
+    "Bezeichnung": "Übrige und nicht aufgegliederte Vertrauensschadenversicherung"
+  },
+  {
+    "Schlüssel": "299",
+    "Bezeichnung": "Übrige und nicht aufgegliederte sonstige Schadenversicherungen"
+  },
+  {
+    "Schlüssel": "300",
+    "Bezeichnung": "Schaden- und Unfallversicherungen insgesamt"
+  }
+]

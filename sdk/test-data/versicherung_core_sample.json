@@ -1,0 +1,15 @@
+{
+    "Versicherungsnummer": "V-123456",
+    "Versicherungsunternehmen": [
+        {
+            "code": "10002018",
+            "ListVersionId": "1.0",
+            "ListUri": "urn:xoev-de:xjustiz:codeliste:gds.versicherer"
+        }
+    ],
+    "Versicherungstyp": {
+        "code": "05",
+        "ListVersionId": "1.0",
+        "ListUri": "urn:xoev-de:xjustiz:codeliste:gds.versicherung"
+    }
+}

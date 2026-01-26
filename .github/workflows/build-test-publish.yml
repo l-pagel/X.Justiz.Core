@@ -99,6 +99,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -118,6 +120,10 @@ jobs:
             echo "No changes to changelogs."
           else
             git commit -m "chore: sync changelogs from versions.json [skip ci]"
+            
+            # Pull latest changes to avoid conflicts (e.g. from generate-xsd or other pushes)
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+            
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
             echo "::notice ::Changelogs updated and pushed."
           fi

@@ -72,6 +72,19 @@ public enum GeschlechtCode {
 
     private final String value;
     GeschlechtCode(String value) { this.value = value; }
+    private static final java.util.Map<String, GeschlechtCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("Unbekannt / Unknown".toLowerCase(), Unbekannt);
+        ALIASES.put("M&#228;nnlich / Male".toLowerCase(), Maennlich);
+        ALIASES.put("Weiblich / Female".toLowerCase(), Weiblich);
+        ALIASES.put("Divers / Diverse".toLowerCase(), Divers);
+        ALIASES.put("S&#228;chlich / Neuter".toLowerCase(), Saechlich);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -86,11 +99,14 @@ public enum GeschlechtCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static GeschlechtCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (GeschlechtCode e : GeschlechtCode.values()) {
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        GeschlechtCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

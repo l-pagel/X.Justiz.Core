@@ -494,6 +494,10 @@ def parse_csharp_enum(file_path: Path) -> Optional[EnumInfo]:
             iso3_match = re.search(r'ISO-3:\s*(\w+)', raw_description)
             if iso3_match: aliases.append(iso3_match.group(1))
             
+            # Extract bold name as alias (e.g. <b>Alle Sparten</b>)
+            bold_match = re.search(r'<b>([^<]+)</b>', raw_description)
+            if bold_match: aliases.append(bold_match.group(1))
+            
             member_description = convert_csharp_doc_to_javadoc(raw_description)
         else:
             member_description = ""
@@ -587,6 +591,31 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
         lines.append("    }")
         lines.append("")
     
+    # Alias Map
+    lines.append(f"    private static final java.util.Map<String, {enum_info.name}> ALIASES = new java.util.HashMap<>();")
+    
+    alias_entries = []
+    for val in enum_info.values:
+        for alias in val.aliases:
+            alias_entries.append((alias, val.name))
+    
+    if alias_entries:
+        lines.append("    static {")
+        chunk_size = 300
+        alias_chunks = [alias_entries[i:i + chunk_size] for i in range(0, len(alias_entries), chunk_size)]
+        for i in range(len(alias_chunks)):
+            lines.append(f"        initAliases{i}();")
+        lines.append("    }")
+        lines.append("")
+        
+        for i, chunk in enumerate(alias_chunks):
+            lines.append(f"    private static void initAliases{i}() {{")
+            for alias, val_name in chunk:
+                safe_alias = alias.replace('"', '\\"')
+                lines.append(f'        ALIASES.put("{safe_alias}".toLowerCase(), {val_name});')
+            lines.append("    }")
+            lines.append("")
+
     # fromValue
     lines.append("    /**")
     lines.append("     * Creates an enum from a string value.")
@@ -595,22 +624,14 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
     lines.append("     */")
     lines.append("    @JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
+    lines.append(f"        if (value == null || value.isEmpty()) throw new IllegalArgumentException(\"Value cannot be null or empty\");")
     lines.append(f"        for ({enum_info.name} e : $VALUES) {{")
-    
-    conditions = ["e.value.equals(value)", "e.name().equalsIgnoreCase(value)"]
-    for val in enum_info.values:
-        if val.aliases:
-            alias_list = ", ".join([f'"{a}"' for a in val.aliases])
-            lines.append(f'            if (e.name().equals("{val.name}")) {{')
-            lines.append(f'                for (String alias : new String[]{{ {alias_list} }}) {{')
-            lines.append('                    if (alias.equalsIgnoreCase(value)) return e;')
-            lines.append('                }')
-            lines.append('            }')
-            
-    lines.append(f"            if ({' || '.join(conditions)}) {{")
+    lines.append("            if (e.getValue().equals(value) || e.name().equalsIgnoreCase(value)) {")
     lines.append("                return e;")
     lines.append("            }")
     lines.append("        }")
+    lines.append("        " + enum_info.name + " match = ALIASES.get(value.toLowerCase());")
+    lines.append("        if (match != null) return match;")
     lines.append("        throw new IllegalArgumentException(value);")
     lines.append("    }")
     lines.append("")
@@ -667,6 +688,33 @@ def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     
     lines.append("    private final String value;")
     lines.append(f"    {enum_info.name}(String value) {{ this.value = value; }}")
+    
+    # Alias Map
+    lines.append(f"    private static final java.util.Map<String, {enum_info.name}> ALIASES = new java.util.HashMap<>();")
+    
+    alias_entries = []
+    for val in enum_info.values:
+        for alias in val.aliases:
+            alias_entries.append((alias, val.name))
+    
+    if alias_entries:
+        lines.append("    static {")
+        # Split initialization to avoid code size limits in static initializer
+        chunk_size = 300
+        alias_chunks = [alias_entries[i:i + chunk_size] for i in range(0, len(alias_entries), chunk_size)]
+        for i in range(len(alias_chunks)):
+            lines.append(f"        initAliases{i}();")
+        lines.append("    }")
+        lines.append("")
+        
+        for i, chunk in enumerate(alias_chunks):
+            lines.append(f"    private static void initAliases{i}() {{")
+            for alias, val_name in chunk:
+                safe_alias = alias.replace('"', '\\"')
+                lines.append(f'        ALIASES.put("{safe_alias}".toLowerCase(), {val_name});')
+            lines.append("    }")
+            lines.append("")
+
     lines.append("    /**")
     lines.append("     * Gets the xml value.")
     lines.append("     * @return the xml value")
@@ -681,24 +729,14 @@ def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     lines.append("     */")
     lines.append("    @com.fasterxml.jackson.annotation.JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
+    lines.append(f"        if (value == null || value.isEmpty()) throw new IllegalArgumentException(\"Value cannot be null or empty\");")
     lines.append(f"        for ({enum_info.name} e : {enum_info.name}.values()) {{")
-    
-    # Generate match condition
-    conditions = ["e.value.equals(value)", "e.name().equalsIgnoreCase(value)"]
-    # Check for aliases
-    for val in enum_info.values:
-        if val.aliases:
-            alias_list = ", ".join([f'"{a}"' for a in val.aliases])
-            lines.append(f'            if (e.name().equals("{val.name}")) {{')
-            lines.append(f'                for (String alias : new String[]{{ {alias_list} }}) {{')
-            lines.append('                    if (alias.equalsIgnoreCase(value)) return e;')
-            lines.append('                }')
-            lines.append('            }')
-            
-    lines.append(f"            if ({' || '.join(conditions)}) {{")
+    lines.append("            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {")
     lines.append("                return e;")
     lines.append("            }")
     lines.append("        }")
+    lines.append("        " + enum_info.name + " match = ALIASES.get(value.toLowerCase());")
+    lines.append("        if (match != null) return match;")
     lines.append("        throw new IllegalArgumentException(value);")
     lines.append("    }")
     lines.append("")
