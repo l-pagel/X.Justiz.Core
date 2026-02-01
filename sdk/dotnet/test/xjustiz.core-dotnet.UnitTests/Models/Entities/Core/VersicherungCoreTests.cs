@@ -32,7 +32,6 @@ public class VersicherungCoreTests
                                                 // Wait, VersicherungsTyp has [XmlElement("code")], but I also added XML attributes listVersionID/listURI.
                                                 // Let's check the generated XML structure.
 
-
         xml.Should().Contain("code>01</code>");
 
         using var sr = new StringReader(xml);
