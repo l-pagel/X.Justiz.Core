@@ -49,6 +49,7 @@ When adding fields, changing types, or fixing schema:
 3.  **Doc Sync**: If you change the code model, you **MUST** update `Specification.md`.
 4.  **Bilingual Summaries**: When writing model code, add `<summary>German Description / English Description</summary>`.
 5.  **Sync LLM Context**: You MUST check `llms.txt` and update it if changes occur in the project structure, high-level architecture, or key resources.
+6.  **German Legal Context**: Always maintain the context of the German justice system, especially regarding attorneys (Rechtsanwälte) and lawyers. Apply this strict domain context to naming conventions in schemas, documentation, bilingual summaries, and code comments.
 
 ## 5. Code Styling & Git
 - **Ignore Final Blank Lines**: It does not matter if a file ends with a blank line or not. Do not create a change (git diff) solely to fix this. Ignore it.
