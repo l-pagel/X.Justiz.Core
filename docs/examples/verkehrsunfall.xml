@@ -79,40 +79,18 @@
         <kennung>VR-GUTACHTEN</kennung>
         <name>Schadensgutachten</name>
         <beschreibung>Gutachten zum Unfallschaden</beschreibung>
-        <feldgruppe>
-             <name>Versicherung</name>
-             <beschreibung>Details zur Versicherung</beschreibung>
-             <feld>
-                 <name>Versicherungsnummer</name>
-                 <beschreibung>Versicherungsnummer des Beklagten</beschreibung>
-                 <datentyp>string</datentyp>
-                 <wert>VS-99887766</wert>
-             </feld>
-             <feld>
-                 <name>Schadensnummer</name>
-                 <beschreibung>Interne Schadensnummer</beschreibung>
-                 <datentyp>string</datentyp>
-                 <wert>S-2026-XYZ</wert>
-             </feld>
-             <feld>
-                 <name>Versicherungstyp</name>
-                 <beschreibung>Art der Versicherung</beschreibung>
-                 <datentyp>string</datentyp>
-                 <wert>Kraftfahrtversicherung</wert>
-             </feld>
-                 <feldgruppe>
-                     <name>Versicherungsunternehmen</name>
-                     <beschreibung>Informationen zum Versicherer</beschreibung>
-                     <feld>
-                         <name>Name</name>
-                         <wert>Haftpflicht-Versicherung AG</wert>
-                     </feld>
-                     <feld>
-                         <name>BAFIN-ID</name>
-                         <wert>1234</wert>
-                     </feld>
-                 </feldgruppe>
-          </feldgruppe>
+
+             <VersicherungCore xmlns="http://www.xjustizcore.de">
+      <versicherungsnummer>VS-99887766</versicherungsnummer>
+      <versicherungsunternehmen>
+        <code>10002018</code>
+      </versicherungsunternehmen>
+      <schadensnummer>S-2026-XYZ</schadensnummer>
+      <versicherungstyp>
+        <code>05</code>
+      </versicherungstyp>
+    </VersicherungCore>
+
         <feld>
           <name>Schadenshoehe</name>
           <beschreibung>Geschätzter Schaden in Euro</beschreibung>

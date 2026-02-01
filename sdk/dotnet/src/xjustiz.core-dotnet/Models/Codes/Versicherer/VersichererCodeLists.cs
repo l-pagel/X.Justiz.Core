@@ -1,8 +1,8 @@
 namespace xjustiz.core_dotnet.Models.Codes.Versicherer;
 
 /// <summary>
-/// Versionslisten für <see cref="VersicherungsTypCode"/> aus urn:xoev-de:xjustiz:codeliste:gds.versicherung.<br/>
-/// <u><b>Insurance code lists:</b></u> for <see cref="VersicherungsTypCode"/> from urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+/// Versionslisten für <see cref="VersichererCode"/> aus <see href="https://portal.mvp.bafin.de/database/InstInfo/">Unternehmensdatenbank BaFin</see><br/>
+/// <u><b>Insurance code lists:</b></u> for <see cref="VersichererCode"/> from <see href="https://portal.mvp.bafin.de/database/InstInfo/">Unternehmensdatenbank BaFin</see>.
 /// </summary>
 public sealed class VersichererCodeLists : ICodeListCollection<VersichererCode>
 {

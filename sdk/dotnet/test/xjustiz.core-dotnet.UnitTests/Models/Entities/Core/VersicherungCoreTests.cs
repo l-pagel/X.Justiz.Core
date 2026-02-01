@@ -31,18 +31,7 @@ public class VersicherungCoreTests
         xml.Should().Contain("code>01</code>"); // It is an Element 'code', not attribute in the class definition I updated.
                                                 // Wait, VersicherungsTyp has [XmlElement("code")], but I also added XML attributes listVersionID/listURI.
                                                 // Let's check the generated XML structure.
-        /*
-        public class VersicherungsTyp : ICode<...>
-        {
-            [XmlAttribute("listVersionID")]
-            public string ListVersionId ...
-            [XmlElement("code")]
-            public string CodeForXml ...
-        }
-        */
-        // So <versicherungstyp listVersionID="1.0" ...>
-        //      <code ...>01</code>
-        //    </versicherungstyp>
+
 
         xml.Should().Contain("code>01</code>");
 
