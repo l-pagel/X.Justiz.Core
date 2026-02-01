@@ -1,7 +1,15 @@
 namespace xjustiz.core_dotnet.Models.Codes.Versicherer;
 
+/// <summary>
+/// Versionslisten für <see cref="VersicherungsTypCode"/> aus urn:xoev-de:xjustiz:codeliste:gds.versicherung.<br/>
+/// <u><b>Insurance code lists:</b></u> for <see cref="VersicherungsTypCode"/> from urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+/// </summary>
 public sealed class VersichererCodeLists : ICodeListCollection<VersichererCode>
 {
+    /// <summary>
+    /// Versicherungs Codes Version <b>1.0</b>.<br/>
+    /// <u><b>Insurance codes:</b></u> version <b>1.0</b>.
+    /// </summary>
     public static IVersionedCodeList<VersichererCode> All { get; } = new VersionedCodeList<VersichererCode>("1.0")
     {
         VersichererCode.ABC_Insurance_S_A,

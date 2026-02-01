@@ -1,8 +1,8 @@
 namespace xjustiz.core_dotnet.Models.Codes.Versicherung;
 
 /// <summary>
-/// Versionslisten für <see cref="VersicherungsTypCode"/> aus urn:xoev-de:xjustiz:codeliste:gds.versicherung.<br/>
-/// <u><b>Insurance code lists:</b></u> for <see cref="VersicherungsTypCode"/> from urn:xoev-de:xjustiz:codeliste:gds.versicherung.
+/// Versionslisten für <see cref="VersicherungsTypCode"/> aus <see href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK Liste</see>.<br/>
+/// <u><b>Insurance code lists:</b></u> for <see cref="VersicherungsTypCode"/> from <see href="https://github.com/l-pagel/X.Justiz.Core/tree/main/docs">IHK Liste</see>.
 /// </summary>
 public sealed class VersicherungsTypCodeLists : ICodeListCollection<VersicherungsTypCode>
 {
