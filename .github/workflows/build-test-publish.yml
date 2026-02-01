@@ -433,7 +433,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-        run: gradle publishMavenPublicationToGitHubPackagesRepository -Pversion=${{ steps.get_version.outputs.version }}
+        run: |
+          set +e
+          gradle publishMavenPublicationToGitHubPackagesRepository -Pversion=${{ steps.get_version.outputs.version }} > gradle_log.txt 2>&1
+          EXIT_CODE=$?
+          cat gradle_log.txt
+          
+          if [ $EXIT_CODE -eq 0 ]; then
+            exit 0
+          fi
+          
+          if grep -q "409 from server: Conflict" gradle_log.txt; then
+            echo "::warning ::Artifact already exists in GitHub Packages (409 Conflict). Skipping publication."
+            exit 0
+          else
+            exit $EXIT_CODE
+          fi
 
       - name: Java Publish Summary
         if: success() && github.ref == 'refs/heads/main'
