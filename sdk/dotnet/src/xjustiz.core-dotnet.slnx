@@ -1,13 +1,13 @@
 <Solution>
   <Folder Name="/example-datasets/">
-    <File Path="../../example-datasets/arbeitsrecht.json" />
-    <File Path="../../example-datasets/arbeitsrecht.xml" />
-    <File Path="../../example-datasets/erbrecht.json" />
-    <File Path="../../example-datasets/erbrecht.xml" />
-    <File Path="../../example-datasets/fluggastrecht.json" />
-    <File Path="../../example-datasets/fluggastrecht.xml" />
-    <File Path="../../example-datasets/mietrecht.json" />
-    <File Path="../../example-datasets/mietrecht.xml" />
+    <File Path="../../../docs/examples/arbeitsrecht.json" />
+    <File Path="../../../docs/examples/arbeitsrecht.xml" />
+    <File Path="../../../docs/examples/erbrecht.json" />
+    <File Path="../../../docs/examples/erbrecht.xml" />
+    <File Path="../../../docs/examples/fluggastrecht.json" />
+    <File Path="../../../docs/examples/fluggastrecht.xml" />
+    <File Path="../../../docs/examples/mietrecht.json" />
+    <File Path="../../../docs/examples/mietrecht.xml" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path="../../.github/workflows/build-test-publish.yml" />
