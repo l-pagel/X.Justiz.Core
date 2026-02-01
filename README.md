@@ -3,6 +3,10 @@
 > [!TIP]  
 > **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
 
+[![NuGet](https://img.shields.io/nuget/v/xjustiz.core-dotnet)](https://www.nuget.org/packages/xjustiz.core-dotnet)
+[![Maven Central](https://img.shields.io/maven-central/v/de.xjustizcore.io/xjustiz-core)](https://central.sonatype.com/artifact/de.xjustizcore.io/xjustiz-core)  
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=l-pagel_X.Justiz.Core&metric=bugs)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=l-pagel_X.Justiz.Core&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=l-pagel_X.Justiz.Core&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=l-pagel_X.Justiz.Core&metric=coverage)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=l-pagel_X.Justiz.Core&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core)
+
 X.Justiz Core is a lightweight schema for data exchange between software solutions in the legal ecosystem. It is based on the established X.Justiz standard and optimizes it for out-of-court communication and modern LegalTech scenarios.
 
 ## Table of Contents
@@ -141,10 +145,3 @@ Includes examples for:
 ## Developer Resources
 - [**🔧 SDK Generation Workflow**](/docs/SDK-GENERATION.md) - How cross-SDK consistency is maintained
 - [**🧪 Integration Tests**](/sdk/dotnet/test/xjustiz.core-dotnet.IntegrationTests/README.md) - Cross-platform compatibility testing
-
-## Quality Assurance
-The project is regularly checked for quality. You can find the current status on SonarCloud:  
-[![Quality Gate][badge-url]][link-url]
-
-[badge-url]: https://sonarcloud.io/api/project_badges/quality_gate?project=l-pagel_X.Justiz.Core&token=63adaa7af33ae168a0611157ea45aaa0db36852f
-[link-url]: https://sonarcloud.io/summary/new_code?id=l-pagel_X.Justiz.Core

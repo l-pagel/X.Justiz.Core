@@ -77,8 +77,8 @@ publishing {
                 }
                 
                 scm {
-                    connection.set("scm:git:git://github.com/l-pagel/X.Justiz.Core.git")
-                    developerConnection.set("scm:git:ssh://github.com/l-pagel/X.Justiz.Core.git")
+                    connection.set("scm:git:https://github.com/l-pagel/X.Justiz.Core.git")
+                    developerConnection.set("scm:git:ssh://git@github.com/l-pagel/X.Justiz.Core.git")
                     url.set("https://github.com/l-pagel/X.Justiz.Core")
                 }
             }

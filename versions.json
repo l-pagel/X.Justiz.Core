@@ -1,5 +1,12 @@
 [
     {
+        "version": "0.3.2",
+        "changelog": {
+            "en": "Improve documentation and link packages on GitHub",
+            "de": "Verbesserung der Dokumentation und Verlinkung der Pakete auf GitHub"
+        }
+    },
+    {
         "version": "0.3.1",
         "changelog": {
             "en": "Add insurer and insurance type codes\nimprovements of the Java SDK\nimprovement of the documentation",
