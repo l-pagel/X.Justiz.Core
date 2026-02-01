@@ -1,6 +1,5 @@
 package de.xjustiz.core.models;
 
-import java.util.Arrays;
 
 public final class GerichtCodeLists {
 

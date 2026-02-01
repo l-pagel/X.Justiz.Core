@@ -767,14 +767,9 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
     imports = {
         "com.fasterxml.jackson.annotation.JsonIgnoreProperties",
         "com.fasterxml.jackson.annotation.JsonInclude",
-        "com.fasterxml.jackson.annotation.JsonProperty",
-        "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty",
         "jakarta.xml.bind.annotation.XmlAccessType",
-        "jakarta.xml.bind.annotation.XmlType",  # Make sure this is imported
         "jakarta.xml.bind.annotation.XmlAccessorType",
-        "jakarta.xml.bind.annotation.XmlElement",
-        "jakarta.xml.bind.annotation.XmlElementWrapper",
-        "jakarta.xml.bind.annotation.XmlElements",
+        "jakarta.xml.bind.annotation.XmlType",
     }
     
     if class_info.is_root:
@@ -785,17 +780,43 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
         imports.add("com.fasterxml.jackson.annotation.JsonTypeInfo")
         imports.add("com.fasterxml.jackson.annotation.JsonSubTypes")
 
-    if any(p.is_nullable for p in class_info.properties): imports.add("org.jetbrains.annotations.Nullable")
-    if any(p.is_list for p in class_info.properties):
+    # Property-based imports
+    has_list = any(p.is_list for p in class_info.properties)
+    has_nullable = any(p.is_nullable for p in class_info.properties)
+    has_attribute = any(p.is_attribute for p in class_info.properties)
+    has_element = any(not p.is_attribute and not p.is_xml_ignore for p in class_info.properties)
+    has_wrapped_list = any(p.is_wrapped_list for p in class_info.properties)
+    has_multi_element = any(p.xml_elements and len(p.xml_elements) > 1 for p in class_info.properties)
+    has_json_ignore = any(p.is_json_ignore for p in class_info.properties)
+    has_json_alias = any(p.json_aliases for p in class_info.properties)
+    has_xml_transient = any(p.is_xml_ignore for p in class_info.properties)
+    has_custom_json_prop = any(not p.is_json_ignore for p in class_info.properties) # Mostly true
+
+    if has_nullable: imports.add("org.jetbrains.annotations.Nullable")
+    if has_list:
         imports.add("java.util.List")
         imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper")
+    
     if any(p.type_name == "OffsetDateTime" for p in class_info.properties): imports.add("java.time.OffsetDateTime")
     if any(p.type_name == "BigDecimal" for p in class_info.properties): imports.add("java.math.BigDecimal")
     if any(p.type_name == "UUID" for p in class_info.properties): imports.add("java.util.UUID")
-    if any(p.is_attribute for p in class_info.properties): imports.add("jakarta.xml.bind.annotation.XmlAttribute")
-    if any(p.json_aliases for p in class_info.properties): imports.add("com.fasterxml.jackson.annotation.JsonAlias")
-    if any(p.is_json_ignore for p in class_info.properties): imports.add("com.fasterxml.jackson.annotation.JsonIgnore")
-    if any(p.is_xml_ignore for p in class_info.properties): imports.add("jakarta.xml.bind.annotation.XmlTransient")
+    
+    if has_attribute: 
+        imports.add("jakarta.xml.bind.annotation.XmlAttribute")
+        
+    if has_element:
+        # JacksonXmlProperty is very common for elements to set localName
+        imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty")
+        imports.add("jakarta.xml.bind.annotation.XmlElement")
+
+    if has_wrapped_list: imports.add("jakarta.xml.bind.annotation.XmlElementWrapper")
+    if has_multi_element: imports.add("jakarta.xml.bind.annotation.XmlElements")
+    if has_json_alias: imports.add("com.fasterxml.jackson.annotation.JsonAlias")
+    if has_json_ignore: imports.add("com.fasterxml.jackson.annotation.JsonIgnore")
+    if has_xml_transient: imports.add("jakarta.xml.bind.annotation.XmlTransient")
+    if has_custom_json_prop: imports.add("com.fasterxml.jackson.annotation.JsonProperty")
+    if has_attribute: imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty")
+
 
     for imp in sorted(imports): lines.append(f"import {imp};")
     lines.append("")
@@ -1090,7 +1111,7 @@ def parse_codelists(file_path: Path) -> Optional[CodeListInfo]:
 
 def generate_codelists(info: CodeListInfo, package: str) -> str:
     lines = [f"package {package};", ""]
-    lines.append("import java.util.Arrays;")
+    # lines.append("import java.util.Arrays;") # Optimization: Array not used
     lines.append("")
     lines.append(f"public final class {info.name} {{")
     lines.append("")
