@@ -115,7 +115,7 @@ public class E2E_SampleFileTests
         {
             if (reader.TokenType == JsonTokenType.Number)
             {
-                return reader.TryGetInt64(out long l) ? l.ToString() : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture);
+                return reader.TryGetInt64(out var l) ? l.ToString() : reader.GetDouble().ToString(System.Globalization.CultureInfo.InvariantCulture);
             }
 
             if (reader.TokenType == JsonTokenType.String)
