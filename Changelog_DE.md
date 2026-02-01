@@ -1,5 +1,10 @@
 # Änderungshistorie
 
+## Version 0.3.1
+- Ergänzung von Versicherer- und Versicherungstyp-Codes
+- Verbesserungen der Java SDK
+- Verbesserung der Dokumentation
+
 ## Version 0.3.0
 - Java SDK hinzugefügt
 
