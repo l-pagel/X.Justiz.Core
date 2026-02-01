@@ -1,0 +1,30 @@
+# X.Justiz Core
+
+> A lightweight schema for data exchange in the legal ecosystem, based on the X.Justiz standard and optimized for LegalTech.
+
+## Overview
+
+X.Justiz Core adapts the official German X.Justiz standard for modern, out-of-court communication. It simplifies the complex standard into a practice-relevant subset and adds features like JSON support and simplified document transfer.
+
+## Key Resources
+
+- **Specification**: [docs/Specification.md](docs/Specification.md) - The primary technical reference for the data model.
+- **Examples**: [docs/examples/](docs/examples/) - Sample XML and JSON files for various legal scenarios (e.g., Traffic Law, Labor Law).
+- **Schemas**: [schemas/](schemas/) - XSD files for validation.
+
+## Architecture
+
+- **SDKs**: Located in `sdk/`. Currently supports .NET (`sdk/dotnet`) and Java (`sdk/java`).
+- **Code Generation**: Models are often generated from XSDs or custom definitions. See `docs/SDK-GENERATION.md`.
+- **Custom Extensions**: Adds new code lists (e.g., Insurers) where the standard is lacking. See `docs/codes/`.
+
+## Core Concepts
+
+- **X.Justiz Compatibility**: Data is designed to be compatible with X.Justiz (version 2.1.0+), facilitating integration with official judicial systems.
+- **Code Lists**: Uses standard codes from XRepository (e.g., Courts, Roles) and custom lists for Insurers.
+- **Hybrid Format**: Supports both XML (strict validation) and JSON (modern APIs).
+
+## Development
+
+- **Build**: Uses Gradle for Java and `dotnet` CLI for .NET.
+- **Scripts**: Dictionary of helper scripts in `scripts/` (e.g., Python scripts to generate models).
