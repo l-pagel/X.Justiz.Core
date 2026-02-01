@@ -84,6 +84,17 @@
                     "Kennung": "FLY-EXT-001",
                     "Name": "Flugdaten",
                     "Beschreibung": "Detaillierte Informationen zum beanstandeten Flug",
+                    "VersicherungCore": {
+                        "Versicherungsnummer": "RV-11-22-33-44",
+                        "Versicherungsunternehmen": [
+                            {
+                                "Code": "10001328"
+                            }
+                        ],
+                        "Versicherungstyp": {
+                            "Code": "000"
+                        }
+                    },
                     "Feldgruppen": [
                         {
                             "Name": "Flugverbindung",

@@ -78,6 +78,17 @@
                     "Kennung": "MIET-EXT-001",
                     "Name": "Mietobjekt Details",
                     "Beschreibung": "Informationen zur betroffenen Mieteinheit",
+                    "VersicherungCore": {
+                        "Versicherungsnummer": "H-99887766",
+                        "Versicherungsunternehmen": [
+                            {
+                                "Code": "10002018"
+                            }
+                        ],
+                        "Versicherungstyp": {
+                            "Code": "000"
+                        }
+                    },
                     "Feldgruppen": [
                         {
                             "Name": "Objektbeschreibung",

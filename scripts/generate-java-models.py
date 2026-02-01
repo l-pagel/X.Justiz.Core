@@ -494,6 +494,10 @@ def parse_csharp_enum(file_path: Path) -> Optional[EnumInfo]:
             iso3_match = re.search(r'ISO-3:\s*(\w+)', raw_description)
             if iso3_match: aliases.append(iso3_match.group(1))
             
+            # Extract bold name as alias (e.g. <b>Alle Sparten</b>)
+            bold_match = re.search(r'<b>([^<]+)</b>', raw_description)
+            if bold_match: aliases.append(bold_match.group(1))
+            
             member_description = convert_csharp_doc_to_javadoc(raw_description)
         else:
             member_description = ""
@@ -587,6 +591,31 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
         lines.append("    }")
         lines.append("")
     
+    # Alias Map
+    lines.append(f"    private static final java.util.Map<String, {enum_info.name}> ALIASES = new java.util.HashMap<>();")
+    
+    alias_entries = []
+    for val in enum_info.values:
+        for alias in val.aliases:
+            alias_entries.append((alias, val.name))
+    
+    if alias_entries:
+        lines.append("    static {")
+        chunk_size = 300
+        alias_chunks = [alias_entries[i:i + chunk_size] for i in range(0, len(alias_entries), chunk_size)]
+        for i in range(len(alias_chunks)):
+            lines.append(f"        initAliases{i}();")
+        lines.append("    }")
+        lines.append("")
+        
+        for i, chunk in enumerate(alias_chunks):
+            lines.append(f"    private static void initAliases{i}() {{")
+            for alias, val_name in chunk:
+                safe_alias = alias.replace('"', '\\"')
+                lines.append(f'        ALIASES.put("{safe_alias}".toLowerCase(), {val_name});')
+            lines.append("    }")
+            lines.append("")
+
     # fromValue
     lines.append("    /**")
     lines.append("     * Creates an enum from a string value.")
@@ -595,22 +624,14 @@ def generate_large_enum_class(enum_info: EnumInfo, package: str) -> str:
     lines.append("     */")
     lines.append("    @JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
+    lines.append(f"        if (value == null || value.isEmpty()) throw new IllegalArgumentException(\"Value cannot be null or empty\");")
     lines.append(f"        for ({enum_info.name} e : $VALUES) {{")
-    
-    conditions = ["e.value.equals(value)", "e.name().equalsIgnoreCase(value)"]
-    for val in enum_info.values:
-        if val.aliases:
-            alias_list = ", ".join([f'"{a}"' for a in val.aliases])
-            lines.append(f'            if (e.name().equals("{val.name}")) {{')
-            lines.append(f'                for (String alias : new String[]{{ {alias_list} }}) {{')
-            lines.append('                    if (alias.equalsIgnoreCase(value)) return e;')
-            lines.append('                }')
-            lines.append('            }')
-            
-    lines.append(f"            if ({' || '.join(conditions)}) {{")
+    lines.append("            if (e.getValue().equals(value) || e.name().equalsIgnoreCase(value)) {")
     lines.append("                return e;")
     lines.append("            }")
     lines.append("        }")
+    lines.append("        " + enum_info.name + " match = ALIASES.get(value.toLowerCase());")
+    lines.append("        if (match != null) return match;")
     lines.append("        throw new IllegalArgumentException(value);")
     lines.append("    }")
     lines.append("")
@@ -667,6 +688,33 @@ def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     
     lines.append("    private final String value;")
     lines.append(f"    {enum_info.name}(String value) {{ this.value = value; }}")
+    
+    # Alias Map
+    lines.append(f"    private static final java.util.Map<String, {enum_info.name}> ALIASES = new java.util.HashMap<>();")
+    
+    alias_entries = []
+    for val in enum_info.values:
+        for alias in val.aliases:
+            alias_entries.append((alias, val.name))
+    
+    if alias_entries:
+        lines.append("    static {")
+        # Split initialization to avoid code size limits in static initializer
+        chunk_size = 300
+        alias_chunks = [alias_entries[i:i + chunk_size] for i in range(0, len(alias_entries), chunk_size)]
+        for i in range(len(alias_chunks)):
+            lines.append(f"        initAliases{i}();")
+        lines.append("    }")
+        lines.append("")
+        
+        for i, chunk in enumerate(alias_chunks):
+            lines.append(f"    private static void initAliases{i}() {{")
+            for alias, val_name in chunk:
+                safe_alias = alias.replace('"', '\\"')
+                lines.append(f'        ALIASES.put("{safe_alias}".toLowerCase(), {val_name});')
+            lines.append("    }")
+            lines.append("")
+
     lines.append("    /**")
     lines.append("     * Gets the xml value.")
     lines.append("     * @return the xml value")
@@ -681,24 +729,14 @@ def generate_java_enum(enum_info: EnumInfo, package: str) -> str:
     lines.append("     */")
     lines.append("    @com.fasterxml.jackson.annotation.JsonCreator")
     lines.append(f"    public static {enum_info.name} fromValue(String value) {{")
+    lines.append(f"        if (value == null || value.isEmpty()) throw new IllegalArgumentException(\"Value cannot be null or empty\");")
     lines.append(f"        for ({enum_info.name} e : {enum_info.name}.values()) {{")
-    
-    # Generate match condition
-    conditions = ["e.value.equals(value)", "e.name().equalsIgnoreCase(value)"]
-    # Check for aliases
-    for val in enum_info.values:
-        if val.aliases:
-            alias_list = ", ".join([f'"{a}"' for a in val.aliases])
-            lines.append(f'            if (e.name().equals("{val.name}")) {{')
-            lines.append(f'                for (String alias : new String[]{{ {alias_list} }}) {{')
-            lines.append('                    if (alias.equalsIgnoreCase(value)) return e;')
-            lines.append('                }')
-            lines.append('            }')
-            
-    lines.append(f"            if ({' || '.join(conditions)}) {{")
+    lines.append("            if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {")
     lines.append("                return e;")
     lines.append("            }")
     lines.append("        }")
+    lines.append("        " + enum_info.name + " match = ALIASES.get(value.toLowerCase());")
+    lines.append("        if (match != null) return match;")
     lines.append("        throw new IllegalArgumentException(value);")
     lines.append("    }")
     lines.append("")
@@ -729,14 +767,9 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
     imports = {
         "com.fasterxml.jackson.annotation.JsonIgnoreProperties",
         "com.fasterxml.jackson.annotation.JsonInclude",
-        "com.fasterxml.jackson.annotation.JsonProperty",
-        "com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty",
         "jakarta.xml.bind.annotation.XmlAccessType",
-        "jakarta.xml.bind.annotation.XmlType",  # Make sure this is imported
         "jakarta.xml.bind.annotation.XmlAccessorType",
-        "jakarta.xml.bind.annotation.XmlElement",
-        "jakarta.xml.bind.annotation.XmlElementWrapper",
-        "jakarta.xml.bind.annotation.XmlElements",
+        "jakarta.xml.bind.annotation.XmlType",
     }
     
     if class_info.is_root:
@@ -747,17 +780,43 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
         imports.add("com.fasterxml.jackson.annotation.JsonTypeInfo")
         imports.add("com.fasterxml.jackson.annotation.JsonSubTypes")
 
-    if any(p.is_nullable for p in class_info.properties): imports.add("org.jetbrains.annotations.Nullable")
-    if any(p.is_list for p in class_info.properties):
+    # Property-based imports
+    has_list = any(p.is_list for p in class_info.properties)
+    has_nullable = any(p.is_nullable for p in class_info.properties)
+    has_attribute = any(p.is_attribute for p in class_info.properties)
+    has_element = any(not p.is_attribute and not p.is_xml_ignore for p in class_info.properties)
+    has_wrapped_list = any(p.is_wrapped_list for p in class_info.properties)
+    has_multi_element = any(p.xml_elements and len(p.xml_elements) > 1 for p in class_info.properties)
+    has_json_ignore = any(p.is_json_ignore for p in class_info.properties)
+    has_json_alias = any(p.json_aliases for p in class_info.properties)
+    has_xml_transient = any(p.is_xml_ignore for p in class_info.properties)
+    has_custom_json_prop = any(not p.is_json_ignore for p in class_info.properties) # Mostly true
+
+    if has_nullable: imports.add("org.jetbrains.annotations.Nullable")
+    if has_list:
         imports.add("java.util.List")
         imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper")
+    
     if any(p.type_name == "OffsetDateTime" for p in class_info.properties): imports.add("java.time.OffsetDateTime")
     if any(p.type_name == "BigDecimal" for p in class_info.properties): imports.add("java.math.BigDecimal")
     if any(p.type_name == "UUID" for p in class_info.properties): imports.add("java.util.UUID")
-    if any(p.is_attribute for p in class_info.properties): imports.add("jakarta.xml.bind.annotation.XmlAttribute")
-    if any(p.json_aliases for p in class_info.properties): imports.add("com.fasterxml.jackson.annotation.JsonAlias")
-    if any(p.is_json_ignore for p in class_info.properties): imports.add("com.fasterxml.jackson.annotation.JsonIgnore")
-    if any(p.is_xml_ignore for p in class_info.properties): imports.add("jakarta.xml.bind.annotation.XmlTransient")
+    
+    if has_attribute: 
+        imports.add("jakarta.xml.bind.annotation.XmlAttribute")
+        
+    if has_element:
+        # JacksonXmlProperty is very common for elements to set localName
+        imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty")
+        imports.add("jakarta.xml.bind.annotation.XmlElement")
+
+    if has_wrapped_list: imports.add("jakarta.xml.bind.annotation.XmlElementWrapper")
+    if has_multi_element: imports.add("jakarta.xml.bind.annotation.XmlElements")
+    if has_json_alias: imports.add("com.fasterxml.jackson.annotation.JsonAlias")
+    if has_json_ignore: imports.add("com.fasterxml.jackson.annotation.JsonIgnore")
+    if has_xml_transient: imports.add("jakarta.xml.bind.annotation.XmlTransient")
+    if has_custom_json_prop: imports.add("com.fasterxml.jackson.annotation.JsonProperty")
+    if has_attribute: imports.add("com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty")
+
 
     for imp in sorted(imports): lines.append(f"import {imp};")
     lines.append("")
@@ -869,6 +928,226 @@ def generate_java_class(class_info: ClassInfo, package: str) -> str:
     lines.append("}")
     return "\n".join(lines)
 
+@dataclass
+class MapperInfo:
+    name: str
+    enum_name: str
+    entries: List[Tuple[str, str]]
+
+def parse_mapper(file_path: Path) -> Optional[MapperInfo]:
+    try:
+        content = file_path.read_text(encoding="utf-8")
+    except Exception:
+        return None
+    
+    class_match = re.search(r"public\s+static\s+(?:partial\s+)?class\s+(\w+)", content)
+    if not class_match: return None
+    class_name = class_match.group(1)
+    
+    # Try to deduce Enum name from class name (e.g. GerichtCodeMapper -> GerichtCode)
+    enum_name = class_name.replace("Mapper", "")
+    
+    # Find Dictionary
+    # private static readonly Dictionary<string, GerichtCode> Map = new(StringComparer.OrdinalIgnoreCase)
+    dict_match = re.search(r"Dictionary<string,\s*(\w+)>\s+Map\s*=", content)
+    if dict_match:
+         enum_name = dict_match.group(1)
+
+    # Find entries
+    # { "key", Enum.Value },
+    entries = []
+    
+    start_pos = content.find("new(StringComparer.OrdinalIgnoreCase)")
+    if start_pos == -1: 
+        start_pos = content.find("Dictionary<string")
+    
+    if start_pos == -1: return None
+
+    open_brace = content.find("{", start_pos)
+    close_brace = content.find("};", open_brace)
+    
+    if open_brace == -1 or close_brace == -1: return None
+    
+    dict_body = content[open_brace+1:close_brace]
+    
+    # Remove comments
+    dict_body = re.sub(r'//.*', '', dict_body)
+    
+    for line in dict_body.splitlines():
+        line = line.strip()
+        if not line: continue
+        
+        # Match { "key", Enum.Value } or { "key", Value }
+        m = re.match(r'\{\s*"([^"]+)"\s*,\s*([^}]+)\s*\}', line)
+        if m:
+            key = m.group(1)
+            val_raw = m.group(2).strip()
+            # Clean val_raw (remove EnumName. prefix if present)
+            if "." in val_raw:
+                val = val_raw.split(".")[-1]
+            else:
+                val = val_raw
+                
+            entries.append((key, val))
+            
+    return MapperInfo(class_name, enum_name, entries)
+
+def generate_mapper(info: MapperInfo, package: str) -> str:
+    lines = [f"package {package};", ""]
+    lines.append("import java.util.Collections;")
+    lines.append("import java.util.HashMap;")
+    lines.append("import java.util.Map;")
+    lines.append("import java.util.Optional;")
+    lines.append("")
+    
+    lines.append(f"public final class {info.name} {{")
+    lines.append("")
+    lines.append(f"    private static final Map<String, {info.enum_name}> MAP;")
+    lines.append("")
+    lines.append("    static {")
+    lines.append(f"        Map<String, {info.enum_name}> map = new HashMap<>();")
+    
+    chunk_size = 500
+    chunks = [info.entries[i:i + chunk_size] for i in range(0, len(info.entries), chunk_size)]
+    
+    for i, chunk in enumerate(chunks):
+        lines.append(f"        init{i}(map);")
+    
+    lines.append("        MAP = Collections.unmodifiableMap(map);")
+    lines.append("    }")
+    lines.append("")
+    
+    for i, chunk in enumerate(chunks):
+        lines.append(f"    private static void init{i}(Map<String, {info.enum_name}> map) {{")
+        for key, val in chunk:
+             safe_key = key.replace('"', '\\"')
+             lines.append(f'        map.put("{safe_key}", {info.enum_name}.{val});')
+             lines.append(f'        map.put("{safe_key}".toLowerCase(), {info.enum_name}.{val});')
+        lines.append("    }")
+        lines.append("")
+
+    lines.append("    private "+ info.name +"() {}")
+    lines.append("")
+    lines.append("    /**")
+    lines.append(f"     * Maps a string to {info.enum_name}.")
+    lines.append("     * @param key the string to map")
+    lines.append(f"     * @return the mapped {info.enum_name} or empty if not found")
+    lines.append("     */")
+    lines.append(f"    public static Optional<{info.enum_name}> map(String key) {{")
+    lines.append("        if (key == null) return Optional.empty();")
+    lines.append("        return Optional.ofNullable(MAP.get(key));")
+    lines.append("    }")
+    lines.append("")
+    lines.append(f"    public static Optional<{info.enum_name}> mapIgnoreCase(String key) {{")
+    lines.append("        if (key == null) return Optional.empty();")
+    lines.append("        return Optional.ofNullable(MAP.get(key.toLowerCase()));")
+    lines.append("    }")
+    lines.append("}")
+    return "\n".join(lines)
+
+@dataclass
+class CodeListInfo:
+    name: str # e.g. GerichtCodeLists
+    enum_name: str # e.g. GerichtCode
+    versions: List[Tuple[str, str, List[str]]] # version_field_name (V3_6), version_val (3.6), items
+
+def parse_codelists(file_path: Path) -> Optional[CodeListInfo]:
+    try:
+        content = file_path.read_text(encoding="utf-8")
+    except Exception:
+        return None
+
+    class_match = re.search(r"public\s+(?:sealed\s+)?class\s+(\w+)\s*:", content)
+    if not class_match: return None
+    class_name = class_match.group(1)
+    
+    # Deduce enum name
+    enum_name = class_name.replace("Lists", "")
+    
+    versions = []
+    
+    pos = 0
+    while True:
+        match = re.search(r'public\s+static\s+IVersionedCodeList<(\w+)>\s+(\w+)\s*\{\s*get;\s*\}\s*=\s*new\s+VersionedCodeList<\w+>\("([^"]+)"\)', content[pos:])
+        if not match: break
+        
+        found_enum_name = match.group(1)
+        version_field = match.group(2)
+        version_val = match.group(3)
+        
+        enum_name = found_enum_name 
+        
+        match_end = pos + match.end()
+        
+        open_brace = content.find('{', match_end)
+        if open_brace != -1:
+             brace_count = 1
+             i = open_brace + 1
+             while i < len(content) and brace_count > 0:
+                 if content[i] == '{': brace_count += 1
+                 elif content[i] == '}': brace_count -= 1
+                 i += 1
+             
+             if brace_count == 0:
+                 list_body = content[open_brace+1 : i-1]
+                 items = []
+                 for line in list_body.splitlines():
+                     line = line.strip()
+                     if not line: continue
+                     line = line.rstrip(',')
+                     if "." in line:
+                         items.append(line.split(".")[-1])
+                     else:
+                         items.append(line)
+                 
+                 versions.append((version_field, version_val, items))
+                 pos = i
+             else:
+                 pos = match_end
+        else:
+            pos = match_end
+            
+    return CodeListInfo(class_name, enum_name, versions)
+
+def generate_codelists(info: CodeListInfo, package: str) -> str:
+    lines = [f"package {package};", ""]
+    # lines.append("import java.util.Arrays;") # Optimization: Array not used
+    lines.append("")
+    lines.append(f"public final class {info.name} {{")
+    lines.append("")
+    lines.append(f"    private {info.name}() {{}}")
+    lines.append("")
+    
+    for field_name, version_val, items in info.versions:
+        lines.append(f'    public static final IVersionedCodeList<{info.enum_name}> {field_name};')
+    
+    lines.append("")
+    lines.append("    static {")
+    for field_name, version_val, items in info.versions:
+        lines.append(f'        {field_name} = new VersionedCodeList<>("{version_val}");')
+        
+        chunk_size = 500
+        chunks = [items[i:i + chunk_size] for i in range(0, len(items), chunk_size)]
+        
+        for i, chunk in enumerate(chunks):
+            lines.append(f"        init{field_name}_{i}();")
+
+    lines.append("    }")
+    lines.append("")
+
+    for field_name, version_val, items in info.versions:
+         chunk_size = 500
+         chunks = [items[i:i + chunk_size] for i in range(0, len(items), chunk_size)]
+         for i, chunk in enumerate(chunks):
+             lines.append(f"    private static void init{field_name}_{i}() {{")
+             for item in chunk:
+                 lines.append(f"        {field_name}.add({info.enum_name}.{item});")
+             lines.append("    }")
+             lines.append("")
+
+    lines.append("}")
+    return "\n".join(lines)
+
 def run_command(command: str, cwd: str = "."):
     """Run a shell command."""
     print(f"Running: {command}")
@@ -928,6 +1207,34 @@ def main():
             processed += 1
         except Exception as e:
             print(f"Error processing enum {enum_file.name}: {e}")
+            errors += 1
+
+    # Process code lists
+    print("Step 4: Processing C# code lists...")
+    list_files = list(codes_path.rglob("*CodeLists.cs"))
+    for list_file in list_files:
+        info = parse_codelists(list_file)
+        if not info: continue
+        try:
+            java_code = generate_codelists(info, "de.xjustiz.core.models")
+            (output_path / f"{info.name}.java").write_text(java_code, encoding="utf-8")
+            processed += 1
+        except Exception as e:
+            print(f"Error processing code list {list_file.name}: {e}")
+            errors += 1
+
+    # Process mappers
+    print("Step 5: Processing C# code mappers...")
+    mapper_files = list(codes_path.rglob("*CodeMapper.cs"))
+    for mapper_file in mapper_files:
+        info = parse_mapper(mapper_file)
+        if not info: continue
+        try:
+            java_code = generate_mapper(info, "de.xjustiz.core.models")
+            (output_path / f"{info.name}.java").write_text(java_code, encoding="utf-8")
+            processed += 1
+        except Exception as e:
+            print(f"Error processing mapper {mapper_file.name}: {e}")
             errors += 1
     
     print(f"\nDone! Processed {processed} files with {errors} errors.")

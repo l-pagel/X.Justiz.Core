@@ -49,7 +49,7 @@
                   "Postleitzahl": "12345",
                   "Ort": "Teststadt",
                   "Staat": {
-                    "Code": "Deutschland"
+                    "Code": "DE"
                   }
                 },
                 "Telekommunikation": [
@@ -83,6 +83,17 @@
           "Kennung": "ERB-EXT-001",
           "Name": "Zusatzinfos Erbrecht",
           "Beschreibung": "Zusätzliche Fakten zum Erbfall",
+          "VersicherungCore": {
+            "Versicherungsnummer": "LV-123456789",
+            "Versicherungsunternehmen": [
+              {
+                "Code": "10001007"
+              }
+            ],
+            "Versicherungstyp": {
+              "Code": "01"
+            }
+          },
           "Feldgruppen": [
             {
               "Name": "Nachlasswerte",

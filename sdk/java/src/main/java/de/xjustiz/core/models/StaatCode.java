@@ -3760,6 +3760,609 @@ public enum StaatCode {
 
     private final String value;
     StaatCode(String value) { this.value = value; }
+    private static final java.util.Map<String, StaatCode> ALIASES = new java.util.HashMap<>();
+    static {
+        initAliases0();
+        initAliases1();
+    }
+
+    private static void initAliases0() {
+        ALIASES.put("DE".toLowerCase(), Deutschland);
+        ALIASES.put("DEU".toLowerCase(), Deutschland);
+        ALIASES.put("Deutschland / Germany".toLowerCase(), Deutschland);
+        ALIASES.put("AL".toLowerCase(), Albanien);
+        ALIASES.put("ALB".toLowerCase(), Albanien);
+        ALIASES.put("Albanien / Albania".toLowerCase(), Albanien);
+        ALIASES.put("BA".toLowerCase(), Bosnien_und_Herzegowina);
+        ALIASES.put("BIH".toLowerCase(), Bosnien_und_Herzegowina);
+        ALIASES.put("Bosnien und Herzegowina / Bosnia &amp; Herzegovina".toLowerCase(), Bosnien_und_Herzegowina);
+        ALIASES.put("AD".toLowerCase(), Andorra);
+        ALIASES.put("AND".toLowerCase(), Andorra);
+        ALIASES.put("Andorra".toLowerCase(), Andorra);
+        ALIASES.put("BE".toLowerCase(), Belgien);
+        ALIASES.put("BEL".toLowerCase(), Belgien);
+        ALIASES.put("Belgien / Belgium".toLowerCase(), Belgien);
+        ALIASES.put("BG".toLowerCase(), Bulgarien);
+        ALIASES.put("BGR".toLowerCase(), Bulgarien);
+        ALIASES.put("Bulgarien / Bulgaria".toLowerCase(), Bulgarien);
+        ALIASES.put("DK".toLowerCase(), Daenemark);
+        ALIASES.put("DNK".toLowerCase(), Daenemark);
+        ALIASES.put("D&#228;nemark / Denmark".toLowerCase(), Daenemark);
+        ALIASES.put("EE".toLowerCase(), Estland);
+        ALIASES.put("EST".toLowerCase(), Estland);
+        ALIASES.put("Estland / Estonia".toLowerCase(), Estland);
+        ALIASES.put("FI".toLowerCase(), Finnland);
+        ALIASES.put("FIN".toLowerCase(), Finnland);
+        ALIASES.put("Finnland / Finland".toLowerCase(), Finnland);
+        ALIASES.put("FR".toLowerCase(), Frankreich);
+        ALIASES.put("FRA".toLowerCase(), Frankreich);
+        ALIASES.put("Frankreich / France".toLowerCase(), Frankreich);
+        ALIASES.put("HR".toLowerCase(), Kroatien);
+        ALIASES.put("HRV".toLowerCase(), Kroatien);
+        ALIASES.put("Kroatien / Croatia".toLowerCase(), Kroatien);
+        ALIASES.put("SI".toLowerCase(), Slowenien);
+        ALIASES.put("SVN".toLowerCase(), Slowenien);
+        ALIASES.put("Slowenien / Slovenia".toLowerCase(), Slowenien);
+        ALIASES.put("GR".toLowerCase(), Griechenland);
+        ALIASES.put("GRC".toLowerCase(), Griechenland);
+        ALIASES.put("Griechenland / Greece".toLowerCase(), Griechenland);
+        ALIASES.put("IE".toLowerCase(), Irland);
+        ALIASES.put("IRL".toLowerCase(), Irland);
+        ALIASES.put("Irland / Ireland".toLowerCase(), Irland);
+        ALIASES.put("IS".toLowerCase(), Island);
+        ALIASES.put("ISL".toLowerCase(), Island);
+        ALIASES.put("Island / Iceland".toLowerCase(), Island);
+        ALIASES.put("IT".toLowerCase(), Italien);
+        ALIASES.put("ITA".toLowerCase(), Italien);
+        ALIASES.put("Italien / Italy".toLowerCase(), Italien);
+        ALIASES.put("LV".toLowerCase(), Lettland);
+        ALIASES.put("LVA".toLowerCase(), Lettland);
+        ALIASES.put("Lettland / Latvia".toLowerCase(), Lettland);
+        ALIASES.put("ME".toLowerCase(), Montenegro);
+        ALIASES.put("MNE".toLowerCase(), Montenegro);
+        ALIASES.put("Montenegro".toLowerCase(), Montenegro);
+        ALIASES.put("LI".toLowerCase(), Liechtenstein);
+        ALIASES.put("LIE".toLowerCase(), Liechtenstein);
+        ALIASES.put("Liechtenstein".toLowerCase(), Liechtenstein);
+        ALIASES.put("LT".toLowerCase(), Litauen);
+        ALIASES.put("LTU".toLowerCase(), Litauen);
+        ALIASES.put("Litauen / Lithuania".toLowerCase(), Litauen);
+        ALIASES.put("LU".toLowerCase(), Luxemburg);
+        ALIASES.put("LUX".toLowerCase(), Luxemburg);
+        ALIASES.put("Luxemburg / Luxembourg".toLowerCase(), Luxemburg);
+        ALIASES.put("MK".toLowerCase(), Nordmazedonien);
+        ALIASES.put("MKD".toLowerCase(), Nordmazedonien);
+        ALIASES.put("Nordmazedonien / North Macedonia".toLowerCase(), Nordmazedonien);
+        ALIASES.put("MT".toLowerCase(), Malta);
+        ALIASES.put("MLT".toLowerCase(), Malta);
+        ALIASES.put("Malta".toLowerCase(), Malta);
+        ALIASES.put("MD".toLowerCase(), Republik_Moldau);
+        ALIASES.put("MDA".toLowerCase(), Republik_Moldau);
+        ALIASES.put("Republik Moldau / Moldova".toLowerCase(), Republik_Moldau);
+        ALIASES.put("MC".toLowerCase(), Monaco);
+        ALIASES.put("MCO".toLowerCase(), Monaco);
+        ALIASES.put("Monaco".toLowerCase(), Monaco);
+        ALIASES.put("NL".toLowerCase(), Koenigreich_der_Niederlande);
+        ALIASES.put("NLD".toLowerCase(), Koenigreich_der_Niederlande);
+        ALIASES.put("K&#246;nigreich der Niederlande / Netherlands".toLowerCase(), Koenigreich_der_Niederlande);
+        ALIASES.put("NO".toLowerCase(), Norwegen);
+        ALIASES.put("NOR".toLowerCase(), Norwegen);
+        ALIASES.put("Norwegen / Norway".toLowerCase(), Norwegen);
+        ALIASES.put("XK".toLowerCase(), Kosovo);
+        ALIASES.put("XXK".toLowerCase(), Kosovo);
+        ALIASES.put("Kosovo".toLowerCase(), Kosovo);
+        ALIASES.put("AT".toLowerCase(), Oesterreich);
+        ALIASES.put("AUT".toLowerCase(), Oesterreich);
+        ALIASES.put("&#214;sterreich / Austria".toLowerCase(), Oesterreich);
+        ALIASES.put("PL".toLowerCase(), Polen);
+        ALIASES.put("POL".toLowerCase(), Polen);
+        ALIASES.put("Polen / Poland".toLowerCase(), Polen);
+        ALIASES.put("PT".toLowerCase(), Portugal);
+        ALIASES.put("PRT".toLowerCase(), Portugal);
+        ALIASES.put("Portugal".toLowerCase(), Portugal);
+        ALIASES.put("RO".toLowerCase(), Rumaenien);
+        ALIASES.put("ROU".toLowerCase(), Rumaenien);
+        ALIASES.put("Rum&#228;nien / Romania".toLowerCase(), Rumaenien);
+        ALIASES.put("SK".toLowerCase(), Slowakei);
+        ALIASES.put("SVK".toLowerCase(), Slowakei);
+        ALIASES.put("Slowakei / Slovakia".toLowerCase(), Slowakei);
+        ALIASES.put("SM".toLowerCase(), San_Marino);
+        ALIASES.put("SMR".toLowerCase(), San_Marino);
+        ALIASES.put("San Marino".toLowerCase(), San_Marino);
+        ALIASES.put("SE".toLowerCase(), Schweden);
+        ALIASES.put("SWE".toLowerCase(), Schweden);
+        ALIASES.put("Schweden / Sweden".toLowerCase(), Schweden);
+        ALIASES.put("CH".toLowerCase(), Schweiz);
+        ALIASES.put("CHE".toLowerCase(), Schweiz);
+        ALIASES.put("Schweiz / Switzerland".toLowerCase(), Schweiz);
+        ALIASES.put("RU".toLowerCase(), Russische_Foederation);
+        ALIASES.put("RUS".toLowerCase(), Russische_Foederation);
+        ALIASES.put("Russische F&#246;deration / Russia".toLowerCase(), Russische_Foederation);
+        ALIASES.put("ES".toLowerCase(), Spanien);
+        ALIASES.put("ESP".toLowerCase(), Spanien);
+        ALIASES.put("Spanien / Spain".toLowerCase(), Spanien);
+        ALIASES.put("TR".toLowerCase(), Tuerkei);
+        ALIASES.put("TUR".toLowerCase(), Tuerkei);
+        ALIASES.put("T&#252;rkei / T&#252;rkiye".toLowerCase(), Tuerkei);
+        ALIASES.put("CZ".toLowerCase(), Tschechien);
+        ALIASES.put("CZE".toLowerCase(), Tschechien);
+        ALIASES.put("Tschechien / Czechia".toLowerCase(), Tschechien);
+        ALIASES.put("HU".toLowerCase(), Ungarn);
+        ALIASES.put("HUN".toLowerCase(), Ungarn);
+        ALIASES.put("Ungarn / Hungary".toLowerCase(), Ungarn);
+        ALIASES.put("UA".toLowerCase(), Ukraine);
+        ALIASES.put("UKR".toLowerCase(), Ukraine);
+        ALIASES.put("Ukraine".toLowerCase(), Ukraine);
+        ALIASES.put("VA".toLowerCase(), Vatikanstadt);
+        ALIASES.put("VAT".toLowerCase(), Vatikanstadt);
+        ALIASES.put("Vatikanstadt / Vatican City".toLowerCase(), Vatikanstadt);
+        ALIASES.put("GB".toLowerCase(), Vereinigtes_Koenigreich);
+        ALIASES.put("GBR".toLowerCase(), Vereinigtes_Koenigreich);
+        ALIASES.put("Vereinigtes K&#246;nigreich / United Kingdom".toLowerCase(), Vereinigtes_Koenigreich);
+        ALIASES.put("BY".toLowerCase(), Belarus);
+        ALIASES.put("BLR".toLowerCase(), Belarus);
+        ALIASES.put("Belarus".toLowerCase(), Belarus);
+        ALIASES.put("RS".toLowerCase(), Serbien);
+        ALIASES.put("SRB".toLowerCase(), Serbien);
+        ALIASES.put("Serbien / Serbia".toLowerCase(), Serbien);
+        ALIASES.put("CY".toLowerCase(), Zypern);
+        ALIASES.put("CYP".toLowerCase(), Zypern);
+        ALIASES.put("Zypern / Cyprus".toLowerCase(), Zypern);
+        ALIASES.put("DZ".toLowerCase(), Algerien);
+        ALIASES.put("DZA".toLowerCase(), Algerien);
+        ALIASES.put("Algerien / Algeria".toLowerCase(), Algerien);
+        ALIASES.put("AO".toLowerCase(), Angola);
+        ALIASES.put("AGO".toLowerCase(), Angola);
+        ALIASES.put("Angola".toLowerCase(), Angola);
+        ALIASES.put("ER".toLowerCase(), Eritrea);
+        ALIASES.put("ERI".toLowerCase(), Eritrea);
+        ALIASES.put("Eritrea".toLowerCase(), Eritrea);
+        ALIASES.put("ET".toLowerCase(), Aethiopien);
+        ALIASES.put("ETH".toLowerCase(), Aethiopien);
+        ALIASES.put("&#196;thiopien / Ethiopia".toLowerCase(), Aethiopien);
+        ALIASES.put("LS".toLowerCase(), Lesotho);
+        ALIASES.put("LSO".toLowerCase(), Lesotho);
+        ALIASES.put("Lesotho".toLowerCase(), Lesotho);
+        ALIASES.put("BW".toLowerCase(), Botsuana);
+        ALIASES.put("BWA".toLowerCase(), Botsuana);
+        ALIASES.put("Botsuana / Botswana".toLowerCase(), Botsuana);
+        ALIASES.put("BJ".toLowerCase(), Benin);
+        ALIASES.put("BEN".toLowerCase(), Benin);
+        ALIASES.put("Benin".toLowerCase(), Benin);
+        ALIASES.put("DJ".toLowerCase(), Dschibuti);
+        ALIASES.put("DJI".toLowerCase(), Dschibuti);
+        ALIASES.put("Dschibuti / Djibouti".toLowerCase(), Dschibuti);
+        ALIASES.put("CI".toLowerCase(), C_te_d_Ivoire);
+        ALIASES.put("CIV".toLowerCase(), C_te_d_Ivoire);
+        ALIASES.put("C&#244;te d’Ivoire".toLowerCase(), C_te_d_Ivoire);
+        ALIASES.put("NG".toLowerCase(), Nigeria);
+        ALIASES.put("NGA".toLowerCase(), Nigeria);
+        ALIASES.put("Nigeria".toLowerCase(), Nigeria);
+        ALIASES.put("ZW".toLowerCase(), Simbabwe);
+        ALIASES.put("ZWE".toLowerCase(), Simbabwe);
+        ALIASES.put("Simbabwe / Zimbabwe".toLowerCase(), Simbabwe);
+        ALIASES.put("GA".toLowerCase(), Gabun);
+        ALIASES.put("GAB".toLowerCase(), Gabun);
+        ALIASES.put("Gabun / Gabon".toLowerCase(), Gabun);
+        ALIASES.put("GM".toLowerCase(), Gambia);
+        ALIASES.put("GMB".toLowerCase(), Gambia);
+        ALIASES.put("Gambia".toLowerCase(), Gambia);
+        ALIASES.put("GH".toLowerCase(), Ghana);
+        ALIASES.put("GHA".toLowerCase(), Ghana);
+        ALIASES.put("Ghana".toLowerCase(), Ghana);
+        ALIASES.put("MR".toLowerCase(), Mauretanien);
+        ALIASES.put("MRT".toLowerCase(), Mauretanien);
+        ALIASES.put("Mauretanien / Mauritania".toLowerCase(), Mauretanien);
+        ALIASES.put("CV".toLowerCase(), Cabo_Verde);
+        ALIASES.put("CPV".toLowerCase(), Cabo_Verde);
+        ALIASES.put("Cabo Verde".toLowerCase(), Cabo_Verde);
+        ALIASES.put("KE".toLowerCase(), Kenia);
+        ALIASES.put("KEN".toLowerCase(), Kenia);
+        ALIASES.put("Kenia / Kenya".toLowerCase(), Kenia);
+        ALIASES.put("KM".toLowerCase(), Komoren);
+        ALIASES.put("COM".toLowerCase(), Komoren);
+        ALIASES.put("Komoren / Comoros".toLowerCase(), Komoren);
+        ALIASES.put("CG".toLowerCase(), Kongo);
+        ALIASES.put("COG".toLowerCase(), Kongo);
+        ALIASES.put("Kongo / Congo".toLowerCase(), Kongo);
+        ALIASES.put("CD".toLowerCase(), Demokratische_Republik_Kongo);
+        ALIASES.put("COD".toLowerCase(), Demokratische_Republik_Kongo);
+        ALIASES.put("Demokratische Republik Kongo / Congo (DRC)".toLowerCase(), Demokratische_Republik_Kongo);
+        ALIASES.put("LR".toLowerCase(), Liberia);
+        ALIASES.put("LBR".toLowerCase(), Liberia);
+        ALIASES.put("Liberia".toLowerCase(), Liberia);
+        ALIASES.put("LY".toLowerCase(), Libyen);
+        ALIASES.put("LBY".toLowerCase(), Libyen);
+        ALIASES.put("Libyen / Libya".toLowerCase(), Libyen);
+        ALIASES.put("MG".toLowerCase(), Madagaskar);
+        ALIASES.put("MDG".toLowerCase(), Madagaskar);
+        ALIASES.put("Madagaskar / Madagascar".toLowerCase(), Madagaskar);
+        ALIASES.put("ML".toLowerCase(), Mali);
+        ALIASES.put("MLI".toLowerCase(), Mali);
+        ALIASES.put("Mali".toLowerCase(), Mali);
+        ALIASES.put("MA".toLowerCase(), Marokko);
+        ALIASES.put("MAR".toLowerCase(), Marokko);
+        ALIASES.put("Marokko / Morocco".toLowerCase(), Marokko);
+        ALIASES.put("MU".toLowerCase(), Mauritius);
+        ALIASES.put("MUS".toLowerCase(), Mauritius);
+        ALIASES.put("Mauritius".toLowerCase(), Mauritius);
+        ALIASES.put("MZ".toLowerCase(), Mosambik);
+        ALIASES.put("MOZ".toLowerCase(), Mosambik);
+        ALIASES.put("Mosambik / Mozambique".toLowerCase(), Mosambik);
+        ALIASES.put("NE".toLowerCase(), Niger);
+        ALIASES.put("NER".toLowerCase(), Niger);
+        ALIASES.put("Niger".toLowerCase(), Niger);
+        ALIASES.put("MW".toLowerCase(), Malawi);
+        ALIASES.put("MWI".toLowerCase(), Malawi);
+        ALIASES.put("Malawi".toLowerCase(), Malawi);
+        ALIASES.put("ZM".toLowerCase(), Sambia);
+        ALIASES.put("ZMB".toLowerCase(), Sambia);
+        ALIASES.put("Sambia / Zambia".toLowerCase(), Sambia);
+        ALIASES.put("BF".toLowerCase(), Burkina_Faso);
+        ALIASES.put("BFA".toLowerCase(), Burkina_Faso);
+        ALIASES.put("Burkina Faso".toLowerCase(), Burkina_Faso);
+        ALIASES.put("GW".toLowerCase(), Guinea_Bissau);
+        ALIASES.put("GNB".toLowerCase(), Guinea_Bissau);
+        ALIASES.put("Guinea-Bissau".toLowerCase(), Guinea_Bissau);
+        ALIASES.put("GN".toLowerCase(), Guinea);
+        ALIASES.put("GIN".toLowerCase(), Guinea);
+        ALIASES.put("Guinea".toLowerCase(), Guinea);
+        ALIASES.put("CM".toLowerCase(), Kamerun);
+        ALIASES.put("CMR".toLowerCase(), Kamerun);
+        ALIASES.put("Kamerun / Cameroon".toLowerCase(), Kamerun);
+        ALIASES.put("ZA".toLowerCase(), Suedafrika);
+        ALIASES.put("ZAF".toLowerCase(), Suedafrika);
+        ALIASES.put("S&#252;dafrika / South Africa".toLowerCase(), Suedafrika);
+        ALIASES.put("RW".toLowerCase(), Ruanda);
+        ALIASES.put("RWA".toLowerCase(), Ruanda);
+        ALIASES.put("Ruanda / Rwanda".toLowerCase(), Ruanda);
+        ALIASES.put("NA".toLowerCase(), Namibia);
+        ALIASES.put("NAM".toLowerCase(), Namibia);
+        ALIASES.put("Namibia".toLowerCase(), Namibia);
+        ALIASES.put("ST".toLowerCase(), S_o_Tom_und_Pr_ncipe);
+        ALIASES.put("STP".toLowerCase(), S_o_Tom_und_Pr_ncipe);
+        ALIASES.put("S&#227;o Tom&#233; und Pr&#237;ncipe / S&#227;o Tom&#233; &amp; Pr&#237;ncipe".toLowerCase(), S_o_Tom_und_Pr_ncipe);
+        ALIASES.put("SN".toLowerCase(), Senegal);
+        ALIASES.put("SEN".toLowerCase(), Senegal);
+        ALIASES.put("Senegal".toLowerCase(), Senegal);
+        ALIASES.put("SC".toLowerCase(), Seychellen);
+        ALIASES.put("SYC".toLowerCase(), Seychellen);
+        ALIASES.put("Seychellen / Seychelles".toLowerCase(), Seychellen);
+        ALIASES.put("SL".toLowerCase(), Sierra_Leone);
+        ALIASES.put("SLE".toLowerCase(), Sierra_Leone);
+        ALIASES.put("Sierra Leone".toLowerCase(), Sierra_Leone);
+        ALIASES.put("SO".toLowerCase(), Somalia);
+        ALIASES.put("SOM".toLowerCase(), Somalia);
+        ALIASES.put("Somalia".toLowerCase(), Somalia);
+        ALIASES.put("GQ".toLowerCase(), Aequatorialguinea);
+        ALIASES.put("GNQ".toLowerCase(), Aequatorialguinea);
+        ALIASES.put("&#196;quatorialguinea / Equatorial Guinea".toLowerCase(), Aequatorialguinea);
+        ALIASES.put("SD".toLowerCase(), Sudan);
+        ALIASES.put("SDN".toLowerCase(), Sudan);
+        ALIASES.put("Sudan".toLowerCase(), Sudan);
+        ALIASES.put("SS".toLowerCase(), Suedsudan);
+        ALIASES.put("SSD".toLowerCase(), Suedsudan);
+        ALIASES.put("S&#252;dsudan / South Sudan".toLowerCase(), Suedsudan);
+        ALIASES.put("SZ".toLowerCase(), Eswatini);
+        ALIASES.put("SWZ".toLowerCase(), Eswatini);
+        ALIASES.put("Eswatini".toLowerCase(), Eswatini);
+        ALIASES.put("TZ".toLowerCase(), Vereinigte_Republik_Tansania);
+        ALIASES.put("TZA".toLowerCase(), Vereinigte_Republik_Tansania);
+        ALIASES.put("Vereinigte Republik Tansania / Tanzania".toLowerCase(), Vereinigte_Republik_Tansania);
+        ALIASES.put("TG".toLowerCase(), Togo);
+        ALIASES.put("TGO".toLowerCase(), Togo);
+        ALIASES.put("Togo".toLowerCase(), Togo);
+        ALIASES.put("TD".toLowerCase(), Tschad);
+        ALIASES.put("TCD".toLowerCase(), Tschad);
+        ALIASES.put("Tschad / Chad".toLowerCase(), Tschad);
+        ALIASES.put("TN".toLowerCase(), Tunesien);
+        ALIASES.put("TUN".toLowerCase(), Tunesien);
+        ALIASES.put("Tunesien / Tunisia".toLowerCase(), Tunesien);
+        ALIASES.put("UG".toLowerCase(), Uganda);
+        ALIASES.put("UGA".toLowerCase(), Uganda);
+        ALIASES.put("Uganda".toLowerCase(), Uganda);
+        ALIASES.put("EG".toLowerCase(), Aegypten);
+        ALIASES.put("EGY".toLowerCase(), Aegypten);
+        ALIASES.put("&#196;gypten / Egypt".toLowerCase(), Aegypten);
+        ALIASES.put("CF".toLowerCase(), Zentralafrikanische_Republik);
+        ALIASES.put("CAF".toLowerCase(), Zentralafrikanische_Republik);
+        ALIASES.put("Zentralafrikanische Republik / Central African Republic".toLowerCase(), Zentralafrikanische_Republik);
+    }
+
+    private static void initAliases1() {
+        ALIASES.put("BI".toLowerCase(), Burundi);
+        ALIASES.put("BDI".toLowerCase(), Burundi);
+        ALIASES.put("Burundi".toLowerCase(), Burundi);
+        ALIASES.put("AG".toLowerCase(), Antigua_und_Barbuda);
+        ALIASES.put("ATG".toLowerCase(), Antigua_und_Barbuda);
+        ALIASES.put("Antigua und Barbuda / Antigua &amp; Barbuda".toLowerCase(), Antigua_und_Barbuda);
+        ALIASES.put("BB".toLowerCase(), Barbados);
+        ALIASES.put("BRB".toLowerCase(), Barbados);
+        ALIASES.put("Barbados".toLowerCase(), Barbados);
+        ALIASES.put("AR".toLowerCase(), Argentinien);
+        ALIASES.put("ARG".toLowerCase(), Argentinien);
+        ALIASES.put("Argentinien / Argentina".toLowerCase(), Argentinien);
+        ALIASES.put("BS".toLowerCase(), Bahamas);
+        ALIASES.put("BHS".toLowerCase(), Bahamas);
+        ALIASES.put("Bahamas".toLowerCase(), Bahamas);
+        ALIASES.put("BO".toLowerCase(), Plurinationaler_Staat_Bolivien);
+        ALIASES.put("BOL".toLowerCase(), Plurinationaler_Staat_Bolivien);
+        ALIASES.put("Plurinationaler Staat Bolivien / Bolivia".toLowerCase(), Plurinationaler_Staat_Bolivien);
+        ALIASES.put("BR".toLowerCase(), Brasilien);
+        ALIASES.put("BRA".toLowerCase(), Brasilien);
+        ALIASES.put("Brasilien / Brazil".toLowerCase(), Brasilien);
+        ALIASES.put("GY".toLowerCase(), Guyana);
+        ALIASES.put("GUY".toLowerCase(), Guyana);
+        ALIASES.put("Guyana".toLowerCase(), Guyana);
+        ALIASES.put("BZ".toLowerCase(), Belize);
+        ALIASES.put("BLZ".toLowerCase(), Belize);
+        ALIASES.put("Belize".toLowerCase(), Belize);
+        ALIASES.put("CL".toLowerCase(), Chile);
+        ALIASES.put("CHL".toLowerCase(), Chile);
+        ALIASES.put("Chile".toLowerCase(), Chile);
+        ALIASES.put("DM".toLowerCase(), Dominica);
+        ALIASES.put("DMA".toLowerCase(), Dominica);
+        ALIASES.put("Dominica".toLowerCase(), Dominica);
+        ALIASES.put("CR".toLowerCase(), Costa_Rica);
+        ALIASES.put("CRI".toLowerCase(), Costa_Rica);
+        ALIASES.put("Costa Rica".toLowerCase(), Costa_Rica);
+        ALIASES.put("DO".toLowerCase(), Dominikanische_Republik);
+        ALIASES.put("DOM".toLowerCase(), Dominikanische_Republik);
+        ALIASES.put("Dominikanische Republik / Dominican Republic".toLowerCase(), Dominikanische_Republik);
+        ALIASES.put("EC".toLowerCase(), Ecuador);
+        ALIASES.put("ECU".toLowerCase(), Ecuador);
+        ALIASES.put("Ecuador".toLowerCase(), Ecuador);
+        ALIASES.put("SV".toLowerCase(), El_Salvador);
+        ALIASES.put("SLV".toLowerCase(), El_Salvador);
+        ALIASES.put("El Salvador".toLowerCase(), El_Salvador);
+        ALIASES.put("GD".toLowerCase(), Grenada);
+        ALIASES.put("GRD".toLowerCase(), Grenada);
+        ALIASES.put("Grenada".toLowerCase(), Grenada);
+        ALIASES.put("GT".toLowerCase(), Guatemala);
+        ALIASES.put("GTM".toLowerCase(), Guatemala);
+        ALIASES.put("Guatemala".toLowerCase(), Guatemala);
+        ALIASES.put("HT".toLowerCase(), Haiti);
+        ALIASES.put("HTI".toLowerCase(), Haiti);
+        ALIASES.put("Haiti".toLowerCase(), Haiti);
+        ALIASES.put("HN".toLowerCase(), Honduras);
+        ALIASES.put("HND".toLowerCase(), Honduras);
+        ALIASES.put("Honduras".toLowerCase(), Honduras);
+        ALIASES.put("CA".toLowerCase(), Kanada);
+        ALIASES.put("CAN".toLowerCase(), Kanada);
+        ALIASES.put("Kanada / Canada".toLowerCase(), Kanada);
+        ALIASES.put("CO".toLowerCase(), Kolumbien);
+        ALIASES.put("COL".toLowerCase(), Kolumbien);
+        ALIASES.put("Kolumbien / Colombia".toLowerCase(), Kolumbien);
+        ALIASES.put("CU".toLowerCase(), Kuba);
+        ALIASES.put("CUB".toLowerCase(), Kuba);
+        ALIASES.put("Kuba / Cuba".toLowerCase(), Kuba);
+        ALIASES.put("MX".toLowerCase(), Mexiko);
+        ALIASES.put("MEX".toLowerCase(), Mexiko);
+        ALIASES.put("Mexiko / Mexico".toLowerCase(), Mexiko);
+        ALIASES.put("NI".toLowerCase(), Nicaragua);
+        ALIASES.put("NIC".toLowerCase(), Nicaragua);
+        ALIASES.put("Nicaragua".toLowerCase(), Nicaragua);
+        ALIASES.put("JM".toLowerCase(), Jamaika);
+        ALIASES.put("JAM".toLowerCase(), Jamaika);
+        ALIASES.put("Jamaika / Jamaica".toLowerCase(), Jamaika);
+        ALIASES.put("PA".toLowerCase(), Panama);
+        ALIASES.put("PAN".toLowerCase(), Panama);
+        ALIASES.put("Panama".toLowerCase(), Panama);
+        ALIASES.put("PY".toLowerCase(), Paraguay);
+        ALIASES.put("PRY".toLowerCase(), Paraguay);
+        ALIASES.put("Paraguay".toLowerCase(), Paraguay);
+        ALIASES.put("PE".toLowerCase(), Peru);
+        ALIASES.put("PER".toLowerCase(), Peru);
+        ALIASES.put("Peru".toLowerCase(), Peru);
+        ALIASES.put("SR".toLowerCase(), Suriname);
+        ALIASES.put("SUR".toLowerCase(), Suriname);
+        ALIASES.put("Suriname".toLowerCase(), Suriname);
+        ALIASES.put("UY".toLowerCase(), Uruguay);
+        ALIASES.put("URY".toLowerCase(), Uruguay);
+        ALIASES.put("Uruguay".toLowerCase(), Uruguay);
+        ALIASES.put("LC".toLowerCase(), St_Lucia);
+        ALIASES.put("LCA".toLowerCase(), St_Lucia);
+        ALIASES.put("St. Lucia".toLowerCase(), St_Lucia);
+        ALIASES.put("VE".toLowerCase(), Bolivarische_Republik_Venezuela);
+        ALIASES.put("VEN".toLowerCase(), Bolivarische_Republik_Venezuela);
+        ALIASES.put("Bolivarische Republik Venezuela / Venezuela".toLowerCase(), Bolivarische_Republik_Venezuela);
+        ALIASES.put("US".toLowerCase(), Vereinigte_Staaten);
+        ALIASES.put("USA".toLowerCase(), Vereinigte_Staaten);
+        ALIASES.put("Vereinigte Staaten / United States".toLowerCase(), Vereinigte_Staaten);
+        ALIASES.put("VC".toLowerCase(), St_Vincent_und_die_Grenadinen);
+        ALIASES.put("VCT".toLowerCase(), St_Vincent_und_die_Grenadinen);
+        ALIASES.put("St. Vincent und die Grenadinen / St. Vincent &amp; Grenadines".toLowerCase(), St_Vincent_und_die_Grenadinen);
+        ALIASES.put("KN".toLowerCase(), St_Kitts_und_Nevis);
+        ALIASES.put("KNA".toLowerCase(), St_Kitts_und_Nevis);
+        ALIASES.put("St. Kitts und Nevis / St. Kitts &amp; Nevis".toLowerCase(), St_Kitts_und_Nevis);
+        ALIASES.put("TT".toLowerCase(), Trinidad_und_Tobago);
+        ALIASES.put("TTO".toLowerCase(), Trinidad_und_Tobago);
+        ALIASES.put("Trinidad und Tobago / Trinidad &amp; Tobago".toLowerCase(), Trinidad_und_Tobago);
+        ALIASES.put("YE".toLowerCase(), Jemen);
+        ALIASES.put("YEM".toLowerCase(), Jemen);
+        ALIASES.put("Jemen / Yemen".toLowerCase(), Jemen);
+        ALIASES.put("AM".toLowerCase(), Armenien);
+        ALIASES.put("ARM".toLowerCase(), Armenien);
+        ALIASES.put("Armenien / Armenia".toLowerCase(), Armenien);
+        ALIASES.put("AF".toLowerCase(), Afghanistan);
+        ALIASES.put("AFG".toLowerCase(), Afghanistan);
+        ALIASES.put("Afghanistan".toLowerCase(), Afghanistan);
+        ALIASES.put("BH".toLowerCase(), Bahrain);
+        ALIASES.put("BHR".toLowerCase(), Bahrain);
+        ALIASES.put("Bahrain".toLowerCase(), Bahrain);
+        ALIASES.put("AZ".toLowerCase(), Aserbaidschan);
+        ALIASES.put("AZE".toLowerCase(), Aserbaidschan);
+        ALIASES.put("Aserbaidschan / Azerbaijan".toLowerCase(), Aserbaidschan);
+        ALIASES.put("BT".toLowerCase(), Bhutan);
+        ALIASES.put("BTN".toLowerCase(), Bhutan);
+        ALIASES.put("Bhutan".toLowerCase(), Bhutan);
+        ALIASES.put("MM".toLowerCase(), Myanmar);
+        ALIASES.put("MMR".toLowerCase(), Myanmar);
+        ALIASES.put("Myanmar".toLowerCase(), Myanmar);
+        ALIASES.put("BN".toLowerCase(), Brunei_Darussalam);
+        ALIASES.put("BRN".toLowerCase(), Brunei_Darussalam);
+        ALIASES.put("Brunei Darussalam / Brunei".toLowerCase(), Brunei_Darussalam);
+        ALIASES.put("GE".toLowerCase(), Georgien);
+        ALIASES.put("GEO".toLowerCase(), Georgien);
+        ALIASES.put("Georgien / Georgia".toLowerCase(), Georgien);
+        ALIASES.put("LK".toLowerCase(), Sri_Lanka);
+        ALIASES.put("LKA".toLowerCase(), Sri_Lanka);
+        ALIASES.put("Sri Lanka".toLowerCase(), Sri_Lanka);
+        ALIASES.put("VN".toLowerCase(), Vietnam);
+        ALIASES.put("VNM".toLowerCase(), Vietnam);
+        ALIASES.put("Vietnam".toLowerCase(), Vietnam);
+        ALIASES.put("KP".toLowerCase(), Demokratische_Volksrepublik_Korea);
+        ALIASES.put("PRK".toLowerCase(), Demokratische_Volksrepublik_Korea);
+        ALIASES.put("Demokratische Volksrepublik Korea / North Korea".toLowerCase(), Demokratische_Volksrepublik_Korea);
+        ALIASES.put("IN".toLowerCase(), Indien);
+        ALIASES.put("IND".toLowerCase(), Indien);
+        ALIASES.put("Indien / India".toLowerCase(), Indien);
+        ALIASES.put("ID".toLowerCase(), Indonesien);
+        ALIASES.put("IDN".toLowerCase(), Indonesien);
+        ALIASES.put("Indonesien / Indonesia".toLowerCase(), Indonesien);
+        ALIASES.put("IQ".toLowerCase(), Irak);
+        ALIASES.put("IRQ".toLowerCase(), Irak);
+        ALIASES.put("Irak / Iraq".toLowerCase(), Irak);
+        ALIASES.put("IR".toLowerCase(), Islamische_Republik_Iran);
+        ALIASES.put("IRN".toLowerCase(), Islamische_Republik_Iran);
+        ALIASES.put("Islamische Republik Iran / Iran".toLowerCase(), Islamische_Republik_Iran);
+        ALIASES.put("IL".toLowerCase(), Israel);
+        ALIASES.put("ISR".toLowerCase(), Israel);
+        ALIASES.put("Israel".toLowerCase(), Israel);
+        ALIASES.put("JP".toLowerCase(), Japan);
+        ALIASES.put("JPN".toLowerCase(), Japan);
+        ALIASES.put("Japan".toLowerCase(), Japan);
+        ALIASES.put("KZ".toLowerCase(), Kasachstan);
+        ALIASES.put("KAZ".toLowerCase(), Kasachstan);
+        ALIASES.put("Kasachstan / Kazakhstan".toLowerCase(), Kasachstan);
+        ALIASES.put("JO".toLowerCase(), Jordanien);
+        ALIASES.put("JOR".toLowerCase(), Jordanien);
+        ALIASES.put("Jordanien / Jordan".toLowerCase(), Jordanien);
+        ALIASES.put("KH".toLowerCase(), Kambodscha);
+        ALIASES.put("KHM".toLowerCase(), Kambodscha);
+        ALIASES.put("Kambodscha / Cambodia".toLowerCase(), Kambodscha);
+        ALIASES.put("QA".toLowerCase(), Katar);
+        ALIASES.put("QAT".toLowerCase(), Katar);
+        ALIASES.put("Katar / Qatar".toLowerCase(), Katar);
+        ALIASES.put("KW".toLowerCase(), Kuwait);
+        ALIASES.put("KWT".toLowerCase(), Kuwait);
+        ALIASES.put("Kuwait".toLowerCase(), Kuwait);
+        ALIASES.put("LA".toLowerCase(), Demokratische_Volksrepublik_Laos);
+        ALIASES.put("LAO".toLowerCase(), Demokratische_Volksrepublik_Laos);
+        ALIASES.put("Demokratische Volksrepublik Laos / Laos".toLowerCase(), Demokratische_Volksrepublik_Laos);
+        ALIASES.put("KG".toLowerCase(), Kirgisistan);
+        ALIASES.put("KGZ".toLowerCase(), Kirgisistan);
+        ALIASES.put("Kirgisistan / Kyrgyzstan".toLowerCase(), Kirgisistan);
+        ALIASES.put("LB".toLowerCase(), Libanon);
+        ALIASES.put("LBN".toLowerCase(), Libanon);
+        ALIASES.put("Libanon / Lebanon".toLowerCase(), Libanon);
+        ALIASES.put("MV".toLowerCase(), Malediven);
+        ALIASES.put("MDV".toLowerCase(), Malediven);
+        ALIASES.put("Malediven / Maldives".toLowerCase(), Malediven);
+        ALIASES.put("OM".toLowerCase(), Oman);
+        ALIASES.put("OMN".toLowerCase(), Oman);
+        ALIASES.put("Oman".toLowerCase(), Oman);
+        ALIASES.put("MN".toLowerCase(), Mongolei);
+        ALIASES.put("MNG".toLowerCase(), Mongolei);
+        ALIASES.put("Mongolei / Mongolia".toLowerCase(), Mongolei);
+        ALIASES.put("NP".toLowerCase(), Nepal);
+        ALIASES.put("NPL".toLowerCase(), Nepal);
+        ALIASES.put("Nepal".toLowerCase(), Nepal);
+        ALIASES.put("BD".toLowerCase(), Bangladesch);
+        ALIASES.put("BGD".toLowerCase(), Bangladesch);
+        ALIASES.put("Bangladesch / Bangladesh".toLowerCase(), Bangladesch);
+        ALIASES.put("PK".toLowerCase(), Pakistan);
+        ALIASES.put("PAK".toLowerCase(), Pakistan);
+        ALIASES.put("Pakistan".toLowerCase(), Pakistan);
+        ALIASES.put("PH".toLowerCase(), Philippinen);
+        ALIASES.put("PHL".toLowerCase(), Philippinen);
+        ALIASES.put("Philippinen / Philippines".toLowerCase(), Philippinen);
+        ALIASES.put("KR".toLowerCase(), Republik_Korea);
+        ALIASES.put("KOR".toLowerCase(), Republik_Korea);
+        ALIASES.put("Republik Korea / Korea".toLowerCase(), Republik_Korea);
+        ALIASES.put("AE".toLowerCase(), Vereinigte_Arabische_Emirate);
+        ALIASES.put("ARE".toLowerCase(), Vereinigte_Arabische_Emirate);
+        ALIASES.put("Vereinigte Arabische Emirate / United Arab Emirates".toLowerCase(), Vereinigte_Arabische_Emirate);
+        ALIASES.put("TJ".toLowerCase(), Tadschikistan);
+        ALIASES.put("TJK".toLowerCase(), Tadschikistan);
+        ALIASES.put("Tadschikistan / Tajikistan".toLowerCase(), Tadschikistan);
+        ALIASES.put("TM".toLowerCase(), Turkmenistan);
+        ALIASES.put("TKM".toLowerCase(), Turkmenistan);
+        ALIASES.put("Turkmenistan".toLowerCase(), Turkmenistan);
+        ALIASES.put("SA".toLowerCase(), Saudi_Arabien);
+        ALIASES.put("SAU".toLowerCase(), Saudi_Arabien);
+        ALIASES.put("Saudi-Arabien / Saudi Arabia".toLowerCase(), Saudi_Arabien);
+        ALIASES.put("SG".toLowerCase(), Singapur);
+        ALIASES.put("SGP".toLowerCase(), Singapur);
+        ALIASES.put("Singapur / Singapore".toLowerCase(), Singapur);
+        ALIASES.put("SY".toLowerCase(), Arabische_Republik_Syrien);
+        ALIASES.put("SYR".toLowerCase(), Arabische_Republik_Syrien);
+        ALIASES.put("Arabische Republik Syrien / Syria".toLowerCase(), Arabische_Republik_Syrien);
+        ALIASES.put("TH".toLowerCase(), Thailand);
+        ALIASES.put("THA".toLowerCase(), Thailand);
+        ALIASES.put("Thailand".toLowerCase(), Thailand);
+        ALIASES.put("UZ".toLowerCase(), Usbekistan);
+        ALIASES.put("UZB".toLowerCase(), Usbekistan);
+        ALIASES.put("Usbekistan / Uzbekistan".toLowerCase(), Usbekistan);
+        ALIASES.put("CN".toLowerCase(), China);
+        ALIASES.put("CHN".toLowerCase(), China);
+        ALIASES.put("China".toLowerCase(), China);
+        ALIASES.put("MY".toLowerCase(), Malaysia);
+        ALIASES.put("MYS".toLowerCase(), Malaysia);
+        ALIASES.put("Malaysia".toLowerCase(), Malaysia);
+        ALIASES.put("TL".toLowerCase(), Timor_Leste);
+        ALIASES.put("TLS".toLowerCase(), Timor_Leste);
+        ALIASES.put("Timor-Leste".toLowerCase(), Timor_Leste);
+        ALIASES.put("AU".toLowerCase(), Australien);
+        ALIASES.put("AUS".toLowerCase(), Australien);
+        ALIASES.put("Australien / Australia".toLowerCase(), Australien);
+        ALIASES.put("SB".toLowerCase(), Salomonen);
+        ALIASES.put("SLB".toLowerCase(), Salomonen);
+        ALIASES.put("Salomonen / Solomon Islands".toLowerCase(), Salomonen);
+        ALIASES.put("FJ".toLowerCase(), Fidschi);
+        ALIASES.put("FJI".toLowerCase(), Fidschi);
+        ALIASES.put("Fidschi / Fiji".toLowerCase(), Fidschi);
+        ALIASES.put("CK".toLowerCase(), Cookinseln);
+        ALIASES.put("COK".toLowerCase(), Cookinseln);
+        ALIASES.put("Cookinseln / Cook Islands".toLowerCase(), Cookinseln);
+        ALIASES.put("KI".toLowerCase(), Kiribati);
+        ALIASES.put("KIR".toLowerCase(), Kiribati);
+        ALIASES.put("Kiribati".toLowerCase(), Kiribati);
+        ALIASES.put("NR".toLowerCase(), Nauru);
+        ALIASES.put("NRU".toLowerCase(), Nauru);
+        ALIASES.put("Nauru".toLowerCase(), Nauru);
+        ALIASES.put("VU".toLowerCase(), Vanuatu);
+        ALIASES.put("VUT".toLowerCase(), Vanuatu);
+        ALIASES.put("Vanuatu".toLowerCase(), Vanuatu);
+        ALIASES.put("NU".toLowerCase(), Niue);
+        ALIASES.put("NIU".toLowerCase(), Niue);
+        ALIASES.put("Niue".toLowerCase(), Niue);
+        ALIASES.put("NZ".toLowerCase(), Neuseeland);
+        ALIASES.put("NZL".toLowerCase(), Neuseeland);
+        ALIASES.put("Neuseeland / New Zealand".toLowerCase(), Neuseeland);
+        ALIASES.put("PW".toLowerCase(), Palau);
+        ALIASES.put("PLW".toLowerCase(), Palau);
+        ALIASES.put("Palau".toLowerCase(), Palau);
+        ALIASES.put("PG".toLowerCase(), Papua_Neuguinea);
+        ALIASES.put("PNG".toLowerCase(), Papua_Neuguinea);
+        ALIASES.put("Papua-Neuguinea / Papua New Guinea".toLowerCase(), Papua_Neuguinea);
+        ALIASES.put("TV".toLowerCase(), Tuvalu);
+        ALIASES.put("TUV".toLowerCase(), Tuvalu);
+        ALIASES.put("Tuvalu".toLowerCase(), Tuvalu);
+        ALIASES.put("TO".toLowerCase(), Tonga);
+        ALIASES.put("TON".toLowerCase(), Tonga);
+        ALIASES.put("Tonga".toLowerCase(), Tonga);
+        ALIASES.put("WS".toLowerCase(), Samoa);
+        ALIASES.put("WSM".toLowerCase(), Samoa);
+        ALIASES.put("Samoa".toLowerCase(), Samoa);
+        ALIASES.put("MH".toLowerCase(), Marshallinseln);
+        ALIASES.put("MHL".toLowerCase(), Marshallinseln);
+        ALIASES.put("Marshallinseln / Marshall Islands".toLowerCase(), Marshallinseln);
+        ALIASES.put("FM".toLowerCase(), Foederierte_Staaten_von_Mikronesien);
+        ALIASES.put("FSM".toLowerCase(), Foederierte_Staaten_von_Mikronesien);
+        ALIASES.put("F&#246;derierte Staaten von Mikronesien / Micronesia".toLowerCase(), Foederierte_Staaten_von_Mikronesien);
+    }
+
     /**
      * Gets the xml value.
      * @return the xml value
@@ -3774,996 +4377,14 @@ public enum StaatCode {
      */
     @com.fasterxml.jackson.annotation.JsonCreator
     public static StaatCode fromValue(String value) {
+        if (value == null || value.isEmpty()) throw new IllegalArgumentException("Value cannot be null or empty");
         for (StaatCode e : StaatCode.values()) {
-            if (e.name().equals("Deutschland")) {
-                for (String alias : new String[]{ "DE", "DEU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Albanien")) {
-                for (String alias : new String[]{ "AL", "ALB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bosnien_und_Herzegowina")) {
-                for (String alias : new String[]{ "BA", "BIH" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Andorra")) {
-                for (String alias : new String[]{ "AD", "AND" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Belgien")) {
-                for (String alias : new String[]{ "BE", "BEL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bulgarien")) {
-                for (String alias : new String[]{ "BG", "BGR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Daenemark")) {
-                for (String alias : new String[]{ "DK", "DNK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Estland")) {
-                for (String alias : new String[]{ "EE", "EST" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Finnland")) {
-                for (String alias : new String[]{ "FI", "FIN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Frankreich")) {
-                for (String alias : new String[]{ "FR", "FRA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kroatien")) {
-                for (String alias : new String[]{ "HR", "HRV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Slowenien")) {
-                for (String alias : new String[]{ "SI", "SVN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Griechenland")) {
-                for (String alias : new String[]{ "GR", "GRC" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Irland")) {
-                for (String alias : new String[]{ "IE", "IRL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Island")) {
-                for (String alias : new String[]{ "IS", "ISL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Italien")) {
-                for (String alias : new String[]{ "IT", "ITA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Lettland")) {
-                for (String alias : new String[]{ "LV", "LVA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Montenegro")) {
-                for (String alias : new String[]{ "ME", "MNE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Liechtenstein")) {
-                for (String alias : new String[]{ "LI", "LIE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Litauen")) {
-                for (String alias : new String[]{ "LT", "LTU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Luxemburg")) {
-                for (String alias : new String[]{ "LU", "LUX" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Nordmazedonien")) {
-                for (String alias : new String[]{ "MK", "MKD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Malta")) {
-                for (String alias : new String[]{ "MT", "MLT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Republik_Moldau")) {
-                for (String alias : new String[]{ "MD", "MDA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Monaco")) {
-                for (String alias : new String[]{ "MC", "MCO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Koenigreich_der_Niederlande")) {
-                for (String alias : new String[]{ "NL", "NLD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Norwegen")) {
-                for (String alias : new String[]{ "NO", "NOR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kosovo")) {
-                for (String alias : new String[]{ "XK", "XXK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Oesterreich")) {
-                for (String alias : new String[]{ "AT", "AUT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Polen")) {
-                for (String alias : new String[]{ "PL", "POL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Portugal")) {
-                for (String alias : new String[]{ "PT", "PRT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Rumaenien")) {
-                for (String alias : new String[]{ "RO", "ROU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Slowakei")) {
-                for (String alias : new String[]{ "SK", "SVK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("San_Marino")) {
-                for (String alias : new String[]{ "SM", "SMR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Schweden")) {
-                for (String alias : new String[]{ "SE", "SWE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Schweiz")) {
-                for (String alias : new String[]{ "CH", "CHE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Russische_Foederation")) {
-                for (String alias : new String[]{ "RU", "RUS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Spanien")) {
-                for (String alias : new String[]{ "ES", "ESP" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tuerkei")) {
-                for (String alias : new String[]{ "TR", "TUR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tschechien")) {
-                for (String alias : new String[]{ "CZ", "CZE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Ungarn")) {
-                for (String alias : new String[]{ "HU", "HUN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Ukraine")) {
-                for (String alias : new String[]{ "UA", "UKR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vatikanstadt")) {
-                for (String alias : new String[]{ "VA", "VAT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vereinigtes_Koenigreich")) {
-                for (String alias : new String[]{ "GB", "GBR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Belarus")) {
-                for (String alias : new String[]{ "BY", "BLR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Serbien")) {
-                for (String alias : new String[]{ "RS", "SRB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Zypern")) {
-                for (String alias : new String[]{ "CY", "CYP" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Algerien")) {
-                for (String alias : new String[]{ "DZ", "DZA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Angola")) {
-                for (String alias : new String[]{ "AO", "AGO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Eritrea")) {
-                for (String alias : new String[]{ "ER", "ERI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Aethiopien")) {
-                for (String alias : new String[]{ "ET", "ETH" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Lesotho")) {
-                for (String alias : new String[]{ "LS", "LSO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Botsuana")) {
-                for (String alias : new String[]{ "BW", "BWA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Benin")) {
-                for (String alias : new String[]{ "BJ", "BEN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Dschibuti")) {
-                for (String alias : new String[]{ "DJ", "DJI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("C_te_d_Ivoire")) {
-                for (String alias : new String[]{ "CI", "CIV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Nigeria")) {
-                for (String alias : new String[]{ "NG", "NGA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Simbabwe")) {
-                for (String alias : new String[]{ "ZW", "ZWE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Gabun")) {
-                for (String alias : new String[]{ "GA", "GAB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Gambia")) {
-                for (String alias : new String[]{ "GM", "GMB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Ghana")) {
-                for (String alias : new String[]{ "GH", "GHA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mauretanien")) {
-                for (String alias : new String[]{ "MR", "MRT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Cabo_Verde")) {
-                for (String alias : new String[]{ "CV", "CPV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kenia")) {
-                for (String alias : new String[]{ "KE", "KEN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Komoren")) {
-                for (String alias : new String[]{ "KM", "COM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kongo")) {
-                for (String alias : new String[]{ "CG", "COG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Demokratische_Republik_Kongo")) {
-                for (String alias : new String[]{ "CD", "COD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Liberia")) {
-                for (String alias : new String[]{ "LR", "LBR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Libyen")) {
-                for (String alias : new String[]{ "LY", "LBY" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Madagaskar")) {
-                for (String alias : new String[]{ "MG", "MDG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mali")) {
-                for (String alias : new String[]{ "ML", "MLI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Marokko")) {
-                for (String alias : new String[]{ "MA", "MAR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mauritius")) {
-                for (String alias : new String[]{ "MU", "MUS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mosambik")) {
-                for (String alias : new String[]{ "MZ", "MOZ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Niger")) {
-                for (String alias : new String[]{ "NE", "NER" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Malawi")) {
-                for (String alias : new String[]{ "MW", "MWI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Sambia")) {
-                for (String alias : new String[]{ "ZM", "ZMB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Burkina_Faso")) {
-                for (String alias : new String[]{ "BF", "BFA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Guinea_Bissau")) {
-                for (String alias : new String[]{ "GW", "GNB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Guinea")) {
-                for (String alias : new String[]{ "GN", "GIN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kamerun")) {
-                for (String alias : new String[]{ "CM", "CMR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Suedafrika")) {
-                for (String alias : new String[]{ "ZA", "ZAF" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Ruanda")) {
-                for (String alias : new String[]{ "RW", "RWA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Namibia")) {
-                for (String alias : new String[]{ "NA", "NAM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("S_o_Tom_und_Pr_ncipe")) {
-                for (String alias : new String[]{ "ST", "STP" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Senegal")) {
-                for (String alias : new String[]{ "SN", "SEN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Seychellen")) {
-                for (String alias : new String[]{ "SC", "SYC" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Sierra_Leone")) {
-                for (String alias : new String[]{ "SL", "SLE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Somalia")) {
-                for (String alias : new String[]{ "SO", "SOM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Aequatorialguinea")) {
-                for (String alias : new String[]{ "GQ", "GNQ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Sudan")) {
-                for (String alias : new String[]{ "SD", "SDN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Suedsudan")) {
-                for (String alias : new String[]{ "SS", "SSD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Eswatini")) {
-                for (String alias : new String[]{ "SZ", "SWZ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vereinigte_Republik_Tansania")) {
-                for (String alias : new String[]{ "TZ", "TZA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Togo")) {
-                for (String alias : new String[]{ "TG", "TGO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tschad")) {
-                for (String alias : new String[]{ "TD", "TCD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tunesien")) {
-                for (String alias : new String[]{ "TN", "TUN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Uganda")) {
-                for (String alias : new String[]{ "UG", "UGA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Aegypten")) {
-                for (String alias : new String[]{ "EG", "EGY" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Zentralafrikanische_Republik")) {
-                for (String alias : new String[]{ "CF", "CAF" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Burundi")) {
-                for (String alias : new String[]{ "BI", "BDI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Antigua_und_Barbuda")) {
-                for (String alias : new String[]{ "AG", "ATG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Barbados")) {
-                for (String alias : new String[]{ "BB", "BRB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Argentinien")) {
-                for (String alias : new String[]{ "AR", "ARG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bahamas")) {
-                for (String alias : new String[]{ "BS", "BHS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Plurinationaler_Staat_Bolivien")) {
-                for (String alias : new String[]{ "BO", "BOL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Brasilien")) {
-                for (String alias : new String[]{ "BR", "BRA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Guyana")) {
-                for (String alias : new String[]{ "GY", "GUY" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Belize")) {
-                for (String alias : new String[]{ "BZ", "BLZ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Chile")) {
-                for (String alias : new String[]{ "CL", "CHL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Dominica")) {
-                for (String alias : new String[]{ "DM", "DMA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Costa_Rica")) {
-                for (String alias : new String[]{ "CR", "CRI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Dominikanische_Republik")) {
-                for (String alias : new String[]{ "DO", "DOM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Ecuador")) {
-                for (String alias : new String[]{ "EC", "ECU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("El_Salvador")) {
-                for (String alias : new String[]{ "SV", "SLV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Grenada")) {
-                for (String alias : new String[]{ "GD", "GRD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Guatemala")) {
-                for (String alias : new String[]{ "GT", "GTM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Haiti")) {
-                for (String alias : new String[]{ "HT", "HTI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Honduras")) {
-                for (String alias : new String[]{ "HN", "HND" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kanada")) {
-                for (String alias : new String[]{ "CA", "CAN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kolumbien")) {
-                for (String alias : new String[]{ "CO", "COL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kuba")) {
-                for (String alias : new String[]{ "CU", "CUB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mexiko")) {
-                for (String alias : new String[]{ "MX", "MEX" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Nicaragua")) {
-                for (String alias : new String[]{ "NI", "NIC" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Jamaika")) {
-                for (String alias : new String[]{ "JM", "JAM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Panama")) {
-                for (String alias : new String[]{ "PA", "PAN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Paraguay")) {
-                for (String alias : new String[]{ "PY", "PRY" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Peru")) {
-                for (String alias : new String[]{ "PE", "PER" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Suriname")) {
-                for (String alias : new String[]{ "SR", "SUR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Uruguay")) {
-                for (String alias : new String[]{ "UY", "URY" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("St_Lucia")) {
-                for (String alias : new String[]{ "LC", "LCA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bolivarische_Republik_Venezuela")) {
-                for (String alias : new String[]{ "VE", "VEN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vereinigte_Staaten")) {
-                for (String alias : new String[]{ "US", "USA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("St_Vincent_und_die_Grenadinen")) {
-                for (String alias : new String[]{ "VC", "VCT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("St_Kitts_und_Nevis")) {
-                for (String alias : new String[]{ "KN", "KNA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Trinidad_und_Tobago")) {
-                for (String alias : new String[]{ "TT", "TTO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Jemen")) {
-                for (String alias : new String[]{ "YE", "YEM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Armenien")) {
-                for (String alias : new String[]{ "AM", "ARM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Afghanistan")) {
-                for (String alias : new String[]{ "AF", "AFG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bahrain")) {
-                for (String alias : new String[]{ "BH", "BHR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Aserbaidschan")) {
-                for (String alias : new String[]{ "AZ", "AZE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bhutan")) {
-                for (String alias : new String[]{ "BT", "BTN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Myanmar")) {
-                for (String alias : new String[]{ "MM", "MMR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Brunei_Darussalam")) {
-                for (String alias : new String[]{ "BN", "BRN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Georgien")) {
-                for (String alias : new String[]{ "GE", "GEO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Sri_Lanka")) {
-                for (String alias : new String[]{ "LK", "LKA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vietnam")) {
-                for (String alias : new String[]{ "VN", "VNM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Demokratische_Volksrepublik_Korea")) {
-                for (String alias : new String[]{ "KP", "PRK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Indien")) {
-                for (String alias : new String[]{ "IN", "IND" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Indonesien")) {
-                for (String alias : new String[]{ "ID", "IDN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Irak")) {
-                for (String alias : new String[]{ "IQ", "IRQ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Islamische_Republik_Iran")) {
-                for (String alias : new String[]{ "IR", "IRN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Israel")) {
-                for (String alias : new String[]{ "IL", "ISR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Japan")) {
-                for (String alias : new String[]{ "JP", "JPN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kasachstan")) {
-                for (String alias : new String[]{ "KZ", "KAZ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Jordanien")) {
-                for (String alias : new String[]{ "JO", "JOR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kambodscha")) {
-                for (String alias : new String[]{ "KH", "KHM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Katar")) {
-                for (String alias : new String[]{ "QA", "QAT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kuwait")) {
-                for (String alias : new String[]{ "KW", "KWT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Demokratische_Volksrepublik_Laos")) {
-                for (String alias : new String[]{ "LA", "LAO" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kirgisistan")) {
-                for (String alias : new String[]{ "KG", "KGZ" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Libanon")) {
-                for (String alias : new String[]{ "LB", "LBN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Malediven")) {
-                for (String alias : new String[]{ "MV", "MDV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Oman")) {
-                for (String alias : new String[]{ "OM", "OMN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Mongolei")) {
-                for (String alias : new String[]{ "MN", "MNG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Nepal")) {
-                for (String alias : new String[]{ "NP", "NPL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Bangladesch")) {
-                for (String alias : new String[]{ "BD", "BGD" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Pakistan")) {
-                for (String alias : new String[]{ "PK", "PAK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Philippinen")) {
-                for (String alias : new String[]{ "PH", "PHL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Republik_Korea")) {
-                for (String alias : new String[]{ "KR", "KOR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vereinigte_Arabische_Emirate")) {
-                for (String alias : new String[]{ "AE", "ARE" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tadschikistan")) {
-                for (String alias : new String[]{ "TJ", "TJK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Turkmenistan")) {
-                for (String alias : new String[]{ "TM", "TKM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Saudi_Arabien")) {
-                for (String alias : new String[]{ "SA", "SAU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Singapur")) {
-                for (String alias : new String[]{ "SG", "SGP" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Arabische_Republik_Syrien")) {
-                for (String alias : new String[]{ "SY", "SYR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Thailand")) {
-                for (String alias : new String[]{ "TH", "THA" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Usbekistan")) {
-                for (String alias : new String[]{ "UZ", "UZB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("China")) {
-                for (String alias : new String[]{ "CN", "CHN" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Malaysia")) {
-                for (String alias : new String[]{ "MY", "MYS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Timor_Leste")) {
-                for (String alias : new String[]{ "TL", "TLS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Australien")) {
-                for (String alias : new String[]{ "AU", "AUS" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Salomonen")) {
-                for (String alias : new String[]{ "SB", "SLB" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Fidschi")) {
-                for (String alias : new String[]{ "FJ", "FJI" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Cookinseln")) {
-                for (String alias : new String[]{ "CK", "COK" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Kiribati")) {
-                for (String alias : new String[]{ "KI", "KIR" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Nauru")) {
-                for (String alias : new String[]{ "NR", "NRU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Vanuatu")) {
-                for (String alias : new String[]{ "VU", "VUT" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Niue")) {
-                for (String alias : new String[]{ "NU", "NIU" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Neuseeland")) {
-                for (String alias : new String[]{ "NZ", "NZL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Palau")) {
-                for (String alias : new String[]{ "PW", "PLW" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Papua_Neuguinea")) {
-                for (String alias : new String[]{ "PG", "PNG" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tuvalu")) {
-                for (String alias : new String[]{ "TV", "TUV" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Tonga")) {
-                for (String alias : new String[]{ "TO", "TON" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Samoa")) {
-                for (String alias : new String[]{ "WS", "WSM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Marshallinseln")) {
-                for (String alias : new String[]{ "MH", "MHL" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
-            if (e.name().equals("Foederierte_Staaten_von_Mikronesien")) {
-                for (String alias : new String[]{ "FM", "FSM" }) {
-                    if (alias.equalsIgnoreCase(value)) return e;
-                }
-            }
             if (e.value.equals(value) || e.name().equalsIgnoreCase(value)) {
                 return e;
             }
         }
+        StaatCode match = ALIASES.get(value.toLowerCase());
+        if (match != null) return match;
         throw new IllegalArgumentException(value);
     }
 

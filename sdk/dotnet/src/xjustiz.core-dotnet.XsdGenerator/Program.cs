@@ -1,8 +1,8 @@
 namespace xjustiz.core_dotnet.XsdGenerator;
 
+using NJsonSchema;
 using System.Reflection;
 using System.Xml.Serialization;
-using NJsonSchema;
 using xjustiz.core_dotnet.Models;
 using xjustiz.core_dotnet.Models.Helpers;
 using xjustiz.core_dotnet.Util.Versioning;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://www.xjustiz.de" elementFormDefault="qualified" targetNamespace="http://www.xjustiz.de" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import />
+  <xs:import namespace="http://www.xjustizcore.de" />
   <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" />
   <xs:element name="nachricht.gds.uebermittlungSchriftgutobjekte.0005005" nillable="true" type="tns:UebermittlungSchriftgutobjekteNachricht" />
   <xs:complexType name="UebermittlungSchriftgutobjekteNachricht">
@@ -57,7 +57,7 @@
   </xs:complexType>
   <xs:complexType name="Gericht">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q2="http://www.xjustizcore.de" ref="q2:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -70,7 +70,7 @@
   </xs:complexType>
   <xs:complexType name="Rolle">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q3="http://www.xjustizcore.de" ref="q3:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -106,7 +106,7 @@
   </xs:complexType>
   <xs:complexType name="Geschlecht">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q4="http://www.xjustizcore.de" ref="q4:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -122,7 +122,7 @@
   </xs:complexType>
   <xs:complexType name="Staat">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q5="http://www.xjustizcore.de" ref="q5:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -135,8 +135,10 @@
   </xs:complexType>
   <xs:complexType name="Telekommunikationsart">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q6="http://www.xjustizcore.de" ref="q6:code" />
     </xs:sequence>
+    <xs:attribute name="listVersionID" type="xs:string" />
+    <xs:attribute name="listURI" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="Bankverbindung">
     <xs:sequence>
@@ -211,7 +213,7 @@
   </xs:complexType>
   <xs:complexType name="Aktentyp">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q7="http://www.xjustizcore.de" ref="q7:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -241,7 +243,7 @@
   </xs:complexType>
   <xs:complexType name="Dokumentklasse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q8="http://www.xjustizcore.de" ref="q8:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />
@@ -254,7 +256,7 @@
   </xs:complexType>
   <xs:complexType name="Bestandteiltyp">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" ref="code" />
+      <xs:element minOccurs="0" maxOccurs="1" xmlns:q9="http://www.xjustizcore.de" ref="q9:code" />
     </xs:sequence>
     <xs:attribute name="listVersionID" type="xs:string" />
     <xs:attribute name="listURI" type="xs:string" />

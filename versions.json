@@ -1,5 +1,12 @@
 [
     {
+        "version": "0.3.1",
+        "changelog": {
+            "en": "Add insurer and insurance type codes\nimprovements of the Java SDK\nimprovement of the documentation",
+            "de": "Ergänzung von Versicherer- und Versicherungstyp-Codes\nVerbesserungen der Java SDK\nVerbesserung der Dokumentation"
+        }
+    },
+    {
         "version": "0.3.0",
         "changelog": {
             "en": "Add Java SDK",

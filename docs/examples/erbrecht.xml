@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de ../../schemas/0.3.0/X.Justiz-Core_0.3.0.xsd">
   <nachrichtenkopf xjustizVersion="3.5.1">
     <aktenzeichen.absender>ABS-ERB-2026-001</aktenzeichen.absender>
     <aktenzeichen.empfaenger>RA-ERB-99/2026</aktenzeichen.empfaenger>
@@ -26,7 +26,7 @@
       </instanzdaten>
       <beteiligung>
         <rolle>
-          <code>001</code>
+          <code xmlns="">001</code>
         </rolle>
         <beteiligter>
           <auswahl_beteiligter>
@@ -36,7 +36,7 @@
                 <nachname>Mustermann</nachname>
               </vollerName>
               <geschlecht>
-                <code>1</code>
+                <code xmlns="">1</code>
               </geschlecht>
               <anschrift>
                 <strasse>Grabesruhe</strasse>
@@ -74,6 +74,15 @@
         <kennung>ERB-EXT-001</kennung>
         <name>Zusatzinfos Erbrecht</name>
         <beschreibung>Zusätzliche Fakten zum Erbfall</beschreibung>
+        <VersicherungCore xmlns="http://www.xjustizcore.de">
+          <versicherungsnummer>LV-123456789</versicherungsnummer>
+          <versicherungstyp>
+            <code>01</code>
+          </versicherungstyp>
+          <versicherungsunternehmen>
+            <code>10001007</code>
+          </versicherungsunternehmen>
+        </VersicherungCore>
         <feldgruppe>
           <name>Nachlasswerte</name>
           <beschreibung>Detaillierte Aufstellung der Vermögenswerte</beschreibung>
@@ -89,6 +98,7 @@
             <datentyp>decimal</datentyp>
             <wert>12500.50</wert>
           </feld>
+
         </feldgruppe>
         <feld>
           <name>Sterbedatum</name>
@@ -99,7 +109,7 @@
       </anwendungsspezifischeErweiterung>
       <xjustiz.fachspezifischeDaten>
         <aktentyp>
-          <code>004</code>
+          <code xmlns="">004</code>
         </aktentyp>
         <anzeigename>Erbrechtsfall Mustermann</anzeigename>
         <aktenzeichen>
@@ -116,12 +126,12 @@
       </identifikation>
       <xjustiz.fachspezifischeDaten>
         <dokumentklasse>
-          <code>001</code>
+          <code xmlns="">001</code>
         </dokumentklasse>
         <datei>
           <dateiname>Erbscheinantrag_b2c3d4e5.pdf</dateiname>
           <bestandteil>
-            <code>001</code>
+            <code xmlns="">001</code>
           </bestandteil>
           <dateiendung>.pdf</dateiendung>
           <contentType>application/pdf</contentType>

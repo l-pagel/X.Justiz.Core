@@ -84,6 +84,17 @@
                     "Kennung": "ARB-EXT-001",
                     "Name": "Arbeitsverhältnis Details",
                     "Beschreibung": "Eckdaten des beendeten Arbeitsverhältnisses",
+                    "VersicherungCore": {
+                        "Versicherungsnummer": "RS-123456789",
+                        "Versicherungsunternehmen": [
+                            {
+                                "Code": "10002018"
+                            }
+                        ],
+                        "Versicherungstyp": {
+                            "Code": "000"
+                        }
+                    },
                     "Feldgruppen": [
                         {
                             "Name": "Konditionen",

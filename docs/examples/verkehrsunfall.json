@@ -1,0 +1,157 @@
+{
+    "Kopf": {
+        "Version": "3.5.1",
+        "AktenzeichenAbsender": [
+            "VR-2026-112"
+        ],
+        "AktenzeichenEmpfaenger": [
+            "AG-VR-55/26"
+        ],
+        "Erstellungszeitpunkt": "2026-02-01T10:00:00Z",
+        "Absender": {
+            "AbsenderSonstige": "Max Mustermann, Musterstraße 1, 12345 Musterstadt"
+        },
+        "Empfaenger": {
+            "EmpfaengerGericht": {
+                "Code": "9999"
+            }
+        },
+        "EigeneNachrichtenId": "MSG-VR-001"
+    },
+    "Grunddaten": {
+        "Verfahrensdaten": {
+            "Verfahrensnummer": "20 C 123/26",
+            "Instanzdaten": {
+                "Instanznummer": "1",
+                "Sachgebietszusatz": "Verkehrsunfall",
+                "AuswahlInstanzbehoerde": {
+                    "Gericht": {
+                        "Code": "B1204"
+                    }
+                }
+            },
+            "Beteiligungen": [
+                {
+                    "Rolle": {
+                        "Code": "101"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "natuerlichePerson": {
+                                "VollerName": {
+                                    "Vorname": "Max",
+                                    "Nachname": "Mustermann"
+                                },
+                                "Geschlecht": {
+                                    "Code": "m"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Rolle": {
+                        "Code": "028"
+                    },
+                    "Beteiligter": {
+                        "Auswahl": {
+                            "organisation": {
+                                "Bezeichnung": {
+                                    "Aktuell": "Haftpflicht-Versicherung AG"
+                                },
+                                "Anschrift": {
+                                    "Strasse": "Versicherungsplatz",
+                                    "Hausnummer": "1",
+                                    "Postleitzahl": "50667",
+                                    "Ort": "Köln",
+                                    "Staat": {
+                                        "Code": "DE"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "Schriftgutobjekte": {
+        "Akte": [
+            {
+                "Identifikation": {
+                    "Id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+                    "NummerImUebergeordnetenContainer": "1"
+                },
+                "AnwendungsspezifischeErweiterung": {
+                    "Kennung": "VR-GUTACHTEN",
+                    "Name": "Schadensgutachten",
+                    "Beschreibung": "Gutachten zum Unfallschaden",
+                    "VersicherungCore": {
+                        "Versicherungsnummer": "VS-99887766",
+                        "Versicherungsunternehmen": [
+                            {
+                                "Code": "10002018"
+                            }
+                        ],
+                        "Schadensnummer": "S-2026-XYZ",
+                        "Versicherungstyp": {
+                            "Code": "05"
+                        }
+                    },
+                    "Felder": [
+                        {
+                            "Name": "Schadenshoehe",
+                            "Beschreibung": "Geschätzter Schaden in Euro",
+                            "Datentyp": "decimal",
+                            "Wert": "4500.50"
+                        },
+                        {
+                            "Name": "Unfalldatum",
+                            "Beschreibung": "Datum des Unfalls",
+                            "Datentyp": "date",
+                            "Wert": "2026-01-20"
+                        }
+                    ]
+                },
+                "FachspezifischeDaten": {
+                    "Aktentyp": {
+                        "Code": "Zivilakte"
+                    },
+                    "Anzeigename": "Unfall Mustermann ./ Versicherung",
+                    "Aktenzeichen": {
+                        "Auswahl": {
+                            "aktenzeichen.freitext": "20 C 123/26"
+                        }
+                    }
+                }
+            }
+        ],
+        "Dokumente": [
+            {
+                "Identifikation": {
+                    "Id": "f0e9d8c7-b6a5-4321-0987-6543210fedcb",
+                    "NummerImUebergeordnetenContainer": "2"
+                },
+                "FachspezifischeDaten": {
+                    "Dokumentklasse": {
+                        "Code": "013"
+                    },
+                    "Datei": {
+                        "Dateiname": "Gutachten.pdf",
+                        "Bestandteil": {
+                            "Code": "Original"
+                        },
+                        "fileExtension": ".pdf",
+                        "contentType": "application/pdf",
+                        "size": 10240,
+                        "hash": {
+                            "algorithm": "SHA-256",
+                            "value": "a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef0"
+                        }
+                    }
+                },
+                "Erstellungszeitpunkt": "2026-01-25T09:00:00Z"
+            }
+        ]
+    }
+}

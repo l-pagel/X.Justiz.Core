@@ -1,4 +1,4 @@
-﻿# X.Justiz Core 0.2.0-beta
+﻿# X.Justiz Core
 
 > [!TIP]  
 > **🌐 [Deutsche Version hier verfügbar](README_DE.md) 👈**
@@ -10,6 +10,7 @@ X.Justiz Core is a lightweight schema for data exchange between software solutio
 - [Motivation](#motivation)
 - [Goals & Benefits](#goals--benefits)
 - [X.Justiz Compatibility](#xjustiz-compatibility)
+- [Key Features & Improvements](#key-features--improvements)
 - [Usage of Codes](#usage-of-codes)
 - [Implementation (SDKs)](#implementation-sdks)
 - [Specification](#specification)
@@ -47,9 +48,18 @@ The goal of X.Justiz Core is efficient interoperability:
 
 ![X.Justiz Core](./.media/README/xjustizcore-venn_EN.drawio.svg)
 
-## X.Justiz Compatibility
-X.Justiz Core is fully compatible with **X.Justiz 3.2.1 through X.Justiz 3.6.2**.  
 With some compatibility trade-offs, X.Justiz Core data can also be used compatibly with older versions (up to 2.1.0).
+
+## Key Features & Improvements
+X.Justiz Core acts as a modern bridge between the official standard and the needs of private market participants:
+
+*   **Established Foundation:** Built on the official **X.Justiz standard**, which is mandatory for German legal tech and justice communication.
+*   **Optimized Documentation:** Developer-centric documentation in both German and English, reducing onboarding time for international teams.
+*   **Ready-to-use SDKs:** Complete class libraries and code list mappings for .NET and Java, eliminating the need for manual XML/JSON parsing.
+*   **Extended Code Lists:** Inclusion of proprietary code lists for areas not covered by the standard (e.g., **Insurers (Versicherer)**, **Insurance Types (Versicherungstyp)**).
+*   **Independent Document Transfer:** Concept for transferring documents and attachments independently of the main message (e.g., via pre-signed URLs).
+*   **Case File Details:** Additional properties to describe the "Sachverhalt" (facts of the case) tailored to legal tech requirements.
+*   **Flexible Data Concept:** Enhanced capabilities to transfer generic or domain-specific data using an improved `Feld` / `Feldgruppe` concept.
 
 ## Usage of Codes
 In X.Justiz Core, business data (such as countries, roles, or courts) are identified via standardized **codes / keys**. This ensures machine-readable uniqueness across system boundaries.
@@ -80,10 +90,16 @@ Although the technical code (e.g., `000` for Germany) should primarily be used, 
 
 We still recommend using the codes (e.g., `000` for Germany) primarily. The SDKs automatically use the technical codes when sending / writing data.
 
-### Project Scope
 To facilitate development, we have integrated all relevant catalogs directly into our SDKs. Today, there are 3,397 codes in 26 different version lists across 8 main code types (Country, Role, Court, Document Class, etc.).
 
-We have placed special emphasis on documentation: All codes have been elaborately annotated **bilingually (German and English)** with descriptions and summaries to help international development teams get started with the German legal system.
+### X.Justiz Core Extensions
+In addition to the standard X.Justiz catalogs, we have created **proprietary code lists** to support modern LegalTech scenarios where the standard lacks specific keys. This includes:
+- **[Insurers (Versicherer)](/docs/codes/versicherer/)**: A comprehensive list of insurers (BaFin-based).
+- **[Insurance Types (Versicherungstyp)](/docs/codes/versicherungstyp/)**: Definitions for different types of insurance coverage.
+
+These lists are fully integrated into the SDKs as strongly-typed enums. For a complete list of available codes and their usage, please refer to the **[Data Model Reference in the Specification](/docs/Specification.md#4-data-model-reference)**.
+
+We have placed special emphasis on developer efficiency: The SDKs include comprehensive class libraries for these codes, optimized with **German and English translations** directly in the source code. This makes development super fast, as modern IDEs will show documentation and meanings in both languages via IntelliSense.
 
 ## Implementation (SDKs)
 To accelerate integration, the project provides software libraries.

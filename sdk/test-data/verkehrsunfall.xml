@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de ../../schemas/0.3.0/X.Justiz-Core_0.3.0.xsd">
   <nachrichtenkopf xjustizVersion="3.5.1">
     <aktenzeichen.absender>VR-2026-112</aktenzeichen.absender>
     <aktenzeichen.empfaenger>AG-VR-55/26</aktenzeichen.empfaenger>
@@ -38,7 +38,7 @@
                 <nachname>Mustermann</nachname>
               </vollerName>
               <geschlecht>
-                <code xmlns="">1</code>
+                <code xmlns="">m</code>
               </geschlecht>
             </natuerlichePerson>
           </auswahl_beteiligter>
@@ -79,6 +79,40 @@
         <kennung>VR-GUTACHTEN</kennung>
         <name>Schadensgutachten</name>
         <beschreibung>Gutachten zum Unfallschaden</beschreibung>
+        <feldgruppe>
+             <name>Versicherung</name>
+             <beschreibung>Details zur Versicherung</beschreibung>
+             <feld>
+                 <name>Versicherungsnummer</name>
+                 <beschreibung>Versicherungsnummer des Beklagten</beschreibung>
+                 <datentyp>string</datentyp>
+                 <wert>VS-99887766</wert>
+             </feld>
+             <feld>
+                 <name>Schadensnummer</name>
+                 <beschreibung>Interne Schadensnummer</beschreibung>
+                 <datentyp>string</datentyp>
+                 <wert>S-2026-XYZ</wert>
+             </feld>
+             <feld>
+                 <name>Versicherungstyp</name>
+                 <beschreibung>Art der Versicherung</beschreibung>
+                 <datentyp>string</datentyp>
+                 <wert>Kraftfahrtversicherung</wert>
+             </feld>
+                 <feldgruppe>
+                     <name>Versicherungsunternehmen</name>
+                     <beschreibung>Informationen zum Versicherer</beschreibung>
+                     <feld>
+                         <name>Name</name>
+                         <wert>Haftpflicht-Versicherung AG</wert>
+                     </feld>
+                     <feld>
+                         <name>BAFIN-ID</name>
+                         <wert>1234</wert>
+                     </feld>
+                 </feldgruppe>
+          </feldgruppe>
         <feld>
           <name>Schadenshoehe</name>
           <beschreibung>Geschätzter Schaden in Euro</beschreibung>

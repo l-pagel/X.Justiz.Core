@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de xjustiz_0005_nachrichten_3_1.xsd">
+<nachricht.gds.uebermittlungSchriftgutobjekte.0005005 xmlns="http://www.xjustiz.de" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xjustiz.de ../../schemas/0.3.0/X.Justiz-Core_0.3.0.xsd">
   <nachrichtenkopf xjustizVersion="3.5.1">
     <aktenzeichen.absender>HV-MIET-2026-X7</aktenzeichen.absender>
     <aktenzeichen.empfaenger>AG-MIET-404/26</aktenzeichen.empfaenger>
@@ -26,7 +26,7 @@
       </instanzdaten>
       <beteiligung>
         <rolle>
-          <code>002</code>
+          <code xmlns="">002</code>
         </rolle>
         <beteiligter>
           <auswahl_beteiligter>
@@ -36,7 +36,7 @@
                 <nachname>Schmidt</nachname>
               </vollerName>
               <geschlecht>
-                <code>2</code>
+                <code xmlns="">2</code>
               </geschlecht>
               <anschrift>
                 <strasse>Mietweg</strasse>
@@ -85,6 +85,15 @@
             <wert>3</wert>
           </feld>
         </feldgruppe>
+     <VersicherungCore xmlns="http://www.xjustizcore.de">
+       <versicherungsnummer>H-99887766</versicherungsnummer>
+       <versicherungstyp>
+         <code>000</code>
+       </versicherungstyp>
+       <versicherungsunternehmen>
+         <code>10002018</code>
+       </versicherungsunternehmen>
+     </VersicherungCore>
         <feld>
           <name>Nettokaltmiete</name>
           <beschreibung>Monatliche Grundmiete ohne Nebenkosten</beschreibung>
@@ -100,7 +109,7 @@
       </anwendungsspezifischeErweiterung>
       <xjustiz.fachspezifischeDaten>
         <aktentyp>
-          <code>001</code>
+          <code xmlns="">001</code>
         </aktentyp>
         <anzeigename>Raeumungsklage Schmidt</anzeigename>
         <aktenzeichen>
@@ -117,12 +126,12 @@
       </identifikation>
       <xjustiz.fachspezifischeDaten>
         <dokumentklasse>
-          <code>020</code>
+          <code xmlns="">020</code>
         </dokumentklasse>
         <datei>
           <dateiname>Mietvertrag_Schmidt.pdf</dateiname>
           <bestandteil>
-            <code>001</code>
+            <code xmlns="">001</code>
           </bestandteil>
           <dateiendung>.pdf</dateiendung>
           <contentType>application/pdf</contentType>
