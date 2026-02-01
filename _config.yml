@@ -1,0 +1,4 @@
+remote_theme: pages-themes/primer
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
