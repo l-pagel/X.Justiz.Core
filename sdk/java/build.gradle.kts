@@ -85,6 +85,16 @@ publishing {
         }
     }
 // Repository for Central Portal is handled by dev.lukebemish.central-portal-publishing plugin
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/l-pagel/X.Justiz.Core")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
 
 // Map environment variables to project properties expected by the plugin

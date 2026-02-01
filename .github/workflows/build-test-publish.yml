@@ -304,6 +304,9 @@ jobs:
     name: Publish .NET SDK
     needs: [run-integration-tests]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     env:
       CSPROJ_PATH: sdk/dotnet/src/xjustiz.core-dotnet/xjustiz.core-dotnet.csproj
 
@@ -360,6 +363,14 @@ jobs:
           --source https://api.nuget.org/v3/index.json
           --skip-duplicate
 
+      - name: Push to GitHub Packages
+        if: github.ref == 'refs/heads/main'
+        run: >
+          dotnet nuget push "./artifacts/*.nupkg"
+          --api-key ${{ secrets.GITHUB_TOKEN }}
+          --source "https://nuget.pkg.github.com/l-pagel/index.json"
+          --skip-duplicate
+
       - name: Publish Summary
         if: success() && github.ref == 'refs/heads/main'
         run: |
@@ -413,6 +424,16 @@ jobs:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: gradle publishToSonatype -Pversion=${{ steps.get_version.outputs.version }}
+
+      - name: Publish to GitHub Packages
+        if: github.ref == 'refs/heads/main'
+        working-directory: sdk/java
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: gradle publishMavenPublicationToGitHubPackagesRepository -Pversion=${{ steps.get_version.outputs.version }}
 
       - name: Java Publish Summary
         if: success() && github.ref == 'refs/heads/main'
